@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pokémon GO イベント・レイド最新情報</title>
+  <title>Pokémon GO イベント情報</title>
   <style>
     :root {
       --bg-color: #0f172a;
@@ -12,7 +12,6 @@
       --text-main: #f8fafc;
       --text-sub: #94a3b8;
       --accent: #38bdf8;
-      --accent-hover: #0284c7;
       --color-main: #3b82f6;
       --color-raid: #ef4444;
       --color-dmax: #ec4899;
@@ -39,16 +38,13 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      backdrop-filter: blur(8px);
     }
     .header-content {
       max-width: 1000px;
       margin: 0 auto;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 8px;
+      flex-direction: column;
+      gap: 6px;
     }
     .header-title {
       font-size: 1.15rem;
@@ -58,97 +54,90 @@
       gap: 8px;
     }
     .update-badge {
+      align-self: flex-start;
       font-size: 0.75rem;
       background: #0284c7;
       color: #fff;
-      padding: 3px 8px;
+      padding: 3px 10px;
       border-radius: 12px;
       font-weight: 500;
     }
     .container {
       max-width: 1000px;
-      margin: 0 auto;
-      padding: 16px;
+      margin: 20px auto;
+      padding: 0 16px;
     }
-    /* ニュースティッカー */
+    
+    /* ニュースセクション */
     .news-section {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 10px;
-      padding: 12px 16px;
-      margin-bottom: 20px;
-    }
-    .news-title {
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: var(--accent);
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .news-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-    .news-item {
-      font-size: 0.85rem;
-      color: var(--text-main);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .news-item::before {
-      content: "•";
-      color: var(--accent);
-    }
-    /* カレンダータイムライン */
-    .calendar-section {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       border-radius: 12px;
       padding: 16px;
       margin-bottom: 24px;
-      overflow-x: auto;
     }
-    .section-title {
-      font-size: 1rem;
+    .news-title {
+      font-size: 0.85rem;
       font-weight: 700;
-      margin-bottom: 12px;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    .news-list {
+      list-style: none;
       display: flex;
-      align-items: center;
-      gap: 6px;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .news-item {
+      font-size: 0.85rem;
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+    .news-item::before {
+      content: "•";
+      color: var(--text-sub);
+    }
+
+    /* カレンダーセクション */
+    .calendar-section {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 16px 0;
+      margin-bottom: 24px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
     }
     .cal-wrapper {
-      min-width: 600px;
-      position: relative;
+      min-width: 900px; /* バーが潰れないように十分な幅を確保 */
+      padding: 0 16px;
     }
     .cal-header {
       display: grid;
       grid-template-columns: repeat(31, 1fr);
       border-bottom: 1px solid var(--card-border);
-      padding-bottom: 6px;
+      padding-bottom: 8px;
+      margin-bottom: 12px;
       text-align: center;
-      font-size: 0.7rem;
+      font-size: 0.75rem;
       color: var(--text-sub);
     }
-    .cal-header .today-mark {
-      color: #38bdf8;
+    .today-mark {
+      color: var(--accent);
       font-weight: 800;
+      font-size: 0.85rem;
     }
     .cal-bars {
       position: relative;
-      padding-top: 10px;
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 8px;
     }
     .cal-bar-track {
       position: relative;
-      height: 24px;
-      background: rgba(255, 255, 255, 0.03);
+      height: 26px;
+      background: rgba(255, 255, 255, 0.02);
       border-radius: 4px;
     }
     .cal-bar {
@@ -160,42 +149,36 @@
       align-items: center;
       padding: 0 8px;
       font-size: 0.75rem;
-      font-weight: 600;
+      font-weight: 700;
       color: #fff;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      cursor: pointer;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-      transition: opacity 0.2s;
-    }
-    .cal-bar:hover {
-      opacity: 0.85;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     }
     .bar-main { background-color: var(--color-main); }
     .bar-raid { background-color: var(--color-raid); }
     .bar-dmax { background-color: var(--color-dmax); }
     .bar-collab { background-color: var(--color-collab); }
     .bar-gbl { background-color: var(--color-gbl); }
-    
-    /* フィルタータブ */
+
+    /* フィルター */
     .filter-group {
       display: flex;
-      gap: 8px;
+      gap: 10px;
       overflow-x: auto;
-      padding-bottom: 8px;
+      padding-bottom: 10px;
       margin-bottom: 16px;
     }
     .filter-btn {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       color: var(--text-sub);
-      padding: 6px 14px;
+      padding: 8px 16px;
       border-radius: 20px;
       font-size: 0.85rem;
       cursor: pointer;
       white-space: nowrap;
-      transition: all 0.2s;
     }
     .filter-btn.active {
       background: var(--accent);
@@ -203,7 +186,8 @@
       font-weight: 700;
       border-color: var(--accent);
     }
-    /* イベントカード一覧 */
+
+    /* イベントカード */
     .event-cards {
       display: flex;
       flex-direction: column;
@@ -214,72 +198,59 @@
       border: 1px solid var(--card-border);
       border-radius: 12px;
       padding: 16px;
-      position: relative;
-      scroll-margin-top: 80px;
-      transition: border-color 0.2s;
-    }
-    .event-card.highlight {
-      border-color: var(--accent);
     }
     .card-top {
       display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 8px;
-      flex-wrap: wrap;
-      gap: 6px;
+      margin-bottom: 10px;
     }
     .cat-badge {
       font-size: 0.7rem;
       font-weight: 700;
-      padding: 2px 8px;
+      padding: 3px 10px;
       border-radius: 4px;
       color: #fff;
     }
     .card-title {
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       font-weight: 700;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
     .card-date {
       font-size: 0.85rem;
       color: var(--accent);
-      font-weight: 600;
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      gap: 4px;
+      margin-bottom: 12px;
     }
     .card-summary {
       font-size: 0.85rem;
       color: var(--text-sub);
-      margin-bottom: 12px;
-      line-height: 1.4;
+      margin-bottom: 16px;
+      line-height: 1.5;
     }
-    /* ボーナス・レイド・野生タグ */
     .card-section-box {
-      background: rgba(15, 23, 42, 0.6);
+      background: rgba(15, 23, 42, 0.5);
       border-radius: 8px;
-      padding: 10px 12px;
-      margin-top: 10px;
+      padding: 12px;
+      margin-top: 12px;
     }
     .card-section-label {
       font-size: 0.75rem;
-      font-weight: 700;
       color: var(--text-sub);
-      margin-bottom: 6px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
     }
     .bonus-list {
-      list-style: none;
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
+      gap: 8px;
+      list-style: none;
     }
     .bonus-tag {
-      background: rgba(56, 189, 248, 0.15);
-      color: #38bdf8;
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      padding: 3px 8px;
+      background: rgba(56, 189, 248, 0.1);
+      color: var(--accent);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      padding: 4px 10px;
       border-radius: 6px;
       font-size: 0.75rem;
     }
@@ -293,55 +264,36 @@
       align-items: center;
       gap: 6px;
       background: rgba(255, 255, 255, 0.05);
-      padding: 4px 10px;
+      padding: 4px 12px;
       border-radius: 8px;
-      font-size: 0.8rem;
+      font-size: 0.85rem;
     }
-    .poke-icon {
-      width: 32px;
-      height: 32px;
-      image-rendering: pixelated;
-    }
-    .shiny-icon {
-      color: #facc15;
-      font-size: 0.75rem;
-    }
-    .loading-state {
-      text-align: center;
-      padding: 40px;
-      color: var(--text-sub);
-      font-size: 0.9rem;
-    }
+    .shiny-icon { color: #facc15; font-size: 0.8rem; }
   </style>
 </head>
 <body>
 
   <header>
     <div class="header-content">
-      <div class="header-title">
-        <span>⚡ Pokémon GO イベント情報</span>
-      </div>
-      <div id="updateTime" class="update-badge">取得中...</div>
+      <div class="header-title">⚡ Pokémon GO イベント情報</div>
+      <div id="updateTime" class="update-badge">更新: データ取得中...</div>
     </div>
   </header>
 
   <div class="container">
-    <!-- 速報ニュース -->
+    <!-- ニュース -->
     <div class="news-section">
       <div class="news-title">📢 公式速報ニュース</div>
       <ul id="newsList" class="news-list">
-        <li class="news-item">最新ニュースを読み込み中...</li>
+        <li class="news-item">読み込み中...</li>
       </ul>
     </div>
 
-    <!-- カレンダータイムライン -->
-    <div class="calendar-section">
-      <div class="section-title">📅 10月 イベント日程バー</div>
+    <!-- カレンダー -->
+    <div class="calendar-section" id="calendarSection">
       <div class="cal-wrapper">
         <div id="calHeader" class="cal-header"></div>
-        <div id="calBars" class="cal-bars">
-          <div class="loading-state">カレンダーを生成中...</div>
-        </div>
+        <div id="calBars" class="cal-bars"></div>
       </div>
     </div>
 
@@ -352,150 +304,109 @@
       <button class="filter-btn" onclick="setFilter('raid', this)">レイド</button>
       <button class="filter-btn" onclick="setFilter('dmax', this)">ダイマックス</button>
       <button class="filter-btn" onclick="setFilter('collab', this)">コラボ</button>
-      <button class="filter-btn" onclick="setFilter('gbl', this)">GBL</button>
     </div>
 
-    <!-- イベントカード詳細一覧 -->
-    <div id="eventCards" class="event-cards">
-      <div class="loading-state">イベント詳細データを読み込み中...</div>
-    </div>
+    <!-- カード一覧 -->
+    <div id="eventCards" class="event-cards"></div>
   </div>
 
   <script>
     let allEvents = [];
     let currentFilter = 'all';
 
-    // 10月カレンダーヘッダー作成
-    function setupCalendarHeader() {
+    // 日付生成
+    const today = new Date();
+    const currentDay = today.getDate();
+
+    function setupCalendar() {
       const header = document.getElementById('calHeader');
       header.innerHTML = '';
-      const todayDate = 24; // 基準日(24日)
       for (let day = 1; day <= 31; day++) {
         const span = document.createElement('span');
         span.textContent = day;
-        if (day === todayDate) span.className = 'today-mark';
+        if (day === currentDay) span.className = 'today-mark';
         header.appendChild(span);
       }
     }
 
-    // data.json から全データを取得して描画
     async function loadData() {
       try {
         const res = await fetch('data.json?t=' + Date.now());
-        if (!res.ok) throw new Error('データ取得失敗');
         const data = await res.json();
-
-        // 1. 最終更新日時
+        
         if (data.updated_at) {
           document.getElementById('updateTime').textContent = `更新: ${data.updated_at}`;
         }
 
-        // 2. 速報ニュース
         const newsList = document.getElementById('newsList');
         newsList.innerHTML = '';
-        if (data.latest_news && data.latest_news.length > 0) {
+        if (data.latest_news) {
           data.latest_news.forEach(news => {
-            const li = document.createElement('li');
-            li.className = 'news-item';
-            li.textContent = news.title;
-            newsList.appendChild(li);
+            newsList.innerHTML += `<li class="news-item">${news.title}</li>`;
           });
-        } else {
-          newsList.innerHTML = '<li class="news-item">現在、新しい速報はありません</li>';
         }
 
-        // 3. イベントデータ
         allEvents = data.events || [];
         renderCalendar();
         renderCards();
 
+        // 当日の位置へ自動スクロール
+        setTimeout(() => {
+          const calSec = document.getElementById('calendarSection');
+          const scrollTarget = (currentDay / 31) * 900 - (calSec.clientWidth / 2);
+          calSec.scrollLeft = scrollTarget > 0 ? scrollTarget : 0;
+        }, 100);
+
       } catch (err) {
         console.error(err);
-        document.getElementById('eventCards').innerHTML = '<div class="loading-state">データの読み込みに失敗しました。再読み込みをお試しください。</div>';
+        document.getElementById('eventCards').innerHTML = '<div style="text-align:center; padding:20px;">データ読み込みエラー</div>';
       }
     }
 
-    // タイムラインカレンダー描画
     function renderCalendar() {
       const container = document.getElementById('calBars');
       container.innerHTML = '';
-
-      if (allEvents.length === 0) {
-        container.innerHTML = '<div class="loading-state">登録されているイベントはありません</div>';
-        return;
-      }
-
+      
       allEvents.forEach(ev => {
         const track = document.createElement('div');
         track.className = 'cal-bar-track';
-
+        
         const bar = document.createElement('div');
         bar.className = `cal-bar ${ev.barClass || 'bar-main'}`;
         
-        // 1〜31日の位置計算
         const start = Math.max(1, ev.startDay || 1);
         const end = Math.min(31, ev.endDay || start);
-        const duration = Math.max(1, (end - start + 1));
+        const duration = (end - start + 1);
 
-        const leftPct = ((start - 1) / 31) * 100;
-        const widthPct = (duration / 31) * 100;
-
-        bar.style.left = `${leftPct}%`;
-        bar.style.width = `${widthPct}%`;
+        bar.style.left = `${((start - 1) / 31) * 100}%`;
+        bar.style.width = `${(duration / 31) * 100}%`;
         bar.textContent = ev.title;
-        bar.title = `${ev.title} (${ev.dateText || ''})`;
-
-        bar.onclick = () => {
-          const card = document.getElementById(ev.id);
-          if (card) {
-            card.scrollIntoView({ behavior: 'smooth' });
-            card.classList.add('highlight');
-            setTimeout(() => card.classList.remove('highlight'), 1500);
-          }
-        };
 
         track.appendChild(bar);
         container.appendChild(track);
       });
     }
 
-    // カード一覧描画
     function renderCards() {
       const container = document.getElementById('eventCards');
       container.innerHTML = '';
 
       const filtered = currentFilter === 'all' 
-        ? allEvents 
-        : allEvents.filter(ev => ev.category === currentFilter);
-
-      if (filtered.length === 0) {
-        container.innerHTML = '<div class="loading-state">該当するイベントはありません</div>';
-        return;
-      }
+        ? allEvents : allEvents.filter(ev => ev.category === currentFilter);
 
       filtered.forEach(ev => {
-        const card = document.createElement('div');
-        card.className = 'event-card';
-        card.id = ev.id || `ev-${Math.random().toString(36).substr(2, 9)}`;
-
-        let catName = 'イベント';
-        if (ev.category === 'raid') catName = 'レイド';
-        if (ev.category === 'dmax') catName = 'ダイマックス';
-        if (ev.category === 'collab') catName = 'コラボ';
-        if (ev.category === 'gbl') catName = 'GBL';
-
-        let innerHTML = `
-          <div class="card-top">
-            <span class="cat-badge ${ev.barClass || 'bar-main'}">${catName}</span>
-          </div>
-          <div class="card-title">${ev.title}</div>
-          <div class="card-date">🕒 ${ev.dateText || `${ev.startDate} 〜 ${ev.endDate}`}</div>
-          ${ev.summary ? `<div class="card-summary">${ev.summary}</div>` : ''}
+        let cardHTML = `
+          <div class="event-card">
+            <div class="card-top">
+              <span class="cat-badge ${ev.barClass || 'bar-main'}">${ev.category || 'イベント'}</span>
+            </div>
+            <div class="card-title">${ev.title}</div>
+            <div class="card-date">🕒 ${ev.dateText || ''}</div>
+            ${ev.summary ? `<div class="card-summary">${ev.summary}</div>` : ''}
         `;
 
-        // ボーナス
         if (ev.bonuses && ev.bonuses.length > 0) {
-          innerHTML += `
+          cardHTML += `
             <div class="card-section-box">
               <div class="card-section-label">🎁 イベントボーナス</div>
               <ul class="bonus-list">
@@ -505,51 +416,30 @@
           `;
         }
 
-        // レイド・ダイマックスボス
         if (ev.raids && ev.raids.length > 0) {
-          innerHTML += `
+          cardHTML += `
             <div class="card-section-box">
-              <div class="card-section-label">⚔️ 出現ボス / レイド</div>
+              <div class="card-section-label">⚔️ 出現ボス</div>
               <div class="pokemon-grid">
-                ${ev.raids.map(r => {
-                  const img = r.dex ? `<img class="poke-icon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${r.dex}.png" alt="${r.name}">` : '';
-                  return `<div class="poke-item">${img}<span>${r.name}</span>${r.shiny ? '<span class="shiny-icon">✨</span>' : ''}</div>`;
-                }).join('')}
+                ${ev.raids.map(r => `<div class="poke-item"><span>${r.name}</span>${r.shiny ? '<span class="shiny-icon">✨</span>' : ''}</div>`).join('')}
               </div>
             </div>
           `;
         }
 
-        // 野生ポケモン
-        if (ev.wilds && ev.wilds.length > 0) {
-          innerHTML += `
-            <div class="card-section-box">
-              <div class="card-section-label">🌿 野生で出現するポケモン</div>
-              <div class="pokemon-grid">
-                ${ev.wilds.map(w => {
-                  const img = w.dex ? `<img class="poke-icon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${w.dex}.png" alt="${w.name}">` : '';
-                  return `<div class="poke-item">${img}<span>${w.name}</span>${w.shiny ? '<span class="shiny-icon">✨</span>' : ''}</div>`;
-                }).join('')}
-              </div>
-            </div>
-          `;
-        }
-
-        card.innerHTML = innerHTML;
-        container.appendChild(card);
+        cardHTML += `</div>`;
+        container.innerHTML += cardHTML;
       });
     }
 
-    // フィルター切り替え
-    function setFilter(category, btn) {
-      currentFilter = category;
+    function setFilter(cat, btn) {
+      currentFilter = cat;
       document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       renderCards();
     }
 
-    // 初期化
-    setupCalendarHeader();
+    setupCalendar();
     loadData();
   </script>
 </body>
