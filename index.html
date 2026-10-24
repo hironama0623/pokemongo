@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
@@ -8,8 +8,8 @@
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
-      background-color: #080d1a;
-      color: #f1f5f9;
+      background-color: #f8fafc;
+      color: #0f172a;
       -webkit-tap-highlight-color: transparent;
     }
     ::-webkit-scrollbar {
@@ -17,53 +17,53 @@
       width: 6px;
     }
     ::-webkit-scrollbar-track {
-      background: #0f172a;
+      background: #f1f5f9;
     }
     ::-webkit-scrollbar-thumb {
-      background: #334155;
+      background: #cbd5e1;
       border-radius: 3px;
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: #475569;
+      background: #94a3b8;
     }
     @keyframes pulseFocus {
-      0% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.9); border-color: #38bdf8; }
-      70% { box-shadow: 0 0 0 16px rgba(56, 189, 248, 0); border-color: #38bdf8; }
-      100% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0); }
+      0% { box-shadow: 0 0 0 0 rgba(2, 132, 199, 0.7); border-color: #0284c7; }
+      70% { box-shadow: 0 0 0 14px rgba(2, 132, 199, 0); border-color: #0284c7; }
+      100% { box-shadow: 0 0 0 0 rgba(2, 132, 199, 0); }
     }
     .pulse-target {
       animation: pulseFocus 1.2s ease-out 2;
     }
-    /* ガントチャートの連日カラースタイル */
+    /* ガントチャートの連日カラースタイル (ライトテーマ高視認性仕様) */
     .bar-main {
-      background: linear-gradient(90deg, #0369a1, #0284c7);
+      background: linear-gradient(90deg, #e0f2fe, #bae6fd);
       border: 1px solid #38bdf8;
-      color: #f0f9ff;
+      color: #0369a1;
     }
     .bar-raid {
-      background: linear-gradient(90deg, #065f46, #047857);
-      border: 1px solid #34d399;
-      color: #ecfdf5;
+      background: linear-gradient(90deg, #dcfce7, #bbf7d0);
+      border: 1px solid #4ade80;
+      color: #15803d;
     }
     .bar-dmax {
-      background: linear-gradient(90deg, #6b21a8, #7e22ce);
+      background: linear-gradient(90deg, #f3e8ff, #e9d5ff);
       border: 1px solid #c084fc;
-      color: #faf5ff;
+      color: #7e22ce;
     }
     .bar-collab {
-      background: linear-gradient(90deg, #0f766e, #14b8a6);
+      background: linear-gradient(90deg, #ccfbf1, #99f6e4);
       border: 1px solid #2dd4bf;
-      color: #f0fdfa;
+      color: #0f766e;
     }
     .bar-gbl {
-      background: linear-gradient(90deg, #9a3412, #c2410c);
+      background: linear-gradient(90deg, #ffedd5, #fed7aa);
       border: 1px solid #fb923c;
-      color: #fff7ed;
+      color: #c2410c;
     }
     .bar-shadow-daily {
-      background: linear-gradient(90deg, #1e293b, #334155);
+      background: linear-gradient(90deg, #fee2e2, #fecaca);
       border: 1px solid #f87171;
-      color: #fee2e2;
+      color: #991b1b;
     }
     /* 9DB仕様のディープパープル */
     .bg-9db-card {
@@ -74,23 +74,23 @@
 <body class="min-h-screen flex flex-col">
 
   <!-- ヘッダー -->
-  <header class="sticky top-0 z-50 bg-[#0b1325]/95 backdrop-blur border-b border-slate-800 px-4 py-2.5">
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200 px-4 py-2.5 shadow-sm">
     <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-2">
       <div class="flex items-center gap-2">
         <span class="text-2xl">⚡</span>
         <div>
-          <h1 class="text-base sm:text-lg font-black tracking-wide bg-gradient-to-r from-sky-400 via-teal-300 to-amber-300 bg-clip-text text-transparent">
+          <h1 class="text-base sm:text-lg font-black tracking-wide bg-gradient-to-r from-sky-600 via-teal-600 to-amber-600 bg-clip-text text-transparent">
             Pokémon GO 総合攻略ハブ
           </h1>
-          <div class="text-[11px] text-slate-400 flex items-center gap-2">
-            <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span>基準日: 2026年10月24日 (土)</span>
-            <span class="text-sky-400 font-semibold hidden sm:inline">GameWith / 9DB / ポケマピ 3大サイト統合仕様</span>
+          <div class="text-[11px] text-slate-500 flex items-center gap-2">
+            <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span id="autoUpdateTimestamp" class="font-bold text-slate-700">最終自動更新: 読込中... (次回予定: 15:00)</span>
+            <span class="text-sky-600 font-semibold hidden sm:inline">GameWith / 9DB / ポケマピ 3大サイト統合仕様</span>
           </div>
         </div>
       </div>
       <div class="flex items-center gap-2">
-        <button onclick="restoreAllHiddenEvents()" id="globalRestoreBtn" class="hidden text-xs bg-amber-500/10 text-amber-300 border border-amber-500/30 hover:bg-amber-500/20 px-2.5 py-1 rounded-md transition font-medium">
+        <button onclick="restoreAllHiddenEvents()" id="globalRestoreBtn" class="hidden text-xs bg-amber-50 text-amber-700 border border-amber-300 hover:bg-amber-100 px-2.5 py-1 rounded-md transition font-bold shadow-sm">
           <span id="globalHiddenCount">0</span>件非表示中 [すべて再表示]
         </button>
       </div>
@@ -99,14 +99,14 @@
 
   <!-- 3大メインナビゲーションタブ -->
   <div class="max-w-6xl mx-auto w-full px-4 pt-3 pb-1">
-    <nav class="flex gap-1.5 p-1 bg-slate-900/90 rounded-xl border border-slate-800">
-      <button id="tabNavSchedule" onclick="switchMainTab('schedule')" class="flex-1 py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1.5 bg-gradient-to-r from-sky-600 to-blue-600 text-white shadow-md shadow-sky-950">
+    <nav class="flex gap-1.5 p-1 bg-slate-200/80 rounded-xl border border-slate-300 shadow-inner">
+      <button id="tabNavSchedule" onclick="switchMainTab('schedule')" class="flex-1 py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1.5 bg-white text-sky-700 shadow-sm">
         <span>📅</span> <span class="hidden sm:inline">イベント &</span> ガントチャート
       </button>
-      <button id="tabNavBattles" onclick="switchMainTab('battles')" class="flex-1 py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1.5 text-slate-400 hover:text-slate-200">
+      <button id="tabNavBattles" onclick="switchMainTab('battles')" class="flex-1 py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1.5 text-slate-600 hover:text-slate-900">
         <span>⚔️</span> レイド & ダイマックス
       </button>
-      <button id="tabNavGoPass" onclick="switchMainTab('gopass')" class="flex-1 py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1.5 text-slate-400 hover:text-slate-200">
+      <button id="tabNavGoPass" onclick="switchMainTab('gopass')" class="flex-1 py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1.5 text-slate-600 hover:text-slate-900">
         <span>🎫</span> GOパス情報 (報酬一覧)
       </button>
     </nav>
@@ -123,98 +123,90 @@
       <!-- トップ通知エリア -->
       <section class="grid grid-cols-1 md:grid-cols-2 gap-3">
         <!-- 🚨 本日開催中・終了間近 -->
-        <div class="bg-gradient-to-br from-rose-950/40 via-slate-900 to-slate-950 border border-rose-500/40 rounded-xl p-3.5 shadow-lg">
+        <div class="bg-white border border-rose-200 rounded-xl p-3.5 shadow-sm">
           <div class="flex items-center justify-between mb-2">
-            <h2 class="text-sm font-extrabold text-rose-300 flex items-center gap-1.5">
+            <h2 class="text-sm font-extrabold text-rose-600 flex items-center gap-1.5">
               <span>🚨</span> 本日開催中・注目のレイド (10月24日)
             </h2>
-            <span class="text-[10px] bg-rose-500/20 text-rose-200 px-2 py-0.5 rounded-full font-bold border border-rose-500/30">要確認</span>
+            <span class="text-[10px] bg-rose-50 text-rose-600 px-2 py-0.5 rounded-full font-bold border border-rose-200">要確認</span>
           </div>
-          <ul class="text-xs space-y-2 text-slate-200">
-            <li class="flex items-start gap-2 bg-slate-900/60 p-2 rounded-lg border border-slate-800">
-              <span class="text-amber-400 font-bold flex-shrink-0">14:00〜17:00</span>
+          <ul class="text-xs space-y-2 text-slate-700">
+            <li class="flex items-start gap-2 bg-rose-50/50 p-2 rounded-lg border border-rose-100">
+              <span class="text-amber-600 font-bold flex-shrink-0">14:00〜17:00</span>
               <div>
-                <strong class="text-sky-300 cursor-pointer hover:underline" onclick="jumpToCounterTarget('dmax-uxie', true)">ダイマックスUMA マックスバトルデイ</strong>
-                <p class="text-[11px] text-slate-400">日本はユクシー出現！無料MP800配布＆色違い率UP（海外招待でエムリット・アグノム参加可能）</p>
+                <strong class="text-sky-700 cursor-pointer hover:underline" onclick="jumpToCounterTarget('dmax-uxie', true)">ダイマックスUMA マックスバトルデイ</strong>
+                <p class="text-[11px] text-slate-500">日本はユクシー出現！無料MP800配布＆色違い率UP（海外招待でエムリット・アグノム参加可能）</p>
               </div>
             </li>
-            <li class="flex items-start gap-2 bg-slate-900/60 p-2 rounded-lg border border-slate-800">
-              <span class="text-emerald-400 font-bold flex-shrink-0">〜10/27まで</span>
+            <li class="flex items-start gap-2 bg-slate-50 p-2 rounded-lg border border-slate-200">
+              <span class="text-emerald-600 font-bold flex-shrink-0">〜10/27まで</span>
               <div>
-                <strong class="text-emerald-300 cursor-pointer hover:underline" onclick="jumpToCounterTarget('palkia-origin', false)">パルキア(オリジン) ＆ メガリザードンX/Y</strong>
-                <p class="text-[11px] text-slate-400">メガリザードンYはいわ2.56倍二重弱点で少人数撃破可能！パルキア特別技あくうせつだん習得。</p>
+                <strong class="text-emerald-700 cursor-pointer hover:underline" onclick="jumpToCounterTarget('palkia-origin', false)">パルキア(オリジン) ＆ メガリザードンX/Y</strong>
+                <p class="text-[11px] text-slate-500">メガリザードンYはいわ2.56倍二重弱点で少人数撃破可能！パルキア特別技あくうせつだん習得。</p>
               </div>
             </li>
-            <li class="flex items-start gap-2 bg-slate-900/60 p-2 rounded-lg border border-slate-800">
-              <span class="text-rose-400 font-bold flex-shrink-0">連日常設中</span>
+            <li class="flex items-start gap-2 bg-slate-50 p-2 rounded-lg border border-slate-200">
+              <span class="text-rose-600 font-bold flex-shrink-0">連日常設中</span>
               <div>
-                <strong class="text-rose-300 cursor-pointer hover:underline" onclick="jumpToCounterTarget('shadow-landorus', false)">シャドウランドロス(化身) レイド</strong>
-                <p class="text-[11px] text-slate-400">土日だけでなく平日も連日出現中！こおり2.56倍二重弱点で2人討伐可能。</p>
+                <strong class="text-rose-700 cursor-pointer hover:underline" onclick="jumpToCounterTarget('shadow-landorus', false)">シャドウランドロス(化身) レイド</strong>
+                <p class="text-[11px] text-slate-500">土日だけでなく平日も連日出現中！こおり2.56倍二重弱点で2人討伐可能。</p>
               </div>
             </li>
           </ul>
         </div>
 
         <!-- 📢 直近の公式発表・最新ニュース速報 -->
-        <div class="bg-gradient-to-br from-sky-950/40 via-slate-900 to-slate-950 border border-sky-500/40 rounded-xl p-3.5 shadow-lg flex flex-col justify-between">
+        <div class="bg-white border border-sky-200 rounded-xl p-3.5 shadow-sm flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between mb-2">
-              <h2 class="text-sm font-extrabold text-sky-300 flex items-center gap-1.5">
+              <h2 class="text-sm font-extrabold text-sky-700 flex items-center gap-1.5">
                 <span>📢</span> 公式発表・最新ニュース速報 (3サイト統合)
               </h2>
-              <button onclick="resetReadNews()" class="text-[10px] text-slate-400 hover:text-sky-300 underline">
+              <button onclick="resetReadNews()" class="text-[10px] text-slate-500 hover:text-sky-600 underline">
                 既読リセット
               </button>
             </div>
-            <div id="newsItemsContainer" class="space-y-1.5 text-xs">
-              <!-- JSで動的レンダリング -->
-            </div>
+            <div id="newsItemsContainer" class="space-y-1.5 text-xs"></div>
           </div>
-          <div class="text-[10px] text-slate-500 mt-2 text-right">
+          <div class="text-[10px] text-slate-400 mt-2 text-right">
             タップで該当詳細へスクロール / 「✓ 既読」で非表示
           </div>
         </div>
       </section>
 
       <!-- 3ヶ月ガントチャート カレンダー -->
-      <section class="bg-slate-900/90 border border-slate-800 rounded-xl p-3.5 shadow-md">
+      <section class="bg-white border border-slate-200 rounded-xl p-3.5 shadow-sm">
         <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
           <div class="flex items-center gap-2">
-            <h2 class="text-sm font-extrabold text-white flex items-center gap-1.5">
+            <h2 class="text-sm font-extrabold text-slate-900 flex items-center gap-1.5">
               <span>📊</span> イベントスケジュール (ガントチャート・タイムライン)
             </h2>
-            <span class="text-[11px] text-slate-400 hidden sm:inline">| 連日バータップで詳細へ</span>
+            <span class="text-[11px] text-slate-500 hidden sm:inline">| 連日バータップで詳細へ</span>
           </div>
 
           <!-- 月切り替えボタン [10月] [11月] [12月] -->
-          <div class="flex items-center gap-1 bg-slate-950 p-1 rounded-lg border border-slate-800">
-            <button onclick="changeGanttMonth(10)" id="monthBtn10" class="text-xs px-3 py-1 rounded-md font-bold transition bg-sky-600 text-white shadow">
-              10月
-            </button>
-            <button onclick="changeGanttMonth(11)" id="monthBtn11" class="text-xs px-3 py-1 rounded-md font-bold transition text-slate-400 hover:text-white">
-              11月
-            </button>
-            <button onclick="changeGanttMonth(12)" id="monthBtn12" class="text-xs px-3 py-1 rounded-md font-bold transition text-slate-400 hover:text-white">
-              12月
-            </button>
+          <div class="flex items-center gap-1 bg-slate-100 p-1 rounded-lg border border-slate-200">
+            <button onclick="changeGanttMonth(10)" id="monthBtn10" class="text-xs px-3 py-1 rounded-md font-bold transition bg-sky-600 text-white shadow-sm">10月</button>
+            <button onclick="changeGanttMonth(11)" id="monthBtn11" class="text-xs px-3 py-1 rounded-md font-bold transition text-slate-600 hover:text-slate-900">11月</button>
+            <button onclick="changeGanttMonth(12)" id="monthBtn12" class="text-xs px-3 py-1 rounded-md font-bold transition text-slate-600 hover:text-slate-900">12月</button>
           </div>
         </div>
 
         <!-- カテゴリ絞り込みフィルターバー -->
-        <div class="flex flex-wrap items-center gap-1.5 pb-2.5 pt-1 border-b border-slate-800">
-          <span class="text-[11px] text-slate-400 font-bold mr-1">絞り込み:</span>
-          <button onclick="filterTimelineCategory('all')" id="catBtn-all" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-sky-600 text-white shadow">すべて</button>
-          <button onclick="filterTimelineCategory('main')" id="catBtn-main" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-800 text-slate-400 hover:text-white">🎪 メイン・シーズン</button>
-          <button onclick="filterTimelineCategory('raid')" id="catBtn-raid" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-800 text-slate-400 hover:text-white">⚔️ レイドバトル</button>
-          <button onclick="filterTimelineCategory('dmax')" id="catBtn-dmax" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-800 text-slate-400 hover:text-white">⚡ マックスバトル</button>
-          <button onclick="filterTimelineCategory('collab')" id="catBtn-collab" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-800 text-slate-400 hover:text-white">🤝 コラボ・限定</button>
-          <button onclick="filterTimelineCategory('gbl')" id="catBtn-gbl" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-800 text-slate-400 hover:text-white">🥊 GBL</button>
+        <div class="flex flex-wrap items-center gap-1.5 pb-2.5 pt-1 border-b border-slate-100">
+          <span class="text-[11px] text-slate-500 font-bold mr-1">絞り込み:</span>
+          <button onclick="filterTimelineCategory('all')" id="catBtn-all" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-sky-600 text-white shadow-sm">すべて</button>
+          <button onclick="filterTimelineCategory('main')" id="catBtn-main" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-100 text-slate-600 hover:bg-slate-200">🎪 メイン・シーズン</button>
+          <button onclick="filterTimelineCategory('raid')" id="catBtn-raid" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-100 text-slate-600 hover:bg-slate-200">⚔️ レイドバトル</button>
+          <button onclick="filterTimelineCategory('dmax')" id="catBtn-dmax" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-100 text-slate-600 hover:bg-slate-200">⚡ マックスバトル</button>
+          <button onclick="filterTimelineCategory('collab')" id="catBtn-collab" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-100 text-slate-600 hover:bg-slate-200">🤝 コラボ・限定</button>
+          <button onclick="filterTimelineCategory('gbl')" id="catBtn-gbl" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-100 text-slate-600 hover:bg-slate-200">🥊 GBL</button>
         </div>
 
         <!-- 横スクロールコンテナ -->
-        <div class="relative overflow-x-auto rounded-lg border border-slate-800 bg-[#070d18] pb-2 mt-2" id="ganttScrollWrapper">
+        <div class="relative overflow-x-auto rounded-lg border border-slate-200 bg-white pb-2 mt-2" id="ganttScrollWrapper">
           <div id="ganttTimelineTable" class="min-w-[960px] select-none">
-            <div id="ganttHeaderRow" class="grid sticky top-0 z-20 bg-slate-900/95 border-b border-slate-800 text-center text-xs font-bold text-slate-400"></div>
+            <div id="ganttHeaderRow" class="grid sticky top-0 z-20 bg-slate-50 border-b border-slate-200 text-center text-xs font-bold text-slate-600"></div>
             <div id="ganttTracksContainer" class="relative py-2 space-y-1">
               <div id="ganttBgGrid" class="absolute inset-0 grid pointer-events-none"></div>
             </div>
@@ -222,74 +214,71 @@
         </div>
 
         <!-- 凡例 -->
-        <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-slate-400 mt-2 px-1">
-          <span class="flex items-center gap-1"><span class="w-3 h-2 rounded bg-emerald-600 border border-emerald-400"></span> 伝説・メガレイド</span>
-          <span class="flex items-center gap-1"><span class="w-3 h-2 rounded bg-slate-700 border border-rose-500"></span> ★5シャドウ (連日常設)</span>
-          <span class="flex items-center gap-1"><span class="w-3 h-2 rounded bg-purple-700 border border-purple-400"></span> マックスバトル</span>
-          <span class="flex items-center gap-1"><span class="w-3 h-2 rounded bg-teal-700 border border-teal-400"></span> コラボ (NPB・イオン等)</span>
-          <span class="flex items-center gap-1"><span class="w-3 h-2 rounded bg-orange-700 border border-orange-400"></span> GBL</span>
+        <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-slate-500 mt-2 px-1">
+          <span class="flex items-center gap-1"><span class="w-3 h-2 rounded bg-emerald-100 border border-emerald-400"></span> 伝説・メガレイド</span>
+          <span class="flex items-center gap-1"><span class="w-3 h-2 rounded bg-rose-100 border border-rose-400"></span> ★5シャドウ (連日常設)</span>
+          <span class="flex items-center gap-1"><span class="w-3 h-2 rounded bg-purple-100 border border-purple-400"></span> マックスバトル</span>
+          <span class="flex items-center gap-1"><span class="w-3 h-2 rounded bg-teal-100 border border-teal-400"></span> コラボ (NPB・イオン等)</span>
+          <span class="flex items-center gap-1"><span class="w-3 h-2 rounded bg-orange-100 border border-orange-400"></span> GBL</span>
         </div>
       </section>
 
       <!-- イベント詳細アコーディオン一覧 -->
       <section class="space-y-3">
         <div class="flex items-center justify-between px-1">
-          <h2 class="text-sm font-extrabold text-slate-300 flex items-center gap-1.5">
+          <h2 class="text-sm font-extrabold text-slate-800 flex items-center gap-1.5">
             <span>📌</span> イベント詳細・限定タスク一覧 (全イベント完全網羅)
           </h2>
-          <span class="text-[11px] text-slate-400">各カードの「👁 非表示」で個別除外可能</span>
+          <span class="text-[11px] text-slate-500">各カードの「👁 非表示」で個別除外可能</span>
         </div>
-
-        <div id="eventsAccordionContainer" class="space-y-2.5">
-          <!-- JSで動的レンダリング -->
-        </div>
+        <div id="eventsAccordionContainer" class="space-y-2.5"></div>
 
         <!-- 過去の終了イベント アーカイブ -->
-        <details class="bg-slate-900/60 border border-slate-800 rounded-xl overflow-hidden mt-4 group">
-          <summary class="p-3 text-xs font-bold text-slate-400 cursor-pointer hover:text-slate-200 flex items-center justify-between">
+        <details class="bg-white border border-slate-200 rounded-xl overflow-hidden mt-4 shadow-sm group">
+          <summary class="p-3 text-xs font-bold text-slate-600 cursor-pointer hover:bg-slate-50 flex items-center justify-between">
             <span class="flex items-center gap-1.5">📂 アーカイブ（10月に実施済みのイベント履歴）</span>
-            <span class="text-[10px] bg-slate-800 px-2 py-0.5 rounded text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+            <span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded text-slate-500 group-open:rotate-180 transition-transform">▼</span>
           </summary>
-          <div class="p-3 pt-0 text-xs text-slate-400 border-t border-slate-800/80 space-y-2">
-            <div class="p-2 bg-slate-950/50 rounded border border-slate-800 flex justify-between items-center">
+          <div class="p-3 pt-0 text-xs text-slate-600 border-t border-slate-100 space-y-2 mt-2">
+            <div class="p-2 bg-slate-50 rounded border border-slate-200 flex justify-between items-center">
               <div>
-                <strong class="text-slate-300">ゾロア コミュニティ・デイ</strong>
-                <p class="text-[11px]">10/12(土) 開催終了 / 相棒変身ギミック＆色違い初実装</p>
+                <strong class="text-slate-800">ゾロア コミュニティ・デイ</strong>
+                <p class="text-[11px] text-slate-500">10/12(土) 開催終了 / 相棒変身ギミック＆色違い初実装</p>
               </div>
-              <span class="text-[10px] text-slate-400">終了</span>
+              <span class="text-[10px] bg-slate-200 text-slate-600 px-2 py-0.5 rounded font-bold">終了</span>
             </div>
-            <div class="p-2 bg-slate-950/50 rounded border border-slate-800 flex justify-between items-center">
+            <div class="p-2 bg-slate-50 rounded border border-slate-200 flex justify-between items-center">
               <div>
-                <strong class="text-slate-300">メグロコ 孵化デイ (2kmタマゴ)</strong>
-                <p class="text-[11px]">10/19(日) 開催終了 / 1/2孵化距離＆色違い高確率</p>
+                <strong class="text-slate-800">メグロコ 孵化デイ (2kmタマゴ)</strong>
+                <p class="text-[11px] text-slate-500">10/19(日) 開催終了 / 1/2孵化距離＆色違い高確率</p>
               </div>
-              <span class="text-[10px] text-slate-400">終了</span>
+              <span class="text-[10px] bg-slate-200 text-slate-600 px-2 py-0.5 rounded font-bold">終了</span>
             </div>
           </div>
         </details>
       </section>
 
       <!-- GBL最下部サマリー -->
-      <section class="bg-slate-900/70 border border-slate-800 rounded-xl overflow-hidden">
+      <section class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
         <details class="group">
-          <summary class="p-3 text-xs font-bold text-orange-400 cursor-pointer flex items-center justify-between hover:bg-slate-800/40">
+          <summary class="p-3 text-xs font-bold text-orange-600 cursor-pointer flex items-center justify-between hover:bg-orange-50/50">
             <span class="flex items-center gap-1.5">🏆 GOバトルリーグ (GBL: 黄昏の旅路) 現在のメタ早見表 (9DB準拠)</span>
             <span class="text-[10px] text-slate-400 group-open:rotate-180 transition-transform">▼</span>
           </summary>
-          <div class="p-3 pt-1 text-xs border-t border-slate-800 text-slate-300 space-y-2">
-            <p class="text-slate-400">開催期間: 〜10/28(水) 早朝まで (勝利時ほしのすな4倍)</p>
+          <div class="p-3 pt-1 text-xs border-t border-slate-100 text-slate-700 space-y-2">
+            <p class="text-slate-500">開催期間: 〜10/28(水) 早朝まで (勝利時ほしのすな4倍)</p>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-1">
-              <div class="bg-slate-950 p-2 rounded border border-slate-800">
-                <div class="text-[11px] font-bold text-orange-300">ハイパーリーグ (CP2500)</div>
-                <div class="text-[11px] text-slate-400 mt-1">環境トップ: ジガルデ(パーフェクト)、ギラティナ(アナザー)、コバルオン</div>
+              <div class="bg-orange-50/50 p-2.5 rounded-lg border border-orange-100">
+                <div class="text-[11px] font-bold text-orange-800">ハイパーリーグ (CP2500)</div>
+                <div class="text-[11px] text-slate-600 mt-1">環境トップ: ジガルデ(パーフェクト)、ギラティナ(アナザー)、コバルオン</div>
               </div>
-              <div class="bg-slate-950 p-2 rounded border border-slate-800">
-                <div class="text-[11px] font-bold text-orange-300">マスターリーグ メガ (制限なし)</div>
-                <div class="text-[11px] text-slate-400 mt-1">環境トップ: メガレックウザ、ディアルガ(オリジン)、メガギャラドス</div>
+              <div class="bg-orange-50/50 p-2.5 rounded-lg border border-orange-100">
+                <div class="text-[11px] font-bold text-orange-800">マスターリーグ メガ (制限なし)</div>
+                <div class="text-[11px] text-slate-600 mt-1">環境トップ: メガレックウザ、ディアルガ(オリジン)、メガギャラドス</div>
               </div>
-              <div class="bg-slate-950 p-2 rounded border border-slate-800">
-                <div class="text-[11px] font-bold text-orange-300">ファンタジーカップ (SL)</div>
-                <div class="text-[11px] text-slate-400 mt-1">ドラゴン・はがね・フェアリー限定 / マリルリ、クチート、ガラルマッギョ</div>
+              <div class="bg-orange-50/50 p-2.5 rounded-lg border border-orange-100">
+                <div class="text-[11px] font-bold text-orange-800">ファンタジーカップ (SL)</div>
+                <div class="text-[11px] text-slate-600 mt-1">ドラゴン・はがね・フェアリー限定 / マリルリ、クチート、ガラルマッギョ</div>
               </div>
             </div>
           </div>
@@ -303,88 +292,63 @@
     <!-- ============================================================== -->
     <div id="tabContentBattles" class="space-y-4 hidden">
 
-      <!-- サブタブナビ -->
-      <div class="flex gap-2 p-1 bg-slate-900 rounded-xl border border-slate-800">
-        <button id="subTabRaids" onclick="switchBattleSub('raids')" class="flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition bg-gradient-to-r from-emerald-600 to-teal-600 text-white shadow">
+      <div class="flex gap-2 p-1 bg-slate-200/80 rounded-xl border border-slate-300">
+        <button id="subTabRaids" onclick="switchBattleSub('raids')" class="flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition bg-white text-emerald-700 shadow-sm">
           ⚔️ ★5伝説・メガ・シャドウレイド
         </button>
-        <button id="subTabDmax" onclick="switchBattleSub('dmax')" class="flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition text-slate-400 hover:text-slate-200">
+        <button id="subTabDmax" onclick="switchBattleSub('dmax')" class="flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition text-slate-600 hover:text-slate-900">
           💥 ダイマックス攻略 (9DB完全準拠)
         </button>
       </div>
 
       <!-- 2-A: 通常・メガ・シャドウレイド -->
       <div id="secBattleRaids" class="space-y-4">
-        
-        <!-- 現在開催中レイドセクション -->
         <div>
-          <div class="text-xs font-bold text-emerald-400 mb-2 flex items-center justify-between">
-            <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> 🔴 現在出現中レイド（今すぐ挑戦可能）:</span>
-            <span class="text-[11px] text-slate-400">タップで詳細対策切り替え</span>
+          <div class="text-xs font-bold text-emerald-700 mb-2 flex items-center justify-between">
+            <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> 🔴 現在出現中レイド（今すぐ挑戦可能）:</span>
+            <span class="text-[11px] text-slate-500">タップで詳細対策切り替え</span>
           </div>
-          <div id="raidBossPickerCurrent" class="grid grid-cols-1 sm:grid-cols-3 gap-2">
-            <!-- JSで動的生成 (パルキア、メガリザードンY/X、シャドウランドロス) -->
-          </div>
+          <div id="raidBossPickerCurrent" class="grid grid-cols-1 sm:grid-cols-3 gap-2"></div>
         </div>
 
-        <!-- 未来・次回予告レイドセクション -->
         <div>
-          <div class="text-xs font-bold text-purple-400 mb-2 flex items-center gap-1.5">
+          <div class="text-xs font-bold text-purple-700 mb-2 flex items-center gap-1.5">
             <span>🔮 次回予告・未来の予定レイド (10/27 10:00〜):</span>
           </div>
-          <div id="raidBossPickerFuture" class="grid grid-cols-2 sm:grid-cols-4 gap-2">
-            <!-- JSで動的生成 (ギラティナO、メガジュペッタ等) -->
-          </div>
+          <div id="raidBossPickerFuture" class="grid grid-cols-2 sm:grid-cols-4 gap-2"></div>
         </div>
 
-        <!-- 選択中のボス概要カード -->
-        <div id="raidBossOverview" class="bg-slate-900/90 border border-slate-800 rounded-xl p-4 shadow-md">
-          <!-- JSで描画 -->
-        </div>
+        <div id="raidBossOverview" class="bg-white border border-slate-200 rounded-xl p-4 shadow-sm"></div>
 
-        <!-- フィルターボタン & DPSランキング表（初期値：通常ポケモンのみ） -->
-        <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-4 shadow-md">
-          <div class="flex flex-wrap items-center justify-between gap-2 mb-3 pb-3 border-b border-slate-800">
+        <div class="bg-white border border-slate-200 rounded-xl p-4 shadow-sm">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-3 pb-3 border-b border-slate-100">
             <div>
-              <h3 class="text-sm font-black text-white" id="raidRankingTitle">対策DPSランキング TOP 10 (通常ポケモン限定)</h3>
-              <p class="text-[11px] text-slate-400">GameWith / 9DB / ポケマピ レイドシミュレーター基準</p>
+              <h3 class="text-sm font-black text-slate-900" id="raidRankingTitle">対策DPSランキング TOP 10 (通常ポケモン限定)</h3>
+              <p class="text-[11px] text-slate-500">GameWith / 9DB / ポケマピ レイドシミュレーター基準</p>
             </div>
-            <!-- トグルボタン：初期値はOFF -->
             <div class="flex items-center gap-2">
-              <button id="btnToggleMega" onclick="toggleRaidFilter('mega')" class="text-xs font-bold px-3 py-1.5 rounded-lg border transition bg-slate-800 text-slate-400 border-slate-700">
+              <button id="btnToggleMega" onclick="toggleRaidFilter('mega')" class="text-xs font-bold px-3 py-1.5 rounded-lg border transition bg-slate-100 text-slate-600 border-slate-200 hover:bg-slate-200">
                 ✨ メガシンカを含める (初期OFF)
               </button>
-              <button id="btnToggleShadow" onclick="toggleRaidFilter('shadow')" class="text-xs font-bold px-3 py-1.5 rounded-lg border transition bg-slate-800 text-slate-400 border-slate-700">
+              <button id="btnToggleShadow" onclick="toggleRaidFilter('shadow')" class="text-xs font-bold px-3 py-1.5 rounded-lg border transition bg-slate-100 text-slate-600 border-slate-200 hover:bg-slate-200">
                 🔥 シャドウを含める (初期OFF)
               </button>
             </div>
           </div>
-
-          <div id="raidRankingList" class="space-y-2">
-            <!-- JSで描画 -->
-          </div>
+          <div id="raidRankingList" class="space-y-2"></div>
         </div>
       </div>
 
       <!-- 2-B: ダイマックス攻略 (9DBキャプチャ画面を忠実に再現) -->
       <div id="secBattleDmax" class="space-y-4 hidden">
-        
-        <!-- ボス選択ボタン -->
         <div>
-          <div class="text-xs font-bold text-slate-400 mb-2 flex items-center justify-between">
+          <div class="text-xs font-bold text-slate-600 mb-2 flex items-center justify-between">
             <span>💥 マックスバトル対象を選択 (9DB最新データ):</span>
-            <span class="text-[11px] text-amber-400 font-semibold">14:00〜17:00限定UMA開催中</span>
+            <span class="text-[11px] text-amber-600 font-bold">14:00〜17:00限定UMA開催中</span>
           </div>
-          <div id="dmaxBossPicker" class="grid grid-cols-2 sm:grid-cols-4 gap-2">
-            <!-- JSで生成 -->
-          </div>
+          <div id="dmaxBossPicker" class="grid grid-cols-2 sm:grid-cols-4 gap-2"></div>
         </div>
-
-        <!-- 9DB風 ダイマックスバトルカード本体 -->
-        <div id="dmax9dbContainer">
-          <!-- JSで描画 -->
-        </div>
-
+        <div id="dmax9dbContainer"></div>
       </div>
 
     </div>
@@ -394,113 +358,108 @@
     <!-- ============================================================== -->
     <div id="tabContentGoPass" class="space-y-4 hidden">
 
-      <!-- サブ切り替え：今月 vs 今後の予定 -->
-      <div class="flex gap-2 p-1 bg-slate-900 rounded-xl border border-slate-800">
-        <button id="goPassSubCurrent" onclick="switchGoPassSub('current')" class="flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition bg-gradient-to-r from-amber-600 to-orange-600 text-white shadow">
+      <div class="flex gap-2 p-1 bg-slate-200/80 rounded-xl border border-slate-300">
+        <button id="goPassSubCurrent" onclick="switchGoPassSub('current')" class="flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition bg-white text-amber-700 shadow-sm">
           🎃 現在開催中のGOパス (10月度: カイオーガ)
         </button>
-        <button id="goPassSubFuture" onclick="switchGoPassSub('future')" class="flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition text-slate-400 hover:text-slate-200">
+        <button id="goPassSubFuture" onclick="switchGoPassSub('future')" class="flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition text-slate-600 hover:text-slate-900">
           🔮 今後予定のGOパス (11月: グラードン / 12月)
         </button>
       </div>
 
       <!-- 3-A: 現在開催中 (10月 GOパス) -->
       <div id="secGoPassCurrent" class="space-y-3">
-        <!-- 概要カード -->
-        <div class="bg-gradient-to-br from-purple-950/50 via-slate-900 to-slate-950 border border-purple-500/40 rounded-xl p-4 shadow-lg">
+        <div class="bg-white border border-purple-200 rounded-xl p-4 shadow-sm">
           <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
             <div class="flex items-center gap-2">
               <span class="text-2xl">🎃</span>
               <div>
-                <h2 class="text-base sm:text-lg font-black text-purple-200">GOパス：2026年10月 (ハロウィン・ナイト)</h2>
-                <div class="text-[11px] text-purple-300/80">期間: 2026年10月1日(木) 10:00 〜 11月3日(火) 10:00</div>
+                <h2 class="text-base sm:text-lg font-black text-purple-900">GOパス：2026年10月 (ハロウィン・ナイト)</h2>
+                <div class="text-[11px] text-purple-600 font-medium">期間: 2026年10月1日(木) 10:00 〜 11月3日(火) 10:00</div>
               </div>
             </div>
-            <span class="text-xs bg-purple-500/20 text-purple-300 font-bold px-2.5 py-1 rounded-full border border-purple-500/30">
+            <span class="text-xs bg-purple-100 text-purple-800 font-bold px-2.5 py-1 rounded-full border border-purple-300">
               目玉: カイオーガ & キラチャーム
             </span>
           </div>
-          <p class="text-xs text-slate-300 leading-relaxed bg-slate-950/60 p-2.5 rounded-lg border border-slate-800">
+          <p class="text-xs text-slate-700 leading-relaxed bg-purple-50/50 p-2.5 rounded-lg border border-purple-100">
             無料版でもランク100到達で<strong>カイオーガ</strong>と確定遭遇！デラックス版（1,120円）では合計1,400ポケコインと、フレンド1人を即時キラフレンド化できる「キラチャーム」を獲得可能です。
           </p>
         </div>
 
-        <!-- メジャーマイルストーン -->
-        <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-3.5 space-y-2">
-          <h3 class="text-xs sm:text-sm font-extrabold text-amber-300 flex items-center gap-1.5">
+        <div class="bg-white border border-slate-200 rounded-xl p-3.5 space-y-2 shadow-sm">
+          <h3 class="text-xs sm:text-sm font-extrabold text-amber-700 flex items-center gap-1.5">
             <span>⭐</span> メジャーマイルストーン（期間中常時発動）
           </h3>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-300">
-            <div class="bg-slate-950/60 p-2.5 rounded-lg border border-slate-800">
-              <strong class="text-sky-300">ランク1到達:</strong> ポケモン交換時のアメ+1個、TL31以上はアメXL確定ドロップ
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-700">
+            <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+              <strong class="text-sky-700">ランク1到達:</strong> ポケモン交換時のアメ+1個、TL31以上はアメXL確定ドロップ
             </div>
-            <div class="bg-slate-950/60 p-2.5 rounded-lg border border-slate-800">
-              <strong class="text-sky-300">ランク25到達:</strong> 1日のギフト開封40個（デラックス: 50個）、所持上限+10個
+            <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+              <strong class="text-sky-700">ランク25到達:</strong> 1日のギフト開封40個（デラックス: 50個）、所持上限+10個
             </div>
-            <div class="bg-slate-950/60 p-2.5 rounded-lg border border-slate-800">
-              <strong class="text-sky-300">ランク50到達:</strong> おさんぽおこうの効果時間が「30分（2倍）」に延長
+            <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+              <strong class="text-sky-700">ランク50到達:</strong> おさんぽおこうの効果時間が「30分（2倍）」に延長
             </div>
-            <div class="bg-slate-950/60 p-2.5 rounded-lg border border-slate-800">
-              <strong class="text-sky-300">ランク75到達:</strong> タマゴ孵化時のほしのすな＆獲得XPが増加
+            <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+              <strong class="text-sky-700">ランク75到達:</strong> タマゴ孵化時のほしのすな＆獲得XPが増加
             </div>
           </div>
         </div>
 
-        <!-- ランク別リワード早見表（折りたたみ開閉式テーブル） -->
-        <div class="bg-slate-900/90 border border-slate-800 rounded-xl overflow-hidden shadow-md">
-          <div onclick="togglePassTable()" class="p-3.5 bg-slate-850 hover:bg-slate-800/80 cursor-pointer flex items-center justify-between transition">
+        <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+          <div onclick="togglePassTable()" class="p-3.5 bg-slate-50 hover:bg-slate-100 cursor-pointer flex items-center justify-between transition">
             <div class="flex items-center gap-2">
               <span class="text-base">📋</span>
-              <h3 class="text-xs sm:text-sm font-extrabold text-white">ランク別リワード早見表 (ランク1 〜 100)</h3>
+              <h3 class="text-xs sm:text-sm font-extrabold text-slate-900">ランク別リワード早見表 (ランク1 〜 100)</h3>
             </div>
-            <span id="passTableToggleText" class="text-xs text-sky-400 font-bold">▼ 開く</span>
+            <span id="passTableToggleText" class="text-xs text-sky-600 font-bold">▼ 開く</span>
           </div>
 
-          <div id="passTableContainer" class="hidden border-t border-slate-800 max-h-96 overflow-y-auto">
+          <div id="passTableContainer" class="hidden border-t border-slate-200 max-h-96 overflow-y-auto">
             <table class="w-full text-xs text-left">
-              <thead class="bg-slate-950 text-slate-400 sticky top-0 border-b border-slate-800">
+              <thead class="bg-slate-100 text-slate-600 sticky top-0 border-b border-slate-200">
                 <tr>
                   <th class="p-2.5 w-16 text-center">ランク</th>
-                  <th class="p-2.5 text-emerald-400">無料パス リワード</th>
-                  <th class="p-2.5 text-amber-400">デラックス版 追加リワード (有料)</th>
+                  <th class="p-2.5 text-emerald-700">無料パス リワード</th>
+                  <th class="p-2.5 text-amber-700">デラックス版 追加リワード (有料)</th>
                 </tr>
               </thead>
-              <tbody class="divide-y divide-slate-800/60 text-slate-300">
-                <tr class="hover:bg-slate-800/30"><td class="p-2.5 text-center font-bold text-slate-400">1</td><td>モンスターボール ×20</td><td class="text-amber-300 font-medium">モンスターボール ×50 + プレミアムパス ×1</td></tr>
-                <tr class="hover:bg-slate-800/30"><td class="p-2.5 text-center font-bold text-slate-400">5</td><td>ほしのすな ×1,000</td><td class="text-amber-300 font-medium">ほしのすな ×3,000 + 50ポケコイン</td></tr>
-                <tr class="hover:bg-slate-800/30"><td class="p-2.5 text-center font-bold text-slate-400">10</td><td>しあわせタマゴ ×1</td><td class="text-amber-300 font-medium">スーパーふかそうち ×1</td></tr>
-                <tr class="hover:bg-slate-800/30"><td class="p-2.5 text-center font-bold text-slate-400">20</td><td>わざマシンノーマル ×2</td><td class="text-amber-300 font-medium">時限ふかそうち ×1 + 100ポケコイン</td></tr>
-                <tr class="hover:bg-slate-800/30 bg-sky-950/20"><td class="p-2.5 text-center font-bold text-sky-400">25</td><td class="text-sky-300 font-bold">【マイルストーン】ギフト開封40個</td><td class="text-amber-300 font-bold">ギフト開封50個 + ふしぎなアメ ×5</td></tr>
-                <tr class="hover:bg-slate-800/30"><td class="p-2.5 text-center font-bold text-slate-400">30</td><td>ダイマックスモグリュー遭遇</td><td class="text-amber-300 font-medium">モグリューのアメXL ×5 + 100ポケコイン</td></tr>
-                <tr class="hover:bg-slate-800/30"><td class="p-2.5 text-center font-bold text-slate-400">40</td><td>ふしぎなアメ ×2</td><td class="text-amber-300 font-medium">プレミアムバトルパス ×2</td></tr>
-                <tr class="hover:bg-slate-800/30 bg-sky-950/20"><td class="p-2.5 text-center font-bold text-sky-400">50</td><td class="text-sky-300 font-bold">【マイルストーン】おこう効果30分</td><td class="text-amber-300 font-bold">おこう ×3 + 150ポケコイン</td></tr>
-                <tr class="hover:bg-slate-800/30"><td class="p-2.5 text-center font-bold text-slate-400">60</td><td>ほしのかけら ×1</td><td class="text-amber-300 font-medium">すごいわざマシンノーマル ×1</td></tr>
-                <tr class="hover:bg-slate-800/30 bg-sky-950/20"><td class="p-2.5 text-center font-bold text-sky-400">75</td><td class="text-sky-300 font-bold">【マイルストーン】孵化砂・XP増加</td><td class="text-amber-300 font-bold">ふしぎなアメXL ×3 + 150ポケコイン</td></tr>
-                <tr class="hover:bg-slate-800/30"><td class="p-2.5 text-center font-bold text-slate-400">85</td><td>ハイパーボール ×20</td><td class="text-amber-300 font-medium">ハイパーボール ×50 + 200ポケコイン</td></tr>
-                <tr class="hover:bg-slate-800/30"><td class="p-2.5 text-center font-bold text-slate-400">95</td><td>ふしぎなアメXL ×2</td><td class="text-amber-300 font-medium">ふしぎなアメXL ×5</td></tr>
-                <tr class="hover:bg-slate-800/30 bg-amber-950/30 font-bold"><td class="p-2.5 text-center font-black text-amber-400">100</td><td class="text-emerald-300 font-black">✨ カイオーガ (確定遭遇)</td><td class="text-amber-300 font-black">✨ キラチャーム ×1 + 250ポケコイン</td></tr>
+              <tbody class="divide-y divide-slate-100 text-slate-700">
+                <tr class="hover:bg-slate-50"><td class="p-2.5 text-center font-bold text-slate-500">1</td><td>モンスターボール ×20</td><td class="text-amber-700 font-medium">モンスターボール ×50 + プレミアムパス ×1</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-2.5 text-center font-bold text-slate-500">5</td><td>ほしのすな ×1,000</td><td class="text-amber-700 font-medium">ほしのすな ×3,000 + 50ポケコイン</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-2.5 text-center font-bold text-slate-500">10</td><td>しあわせタマゴ ×1</td><td class="text-amber-700 font-medium">スーパーふかそうち ×1</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-2.5 text-center font-bold text-slate-500">20</td><td>わざマシンノーマル ×2</td><td class="text-amber-700 font-medium">時限ふかそうち ×1 + 100ポケコイン</td></tr>
+                <tr class="hover:bg-slate-50 bg-sky-50/50"><td class="p-2.5 text-center font-bold text-sky-700">25</td><td class="text-sky-800 font-bold">【マイルストーン】ギフト開封40個</td><td class="text-amber-700 font-bold">ギフト開封50個 + ふしぎなアメ ×5</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-2.5 text-center font-bold text-slate-500">30</td><td>ダイマックスモグリュー遭遇</td><td class="text-amber-700 font-medium">モグリューのアメXL ×5 + 100ポケコイン</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-2.5 text-center font-bold text-slate-500">40</td><td>ふしぎなアメ ×2</td><td class="text-amber-700 font-medium">プレミアムバトルパス ×2</td></tr>
+                <tr class="hover:bg-slate-50 bg-sky-50/50"><td class="p-2.5 text-center font-bold text-sky-700">50</td><td class="text-sky-800 font-bold">【マイルストーン】おこう効果30分</td><td class="text-amber-700 font-bold">おこう ×3 + 150ポケコイン</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-2.5 text-center font-bold text-slate-500">60</td><td>ほしのかけら ×1</td><td class="text-amber-700 font-medium">すごいわざマシンノーマル ×1</td></tr>
+                <tr class="hover:bg-slate-50 bg-sky-50/50"><td class="p-2.5 text-center font-bold text-sky-700">75</td><td class="text-sky-800 font-bold">【マイルストーン】孵化砂・XP増加</td><td class="text-amber-700 font-bold">ふしぎなアメXL ×3 + 150ポケコイン</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-2.5 text-center font-bold text-slate-500">85</td><td>ハイパーボール ×20</td><td class="text-amber-700 font-medium">ハイパーボール ×50 + 200ポケコイン</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-2.5 text-center font-bold text-slate-500">95</td><td>ふしぎなアメXL ×2</td><td class="text-amber-700 font-medium">ふしぎなアメXL ×5</td></tr>
+                <tr class="hover:bg-slate-50 bg-amber-50/70 font-bold"><td class="p-2.5 text-center font-black text-amber-700">100</td><td class="text-emerald-700 font-black">✨ カイオーガ (確定遭遇)</td><td class="text-amber-700 font-black">✨ キラチャーム ×1 + 250ポケコイン</td></tr>
               </tbody>
             </table>
           </div>
         </div>
 
-        <!-- パスポイントを最速で稼ぐコツ -->
-        <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-3.5">
-          <h3 class="text-xs sm:text-sm font-extrabold text-sky-300 mb-2 flex items-center gap-1.5">
+        <div class="bg-white border border-slate-200 rounded-xl p-3.5 shadow-sm">
+          <h3 class="text-xs sm:text-sm font-extrabold text-sky-700 mb-2 flex items-center gap-1.5">
             <span>💡</span> 3サイト直伝：今週中にRank 100到達するためのデイリー目標
           </h3>
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs text-slate-300">
-            <div class="bg-slate-950 p-2 rounded border border-slate-800">
-              <strong class="text-amber-400">1. 初スピン＆初捕獲</strong>
-              <p class="text-[11px] text-slate-400 mt-0.5">毎日欠かさず達成（1日合計 +150pt）</p>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs text-slate-700">
+            <div class="bg-slate-50 p-2 rounded-lg border border-slate-200">
+              <strong class="text-amber-700">1. 初スピン＆初捕獲</strong>
+              <p class="text-[11px] text-slate-500 mt-0.5">毎日欠かさず達成（1日合計 +150pt）</p>
             </div>
-            <div class="bg-slate-950 p-2 rounded border border-slate-800">
-              <strong class="text-amber-400">2. ハロウィンタスク3回</strong>
-              <p class="text-[11px] text-slate-400 mt-0.5">ポケストップから限定リサーチ達成（+180pt）</p>
+            <div class="bg-slate-50 p-2 rounded-lg border border-slate-200">
+              <strong class="text-amber-700">2. ハロウィンタスク3回</strong>
+              <p class="text-[11px] text-slate-500 mt-0.5">ポケストップから限定リサーチ達成（+180pt）</p>
             </div>
-            <div class="bg-slate-950 p-2 rounded border border-slate-800">
-              <strong class="text-amber-400">3. レイド/ダイマックス1戦</strong>
-              <p class="text-[11px] text-slate-400 mt-0.5">無料パスやMPを消費してバトル（+120pt）</p>
+            <div class="bg-slate-50 p-2 rounded-lg border border-slate-200">
+              <strong class="text-amber-700">3. レイド/ダイマックス1戦</strong>
+              <p class="text-[11px] text-slate-500 mt-0.5">無料パスやMPを消費してバトル（+120pt）</p>
             </div>
           </div>
         </div>
@@ -508,30 +467,29 @@
 
       <!-- 3-B: 今後予定のGOパス (11月・12月) -->
       <div id="secGoPassFuture" class="space-y-3 hidden">
-        <!-- 11月 ワイルドエリアパス -->
-        <div class="bg-slate-900/90 border border-teal-500/40 rounded-xl p-4 shadow-md space-y-2">
-          <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+        <div class="bg-white border border-teal-200 rounded-xl p-4 shadow-sm space-y-2">
+          <div class="flex items-center justify-between border-b border-slate-100 pb-2">
             <div>
-              <span class="text-xs bg-teal-500/20 text-teal-300 font-bold px-2 py-0.5 rounded border border-teal-500/30">2026年11月予定</span>
-              <h3 class="text-base font-black text-white mt-1">GOパス：ワイルドエリア・シーズン (11/3〜12/1)</h3>
+              <span class="text-xs bg-teal-100 text-teal-800 font-bold px-2 py-0.5 rounded border border-teal-200">2026年11月予定</span>
+              <h3 class="text-base font-black text-slate-900 mt-1">GOパス：ワイルドエリア・シーズン (11/3〜12/1)</h3>
             </div>
-            <span class="text-xs text-teal-400 font-bold">目玉: グラードン</span>
+            <span class="text-xs text-teal-700 font-bold">目玉: グラードン</span>
           </div>
-          <p class="text-xs text-slate-300 leading-relaxed">
+          <p class="text-xs text-slate-700 leading-relaxed">
             11/14〜15の「GOワイルドエリア2026：グローバル」連動パス。ランク100で<strong>グラードン</strong>と遭遇！デラックス版ではGOサファリボール追加支給や、キュレム合体エナジー、ザシアン/ザマゼンタ限定アバターを入手可能です。
           </p>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs pt-1">
-            <div class="bg-slate-950 p-2 rounded border border-slate-800">
-              <strong class="text-teal-300">【無料注目】</strong>
-              <ul class="text-[11px] text-slate-400 list-disc list-inside mt-0.5">
+            <div class="bg-slate-50 p-2 rounded-lg border border-slate-200">
+              <strong class="text-teal-700">【無料注目】</strong>
+              <ul class="text-[11px] text-slate-600 list-disc list-inside mt-0.5">
                 <li>GOサファリボール先行配布 ×10個</li>
                 <li>すごいわざマシン スペシャル ×1</li>
                 <li>ランク100：グラードン遭遇</li>
               </ul>
             </div>
-            <div class="bg-slate-950 p-2 rounded border border-slate-800">
-              <strong class="text-amber-300">【デラックス注目】</strong>
-              <ul class="text-[11px] text-slate-400 list-disc list-inside mt-0.5">
+            <div class="bg-slate-50 p-2 rounded-lg border border-slate-200">
+              <strong class="text-amber-700">【デラックス注目】</strong>
+              <ul class="text-[11px] text-slate-600 list-disc list-inside mt-0.5">
                 <li>ワイルドエリア限定サファリジャケット</li>
                 <li>ホワイト/ブラックキュレム合体エナジー ×200</li>
                 <li>マスターボール ×1個 (Rank 100到達報酬)</li>
@@ -540,16 +498,15 @@
           </div>
         </div>
 
-        <!-- 12月 ウィンターホリデーパス -->
-        <div class="bg-slate-900/90 border border-sky-500/40 rounded-xl p-4 shadow-md space-y-2">
-          <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+        <div class="bg-white border border-sky-200 rounded-xl p-4 shadow-sm space-y-2">
+          <div class="flex items-center justify-between border-b border-slate-100 pb-2">
             <div>
-              <span class="text-xs bg-sky-500/20 text-sky-300 font-bold px-2 py-0.5 rounded border border-sky-500/30">2026年12月予定</span>
-              <h3 class="text-base font-black text-white mt-1">GOパス：ウィンターホリデー＆オールスター (12/1〜12/31)</h3>
+              <span class="text-xs bg-sky-100 text-sky-800 font-bold px-2 py-0.5 rounded border border-sky-200">2026年12月予定</span>
+              <h3 class="text-base font-black text-slate-900 mt-1">GOパス：ウィンターホリデー＆オールスター (12/1〜12/31)</h3>
             </div>
-            <span class="text-xs text-sky-400 font-bold">事前予告</span>
+            <span class="text-xs text-sky-700 font-bold">事前予告</span>
           </div>
-          <p class="text-xs text-slate-300 leading-relaxed">
+          <p class="text-xs text-slate-700 leading-relaxed">
             年末の総決算オールスターコミュデイおよびホリデーイベント連動。ギフト上限拡大やふかそうち大量配布など、年末の育成・厳選を加速させるボーナスが満載です。
           </p>
         </div>
@@ -559,13 +516,9 @@
 
   </main>
 
-  <!-- スクリプト部 -->
   <script>
     const getPokeImg = (dex) => `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${dex}.png`;
 
-    // =========================================================================
-    // データ定義：ニュース速報 (3サイト統合)
-    // =========================================================================
     const NEWS_ITEMS = [
       { id: "news-uma-day", text: "本日14:00〜17:00「ダイマックスUMAマックスバトルデイ」開催！無料MP800受取を忘れずに", targetId: "ev-dmax-uma-day" },
       { id: "news-mega-char", text: "メガリザードンY＆Xレイド出現中！Yはいわ2.56倍二重弱点でソロ・ペア討伐可能", targetId: "ev-palkia-char" },
@@ -575,16 +528,13 @@
       { id: "news-wild-area", text: "11/14〜15「GOワイルドエリア2026」詳細発表！PL40〜50の『つよいポケモン』とサファリボール初解禁", targetId: "ev-wildarea-2026" }
     ];
 
-    // =========================================================================
-    // データ定義：ガントチャート ＆ 詳細（カテゴリ適正化済み）
-    // =========================================================================
     const ALL_EVENTS = [
       {
         id: "ev-orionids",
         month: 10,
         title: "オリオン座流星群 観測ウィーク",
         barClass: "bar-main",
-        category: "main", // メイン・シーズンへ変更
+        category: "main",
         startDay: 18,
         endDay: 24,
         dateText: "10/18(日) 〜 10/24(土) 20:00 [本日終了]",
@@ -629,7 +579,7 @@
         month: 10,
         title: "ポケモンナイトアウト (ロサンゼルス)",
         barClass: "bar-main",
-        category: "main", // メイン・シーズンへ変更
+        category: "main",
         startDay: 24,
         endDay: 25,
         dateText: "10/24(土) 〜 10/25(日)",
@@ -648,7 +598,7 @@
         month: 10,
         title: "ポケモンナイトアウト Twitch公式配信",
         barClass: "bar-main",
-        category: "main", // メイン・シーズンへ変更
+        category: "main",
         startDay: 25,
         endDay: 25,
         dateText: "10/25(日) 配信時間限定",
@@ -926,11 +876,7 @@
       }
     ];
 
-    // =========================================================================
-    // データ定義：レイドボス対策（現在開催中最優先 / メガレイド復活 / 初期値通常TOP10）
-    // =========================================================================
     const RAID_DATA = {
-      // --- 現在開催中 ---
       "palkia-origin": {
         isCurrent: true,
         name: "パルキア (オリジンフォルム)",
@@ -1023,8 +969,6 @@
           { name: "シャドウマンムー", dex: 473, tag: "shadow", dps: 58.2, tdo: 940, fast: "こなゆき", charge: "ゆきなだれ" }
         ]
       },
-
-      // --- 未来・次回予告レイド ---
       "giratina-origin": {
         isCurrent: false,
         name: "ギラティナ (オリジンフォルム)",
@@ -1088,9 +1032,6 @@
       }
     };
 
-    // =========================================================================
-    // データ定義：ダイマックス 9DBキャプチャ仕様完全準拠 (ザマゼンタ修正)
-    // =========================================================================
     const DMAX_9DB_DATA = {
       "dmax-uxie": {
         name: "ユクシー",
@@ -1273,15 +1214,11 @@
       }
     };
 
-    // =========================================================================
-    // アプリケーション状態管理
-    // =========================================================================
     let currentGanttMonth = 10;
     let currentCategoryFilter = "all";
     let hiddenEventIds = new Set();
     let readNewsIds = new Set();
     
-    // 現在開催中レイドをデフォルト初期選択
     let activeRaidKey = "palkia-origin"; 
     let activeDmax9dbKey = "dmax-uxie";
 
@@ -1347,25 +1284,22 @@
       renderNewsSection();
     }
 
-    // =========================================================================
-    // メインタブ制御 (イベント / レイド・ダイマ / GOパス)
-    // =========================================================================
     function switchMainTab(tab) {
       const isSched = tab === "schedule";
       const isBattles = tab === "battles";
       const isGoPass = tab === "gopass";
 
       document.getElementById("tabNavSchedule").className = isSched
-        ? "flex-1 py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1.5 bg-gradient-to-r from-sky-600 to-blue-600 text-white shadow-md shadow-sky-950"
-        : "flex-1 py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1.5 text-slate-400 hover:text-slate-200";
+        ? "flex-1 py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1.5 bg-white text-sky-700 shadow-sm"
+        : "flex-1 py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1.5 text-slate-600 hover:text-slate-900";
 
       document.getElementById("tabNavBattles").className = isBattles
-        ? "flex-1 py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1.5 bg-gradient-to-r from-emerald-600 to-teal-600 text-white shadow-md shadow-emerald-950"
-        : "flex-1 py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1.5 text-slate-400 hover:text-slate-200";
+        ? "flex-1 py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1.5 bg-white text-emerald-700 shadow-sm"
+        : "flex-1 py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1.5 text-slate-600 hover:text-slate-900";
 
       document.getElementById("tabNavGoPass").className = isGoPass
-        ? "flex-1 py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1.5 bg-gradient-to-r from-amber-600 to-orange-600 text-white shadow-md shadow-amber-950"
-        : "flex-1 py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1.5 text-slate-400 hover:text-slate-200";
+        ? "flex-1 py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1.5 bg-white text-amber-700 shadow-sm"
+        : "flex-1 py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1.5 text-slate-600 hover:text-slate-900";
 
       document.getElementById("tabContentSchedule").classList.toggle("hidden", !isSched);
       document.getElementById("tabContentBattles").classList.toggle("hidden", !isBattles);
@@ -1377,12 +1311,12 @@
     function switchBattleSub(sub) {
       const isRaid = sub === "raids";
       document.getElementById("subTabRaids").className = isRaid
-        ? "flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition bg-gradient-to-r from-emerald-600 to-teal-600 text-white shadow"
-        : "flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition text-slate-400 hover:text-slate-200";
+        ? "flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition bg-white text-emerald-700 shadow-sm"
+        : "flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition text-slate-600 hover:text-slate-900";
 
       document.getElementById("subTabDmax").className = !isRaid
-        ? "flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition bg-gradient-to-r from-purple-700 to-indigo-700 text-white shadow"
-        : "flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition text-slate-400 hover:text-slate-200";
+        ? "flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition bg-white text-purple-700 shadow-sm"
+        : "flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition text-slate-600 hover:text-slate-900";
 
       document.getElementById("secBattleRaids").classList.toggle("hidden", !isRaid);
       document.getElementById("secBattleDmax").classList.toggle("hidden", isRaid);
@@ -1394,12 +1328,12 @@
     function switchGoPassSub(sub) {
       const isCurr = sub === "current";
       document.getElementById("goPassSubCurrent").className = isCurr
-        ? "flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition bg-gradient-to-r from-amber-600 to-orange-600 text-white shadow"
-        : "flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition text-slate-400 hover:text-slate-200";
+        ? "flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition bg-white text-amber-700 shadow-sm"
+        : "flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition text-slate-600 hover:text-slate-900";
 
       document.getElementById("goPassSubFuture").className = !isCurr
-        ? "flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition bg-gradient-to-r from-teal-600 to-emerald-600 text-white shadow"
-        : "flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition text-slate-400 hover:text-slate-200";
+        ? "flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition bg-white text-teal-700 shadow-sm"
+        : "flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition text-slate-600 hover:text-slate-900";
 
       document.getElementById("secGoPassCurrent").classList.toggle("hidden", !isCurr);
       document.getElementById("secGoPassFuture").classList.toggle("hidden", isCurr);
@@ -1417,9 +1351,6 @@
       }
     }
 
-    // =========================================================================
-    // ニュース速報の描画
-    // =========================================================================
     function renderNewsSection() {
       const container = document.getElementById("newsItemsContainer");
       container.innerHTML = "";
@@ -1427,19 +1358,19 @@
       const visibleNews = NEWS_ITEMS.filter(n => !readNewsIds.has(n.id));
 
       if (visibleNews.length === 0) {
-        container.innerHTML = `<div class="text-slate-500 py-2">すべてのニュースを既読にしました。</div>`;
+        container.innerHTML = `<div class="text-slate-400 py-2">すべてのニュースを既読にしました。</div>`;
         return;
       }
 
       visibleNews.forEach(n => {
         const item = document.createElement("div");
-        item.className = "flex items-center justify-between gap-2 bg-slate-900/70 p-2 rounded-lg border border-slate-800";
+        item.className = "flex items-center justify-between gap-2 bg-slate-50 p-2 rounded-lg border border-slate-200";
         item.innerHTML = `
-          <div class="cursor-pointer hover:text-sky-300 transition flex items-center gap-1.5 flex-1" onclick="scrollToEventCard('${n.targetId}')">
-            <span class="text-sky-400 font-bold">●</span>
+          <div class="cursor-pointer hover:text-sky-700 transition flex items-center gap-1.5 flex-1" onclick="scrollToEventCard('${n.targetId}')">
+            <span class="text-sky-600 font-bold">●</span>
             <span class="line-clamp-1">${n.text}</span>
           </div>
-          <button onclick="markNewsRead('${n.id}')" class="text-[11px] bg-slate-800 hover:bg-emerald-600 hover:text-white text-slate-300 px-2 py-0.5 rounded transition flex-shrink-0">
+          <button onclick="markNewsRead('${n.id}')" class="text-[11px] bg-slate-200 hover:bg-emerald-600 hover:text-white text-slate-700 px-2 py-0.5 rounded transition flex-shrink-0 font-bold">
             ✓ 既読
           </button>
         `;
@@ -1447,17 +1378,14 @@
       });
     }
 
-    // =========================================================================
-    // ガントチャートタイムライン
-    // =========================================================================
     function changeGanttMonth(m) {
       currentGanttMonth = m;
       [10, 11, 12].forEach(num => {
         const btn = document.getElementById(`monthBtn${num}`);
         if (num === m) {
-          btn.className = "text-xs px-3 py-1 rounded-md font-bold transition bg-sky-600 text-white shadow";
+          btn.className = "text-xs px-3 py-1 rounded-md font-bold transition bg-sky-600 text-white shadow-sm";
         } else {
-          btn.className = "text-xs px-3 py-1 rounded-md font-bold transition text-slate-400 hover:text-white";
+          btn.className = "text-xs px-3 py-1 rounded-md font-bold transition text-slate-600 hover:text-slate-900";
         }
       });
       renderGanttTimeline();
@@ -1469,9 +1397,9 @@
       cats.forEach(c => {
         const btn = document.getElementById(`catBtn-${c}`);
         if (c === cat) {
-          btn.className = "text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-sky-600 text-white shadow";
+          btn.className = "text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-sky-600 text-white shadow-sm";
         } else {
-          btn.className = "text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-800 text-slate-400 hover:text-white";
+          btn.className = "text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-100 text-slate-600 hover:bg-slate-200";
         }
       });
       renderGanttTimeline();
@@ -1512,12 +1440,12 @@
         const dowIndex = dateObj.getDay();
         const isToday = (currentGanttMonth === 10 && d === 24);
 
-        let dowColor = "text-slate-400";
-        if (dowIndex === 6) dowColor = "text-sky-400";
-        if (dowIndex === 0) dowColor = "text-rose-400";
+        let dowColor = "text-slate-600";
+        if (dowIndex === 6) dowColor = "text-sky-600";
+        if (dowIndex === 0) dowColor = "text-rose-600";
 
         const cell = document.createElement("div");
-        cell.className = `py-1.5 border-r border-slate-800 ${isToday ? "bg-sky-950/60 text-sky-300 border-b-2 border-b-sky-400" : ""}`;
+        cell.className = `py-1.5 border-r border-slate-200 ${isToday ? "bg-sky-50 text-sky-800 border-b-2 border-b-sky-500 font-black" : ""}`;
         cell.innerHTML = `
           <div class="text-[10px] ${dowColor}">${dows[dowIndex]}</div>
           <div class="text-[11px] font-bold">${currentGanttMonth}/${d}</div>
@@ -1525,7 +1453,7 @@
         headerRow.appendChild(cell);
 
         const bgCol = document.createElement("div");
-        bgCol.className = `border-r border-slate-800/40 ${isToday ? "bg-sky-500/5" : ""}`;
+        bgCol.className = `border-r border-slate-100 ${isToday ? "bg-sky-50/40" : ""}`;
         bgGrid.appendChild(bgCol);
       }
 
@@ -1550,13 +1478,13 @@
         row.style.gridTemplateColumns = gridTemplate;
 
         const bar = document.createElement("div");
-        bar.className = `${ev.barClass} h-6 rounded-md px-2 text-[11px] font-bold flex items-center justify-between cursor-pointer shadow hover:brightness-110 transition truncate z-10`;
+        bar.className = `${ev.barClass} h-6 rounded-md px-2 text-[11px] font-bold flex items-center justify-between cursor-pointer shadow-sm hover:brightness-95 transition truncate z-10`;
         bar.style.gridColumn = `${colStart} / span ${colSpan}`;
         bar.onclick = () => scrollToEventCard(ev.id);
 
         bar.innerHTML = `
           <span class="truncate mr-1">${ev.title}</span>
-          <button onclick="hideEvent('${ev.id}', event)" class="text-[10px] opacity-70 hover:opacity-100 hover:bg-rose-600 bg-black/40 px-1 py-0.5 rounded leading-none flex-shrink-0" title="非表示">✕</button>
+          <button onclick="hideEvent('${ev.id}', event)" class="text-[10px] opacity-70 hover:opacity-100 hover:bg-rose-500 hover:text-white bg-white/70 px-1 py-0.5 rounded leading-none flex-shrink-0" title="非表示">✕</button>
         `;
 
         row.appendChild(bar);
@@ -1564,9 +1492,6 @@
       });
     }
 
-    // =========================================================================
-    // イベント詳細アコーディオン
-    // =========================================================================
     function renderEventAccordions() {
       const container = document.getElementById("eventsAccordionContainer");
       container.innerHTML = "";
@@ -1579,7 +1504,7 @@
 
       visibleEvents.forEach((ev, index) => {
         const details = document.createElement("details");
-        details.className = "bg-slate-900/80 border border-slate-800 rounded-xl overflow-hidden transition group";
+        details.className = "bg-white border border-slate-200 rounded-xl overflow-hidden transition group shadow-sm";
         details.id = ev.id;
         if (index === 0 || index === 1) details.open = true;
 
@@ -1587,14 +1512,14 @@
         if (ev.wilds && ev.wilds.length > 0) {
           wildsHtml = `
             <div>
-              <div class="text-[11px] font-bold text-emerald-400 mb-1 flex items-center gap-1">🌿 【野生出現ピックアップ】</div>
+              <div class="text-[11px] font-bold text-emerald-700 mb-1 flex items-center gap-1">🌿 【野生出現ピックアップ】</div>
               <div class="grid grid-cols-2 sm:grid-cols-4 gap-1.5">
                 ${ev.wilds.map(w => `
-                  <div class="bg-slate-950/70 border border-slate-800 p-1.5 rounded-lg flex items-center gap-2">
+                  <div class="bg-slate-50 border border-slate-200 p-1.5 rounded-lg flex items-center gap-2">
                     <img src="${getPokeImg(w.dex)}" alt="${w.name}" class="w-8 h-8 object-contain flex-shrink-0">
                     <div class="overflow-hidden">
-                      <div class="text-[11px] font-bold truncate">${w.name} ${w.shiny ? '<span class="text-amber-300">✨</span>' : ''}</div>
-                      <div class="text-[10px] text-slate-400 truncate">${w.note}</div>
+                      <div class="text-[11px] font-bold truncate text-slate-800">${w.name} ${w.shiny ? '<span class="text-amber-500">✨</span>' : ''}</div>
+                      <div class="text-[10px] text-slate-500 truncate">${w.note}</div>
                     </div>
                   </div>
                 `).join("")}
@@ -1607,18 +1532,18 @@
         if (ev.raids && ev.raids.length > 0) {
           raidsHtml = `
             <div>
-              <div class="text-[11px] font-bold text-rose-400 mb-1 flex items-center gap-1">⚔️ 【レイド・ダイマックス出現】(タップで対策へジャンプ)</div>
+              <div class="text-[11px] font-bold text-rose-700 mb-1 flex items-center gap-1">⚔️ 【レイド・ダイマックス出現】(タップで対策へジャンプ)</div>
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-1.5">
                 ${ev.raids.map(r => `
-                  <div onclick="jumpToCounterTarget('${r.targetKey}', ${r.isDmax})" class="bg-slate-950/70 border border-slate-800 hover:border-sky-500 p-2 rounded-lg flex items-center justify-between cursor-pointer transition">
+                  <div onclick="jumpToCounterTarget('${r.targetKey}', ${r.isDmax})" class="bg-slate-50 border border-slate-200 hover:border-sky-500 p-2 rounded-lg flex items-center justify-between cursor-pointer transition">
                     <div class="flex items-center gap-2 overflow-hidden">
                       <img src="${getPokeImg(r.dex)}" alt="${r.name}" class="w-9 h-9 object-contain flex-shrink-0">
                       <div class="overflow-hidden">
-                        <div class="text-[11px] font-bold truncate">${r.name} ${r.shiny ? '<span class="text-amber-300">✨</span>' : ''}</div>
-                        <div class="text-[10px] text-slate-400 truncate">${r.note}</div>
+                        <div class="text-[11px] font-bold truncate text-slate-800">${r.name} ${r.shiny ? '<span class="text-amber-500">✨</span>' : ''}</div>
+                        <div class="text-[10px] text-slate-500 truncate">${r.note}</div>
                       </div>
                     </div>
-                    <span class="text-[10px] bg-sky-600 text-white font-bold px-2 py-0.5 rounded flex-shrink-0">対策を見る ↗</span>
+                    <span class="text-[10px] bg-sky-600 text-white font-bold px-2 py-0.5 rounded flex-shrink-0 shadow-sm">対策を見る ↗</span>
                   </div>
                 `).join("")}
               </div>
@@ -1630,14 +1555,14 @@
         if (ev.tasks && ev.tasks.length > 0) {
           tasksHtml = `
             <div>
-              <div class="text-[11px] font-bold text-sky-400 mb-1 flex items-center gap-1">📋 【限定フィールドリサーチ報酬】(GameWith/ポケマピ準拠)</div>
+              <div class="text-[11px] font-bold text-sky-700 mb-1 flex items-center gap-1">📋 【限定フィールドリサーチ報酬】(GameWith/ポケマピ準拠)</div>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
                 ${ev.tasks.map(t => `
-                  <div class="bg-slate-950/70 border border-slate-800 p-2 rounded-lg flex items-center justify-between gap-2">
-                    <span class="text-[11px] text-slate-300">${t.task}</span>
+                  <div class="bg-slate-50 border border-slate-200 p-2 rounded-lg flex items-center justify-between gap-2">
+                    <span class="text-[11px] text-slate-700 font-medium">${t.task}</span>
                     <div class="flex items-center gap-1.5 flex-shrink-0">
                       <img src="${getPokeImg(t.rewardDex)}" alt="${t.rewardName}" class="w-7 h-7 object-contain">
-                      <span class="text-[11px] font-bold text-amber-300">${t.rewardName} ${t.shiny ? '✨' : ''}</span>
+                      <span class="text-[11px] font-bold text-amber-600">${t.rewardName} ${t.shiny ? '✨' : ''}</span>
                     </div>
                   </div>
                 `).join("")}
@@ -1650,26 +1575,26 @@
         if (ev.bonuses && ev.bonuses.length > 0) {
           bonusHtml = `
             <div class="flex flex-wrap gap-1 text-[11px]">
-              ${ev.bonuses.map(b => `<span class="bg-slate-800 text-slate-300 px-2 py-0.5 rounded-md border border-slate-700">🎁 ${b}</span>`).join("")}
+              ${ev.bonuses.map(b => `<span class="bg-slate-100 text-slate-700 px-2 py-0.5 rounded-md border border-slate-200 font-medium">🎁 ${b}</span>`).join("")}
             </div>
           `;
         }
 
         details.innerHTML = `
-          <summary class="p-3.5 cursor-pointer flex items-center justify-between gap-2 hover:bg-slate-800/40 transition">
+          <summary class="p-3.5 cursor-pointer flex items-center justify-between gap-2 hover:bg-slate-50 transition">
             <div>
-              <div class="text-[11px] text-sky-400 font-bold">${ev.dateText}</div>
-              <h3 class="text-sm font-extrabold text-white mt-0.5">${ev.title}</h3>
+              <div class="text-[11px] text-sky-600 font-bold">${ev.dateText}</div>
+              <h3 class="text-sm font-extrabold text-slate-900 mt-0.5">${ev.title}</h3>
             </div>
             <div class="flex items-center gap-2">
-              <button onclick="hideEvent('${ev.id}', event)" class="text-[11px] text-slate-400 hover:text-rose-400 bg-slate-800 px-2.5 py-1 rounded-md border border-slate-700 transition" title="非表示">
+              <button onclick="hideEvent('${ev.id}', event)" class="text-[11px] text-slate-500 hover:text-rose-600 bg-slate-100 px-2.5 py-1 rounded-md border border-slate-200 transition font-bold" title="非表示">
                 👁 非表示
               </button>
               <span class="text-slate-400 group-open:rotate-180 transition-transform text-xs">▼</span>
             </div>
           </summary>
-          <div class="p-3.5 pt-0 border-t border-slate-800/80 space-y-3 mt-1 text-xs">
-            <div class="text-slate-300 leading-relaxed bg-slate-950/40 p-2.5 rounded-lg border border-slate-800">
+          <div class="p-3.5 pt-0 border-t border-slate-100 space-y-3 mt-1 text-xs">
+            <div class="text-slate-700 leading-relaxed bg-slate-50 p-2.5 rounded-lg border border-slate-200">
               ${ev.summary}
             </div>
             ${bonusHtml}
@@ -1692,23 +1617,20 @@
       }
     }
 
-    // =========================================================================
-    // 通常レイド対策（現在開催中最優先 / 初期値：通常TOP10）
-    // =========================================================================
     function toggleRaidFilter(type) {
       if (type === "mega") {
         filterMega = !filterMega;
         const btn = document.getElementById("btnToggleMega");
         btn.className = filterMega
-          ? "text-xs font-bold px-3 py-1.5 rounded-lg border transition bg-purple-600/30 text-purple-300 border-purple-500/50 shadow"
-          : "text-xs font-bold px-3 py-1.5 rounded-lg border transition bg-slate-800 text-slate-400 border-slate-700";
+          ? "text-xs font-bold px-3 py-1.5 rounded-lg border transition bg-purple-100 text-purple-700 border-purple-300 shadow-sm"
+          : "text-xs font-bold px-3 py-1.5 rounded-lg border transition bg-slate-100 text-slate-600 border-slate-200 hover:bg-slate-200";
         btn.textContent = filterMega ? "✨ メガシンカを含める (ON)" : "✨ メガシンカを含める (初期OFF)";
       } else if (type === "shadow") {
         filterShadow = !filterShadow;
         const btn = document.getElementById("btnToggleShadow");
         btn.className = filterShadow
-          ? "text-xs font-bold px-3 py-1.5 rounded-lg border transition bg-rose-600/30 text-rose-300 border-rose-500/50 shadow"
-          : "text-xs font-bold px-3 py-1.5 rounded-lg border transition bg-slate-800 text-slate-400 border-slate-700";
+          ? "text-xs font-bold px-3 py-1.5 rounded-lg border transition bg-rose-100 text-rose-700 border-rose-300 shadow-sm"
+          : "text-xs font-bold px-3 py-1.5 rounded-lg border transition bg-slate-100 text-slate-600 border-slate-200 hover:bg-slate-200";
         btn.textContent = filterShadow ? "🔥 シャドウを含める (ON)" : "🔥 シャドウを含める (初期OFF)";
       }
       renderRaidRanking();
@@ -1733,8 +1655,8 @@
         
         card.className = `p-2 rounded-xl border text-left transition flex items-center gap-2 ${
           active
-            ? "bg-slate-800 border-sky-400 shadow-md shadow-sky-950 ring-1 ring-sky-400"
-            : "bg-slate-900/90 border-slate-800 hover:border-slate-700"
+            ? "bg-sky-50 border-sky-500 shadow-sm ring-1 ring-sky-500"
+            : "bg-white border-slate-200 hover:bg-slate-50"
         }`;
         card.onclick = () => {
           activeRaidKey = key;
@@ -1744,8 +1666,8 @@
         card.innerHTML = `
           <img src="${getPokeImg(b.dex)}" alt="${b.name}" class="w-10 h-10 object-contain flex-shrink-0">
           <div class="overflow-hidden">
-            <div class="text-[10px] ${b.isCurrent ? 'text-emerald-400' : 'text-purple-400'} font-bold truncate">${b.tier}</div>
-            <div class="text-xs font-extrabold text-white truncate">${b.name}</div>
+            <div class="text-[10px] ${b.isCurrent ? 'text-emerald-700' : 'text-purple-700'} font-bold truncate">${b.tier}</div>
+            <div class="text-xs font-extrabold text-slate-900 truncate">${b.name}</div>
           </div>
         `;
 
@@ -1763,7 +1685,7 @@
       if (!b) return;
 
       const weakBadges = b.weaknesses.map(w => `
-        <span class="${w.color} text-white text-[11px] font-bold px-2 py-0.5 rounded">
+        <span class="${w.color} text-white text-[11px] font-bold px-2 py-0.5 rounded shadow-sm">
           ${w.name} (${w.mult})
         </span>
       `).join(" ");
@@ -1773,22 +1695,22 @@
           <img src="${getPokeImg(b.dex)}" alt="${b.name}" class="w-20 h-20 object-contain flex-shrink-0">
           <div class="flex-1 text-center sm:text-left space-y-1">
             <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
-              <span class="text-xs ${b.isCurrent ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30' : 'bg-purple-500/20 text-purple-300 border-purple-500/30'} font-bold px-2 py-0.5 rounded border">${b.tier}</span>
-              <span class="text-xs font-bold ${b.isCurrent ? 'text-emerald-400' : 'text-purple-400'}">${b.status}</span>
+              <span class="text-xs ${b.isCurrent ? 'bg-emerald-100 text-emerald-800 border-emerald-300' : 'bg-purple-100 text-purple-800 border-purple-300'} font-bold px-2 py-0.5 rounded border">${b.tier}</span>
+              <span class="text-xs font-bold ${b.isCurrent ? 'text-emerald-700' : 'text-purple-700'}">${b.status}</span>
             </div>
-            <h3 class="text-lg font-black text-white">${b.name}</h3>
-            <div class="text-xs text-slate-300">
-              100%個体値CP: <strong class="text-amber-300">${b.cpNormal}</strong> / 天候ブースト: <strong class="text-amber-400">${b.cpBoost}</strong>
+            <h3 class="text-lg font-black text-slate-900">${b.name}</h3>
+            <div class="text-xs text-slate-600">
+              100%個体値CP: <strong class="text-amber-600 font-bold">${b.cpNormal}</strong> / 天候ブースト: <strong class="text-amber-700 font-bold">${b.cpBoost}</strong>
             </div>
             <div class="flex flex-wrap items-center justify-center sm:justify-start gap-1 pt-1">
-              <span class="text-xs text-slate-400 font-bold mr-1">弱点倍率:</span>
+              <span class="text-xs text-slate-500 font-bold mr-1">弱点倍率:</span>
               ${weakBadges}
             </div>
           </div>
         </div>
-        <div class="mt-3 pt-3 border-t border-slate-800 text-xs text-slate-300 leading-relaxed bg-slate-950/50 p-2.5 rounded-lg">
-          <strong class="text-sky-300">💡 3サイト統合 実戦攻略ノート:</strong> ${b.tactics}
-          <div class="text-rose-300 font-bold mt-1">討伐推奨人数: ${b.minPlayers}</div>
+        <div class="mt-3 pt-3 border-t border-slate-100 text-xs text-slate-700 leading-relaxed bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+          <strong class="text-sky-700 font-bold">💡 3サイト統合 実戦攻略ノート:</strong> ${b.tactics}
+          <div class="text-rose-600 font-bold mt-1">討伐推奨人数: ${b.minPlayers}</div>
         </div>
       `;
     }
@@ -1817,46 +1739,43 @@
       title.textContent = `対策DPSランキング TOP 10 (${conditions.join(" / ")})`;
 
       top10.forEach((c, index) => {
-        let tagBadge = `<span class="text-[10px] bg-slate-800 text-slate-400 px-1.5 py-0.5 rounded border border-slate-700">通常</span>`;
+        let tagBadge = `<span class="text-[10px] bg-slate-200 text-slate-600 px-1.5 py-0.5 rounded font-bold">通常</span>`;
         if (c.tag === "mega") {
-          tagBadge = `<span class="text-[10px] bg-purple-600/30 text-purple-300 font-bold px-1.5 py-0.5 rounded border border-purple-500/40">メガ</span>`;
+          tagBadge = `<span class="text-[10px] bg-purple-100 text-purple-700 font-bold px-1.5 py-0.5 rounded border border-purple-300">メガ</span>`;
         } else if (c.tag === "shadow") {
-          tagBadge = `<span class="text-[10px] bg-rose-600/30 text-rose-300 font-bold px-1.5 py-0.5 rounded border border-rose-500/40">シャドウ</span>`;
+          tagBadge = `<span class="text-[10px] bg-rose-100 text-rose-700 font-bold px-1.5 py-0.5 rounded border border-rose-300">シャドウ</span>`;
         }
 
         let rankColor = "text-slate-400";
-        if (index === 0) rankColor = "text-amber-400 text-base font-black";
-        else if (index === 1) rankColor = "text-slate-300 text-sm font-black";
-        else if (index === 2) rankColor = "text-amber-600 text-sm font-black";
+        if (index === 0) rankColor = "text-amber-500 text-base font-black";
+        else if (index === 1) rankColor = "text-slate-600 text-sm font-black";
+        else if (index === 2) rankColor = "text-amber-700 text-sm font-black";
 
         const row = document.createElement("div");
-        row.className = "bg-slate-950/70 border border-slate-800 p-2 rounded-lg flex items-center justify-between gap-3";
+        row.className = "bg-slate-50 border border-slate-200 hover:bg-slate-100 p-2 rounded-lg flex items-center justify-between gap-3 transition shadow-sm";
         row.innerHTML = `
           <div class="flex items-center gap-3 overflow-hidden">
             <span class="w-6 text-center font-bold ${rankColor}">#${index + 1}</span>
             <img src="${getPokeImg(c.dex)}" alt="${c.name}" class="w-10 h-10 object-contain flex-shrink-0">
             <div class="overflow-hidden">
-              <div class="text-xs font-bold text-white flex items-center gap-1.5">
+              <div class="text-xs font-bold text-slate-900 flex items-center gap-1.5">
                 <span class="truncate">${c.name}</span>
                 ${tagBadge}
               </div>
-              <div class="text-[11px] text-slate-400 truncate">
-                ${c.fast} / <span class="text-sky-400 font-medium">${c.charge}</span>
+              <div class="text-[11px] text-slate-500 truncate">
+                ${c.fast} / <span class="text-sky-700 font-semibold">${c.charge}</span>
               </div>
             </div>
           </div>
           <div class="text-right flex-shrink-0">
-            <div class="text-sm font-black text-sky-400 font-mono">${c.dps.toFixed(1)} <span class="text-[10px] text-slate-400">DPS</span></div>
-            <div class="text-[10px] text-slate-500 font-mono">TDO: ${c.tdo}</div>
+            <div class="text-sm font-black text-sky-700 font-mono">${c.dps.toFixed(1)} <span class="text-[10px] text-slate-400">DPS</span></div>
+            <div class="text-[10px] text-slate-400 font-mono">TDO: ${c.tdo}</div>
           </div>
         `;
         list.appendChild(row);
       });
     }
 
-    // =========================================================================
-    // ダイマックス攻略 (9DBキャプチャUIの完全再現：ザマゼンタ修正)
-    // =========================================================================
     function renderDmax9dbSection() {
       renderDmax9dbPicker();
       renderDmax9dbCard();
@@ -1872,8 +1791,8 @@
         const card = document.createElement("button");
         card.className = `p-2 rounded-xl border text-left transition flex items-center gap-2 ${
           active
-            ? "bg-purple-900/40 border-purple-400 shadow-md shadow-purple-950 ring-1 ring-purple-400"
-            : "bg-slate-900 border-slate-800 hover:border-slate-700"
+            ? "bg-purple-50 border-purple-500 shadow-sm ring-1 ring-purple-500"
+            : "bg-white border-slate-200 hover:bg-slate-50"
         }`;
         card.onclick = () => {
           activeDmax9dbKey = key;
@@ -1884,8 +1803,8 @@
         card.innerHTML = `
           <img src="${getPokeImg(d.dex)}" alt="${d.name}" class="w-9 h-9 object-contain flex-shrink-0">
           <div class="overflow-hidden">
-            <div class="text-[10px] text-purple-400 font-bold truncate">${d.tier}</div>
-            <div class="text-xs font-extrabold text-white truncate">${d.name}</div>
+            <div class="text-[10px] text-purple-700 font-bold truncate">${d.tier}</div>
+            <div class="text-xs font-extrabold text-slate-900 truncate">${d.name}</div>
           </div>
         `;
         picker.appendChild(card);
@@ -1898,9 +1817,7 @@
       if (!d) return;
 
       container.innerHTML = `
-        <div class="bg-9db-card border border-purple-500/40 rounded-2xl p-4 shadow-2xl space-y-4">
-          
-          <!-- 上部：日時 ＆ ボスヘッダー -->
+        <div class="bg-9db-card border border-purple-500/40 rounded-2xl p-4 shadow-xl space-y-4">
           <div class="border-b border-purple-500/20 pb-3">
             <div class="text-[11px] text-purple-300 font-semibold mb-1 flex items-center gap-1.5">
               <span>📅</span> ${d.dateInfo}
@@ -1919,9 +1836,7 @@
             </div>
           </div>
 
-          <!-- ボス使用技 ＆ 弱点・耐性バー -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-            <!-- ボスが使う技 -->
             <div class="bg-black/40 border border-purple-500/30 rounded-xl p-2.5">
               <div class="text-[11px] text-purple-300 font-bold mb-1.5">⚡ 使用技一覧 (9DB)</div>
               <div class="flex flex-wrap gap-1.5">
@@ -1933,16 +1848,13 @@
               </div>
             </div>
 
-            <!-- 弱点 & 耐性 -->
             <div class="space-y-1.5">
-              <!-- 弱点 -->
               <div class="bg-pink-950/60 border border-pink-500/40 rounded-lg p-1.5 px-2.5 flex items-center justify-between">
                 <span class="text-xs font-bold text-pink-300">弱点</span>
                 <div class="flex gap-1.5">
                   ${d.weaknesses.map(w => `<span class="${w.color} text-white text-[11px] font-bold px-2 py-0.5 rounded">${w.name}</span>`).join("")}
                 </div>
               </div>
-              <!-- 耐性 -->
               <div class="bg-blue-950/60 border border-blue-500/40 rounded-lg p-1.5 px-2.5 flex items-center justify-between">
                 <span class="text-xs font-bold text-blue-300">耐性</span>
                 <div class="flex gap-1.5">
@@ -1952,7 +1864,6 @@
             </div>
           </div>
 
-          <!-- アタッカー（マックス技火力重視）TOP 4 -->
           <div class="space-y-2">
             <h3 class="text-sm font-extrabold text-sky-300 flex items-center gap-1.5">
               <span>🗡️</span> アタッカー (マックス技火力重視 TOP 4)
@@ -1974,7 +1885,6 @@
             </div>
           </div>
 
-          <!-- タンク（耐久＆メーターチャージ速度重視）TOP 4 (ザマゼンタ修正反映) -->
           <div class="space-y-2">
             <h3 class="text-sm font-extrabold text-emerald-300 flex items-center gap-1.5">
               <span>🛡️</span> タンク (耐久＆メーターチャージ速度重視 TOP 4)
@@ -1994,13 +1904,11 @@
                 </div>
               `).join("")}
             </div>
-            <!-- ザマゼンタ解説 -->
             <div class="text-[11px] text-purple-200/90 bg-black/40 border border-purple-500/30 p-2.5 rounded-lg mt-2">
               ${d.tankNote}
             </div>
           </div>
 
-          <!-- 立ち回り (9DBキャプチャ完全再現 3ステップ) -->
           <div class="space-y-2 pt-2 border-t border-purple-500/30">
             <h3 class="text-sm font-extrabold text-amber-300 flex items-center gap-1.5">
               <span>📋</span> 立ち回り (9DB実戦定石 3ステップ)
@@ -2026,9 +1934,6 @@
       `;
     }
 
-    // =========================================================================
-    // イベントカードから対策タブへのシームレスジャンプ
-    // =========================================================================
     function jumpToCounterTarget(targetKey, isDmax) {
       switchMainTab("battles");
       if (isDmax) {
@@ -2058,15 +1963,25 @@
       }
     }
 
-    // =========================================================================
-    // 起動初期化
-    // =========================================================================
     window.onload = function() {
       initStorage();
       renderNewsSection();
       renderGanttTimeline();
       renderEventAccordions();
       updateGlobalHiddenUI();
+
+      // GitHub Actionsによる定期自動更新日時のフェッチ反映 (data.json と連動)
+      fetch('./data.json?t=' + new Date().getTime())
+        .then(res => res.json())
+        .then(remoteData => {
+          if (remoteData.updated_at) {
+            const timeEl = document.getElementById('autoUpdateTimestamp');
+            if (timeEl) {
+              timeEl.innerText = '最終自動更新: ' + remoteData.updated_at;
+            }
+          }
+        })
+        .catch(() => {});
     };
   </script>
 </body>
