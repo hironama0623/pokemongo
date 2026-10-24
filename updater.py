@@ -1,158 +1,117 @@
+import os
 import json
 import datetime
 import requests
 from bs4 import BeautifulSoup
-import re
+from google import genai
+from google.genai import types
 
-# 日本時間 (JST) タイムスタンプ
+# 日本時間 (JST)
 jst = datetime.timezone(datetime.timedelta(hours=9))
 now = datetime.datetime.now(jst)
 now_str = now.strftime("%Y/%m/%d %H:%M JST")
-today_date = now.date()
+print(f"[{now_str}] AIによる最新攻略データ解析を開始します...")
 
-print(f"[{now_str}] ポケモンGO最新攻略データの自動収集を開始します...")
+# 既存データの読み込み
+try:
+    with open("data.json", "r", encoding="utf-8") as f:
+        existing_data = json.load(f)
+except Exception:
+    existing_data = {"events": [], "latest_news": []}
 
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 }
 
-# 既存データのロード（バックアップ用）
+# 1. 攻略サイト（ポケマピ・GameWith）からテキスト情報をスクレイピング
+scraped_text = ""
 try:
-    with open("data.json", "r", encoding="utf-8") as f:
-        current_data = json.load(f)
-except Exception:
-    current_data = {"events": [], "latest_news": []}
-
-latest_news = []
-events = []
-
-# =============================================================================
-# 1. GameWith から最新速報ニュースを自動抽出
-# =============================================================================
-try:
-    gw_res = requests.get("https://pokemongo.gamewith.jp/", headers=headers, timeout=10)
-    if gw_res.status_code == 200:
-        soup = BeautifulSoup(gw_res.text, "html.parser")
-        for tag in soup.select(".article-list-item a, .news-feed a")[:6]:
-            title = tag.get_text(strip=True)
-            link = tag.get("href", "#")
-            if title and len(title) > 6:
-                latest_news.append({"title": title, "link": link})
+    res = requests.get("https://pokemongo-get.com/events/", headers=headers, timeout=12)
+    if res.status_code == 200:
+        soup = BeautifulSoup(res.text, "html.parser")
+        for tag in soup(["script", "style", "nav", "footer"]):
+            tag.decompose()
+        scraped_text = soup.get_text(separator="\n", strip=True)[:15000]
 except Exception as e:
-    print(f"ニュース取得スキップ: {e}")
+    print(f"Web取得スキップ: {e}")
 
-if not latest_news:
-    latest_news = current_data.get("latest_news", [])
+# 2. Gemini API でテキストを解析し、完全な構造化JSONを生成
+api_key = os.environ.get("GEMINI_API_KEY")
+if not api_key:
+    print("エラー: GEMINI_API_KEY が設定されていません。")
+    exit(1)
 
-# =============================================================================
-# 2. ポケマピ / GameWith イベントスケジュールからイベント＆日程を自動抽出
-# =============================================================================
+client = genai.Client(api_key=api_key)
+
+prompt = f"""
+あなたはポケモンGOのデータ抽出AIです。
+以下は日本のポケモンGO攻略サイトから取得した最新テキストです。
+基準日（今日）は「{now_str}」です。
+
+【指示】
+1. 現在開催中および今後開催予定のイベント、レイド、ダイマックス情報をすべて抽出してください。
+2. 日程を正確に解析してください。例えば「10/24(土) 14:00〜17:00」のように単日限定なら、開始日と終了日を必ず同じ「2026-10-24」にしてください。
+3. カテゴリ（category）は 'main'(メイン/シーズン), 'raid'(レイド), 'dmax'(ダイマックス), 'collab'(コラボ), 'gbl'(GBL) のいずれかに分類してください。
+4. barClass は category に応じて 'bar-main', 'bar-raid', 'bar-dmax', 'bar-collab', 'bar-gbl' にしてください。
+5. 直近の最重要公式速報ニュース（3〜5件）を latest_news に抽出してください。
+6. 過去のイベントのうち、終了日から30日以上過ぎたものは除外し、終了後30日以内のものは含めてください。
+
+必ず以下のJSONスキーマ通りの純粋なJSONのみを出力してください（Markdownの装飾は不要）：
+{{
+  "latest_news": [
+    {{ "title": "ニュースタイトル", "link": "#該当イベントIDまたはURL" }}
+  ],
+  "events": [
+    {{
+      "id": "一意のID (例: ev-dmax-uma-day)",
+      "month": 開始月(数値),
+      "title": "イベント名",
+      "barClass": "バー用クラス名",
+      "category": "カテゴリ名",
+      "startDay": 開始日(数値),
+      "endDay": 終了日(数値),
+      "startDate": "YYYY-MM-DD",
+      "endDate": "YYYY-MM-DD",
+      "dateText": "画面表示用日程テキスト (例: 10/24(土) 14:00〜17:00 [本日限定])",
+      "summary": "概要説明",
+      "bonuses": ["ボーナス1", "ボーナス2"],
+      "wilds": [
+        {{ "dex": 図鑑番号(数値), "name": "ポケモン名", "shiny": true/false, "note": "出現形態" }}
+      ],
+      "raids": [
+        {{ "dex": 図鑑番号(数値), "name": "レイドボス名", "shiny": true/false, "note": "難易度等", "targetKey": "ボス識別キー", "isDmax": true/false }}
+      ],
+      "tasks": [
+        {{ "task": "タスク内容", "rewardDex": 報酬ポケ図鑑番号, "rewardName": "報酬名", "shiny": true/false }}
+      ]
+    }}
+  ]
+}}
+
+【攻略サイトのテキスト】:
+{scraped_text}
+"""
+
 try:
-    # ポケマピのイベントカレンダーページを巡回
-    sched_res = requests.get("https://pokemongo-get.com/events/", headers=headers, timeout=12)
-    if sched_res.status_code == 200:
-        soup = BeautifulSoup(sched_res.text, "html.parser")
-        event_cards = soup.select(".event_item, .event_card, .article_card, .event-list li")
+    response = client.models.generate_content(
+        model="gemini-2.5-flash",
+        contents=prompt,
+        config=types.GenerateContentConfig(
+            response_mime_type="application/json"
+        )
+    )
+    ai_data = json.loads(response.text)
+    ai_data["updated_at"] = now_str
 
-        for card in event_cards:
-            title_tag = card.select_one(".event_title, .title, a")
-            if not title_tag:
-                continue
-            title = title_tag.get_text(strip=True)
-            if not title or len(title) < 4:
-                continue
+    # 3. data.json へ保存
+    with open("data.json", "w", encoding="utf-8") as f:
+        json.dump(ai_data, f, ensure_ascii=False, indent=2)
 
-            date_text = ""
-            date_tag = card.select_one(".event_date, .date, .time")
-            if date_tag:
-                date_text = date_tag.get_text(strip=True)
+    print(f"[{now_str}] AIによる全データ抽出・自動コミット準備が完了しました。")
 
-            # 日付解析ロジック (例: 10/24(土) 14:00 〜 10/24(土) 17:00 等)
-            dates = re.findall(r'(\d{1,2})/(\d{1,2})', date_text)
-            if dates:
-                start_month, start_day = int(dates[0][0]), int(dates[0][1])
-                if len(dates) >= 2:
-                    end_month, end_day = int(dates[1][0]), int(dates[1][1])
-                else:
-                    end_month, end_day = start_month, start_day
-
-                start_date_str = f"2026-{start_month:02d}-{start_day:02d}"
-                end_date_str = f"2026-{end_month:02d}-{end_day:02d}"
-            else:
-                start_month, start_day = now.month, now.day
-                end_month, end_day = now.month, now.day
-                start_date_str = now.strftime("%Y-%m-%d")
-                end_date_str = now.strftime("%Y-%m-%d")
-
-            # カテゴリの自動判定
-            cat = "main"
-            bar_class = "bar-main"
-            if any(k in title for k in ["レイド", "パルキア", "ギラティナ", "ランドロス", "メガ"]):
-                cat = "raid"
-                bar_class = "bar-raid"
-            elif any(k in title for k in ["ダイマックス", "マックスバトル", "キョダイ", "UMA", "ユクシー"]):
-                cat = "dmax"
-                bar_class = "bar-dmax"
-            elif any(k in title for k in ["コラボ", "FCソウル", "プロ野球", "イオン"]):
-                cat = "collab"
-                bar_class = "bar-collab"
-            elif any(k in title for k in ["GBL", "リーグ", "バトル"]):
-                cat = "gbl"
-                bar_class = "bar-gbl"
-
-            ev_id = "ev-auto-" + re.sub(r'[^a-zA-Z0-9]', '', title)[:12]
-
-            events.append({
-                "id": ev_id,
-                "month": start_month,
-                "title": title,
-                "barClass": bar_class,
-                "category": cat,
-                "startDay": start_day,
-                "endDay": end_day,
-                "startDate": start_date_str,
-                "endDate": end_date_str,
-                "dateText": date_text if date_text else f"{start_month}/{start_day}〜{end_month}/{end_day}",
-                "summary": "攻略サイトより自動取得した最新イベント情報です。",
-                "bonuses": [],
-                "wilds": [],
-                "raids": [],
-                "tasks": []
-            })
 except Exception as e:
-    print(f"スケジュール自動スクレイピング例外: {e}")
-
-# スクレイピングで拾えなかった場合のフォールバック（既存の手動マスタからマージ）
-if len(events) < 3:
-    events = current_data.get("events", [])
-
-# =============================================================================
-# 3. 過去イベントの自動仕分け・クリーンアップ（過去1ヶ月キープ、30日超破棄）
-# =============================================================================
-cleaned_events = []
-for ev in events:
-    end_str = ev.get("endDate")
-    if end_str:
-        try:
-            end_d = datetime.datetime.strptime(end_str, "%Y-%m-%d").date()
-            diff_days = (today_date - end_d).days
-            if diff_days > 30:
-                print(f"30日以上経過のため自動消去: {ev.get('title')}")
-                continue
-        except Exception:
-            pass
-    cleaned_events.append(ev)
-
-# =============================================================================
-# 4. data.json へ最新情報を一括保存
-# =============================================================================
-output_data = {
-    "updated_at": now_str,
-    "latest_news": latest_news,
-    "events": cleaned_events
-}
-
-with open("data.json", "w", encoding="utf-8") as f:
-    json.dump(output_data, f, ensure_ascii=False, indent=2)
-
-print(f"[{now_str}] 全データの自動更新と30日ライフサイクル処理が完了しました。")
+    print(f"AI解析エラー: {e}")
+    # エラー時は日時だけ更新して維持
+    existing_data["updated_at"] = now_str
+    with open("data.json", "w", encoding="utf-8") as f:
+        json.dump(existing_data, f, ensure_ascii=False, indent=2)
