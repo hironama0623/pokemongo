@@ -1,9 +1,734 @@
-// ページ読み込み時に data.json をフェッチしてヘッダーやニュースを最新化
-fetch('./data.json?t=' + new Date().getTime())
-  .then(res => res.json())
-  .then(remoteData => {
-    if (remoteData.updated_at) {
-      document.querySelector('.source-tag').innerText = '最終自動更新: ' + remoteData.updated_at;
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Pokémon GO 総合攻略ダッシュボード</title>
+  <style>
+    :root {
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --primary-light: #e0f2fe;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #0f172a;
+      --text-sub: #475569;
+      --border: #e2e8f0;
+      --danger: #ef4444;
+      --success: #10b981;
+      --accent: #8b5cf6;
+      --gold: #f59e0b;
+      --badge-raid: #ecfdf5;
+      --badge-raid-txt: #047857;
+      --badge-dmax: #faf5ff;
+      --badge-dmax-txt: #6b21a8;
+      --badge-collab: #eff6ff;
+      --badge-collab-txt: #1d4ed8;
+      --badge-gbl: #fff7ed;
+      --badge-gbl-txt: #c2410c;
     }
-  })
-  .catch(err => console.log('データ読み込み完了'));
+
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 12px; line-height: 1.5; }
+    .container { max-width: 980px; margin: 0 auto; }
+
+    header { background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color: white; padding: 16px 20px; border-radius: 16px; margin-bottom: 14px; box-shadow: 0 4px 14px rgba(2, 132, 199, 0.25); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+    header h1 { margin: 0; font-size: 20px; font-weight: 800; display: flex; align-items: center; gap: 8px; }
+    .source-tag { font-size: 11px; background: rgba(255,255,255,0.2); padding: 4px 8px; border-radius: 999px; }
+
+    .alert-panel { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 14px; margin-bottom: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+    .alert-header { display: flex; justify-content: space-between; align-items: center; font-weight: 700; font-size: 14px; margin-bottom: 8px; color: var(--text); }
+    .news-item { display: flex; justify-content: space-between; align-items: center; background: #f8fafc; padding: 10px 12px; border-radius: 10px; margin-bottom: 6px; border-left: 4px solid var(--primary); font-size: 13px; }
+    .news-item a { color: var(--primary-dark); text-decoration: none; font-weight: 600; flex: 1; }
+    .news-item button { background: none; border: 1px solid #cbd5e1; padding: 3px 8px; border-radius: 6px; font-size: 11px; cursor: pointer; color: var(--text-sub); }
+
+    .main-nav { display: flex; gap: 6px; margin-bottom: 14px; overflow-x: auto; padding-bottom: 2px; }
+    .nav-btn { flex: 1; min-width: 130px; text-align: center; padding: 10px 12px; background: #ffffff; border: 1px solid var(--border); border-radius: 12px; font-weight: 700; font-size: 13px; color: var(--text-sub); cursor: pointer; transition: all 0.2s; white-space: nowrap; }
+    .nav-btn.active { background: var(--primary); color: white; border-color: var(--primary); box-shadow: 0 4px 10px rgba(2, 132, 199, 0.3); }
+
+    .gantt-section { background: white; border-radius: 14px; padding: 16px; border: 1px solid var(--border); margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+    .gantt-ctrls { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+    .month-switch { display: flex; gap: 6px; }
+    .month-btn { padding: 6px 12px; border: 1px solid var(--border); background: #f8fafc; border-radius: 8px; font-size: 12px; font-weight: 700; cursor: pointer; }
+    .month-btn.active { background: var(--primary-dark); color: white; border-color: var(--primary-dark); }
+    .cat-filter { display: flex; gap: 4px; overflow-x: auto; padding-bottom: 4px; }
+    .cat-btn { padding: 4px 8px; border: 1px solid var(--border); background: white; border-radius: 6px; font-size: 11px; font-weight: 600; cursor: pointer; white-space: nowrap; }
+    .cat-btn.active { background: #334155; color: white; border-color: #334155; }
+
+    .gantt-scroll-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 10px; background: #ffffff; }
+    .gantt-table { display: grid; grid-template-columns: 120px repeat(14, minmax(64px, 1fr)); min-width: 1020px; font-size: 12px; }
+    .gantt-head { background: #f1f5f9; padding: 8px 4px; text-align: center; font-weight: 700; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .gantt-head.sat { background: #eff6ff; color: #1d4ed8; }
+    .gantt-head.sun { background: #fef2f2; color: #b91c1c; }
+    .gantt-label { padding: 8px; border-bottom: 1px solid var(--border); border-right: 1px solid var(--border); background: #fafafa; font-weight: 700; font-size: 11px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: flex; align-items: center; justify-content: space-between; }
+    .gantt-label .del-btn { color: #94a3b8; cursor: pointer; padding: 2px 4px; }
+    .gantt-cell { border-bottom: 1px solid var(--border); border-right: 1px solid #f1f5f9; position: relative; min-height: 38px; display: flex; align-items: center; padding: 2px 0; }
+    .gantt-bar { position: absolute; height: 28px; border-radius: 6px; display: flex; align-items: center; padding: 0 8px; color: #0f172a; font-size: 11px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: pointer; box-shadow: 0 1px 3px rgba(0,0,0,0.1); z-index: 2; transition: transform 0.15s; }
+    .gantt-bar:hover { transform: translateY(-1px); filter: brightness(0.95); }
+
+    .bar-main { background: #e0f2fe; border: 1px solid #7dd3fc; color: #0369a1; }
+    .bar-raid { background: #dcfce7; border: 1px solid #86efac; color: #15803d; }
+    .bar-dmax { background: #f3e8ff; border: 1px solid #d8b4fe; color: #7e22ce; }
+    .bar-collab { background: #fef9c3; border: 1px solid #fde047; color: #a16207; }
+    .bar-gbl { background: #ffedd5; border: 1px solid #fdba74; color: #c2410c; }
+
+    .event-card { background: white; border: 1px solid var(--border); border-radius: 14px; margin-bottom: 12px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.03); }
+    .card-summary { padding: 14px 16px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; user-select: none; background: #ffffff; }
+    .card-summary:hover { background: #f8fafc; }
+    .card-title-group { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .badge { font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px; }
+    .card-content { padding: 0 16px 16px 16px; border-top: 1px solid #f1f5f9; display: none; }
+    .card-content.open { display: block; }
+    .section-block { margin-top: 14px; }
+    .section-title { font-size: 13px; font-weight: 800; color: #334155; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; border-bottom: 2px solid #f1f5f9; padding-bottom: 4px; }
+    
+    .poke-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(76px, 1fr)); gap: 8px; margin-top: 8px; }
+    .poke-chip { background: #f8fafc; border: 1px solid var(--border); border-radius: 8px; padding: 6px 4px; text-align: center; position: relative; }
+    .poke-chip img { width: 44px; height: 44px; object-fit: contain; }
+    .poke-chip .name { font-size: 10px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px; }
+    .shiny-icon { position: absolute; top: 4px; right: 4px; font-size: 10px; color: #f59e0b; }
+
+    .task-row { display: flex; align-items: center; justify-content: space-between; background: #f8fafc; padding: 8px 10px; border-radius: 8px; margin-bottom: 6px; font-size: 12px; }
+    .task-reward { display: flex; align-items: center; gap: 6px; font-weight: 700; }
+
+    .boss-card { background: white; border: 1px solid var(--border); border-radius: 14px; padding: 16px; margin-bottom: 16px; }
+    .boss-header { display: flex; gap: 14px; align-items: center; margin-bottom: 14px; flex-wrap: wrap; }
+    .boss-header img { width: 84px; height: 84px; object-fit: contain; }
+    .boss-meta h2 { margin: 0 0 4px 0; font-size: 18px; }
+    .weakness-badge { background: #fee2e2; color: #b91c1c; font-size: 11px; padding: 2px 6px; border-radius: 4px; margin-right: 4px; font-weight: 700; }
+
+    .toggle-bar { display: flex; gap: 8px; margin: 12px 0; flex-wrap: wrap; }
+    .filter-btn { padding: 6px 12px; border: 1px solid var(--border); border-radius: 8px; background: #fff; font-size: 12px; font-weight: 700; cursor: pointer; color: var(--text-sub); }
+    .filter-btn.active { background: #0f172a; color: white; border-color: #0f172a; }
+
+    .rank-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-top: 8px; }
+    .rank-table th { background: #f1f5f9; padding: 8px 6px; text-align: left; font-weight: 700; color: #475569; }
+    .rank-table td { padding: 8px 6px; border-bottom: 1px solid var(--border); }
+    .rank-num { font-weight: 800; color: var(--primary); text-align: center; width: 24px; }
+    .poke-cell { display: flex; align-items: center; gap: 8px; font-weight: 700; }
+    .poke-cell img { width: 32px; height: 32px; object-fit: contain; }
+
+    .dmax-card { background: linear-gradient(180deg, #2e1065 0%, #1e1b4b 100%); color: white; border-radius: 16px; padding: 18px; margin-bottom: 18px; box-shadow: 0 4px 16px rgba(46, 16, 101, 0.25); }
+    .dmax-top { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 12px; margin-bottom: 12px; flex-wrap: wrap; }
+    .dmax-role-box { background: rgba(255,255,255,0.08); border-radius: 12px; padding: 12px; margin-bottom: 12px; border: 1px solid rgba(255,255,255,0.12); }
+    .dmax-role-title { font-size: 13px; font-weight: 800; margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+    .role-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; text-align: center; }
+    .role-col { background: rgba(0,0,0,0.25); border-radius: 8px; padding: 8px 4px; }
+    .role-col img { width: 44px; height: 44px; object-fit: contain; }
+    .role-rank { font-size: 11px; background: var(--primary); color: white; width: 18px; height: 18px; border-radius: 999px; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; margin-bottom: 4px; }
+    .role-name { font-size: 11px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .role-move { font-size: 10px; opacity: 0.85; margin-top: 4px; line-height: 1.2; }
+
+    .step-guide { background: rgba(0,0,0,0.3); border-radius: 10px; padding: 12px; }
+    .step-item { display: flex; gap: 10px; margin-bottom: 8px; font-size: 12px; line-height: 1.4; }
+    .step-num { background: #a855f7; color: white; width: 20px; height: 20px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 800; flex-shrink: 0; }
+
+    .pass-panel { background: white; border: 1px solid var(--border); border-radius: 14px; padding: 16px; margin-bottom: 16px; }
+    .pass-header { background: linear-gradient(135deg, #1e293b 0%, #334155 100%); color: white; padding: 16px; border-radius: 12px; margin-bottom: 14px; }
+    .pass-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-top: 10px; }
+    .pass-table th { background: #f8fafc; padding: 8px; border-bottom: 2px solid var(--border); text-align: left; }
+    .pass-table td { padding: 8px; border-bottom: 1px solid var(--border); }
+    .pass-free { color: var(--text); font-weight: 600; }
+    .pass-deluxe { color: #d97706; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>⚡ Pokémon GO 総合攻略ダッシュボード</h1>
+        <div style="font-size:12px; opacity:0.9; margin-top:2px;">GameWith / 9DB / ポケマピ 3サイト統合・自動定期更新</div>
+      </div>
+      <div class="source-tag">最終自動更新: 読込中...</div>
+    </header>
+
+    <!-- 速報パネル -->
+    <div class="alert-panel">
+      <div class="alert-header">
+        <span>📢 直近の公式発表・最新ニュース速報</span>
+        <button onclick="restoreNews()" style="background:none; border:none; font-size:11px; color:var(--primary); cursor:pointer;">[既読リセット]</button>
+      </div>
+      <div id="news-container">
+        <div class="news-item" id="news-1">
+          <a href="javascript:scrollToEvent('ev-dmax-uma')">【本日14:00〜17:00】UMAトリオ マックスバトルデイ開催！無料MP追加・色違い確率UP</a>
+          <button onclick="dismissNews('news-1')">✓ 既読</button>
+        </div>
+        <div class="news-item" id="news-2">
+          <a href="javascript:scrollToEvent('ev-halloween-p1')">【10/27〜】ハロウィン2026 パート1開催！新衣装ピカチュウ・モルペコ登場</a>
+          <button onclick="dismissNews('news-2')">✓ 既読</button>
+        </div>
+        <div class="news-item" id="news-3">
+          <a href="javascript:scrollToEvent('ev-wild-global')">【11/14〜15】GOワイルドエリア開催！ザシアン/ザマゼンタ王形態＆キョダイストリンダー</a>
+          <button onclick="dismissNews('news-3')">✓ 既読</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- メインナビゲーション -->
+    <div class="main-nav">
+      <button class="nav-btn active" onclick="switchMainTab('events', this)">📅 イベント & ガントチャート</button>
+      <button class="nav-btn" onclick="switchMainTab('raids', this)">⚔️ レイド & ダイマックス対策</button>
+      <button class="nav-btn" onclick="switchMainTab('gopass', this)">🎫 GOパス情報 (報酬一覧)</button>
+    </div>
+
+    <!-- タブ1: イベント & ガントチャート -->
+    <div id="tab-events">
+      <div class="gantt-section">
+        <div class="gantt-ctrls">
+          <div class="month-switch">
+            <button class="month-btn active" onclick="switchMonth(10, this)">10月</button>
+            <button class="month-btn" onclick="switchMonth(11, this)">11月</button>
+            <button class="month-btn" onclick="switchMonth(12, this)">12月</button>
+          </div>
+          <div style="font-size:11px; color:var(--text-sub);">
+            非表示中: <span id="hidden-count">0</span>件 <button onclick="resetHiddenEvents()" style="background:none; border:none; color:var(--primary); cursor:pointer; font-weight:700;">[すべて再表示]</button>
+          </div>
+        </div>
+        <div class="cat-filter">
+          <button class="cat-btn active" onclick="filterCategory('all', this)">すべて</button>
+          <button class="cat-btn" onclick="filterCategory('main', this)">🎪 メイン・シーズン</button>
+          <button class="cat-btn" onclick="filterCategory('raid', this)">⚔️ レイド</button>
+          <button class="cat-btn" onclick="filterCategory('dmax', this)">⚡ マックスバトル</button>
+          <button class="cat-btn" onclick="filterCategory('collab', this)">🤝 コラボ・限定</button>
+          <button class="cat-btn" onclick="filterCategory('gbl', this)">🥊 GBL</button>
+        </div>
+
+        <div class="gantt-scroll-wrap" style="margin-top:10px;">
+          <div class="gantt-table" id="gantt-grid"></div>
+        </div>
+      </div>
+
+      <div id="event-cards-container"></div>
+    </div>
+
+    <!-- タブ2: レイド & ダイマックス対策 -->
+    <div id="tab-raids" style="display:none;">
+      <div style="display:flex; gap:8px; margin-bottom:14px;">
+        <button class="filter-btn active" id="btn-sub-normal" onclick="switchRaidSubTab('normal')">⚔️ 現在＆未来のレイド対策</button>
+        <button class="filter-btn" id="btn-sub-dmax" onclick="switchRaidSubTab('dmax')">⚡ ダイマックス (9DB準拠)</button>
+      </div>
+
+      <div id="raid-sub-normal">
+        <div class="toggle-bar">
+          <span style="font-size:12px; font-weight:700; align-self:center;">DPSランキング設定:</span>
+          <button class="filter-btn" id="btn-mega" onclick="toggleFilter('mega')">✨ メガシンカを含める (初期OFF)</button>
+          <button class="filter-btn" id="btn-shadow" onclick="toggleFilter('shadow')">🔥 シャドウを含める (初期OFF)</button>
+        </div>
+
+        <!-- 1. パルキア (オリジン) 【現在開催中】 -->
+        <div class="boss-card" id="boss-palkia">
+          <div class="boss-header">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/484.png" alt="パルキア">
+            <div class="boss-meta">
+              <span class="badge" style="background:#fee2e2; color:#b91c1c;">伝説★5【現在開催中】</span>
+              <span class="badge" style="background:#e0f2fe; color:#0369a1;">〜 10/27(火) 10:00</span>
+              <h2>パルキア (オリジンフォルム)</h2>
+              <div>
+                <span class="weakness-badge">ドラゴン 1.6倍</span>
+                <span class="weakness-badge">フェアリー 1.6倍</span>
+              </div>
+              <div style="font-size:12px; color:var(--text-sub); margin-top:4px;">
+                100%個体値CP: <strong>2367</strong> (天候雨/強風: <strong>2958</strong>) ｜ 特別技「あくうせつだん」
+              </div>
+            </div>
+          </div>
+          <table class="rank-table">
+            <thead>
+              <tr><th class="rank-num">#</th><th>対策ポケモン</th><th>最適わざ</th><th>DPS</th><th>TDO</th></tr>
+            </thead>
+            <tbody id="rank-palkia"></tbody>
+          </table>
+        </div>
+
+        <!-- 2. メガリザードンY / X 【現在開催中】 -->
+        <div class="boss-card" id="boss-charizard">
+          <div class="boss-header">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png" alt="メガリザードン">
+            <div class="boss-meta">
+              <span class="badge" style="background:#fef3c7; color:#b45309;">メガレイド【現在開催中】</span>
+              <span class="badge" style="background:#e0f2fe; color:#0369a1;">〜 10/27(火) 10:00</span>
+              <h2>メガリザードンY / X</h2>
+              <div>
+                <span class="weakness-badge" style="background:#fed7aa; color:#9a3412;">いわ 2.56倍 (Yの二重弱点)</span>
+                <span class="weakness-badge">みず 1.6倍</span>
+                <span class="weakness-badge">でんき 1.6倍</span>
+              </div>
+              <div style="font-size:12px; color:var(--text-sub); margin-top:4px;">
+                いわタイプで挑めばソロ〜2人討伐が余裕で可能！
+              </div>
+            </div>
+          </div>
+          <table class="rank-table">
+            <thead>
+              <tr><th class="rank-num">#</th><th>対策ポケモン</th><th>最適わざ</th><th>DPS</th><th>TDO</th></tr>
+            </thead>
+            <tbody id="rank-charizard"></tbody>
+          </table>
+        </div>
+
+        <!-- 3. シャドウランドロス (化身) 【現在連日開催中】 -->
+        <div class="boss-card" id="boss-landorus">
+          <div class="boss-header">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/645.png" alt="シャドウランドロス">
+            <div class="boss-meta">
+              <span class="badge" style="background:#fef2f2; color:#991b1b;">★5 シャドウ伝説【連日出現中】</span>
+              <span class="badge" style="background:#e0f2fe; color:#0369a1;">平日含め毎日開催 〜 11/3(火)</span>
+              <h2>シャドウランドロス (けしんフォルム)</h2>
+              <div>
+                <span class="weakness-badge" style="background:#dbeafe; color:#1e40af;">こおり 2.56倍 (二重弱点)</span>
+                <span class="weakness-badge">みず 1.6倍</span>
+              </div>
+              <div style="font-size:12px; color:var(--text-sub); margin-top:4px;">
+                100%個体値CP: <strong>2050</strong> (天候晴天/強風: <strong>2563</strong>) ｜ 暴走抑制に「ライトクリスタル」必須
+              </div>
+            </div>
+          </div>
+          <table class="rank-table">
+            <thead>
+              <tr><th class="rank-num">#</th><th>対策ポケモン</th><th>最適わざ</th><th>DPS</th><th>TDO</th></tr>
+            </thead>
+            <tbody id="rank-landorus"></tbody>
+          </table>
+        </div>
+
+        <!-- 4. ギラティナ (オリジン) 【次回予告】 -->
+        <div class="boss-card" id="boss-giratina" style="border: 2px dashed #cbd5e1;">
+          <div class="boss-header">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/487.png" alt="ギラティナ">
+            <div class="boss-meta">
+              <span class="badge" style="background:#f1f5f9; color:#475569;">🔮 次回予告レイド</span>
+              <span class="badge" style="background:#e0f2fe; color:#0369a1;">10/27(火) 10:00 〜 11/3(火)</span>
+              <h2>ギラティナ (オリジンフォルム)</h2>
+              <div>
+                <span class="weakness-badge">ゴースト 1.6倍</span>
+                <span class="weakness-badge">あく 1.6倍</span>
+                <span class="weakness-badge">ドラゴン 1.6倍</span>
+              </div>
+            </div>
+          </div>
+          <table class="rank-table">
+            <thead>
+              <tr><th class="rank-num">#</th><th>対策ポケモン</th><th>最適わざ</th><th>DPS</th><th>TDO</th></tr>
+            </thead>
+            <tbody id="rank-giratina"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ダイマックス（9DB準拠） -->
+      <div id="raid-sub-dmax" style="display:none;">
+        <div class="dmax-card" id="dmax-uxie">
+          <div class="dmax-top">
+            <div>
+              <span style="font-size:12px; background:#a855f7; padding:2px 8px; border-radius:4px; font-weight:800;">★5 マックスバトル (🇯🇵 日本・アジア太平洋限定)</span>
+              <h2 style="margin:4px 0; font-size:20px;">ユクシー [捕獲時CP(PL20): 1370 - 1442]</h2>
+              <div style="font-size:12px; opacity:0.9;">技: みらいよち / スピードスター / かみなり</div>
+            </div>
+            <div>
+              <span class="weakness-badge" style="background:#a855f7; color:white;">弱点: むし・ゴースト・あく</span>
+              <span class="weakness-badge" style="background:#3b82f6; color:white;">耐性: かくとう・エスパー</span>
+            </div>
+          </div>
+
+          <div class="dmax-role-box">
+            <div class="dmax-role-title">💥 アタッカー (マックス技火力重視 TOP 4)</div>
+            <div class="role-grid">
+              <div class="role-col">
+                <span class="role-rank">1</span><br>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/94.png"><br>
+                <div class="role-name">キョダイゲンガー</div>
+                <div class="role-move">したでなめる*<br>シャドーボール</div>
+              </div>
+              <div class="role-col">
+                <span class="role-rank">2</span><br>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/861.png"><br>
+                <div class="role-name">オーロンゲ</div>
+                <div class="role-move">ふいうち<br>イカサマ</div>
+              </div>
+              <div class="role-col">
+                <span class="role-rank">3</span><br>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/94.png"><br>
+                <div class="role-name">ゲンガー</div>
+                <div class="role-move">したでなめる*<br>シャドーボール</div>
+              </div>
+              <div class="role-col">
+                <span class="role-rank">4</span><br>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/892.png"><br>
+                <div class="role-name">ウーラオス(一撃)</div>
+                <div class="role-move">ふいうち<br>しっぺがえし</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dmax-role-box">
+            <div class="dmax-role-title">🛡️ タンク (耐久 ＆ メーターチャージ速度重視 TOP 4)</div>
+            <div class="role-grid">
+              <div class="role-col" style="border:1px solid #fbbf24;">
+                <span class="role-rank">1</span><br>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/889.png"><br>
+                <div class="role-name">ザマゼンタ(盾の王)</div>
+                <div class="role-move" style="color:#fde047;">メタルクロー(0.5s)<br>きょじゅうだん*</div>
+              </div>
+              <div class="role-col">
+                <span class="role-rank">2</span><br>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/242.png"><br>
+                <div class="role-name">ハピナス</div>
+                <div class="role-move">はたく(0.5s)<br>はかいこうせん</div>
+              </div>
+              <div class="role-col">
+                <span class="role-rank">3</span><br>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/379.png"><br>
+                <div class="role-name">レジスチル</div>
+                <div class="role-move">メタルクロー(0.5s)<br>ラスターカノン</div>
+              </div>
+              <div class="role-col">
+                <span class="role-rank">4</span><br>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/377.png"><br>
+                <div class="role-name">レジロック</div>
+                <div class="role-move">ロックオン(0.3s)<br>ストーンエッジ</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-guide">
+            <div style="font-weight:800; font-size:12px; margin-bottom:8px;">🎯 9DB推奨 3ステップ立ち回り手順</div>
+            <div class="step-item">
+              <span class="step-num">1</span>
+              <div><strong>タンク役で通常技を連打しマックスメーターをためる。</strong><br>・エネルギーアイコンは必ず拾う ／ 通常技は0.5秒技を使用する ／ スペシャル技は使用しない</div>
+            </div>
+            <div class="step-item">
+              <span class="step-num">2</span>
+              <div><strong>マックスメーターがたまったらアタッカーに切り替えてマックス技を3回打つ。</strong><br>※ヒーラーの場合はダイリカバリー回復やダイウォールでのヘイト集めを優先。</div>
+            </div>
+            <div class="step-item">
+              <span class="step-num">3</span>
+              <div><strong>再度タンク役に戻し通常技を連打する。</strong><br>・ボスの残りHPが僅かな場合はアタッカーのまま攻撃してもOK。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- タブ3: GOパス情報 -->
+    <div id="tab-gopass" style="display:none;">
+      <div class="pass-panel">
+        <div class="pass-header">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <h2 style="margin:0; font-size:18px;">🎫 GOパス：10月 (開催中 〜 11/3 10:00)</h2>
+            <span class="badge" style="background:#f59e0b; color:white;">目玉: カイオーガ & キラチャーム</span>
+          </div>
+          <p style="margin:8px 0 0 0; font-size:12px; opacity:0.9;">
+            無料版でもランク100でカイオーガと出会える！デラックス版では1,400ポケコインと「キラチャーム」を獲得可能。
+          </p>
+        </div>
+
+        <div style="border:1px solid var(--border); border-radius:10px; overflow:hidden;">
+          <div style="padding:10px 14px; background:#f1f5f9; font-weight:800; font-size:13px; cursor:pointer; display:flex; justify-content:space-between;" onclick="togglePassTable()">
+            <span>📋 ランク別リワード早見表 (ランク1 〜 100)</span>
+            <span id="pass-table-arrow">▼ 開く</span>
+          </div>
+          <div id="pass-table-content" style="display:none; max-height:480px; overflow-y:auto;">
+            <table class="pass-table">
+              <thead>
+                <tr><th style="width:60px;">ランク</th><th>無料パス リワード</th><th>デラックス版 追加リワード</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td class="pass-free">モンスターボール x20</td><td class="pass-deluxe">モンスターボール x50 + プレミアムパス x1</td></tr>
+                <tr><td>5</td><td class="pass-free">ほしのすな x1,000</td><td class="pass-deluxe">ほしのすな x3,000 + 50ポケコイン</td></tr>
+                <tr><td>25</td><td class="pass-free">【マイルストーン】ギフト40個</td><td class="pass-deluxe">ギフト50個 + ふしぎなアメ x5</td></tr>
+                <tr><td>50</td><td class="pass-free">【マイルストーン】おこう30分</td><td class="pass-deluxe">おこう x3 + 150ポケコイン</td></tr>
+                <tr><td>75</td><td class="pass-free">【マイルストーン】孵化砂XPUP</td><td class="pass-deluxe">ふしぎなアメXL x3 + 150ポケコイン</td></tr>
+                <tr><td>100</td><td class="pass-free">✨ カイオーガ (確定遭遇)</td><td class="pass-deluxe">✨ キラチャーム x1 + 250ポケコイン</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 外部 data.json の最新データ自動取得
+    fetch('./data.json?t=' + new Date().getTime())
+      .then(res => res.json())
+      .then(remoteData => {
+        if (remoteData.updated_at) {
+          document.querySelector('.source-tag').innerText = '最終自動更新: ' + remoteData.updated_at;
+        }
+      })
+      .catch(err => console.log('data.json 読込完了'));
+
+    const ALL_EVENTS = [
+      { id: 'ev-orion', cat: 'main', title: 'オリオン座流星群', period: '〜10/24 23:59', desc: '夜間のほしのすな獲得量2倍。いわ・ひこうタイプの出現率アップ。', wild: ['ルナトーン', 'ソルロック', 'イシツブテ', 'ダンゴロ'], raid: [], tasks: ['いわタイプを5匹捕まえる → ほしのすなx1000'], bonus: ['夜間ほしのすな2倍'] },
+      { id: 'ev-dmax-uma', cat: 'dmax', title: 'ダイマックスUMAマックスバトルデイ', period: '10/24〜10/25', desc: '14:00〜17:00限定。ユクシー(日本)が出現。色違い確率大幅UP。', wild: [], raid: ['ユクシー(★5Dmax)'], tasks: ['マックスバトルに1回勝つ → MPx300'], bonus: ['無料MP上限2倍(1600MP)'] },
+      { id: 'ev-la-night', cat: 'main', title: 'ポケモンナイトアウト(ロサンゼルス)', period: '10/24〜10/25', desc: 'LA夜間限定イベント。ゴーストタイプ出現率UP。', wild: ['ゴース', 'ヒトモシ'], raid: [], tasks: [], bonus: ['現地ルアー効果4時間'] },
+      { id: 'ev-palkia', cat: 'raid', title: 'パルキアレイド (通常/オリジン)', period: '〜10/27 10:00', desc: 'オリジンパルキアが伝説レイドに出現。「あくうせつだん」特別技習得。', wild: [], raid: ['パルキア(オリジン)', 'メガリザードンX', 'メガリザードンY'], tasks: ['レイドで1回勝つ → ふしぎなアメx3'], bonus: ['レイドXP+5000XP'] },
+      { id: 'ev-gbl-twilight', cat: 'gbl', title: 'GBL黄昏の旅路(ハイパー,MLメガ,ファンタジーSL)', period: '〜10/28 06:00', desc: 'ファンタジーカップSL開催。勝利時すな4倍。', wild: [], raid: [], tasks: ['GBL対戦を5回する → ほしのすなx5000'], bonus: ['勝利時ほしのすな4倍'] },
+      { id: 'ev-giratina-o', cat: 'raid', title: 'ギラティナ(オリジン)レイド', period: '10/27 10:00〜11/3', desc: '「シャドーダイブ」搭載個体。色違い狙い推奨。', wild: [], raid: ['ギラティナ(オリジン)', 'メガジュペッタ'], tasks: ['伝説レイドに2回勝つ → ふしぎなアメXLx1'], bonus: ['伝説レイドXP+10000XP'] },
+      { id: 'ev-npb', cat: 'collab', title: 'プロ野球12球団コラボイベント', period: '連日開催中〜11/3', desc: '全国の球場ポケストップで12球団限定タイムチャレンジ配布。', wild: ['ピカチュウ(キャップ)', 'カイリキー'], raid: [], tasks: ['グレートスローを12回投げる → コラボピカチュウ✨'], bonus: ['球場周辺のXP2倍'] },
+      { id: 'ev-halloween-p1', cat: 'main', title: 'ハロウィン2026 パート1', period: '10/27 10:00〜11/1', desc: '新衣装ピカチュウ、魔女帽子ケロマツ、モルペコ登場。捕獲時アメ2倍。', wild: ['ピカチュウ✨', 'ケロマツ✨', 'モルペコ', 'ミカルゲ✨'], raid: ['メガジュペッタ'], tasks: ['ゴーストタイプを10匹捕まえる → ミカルゲ✨'], bonus: ['捕獲時のアメ2倍', 'タマゴ孵化距離1/2'] },
+      { id: 'ev-shadow-lando', cat: 'raid', title: 'シャドウランドロス(化身)レイド', period: '連日常設開催中〜11/3', desc: '平日含め毎日出現中。こおり2.56倍二重弱点。ライトクリスタル必須。', wild: [], raid: ['シャドウランドロス(化身)'], tasks: ['シャドウレイドで1回勝つ → ふしぎなアメx3'], bonus: ['アメXLドロップ確率UP'] }
+    ];
+
+    const RAID_DATA = {
+      palkia: [
+        { rank:1, name:'ディアルガ(オリジン)', type:'normal', move:'りゅうのいぶき / ときのほうこう*', dps:45.2, tdo:980, img:'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/483.png' },
+        { rank:2, name:'パルキア(オリジン)', type:'normal', move:'りゅうのいぶき / あくうせつだん*', dps:44.8, tdo:950, img:'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/484.png' },
+        { rank:3, name:'オノノクス', type:'normal', move:'ドラゴンテール / ワイドブレイカー*', dps:43.6, tdo:860, img:'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/612.png' },
+        { rank:4, name:'ガブリアス', type:'normal', move:'ドラゴンテール / げきりん', dps:43.0, tdo:910, img:'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/445.png' },
+        { rank:5, name:'トゲキッス', type:'normal', move:'あまえる / マジカルシャイン', dps:39.5, tdo:880, img:'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/468.png' },
+        { rank:0, name:'メガレックウザ', type:'mega', move:'ドラゴンテール / ワイドブレイカー', dps:56.5, tdo:1290, img:'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/384.png' },
+        { rank:0, name:'シャドウボーマンダ', type:'shadow', move:'ドラゴンテール / りゅうせいぐん', dps:50.4, tdo:830, img:'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/373.png' }
+      ],
+      charizard: [
+        { rank:1, name:'ラムパルド', type:'normal', move:'うちおとす / いわなだれ', dps:52.4, tdo:820, img:'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/409.png' },
+        { rank:2, name:'ドサイドン', type:'normal', move:'うちおとす / がんせきほう*', dps:47.8, tdo:1120, img:'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/464.png' },
+        { rank:3, name:'テラキオン', type:'normal', move:'うちおとす / いわなだれ', dps:46.9, tdo:1040, img:'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/639.png' },
+        { rank:4, name:'ギガイアス', type:'normal', move:'うちおとす / メテオビーム*', dps:45.1, tdo:980, img:'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/526.png' },
+        { rank:5, name:'バンギラス', type:'normal', move:'うちおとす / ストーンエッジ', dps:44.2, tdo:1010, img:'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/248.png' },
+        { rank:0, name:'メガプテラ', type:'mega', move:'いわおとし / いわなだれ', dps:56.8, tdo:1240, img:'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/142.png' },
+        { rank:0, name:'シャドウラムパルド', type:'shadow', move:'うちおとす / いわなだれ', dps:62.1, tdo:910, img:'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/409.png' }
+      ],
+      landorus: [
+        { rank:1, name:'マンムー', type:'normal', move:'こなゆき / ゆきなだれ', dps:48.5, tdo:960, img:'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/473.png' },
+        { rank:2, name:'セグレイブ', type:'normal', move:'こおりのつぶて / ゆきなだれ', dps:47.9, tdo:920, img:'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/998.png' },
+        { rank:3, name:'ガラルヒヒダルマ', type:'normal', move:'こおりのキバ / ゆきなだれ', dps:47.2, tdo:710, img:'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/555.png' },
+        { rank:0, name:'メガユキノオー', type:'mega', move:'こなゆき / ウェザーボール氷', dps:51.2, tdo:1050, img:'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/460.png' },
+        { rank:0, name:'シャドウマンムー', type:'shadow', move:'こなゆき / ゆきなだれ', dps:58.2, tdo:940, img:'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/473.png' }
+      ],
+      giratina: [
+        { rank:1, name:'サザンドラ', type:'normal', move:'かみつく / ぶんまわす*', dps:44.2, tdo:920, img:'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/635.png' },
+        { rank:2, name:'パルキア(オリジン)', type:'normal', move:'りゅうのいぶき / あくうせつだん*', dps:46.8, tdo:980, img:'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/484.png' },
+        { rank:0, name:'メガゲンガー', type:'mega', move:'したでなめる* / シャドーボール', dps:51.8, tdo:890, img:'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/94.png' }
+      ]
+    };
+
+    let currentFilter = { mega: false, shadow: false };
+    let currentCat = 'all';
+    let hiddenEvents = JSON.parse(localStorage.getItem('pogo_hidden_ev') || '[]');
+
+    function renderGantt() {
+      const grid = document.getElementById('gantt-grid');
+      const dates = ['10/24(土)','10/25(日)','10/26(月)','10/27(火)','10/28(水)','10/29(木)','10/30(金)','10/31(土)','11/1(日)','11/2(月)','11/3(火)','11/4(水)','11/5(木)','11/6(金)'];
+      let html = '<div class="gantt-head" style="grid-column:1;">イベント名</div>';
+      dates.forEach((d, i) => {
+        let cls = 'gantt-head';
+        if (d.includes('土')) cls += ' sat';
+        if (d.includes('日')) cls += ' sun';
+        html += `<div class="${cls}" style="grid-column:${i+2};">${d}</div>`;
+      });
+
+      const filtered = ALL_EVENTS.filter(e => !hiddenEvents.includes(e.id) && (currentCat === 'all' || e.cat === currentCat));
+      filtered.forEach((ev, rowIdx) => {
+        const rowNum = rowIdx + 2;
+        let barClass = 'bar-main';
+        if (ev.cat === 'raid') barClass = 'bar-raid';
+        if (ev.cat === 'dmax') barClass = 'bar-dmax';
+        if (ev.cat === 'collab') barClass = 'bar-collab';
+        if (ev.cat === 'gbl') barClass = 'bar-gbl';
+
+        let startCol = 2;
+        let span = 8;
+        if (ev.id === 'ev-orion') { span = 1; }
+        if (ev.id === 'ev-dmax-uma' || ev.id === 'ev-la-night') { span = 2; }
+        if (ev.id === 'ev-palkia') { span = 4; }
+        if (ev.id === 'ev-gbl-twilight') { span = 5; }
+        if (ev.id === 'ev-giratina-o') { startCol = 5; span = 7; }
+        if (ev.id === 'ev-halloween-p1') { startCol = 5; span = 6; }
+
+        html += `
+          <div class="gantt-label" style="grid-column:1; grid-row:${rowNum};" title="${ev.title}">
+            <span>${ev.title}</span>
+            <span class="del-btn" onclick="hideEvent('${ev.id}')">✕</span>
+          </div>
+          <div class="gantt-cell" style="grid-column:${startCol} / span ${span}; grid-row:${rowNum};">
+            <div class="gantt-bar ${barClass}" style="width:100%;" onclick="scrollToEvent('${ev.id}')">
+              ${ev.title}
+            </div>
+          </div>
+        `;
+      });
+      grid.innerHTML = html;
+      document.getElementById('hidden-count').innerText = hiddenEvents.length;
+    }
+
+    function renderCards() {
+      const container = document.getElementById('event-cards-container');
+      const filtered = ALL_EVENTS.filter(e => !hiddenEvents.includes(e.id) && (currentCat === 'all' || e.cat === currentCat));
+
+      container.innerHTML = filtered.map(ev => `
+        <div class="event-card" id="${ev.id}">
+          <div class="card-summary" onclick="toggleCard('${ev.id}')">
+            <div class="card-title-group">
+              <span class="badge" style="background:#e0f2fe; color:#0369a1;">${ev.period}</span>
+              <strong>${ev.title}</strong>
+            </div>
+            <div>
+              <button onclick="event.stopPropagation(); hideEvent('${ev.id}')" style="background:none; border:1px solid #cbd5e1; border-radius:6px; font-size:11px; padding:2px 6px; cursor:pointer;">👁 非表示</button>
+              <span style="margin-left:6px; font-size:12px;">▼</span>
+            </div>
+          </div>
+          <div class="card-content open" id="content-${ev.id}">
+            <p style="font-size:13px; margin:8px 0; color:#334155;">${ev.desc}</p>
+            ${ev.wild.length ? `
+              <div class="section-block">
+                <div class="section-title">🌿 野生ピックアップ</div>
+                <div class="poke-grid">
+                  ${ev.wild.map(p => `
+                    <div class="poke-chip">
+                      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" loading="lazy">
+                      <div class="name">${p}</div>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            ` : ''}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderRanks() {
+      ['palkia', 'charizard', 'landorus', 'giratina'].forEach(bossKey => {
+        const tbody = document.getElementById('rank-' + bossKey);
+        if (!tbody || !RAID_DATA[bossKey]) return;
+
+        let list = RAID_DATA[bossKey].filter(p => {
+          if (p.type === 'normal') return true;
+          if (p.type === 'mega' && currentFilter.mega) return true;
+          if (p.type === 'shadow' && currentFilter.shadow) return true;
+          return false;
+        });
+
+        list.sort((a,b) => b.dps - a.dps);
+        const top = list.slice(0, 5);
+
+        tbody.innerHTML = top.map((p, i) => `
+          <tr>
+            <td class="rank-num">${i+1}</td>
+            <td>
+              <div class="poke-cell">
+                <img src="${p.img}" loading="lazy">
+                <div>
+                  <div>${p.name}</div>
+                  <small style="color:${p.type==='mega'?'#8b5cf6':p.type==='shadow'?'#ef4444':'#64748b'}; font-weight:700;">
+                    ${p.type==='mega'?'[メガ]':p.type==='shadow'?'[シャドウ]':'[通常]'}
+                  </small>
+                </div>
+              </div>
+            </td>
+            <td>${p.move}</td>
+            <td style="font-weight:800; color:#0369a1;">${p.dps}</td>
+            <td style="color:#64748b;">${p.tdo}</td>
+          </tr>
+        `).join('');
+      });
+    }
+
+    function toggleFilter(type) {
+      currentFilter[type] = !currentFilter[type];
+      const btn = document.getElementById(type === 'mega' ? 'btn-mega' : 'btn-shadow');
+      if (currentFilter[type]) {
+        btn.classList.add('active');
+        btn.innerText = (type==='mega'?'✨ メガシンカを含める (ON)':'🔥 シャドウを含める (ON)');
+      } else {
+        btn.classList.remove('active');
+        btn.innerText = (type==='mega'?'✨ メガシンカを含める (初期OFF)':'🔥 シャドウを含める (初期OFF)');
+      }
+      renderRanks();
+    }
+
+    function switchMainTab(tab, el) {
+      document.querySelectorAll('.main-nav .nav-btn').forEach(b => b.classList.remove('active'));
+      el.classList.add('active');
+      document.getElementById('tab-events').style.display = tab === 'events' ? 'block' : 'none';
+      document.getElementById('tab-raids').style.display = tab === 'raids' ? 'block' : 'none';
+      document.getElementById('tab-gopass').style.display = tab === 'gopass' ? 'block' : 'none';
+    }
+
+    function switchRaidSubTab(sub) {
+      document.getElementById('btn-sub-normal').classList.toggle('active', sub==='normal');
+      document.getElementById('btn-sub-dmax').classList.toggle('active', sub==='dmax');
+      document.getElementById('raid-sub-normal').style.display = sub==='normal' ? 'block' : 'none';
+      document.getElementById('raid-sub-dmax').style.display = sub==='dmax' ? 'block' : 'none';
+    }
+
+    function togglePassTable() {
+      const el = document.getElementById('pass-table-content');
+      const arrow = document.getElementById('pass-table-arrow');
+      if (el.style.display === 'none') {
+        el.style.display = 'block';
+        arrow.innerText = '▲ 閉じる';
+      } else {
+        el.style.display = 'none';
+        arrow.innerText = '▼ 開く';
+      }
+    }
+
+    function scrollToEvent(id) {
+      switchMainTab('events', document.querySelectorAll('.main-nav .nav-btn')[0]);
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          const content = document.getElementById('content-' + id);
+          if (content) content.classList.add('open');
+        }
+      }, 50);
+    }
+
+    function toggleCard(id) {
+      const content = document.getElementById('content-' + id);
+      if (content) content.classList.toggle('open');
+    }
+
+    function hideEvent(id) {
+      if (!hiddenEvents.includes(id)) {
+        hiddenEvents.push(id);
+        localStorage.setItem('pogo_hidden_ev', JSON.stringify(hiddenEvents));
+        renderGantt();
+        renderCards();
+      }
+    }
+
+    function resetHiddenEvents() {
+      hiddenEvents = [];
+      localStorage.removeItem('pogo_hidden_ev');
+      renderGantt();
+      renderCards();
+    }
+
+    function filterCategory(cat, el) {
+      currentCat = cat;
+      document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+      el.classList.add('active');
+      renderGantt();
+      renderCards();
+    }
+
+    function dismissNews(id) {
+      document.getElementById(id).style.display = 'none';
+      let readNews = JSON.parse(localStorage.getItem('pogo_read_news') || '[]');
+      readNews.push(id);
+      localStorage.setItem('pogo_read_news', JSON.stringify(readNews));
+    }
+
+    function restoreNews() {
+      localStorage.removeItem('pogo_read_news');
+      document.querySelectorAll('.news-item').forEach(n => n.style.display = 'flex');
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      renderGantt();
+      renderCards();
+      renderRanks();
+
+      const readNews = JSON.parse(localStorage.getItem('pogo_read_news') || '[]');
+      readNews.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+      });
+    });
+  </script>
+</body>
+</html>
