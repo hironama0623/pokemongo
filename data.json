@@ -1,9 +1,18 @@
 {
-  "updated_at": "初期セットアップ完了",
+  "updated_at": "2026/10/24 15:23 JST",
   "latest_news": [
-    { "title": "【本日14:00〜17:00】UMAトリオ マックスバトルデイ開催！", "link": "#ev-dmax-uma-day" },
-    { "title": "【10/27〜】ハロウィン2026 パート1開催！新衣装ピカチュウ登場", "link": "#ev-halloween-p1" },
-    { "title": "【11/14〜15】GOワイルドエリア開催！ザシアン/ザマゼンタ王形態", "link": "#ev-wildarea-2026" }
+    {
+      "title": "【本日14:00〜17:00】UMAトリオ マックスバトルデイ開催！",
+      "link": "#ev-dmax-uma-day"
+    },
+    {
+      "title": "【10/27〜】ハロウィン2026 パート1開催！新衣装ピカチュウ登場",
+      "link": "#ev-halloween-p1"
+    },
+    {
+      "title": "【11/14〜15】GOワイルドエリア開催！ザシアン/ザマゼンタ王形態",
+      "link": "#ev-wildarea-2026"
+    }
   ],
   "events": [
     {
@@ -18,17 +27,51 @@
       "endDate": "2026-10-24",
       "dateText": "10/18(日) 〜 10/24(土) 20:00 [本日終了]",
       "summary": "夜間のほしのすな獲得量2倍。いわ・ひこうタイプの出現率アップ。メテノ（各種コア色）が野生で出現。",
-      "bonuses": ["捕獲時のほしのすな2倍", "夜間にメテノ出現率大幅アップ", "ほしのかけらの効果1.5倍"],
+      "bonuses": [
+        "捕獲時のほしのすな2倍",
+        "夜間にメテノ出現率大幅アップ",
+        "ほしのかけらの効果1.5倍"
+      ],
       "wilds": [
-        { "dex": 774, "name": "メテノ (コア)", "shiny": true, "note": "各種カラー出現" },
-        { "dex": 337, "name": "ルナトーン", "shiny": true, "note": "野生ブースト" },
-        { "dex": 338, "name": "ソルロック", "shiny": true, "note": "野生ブースト" },
-        { "dex": 524, "name": "ダンゴロ", "shiny": true, "note": "野生出現" }
+        {
+          "dex": 774,
+          "name": "メテノ (コア)",
+          "shiny": true,
+          "note": "各種カラー出現"
+        },
+        {
+          "dex": 337,
+          "name": "ルナトーン",
+          "shiny": true,
+          "note": "野生ブースト"
+        },
+        {
+          "dex": 338,
+          "name": "ソルロック",
+          "shiny": true,
+          "note": "野生ブースト"
+        },
+        {
+          "dex": 524,
+          "name": "ダンゴロ",
+          "shiny": true,
+          "note": "野生出現"
+        }
       ],
       "raids": [],
       "tasks": [
-        { "task": "いわタイプを5匹捕獲する", "rewardDex": 774, "rewardName": "メテノ (コア)", "shiny": true },
-        { "task": "カーブボールを3回投げる", "rewardDex": 337, "rewardName": "ルナトーン", "shiny": true }
+        {
+          "task": "いわタイプを5匹捕獲する",
+          "rewardDex": 774,
+          "rewardName": "メテノ (コア)",
+          "shiny": true
+        },
+        {
+          "task": "カーブボールを3回投げる",
+          "rewardDex": 337,
+          "rewardName": "ルナトーン",
+          "shiny": true
+        }
       ]
     },
     {
@@ -43,16 +86,51 @@
       "endDate": "2026-10-25",
       "dateText": "10/24(土) 〜 10/25(日) 各日14:00〜17:00",
       "summary": "14:00〜17:00限定。パワースポットにシンオウUMAトリオが出現！日本はユクシー出現。海外招待でエムリット・アグノム参加可能。無料MP800配布＆色違い率UP！",
-      "bonuses": ["各日マックス粒子800MP配布", "色違い確率大幅アップ", "リモート参加上限引き上げ"],
+      "bonuses": [
+        "各日マックス粒子800MP配布",
+        "色違い確率大幅アップ",
+        "リモート参加上限引き上げ"
+      ],
       "wilds": [],
       "raids": [
-        { "dex": 480, "name": "ユクシー", "shiny": true, "note": "🇯🇵 日本・アジア限定", "targetKey": "dmax-uxie", "isDmax": true },
-        { "dex": 481, "name": "エムリット", "shiny": true, "note": "🌍 欧州限定 (招待)", "targetKey": "dmax-mesprit", "isDmax": true },
-        { "dex": 482, "name": "アグノム", "shiny": true, "note": "🌎 米大陸限定 (招待)", "targetKey": "dmax-azelf", "isDmax": true }
+        {
+          "dex": 480,
+          "name": "ユクシー",
+          "shiny": true,
+          "note": "🇯🇵 日本・アジア限定",
+          "targetKey": "dmax-uxie",
+          "isDmax": true
+        },
+        {
+          "dex": 481,
+          "name": "エムリット",
+          "shiny": true,
+          "note": "🌍 欧州限定 (招待)",
+          "targetKey": "dmax-mesprit",
+          "isDmax": true
+        },
+        {
+          "dex": 482,
+          "name": "アグノム",
+          "shiny": true,
+          "note": "🌎 米大陸限定 (招待)",
+          "targetKey": "dmax-azelf",
+          "isDmax": true
+        }
       ],
       "tasks": [
-        { "task": "マックスバトルで1回勝利する", "rewardDex": 480, "rewardName": "ユクシーのアメ ×5", "shiny": false },
-        { "task": "ダイマックス技を3回使用する", "rewardDex": 242, "rewardName": "ふしぎなアメ ×2", "shiny": false }
+        {
+          "task": "マックスバトルで1回勝利する",
+          "rewardDex": 480,
+          "rewardName": "ユクシーのアメ ×5",
+          "shiny": false
+        },
+        {
+          "task": "ダイマックス技を3回使用する",
+          "rewardDex": 242,
+          "rewardName": "ふしぎなアメ ×2",
+          "shiny": false
+        }
       ]
     },
     {
@@ -67,13 +145,37 @@
       "endDate": "2026-10-27",
       "dateText": "10/21(水) 〜 10/27(火) 10:00まで [現在出現中]",
       "summary": "特別技『あくうせつだん』習得パルキアと、ほのお・ひこう最強メガシンカのメガリザードンY、ドラゴン複合のメガリザードンXが登場中！",
-      "bonuses": ["討伐でパルキア特別技あくうせつだん習得", "レイドXP+5000XP"],
+      "bonuses": [
+        "討伐でパルキア特別技あくうせつだん習得",
+        "レイドXP+5000XP"
+      ],
       "wilds": [],
       "raids": [
-        { "dex": 484, "name": "パルキア (オリジン)", "shiny": true, "note": "★5 伝説レイド", "targetKey": "palkia-origin", "isDmax": false },
-        { "dex": 6, "name": "メガリザードンY / X", "shiny": true, "note": "メガレイド (現在開催中)", "targetKey": "mega-charizard-y", "isDmax": false }
+        {
+          "dex": 484,
+          "name": "パルキア (オリジン)",
+          "shiny": true,
+          "note": "★5 伝説レイド",
+          "targetKey": "palkia-origin",
+          "isDmax": false
+        },
+        {
+          "dex": 6,
+          "name": "メガリザードンY / X",
+          "shiny": true,
+          "note": "メガレイド (現在開催中)",
+          "targetKey": "mega-charizard-y",
+          "isDmax": false
+        }
       ],
-      "tasks": [{ "task": "レイドで1回勝利する", "rewardDex": 484, "rewardName": "ふしぎなアメ ×3", "shiny": false }]
+      "tasks": [
+        {
+          "task": "レイドで1回勝利する",
+          "rewardDex": 484,
+          "rewardName": "ふしぎなアメ ×3",
+          "shiny": false
+        }
+      ]
     },
     {
       "id": "ev-shadow-landorus",
@@ -87,10 +189,30 @@
       "endDate": "2026-11-03",
       "dateText": "10/14(水) 〜 11/3(火) 平日含め連日常設中！",
       "summary": "【GameWith/9DB確認済】土日限定ではなく平日も含め連日常設開催中！こおり2.56倍二重弱点。ライトクリスタル8個で暴走鎮静化。",
-      "bonuses": ["平日・休日問わず黒タマゴ出現", "高個体シャドウ厳選可能", "ふしぎなアメXLドロップ率UP"],
+      "bonuses": [
+        "平日・休日問わず黒タマゴ出現",
+        "高個体シャドウ厳選可能",
+        "ふしぎなアメXLドロップ率UP"
+      ],
       "wilds": [],
-      "raids": [{ "dex": 645, "name": "シャドウランドロス (化身)", "shiny": true, "note": "★5 シャドウレイド (常設)", "targetKey": "shadow-landorus", "isDmax": false }],
-      "tasks": [{ "task": "シャドウレイドに1回勝つ", "rewardDex": 645, "rewardName": "ふしぎなアメ ×3", "shiny": false }]
+      "raids": [
+        {
+          "dex": 645,
+          "name": "シャドウランドロス (化身)",
+          "shiny": true,
+          "note": "★5 シャドウレイド (常設)",
+          "targetKey": "shadow-landorus",
+          "isDmax": false
+        }
+      ],
+      "tasks": [
+        {
+          "task": "シャドウレイドに1回勝つ",
+          "rewardDex": 645,
+          "rewardName": "ふしぎなアメ ×3",
+          "shiny": false
+        }
+      ]
     },
     {
       "id": "ev-halloween-p1",
@@ -104,21 +226,74 @@
       "endDate": "2026-11-01",
       "dateText": "10/27(火) 10:00 〜 11/1(日) 20:00",
       "summary": "新衣装ピカチュウ（ハット＆ケープ）、魔女帽子ケロマツ、新実装の衣装ヤバチャが登場！捕獲アメ2倍＆ナイス以上でアメXL確率UP。",
-      "bonuses": ["ポケモン捕獲時のアメ2倍", "ナイス/グレート/エクセレントスローでアメXL確率UP", "タマゴ孵化距離1/2"],
+      "bonuses": [
+        "ポケモン捕獲時のアメ2倍",
+        "ナイス/グレート/エクセレントスローでアメXL確率UP",
+        "タマゴ孵化距離1/2"
+      ],
       "wilds": [
-        { "dex": 25, "name": "新衣装ピカチュウ", "shiny": true, "note": "ハット＆ケープ" },
-        { "dex": 656, "name": "衣装ケロマツ", "shiny": true, "note": "魔女帽子" },
-        { "dex": 854, "name": "衣装ヤバチャ", "shiny": true, "note": "初登場✨" },
-        { "dex": 877, "name": "モルペコ", "shiny": true, "note": "野生ブースト" },
-        { "dex": 442, "name": "ミカルゲ", "shiny": true, "note": "低確率出現" }
+        {
+          "dex": 25,
+          "name": "新衣装ピカチュウ",
+          "shiny": true,
+          "note": "ハット＆ケープ"
+        },
+        {
+          "dex": 656,
+          "name": "衣装ケロマツ",
+          "shiny": true,
+          "note": "魔女帽子"
+        },
+        {
+          "dex": 854,
+          "name": "衣装ヤバチャ",
+          "shiny": true,
+          "note": "初登場✨"
+        },
+        {
+          "dex": 877,
+          "name": "モルペコ",
+          "shiny": true,
+          "note": "野生ブースト"
+        },
+        {
+          "dex": 442,
+          "name": "ミカルゲ",
+          "shiny": true,
+          "note": "低確率出現"
+        }
       ],
       "raids": [
-        { "dex": 487, "name": "ギラティナ (オリジン)", "shiny": true, "note": "★5 伝説レイド", "targetKey": "giratina-origin", "isDmax": false },
-        { "dex": 354, "name": "メガジュペッタ", "shiny": true, "note": "メガレイド", "targetKey": "mega-banette", "isDmax": false }
+        {
+          "dex": 487,
+          "name": "ギラティナ (オリジン)",
+          "shiny": true,
+          "note": "★5 伝説レイド",
+          "targetKey": "giratina-origin",
+          "isDmax": false
+        },
+        {
+          "dex": 354,
+          "name": "メガジュペッタ",
+          "shiny": true,
+          "note": "メガレイド",
+          "targetKey": "mega-banette",
+          "isDmax": false
+        }
       ],
       "tasks": [
-        { "task": "ゴーストタイプを10匹捕獲する", "rewardDex": 442, "rewardName": "ミカルゲ", "shiny": true },
-        { "task": "ナイススローを5回投げる", "rewardDex": 854, "rewardName": "衣装ヤバチャ", "shiny": true }
+        {
+          "task": "ゴーストタイプを10匹捕獲する",
+          "rewardDex": 442,
+          "rewardName": "ミカルゲ",
+          "shiny": true
+        },
+        {
+          "task": "ナイススローを5回投げる",
+          "rewardDex": 854,
+          "rewardName": "衣装ヤバチャ",
+          "shiny": true
+        }
       ]
     },
     {
@@ -133,15 +308,43 @@
       "endDate": "2026-11-15",
       "dateText": "11/14(土) 〜 11/15(日) 各日10:00〜18:00",
       "summary": "大型グローバル祭！初登場の『つよいポケモン（PL40〜50・高個体保証・GOサファリボール必須）』が野生出現。土曜：ホワイトキュレム＆ゼクロム、日曜：ブラックキュレム＆レシラム降臨！",
-      "bonuses": ["つよいポケモン出現 (GOサファリボール使用)", "キュレム合体エナジー獲得", "無料レイドパス最大6枚"],
+      "bonuses": [
+        "つよいポケモン出現 (GOサファリボール使用)",
+        "キュレム合体エナジー獲得",
+        "無料レイドパス最大6枚"
+      ],
       "wilds": [
-        { "dex": 646, "name": "つよいカイリュー", "shiny": true, "note": "PL40〜50確定" },
-        { "dex": 884, "name": "キョダイジュラルドン", "shiny": true, "note": "色違い解禁✨" }
+        {
+          "dex": 646,
+          "name": "つよいカイリュー",
+          "shiny": true,
+          "note": "PL40〜50確定"
+        },
+        {
+          "dex": 884,
+          "name": "キョダイジュラルドン",
+          "shiny": true,
+          "note": "色違い解禁✨"
+        }
       ],
       "raids": [
-        { "dex": 646, "name": "ホワイト / ブラックキュレム", "shiny": true, "note": "合体伝説レイド", "targetKey": "kyurem-fused", "isDmax": false }
+        {
+          "dex": 646,
+          "name": "ホワイト / ブラックキュレム",
+          "shiny": true,
+          "note": "合体伝説レイド",
+          "targetKey": "kyurem-fused",
+          "isDmax": false
+        }
       ],
-      "tasks": [{ "task": "GOサファリボールでポケモンを3匹捕獲", "rewardDex": 646, "rewardName": "キュレム", "shiny": true }]
+      "tasks": [
+        {
+          "task": "GOサファリボールでポケモンを3匹捕獲",
+          "rewardDex": 646,
+          "rewardName": "キュレム",
+          "shiny": true
+        }
+      ]
     }
   ]
 }
