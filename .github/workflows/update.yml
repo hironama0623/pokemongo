@@ -2,8 +2,8 @@ name: Scheduled Pokemon GO Data Update
 
 on:
   schedule:
-    # 日本時間 9:00, 12:00, 15:00, 18:00, 21:00 に実行
-    - cron: '0 0,3,6,9,12 * * *'
+    # 日本時間 8:00, 11:00, 14:00, 17:00, 20:00, 24:00 に自動実行 (UTC 23, 2, 5, 8, 11, 15時)
+    - cron: '0 2,5,8,11,15,23 * * *'
   workflow_dispatch:
 
 jobs:
