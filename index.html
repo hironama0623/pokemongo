@@ -111,7 +111,7 @@
       font-weight: bold;
     }
 
-    /* カレンダー（横スクロール＆文字切れ完全対策） */
+    /* カレンダーセクション */
     .calendar-section {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
@@ -132,7 +132,7 @@
       color: var(--text-main);
     }
     .cal-wrapper {
-      min-width: 1600px; /* 1日あたり約50px以上を確保し、単日でも文字切れを防止 */
+      min-width: 850px;
       padding: 0 16px;
     }
     .cal-grid {
@@ -173,21 +173,53 @@
       border-radius: 6px;
       display: flex;
       align-items: center;
-      padding: 0 10px;
-      font-size: 0.78rem;
-      font-weight: 700;
-      color: #fff;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
       cursor: pointer;
       box-shadow: 0 2px 6px rgba(0,0,0,0.3);
       transition: transform 0.15s, opacity 0.15s;
+      white-space: nowrap;
+    }
+    .cal-bar:hover {
+      opacity: 0.9;
     }
     .cal-bar:active {
       transform: scale(0.98);
-      opacity: 0.9;
     }
+
+    /* 長期イベント（バーの中に文字を収める） */
+    .cal-bar.long-bar {
+      padding: 0 10px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    /* 短期イベント（文字切れ防止：バーは日程幅を保ち、タイトルは外側に綺麗に展開） */
+    .cal-bar.short-bar {
+      overflow: visible;
+      min-width: 12px;
+    }
+    .short-bar-label {
+      position: absolute;
+      left: calc(100% + 6px);
+      background: #1e293b;
+      border: 1px solid var(--card-border);
+      color: #fff;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      white-space: nowrap;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+      pointer-events: none;
+    }
+    /* 月末近くの短期イベントは左側に展開して右端のはみ出しを防ぐ */
+    .cal-bar.short-bar.flip-label .short-bar-label {
+      left: auto;
+      right: calc(100% + 6px);
+    }
+
     .bar-main { background-color: var(--color-main); }
     .bar-raid { background-color: var(--color-raid); }
     .bar-dmax { background-color: var(--color-dmax); }
@@ -347,7 +379,7 @@
   </header>
 
   <div class="container">
-    <!-- 公式速報 -->
+    <!-- 公式速報ニュース -->
     <div class="news-section">
       <div class="news-title">📢 公式速報ニュース</div>
       <ul id="newsList" class="news-list">
@@ -355,7 +387,7 @@
       </ul>
     </div>
 
-    <!-- カレンダー -->
+    <!-- カレンダーセクション -->
     <div class="calendar-section" id="calendarSection">
       <div class="cal-header-title">📅 10月 イベント日程バー</div>
       <div class="cal-wrapper">
@@ -385,200 +417,7 @@
     let allEvents = [];
     let currentFilter = 'all';
 
-    // カテゴリの日本語変換
     const categoryLabels = {
       main: 'イベント',
       raid: 'レイド',
-      dmax: 'ダイマックス',
-      collab: 'コラボ',
-      gbl: 'GBL'
-    };
-
-    // カレンダーの日付ヘッダー作成
-    function setupCalendarHeader() {
-      const grid = document.getElementById('calGrid');
-      grid.innerHTML = '';
-      const todayDate = 24; // 基準日(24日)
-      for (let day = 1; day <= 31; day++) {
-        const div = document.createElement('div');
-        div.className = `cal-day-cell ${day === todayDate ? 'today' : ''}`;
-        div.textContent = day;
-        grid.appendChild(div);
-      }
-    }
-
-    // データ読み込み
-    async function loadData() {
-      try {
-        const res = await fetch('data.json?t=' + Date.now());
-        if (!res.ok) throw new Error('データ取得失敗');
-        const data = await res.json();
-
-        // 更新日時
-        if (data.updated_at) {
-          document.getElementById('updateTime').textContent = `更新: ${data.updated_at}`;
-        }
-
-        // ニュース
-        const newsList = document.getElementById('newsList');
-        newsList.innerHTML = '';
-        if (data.latest_news && data.latest_news.length > 0) {
-          data.latest_news.forEach(news => {
-            const li = document.createElement('li');
-            li.className = 'news-item';
-            li.textContent = news.title;
-            newsList.appendChild(li);
-          });
-        } else {
-          newsList.innerHTML = '<li class="news-item">現在、新しい速報はありません</li>';
-        }
-
-        // イベント描画
-        allEvents = data.events || [];
-        renderCalendar();
-        renderCards();
-
-        // 24日（今日）の位置へ自動スムーズスクロール
-        setTimeout(() => {
-          const calSec = document.getElementById('calendarSection');
-          const targetX = (24 / 31) * 1600 - (calSec.clientWidth / 2);
-          calSec.scrollTo({ left: Math.max(0, targetX), behavior: 'smooth' });
-        }, 150);
-
-      } catch (err) {
-        console.error(err);
-        document.getElementById('eventCards').innerHTML = '<div class="loading-msg">データの読み込みに失敗しました</div>';
-      }
-    }
-
-    // カレンダーバー描画
-    function renderCalendar() {
-      const container = document.getElementById('calBars');
-      container.innerHTML = '';
-
-      if (allEvents.length === 0) {
-        container.innerHTML = '<div class="loading-msg">登録されているイベントはありません</div>';
-        return;
-      }
-
-      allEvents.forEach(ev => {
-        const track = document.createElement('div');
-        track.className = 'cal-bar-track';
-
-        const bar = document.createElement('div');
-        bar.className = `cal-bar ${ev.barClass || 'bar-main'}`;
-        
-        const start = Math.max(1, ev.startDay || 1);
-        const end = Math.min(31, ev.endDay || start);
-        const duration = Math.max(1, (end - start + 1));
-
-        bar.style.left = `${((start - 1) / 31) * 100}%`;
-        bar.style.width = `${(duration / 31) * 100}%`;
-        bar.textContent = ev.title;
-
-        // タップで該当カードへスクロール
-        bar.onclick = () => {
-          const card = document.getElementById(ev.id);
-          if (card) {
-            card.scrollIntoView({ behavior: 'smooth' });
-            card.classList.add('highlight');
-            setTimeout(() => card.classList.remove('highlight'), 1800);
-          }
-        };
-
-        track.appendChild(bar);
-        container.appendChild(track);
-      });
-    }
-
-    // カード描画
-    function renderCards() {
-      const container = document.getElementById('eventCards');
-      container.innerHTML = '';
-
-      const filtered = currentFilter === 'all' 
-        ? allEvents 
-        : allEvents.filter(ev => ev.category === currentFilter);
-
-      if (filtered.length === 0) {
-        container.innerHTML = '<div class="loading-msg">該当するイベントはありません</div>';
-        return;
-      }
-
-      filtered.forEach(ev => {
-        const card = document.createElement('div');
-        card.className = 'event-card';
-        card.id = ev.id || `ev-${Math.random().toString(36).substr(2, 9)}`;
-
-        const catText = categoryLabels[ev.category] || 'イベント';
-
-        let html = `
-          <div class="card-top">
-            <span class="cat-badge ${ev.barClass || 'bar-main'}">${catText}</span>
-          </div>
-          <div class="card-title">${ev.title}</div>
-          <div class="card-date">🕒 ${ev.dateText || `${ev.startDate} 〜 ${ev.endDate}`}</div>
-          ${ev.summary ? `<div class="card-summary">${ev.summary}</div>` : ''}
-        `;
-
-        // ボーナス
-        if (ev.bonuses && ev.bonuses.length > 0) {
-          html += `
-            <div class="card-box">
-              <div class="card-box-label">🎁 イベントボーナス</div>
-              <ul class="bonus-list">
-                ${ev.bonuses.map(b => `<li class="bonus-tag">${b}</li>`).join('')}
-              </ul>
-            </div>
-          `;
-        }
-
-        // ボス／レイド（アイコン付き）
-        if (ev.raids && ev.raids.length > 0) {
-          html += `
-            <div class="card-box">
-              <div class="card-box-label">⚔️ 出現ボス / レイド</div>
-              <div class="pokemon-grid">
-                ${ev.raids.map(r => {
-                  const img = r.dex ? `<img class="poke-icon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${r.dex}.png" alt="${r.name}" onerror="this.style.display='none'">` : '';
-                  return `<div class="poke-item">${img}<span>${r.name}</span>${r.shiny ? '<span class="shiny-icon">✨</span>' : ''}</div>`;
-                }).join('')}
-              </div>
-            </div>
-          `;
-        }
-
-        // 野生ポケモン（アイコン付き）
-        if (ev.wilds && ev.wilds.length > 0) {
-          html += `
-            <div class="card-box">
-              <div class="card-box-label">🌿 野生で出現するポケモン</div>
-              <div class="pokemon-grid">
-                ${ev.wilds.map(w => {
-                  const img = w.dex ? `<img class="poke-icon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${w.dex}.png" alt="${w.name}" onerror="this.style.display='none'">` : '';
-                  return `<div class="poke-item">${img}<span>${w.name}</span>${w.shiny ? '<span class="shiny-icon">✨</span>' : ''}</div>`;
-                }).join('')}
-              </div>
-            </div>
-          `;
-        }
-
-        card.innerHTML = html;
-        container.appendChild(card);
-      });
-    }
-
-    // フィルター切り替え
-    function setFilter(category, btn) {
-      currentFilter = category;
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      renderCards();
-    }
-
-    // 初期起動
-    setupCalendarHeader();
-    loadData();
-  </script>
-</body>
-</html>
+      dmax: 'ダイ
