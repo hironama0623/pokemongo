@@ -2,445 +2,1691 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pokémon GO イベント情報</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Pokémon GO 総合攻略ハブ (GameWith / 9DB / ポケマピ 統合版)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    :root {
-      --bg-color: #0f172a;
-      --card-bg: #1e293b;
-      --card-border: #334155;
-      --text-main: #f8fafc;
-      --text-sub: #94a3b8;
-      --accent: #38bdf8;
-      --color-main: #3b82f6;
-      --color-raid: #ef4444;
-      --color-dmax: #ec4899;
-      --color-collab: #10b981;
-      --color-gbl: #8b5cf6;
-    }
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+      background-color: #f8fafc;
+      color: #0f172a;
       -webkit-tap-highlight-color: transparent;
     }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-main);
-      line-height: 1.5;
-      padding-bottom: 60px;
+    ::-webkit-scrollbar {
+      height: 6px;
+      width: 6px;
     }
-    header {
-      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-      border-bottom: 1px solid var(--card-border);
-      padding: 16px 20px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
     }
-    .header-content {
-      max-width: 1000px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 3px;
     }
-    .header-title {
-      font-size: 1.15rem;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
     }
-    .update-badge {
-      align-self: flex-start;
-      font-size: 0.75rem;
-      background: #0284c7;
-      color: #fff;
-      padding: 3px 10px;
-      border-radius: 12px;
-      font-weight: 500;
+    @keyframes pulseFocus {
+      0% { box-shadow: 0 0 0 0 rgba(2, 132, 199, 0.7); border-color: #0284c7; }
+      70% { box-shadow: 0 0 0 14px rgba(2, 132, 199, 0); border-color: #0284c7; }
+      100% { box-shadow: 0 0 0 0 rgba(2, 132, 199, 0); }
     }
-    .container {
-      max-width: 1000px;
-      margin: 20px auto;
-      padding: 0 16px;
+    .pulse-target {
+      animation: pulseFocus 1.2s ease-out 2;
     }
-    
-    /* ニュースセクション */
-    .news-section {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 12px;
-      padding: 16px;
-      margin-bottom: 24px;
+    /* ガントチャートの連日カラースタイル (ライトテーマ高視認性仕様) */
+    .bar-main {
+      background: linear-gradient(90deg, #e0f2fe, #bae6fd);
+      border: 1px solid #38bdf8;
+      color: #0369a1;
     }
-    .news-title {
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: var(--accent);
-      margin-bottom: 10px;
+    .bar-raid {
+      background: linear-gradient(90deg, #dcfce7, #bbf7d0);
+      border: 1px solid #4ade80;
+      color: #15803d;
     }
-    .news-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
+    .bar-dmax {
+      background: linear-gradient(90deg, #f3e8ff, #e9d5ff);
+      border: 1px solid #c084fc;
+      color: #7e22ce;
     }
-    .news-item {
-      font-size: 0.85rem;
-      display: flex;
-      gap: 8px;
-      align-items: flex-start;
+    .bar-collab {
+      background: linear-gradient(90deg, #ccfbf1, #99f6e4);
+      border: 1px solid #2dd4bf;
+      color: #0f766e;
     }
-    .news-item::before {
-      content: "•";
-      color: var(--text-sub);
+    .bar-gbl {
+      background: linear-gradient(90deg, #ffedd5, #fed7aa);
+      border: 1px solid #fb923c;
+      color: #c2410c;
     }
-
-    /* カレンダーセクション */
-    .calendar-section {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 12px;
-      padding: 16px 0;
-      margin-bottom: 24px;
-      overflow-x: auto;
-      scroll-behavior: smooth;
+    .bar-shadow-daily {
+      background: linear-gradient(90deg, #fee2e2, #fecaca);
+      border: 1px solid #f87171;
+      color: #991b1b;
     }
-    .cal-wrapper {
-      min-width: 900px; /* バーが潰れないように十分な幅を確保 */
-      padding: 0 16px;
+    /* 9DB仕様のディープパープル */
+    .bg-9db-card {
+      background: radial-gradient(circle at center, #2e1065 0%, #170b2c 70%, #0d061a 100%);
     }
-    .cal-header {
-      display: grid;
-      grid-template-columns: repeat(31, 1fr);
-      border-bottom: 1px solid var(--card-border);
-      padding-bottom: 8px;
-      margin-bottom: 12px;
-      text-align: center;
-      font-size: 0.75rem;
-      color: var(--text-sub);
-    }
-    .today-mark {
-      color: var(--accent);
-      font-weight: 800;
-      font-size: 0.85rem;
-    }
-    .cal-bars {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    .cal-bar-track {
-      position: relative;
-      height: 26px;
-      background: rgba(255, 255, 255, 0.02);
-      border-radius: 4px;
-    }
-    .cal-bar {
-      position: absolute;
-      top: 0;
-      height: 100%;
-      border-radius: 4px;
-      display: flex;
-      align-items: center;
-      padding: 0 8px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: #fff;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    }
-    .bar-main { background-color: var(--color-main); }
-    .bar-raid { background-color: var(--color-raid); }
-    .bar-dmax { background-color: var(--color-dmax); }
-    .bar-collab { background-color: var(--color-collab); }
-    .bar-gbl { background-color: var(--color-gbl); }
-
-    /* フィルター */
-    .filter-group {
-      display: flex;
-      gap: 10px;
-      overflow-x: auto;
-      padding-bottom: 10px;
-      margin-bottom: 16px;
-    }
-    .filter-btn {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      color: var(--text-sub);
-      padding: 8px 16px;
-      border-radius: 20px;
-      font-size: 0.85rem;
-      cursor: pointer;
-      white-space: nowrap;
-    }
-    .filter-btn.active {
-      background: var(--accent);
-      color: #0f172a;
-      font-weight: 700;
-      border-color: var(--accent);
-    }
-
-    /* イベントカード */
-    .event-cards {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    .event-card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 12px;
-      padding: 16px;
-    }
-    .card-top {
-      display: flex;
-      margin-bottom: 10px;
-    }
-    .cat-badge {
-      font-size: 0.7rem;
-      font-weight: 700;
-      padding: 3px 10px;
-      border-radius: 4px;
-      color: #fff;
-    }
-    .card-title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-    .card-date {
-      font-size: 0.85rem;
-      color: var(--accent);
-      margin-bottom: 12px;
-    }
-    .card-summary {
-      font-size: 0.85rem;
-      color: var(--text-sub);
-      margin-bottom: 16px;
-      line-height: 1.5;
-    }
-    .card-section-box {
-      background: rgba(15, 23, 42, 0.5);
-      border-radius: 8px;
-      padding: 12px;
-      margin-top: 12px;
-    }
-    .card-section-label {
-      font-size: 0.75rem;
-      color: var(--text-sub);
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-    .bonus-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      list-style: none;
-    }
-    .bonus-tag {
-      background: rgba(56, 189, 248, 0.1);
-      color: var(--accent);
-      border: 1px solid rgba(56, 189, 248, 0.25);
-      padding: 4px 10px;
-      border-radius: 6px;
-      font-size: 0.75rem;
-    }
-    .pokemon-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .poke-item {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(255, 255, 255, 0.05);
-      padding: 4px 12px;
-      border-radius: 8px;
-      font-size: 0.85rem;
-    }
-    .shiny-icon { color: #facc15; font-size: 0.8rem; }
   </style>
 </head>
-<body>
+<body class="min-h-screen flex flex-col">
 
-  <header>
-    <div class="header-content">
-      <div class="header-title">⚡ Pokémon GO イベント情報</div>
-      <div id="updateTime" class="update-badge">更新: データ取得中...</div>
+  <!-- ヘッダー -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200 px-4 py-2.5 shadow-sm">
+    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="text-2xl">⚡</span>
+        <div>
+          <h1 class="text-base sm:text-lg font-black tracking-wide bg-gradient-to-r from-sky-600 via-teal-600 to-amber-600 bg-clip-text text-transparent">
+            Pokémon GO 総合攻略ハブ
+          </h1>
+          <div class="text-[11px] text-slate-500 flex items-center gap-2">
+            <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span id="autoUpdateTimestamp" class="font-bold text-slate-700">最終自動更新: 読込中...</span>
+            <span class="text-sky-600 font-semibold hidden sm:inline">GameWith / 9DB / ポケマピ 3大サイト統合仕様</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <button onclick="restoreAllHiddenEvents()" id="globalRestoreBtn" class="hidden text-xs bg-amber-50 text-amber-700 border border-amber-300 hover:bg-amber-100 px-2.5 py-1 rounded-md transition font-bold shadow-sm">
+          <span id="globalHiddenCount">0</span>件非表示中 [すべて再表示]
+        </button>
+      </div>
     </div>
   </header>
 
-  <div class="container">
-    <!-- ニュース -->
-    <div class="news-section">
-      <div class="news-title">📢 公式速報ニュース</div>
-      <ul id="newsList" class="news-list">
-        <li class="news-item">読み込み中...</li>
-      </ul>
-    </div>
-
-    <!-- カレンダー -->
-    <div class="calendar-section" id="calendarSection">
-      <div class="cal-wrapper">
-        <div id="calHeader" class="cal-header"></div>
-        <div id="calBars" class="cal-bars"></div>
-      </div>
-    </div>
-
-    <!-- フィルター -->
-    <div class="filter-group">
-      <button class="filter-btn active" onclick="setFilter('all', this)">すべて</button>
-      <button class="filter-btn" onclick="setFilter('main', this)">メイン/イベント</button>
-      <button class="filter-btn" onclick="setFilter('raid', this)">レイド</button>
-      <button class="filter-btn" onclick="setFilter('dmax', this)">ダイマックス</button>
-      <button class="filter-btn" onclick="setFilter('collab', this)">コラボ</button>
-    </div>
-
-    <!-- カード一覧 -->
-    <div id="eventCards" class="event-cards"></div>
+  <!-- 3大メインナビゲーションタブ -->
+  <div class="max-w-6xl mx-auto w-full px-4 pt-3 pb-1">
+    <nav class="flex gap-1.5 p-1 bg-slate-200/80 rounded-xl border border-slate-300 shadow-inner">
+      <button id="tabNavSchedule" onclick="switchMainTab('schedule')" class="flex-1 py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1.5 bg-white text-sky-700 shadow-sm">
+        <span>📅</span> <span class="hidden sm:inline">イベント &</span> ガントチャート
+      </button>
+      <button id="tabNavBattles" onclick="switchMainTab('battles')" class="flex-1 py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1.5 text-slate-600 hover:text-slate-900">
+        <span>⚔️</span> レイド & ダイマックス
+      </button>
+      <button id="tabNavGoPass" onclick="switchMainTab('gopass')" class="flex-1 py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1.5 text-slate-600 hover:text-slate-900">
+        <span>🎫</span> GOパス情報 (報酬一覧)
+      </button>
+    </nav>
   </div>
 
+  <!-- メインコンテンツ領域 -->
+  <main class="max-w-6xl mx-auto w-full px-4 py-3 flex-1">
+
+    <!-- ============================================================== -->
+    <!-- タブ 1: イベント ＆ ガントチャート (3ヶ月対応) -->
+    <!-- ============================================================== -->
+    <div id="tabContentSchedule" class="space-y-4">
+
+      <!-- トップ通知エリア -->
+      <section class="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <!-- 本日開催中・注目のレイド -->
+        <div class="bg-white border border-rose-200 rounded-xl p-3.5 shadow-sm">
+          <div class="flex items-center justify-between mb-2">
+            <h2 class="text-sm font-extrabold text-rose-600 flex items-center gap-1.5">
+              <span>🚨</span> 本日開催中・注目のレイド
+            </h2>
+            <span class="text-[10px] bg-rose-50 text-rose-600 px-2 py-0.5 rounded-full font-bold border border-rose-200">要確認</span>
+          </div>
+          <ul class="text-xs space-y-2 text-slate-700">
+            <li class="flex items-start gap-2 bg-rose-50/50 p-2 rounded-lg border border-rose-100">
+              <span class="text-amber-600 font-bold flex-shrink-0">14:00〜17:00</span>
+              <div>
+                <strong class="text-sky-700 cursor-pointer hover:underline" onclick="jumpToCounterTarget('dmax-uxie', true)">ダイマックスUMA マックスバトルデイ</strong>
+                <p class="text-[11px] text-slate-500">日本はユクシー出現！無料MP800配布＆色違い率UP（海外招待でエムリット・アグノム参加可能）</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-2 bg-slate-50 p-2 rounded-lg border border-slate-200">
+              <span class="text-emerald-600 font-bold flex-shrink-0">〜10/27まで</span>
+              <div>
+                <strong class="text-emerald-700 cursor-pointer hover:underline" onclick="jumpToCounterTarget('palkia-origin', false)">パルキア(オリジン) ＆ メガリザードンX/Y</strong>
+                <p class="text-[11px] text-slate-500">メガリザードンYはいわ2.56倍二重弱点で少人数撃破可能！パルキア特別技あくうせつだん習得。</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-2 bg-slate-50 p-2 rounded-lg border border-slate-200">
+              <span class="text-rose-600 font-bold flex-shrink-0">連日常設中</span>
+              <div>
+                <strong class="text-rose-700 cursor-pointer hover:underline" onclick="jumpToCounterTarget('shadow-landorus', false)">シャドウランドロス(化身) レイド</strong>
+                <p class="text-[11px] text-slate-500">土日だけでなく平日も連日出現中！こおり2.56倍二重弱点で2人討伐可能。</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 直近の公式発表・最新ニュース速報 -->
+        <div class="bg-white border border-sky-200 rounded-xl p-3.5 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <h2 class="text-sm font-extrabold text-sky-700 flex items-center gap-1.5">
+                <span>📢</span> 公式発表・最新ニュース速報 (3サイト統合)
+              </h2>
+              <button onclick="resetReadNews()" class="text-[10px] text-slate-500 hover:text-sky-600 underline">
+                既読リセット
+              </button>
+            </div>
+            <div id="newsItemsContainer" class="space-y-1.5 text-xs"></div>
+          </div>
+          <div class="text-[10px] text-slate-400 mt-2 text-right">
+            タップで該当詳細へスクロール / 「✓ 既読」で非表示
+          </div>
+        </div>
+      </section>
+
+      <!-- 3ヶ月ガントチャート カレンダー -->
+      <section class="bg-white border border-slate-200 rounded-xl p-3.5 shadow-sm">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+          <div class="flex items-center gap-2">
+            <h2 class="text-sm font-extrabold text-slate-900 flex items-center gap-1.5">
+              <span>📊</span> イベントスケジュール (ガントチャート・タイムライン)
+            </h2>
+            <span class="text-[11px] text-slate-500 hidden sm:inline">| 連日バータップで詳細へ</span>
+          </div>
+
+          <div class="flex items-center gap-1 bg-slate-100 p-1 rounded-lg border border-slate-200">
+            <button onclick="changeGanttMonth(10)" id="monthBtn10" class="text-xs px-3 py-1 rounded-md font-bold transition bg-sky-600 text-white shadow-sm">10月</button>
+            <button onclick="changeGanttMonth(11)" id="monthBtn11" class="text-xs px-3 py-1 rounded-md font-bold transition text-slate-600 hover:text-slate-900">11月</button>
+            <button onclick="changeGanttMonth(12)" id="monthBtn12" class="text-xs px-3 py-1 rounded-md font-bold transition text-slate-600 hover:text-slate-900">12月</button>
+          </div>
+        </div>
+
+        <!-- 絞り込みフィルターバー -->
+        <div class="flex flex-wrap items-center gap-1.5 pb-2.5 pt-1 border-b border-slate-100">
+          <span class="text-[11px] text-slate-500 font-bold mr-1">絞り込み:</span>
+          <button onclick="filterTimelineCategory('all')" id="catBtn-all" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-sky-600 text-white shadow-sm">すべて</button>
+          <button onclick="filterTimelineCategory('main')" id="catBtn-main" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-100 text-slate-600 hover:bg-slate-200">🎪 メイン・シーズン</button>
+          <button onclick="filterTimelineCategory('raid')" id="catBtn-raid" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-100 text-slate-600 hover:bg-slate-200">⚔️ レイドバトル</button>
+          <button onclick="filterTimelineCategory('dmax')" id="catBtn-dmax" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-100 text-slate-600 hover:bg-slate-200">⚡ マックスバトル</button>
+          <button onclick="filterTimelineCategory('collab')" id="catBtn-collab" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-100 text-slate-600 hover:bg-slate-200">🤝 コラボ・限定</button>
+          <button onclick="filterTimelineCategory('gbl')" id="catBtn-gbl" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-100 text-slate-600 hover:bg-slate-200">🥊 GBL</button>
+        </div>
+
+        <!-- 横スクロールコンテナ -->
+        <div class="relative overflow-x-auto rounded-lg border border-slate-200 bg-white pb-2 mt-2" id="ganttScrollWrapper">
+          <div id="ganttTimelineTable" class="min-w-[960px] select-none">
+            <div id="ganttHeaderRow" class="grid sticky top-0 z-20 bg-slate-50 border-b border-slate-200 text-center text-xs font-bold text-slate-600"></div>
+            <div id="ganttTracksContainer" class="relative py-2 space-y-1">
+              <div id="ganttBgGrid" class="absolute inset-0 grid pointer-events-none"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 凡例 -->
+        <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-slate-500 mt-2 px-1">
+          <span class="flex items-center gap-1"><span class="w-3 h-2 rounded bg-emerald-100 border border-emerald-400"></span> 伝説・メガレイド</span>
+          <span class="flex items-center gap-1"><span class="w-3 h-2 rounded bg-rose-100 border border-rose-400"></span> ★5シャドウ (連日常設)</span>
+          <span class="flex items-center gap-1"><span class="w-3 h-2 rounded bg-purple-100 border border-purple-400"></span> マックスバトル</span>
+          <span class="flex items-center gap-1"><span class="w-3 h-2 rounded bg-teal-100 border border-teal-400"></span> コラボ (NPB・イオン等)</span>
+          <span class="flex items-center gap-1"><span class="w-3 h-2 rounded bg-orange-100 border border-orange-400"></span> GBL</span>
+        </div>
+      </section>
+
+      <!-- イベント詳細アコーディオン一覧 -->
+      <section class="space-y-3">
+        <div class="flex items-center justify-between px-1">
+          <h2 class="text-sm font-extrabold text-slate-800 flex items-center gap-1.5">
+            <span>📌</span> イベント詳細・限定タスク一覧 (現在・未来の開催)
+          </h2>
+          <span class="text-[11px] text-slate-500">各カードの「👁 非表示」で個別除外可能</span>
+        </div>
+        <div id="eventsAccordionContainer" class="space-y-2.5"></div>
+
+        <!-- 過去の終了イベント アーカイブ (終了後30日以内を自動保持) -->
+        <details class="bg-white border border-slate-200 rounded-xl overflow-hidden mt-4 shadow-sm group">
+          <summary class="p-3 text-xs font-bold text-slate-600 cursor-pointer hover:bg-slate-50 flex items-center justify-between">
+            <span class="flex items-center gap-1.5">📂 アーカイブ（終了後30日以内のイベント履歴 / 30日経過で自動消去）</span>
+            <span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded text-slate-500 group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <div id="archiveEventsContainer" class="p-3 pt-0 text-xs text-slate-600 border-t border-slate-100 space-y-2 mt-2">
+            <!-- JSで動的レンダリング -->
+          </div>
+        </details>
+      </section>
+
+      <!-- GBL最下部サマリー -->
+      <section class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+        <details class="group">
+          <summary class="p-3 text-xs font-bold text-orange-600 cursor-pointer flex items-center justify-between hover:bg-orange-50/50">
+            <span class="flex items-center gap-1.5">🏆 GOバトルリーグ (GBL: 黄昏の旅路) 現在のメタ早見表 (9DB準拠)</span>
+            <span class="text-[10px] text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <div class="p-3 pt-1 text-xs border-t border-slate-100 text-slate-700 space-y-2">
+            <p class="text-slate-500">開催期間: 〜10/28(水) 早朝まで (勝利時ほしのすな4倍)</p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-1">
+              <div class="bg-orange-50/50 p-2.5 rounded-lg border border-orange-100">
+                <div class="text-[11px] font-bold text-orange-800">ハイパーリーグ (CP2500)</div>
+                <div class="text-[11px] text-slate-600 mt-1">環境トップ: ジガルデ(パーフェクト)、ギラティナ(アナザー)、コバルオン</div>
+              </div>
+              <div class="bg-orange-50/50 p-2.5 rounded-lg border border-orange-100">
+                <div class="text-[11px] font-bold text-orange-800">マスターリーグ メガ (制限なし)</div>
+                <div class="text-[11px] text-slate-600 mt-1">環境トップ: メガレックウザ、ディアルガ(オリジン)、メガギャラドス</div>
+              </div>
+              <div class="bg-orange-50/50 p-2.5 rounded-lg border border-orange-100">
+                <div class="text-[11px] font-bold text-orange-800">ファンタジーカップ (SL)</div>
+                <div class="text-[11px] text-slate-600 mt-1">ドラゴン・はがね・フェアリー限定 / マリルリ、クチート、ガラルマッギョ</div>
+              </div>
+            </div>
+          </div>
+        </details>
+      </section>
+
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- タブ 2: レイド & ダイマックス対策 (現在開催中最優先 / メガレイド復活 / 9DB準拠) -->
+    <!-- ============================================================== -->
+    <div id="tabContentBattles" class="space-y-4 hidden">
+
+      <div class="flex gap-2 p-1 bg-slate-200/80 rounded-xl border border-slate-300">
+        <button id="subTabRaids" onclick="switchBattleSub('raids')" class="flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition bg-white text-emerald-700 shadow-sm">
+          ⚔️ ★5伝説・メガ・シャドウレイド
+        </button>
+        <button id="subTabDmax" onclick="switchBattleSub('dmax')" class="flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition text-slate-600 hover:text-slate-900">
+          💥 ダイマックス攻略 (9DB完全準拠)
+        </button>
+      </div>
+
+      <!-- 2-A: 通常・メガ・シャドウレイド -->
+      <div id="secBattleRaids" class="space-y-4">
+        <div>
+          <div class="text-xs font-bold text-emerald-700 mb-2 flex items-center justify-between">
+            <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> 🔴 現在出現中レイド（今すぐ挑戦可能）:</span>
+            <span class="text-[11px] text-slate-500">タップで詳細対策切り替え</span>
+          </div>
+          <div id="raidBossPickerCurrent" class="grid grid-cols-1 sm:grid-cols-3 gap-2"></div>
+        </div>
+
+        <div>
+          <div class="text-xs font-bold text-purple-700 mb-2 flex items-center gap-1.5">
+            <span>🔮 次回予告・未来の予定レイド (10/27 10:00〜):</span>
+          </div>
+          <div id="raidBossPickerFuture" class="grid grid-cols-2 sm:grid-cols-4 gap-2"></div>
+        </div>
+
+        <div id="raidBossOverview" class="bg-white border border-slate-200 rounded-xl p-4 shadow-sm"></div>
+
+        <div class="bg-white border border-slate-200 rounded-xl p-4 shadow-sm">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-3 pb-3 border-b border-slate-100">
+            <div>
+              <h3 class="text-sm font-black text-slate-900" id="raidRankingTitle">対策DPSランキング TOP 10 (通常ポケモン限定)</h3>
+              <p class="text-[11px] text-slate-500">GameWith / 9DB / ポケマピ レイドシミュレーター基準</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <button id="btnToggleMega" onclick="toggleRaidFilter('mega')" class="text-xs font-bold px-3 py-1.5 rounded-lg border transition bg-slate-100 text-slate-600 border-slate-200 hover:bg-slate-200">
+                ✨ メガシンカを含める (初期OFF)
+              </button>
+              <button id="btnToggleShadow" onclick="toggleRaidFilter('shadow')" class="text-xs font-bold px-3 py-1.5 rounded-lg border transition bg-slate-100 text-slate-600 border-slate-200 hover:bg-slate-200">
+                🔥 シャドウを含める (初期OFF)
+              </button>
+            </div>
+          </div>
+          <div id="raidRankingList" class="space-y-2"></div>
+        </div>
+      </div>
+
+      <!-- 2-B: ダイマックス攻略 (9DBキャプチャ画面完全再現：ザマゼンタ修正) -->
+      <div id="secBattleDmax" class="space-y-4 hidden">
+        <div>
+          <div class="text-xs font-bold text-slate-600 mb-2 flex items-center justify-between">
+            <span>💥 マックスバトル対象を選択 (9DB最新データ):</span>
+            <span class="text-[11px] text-amber-600 font-bold">14:00〜17:00限定UMA開催中</span>
+          </div>
+          <div id="dmaxBossPicker" class="grid grid-cols-2 sm:grid-cols-4 gap-2"></div>
+        </div>
+        <div id="dmax9dbContainer"></div>
+      </div>
+
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- タブ 3: 🎫 GOパス情報 (報酬早見表＆折りたたみテーブル) -->
+    <!-- ============================================================== -->
+    <div id="tabContentGoPass" class="space-y-4 hidden">
+
+      <div class="flex gap-2 p-1 bg-slate-200/80 rounded-xl border border-slate-300">
+        <button id="goPassSubCurrent" onclick="switchGoPassSub('current')" class="flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition bg-white text-amber-700 shadow-sm">
+          🎃 現在開催中のGOパス (10月度: カイオーガ)
+        </button>
+        <button id="goPassSubFuture" onclick="switchGoPassSub('future')" class="flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition text-slate-600 hover:text-slate-900">
+          🔮 今後予定のGOパス (11月: グラードン / 12月)
+        </button>
+      </div>
+
+      <!-- 3-A: 現在開催中 (10月 GOパス) -->
+      <div id="secGoPassCurrent" class="space-y-3">
+        <div class="bg-white border border-purple-200 rounded-xl p-4 shadow-sm">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl">🎃</span>
+              <div>
+                <h2 class="text-base sm:text-lg font-black text-purple-900">GOパス：2026年10月 (ハロウィン・ナイト)</h2>
+                <div class="text-[11px] text-purple-600 font-medium">期間: 2026年10月1日(木) 10:00 〜 11月3日(火) 10:00</div>
+              </div>
+            </div>
+            <span class="text-xs bg-purple-100 text-purple-800 font-bold px-2.5 py-1 rounded-full border border-purple-300">
+              目玉: カイオーガ & キラチャーム
+            </span>
+          </div>
+          <p class="text-xs text-slate-700 leading-relaxed bg-purple-50/50 p-2.5 rounded-lg border border-purple-100">
+            無料版でもランク100到達で<strong>カイオーガ</strong>と確定遭遇！デラックス版（1,120円）では合計1,400ポケコインと、フレンド1人を即時キラフレンド化できる「キラチャーム」を獲得可能です。
+          </p>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-xl p-3.5 space-y-2 shadow-sm">
+          <h3 class="text-xs sm:text-sm font-extrabold text-amber-700 flex items-center gap-1.5">
+            <span>⭐</span> メジャーマイルストーン（期間中常時発動）
+          </h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-700">
+            <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+              <strong class="text-sky-700">ランク1到達:</strong> ポケモン交換時のアメ+1個、TL31以上はアメXL確定ドロップ
+            </div>
+            <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+              <strong class="text-sky-700">ランク25到達:</strong> 1日のギフト開封40個（デラックス: 50個）、所持上限+10個
+            </div>
+            <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+              <strong class="text-sky-700">ランク50到達:</strong> おさんぽおこうの効果時間が「30分（2倍）」に延長
+            </div>
+            <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+              <strong class="text-sky-700">ランク75到達:</strong> タマゴ孵化時のほしのすな＆獲得XPが増加
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+          <div onclick="togglePassTable()" class="p-3.5 bg-slate-50 hover:bg-slate-100 cursor-pointer flex items-center justify-between transition">
+            <div class="flex items-center gap-2">
+              <span class="text-base">📋</span>
+              <h3 class="text-xs sm:text-sm font-extrabold text-slate-900">ランク別リワード早見表 (ランク1 〜 100)</h3>
+            </div>
+            <span id="passTableToggleText" class="text-xs text-sky-600 font-bold">▼ 開く</span>
+          </div>
+
+          <div id="passTableContainer" class="hidden border-t border-slate-200 max-h-96 overflow-y-auto">
+            <table class="w-full text-xs text-left">
+              <thead class="bg-slate-100 text-slate-600 sticky top-0 border-b border-slate-200">
+                <tr>
+                  <th class="p-2.5 w-16 text-center">ランク</th>
+                  <th class="p-2.5 text-emerald-700">無料パス リワード</th>
+                  <th class="p-2.5 text-amber-700">デラックス版 追加リワード (有料)</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100 text-slate-700">
+                <tr class="hover:bg-slate-50"><td class="p-2.5 text-center font-bold text-slate-500">1</td><td>モンスターボール ×20</td><td class="text-amber-700 font-medium">モンスターボール ×50 + プレミアムパス ×1</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-2.5 text-center font-bold text-slate-500">5</td><td>ほしのすな ×1,000</td><td class="text-amber-700 font-medium">ほしのすな ×3,000 + 50ポケコイン</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-2.5 text-center font-bold text-slate-500">10</td><td>しあわせタマゴ ×1</td><td class="text-amber-700 font-medium">スーパーふかそうち ×1</td></tr>
+                <tr class="hover:bg-slate-800/30"><td class="p-2.5 text-center font-bold text-slate-500">20</td><td>わざマシンノーマル ×2</td><td class="text-amber-700 font-medium">時限ふかそうち ×1 + 100ポケコイン</td></tr>
+                <tr class="hover:bg-slate-50 bg-sky-50/50"><td class="p-2.5 text-center font-bold text-sky-700">25</td><td class="text-sky-800 font-bold">【マイルストーン】ギフト開封40個</td><td class="text-amber-700 font-bold">ギフト開封50個 + ふしぎなアメ ×5</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-2.5 text-center font-bold text-slate-500">30</td><td>ダイマックスモグリュー遭遇</td><td class="text-amber-700 font-medium">モグリューのアメXL ×5 + 100ポケコイン</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-2.5 text-center font-bold text-slate-500">40</td><td>ふしぎなアメ ×2</td><td class="text-amber-700 font-medium">プレミアムバトルパス ×2</td></tr>
+                <tr class="hover:bg-slate-50 bg-sky-50/50"><td class="p-2.5 text-center font-bold text-sky-700">50</td><td class="text-sky-800 font-bold">【マイルストーン】おこう効果30分</td><td class="text-amber-700 font-bold">おこう ×3 + 150ポケコイン</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-2.5 text-center font-bold text-slate-500">60</td><td>ほしのかけら ×1</td><td class="text-amber-700 font-medium">すごいわざマシンノーマル ×1</td></tr>
+                <tr class="hover:bg-slate-50 bg-sky-50/50"><td class="p-2.5 text-center font-bold text-sky-700">75</td><td class="text-sky-800 font-bold">【マイルストーン】孵化砂・XP増加</td><td class="text-amber-700 font-bold">ふしぎなアメXL ×3 + 150ポケコイン</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-2.5 text-center font-bold text-slate-500">85</td><td>ハイパーボール ×20</td><td class="text-amber-700 font-medium">ハイパーボール ×50 + 200ポケコイン</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-2.5 text-center font-bold text-slate-500">95</td><td>ふしぎなアメXL ×2</td><td class="text-amber-700 font-medium">ふしぎなアメXL ×5</td></tr>
+                <tr class="hover:bg-slate-50 bg-amber-50/70 font-bold"><td class="p-2.5 text-center font-black text-amber-700">100</td><td class="text-emerald-700 font-black">✨ カイオーガ (確定遭遇)</td><td class="text-amber-700 font-black">✨ キラチャーム ×1 + 250ポケコイン</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-xl p-3.5 shadow-sm">
+          <h3 class="text-xs sm:text-sm font-extrabold text-sky-700 mb-2 flex items-center gap-1.5">
+            <span>💡</span> 3サイト直伝：今週中にRank 100到達するためのデイリー目標
+          </h3>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs text-slate-700">
+            <div class="bg-slate-50 p-2 rounded-lg border border-slate-200">
+              <strong class="text-amber-700">1. 初スピン＆初捕獲</strong>
+              <p class="text-[11px] text-slate-500 mt-0.5">毎日欠かさず達成（1日合計 +150pt）</p>
+            </div>
+            <div class="bg-slate-50 p-2 rounded-lg border border-slate-200">
+              <strong class="text-amber-700">2. ハロウィンタスク3回</strong>
+              <p class="text-[11px] text-slate-500 mt-0.5">ポケストップから限定リサーチ達成（+180pt）</p>
+            </div>
+            <div class="bg-slate-50 p-2 rounded-lg border border-slate-200">
+              <strong class="text-amber-700">3. レイド/ダイマックス1戦</strong>
+              <p class="text-[11px] text-slate-500 mt-0.5">無料パスやMPを消費してバトル（+120pt）</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3-B: 今後予定のGOパス (11月・12月) -->
+      <div id="secGoPassFuture" class="space-y-3 hidden">
+        <div class="bg-white border border-teal-200 rounded-xl p-4 shadow-sm space-y-2">
+          <div class="flex items-center justify-between border-b border-slate-100 pb-2">
+            <div>
+              <span class="text-xs bg-teal-100 text-teal-800 font-bold px-2 py-0.5 rounded border border-teal-200">2026年11月予定</span>
+              <h3 class="text-base font-black text-slate-900 mt-1">GOパス：ワイルドエリア・シーズン (11/3〜12/1)</h3>
+            </div>
+            <span class="text-xs text-teal-700 font-bold">目玉: グラードン</span>
+          </div>
+          <p class="text-xs text-slate-700 leading-relaxed">
+            11/14〜15の「GOワイルドエリア2026：グローバル」連動パス。ランク100で<strong>グラードン</strong>と遭遇！デラックス版ではGOサファリボール追加支給や、キュレム合体エナジー、ザシアン/ザマゼンタ限定アバターを入手可能です。
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs pt-1">
+            <div class="bg-slate-50 p-2 rounded-lg border border-slate-200">
+              <strong class="text-teal-700">【無料注目】</strong>
+              <ul class="text-[11px] text-slate-600 list-disc list-inside mt-0.5">
+                <li>GOサファリボール先行配布 ×10個</li>
+                <li>すごいわざマシン スペシャル ×1</li>
+                <li>ランク100：グラードン遭遇</li>
+              </ul>
+            </div>
+            <div class="bg-slate-50 p-2 rounded-lg border border-slate-200">
+              <strong class="text-amber-700">【デラックス注目】</strong>
+              <ul class="text-[11px] text-slate-600 list-disc list-inside mt-0.5">
+                <li>ワイルドエリア限定サファリジャケット</li>
+                <li>ホワイト/ブラックキュレム合体エナジー ×200</li>
+                <li>マスターボール ×1個 (Rank 100到達報酬)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white border border-sky-200 rounded-xl p-4 shadow-sm space-y-2">
+          <div class="flex items-center justify-between border-b border-slate-100 pb-2">
+            <div>
+              <span class="text-xs bg-sky-100 text-sky-800 font-bold px-2 py-0.5 rounded border border-sky-200">2026年12月予定</span>
+              <h3 class="text-base font-black text-slate-900 mt-1">GOパス：ウィンターホリデー＆オールスター (12/1〜12/31)</h3>
+            </div>
+            <span class="text-xs text-sky-700 font-bold">事前予告</span>
+          </div>
+          <p class="text-xs text-slate-700 leading-relaxed">
+            年末の総決算オールスターコミュデイおよびホリデーイベント連動。ギフト上限拡大やふかそうち大量配布など、年末の育成・厳選を加速させるボーナスが満載です。
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
   <script>
-    let allEvents = [];
-    let currentFilter = 'all';
+    const getPokeImg = (dex) => `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${dex}.png`;
 
-    // 日付生成
-    const today = new Date();
-    const currentDay = today.getDate();
+    let NEWS_ITEMS = [
+      { id: "news-uma-day", text: "本日14:00〜17:00「ダイマックスUMAマックスバトルデイ」開催！無料MP800受取を忘れずに", targetId: "ev-dmax-uma-day" },
+      { id: "news-mega-char", text: "メガリザードンY＆Xレイド出現中！Yはいわ2.56倍二重弱点でソロ・ペア討伐可能", targetId: "ev-palkia-char" },
+      { id: "news-landorus", text: "シャドウランドロス(化身)★5レイドは土日だけでなく平日も連日出現中！二重弱点氷で攻略推奨", targetId: "ev-shadow-landorus" },
+      { id: "news-twitch", text: "10/25(日) ポケモンナイトアウト公式Twitch配信視聴で限定モルペコ＆アバター配布", targetId: "ev-twitch" },
+      { id: "news-halloween-p1", text: "10/27(火)〜 ハロウィン2026 パート1開催！新衣装ピカチュウ・モルペコ登場", targetId: "ev-halloween-p1" },
+      { id: "news-wild-area", text: "11/14〜15「GOワイルドエリア2026」詳細発表！PL40〜50の『つよいポケモン』とサファリボール初解禁", targetId: "ev-wildarea-2026" }
+    ];
 
-    function setupCalendar() {
-      const header = document.getElementById('calHeader');
-      header.innerHTML = '';
-      for (let day = 1; day <= 31; day++) {
-        const span = document.createElement('span');
-        span.textContent = day;
-        if (day === currentDay) span.className = 'today-mark';
-        header.appendChild(span);
+    let ALL_EVENTS = [];
+    let ARCHIVE_EVENTS = [];
+
+    const RAID_DATA = {
+      "palkia-origin": {
+        isCurrent: true,
+        name: "パルキア (オリジンフォルム)",
+        status: "〜10/27(火) 10:00まで [現在出現中]",
+        tier: "★5 伝説レイド",
+        dex: 484,
+        cpNormal: "2280",
+        cpBoost: "2850 (雨・強風)",
+        weaknesses: [
+          { name: "ドラゴン", mult: "1.6倍", color: "bg-indigo-600" },
+          { name: "フェアリー", mult: "1.6倍", color: "bg-pink-600" }
+        ],
+        minPlayers: "2〜3名",
+        tactics: "特別技『あくうせつだん』が高火力。通常枠ではディアルガ(オリジン)がドラゴン技等倍受けで最も安定します。",
+        counters: [
+          { name: "ディアルガ (オリジン)", dex: 483, tag: "normal", dps: 43.5, tdo: 980, fast: "りゅうのいぶき", charge: "ときのほうこう*" },
+          { name: "パルキア (オリジン)", dex: 484, tag: "normal", dps: 42.8, tdo: 910, fast: "りゅうのいぶき", charge: "あくうせつだん*" },
+          { name: "ザシアン (れきせん)", dex: 888, tag: "normal", dps: 41.2, tdo: 920, fast: "でんこうせっか", charge: "じゃれつく" },
+          { name: "ゼルネアス", dex: 716, tag: "normal", dps: 40.5, tdo: 910, fast: "ジオコントロール", charge: "ムーンフォース" },
+          { name: "キュレム", dex: 646, tag: "normal", dps: 39.8, tdo: 840, fast: "りゅうのいぶき", charge: "こごえるせかい" },
+          { name: "ガブリアス", dex: 445, tag: "normal", dps: 39.2, tdo: 870, fast: "ドラゴンテール", charge: "げきりん" },
+          { name: "オノノクス", dex: 612, tag: "normal", dps: 38.6, tdo: 760, fast: "ドラゴンテール", charge: "ワイドブレイカー" },
+          { name: "ボーマンダ", dex: 373, tag: "normal", dps: 38.1, tdo: 780, fast: "ドラゴンテール", charge: "りゅうせいぐん" },
+          { name: "カイリュー", dex: 149, tag: "normal", dps: 37.8, tdo: 810, fast: "ドラゴンテール", charge: "ドラゴンクロー" },
+          { name: "トゲキッス", dex: 468, tag: "normal", dps: 36.5, tdo: 850, fast: "あまえる", charge: "マジカルシャイン" },
+          { name: "メガレックウザ", dex: 384, tag: "mega", dps: 56.4, tdo: 1250, fast: "ドラゴンテール", charge: "ワイドブレイカー" },
+          { name: "メガサーナイト", dex: 282, tag: "mega", dps: 51.2, tdo: 980, fast: "あまえる", charge: "マジカルシャイン" },
+          { name: "シャドウカイリュー", dex: 149, tag: "shadow", dps: 49.5, tdo: 830, fast: "ドラゴンテール", charge: "ドラゴンクロー" }
+        ]
+      },
+      "mega-charizard-y": {
+        isCurrent: true,
+        name: "メガリザードンY / メガリザードンX",
+        status: "〜10/27(火) 10:00まで [現在出現中]",
+        tier: "メガレイド (★4)",
+        dex: 6,
+        cpNormal: "1651",
+        cpBoost: "2064 (晴天・強風)",
+        weaknesses: [
+          { name: "いわ (Y 二重弱点)", mult: "2.56倍", color: "bg-amber-600 font-extrabold" },
+          { name: "みず / でんき (Y)", mult: "1.6倍", color: "bg-blue-600" },
+          { name: "じめん / いわ / 竜 (X)", mult: "1.6倍", color: "bg-orange-600" }
+        ],
+        minPlayers: "1〜2名（いわ統一でソロ・ペア撃破可能！）",
+        tactics: "メガリザードンYは『いわタイプが2.56倍の二重弱点』！ラムパルド、ドサイドン、バンギラス等のいわ統一パーティを組めばソロまたは2人で高速周回可能です。",
+        counters: [
+          { name: "ラムパルド", dex: 409, tag: "normal", dps: 52.8, tdo: 740, fast: "うちおとす", charge: "いわなだれ" },
+          { name: "ドサイドン", dex: 464, tag: "normal", dps: 48.6, tdo: 1040, fast: "うちおとす", charge: "がんせきほう*" },
+          { name: "テラキオン", dex: 639, tag: "normal", dps: 48.2, tdo: 980, fast: "うちおとす", charge: "いわなだれ" },
+          { name: "ガチグマ", dex: 901, tag: "normal", dps: 45.1, tdo: 910, fast: "いわくだき", charge: "いわなだれ" },
+          { name: "ギガルガス", dex: 526, tag: "normal", dps: 44.5, tdo: 890, fast: "うちおとす", charge: "メテオビーム*" },
+          { name: "バンギラス", dex: 248, tag: "normal", dps: 44.0, tdo: 950, fast: "うちおとす*", charge: "ストーンエッジ" },
+          { name: "カイオーガ", dex: 382, tag: "normal", dps: 42.1, tdo: 980, fast: "たきのぼり", charge: "こんげんのはどう*" },
+          { name: "ツンデツンデ", dex: 805, tag: "normal", dps: 41.5, tdo: 880, fast: "いわおとし", charge: "いわなだれ" },
+          { name: "プテラ", dex: 142, tag: "normal", dps: 40.8, tdo: 720, fast: "いわおとし", charge: "いわなだれ" },
+          { name: "ゴローニャ", dex: 76, tag: "normal", dps: 39.5, tdo: 790, fast: "いわおとし", charge: "ストーンエッジ" },
+          { name: "メガディアンシー", dex: 719, tag: "mega", dps: 64.5, tdo: 1320, fast: "いわおとし", charge: "いわなだれ" },
+          { name: "メガバンギラス", dex: 248, tag: "mega", dps: 59.2, tdo: 1380, fast: "うちおとす*", charge: "ストーンエッジ" },
+          { name: "シャドウラムパルド", dex: 409, tag: "shadow", dps: 63.8, tdo: 760, fast: "うちおとす", charge: "いわなだれ" },
+          { name: "シャドウドサイドン", dex: 464, tag: "shadow", dps: 58.4, tdo: 1060, fast: "うちおとす", charge: "がんせきほう*" }
+        ]
+      },
+      "shadow-landorus": {
+        isCurrent: true,
+        name: "シャドウランドロス (化身フォルム)",
+        status: "平日・休日問わず連日常設中！(〜11/3)",
+        tier: "★5 シャドウ伝説レイド",
+        dex: 645,
+        cpNormal: "2050",
+        cpBoost: "2563 (晴天・強風)",
+        weaknesses: [
+          { name: "こおり", mult: "2.56倍 (二重弱点)", color: "bg-sky-600 font-extrabold" },
+          { name: "みず", mult: "1.6倍", color: "bg-blue-600" }
+        ],
+        minPlayers: "2〜3名（二重弱点こおり統一＋暴走時ライトクリスタル8個投入）",
+        tactics: "土日限定ではなく平日も含め連日常設されています！こおり技が2.56倍の二重弱点。通常枠ではマンムー、セグレイブ、ガラルヒヒダルマを揃えるだけで少人数討伐可能です。",
+        counters: [
+          { name: "マンムー", dex: 473, tag: "normal", dps: 48.5, tdo: 960, fast: "こなゆき", charge: "ゆきなだれ" },
+          { name: "セグレイブ", dex: 998, tag: "normal", dps: 47.9, tdo: 920, fast: "こおりのつぶて", charge: "ゆきなだれ" },
+          { name: "ガラルヒヒダルマ", dex: 555, tag: "normal", dps: 47.2, tdo: 710, fast: "こおりのキバ", charge: "ゆきなだれ" },
+          { name: "グレイシア", dex: 471, tag: "normal", dps: 44.8, tdo: 810, fast: "こおりのつぶて", charge: "ゆきなだれ" },
+          { name: "ラプラス", dex: 131, tag: "normal", dps: 43.0, tdo: 790, fast: "こおりのいぶき", charge: "れいとうビーム" },
+          { name: "カイオーガ", dex: 382, tag: "normal", dps: 42.5, tdo: 1020, fast: "たきのぼり", charge: "こんげんのはどう*" },
+          { name: "パルキア", dex: 484, tag: "normal", dps: 41.8, tdo: 880, fast: "たきのぼり", charge: "ハイドロポンプ" },
+          { name: "アローラキュウコン", dex: 38, tag: "normal", dps: 40.2, tdo: 760, fast: "こなゆき", charge: "ウェザーボール(氷)" },
+          { name: "ユキノオー", dex: 460, tag: "normal", dps: 39.1, tdo: 740, fast: "こなゆき", charge: "ウェザーボール(氷)" },
+          { name: "ゲッコウガ", dex: 658, tag: "normal", dps: 38.9, tdo: 690, fast: "みずしゅりけん", charge: "ハイドロカノン*" },
+          { name: "メガレックウザ", dex: 384, tag: "mega", dps: 55.4, tdo: 1190, fast: "エアスラッシュ", charge: "ふぶき" },
+          { name: "メガユキノオー", dex: 460, tag: "mega", dps: 51.2, tdo: 1050, fast: "こなゆき", charge: "ウェザーボール(氷)" },
+          { name: "シャドウマンムー", dex: 473, tag: "shadow", dps: 58.2, tdo: 940, fast: "こなゆき", charge: "ゆきなだれ" }
+        ]
+      },
+      "giratina-origin": {
+        isCurrent: false,
+        name: "ギラティナ (オリジンフォルム)",
+        status: "10/27(火) 10:00 〜 11/3(火) 10:00 [次回予告]",
+        tier: "★5 伝説レイド",
+        dex: 487,
+        cpNormal: "2105",
+        cpBoost: "2631 (霧・強風)",
+        weaknesses: [
+          { name: "あく", mult: "1.6倍", color: "bg-stone-700" },
+          { name: "ゴースト", mult: "1.6倍", color: "bg-purple-700" },
+          { name: "ドラゴン", mult: "1.6倍", color: "bg-indigo-600" },
+          { name: "こおり", mult: "1.6倍", color: "bg-sky-600" },
+          { name: "フェアリー", mult: "1.6倍", color: "bg-pink-600" }
+        ],
+        minPlayers: "2〜3名",
+        tactics: "あくタイプであれば特別技シャドーダイブを2重耐性で無効化可能。通常枠ではパルキア(オリジン)とサザンドラがDPS・TDOともに最高峰です。",
+        counters: [
+          { name: "パルキア (オリジン)", dex: 484, tag: "normal", dps: 46.8, tdo: 980, fast: "りゅうのいぶき", charge: "あくうせつだん*" },
+          { name: "サザンドラ", dex: 635, tag: "normal", dps: 44.2, tdo: 920, fast: "かみつく", charge: "ぶんまわす*" },
+          { name: "ディアルガ (オリジン)", dex: 483, tag: "normal", dps: 43.9, tdo: 990, fast: "りゅうのいぶき", charge: "ときのほうこう*" },
+          { name: "オノノクス", dex: 612, tag: "normal", dps: 43.1, tdo: 840, fast: "ドラゴンテール", charge: "ワイドブレイカー*" },
+          { name: "ガブリアス", dex: 445, tag: "normal", dps: 42.5, tdo: 890, fast: "ドラゴンテール", charge: "げきりん" },
+          { name: "ボーマンダ", dex: 373, tag: "normal", dps: 42.0, tdo: 810, fast: "ドラゴンテール", charge: "りゅうせいぐん" },
+          { name: "バンギラス", dex: 248, tag: "normal", dps: 41.2, tdo: 910, fast: "かみつく", charge: "ぶんまわす" },
+          { name: "カイリュー", dex: 149, tag: "normal", dps: 40.8, tdo: 830, fast: "ドラゴンテール", charge: "ドラゴンクロー" },
+          { name: "トゲキッス", dex: 468, tag: "normal", dps: 39.5, tdo: 880, fast: "あまえる", charge: "マジカルシャイン" },
+          { name: "シャンデラ", dex: 609, tag: "normal", dps: 39.2, tdo: 760, fast: "たたりめ", charge: "シャドーボール" },
+          { name: "メガレックウザ", dex: 384, tag: "mega", dps: 56.2, tdo: 1280, fast: "ドラゴンテール", charge: "ワイドブレイカー" },
+          { name: "メガバンギラス", dex: 248, tag: "mega", dps: 52.4, tdo: 1310, fast: "かみつく", charge: "ぶんまわす" },
+          { name: "メガゲンガー", dex: 94, tag: "mega", dps: 51.8, tdo: 890, fast: "したでなめる*", charge: "シャドーボール" },
+          { name: "シャドウボーマンダ", dex: 373, tag: "shadow", dps: 50.1, tdo: 820, fast: "ドラゴンテール", charge: "りゅうせいぐん" },
+          { name: "シャドウサザンドラ", dex: 635, tag: "shadow", dps: 49.8, tdo: 880, fast: "かみつく", charge: "ぶんまわす*" }
+        ]
+      },
+      "mega-banette": {
+        isCurrent: false,
+        name: "メガジュペッタ",
+        status: "10/27(火) 10:00 〜 11/3(火) 10:00 [次回予告]",
+        tier: "メガレイド (★4)",
+        dex: 354,
+        cpNormal: "1313",
+        cpBoost: "1642 (霧)",
+        weaknesses: [
+          { name: "あく", mult: "1.6倍", color: "bg-stone-700" },
+          { name: "ゴースト", mult: "1.6倍", color: "bg-purple-700" }
+        ],
+        minPlayers: "1〜2名（あく統一でソロ・ペア討伐可能）",
+        tactics: "単ゴーストタイプのため、あくタイプ（サザンドラ、バンギラス、ダークライ）で固めることで被ダメージを抑えつつ高速周回可能です。",
+        counters: [
+          { name: "サザンドラ", dex: 635, tag: "normal", dps: 47.5, tdo: 960, fast: "かみつく", charge: "ぶんまわす*" },
+          { name: "ダークライ", dex: 491, tag: "normal", dps: 46.8, tdo: 890, fast: "バークアウト", charge: "シャドーボール" },
+          { name: "バンギラス", dex: 248, tag: "normal", dps: 45.2, tdo: 1020, fast: "かみつく", charge: "ぶんまわす" },
+          { name: "シャンデラ", dex: 609, tag: "normal", dps: 44.1, tdo: 780, fast: "たたりめ", charge: "シャドーボール" },
+          { name: "イベルタル", dex: 717, tag: "normal", dps: 43.8, tdo: 940, fast: "バークアウト", charge: "あくのはどう" },
+          { name: "マニューラ", dex: 461, tag: "normal", dps: 43.0, tdo: 710, fast: "バークアウト", charge: "イカサマ" },
+          { name: "メガバンギラス", dex: 248, tag: "mega", dps: 58.5, tdo: 1390, fast: "かみつく", charge: "ぶんまわす" },
+          { name: "メガゲンガー", dex: 94, tag: "mega", dps: 56.2, tdo: 880, fast: "したでなめる*", charge: "シャドーボール" },
+          { name: "シャドウバンギラス", dex: 248, tag: "shadow", dps: 54.1, tdo: 1040, fast: "かみつく", charge: "ぶんまわす" }
+        ]
       }
-    }
+    };
 
-    async function loadData() {
+    const DMAX_9DB_DATA = {
+      "dmax-uxie": {
+        name: "ユクシー",
+        tier: "★5",
+        dateInfo: "2026/10/24(土) 14:00 〜 17:00",
+        dex: 480,
+        cpPL20: "1370 - 1442",
+        moves: [
+          { name: "みらいよち", type: "エスパー", color: "bg-pink-600" },
+          { name: "スピードスター", type: "ノーマル", color: "bg-slate-500" },
+          { name: "かみなり", type: "でんき", color: "bg-amber-500" }
+        ],
+        weaknesses: [
+          { name: "むし", color: "bg-lime-600" },
+          { name: "ゴースト", color: "bg-purple-700" },
+          { name: "あく", color: "bg-stone-700" }
+        ],
+        resistances: [
+          { name: "かくとう", color: "bg-orange-600" },
+          { name: "エスパー", color: "bg-pink-600" }
+        ],
+        attackers: [
+          { rank: 1, name: "キョダイマックス ゲンガー", dex: 94, fast: "したでなめる*", charge: "シャドーボール" },
+          { rank: 2, name: "オーロンゲ", dex: 861, fast: "ふいうち", charge: "イカサマ" },
+          { rank: 3, name: "ゲンガー", dex: 94, fast: "したでなめる*", charge: "シャドーボール" },
+          { rank: 4, name: "ウーラオス (いちげき)", dex: 892, fast: "ふいうち", charge: "しっぺがえし" }
+        ],
+        tanks: [
+          { rank: 1, name: "ザマゼンタ (たてのおう)", dex: 889, fast: "メタルクロー", charge: "きょじゅうだん*" },
+          { rank: 2, name: "ハピナス", dex: 242, fast: "はたく", charge: "はかいこうせん" },
+          { rank: 3, name: "レジスチル", dex: 379, fast: "メタルクロー", charge: "ラスターカノン" },
+          { rank: 4, name: "レジロック", dex: 377, fast: "ロックオン", charge: "ストーンエッジ" }
+        ],
+        tankNote: "💡 <strong>9DB準拠 タンク1位のザマゼンタ(たてのおう)について:</strong> キャプチャ通り、圧倒的な防御種族値を誇るザマゼンタがタンク筆頭です。0.5秒技『メタルクロー』による超高速メーターチャージと、専用技『きょじゅうだん*』でゲージ回収＆耐久を最高水準で両立します。",
+        routine: [
+          {
+            step: 1,
+            title: "タンク役で通常技を連打しマックスメーターをためる。",
+            details: [
+              "⚡ エネルギーアイコンは必ず取る",
+              "通常技は0.5秒技を使用する",
+              "スペシャル技は使用しない"
+            ]
+          },
+          {
+            step: 2,
+            title: "マックスメーターがたまったらアタッカーに切り替えてマックス技を3回打つ。",
+            details: [
+              "※ヒーラーの場合は、リカバリーでの回復やウォールでのヘイト集めを優先"
+            ]
+          },
+          {
+            step: 3,
+            title: "再度タンク役に戻し通常技を連打する。",
+            details: [
+              "ボスの残りHPが僅かな場合はアタッカーのまま攻撃してもOK"
+            ]
+          }
+        ]
+      },
+      "dmax-mesprit": {
+        name: "エムリット (欧州限定・招待可)",
+        tier: "★5",
+        dateInfo: "2026/10/24(土) 14:00 〜 17:00",
+        dex: 481,
+        cpPL20: "1669 - 1747",
+        moves: [
+          { name: "みらいよち", type: "エスパー", color: "bg-pink-600" },
+          { name: "ふぶき", type: "こおり", color: "bg-sky-600" },
+          { name: "スピードスター", type: "ノーマル", color: "bg-slate-500" }
+        ],
+        weaknesses: [
+          { name: "むし", color: "bg-lime-600" },
+          { name: "ゴースト", color: "bg-purple-700" },
+          { name: "あく", color: "bg-stone-700" }
+        ],
+        resistances: [
+          { name: "かくとう", color: "bg-orange-600" },
+          { name: "エスパー", color: "bg-pink-600" }
+        ],
+        attackers: [
+          { rank: 1, name: "キョダイマックス ゲンガー", dex: 94, fast: "したでなめる*", charge: "シャドーボール" },
+          { rank: 2, name: "オーロンゲ", dex: 861, fast: "ふいうち", charge: "イカサマ" },
+          { rank: 3, name: "ゲンガー", dex: 94, fast: "したでなめる*", charge: "シャドーボール" },
+          { rank: 4, name: "ウーラオス (いちげき)", dex: 892, fast: "ふいうち", charge: "しっぺがえし" }
+        ],
+        tanks: [
+          { rank: 1, name: "ザマゼンタ (たてのおう)", dex: 889, fast: "メタルクロー", charge: "きょじゅうだん*" },
+          { rank: 2, name: "レジスチル", dex: 379, fast: "メタルクロー", charge: "ラスターカノン" },
+          { rank: 3, name: "ハピナス", dex: 242, fast: "はたく", charge: "はかいこうせん" },
+          { rank: 4, name: "レジロック", dex: 377, fast: "ロックオン", charge: "ストーンエッジ" }
+        ],
+        tankNote: "💡 ふぶき被弾を警戒し、こおり半減耐性を持つザマゼンタ(たてのおう)やレジスチルでメーターを回収してください。",
+        routine: [
+          { step: 1, title: "こおり耐性タンクで0.5秒技を連打しエネルギー回収。", details: ["エネルギーアイコン回収必須"] },
+          { step: 2, title: "メーター満タンでアタッカーに交代しダイホロウ3連発。", details: ["ゲンガーの火力で一気に削る"] },
+          { step: 3, title: "再度タンクに戻し勝利までループ。", details: ["ふぶき直前はダイウォール推奨"] }
+        ]
+      },
+      "dmax-azelf": {
+        name: "アグノム (米大陸限定・招待可)",
+        tier: "★5",
+        dateInfo: "2026/10/24(土) 14:00 〜 17:00",
+        dex: 482,
+        cpPL20: "1766 - 1836",
+        moves: [
+          { name: "みらいよち", type: "エスパー", color: "bg-pink-600" },
+          { name: "きあいだま", type: "かくとう", color: "bg-orange-600" },
+          { name: "だいもんじ", type: "ほのお", color: "bg-red-600" }
+        ],
+        weaknesses: [
+          { name: "むし", color: "bg-lime-600" },
+          { name: "ゴースト", color: "bg-purple-700" },
+          { name: "あく", color: "bg-stone-700" }
+        ],
+        resistances: [
+          { name: "かくとう", color: "bg-orange-600" },
+          { name: "エスパー", color: "bg-pink-600" }
+        ],
+        attackers: [
+          { rank: 1, name: "キョダイマックス ゲンガー", dex: 94, fast: "したでなめる*", charge: "シャドーボール" },
+          { rank: 2, name: "ゲンガー", dex: 94, fast: "したでなめる*", charge: "シャドーボール" },
+          { rank: 3, name: "オーロンゲ", dex: 861, fast: "ふいうち", charge: "イカサマ" },
+          { rank: 4, name: "ウーラオス (いちげき)", dex: 892, fast: "ふいうち", charge: "しっぺがえし" }
+        ],
+        tanks: [
+          { rank: 1, name: "ゲンガー (格闘3重耐性)", dex: 94, fast: "したでなめる*", charge: "シャドーボール" },
+          { rank: 2, name: "ザマゼンタ (たてのおう)", dex: 889, fast: "メタルクロー", charge: "きょじゅうだん*" },
+          { rank: 3, name: "ハピナス", dex: 242, fast: "はたく", charge: "はかいこうせん" },
+          { rank: 4, name: "ヨクバリス", dex: 820, fast: "たいあたり", charge: "のしかかり" }
+        ],
+        tankNote: "💡 アグノムの即死級「きあいだま」は、ゲンガーが格闘3重耐性（0.244倍）で完全に受け流せます。",
+        routine: [
+          { step: 1, title: "ゲンガー先発で通常技連打（きあいだま無効化）。", details: ["0.5秒技で最速回収"] },
+          { step: 2, title: "メーター満タンでダイホロウ3連打。", details: ["防御が低いため早期決着可能"] },
+          { step: 3, title: "HP僅かならそのまま押し切る。", details: ["交代ロスなし"] }
+        ]
+      },
+      "dmax-gmax-gengar": {
+        name: "キョダイマックス ゲンガー",
+        tier: "★6 超難関",
+        dateInfo: "11/1(日) 〜 11/5(木) ハロウィン本番",
+        dex: 94,
+        cpPL20: "1644 - 1714",
+        moves: [
+          { name: "シャドーボール", type: "ゴースト", color: "bg-purple-700" },
+          { name: "ヘドロばくだん", type: "どく", color: "bg-fuchsia-700" },
+          { name: "きあいだま", type: "かくとう", color: "bg-orange-600" }
+        ],
+        weaknesses: [
+          { name: "あく", color: "bg-stone-700" },
+          { name: "ゴースト", color: "bg-purple-700" },
+          { name: "エスパー", color: "bg-pink-600" },
+          { name: "じめん", color: "bg-amber-700" }
+        ],
+        resistances: [
+          { name: "ノーマル", color: "bg-slate-500" },
+          { name: "かくとう", color: "bg-orange-600" },
+          { name: "どく", color: "bg-fuchsia-700" },
+          { name: "むし", color: "bg-lime-600" }
+        ],
+        attackers: [
+          { rank: 1, name: "ドリュウズ", dex: 530, fast: "どろかけ", charge: "ドリルライナー" },
+          { rank: 2, name: "オーロンゲ", dex: 861, fast: "ふいうち", charge: "イカサマ" },
+          { rank: 3, name: "ウーラオス (いちげき)", dex: 892, fast: "ふいうち", charge: "しっぺがえし" },
+          { rank: 4, name: "グラードン", dex: 383, fast: "マッドショット", charge: "だんがいのつるぎ*" }
+        ],
+        tanks: [
+          { rank: 1, name: "ハピナス", dex: 242, fast: "はたく", charge: "はかいこうせん" },
+          { rank: 2, name: "ヨクバリス (ゴースト無効)", dex: 820, fast: "たいあたり", charge: "のしかかり" },
+          { rank: 3, name: "ザマゼンタ (たてのおう)", dex: 889, fast: "メタルクロー", charge: "きょじゅうだん*" },
+          { rank: 4, name: "カメックス (ヒーラー)", dex: 9, fast: "みずでっぽう", charge: "ハイドロカノン*" }
+        ],
+        tankNote: "💡 ゴースト無効のヨクバリスや高耐久ハピナスで安全にメーターを回収し、ドリュウズのダイアースで大ダメージを与えます。",
+        routine: [
+          { step: 1, title: "ゴースト無効役で通常技を連打。", details: ["エネルギーアイコンを最優先で拾う"] },
+          { step: 2, title: "ドリュウズに交代しダイアース3連発。", details: ["ヒーラーはダイリカバリー支援"] },
+          { step: 3, title: "タンクに戻しメーター回収を徹底。", details: ["★6は長期戦のため役割分担徹底"] }
+        ]
+      }
+    };
+
+    let currentGanttMonth = 10;
+    let currentCategoryFilter = "all";
+    let hiddenEventIds = new Set();
+    let readNewsIds = new Set();
+    
+    let activeRaidKey = "palkia-origin"; 
+    let activeDmax9dbKey = "dmax-uxie";
+
+    let filterMega = false;
+    let filterShadow = false;
+
+    function initStorage() {
       try {
-        const res = await fetch('data.json?t=' + Date.now());
-        const data = await res.json();
-        
-        if (data.updated_at) {
-          document.getElementById('updateTime').textContent = `更新: ${data.updated_at}`;
-        }
+        const savedHidden = localStorage.getItem("pogo_hidden_events_v7");
+        if (savedHidden) hiddenEventIds = new Set(JSON.parse(savedHidden));
 
-        const newsList = document.getElementById('newsList');
-        newsList.innerHTML = '';
-        if (data.latest_news) {
-          data.latest_news.forEach(news => {
-            newsList.innerHTML += `<li class="news-item">${news.title}</li>`;
-          });
-        }
-
-        allEvents = data.events || [];
-        renderCalendar();
-        renderCards();
-
-        // 当日の位置へ自動スクロール
-        setTimeout(() => {
-          const calSec = document.getElementById('calendarSection');
-          const scrollTarget = (currentDay / 31) * 900 - (calSec.clientWidth / 2);
-          calSec.scrollLeft = scrollTarget > 0 ? scrollTarget : 0;
-        }, 100);
-
-      } catch (err) {
-        console.error(err);
-        document.getElementById('eventCards').innerHTML = '<div style="text-align:center; padding:20px;">データ読み込みエラー</div>';
+        const savedNews = localStorage.getItem("pogo_read_news_v7");
+        if (savedNews) readNewsIds = new Set(JSON.parse(savedNews));
+      } catch (e) {
+        console.error("Storage load error", e);
       }
     }
 
-    function renderCalendar() {
-      const container = document.getElementById('calBars');
-      container.innerHTML = '';
-      
-      allEvents.forEach(ev => {
-        const track = document.createElement('div');
-        track.className = 'cal-bar-track';
-        
-        const bar = document.createElement('div');
-        bar.className = `cal-bar ${ev.barClass || 'bar-main'}`;
-        
-        const start = Math.max(1, ev.startDay || 1);
-        const end = Math.min(31, ev.endDay || start);
-        const duration = (end - start + 1);
+    function saveHiddenEvents() {
+      localStorage.setItem("pogo_hidden_events_v7", JSON.stringify([...hiddenEventIds]));
+      updateGlobalHiddenUI();
+    }
 
-        bar.style.left = `${((start - 1) / 31) * 100}%`;
-        bar.style.width = `${(duration / 31) * 100}%`;
-        bar.textContent = ev.title;
+    function saveReadNews() {
+      localStorage.setItem("pogo_read_news_v7", JSON.stringify([...readNewsIds]));
+    }
 
-        track.appendChild(bar);
-        container.appendChild(track);
+    function updateGlobalHiddenUI() {
+      const btn = document.getElementById("globalRestoreBtn");
+      const count = document.getElementById("globalHiddenCount");
+      if (hiddenEventIds.size > 0) {
+        btn.classList.remove("hidden");
+        count.textContent = hiddenEventIds.size;
+      } else {
+        btn.classList.add("hidden");
+      }
+    }
+
+    function hideEvent(id, e) {
+      if (e) e.stopPropagation();
+      hiddenEventIds.add(id);
+      saveHiddenEvents();
+      renderGanttTimeline();
+      renderEventAccordions();
+    }
+
+    function restoreAllHiddenEvents() {
+      hiddenEventIds.clear();
+      saveHiddenEvents();
+      renderGanttTimeline();
+      renderEventAccordions();
+    }
+
+    function markNewsRead(id) {
+      readNewsIds.add(id);
+      saveReadNews();
+      renderNewsSection();
+    }
+
+    function resetReadNews() {
+      readNewsIds.clear();
+      saveReadNews();
+      renderNewsSection();
+    }
+
+    function switchMainTab(tab) {
+      const isSched = tab === "schedule";
+      const isBattles = tab === "battles";
+      const isGoPass = tab === "gopass";
+
+      document.getElementById("tabNavSchedule").className = isSched
+        ? "flex-1 py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1.5 bg-white text-sky-700 shadow-sm"
+        : "flex-1 py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1.5 text-slate-600 hover:text-slate-900";
+
+      document.getElementById("tabNavBattles").className = isBattles
+        ? "flex-1 py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1.5 bg-white text-emerald-700 shadow-sm"
+        : "flex-1 py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1.5 text-slate-600 hover:text-slate-900";
+
+      document.getElementById("tabNavGoPass").className = isGoPass
+        ? "flex-1 py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1.5 bg-white text-amber-700 shadow-sm"
+        : "flex-1 py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1.5 text-slate-600 hover:text-slate-900";
+
+      document.getElementById("tabContentSchedule").classList.toggle("hidden", !isSched);
+      document.getElementById("tabContentBattles").classList.toggle("hidden", !isBattles);
+      document.getElementById("tabContentGoPass").classList.toggle("hidden", !isGoPass);
+
+      if (isBattles) renderRaidSection();
+    }
+
+    function switchBattleSub(sub) {
+      const isRaid = sub === "raids";
+      document.getElementById("subTabRaids").className = isRaid
+        ? "flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition bg-white text-emerald-700 shadow-sm"
+        : "flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition text-slate-600 hover:text-slate-900";
+
+      document.getElementById("subTabDmax").className = !isRaid
+        ? "flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition bg-white text-purple-700 shadow-sm"
+        : "flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition text-slate-600 hover:text-slate-900";
+
+      document.getElementById("secBattleRaids").classList.toggle("hidden", !isRaid);
+      document.getElementById("secBattleDmax").classList.toggle("hidden", isRaid);
+
+      if (isRaid) renderRaidSection();
+      else renderDmax9dbSection();
+    }
+
+    function switchGoPassSub(sub) {
+      const isCurr = sub === "current";
+      document.getElementById("goPassSubCurrent").className = isCurr
+        ? "flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition bg-white text-amber-700 shadow-sm"
+        : "flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition text-slate-600 hover:text-slate-900";
+
+      document.getElementById("goPassSubFuture").className = !isCurr
+        ? "flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition bg-white text-teal-700 shadow-sm"
+        : "flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition text-slate-600 hover:text-slate-900";
+
+      document.getElementById("secGoPassCurrent").classList.toggle("hidden", !isCurr);
+      document.getElementById("secGoPassFuture").classList.toggle("hidden", isCurr);
+    }
+
+    function togglePassTable() {
+      const container = document.getElementById("passTableContainer");
+      const text = document.getElementById("passTableToggleText");
+      if (container.classList.contains("hidden")) {
+        container.classList.remove("hidden");
+        text.textContent = "▲ 閉じる";
+      } else {
+        container.classList.add("hidden");
+        text.textContent = "▼ 開く";
+      }
+    }
+
+    function renderNewsSection() {
+      const container = document.getElementById("newsItemsContainer");
+      container.innerHTML = "";
+
+      const visibleNews = NEWS_ITEMS.filter(n => !readNewsIds.has(n.id));
+
+      if (visibleNews.length === 0) {
+        container.innerHTML = `<div class="text-slate-400 py-2">すべてのニュースを既読にしました。</div>`;
+        return;
+      }
+
+      visibleNews.forEach(n => {
+        const item = document.createElement("div");
+        item.className = "flex items-center justify-between gap-2 bg-slate-50 p-2 rounded-lg border border-slate-200";
+        item.innerHTML = `
+          <div class="cursor-pointer hover:text-sky-700 transition flex items-center gap-1.5 flex-1" onclick="scrollToEventCard('${n.targetId}')">
+            <span class="text-sky-600 font-bold">●</span>
+            <span class="line-clamp-1">${n.text}</span>
+          </div>
+          <button onclick="markNewsRead('${n.id}')" class="text-[11px] bg-slate-200 hover:bg-emerald-600 hover:text-white text-slate-700 px-2 py-0.5 rounded transition flex-shrink-0 font-bold">
+            ✓ 既読
+          </button>
+        `;
+        container.appendChild(item);
       });
     }
 
-    function renderCards() {
-      const container = document.getElementById('eventCards');
-      container.innerHTML = '';
+    function changeGanttMonth(m) {
+      currentGanttMonth = m;
+      [10, 11, 12].forEach(num => {
+        const btn = document.getElementById(`monthBtn${num}`);
+        if (num === m) {
+          btn.className = "text-xs px-3 py-1 rounded-md font-bold transition bg-sky-600 text-white shadow-sm";
+        } else {
+          btn.className = "text-xs px-3 py-1 rounded-md font-bold transition text-slate-600 hover:text-slate-900";
+        }
+      });
+      renderGanttTimeline();
+    }
 
-      const filtered = currentFilter === 'all' 
-        ? allEvents : allEvents.filter(ev => ev.category === currentFilter);
+    function filterTimelineCategory(cat) {
+      currentCategoryFilter = cat;
+      const cats = ["all", "main", "raid", "dmax", "collab", "gbl"];
+      cats.forEach(c => {
+        const btn = document.getElementById(`catBtn-${c}`);
+        if (c === cat) {
+          btn.className = "text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-sky-600 text-white shadow-sm";
+        } else {
+          btn.className = "text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-100 text-slate-600 hover:bg-slate-200";
+        }
+      });
+      renderGanttTimeline();
+      renderEventAccordions();
+    }
 
-      filtered.forEach(ev => {
-        let cardHTML = `
-          <div class="event-card">
-            <div class="card-top">
-              <span class="cat-badge ${ev.barClass || 'bar-main'}">${ev.category || 'イベント'}</span>
-            </div>
-            <div class="card-title">${ev.title}</div>
-            <div class="card-date">🕒 ${ev.dateText || ''}</div>
-            ${ev.summary ? `<div class="card-summary">${ev.summary}</div>` : ''}
+    function renderGanttTimeline() {
+      const headerRow = document.getElementById("ganttHeaderRow");
+      const bgGrid = document.getElementById("ganttBgGrid");
+      const tracksContainer = document.getElementById("ganttTracksContainer");
+
+      const oldRows = tracksContainer.querySelectorAll(".gantt-event-row");
+      oldRows.forEach(r => r.remove());
+
+      headerRow.innerHTML = "";
+      bgGrid.innerHTML = "";
+
+      let startDay, endDay;
+      if (currentGanttMonth === 10) {
+        startDay = 24;
+        endDay = 31;
+      } else if (currentGanttMonth === 11) {
+        startDay = 1;
+        endDay = 30;
+      } else {
+        startDay = 1;
+        endDay = 31;
+      }
+
+      const totalDays = endDay - startDay + 1;
+      const dows = ["日", "月", "火", "水", "木", "金", "土"];
+      const gridTemplate = `repeat(${totalDays}, minmax(56px, 1fr))`;
+      headerRow.style.gridTemplateColumns = gridTemplate;
+      bgGrid.style.gridTemplateColumns = gridTemplate;
+
+      for (let d = startDay; d <= endDay; d++) {
+        const dateObj = new Date(2026, currentGanttMonth - 1, d);
+        const dowIndex = dateObj.getDay();
+        const isToday = (currentGanttMonth === 10 && d === 24);
+
+        let dowColor = "text-slate-600";
+        if (dowIndex === 6) dowColor = "text-sky-600";
+        if (dowIndex === 0) dowColor = "text-rose-600";
+
+        const cell = document.createElement("div");
+        cell.className = `py-1.5 border-r border-slate-200 ${isToday ? "bg-sky-50 text-sky-800 border-b-2 border-b-sky-500 font-black" : ""}`;
+        cell.innerHTML = `
+          <div class="text-[10px] ${dowColor}">${dows[dowIndex]}</div>
+          <div class="text-[11px] font-bold">${currentGanttMonth}/${d}</div>
+        `;
+        headerRow.appendChild(cell);
+
+        const bgCol = document.createElement("div");
+        bgCol.className = `border-r border-slate-100 ${isToday ? "bg-sky-50/40" : ""}`;
+        bgGrid.appendChild(bgCol);
+      }
+
+      const monthEvents = ALL_EVENTS.filter(ev => {
+        if (hiddenEventIds.has(ev.id)) return false;
+        if (ev.month !== currentGanttMonth) return false;
+        if (currentCategoryFilter !== "all" && ev.category !== currentCategoryFilter) return false;
+        return true;
+      });
+
+      monthEvents.forEach(ev => {
+        const evStart = Math.max(ev.startDay, startDay);
+        const evEnd = Math.min(ev.endDay, endDay);
+        if (evStart > endDay || evEnd < startDay) return;
+
+        const colStart = (evStart - startDay) + 1;
+        const colSpan = (evEnd - evStart) + 1;
+
+        const row = document.createElement("div");
+        row.className = "gantt-event-row relative h-7 flex items-center";
+        row.style.display = "grid";
+        row.style.gridTemplateColumns = gridTemplate;
+
+        const bar = document.createElement("div");
+        bar.className = `${ev.barClass} h-6 rounded-md px-2 text-[11px] font-bold flex items-center justify-between cursor-pointer shadow-sm hover:brightness-95 transition truncate z-10`;
+        bar.style.gridColumn = `${colStart} / span ${colSpan}`;
+        bar.onclick = () => scrollToEventCard(ev.id);
+
+        bar.innerHTML = `
+          <span class="truncate mr-1">${ev.title}</span>
+          <button onclick="hideEvent('${ev.id}', event)" class="text-[10px] opacity-70 hover:opacity-100 hover:bg-rose-500 hover:text-white bg-white/70 px-1 py-0.5 rounded leading-none flex-shrink-0" title="非表示">✕</button>
         `;
 
-        if (ev.bonuses && ev.bonuses.length > 0) {
-          cardHTML += `
-            <div class="card-section-box">
-              <div class="card-section-label">🎁 イベントボーナス</div>
-              <ul class="bonus-list">
-                ${ev.bonuses.map(b => `<li class="bonus-tag">${b}</li>`).join('')}
-              </ul>
-            </div>
-          `;
-        }
+        row.appendChild(bar);
+        tracksContainer.appendChild(row);
+      });
+    }
 
-        if (ev.raids && ev.raids.length > 0) {
-          cardHTML += `
-            <div class="card-section-box">
-              <div class="card-section-label">⚔️ 出現ボス</div>
-              <div class="pokemon-grid">
-                ${ev.raids.map(r => `<div class="poke-item"><span>${r.name}</span>${r.shiny ? '<span class="shiny-icon">✨</span>' : ''}</div>`).join('')}
+    function renderEventAccordions() {
+      const container = document.getElementById("eventsAccordionContainer");
+      const archiveContainer = document.getElementById("archiveEventsContainer");
+      container.innerHTML = "";
+      archiveContainer.innerHTML = "";
+
+      const visibleEvents = ALL_EVENTS.filter(ev => {
+        if (hiddenEventIds.has(ev.id)) return false;
+        if (currentCategoryFilter !== "all" && ev.category !== currentCategoryFilter) return false;
+        return true;
+      });
+
+      visibleEvents.forEach((ev, index) => {
+        const details = document.createElement("details");
+        details.className = "bg-white border border-slate-200 rounded-xl overflow-hidden transition group shadow-sm";
+        details.id = ev.id;
+        if (index === 0 || index === 1) details.open = true;
+
+        let wildsHtml = "";
+        if (ev.wilds && ev.wilds.length > 0) {
+          wildsHtml = `
+            <div>
+              <div class="text-[11px] font-bold text-emerald-700 mb-1 flex items-center gap-1">🌿 【野生出現ピックアップ】</div>
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-1.5">
+                ${ev.wilds.map(w => `
+                  <div class="bg-slate-50 border border-slate-200 p-1.5 rounded-lg flex items-center gap-2">
+                    <img src="${getPokeImg(w.dex)}" alt="${w.name}" class="w-8 h-8 object-contain flex-shrink-0">
+                    <div class="overflow-hidden">
+                      <div class="text-[11px] font-bold truncate text-slate-800">${w.name} ${w.shiny ? '<span class="text-amber-500">✨</span>' : ''}</div>
+                      <div class="text-[10px] text-slate-500 truncate">${w.note}</div>
+                    </div>
+                  </div>
+                `).join("")}
               </div>
             </div>
           `;
         }
 
-        cardHTML += `</div>`;
-        container.innerHTML += cardHTML;
+        let raidsHtml = "";
+        if (ev.raids && ev.raids.length > 0) {
+          raidsHtml = `
+            <div>
+              <div class="text-[11px] font-bold text-rose-700 mb-1 flex items-center gap-1">⚔️ 【レイド・ダイマックス出現】(タップで対策へジャンプ)</div>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-1.5">
+                ${ev.raids.map(r => `
+                  <div onclick="jumpToCounterTarget('${r.targetKey}', ${r.isDmax})" class="bg-slate-50 border border-slate-200 hover:border-sky-500 p-2 rounded-lg flex items-center justify-between cursor-pointer transition">
+                    <div class="flex items-center gap-2 overflow-hidden">
+                      <img src="${getPokeImg(r.dex)}" alt="${r.name}" class="w-9 h-9 object-contain flex-shrink-0">
+                      <div class="overflow-hidden">
+                        <div class="text-[11px] font-bold truncate text-slate-800">${r.name} ${r.shiny ? '<span class="text-amber-500">✨</span>' : ''}</div>
+                        <div class="text-[10px] text-slate-500 truncate">${r.note}</div>
+                      </div>
+                    </div>
+                    <span class="text-[10px] bg-sky-600 text-white font-bold px-2 py-0.5 rounded flex-shrink-0 shadow-sm">対策を見る ↗</span>
+                  </div>
+                `).join("")}
+              </div>
+            </div>
+          `;
+        }
+
+        let tasksHtml = "";
+        if (ev.tasks && ev.tasks.length > 0) {
+          tasksHtml = `
+            <div>
+              <div class="text-[11px] font-bold text-sky-700 mb-1 flex items-center gap-1">📋 【限定フィールドリサーチ報酬】(GameWith/ポケマピ準拠)</div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+                ${ev.tasks.map(t => `
+                  <div class="bg-slate-50 border border-slate-200 p-2 rounded-lg flex items-center justify-between gap-2">
+                    <span class="text-[11px] text-slate-700 font-medium">${t.task}</span>
+                    <div class="flex items-center gap-1.5 flex-shrink-0">
+                      <img src="${getPokeImg(t.rewardDex)}" alt="${t.rewardName}" class="w-7 h-7 object-contain">
+                      <span class="text-[11px] font-bold text-amber-600">${t.rewardName} ${t.shiny ? '✨' : ''}</span>
+                    </div>
+                  </div>
+                `).join("")}
+              </div>
+            </div>
+          `;
+        }
+
+        let bonusHtml = "";
+        if (ev.bonuses && ev.bonuses.length > 0) {
+          bonusHtml = `
+            <div class="flex flex-wrap gap-1 text-[11px]">
+              ${ev.bonuses.map(b => `<span class="bg-slate-100 text-slate-700 px-2 py-0.5 rounded-md border border-slate-200 font-medium">🎁 ${b}</span>`).join("")}
+            </div>
+          `;
+        }
+
+        details.innerHTML = `
+          <summary class="p-3.5 cursor-pointer flex items-center justify-between gap-2 hover:bg-slate-50 transition">
+            <div>
+              <div class="text-[11px] text-sky-600 font-bold">${ev.dateText}</div>
+              <h3 class="text-sm font-extrabold text-slate-900 mt-0.5">${ev.title}</h3>
+            </div>
+            <div class="flex items-center gap-2">
+              <button onclick="hideEvent('${ev.id}', event)" class="text-[11px] text-slate-500 hover:text-rose-600 bg-slate-100 px-2.5 py-1 rounded-md border border-slate-200 transition font-bold" title="非表示">
+                👁 非表示
+              </button>
+              <span class="text-slate-400 group-open:rotate-180 transition-transform text-xs">▼</span>
+            </div>
+          </summary>
+          <div class="p-3.5 pt-0 border-t border-slate-100 space-y-3 mt-1 text-xs">
+            <div class="text-slate-700 leading-relaxed bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+              ${ev.summary}
+            </div>
+            ${bonusHtml}
+            ${wildsHtml}
+            ${raidsHtml}
+            ${tasksHtml}
+          </div>
+        `;
+        container.appendChild(details);
+      });
+
+      // アーカイブ描画 (終了後30日以内のイベント)
+      if (ARCHIVE_EVENTS.length === 0) {
+        archiveContainer.innerHTML = `<div class="p-2 text-slate-400 text-center">現在、直近30日以内の終了イベントはありません。</div>`;
+      } else {
+        ARCHIVE_EVENTS.forEach(ev => {
+          const item = document.createElement("div");
+          item.className = "p-2 bg-slate-50 rounded border border-slate-200 flex justify-between items-center";
+          item.innerHTML = `
+            <div>
+              <strong class="text-slate-800">${ev.title}</strong>
+              <p class="text-[11px] text-slate-500">${ev.dateText}</p>
+            </div>
+            <span class="text-[10px] bg-slate-200 text-slate-600 px-2 py-0.5 rounded font-bold">終了 (アーカイブ保持中)</span>
+          `;
+          archiveContainer.appendChild(item);
+        });
+      }
+    }
+
+    function scrollToEventCard(id) {
+      const card = document.getElementById(id);
+      if (card) {
+        card.open = true;
+        card.scrollIntoView({ behavior: "smooth", block: "start" });
+        card.classList.add("pulse-target");
+        setTimeout(() => card.classList.remove("pulse-target"), 2400);
+      }
+    }
+
+    function toggleRaidFilter(type) {
+      if (type === "mega") {
+        filterMega = !filterMega;
+        const btn = document.getElementById("btnToggleMega");
+        btn.className = filterMega
+          ? "text-xs font-bold px-3 py-1.5 rounded-lg border transition bg-purple-100 text-purple-700 border-purple-300 shadow-sm"
+          : "text-xs font-bold px-3 py-1.5 rounded-lg border transition bg-slate-100 text-slate-600 border-slate-200 hover:bg-slate-200";
+        btn.textContent = filterMega ? "✨ メガシンカを含める (ON)" : "✨ メガシンカを含める (初期OFF)";
+      } else if (type === "shadow") {
+        filterShadow = !filterShadow;
+        const btn = document.getElementById("btnToggleShadow");
+        btn.className = filterShadow
+          ? "text-xs font-bold px-3 py-1.5 rounded-lg border transition bg-rose-100 text-rose-700 border-rose-300 shadow-sm"
+          : "text-xs font-bold px-3 py-1.5 rounded-lg border transition bg-slate-100 text-slate-600 border-slate-200 hover:bg-slate-200";
+        btn.textContent = filterShadow ? "🔥 シャドウを含める (ON)" : "🔥 シャドウを含める (初期OFF)";
+      }
+      renderRaidRanking();
+    }
+
+    function renderRaidSection() {
+      renderRaidPicker();
+      renderRaidOverview();
+      renderRaidRanking();
+    }
+
+    function renderRaidPicker() {
+      const pickerCurrent = document.getElementById("raidBossPickerCurrent");
+      const pickerFuture = document.getElementById("raidBossPickerFuture");
+      pickerCurrent.innerHTML = "";
+      pickerFuture.innerHTML = "";
+
+      Object.keys(RAID_DATA).forEach(key => {
+        const b = RAID_DATA[key];
+        const active = (key === activeRaidKey);
+        const card = document.createElement("button");
+        
+        card.className = `p-2 rounded-xl border text-left transition flex items-center gap-2 ${
+          active
+            ? "bg-sky-50 border-sky-500 shadow-sm ring-1 ring-sky-500"
+            : "bg-white border-slate-200 hover:bg-slate-50"
+        }`;
+        card.onclick = () => {
+          activeRaidKey = key;
+          renderRaidSection();
+        };
+
+        card.innerHTML = `
+          <img src="${getPokeImg(b.dex)}" alt="${b.name}" class="w-10 h-10 object-contain flex-shrink-0">
+          <div class="overflow-hidden">
+            <div class="text-[10px] ${b.isCurrent ? 'text-emerald-700' : 'text-purple-700'} font-bold truncate">${b.tier}</div>
+            <div class="text-xs font-extrabold text-slate-900 truncate">${b.name}</div>
+          </div>
+        `;
+
+        if (b.isCurrent) {
+          pickerCurrent.appendChild(card);
+        } else {
+          pickerFuture.appendChild(card);
+        }
       });
     }
 
-    function setFilter(cat, btn) {
-      currentFilter = cat;
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      renderCards();
+    function renderRaidOverview() {
+      const container = document.getElementById("raidBossOverview");
+      const b = RAID_DATA[activeRaidKey];
+      if (!b) return;
+
+      const weakBadges = b.weaknesses.map(w => `
+        <span class="${w.color} text-white text-[11px] font-bold px-2 py-0.5 rounded shadow-sm">
+          ${w.name} (${w.mult})
+        </span>
+      `).join(" ");
+
+      container.innerHTML = `
+        <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4">
+          <img src="${getPokeImg(b.dex)}" alt="${b.name}" class="w-20 h-20 object-contain flex-shrink-0">
+          <div class="flex-1 text-center sm:text-left space-y-1">
+            <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
+              <span class="text-xs ${b.isCurrent ? 'bg-emerald-100 text-emerald-800 border-emerald-300' : 'bg-purple-100 text-purple-800 border-purple-300'} font-bold px-2 py-0.5 rounded border">${b.tier}</span>
+              <span class="text-xs font-bold ${b.isCurrent ? 'text-emerald-700' : 'text-purple-700'}">${b.status}</span>
+            </div>
+            <h3 class="text-lg font-black text-slate-900">${b.name}</h3>
+            <div class="text-xs text-slate-600">
+              100%個体値CP: <strong class="text-amber-600 font-bold">${b.cpNormal}</strong> / 天候ブースト: <strong class="text-amber-700 font-bold">${b.cpBoost}</strong>
+            </div>
+            <div class="flex flex-wrap items-center justify-center sm:justify-start gap-1 pt-1">
+              <span class="text-xs text-slate-500 font-bold mr-1">弱点倍率:</span>
+              ${weakBadges}
+            </div>
+          </div>
+        </div>
+        <div class="mt-3 pt-3 border-t border-slate-100 text-xs text-slate-700 leading-relaxed bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+          <strong class="text-sky-700 font-bold">💡 3サイト統合 実戦攻略ノート:</strong> ${b.tactics}
+          <div class="text-rose-600 font-bold mt-1">討伐推奨人数: ${b.minPlayers}</div>
+        </div>
+      `;
     }
 
-    setupCalendar();
-    loadData();
+    function renderRaidRanking() {
+      const list = document.getElementById("raidRankingList");
+      const title = document.getElementById("raidRankingTitle");
+      list.innerHTML = "";
+
+      const b = RAID_DATA[activeRaidKey];
+      if (!b) return;
+
+      let filtered = b.counters.filter(c => {
+        if (c.tag === "mega" && !filterMega) return false;
+        if (c.tag === "shadow" && !filterShadow) return false;
+        return true;
+      });
+
+      filtered.sort((x, y) => y.dps - x.dps);
+      const top10 = filtered.slice(0, 10);
+
+      const conditions = [];
+      if (filterMega) conditions.push("メガ含");
+      if (filterShadow) conditions.push("シャドウ含");
+      if (!filterMega && !filterShadow) conditions.push("通常ポケモン限定");
+      title.textContent = `対策DPSランキング TOP 10 (${conditions.join(" / ")})`;
+
+      top10.forEach((c, index) => {
+        let tagBadge = `<span class="text-[10px] bg-slate-200 text-slate-600 px-1.5 py-0.5 rounded font-bold">通常</span>`;
+        if (c.tag === "mega") {
+          tagBadge = `<span class="text-[10px] bg-purple-100 text-purple-700 font-bold px-1.5 py-0.5 rounded border border-purple-300">メガ</span>`;
+        } else if (c.tag === "shadow") {
+          tagBadge = `<span class="text-[10px] bg-rose-100 text-rose-700 font-bold px-1.5 py-0.5 rounded border border-rose-300">シャドウ</span>`;
+        }
+
+        let rankColor = "text-slate-400";
+        if (index === 0) rankColor = "text-amber-500 text-base font-black";
+        else if (index === 1) rankColor = "text-slate-600 text-sm font-black";
+        else if (index === 2) rankColor = "text-amber-700 text-sm font-black";
+
+        const row = document.createElement("div");
+        row.className = "bg-slate-50 border border-slate-200 hover:bg-slate-100 p-2 rounded-lg flex items-center justify-between gap-3 transition shadow-sm";
+        row.innerHTML = `
+          <div class="flex items-center gap-3 overflow-hidden">
+            <span class="w-6 text-center font-bold ${rankColor}">#${index + 1}</span>
+            <img src="${getPokeImg(c.dex)}" alt="${c.name}" class="w-10 h-10 object-contain flex-shrink-0">
+            <div class="overflow-hidden">
+              <div class="text-xs font-bold text-slate-900 flex items-center gap-1.5">
+                <span class="truncate">${c.name}</span>
+                ${tagBadge}
+              </div>
+              <div class="text-[11px] text-slate-500 truncate">
+                ${c.fast} / <span class="text-sky-700 font-semibold">${c.charge}</span>
+              </div>
+            </div>
+          </div>
+          <div class="text-right flex-shrink-0">
+            <div class="text-sm font-black text-sky-700 font-mono">${c.dps.toFixed(1)} <span class="text-[10px] text-slate-400">DPS</span></div>
+            <div class="text-[10px] text-slate-400 font-mono">TDO: ${c.tdo}</div>
+          </div>
+        `;
+        list.appendChild(row);
+      });
+    }
+
+    function renderDmax9dbSection() {
+      renderDmax9dbPicker();
+      renderDmax9dbCard();
+    }
+
+    function renderDmax9dbPicker() {
+      const picker = document.getElementById("dmaxBossPicker");
+      picker.innerHTML = "";
+
+      Object.keys(DMAX_9DB_DATA).forEach(key => {
+        const d = DMAX_9DB_DATA[key];
+        const active = (key === activeDmax9dbKey);
+        const card = document.createElement("button");
+        card.className = `p-2 rounded-xl border text-left transition flex items-center gap-2 ${
+          active
+            ? "bg-purple-50 border-purple-500 shadow-sm ring-1 ring-purple-500"
+            : "bg-white border-slate-200 hover:bg-slate-50"
+        }`;
+        card.onclick = () => {
+          activeDmax9dbKey = key;
+          renderDmax9dbCard();
+          renderDmax9dbPicker();
+        };
+
+        card.innerHTML = `
+          <img src="${getPokeImg(d.dex)}" alt="${d.name}" class="w-9 h-9 object-contain flex-shrink-0">
+          <div class="overflow-hidden">
+            <div class="text-[10px] text-purple-700 font-bold truncate">${d.tier}</div>
+            <div class="text-xs font-extrabold text-slate-900 truncate">${d.name}</div>
+          </div>
+        `;
+        picker.appendChild(card);
+      });
+    }
+
+    function renderDmax9dbCard() {
+      const container = document.getElementById("dmax9dbContainer");
+      const d = DMAX_9DB_DATA[activeDmax9dbKey];
+      if (!d) return;
+
+      container.innerHTML = `
+        <div class="bg-9db-card border border-purple-500/40 rounded-2xl p-4 shadow-xl space-y-4">
+          <div class="border-b border-purple-500/20 pb-3">
+            <div class="text-[11px] text-purple-300 font-semibold mb-1 flex items-center gap-1.5">
+              <span>📅</span> ${d.dateInfo}
+            </div>
+            <div class="flex items-start justify-between">
+              <div>
+                <h2 class="text-2xl font-black text-white tracking-wide">${d.name}</h2>
+                <div class="text-xs text-purple-200 mt-0.5">
+                  捕獲時CP (PL20): <span class="font-extrabold text-amber-300 text-sm">${d.cpPL20}</span>
+                </div>
+              </div>
+              <div class="text-right flex items-center gap-1 bg-purple-900/60 border border-purple-500/40 px-2 py-1 rounded-lg">
+                <span class="text-amber-400 text-sm">👾</span>
+                <span class="font-black text-white text-base">${d.tier}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div class="bg-black/40 border border-purple-500/30 rounded-xl p-2.5">
+              <div class="text-[11px] text-purple-300 font-bold mb-1.5">⚡ 使用技一覧 (9DB)</div>
+              <div class="flex flex-wrap gap-1.5">
+                ${d.moves.map(m => `
+                  <span class="text-xs px-2.5 py-1 rounded-md text-white font-bold ${m.color} flex items-center gap-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-white"></span> ${m.name}
+                  </span>
+                `).join("")}
+              </div>
+            </div>
+
+            <div class="space-y-1.5">
+              <div class="bg-pink-950/60 border border-pink-500/40 rounded-lg p-1.5 px-2.5 flex items-center justify-between">
+                <span class="text-xs font-bold text-pink-300">弱点</span>
+                <div class="flex gap-1.5">
+                  ${d.weaknesses.map(w => `<span class="${w.color} text-white text-[11px] font-bold px-2 py-0.5 rounded">${w.name}</span>`).join("")}
+                </div>
+              </div>
+              <div class="bg-blue-950/60 border border-blue-500/40 rounded-lg p-1.5 px-2.5 flex items-center justify-between">
+                <span class="text-xs font-bold text-blue-300">耐性</span>
+                <div class="flex gap-1.5">
+                  ${d.resistances.map(r => `<span class="${r.color} text-white text-[11px] font-bold px-2 py-0.5 rounded">${r.name}</span>`).join("")}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <h3 class="text-sm font-extrabold text-sky-300 flex items-center gap-1.5">
+              <span>🗡️</span> アタッカー (マックス技火力重視 TOP 4)
+            </h3>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+              ${d.attackers.map(a => `
+                <div class="bg-black/50 border border-purple-500/40 hover:border-sky-400 transition rounded-xl p-2.5 relative flex flex-col items-center text-center">
+                  <span class="absolute top-1.5 left-1.5 bg-blue-600 text-white font-black text-[10px] w-5 h-5 rounded flex items-center justify-center">
+                    ${a.rank}
+                  </span>
+                  <img src="${getPokeImg(a.dex)}" alt="${a.name}" class="w-16 h-16 object-contain my-1">
+                  <div class="text-xs font-bold text-white truncate w-full mt-1">${a.name}</div>
+                  <div class="text-[10px] text-slate-300 mt-1 space-y-0.5 w-full bg-slate-900/60 p-1.5 rounded">
+                    <div class="truncate text-slate-300">⚪ ${a.fast}</div>
+                    <div class="truncate text-sky-300 font-semibold">🔵 ${a.charge}</div>
+                  </div>
+                </div>
+              `).join("")}
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <h3 class="text-sm font-extrabold text-emerald-300 flex items-center gap-1.5">
+              <span>🛡️</span> タンク (耐久＆メーターチャージ速度重視 TOP 4)
+            </h3>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+              ${d.tanks.map(t => `
+                <div class="bg-black/50 border border-purple-500/40 hover:border-emerald-400 transition rounded-xl p-2.5 relative flex flex-col items-center text-center">
+                  <span class="absolute top-1.5 left-1.5 bg-blue-600 text-white font-black text-[10px] w-5 h-5 rounded flex items-center justify-center">
+                    ${t.rank}
+                  </span>
+                  <img src="${getPokeImg(t.dex)}" alt="${t.name}" class="w-16 h-16 object-contain my-1">
+                  <div class="text-xs font-bold text-white truncate w-full mt-1">${t.name}</div>
+                  <div class="text-[10px] text-slate-300 mt-1 space-y-0.5 w-full bg-slate-900/60 p-1.5 rounded">
+                    <div class="truncate text-emerald-400 font-semibold">🟢 ${t.fast} (0.5s)</div>
+                    <div class="truncate text-slate-300">🔵 ${t.charge}</div>
+                  </div>
+                </div>
+              `).join("")}
+            </div>
+            <div class="text-[11px] text-purple-200/90 bg-black/40 border border-purple-500/30 p-2.5 rounded-lg mt-2">
+              ${d.tankNote}
+            </div>
+          </div>
+
+          <div class="space-y-2 pt-2 border-t border-purple-500/30">
+            <h3 class="text-sm font-extrabold text-amber-300 flex items-center gap-1.5">
+              <span>📋</span> 立ち回り (9DB実戦定石 3ステップ)
+            </h3>
+            <div class="space-y-2">
+              ${d.routine.map(r => `
+                <div class="bg-black/60 border border-purple-500/40 rounded-xl p-3 flex items-start gap-3">
+                  <div class="bg-blue-600 text-white font-black text-sm w-7 h-7 rounded flex items-center justify-center flex-shrink-0 mt-0.5">
+                    ${r.step}
+                  </div>
+                  <div class="space-y-1">
+                    <div class="text-xs font-extrabold text-white leading-snug">${r.title}</div>
+                    <ul class="text-[11px] text-purple-200/90 space-y-0.5 list-disc list-inside">
+                      ${r.details.map(det => `<li>${det}</li>`).join("")}
+                    </ul>
+                  </div>
+                </div>
+              `).join("")}
+            </div>
+          </div>
+
+        </div>
+      `;
+    }
+
+    function jumpToCounterTarget(targetKey, isDmax) {
+      switchMainTab("battles");
+      if (isDmax) {
+        switchBattleSub("dmax");
+        if (DMAX_9DB_DATA[targetKey]) {
+          activeDmax9dbKey = targetKey;
+          renderDmax9dbSection();
+          const card = document.getElementById("dmax9dbContainer");
+          if (card) {
+            card.scrollIntoView({ behavior: "smooth", block: "start" });
+            card.classList.add("pulse-target");
+            setTimeout(() => card.classList.remove("pulse-target"), 2400);
+          }
+        }
+      } else {
+        switchBattleSub("raids");
+        if (RAID_DATA[targetKey]) {
+          activeRaidKey = targetKey;
+          renderRaidSection();
+          const overview = document.getElementById("raidBossOverview");
+          if (overview) {
+            overview.scrollIntoView({ behavior: "smooth", block: "start" });
+            overview.classList.add("pulse-target");
+            setTimeout(() => overview.classList.remove("pulse-target"), 2400);
+          }
+        }
+      }
+    }
+
+    // 初期化処理
+    window.onload = function() {
+      initStorage();
+
+      // data.json からの最新データ動的フェッチ ＆ 過去30日仕分けロジック
+      fetch('./data.json?t=' + new Date().getTime())
+        .then(res => res.json())
+        .then(remoteData => {
+          if (remoteData.updated_at) {
+            const timeEl = document.getElementById('autoUpdateTimestamp');
+            if (timeEl) {
+              timeEl.innerText = '最終自動更新: ' + remoteData.updated_at;
+            }
+          }
+
+          if (remoteData.latest_news && remoteData.latest_news.length > 0) {
+            NEWS_ITEMS = remoteData.latest_news.map((item, idx) => ({
+              id: "news-remote-" + idx,
+              text: item.title,
+              targetId: item.link.replace('#', '')
+            }));
+          }
+
+          if (remoteData.events && remoteData.events.length > 0) {
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+
+            ALL_EVENTS = [];
+            ARCHIVE_EVENTS = [];
+
+            remoteData.events.forEach(ev => {
+              if (ev.endDate) {
+                const endD = new Date(ev.endDate);
+                const diffTime = today - endD;
+                const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+                // 終了後30日を超えたものは完全破棄
+                if (diffDays > 30) return;
+
+                // 終了後30日以内はアーカイブへ
+                if (diffDays > 0) {
+                  ARCHIVE_EVENTS.push(ev);
+                  return;
+                }
+              }
+              // 開催中 または 未来のイベントはメインへ
+              ALL_EVENTS.push(ev);
+            });
+          }
+
+          renderNewsSection();
+          renderGanttTimeline();
+          renderEventAccordions();
+          updateGlobalHiddenUI();
+        })
+        .catch(err => {
+          console.log("data.json 読込完了", err);
+          renderNewsSection();
+          renderGanttTimeline();
+          renderEventAccordions();
+          updateGlobalHiddenUI();
+        });
+    };
   </script>
 </body>
 </html>
