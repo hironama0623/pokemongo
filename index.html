@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
@@ -84,7 +84,7 @@
           </h1>
           <div class="text-[11px] text-slate-500 flex items-center gap-2">
             <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span id="autoUpdateTimestamp" class="font-bold text-slate-700">最終自動更新: 読込中... (次回予定: 15:00)</span>
+            <span id="autoUpdateTimestamp" class="font-bold text-slate-700">最終自動更新: 読込中...</span>
             <span class="text-sky-600 font-semibold hidden sm:inline">GameWith / 9DB / ポケマピ 3大サイト統合仕様</span>
           </div>
         </div>
@@ -122,11 +122,11 @@
 
       <!-- トップ通知エリア -->
       <section class="grid grid-cols-1 md:grid-cols-2 gap-3">
-        <!-- 🚨 本日開催中・終了間近 -->
+        <!-- 本日開催中・注目のレイド -->
         <div class="bg-white border border-rose-200 rounded-xl p-3.5 shadow-sm">
           <div class="flex items-center justify-between mb-2">
             <h2 class="text-sm font-extrabold text-rose-600 flex items-center gap-1.5">
-              <span>🚨</span> 本日開催中・注目のレイド (10月24日)
+              <span>🚨</span> 本日開催中・注目のレイド
             </h2>
             <span class="text-[10px] bg-rose-50 text-rose-600 px-2 py-0.5 rounded-full font-bold border border-rose-200">要確認</span>
           </div>
@@ -155,7 +155,7 @@
           </ul>
         </div>
 
-        <!-- 📢 直近の公式発表・最新ニュース速報 -->
+        <!-- 直近の公式発表・最新ニュース速報 -->
         <div class="bg-white border border-sky-200 rounded-xl p-3.5 shadow-sm flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between mb-2">
@@ -184,7 +184,6 @@
             <span class="text-[11px] text-slate-500 hidden sm:inline">| 連日バータップで詳細へ</span>
           </div>
 
-          <!-- 月切り替えボタン [10月] [11月] [12月] -->
           <div class="flex items-center gap-1 bg-slate-100 p-1 rounded-lg border border-slate-200">
             <button onclick="changeGanttMonth(10)" id="monthBtn10" class="text-xs px-3 py-1 rounded-md font-bold transition bg-sky-600 text-white shadow-sm">10月</button>
             <button onclick="changeGanttMonth(11)" id="monthBtn11" class="text-xs px-3 py-1 rounded-md font-bold transition text-slate-600 hover:text-slate-900">11月</button>
@@ -192,7 +191,7 @@
           </div>
         </div>
 
-        <!-- カテゴリ絞り込みフィルターバー -->
+        <!-- 絞り込みフィルターバー -->
         <div class="flex flex-wrap items-center gap-1.5 pb-2.5 pt-1 border-b border-slate-100">
           <span class="text-[11px] text-slate-500 font-bold mr-1">絞り込み:</span>
           <button onclick="filterTimelineCategory('all')" id="catBtn-all" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-sky-600 text-white shadow-sm">すべて</button>
@@ -227,33 +226,20 @@
       <section class="space-y-3">
         <div class="flex items-center justify-between px-1">
           <h2 class="text-sm font-extrabold text-slate-800 flex items-center gap-1.5">
-            <span>📌</span> イベント詳細・限定タスク一覧 (全イベント完全網羅)
+            <span>📌</span> イベント詳細・限定タスク一覧 (現在・未来の開催)
           </h2>
           <span class="text-[11px] text-slate-500">各カードの「👁 非表示」で個別除外可能</span>
         </div>
         <div id="eventsAccordionContainer" class="space-y-2.5"></div>
 
-        <!-- 過去の終了イベント アーカイブ -->
+        <!-- 過去の終了イベント アーカイブ (終了後30日以内を自動保持) -->
         <details class="bg-white border border-slate-200 rounded-xl overflow-hidden mt-4 shadow-sm group">
           <summary class="p-3 text-xs font-bold text-slate-600 cursor-pointer hover:bg-slate-50 flex items-center justify-between">
-            <span class="flex items-center gap-1.5">📂 アーカイブ（10月に実施済みのイベント履歴）</span>
+            <span class="flex items-center gap-1.5">📂 アーカイブ（終了後30日以内のイベント履歴 / 30日経過で自動消去）</span>
             <span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded text-slate-500 group-open:rotate-180 transition-transform">▼</span>
           </summary>
-          <div class="p-3 pt-0 text-xs text-slate-600 border-t border-slate-100 space-y-2 mt-2">
-            <div class="p-2 bg-slate-50 rounded border border-slate-200 flex justify-between items-center">
-              <div>
-                <strong class="text-slate-800">ゾロア コミュニティ・デイ</strong>
-                <p class="text-[11px] text-slate-500">10/12(土) 開催終了 / 相棒変身ギミック＆色違い初実装</p>
-              </div>
-              <span class="text-[10px] bg-slate-200 text-slate-600 px-2 py-0.5 rounded font-bold">終了</span>
-            </div>
-            <div class="p-2 bg-slate-50 rounded border border-slate-200 flex justify-between items-center">
-              <div>
-                <strong class="text-slate-800">メグロコ 孵化デイ (2kmタマゴ)</strong>
-                <p class="text-[11px] text-slate-500">10/19(日) 開催終了 / 1/2孵化距離＆色違い高確率</p>
-              </div>
-              <span class="text-[10px] bg-slate-200 text-slate-600 px-2 py-0.5 rounded font-bold">終了</span>
-            </div>
+          <div id="archiveEventsContainer" class="p-3 pt-0 text-xs text-slate-600 border-t border-slate-100 space-y-2 mt-2">
+            <!-- JSで動的レンダリング -->
           </div>
         </details>
       </section>
@@ -339,7 +325,7 @@
         </div>
       </div>
 
-      <!-- 2-B: ダイマックス攻略 (9DBキャプチャ画面を忠実に再現) -->
+      <!-- 2-B: ダイマックス攻略 (9DBキャプチャ画面完全再現：ザマゼンタ修正) -->
       <div id="secBattleDmax" class="space-y-4 hidden">
         <div>
           <div class="text-xs font-bold text-slate-600 mb-2 flex items-center justify-between">
@@ -429,7 +415,7 @@
                 <tr class="hover:bg-slate-50"><td class="p-2.5 text-center font-bold text-slate-500">1</td><td>モンスターボール ×20</td><td class="text-amber-700 font-medium">モンスターボール ×50 + プレミアムパス ×1</td></tr>
                 <tr class="hover:bg-slate-50"><td class="p-2.5 text-center font-bold text-slate-500">5</td><td>ほしのすな ×1,000</td><td class="text-amber-700 font-medium">ほしのすな ×3,000 + 50ポケコイン</td></tr>
                 <tr class="hover:bg-slate-50"><td class="p-2.5 text-center font-bold text-slate-500">10</td><td>しあわせタマゴ ×1</td><td class="text-amber-700 font-medium">スーパーふかそうち ×1</td></tr>
-                <tr class="hover:bg-slate-50"><td class="p-2.5 text-center font-bold text-slate-500">20</td><td>わざマシンノーマル ×2</td><td class="text-amber-700 font-medium">時限ふかそうち ×1 + 100ポケコイン</td></tr>
+                <tr class="hover:bg-slate-800/30"><td class="p-2.5 text-center font-bold text-slate-500">20</td><td>わざマシンノーマル ×2</td><td class="text-amber-700 font-medium">時限ふかそうち ×1 + 100ポケコイン</td></tr>
                 <tr class="hover:bg-slate-50 bg-sky-50/50"><td class="p-2.5 text-center font-bold text-sky-700">25</td><td class="text-sky-800 font-bold">【マイルストーン】ギフト開封40個</td><td class="text-amber-700 font-bold">ギフト開封50個 + ふしぎなアメ ×5</td></tr>
                 <tr class="hover:bg-slate-50"><td class="p-2.5 text-center font-bold text-slate-500">30</td><td>ダイマックスモグリュー遭遇</td><td class="text-amber-700 font-medium">モグリューのアメXL ×5 + 100ポケコイン</td></tr>
                 <tr class="hover:bg-slate-50"><td class="p-2.5 text-center font-bold text-slate-500">40</td><td>ふしぎなアメ ×2</td><td class="text-amber-700 font-medium">プレミアムバトルパス ×2</td></tr>
@@ -519,7 +505,7 @@
   <script>
     const getPokeImg = (dex) => `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${dex}.png`;
 
-    const NEWS_ITEMS = [
+    let NEWS_ITEMS = [
       { id: "news-uma-day", text: "本日14:00〜17:00「ダイマックスUMAマックスバトルデイ」開催！無料MP800受取を忘れずに", targetId: "ev-dmax-uma-day" },
       { id: "news-mega-char", text: "メガリザードンY＆Xレイド出現中！Yはいわ2.56倍二重弱点でソロ・ペア討伐可能", targetId: "ev-palkia-char" },
       { id: "news-landorus", text: "シャドウランドロス(化身)★5レイドは土日だけでなく平日も連日出現中！二重弱点氷で攻略推奨", targetId: "ev-shadow-landorus" },
@@ -528,353 +514,8 @@
       { id: "news-wild-area", text: "11/14〜15「GOワイルドエリア2026」詳細発表！PL40〜50の『つよいポケモン』とサファリボール初解禁", targetId: "ev-wildarea-2026" }
     ];
 
-    const ALL_EVENTS = [
-      {
-        id: "ev-orionids",
-        month: 10,
-        title: "オリオン座流星群 観測ウィーク",
-        barClass: "bar-main",
-        category: "main",
-        startDay: 18,
-        endDay: 24,
-        dateText: "10/18(日) 〜 10/24(土) 20:00 [本日終了]",
-        summary: "夜間のほしのすな獲得量2倍。いわ・ひこうタイプの出現率アップ。メテノ（各種コア色）が野生で出現。",
-        bonuses: ["捕獲時のほしのすな2倍", "夜間にメテノ出現率大幅アップ", "ほしのかけらの効果1.5倍"],
-        wilds: [
-          { dex: 774, name: "メテノ (コア)", shiny: true, note: "各種カラー出現" },
-          { dex: 337, name: "ルナトーン", shiny: true, note: "野生ブースト" },
-          { dex: 338, name: "ソルロック", shiny: true, note: "野生ブースト" },
-          { dex: 524, name: "ダンゴロ", shiny: true, note: "野生出現" }
-        ],
-        raids: [],
-        tasks: [
-          { task: "いわタイプを5匹捕獲する", rewardDex: 774, rewardName: "メテノ (コア)", shiny: true },
-          { task: "カーブボールを3回投げる", rewardDex: 337, rewardName: "ルナトーン", shiny: true }
-        ]
-      },
-      {
-        id: "ev-dmax-uma-day",
-        month: 10,
-        title: "ダイマックス UMAマックスバトルデイ",
-        barClass: "bar-dmax",
-        category: "dmax",
-        startDay: 24,
-        endDay: 25,
-        dateText: "10/24(土) 〜 10/25(日) 各日14:00〜17:00",
-        summary: "14:00〜17:00限定。パワースポットにシンオウUMAトリオが出現！日本はユクシー出現。海外招待でエムリット・アグノム参加可能。無料MP800配布＆色違い率UP！",
-        bonuses: ["各日マックス粒子800MP配布", "色違い確率大幅アップ", "リモート参加上限引き上げ"],
-        wilds: [],
-        raids: [
-          { dex: 480, name: "ユクシー", shiny: true, note: "🇯🇵 日本・アジア限定", targetKey: "dmax-uxie", isDmax: true },
-          { dex: 481, name: "エムリット", shiny: true, note: "🌍 欧州限定 (招待)", targetKey: "dmax-mesprit", isDmax: true },
-          { dex: 482, name: "アグノム", shiny: true, note: "🌎 米大陸限定 (招待)", targetKey: "dmax-azelf", isDmax: true }
-        ],
-        tasks: [
-          { task: "マックスバトルで1回勝利する", rewardDex: 480, rewardName: "ユクシーのアメ ×5", shiny: false },
-          { task: "ダイマックス技を3回使用する", rewardDex: 242, rewardName: "ふしぎなアメ ×2", shiny: false }
-        ]
-      },
-      {
-        id: "ev-nightout-la",
-        month: 10,
-        title: "ポケモンナイトアウト (ロサンゼルス)",
-        barClass: "bar-main",
-        category: "main",
-        startDay: 24,
-        endDay: 25,
-        dateText: "10/24(土) 〜 10/25(日)",
-        summary: "公式イベント。夜間帯にゴースト・あくタイプが野生でブースト。",
-        bonuses: ["夜間のゴースト・あくタイプ出現率UP", "現地ルアー効果4時間"],
-        wilds: [
-          { dex: 92, name: "ゴース", shiny: true, note: "夜間ブースト" },
-          { dex: 353, name: "カゲボウズ", shiny: true, note: "夜間ブースト" },
-          { dex: 198, name: "ヤミカラス", shiny: true, note: "夜間ブースト" }
-        ],
-        raids: [],
-        tasks: []
-      },
-      {
-        id: "ev-twitch",
-        month: 10,
-        title: "ポケモンナイトアウト Twitch公式配信",
-        barClass: "bar-main",
-        category: "main",
-        startDay: 25,
-        endDay: 25,
-        dateText: "10/25(日) 配信時間限定",
-        summary: "Twitch公式チャンネルで30分以上視聴すると、限定リサーチコード（モルペコや限定Tシャツ、スーパー孵化装置）を入手可能。",
-        bonuses: ["Twitch Dropsによるタイムチャレンジ入手", "受取期限48時間"],
-        wilds: [{ dex: 877, name: "モルペコ", shiny: true, note: "リサーチ報酬" }],
-        raids: [],
-        tasks: [{ task: "Twitchプロモコード受取", rewardDex: 877, rewardName: "モルペコ", shiny: true }]
-      },
-      {
-        id: "ev-fc-seoul",
-        month: 10,
-        title: "2026 FCソウル 連動コラボ",
-        barClass: "bar-collab",
-        category: "collab",
-        startDay: 24,
-        endDay: 25,
-        dateText: "10/24(土) 〜 10/25(日)",
-        summary: "韓国ソウル現地および記念コラボタイムチャレンジ。限定ユニフォームピカチュウが出現。",
-        bonuses: ["限定フィールドリサーチ登場", "特別ユニフォームピカチュウ出現", "特別交換+1回"],
-        wilds: [
-          { dex: 25, name: "ピカチュウ", shiny: true, note: "FCソウルユニフォーム" },
-          { dex: 722, name: "モクロー", shiny: true, note: "野生ブースト" },
-          { dex: 906, name: "ニャオハ", shiny: true, note: "野生ブースト" }
-        ],
-        raids: [],
-        tasks: [{ task: "ナイススローを5回投げる", rewardDex: 25, rewardName: "ソウルピカチュウ", shiny: true }]
-      },
-      {
-        id: "ev-dmax-sneasel",
-        month: 10,
-        title: "ダイマックスニューラ 出現率UP",
-        barClass: "bar-dmax",
-        category: "dmax",
-        startDay: 24,
-        endDay: 25,
-        dateText: "10/24(土) 〜 10/25(日)",
-        summary: "★1パワースポットにニューラが集中出現。マニューラへ進化させることで、対エスパー（UMA戦）や対ゴースト戦の優秀なあくアタッカーに。",
-        bonuses: ["パワースポットでのニューラ出現枠増加", "消費MP軽減"],
-        wilds: [],
-        raids: [{ dex: 215, name: "ダイマックス ニューラ", shiny: true, note: "★1パワースポット", targetKey: "dmax-sneasel", isDmax: true }],
-        tasks: [{ task: "あくタイプのポケモンを3匹捕獲する", rewardDex: 215, rewardName: "ニューラのアメ ×10", shiny: false }]
-      },
-      {
-        id: "ev-sableye-monday",
-        month: 10,
-        title: "ヤミラミ マックスマンデー",
-        barClass: "bar-dmax",
-        category: "dmax",
-        startDay: 26,
-        endDay: 26,
-        dateText: "10/26(月) 18:00 〜 19:00",
-        summary: "1時間限定で全パワースポットがヤミラミに変化。あく/ゴースト複合のためエスパー技・格闘技に耐性を持ち、対エスパー戦の壁役・アタッカーとして優秀。",
-        bonuses: ["全パワースポットでヤミラミ出現", "バトル勝利時XP2倍"],
-        wilds: [],
-        raids: [{ dex: 302, name: "ダイマックス ヤミラミ", shiny: true, note: "★1パワースポット", targetKey: "dmax-sableye", isDmax: true }],
-        tasks: [{ task: "ヤミラミに勝利する", rewardDex: 302, rewardName: "ヤミラミのアメXL ×2", shiny: false }]
-      },
-      {
-        id: "ev-palkia-char",
-        month: 10,
-        title: "パルキア(オリジン) / メガリザードンX・Y レイド",
-        barClass: "bar-raid",
-        category: "raid",
-        startDay: 21,
-        endDay: 27,
-        dateText: "10/21(水) 〜 10/27(火) 10:00まで [現在出現中]",
-        summary: "特別技『あくうせつだん』習得パルキアと、ほのお・ひこう最強メガシンカのメガリザードンY、ドラゴン複合のメガリザードンXが登場中！",
-        bonuses: ["討伐でパルキア特別技あくうせつだん習得", "レイドXP+5000XP"],
-        wilds: [],
-        raids: [
-          { dex: 484, name: "パルキア (オリジン)", shiny: true, note: "★5 伝説レイド", targetKey: "palkia-origin", isDmax: false },
-          { dex: 6, name: "メガリザードンY / X", shiny: true, note: "メガレイド (現在開催中)", targetKey: "mega-charizard-y", isDmax: false }
-        ],
-        tasks: [{ task: "レイドで1回勝利する", rewardDex: 484, rewardName: "ふしぎなアメ ×3", shiny: false }]
-      },
-      {
-        id: "ev-shadow-landorus",
-        month: 10,
-        title: "シャドウランドロス(化身) レイド (連日常設中)",
-        barClass: "bar-shadow-daily",
-        category: "raid",
-        startDay: 14,
-        endDay: 31,
-        dateText: "10/14(水) 〜 11/3(火) 平日含め連日常設中！",
-        summary: "【GameWith/9DB確認済】土日限定ではなく平日も含め連日常設開催中！こおり2.56倍二重弱点。ライトクリスタル8個で暴走鎮静化。",
-        bonuses: ["平日・休日問わず黒タマゴ出現", "高個体シャドウ厳選可能", "ふしぎなアメXLドロップ率UP"],
-        wilds: [],
-        raids: [{ dex: 645, name: "シャドウランドロス (化身)", shiny: true, note: "★5 シャドウレイド (常設)", targetKey: "shadow-landorus", isDmax: false }],
-        tasks: [{ task: "シャドウレイドに1回勝つ", rewardDex: 645, rewardName: "ふしぎなアメ ×3", shiny: false }]
-      },
-      {
-        id: "ev-gbl-twilight",
-        month: 10,
-        title: "GBL 黄昏の旅路 (ハイパー / MLメガ / ファンタジーSL)",
-        barClass: "bar-gbl",
-        category: "gbl",
-        startDay: 22,
-        endDay: 28,
-        dateText: "10/22(木) 〜 10/28(水) 早朝",
-        summary: "ハイパーリーグ、マスターリーグメガ、ファンタジーカップ(SL)が開催。勝利時ほしのすな4倍ボーナス。",
-        bonuses: ["勝利時のほしのすな4倍", "1日あたり5セット(25戦)対戦可能"],
-        wilds: [],
-        raids: [],
-        tasks: [{ task: "GBL対戦を5回する", rewardDex: 487, rewardName: "ほしのすな ×5000", shiny: false }]
-      },
-      {
-        id: "ev-npb-collab",
-        month: 10,
-        title: "プロ野球12球団コラボイベント (連日常設)",
-        barClass: "bar-collab",
-        category: "collab",
-        startDay: 15,
-        endDay: 31,
-        dateText: "10月中旬 〜 11月中旬 (全国スタジアム常設)",
-        summary: "全国のプロ野球球場周辺でポケストップ増加。限定ステッカーや球団キャップピカチュウが出現。",
-        bonuses: ["スタジアム周辺で特別なピカチュウ出現", "限定ギフトステッカー配布"],
-        wilds: [
-          { dex: 25, name: "ピカチュウ (キャップ)", shiny: true, note: "球団キャップ着用" },
-          { dex: 68, name: "カイリキー", shiny: true, note: "球場周辺ブースト" },
-          { dex: 237, name: "カポエラー", shiny: true, note: "野生出現" }
-        ],
-        raids: [],
-        tasks: [{ task: "グレートスローを12回投げる", rewardDex: 25, rewardName: "コラボピカチュウ", shiny: true }]
-      },
-      {
-        id: "ev-aeon-halloween",
-        month: 10,
-        title: "イオン ハロウィンイベント (連日常設)",
-        barClass: "bar-collab",
-        category: "collab",
-        startDay: 18,
-        endDay: 31,
-        dateText: "10/18(日) 〜 10/31(土) (全国イオンモール)",
-        summary: "全国のイオン系列店舗でチェックインすると限定タイムチャレンジが発生。毎日15:00〜16:00にレイド確定開催。",
-        bonuses: ["チェックインで特別タイムチャレンジ", "店舗周辺でゴースト出現率UP", "無料レイドパス追加1枚(現地限定)"],
-        wilds: [{ dex: 607, name: "ヒトモシ", shiny: true, note: "イオンスポット周辺" }],
-        raids: [{ dex: 487, name: "ギラティナ (オリジン)", shiny: true, note: "15:00〜16:00集中", targetKey: "giratina-origin", isDmax: false }],
-        tasks: [{ task: "イオンのポケストップを回す", rewardDex: 607, rewardName: "きんのズリのみ ×3", shiny: false }]
-      },
-      {
-        id: "ev-dmax-sableye-up",
-        month: 10,
-        title: "ダイマックスヤミラミ 出現率UP",
-        barClass: "bar-dmax",
-        category: "dmax",
-        startDay: 26,
-        endDay: 28,
-        dateText: "10/26(月) 〜 10/28(水)",
-        summary: "パワースポットでヤミラミが3日連続出現率アップ。キョダイゲンガー戦への準備期間として厳選推奨。",
-        bonuses: ["パワースポットでのヤミラミ出現率増加", "MP回収効率UP"],
-        wilds: [],
-        raids: [{ dex: 302, name: "ダイマックス ヤミラミ", shiny: true, note: "★1パワースポット", targetKey: "dmax-sableye", isDmax: true }],
-        tasks: [{ task: "ゴーストタイプを10匹捕獲する", rewardDex: 302, rewardName: "ヤミラミ", shiny: true }]
-      },
-      {
-        id: "ev-halloween-p1",
-        month: 10,
-        title: "ハロウィン2026 パート1",
-        barClass: "bar-main",
-        category: "main",
-        startDay: 27,
-        endDay: 31,
-        dateText: "10/27(火) 10:00 〜 11/1(日) 20:00",
-        summary: "新衣装ピカチュウ（ハット＆ケープ）、魔女帽子ケロマツ、新実装の衣装ヤバチャが登場！捕獲アメ2倍＆ナイス以上でアメXL確率UP。",
-        bonuses: ["ポケモン捕獲時のアメ2倍", "ナイス/グレート/エクセレントスローでアメXL確率UP", "タマゴ孵化距離1/2"],
-        wilds: [
-          { dex: 25, name: "新衣装ピカチュウ", shiny: true, note: "ハット＆ケープ" },
-          { dex: 656, name: "衣装ケロマツ", shiny: true, note: "魔女帽子" },
-          { dex: 854, name: "衣装ヤバチャ", shiny: true, note: "初登場✨" },
-          { dex: 877, name: "モルペコ", shiny: true, note: "野生ブースト" },
-          { dex: 442, name: "ミカルゲ", shiny: true, note: "低確率出現" }
-        ],
-        raids: [
-          { dex: 487, name: "ギラティナ (オリジン)", shiny: true, note: "★5 伝説レイド", targetKey: "giratina-origin", isDmax: false },
-          { dex: 354, name: "メガジュペッタ", shiny: true, note: "メガレイド", targetKey: "mega-banette", isDmax: false }
-        ],
-        tasks: [
-          { task: "ゴーストタイプを10匹捕獲する", rewardDex: 442, rewardName: "ミカルゲ", shiny: true },
-          { task: "ナイススローを5回投げる", rewardDex: 854, rewardName: "衣装ヤバチャ", shiny: true },
-          { task: "相棒と歩いてアメを3個もらう", rewardDex: 877, rewardName: "モルペコ", shiny: true }
-        ]
-      },
-      {
-        id: "ev-raid-giratina",
-        month: 10,
-        title: "ギラティナ (オリジン) レイド",
-        barClass: "bar-raid",
-        category: "raid",
-        startDay: 27,
-        endDay: 31,
-        dateText: "10/27(火) 10:00 〜 11/3(火) 10:00 [次回予告]",
-        summary: "ハロウィン本番の★5伝説レイド！特別技『シャドーダイブ』習得。ゴースト・あく統一で高速周回可能。",
-        bonuses: ["特別技シャドーダイブ習得", "捕獲時のアメボーナス", "伝説レイドXP+10000XP"],
-        wilds: [],
-        raids: [
-          { dex: 487, name: "ギラティナ (オリジン)", shiny: true, note: "★5 伝説レイド", targetKey: "giratina-origin", isDmax: false },
-          { dex: 354, name: "メガジュペッタ", shiny: true, note: "メガレイド", targetKey: "mega-banette", isDmax: false }
-        ],
-        tasks: [{ task: "伝説レイドに2回勝つ", rewardDex: 487, rewardName: "ふしぎなアメXL ×1", shiny: false }]
-      },
-      {
-        id: "ev-gopass-oct",
-        month: 10,
-        title: "GOパス：10月度 (常設)",
-        barClass: "bar-main",
-        category: "main",
-        startDay: 1,
-        endDay: 31,
-        dateText: "10/1(木) 〜 10/31(土) [11/3まで受取可]",
-        summary: "無料版ランク100でカイオーガ、デラックス版でキラチャームと1,400ポケコイン獲得。マイルストーンで交換アメXL確定ドロップ。",
-        bonuses: ["交換時アメXL確定", "ギフト所持・開封上限拡張", "おこう効果30分延長"],
-        wilds: [],
-        raids: [],
-        tasks: [{ task: "デイリー・ウィークリーパスタスク全般", rewardDex: 382, rewardName: "カイオーガ", shiny: true }]
-      },
-
-      // --- 11月 ---
-      {
-        id: "ev-halloween-p2",
-        month: 11,
-        title: "ハロウィン2026 パート2 (キョダイゲンガー)",
-        barClass: "bar-main",
-        category: "main",
-        startDay: 1,
-        endDay: 5,
-        dateText: "11/1(日) 10:00 〜 11/5(木) 20:00",
-        summary: "色違いボチ初実装！キョダイマックスゲンガー降臨＆メガヤミラミのスーパーマックス解放。7kmタマゴからハロウィンポケモンが孵化。",
-        bonuses: ["色違いボチ初実装", "捕獲時すな2倍", "7kmタマゴ距離1/2"],
-        wilds: [
-          { dex: 971, name: "ボチ", shiny: true, note: "色違い初実装✨" },
-          { dex: 708, name: "ボクレー", shiny: true, note: "野生ブースト" }
-        ],
-        raids: [{ dex: 94, name: "キョダイマックス ゲンガー", shiny: true, note: "★6 マックスバトル", targetKey: "dmax-gmax-gengar", isDmax: true }],
-        tasks: [{ task: "おばけポケモンを15匹捕獲する", rewardDex: 971, rewardName: "ボチ", shiny: true }]
-      },
-      {
-        id: "ev-wildarea-2026",
-        month: 11,
-        title: "GOワイルドエリア2026：グローバル",
-        barClass: "bar-collab",
-        category: "collab",
-        startDay: 14,
-        endDay: 15,
-        dateText: "11/14(土) 〜 11/15(日) 各日10:00〜18:00",
-        summary: "大型グローバル祭！初登場の『つよいポケモン（PL40〜50・高個体保証・GOサファリボール必須）』が野生出現。土曜：ホワイトキュレム＆ゼクロム、日曜：ブラックキュレム＆レシラム降臨！",
-        bonuses: ["つよいポケモン出現 (GOサファリボール使用)", "キュレム合体エナジー獲得", "無料レイドパス最大6枚", "孵化距離1/2"],
-        wilds: [
-          { dex: 646, name: "つよいカイリュー", shiny: true, note: "PL40〜50確定" },
-          { dex: 445, name: "つよいガブリアス", shiny: true, note: "PL40〜50確定" },
-          { dex: 884, name: "キョダイジュラルドン", shiny: true, note: "色違い解禁✨" }
-        ],
-        raids: [
-          { dex: 646, name: "ホワイト / ブラックキュレム", shiny: true, note: "合体伝説レイド", targetKey: "kyurem-fused", isDmax: false },
-          { dex: 643, name: "レシラム / ゼクロム", shiny: true, note: "特別技習得", targetKey: "kyurem-fused", isDmax: false }
-        ],
-        tasks: [{ task: "GOサファリボールでポケモンを3匹捕獲", rewardDex: 646, rewardName: "キュレム", shiny: true }]
-      },
-
-      // --- 12月 ---
-      {
-        id: "ev-cd-allstar",
-        month: 12,
-        title: "2026 総決算オールスター コミュニティ・デイ",
-        barClass: "bar-main",
-        category: "main",
-        startDay: 12,
-        endDay: 13,
-        dateText: "12/12(土) 〜 12/13(日) 各日14:00〜17:00",
-        summary: "歴代コミュデイ対象が一挙集結！特別技の一斉習得が可能となる年内最重要育成イベント。",
-        bonuses: ["歴代特別技一斉習得", "XP・すな2倍", "タマゴ距離1/2"],
-        wilds: [{ dex: 624, name: "コマタナ", shiny: true, note: "大量出現" }],
-        raids: [],
-        tasks: [{ task: "ポケモンを5匹捕獲する", rewardDex: 624, rewardName: "コマタナ", shiny: true }]
-      }
-    ];
+    let ALL_EVENTS = [];
+    let ARCHIVE_EVENTS = [];
 
     const RAID_DATA = {
       "palkia-origin": {
@@ -1494,7 +1135,9 @@
 
     function renderEventAccordions() {
       const container = document.getElementById("eventsAccordionContainer");
+      const archiveContainer = document.getElementById("archiveEventsContainer");
       container.innerHTML = "";
+      archiveContainer.innerHTML = "";
 
       const visibleEvents = ALL_EVENTS.filter(ev => {
         if (hiddenEventIds.has(ev.id)) return false;
@@ -1605,6 +1248,24 @@
         `;
         container.appendChild(details);
       });
+
+      // アーカイブ描画 (終了後30日以内のイベント)
+      if (ARCHIVE_EVENTS.length === 0) {
+        archiveContainer.innerHTML = `<div class="p-2 text-slate-400 text-center">現在、直近30日以内の終了イベントはありません。</div>`;
+      } else {
+        ARCHIVE_EVENTS.forEach(ev => {
+          const item = document.createElement("div");
+          item.className = "p-2 bg-slate-50 rounded border border-slate-200 flex justify-between items-center";
+          item.innerHTML = `
+            <div>
+              <strong class="text-slate-800">${ev.title}</strong>
+              <p class="text-[11px] text-slate-500">${ev.dateText}</p>
+            </div>
+            <span class="text-[10px] bg-slate-200 text-slate-600 px-2 py-0.5 rounded font-bold">終了 (アーカイブ保持中)</span>
+          `;
+          archiveContainer.appendChild(item);
+        });
+      }
     }
 
     function scrollToEventCard(id) {
@@ -1963,14 +1624,11 @@
       }
     }
 
+    // 初期化処理
     window.onload = function() {
       initStorage();
-      renderNewsSection();
-      renderGanttTimeline();
-      renderEventAccordions();
-      updateGlobalHiddenUI();
 
-      // GitHub Actionsによる定期自動更新日時のフェッチ反映 (data.json と連動)
+      // data.json からの最新データ動的フェッチ ＆ 過去30日仕分けロジック
       fetch('./data.json?t=' + new Date().getTime())
         .then(res => res.json())
         .then(remoteData => {
@@ -1980,8 +1638,54 @@
               timeEl.innerText = '最終自動更新: ' + remoteData.updated_at;
             }
           }
+
+          if (remoteData.latest_news && remoteData.latest_news.length > 0) {
+            NEWS_ITEMS = remoteData.latest_news.map((item, idx) => ({
+              id: "news-remote-" + idx,
+              text: item.title,
+              targetId: item.link.replace('#', '')
+            }));
+          }
+
+          if (remoteData.events && remoteData.events.length > 0) {
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+
+            ALL_EVENTS = [];
+            ARCHIVE_EVENTS = [];
+
+            remoteData.events.forEach(ev => {
+              if (ev.endDate) {
+                const endD = new Date(ev.endDate);
+                const diffTime = today - endD;
+                const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+                // 終了後30日を超えたものは完全破棄
+                if (diffDays > 30) return;
+
+                // 終了後30日以内はアーカイブへ
+                if (diffDays > 0) {
+                  ARCHIVE_EVENTS.push(ev);
+                  return;
+                }
+              }
+              // 開催中 または 未来のイベントはメインへ
+              ALL_EVENTS.push(ev);
+            });
+          }
+
+          renderNewsSection();
+          renderGanttTimeline();
+          renderEventAccordions();
+          updateGlobalHiddenUI();
         })
-        .catch(() => {});
+        .catch(err => {
+          console.log("data.json 読込完了", err);
+          renderNewsSection();
+          renderGanttTimeline();
+          renderEventAccordions();
+          updateGlobalHiddenUI();
+        });
     };
   </script>
 </body>
