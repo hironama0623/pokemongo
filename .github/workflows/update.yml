@@ -1,0 +1,37 @@
+name: Scheduled Pokemon GO Data Update
+
+on:
+  schedule:
+    # 日本時間 9:00, 12:00, 15:00, 18:00, 21:00 に実行 (UTC 0, 3, 6, 9, 12)
+    - cron: '0 0,3,6,9,12 * * *'
+  # GitHub上からいつでも手動実行できるボタン
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: リポジトリの取得
+        uses: actions/checkout@v4
+
+      - name: Python環境のセットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 必要なライブラリのインストール
+        run: |
+          pip install requests beautifulsoup4
+
+      - name: 更新スクリプトの実行
+        run: python updater.py
+
+      - name: 変更があればコミット＆プッシュ
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add data.json
+          git commit -m "Auto update Pokemon GO data [skip ci]" || exit 0
+          git push
