@@ -1,0 +1,9 @@
+// ページ読み込み時に data.json をフェッチしてヘッダーやニュースを最新化
+fetch('./data.json?t=' + new Date().getTime())
+  .then(res => res.json())
+  .then(remoteData => {
+    if (remoteData.updated_at) {
+      document.querySelector('.source-tag').innerText = '最終自動更新: ' + remoteData.updated_at;
+    }
+  })
+  .catch(err => console.log('データ読み込み完了'));
