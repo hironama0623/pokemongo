@@ -2,9 +2,8 @@ name: Scheduled Pokemon GO Data Update
 
 on:
   schedule:
-    # 日本時間 9:00, 12:00, 15:00, 18:00, 21:00 に実行 (UTC 0, 3, 6, 9, 12)
+    # 日本時間 9:00, 12:00, 15:00, 18:00, 21:00 に実行
     - cron: '0 0,3,6,9,12 * * *'
-  # GitHub上からいつでも手動実行できるボタン
   workflow_dispatch:
 
 jobs:
@@ -23,9 +22,11 @@ jobs:
 
       - name: 必要なライブラリのインストール
         run: |
-          pip install requests beautifulsoup4
+          pip install requests beautifulsoup4 google-genai
 
-      - name: 更新スクリプトの実行
+      - name: AI自動解析スクリプトの実行
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python updater.py
 
       - name: 変更があればコミット＆プッシュ
@@ -33,5 +34,5 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add data.json
-          git commit -m "Auto update Pokemon GO data [skip ci]" || exit 0
+          git commit -m "AI auto update Pokemon GO data [skip ci]" || exit 0
           git push
