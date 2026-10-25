@@ -251,7 +251,7 @@
     </div>
 
     <!-- ============================================================== -->
-    <!-- タブ 2: レイド & ダイマックス対策 -->
+    <!-- タブ 2: レイド & ダイマックス対策 (今と未来で完全分割) -->
     <!-- ============================================================== -->
     <div id="tabContentBattles" class="space-y-4 hidden">
 
@@ -302,15 +302,23 @@
         </div>
       </div>
 
-      <!-- 2-B: ダイマックス攻略 -->
+      <!-- 2-B: ダイマックス攻略 (現在出現中 / 次回予告で分割) -->
       <div id="secBattleDmax" class="space-y-4 hidden">
         <div>
-          <div class="text-xs font-bold text-slate-600 mb-2 flex items-center justify-between">
-            <span>💥 マックスバトル対象を選択 (9DB最新データ):</span>
-            <span class="text-[11px] text-amber-600 font-bold" id="dmaxEventStatusBanner"></span>
+          <div class="text-xs font-bold text-purple-700 mb-2 flex items-center justify-between">
+            <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></span> 🔴 現在出現中マックスバトル（今すぐ挑戦可能）:</span>
+            <span class="text-[11px] text-slate-500">タップで詳細対策切り替え</span>
           </div>
-          <div id="dmaxBossPicker" class="grid grid-cols-2 sm:grid-cols-4 gap-2"></div>
+          <div id="dmaxBossPickerCurrent" class="grid grid-cols-1 sm:grid-cols-3 gap-2"></div>
         </div>
+
+        <div>
+          <div class="text-xs font-bold text-purple-900 mb-2 flex items-center gap-1.5">
+            <span>🔮 次回予告・未来の予定マックスバトル:</span>
+          </div>
+          <div id="dmaxBossPickerFuture" class="grid grid-cols-2 sm:grid-cols-4 gap-2"></div>
+        </div>
+
         <div id="dmax9dbContainer"></div>
       </div>
 
@@ -507,7 +515,7 @@
         category: "main",
         startDay: 18,
         endDay: 24,
-        dateText: "10/18(日) 〜 10/24(土) 20:00 [本日終了]",
+        dateText: "10/18(日) 〜 10/24(土) 20:00 [終了]",
         summary: "夜間のほしのすな獲得量2倍。いわ・ひこうタイプの出現率アップ。メテノ（各種コア色）が野生で出現。",
         bonuses: ["捕獲時のほしのすな2倍", "夜間にメテノ出現率大幅アップ", "ほしのかけらの効果1.5倍"],
         wilds: [
@@ -530,7 +538,7 @@
         category: "dmax",
         startDay: 24,
         endDay: 24,
-        dateText: "10/24(土) 14:00〜17:00",
+        dateText: "10/24(土) 14:00〜17:00 [開催終了]",
         summary: "14:00〜17:00限定。パワースポットにシンオウUMAトリオが出現！日本はユクシー出現。海外招待でエムリット・アグノム参加可能。無料MP800配布＆色違い率UP！",
         bonuses: ["各日マックス粒子800MP配布", "色違い確率大幅アップ", "リモート参加上限引き上げ"],
         wilds: [],
@@ -605,8 +613,8 @@
         category: "dmax",
         startDay: 24,
         endDay: 25,
-        dateText: "10/24(土) 〜 10/25(日)",
-        summary: "★1パワースポットにニューラが集中出現。マニューラへ進化させることで、対エスパー（UMA戦）や対ゴースト戦の優秀なあくアタッカーに。",
+        dateText: "10/24(土) 〜 10/25(日) [本日終了]",
+        summary: "★1パワースポットにニューラが集中出現。マニューラへ進化させることで、対エスパーや対ゴースト戦の優秀なあくアタッカーに。",
         bonuses: ["パワースポットでのニューラ出現枠増加", "消費MP軽減"],
         wilds: [],
         raids: [{ dex: 215, name: "ダイマックス ニューラ", shiny: true, note: "★1パワースポット", targetKey: "dmax-sneasel", isDmax: true }],
@@ -848,7 +856,9 @@
 
     const RAID_DATA = {
       "palkia-origin": {
-        isCurrent: true,
+        month: 10,
+        startDay: 21,
+        endDay: 27,
         name: "パルキア (オリジンフォルム)",
         status: "〜10/27(火) 10:00まで [現在出現中]",
         tier: "★5 伝説レイド",
@@ -878,7 +888,9 @@
         ]
       },
       "mega-charizard-y": {
-        isCurrent: true,
+        month: 10,
+        startDay: 21,
+        endDay: 27,
         name: "メガリザードンY / メガリザードンX",
         status: "〜10/27(火) 10:00まで [現在出現中]",
         tier: "メガレイド (★4)",
@@ -910,7 +922,9 @@
         ]
       },
       "shadow-landorus": {
-        isCurrent: true,
+        month: 10,
+        startDay: 14,
+        endDay: 31,
         name: "シャドウランドロス (化身フォルム)",
         status: "平日・休日問わず連日常設中！(〜11/3)",
         tier: "★5 シャドウ伝説レイド",
@@ -940,7 +954,9 @@
         ]
       },
       "giratina-origin": {
-        isCurrent: false,
+        month: 10,
+        startDay: 27,
+        endDay: 31,
         name: "ギラティナ (オリジンフォルム)",
         status: "10/27(火) 10:00 〜 11/3(火) 10:00 [次回予告]",
         tier: "★5 伝説レイド",
@@ -975,7 +991,9 @@
         ]
       },
       "mega-banette": {
-        isCurrent: false,
+        month: 10,
+        startDay: 27,
+        endDay: 31,
         name: "メガジュペッタ",
         status: "10/27(火) 10:00 〜 11/3(火) 10:00 [次回予告]",
         tier: "メガレイド (★4)",
@@ -1002,148 +1020,148 @@
       }
     };
 
+    // ダイマックス攻略データ（現在・未来・過去を日程で自動判定）
     const DMAX_9DB_DATA = {
-      "dmax-uxie": {
-        name: "ユクシー",
-        tier: "★5",
-        dateInfo: "2026/10/24(土) 14:00 〜 17:00",
-        dex: 480,
-        cpPL20: "1370 - 1442",
+      "dmax-sneasel": {
+        month: 10,
+        startDay: 24,
+        endDay: 25,
+        name: "ダイマックス ニューラ",
+        tier: "★1 パワースポット",
+        dateInfo: "10/24(土) 〜 10/25(日) [現在出現率UP中]",
+        status: "〜10/25(日) 21:00まで [現在出現中]",
+        dex: 215,
+        cpPL20: "1118 - 1172",
         moves: [
-          { name: "みらいよち", type: "エスパー", color: "bg-pink-600" },
-          { name: "スピードスター", type: "ノーマル", color: "bg-slate-500" },
-          { name: "かみなり", type: "でんき", color: "bg-amber-500" }
+          { name: "イカサマ", type: "あく", color: "bg-stone-700" },
+          { name: "ゆきなだれ", type: "こおり", color: "bg-sky-600" },
+          { name: "つじぎり", type: "あく", color: "bg-stone-700" }
         ],
         weaknesses: [
+          { name: "かくとう (二重弱点)", color: "bg-orange-600 font-extrabold" },
+          { name: "ほのお", color: "bg-red-600" },
+          { name: "いわ", color: "bg-amber-600" },
+          { name: "はがね", color: "bg-slate-600" },
           { name: "むし", color: "bg-lime-600" },
-          { name: "ゴースト", color: "bg-purple-700" },
-          { name: "あく", color: "bg-stone-700" }
+          { name: "フェアリー", color: "bg-pink-600" }
         ],
         resistances: [
-          { name: "かくとう", color: "bg-orange-600" },
-          { name: "エスパー", color: "bg-pink-600" }
+          { name: "エスパー (無効化)", color: "bg-pink-600" },
+          { name: "ゴースト", color: "bg-purple-700" },
+          { name: "こおり", color: "bg-sky-600" },
+          { name: "あく", color: "bg-stone-700" }
         ],
         attackers: [
-          { rank: 1, name: "キョダイマックス ゲンガー", dex: 94, fast: "したでなめる*", charge: "シャドーボール" },
-          { rank: 2, name: "オーロンゲ", dex: 861, fast: "ふいうち", charge: "イカサマ" },
-          { rank: 3, name: "ゲンガー", dex: 94, fast: "したでなめる*", charge: "シャドーボール" },
-          { rank: 4, name: "ウーラオス (いちげき)", dex: 892, fast: "ふいうち", charge: "しっぺがえし" }
+          { rank: 1, name: "ウーラオス (いちげき)", dex: 892, fast: "カウンター", charge: "インファイト" },
+          { rank: 2, name: "ザマゼンタ (たてのおう)", dex: 889, fast: "メタルクロー", charge: "きょじゅうだん*" },
+          { rank: 3, name: "リザードン", dex: 6, fast: "ほのおのうず", charge: "ブラストバーン*" },
+          { rank: 4, name: "エースバーン", dex: 815, fast: "ひのこ", charge: "かえんボール" }
         ],
         tanks: [
           { rank: 1, name: "ザマゼンタ (たてのおう)", dex: 889, fast: "メタルクロー", charge: "きょじゅうだん*" },
           { rank: 2, name: "ハピナス", dex: 242, fast: "はたく", charge: "はかいこうせん" },
-          { rank: 3, name: "レジスチル", dex: 379, fast: "メタルクロー", charge: "ラスターカノン" },
-          { rank: 4, name: "レジロック", dex: 377, fast: "ロックオン", charge: "ストーンエッジ" }
+          { rank: 3, name: "ヨクバリス", dex: 820, fast: "たいあたり", charge: "のしかかり" },
+          { rank: 4, name: "レジスチル", dex: 379, fast: "メタルクロー", charge: "ラスターカノン" }
         ],
-        tankNote: "💡 <strong>9DB準拠 タンク1位のザマゼンタ(たてのおう)について:</strong> キャプチャ通り、圧倒的な防御種族値を誇るザマゼンタがタンク筆頭です。0.5秒技『メタルクロー』による超高速メーターチャージと、専用技『きょじゅうだん*』でゲージ回収＆耐久を最高水準で両立します。",
+        tankNote: "💡 <strong>9DB実戦ノート:</strong> かくとう技が『2.56倍の二重弱点』！★1のため、ウーラオスやザマゼンタ等の高火力格闘技で攻めればソロで瞬殺できます。マニューラに進化させることで、対エスパー・ゴースト用の最強格アタッカーを確保できます。",
         routine: [
-          {
-            step: 1,
-            title: "タンク役で通常技を連打しマックスメーターをためる。",
-            details: [
-              "⚡ エネルギーアイコンは必ず取る",
-              "通常技は0.5秒技を使用する",
-              "スペシャル技は使用しない"
-            ]
-          },
-          {
-            step: 2,
-            title: "マックスメーターがたまったらアタッカーに切り替えてマックス技を3回打つ。",
-            details: [
-              "※ヒーラーの場合は、リカバリーでの回復やウォールでのヘイト集めを優先"
-            ]
-          },
-          {
-            step: 3,
-            title: "再度タンク役に戻し通常技を連打する。",
-            details: [
-              "ボスの残りHPが僅かな場合はアタッカーのまま攻撃してもOK"
-            ]
-          }
+          { step: 1, title: "格闘技持ちまたは0.5秒技タンクでメーター回収。", details: ["エネルギーアイコン回収必須"] },
+          { step: 2, title: "ダイナックル / ダイスチルで一気にHPを削る。", details: ["二重弱点のため数発で撃破"] },
+          { step: 3, title: "捕獲して個体値厳選＆アメ回収。", details: ["消費MPが少なく周回推奨"] }
         ]
       },
-      "dmax-mesprit": {
-        name: "エムリット (欧州限定・招待可)",
-        tier: "★5",
-        dateInfo: "2026/10/24(土) 14:00 〜 17:00",
-        dex: 481,
-        cpPL20: "1669 - 1747",
+      "dmax-drilbur": {
+        month: 10,
+        startDay: 1,
+        endDay: 31,
+        name: "ダイマックス モグリュー",
+        tier: "★1 パワースポット (常設)",
+        dateInfo: "10月中常設出現中",
+        status: "連日常設中 [現在出現中]",
+        dex: 529,
+        cpPL20: "740 - 785",
         moves: [
-          { name: "みらいよち", type: "エスパー", color: "bg-pink-600" },
-          { name: "ふぶき", type: "こおり", color: "bg-sky-600" },
-          { name: "スピードスター", type: "ノーマル", color: "bg-slate-500" }
+          { name: "ドリルライナー", type: "じめん", color: "bg-amber-700" },
+          { name: "いわなだれ", type: "いわ", color: "bg-amber-600" }
         ],
         weaknesses: [
-          { name: "むし", color: "bg-lime-600" },
-          { name: "ゴースト", color: "bg-purple-700" },
-          { name: "あく", color: "bg-stone-700" }
+          { name: "みず", color: "bg-blue-600" },
+          { name: "くさ", color: "bg-emerald-600" },
+          { name: "こおり", color: "bg-sky-600" }
         ],
         resistances: [
-          { name: "かくとう", color: "bg-orange-600" },
-          { name: "エスパー", color: "bg-pink-600" }
+          { name: "でんき (無効化)", color: "bg-amber-500" },
+          { name: "どく", color: "bg-fuchsia-700" },
+          { name: "いわ", color: "bg-amber-600" }
         ],
         attackers: [
-          { rank: 1, name: "キョダイマックス ゲンガー", dex: 94, fast: "したでなめる*", charge: "シャドーボール" },
-          { rank: 2, name: "オーロンゲ", dex: 861, fast: "ふいうち", charge: "イカサマ" },
-          { rank: 3, name: "ゲンガー", dex: 94, fast: "したでなめる*", charge: "シャドーボール" },
-          { rank: 4, name: "ウーラオス (いちげき)", dex: 892, fast: "ふいうち", charge: "しっぺがえし" }
+          { rank: 1, name: "カメックス", dex: 9, fast: "みずでっぽう", charge: "ハイドロカノン*" },
+          { rank: 2, name: "フシギバナ", dex: 3, fast: "つるのムチ", charge: "ハードプラント*" },
+          { rank: 3, name: "インテレオン", dex: 818, fast: "みずでっぽう", charge: "なみのり" },
+          { rank: 4, name: "ゴリランダー", dex: 812, fast: "このは", charge: "くさむすび" }
         ],
         tanks: [
-          { rank: 1, name: "ザマゼンタ (たてのおう)", dex: 889, fast: "メタルクロー", charge: "きょじゅうだん*" },
-          { rank: 2, name: "レジスチル", dex: 379, fast: "メタルクロー", charge: "ラスターカノン" },
-          { rank: 3, name: "ハピナス", dex: 242, fast: "はたく", charge: "はかいこうせん" },
-          { rank: 4, name: "レジロック", dex: 377, fast: "ロックオン", charge: "ストーンエッジ" }
-        ],
-        tankNote: "💡 ふぶき被弾を警戒し、こおり半減耐性を持つザマゼンタ(たてのおう)やレジスチルでメーターを回収してください。",
-        routine: [
-          { step: 1, title: "こおり耐性タンクで0.5秒技を連打しエネルギー回収。", details: ["エネルギーアイコン回収必須"] },
-          { step: 2, title: "メーター満タンでアタッカーに交代しダイホロウ3連発。", details: ["ゲンガーの火力で一気に削る"] },
-          { step: 3, title: "再度タンクに戻し勝利までループ。", details: ["ふぶき直前はダイウォール推奨"] }
-        ]
-      },
-      "dmax-azelf": {
-        name: "アグノム (米大陸限定・招待可)",
-        tier: "★5",
-        dateInfo: "2026/10/24(土) 14:00 〜 17:00",
-        dex: 482,
-        cpPL20: "1766 - 1836",
-        moves: [
-          { name: "みらいよち", type: "エスパー", color: "bg-pink-600" },
-          { name: "きあいだま", type: "かくとう", color: "bg-orange-600" },
-          { name: "だいもんじ", type: "ほのお", color: "bg-red-600" }
-        ],
-        weaknesses: [
-          { name: "むし", color: "bg-lime-600" },
-          { name: "ゴースト", color: "bg-purple-700" },
-          { name: "あく", color: "bg-stone-700" }
-        ],
-        resistances: [
-          { name: "かくとう", color: "bg-orange-600" },
-          { name: "エスパー", color: "bg-pink-600" }
-        ],
-        attackers: [
-          { rank: 1, name: "キョダイマックス ゲンガー", dex: 94, fast: "したでなめる*", charge: "シャドーボール" },
-          { rank: 2, name: "ゲンガー", dex: 94, fast: "したでなめる*", charge: "シャドーボール" },
-          { rank: 3, name: "オーロンゲ", dex: 861, fast: "ふいうち", charge: "イカサマ" },
-          { rank: 4, name: "ウーラオス (いちげき)", dex: 892, fast: "ふいうち", charge: "しっぺがえし" }
-        ],
-        tanks: [
-          { rank: 1, name: "ゲンガー (格闘3重耐性)", dex: 94, fast: "したでなめる*", charge: "シャドーボール" },
-          { rank: 2, name: "ザマゼンタ (たてのおう)", dex: 889, fast: "メタルクロー", charge: "きょじゅうだん*" },
+          { rank: 1, name: "カメックス", dex: 9, fast: "みずでっぽう", charge: "ハイドロカノン*" },
+          { rank: 2, name: "フシギバナ", dex: 3, fast: "つるのムチ", charge: "ハードプラント*" },
           { rank: 3, name: "ハピナス", dex: 242, fast: "はたく", charge: "はかいこうせん" },
           { rank: 4, name: "ヨクバリス", dex: 820, fast: "たいあたり", charge: "のしかかり" }
         ],
-        tankNote: "💡 アグノムの即死級「きあいだま」は、ゲンガーが格闘3重耐性（0.244倍）で完全に受け流せます。",
+        tankNote: "💡 ドリュウズへの進化で対ゲンガー・電気・毒レイドの最重要アタッカーになります。水・草技で容易にソロ討伐可能。",
         routine: [
-          { step: 1, title: "ゲンガー先発で通常技連打（きあいだま無効化）。", details: ["0.5秒技で最速回収"] },
-          { step: 2, title: "メーター満タンでダイホロウ3連打。", details: ["防御が低いため早期決着可能"] },
-          { step: 3, title: "HP僅かならそのまま押し切る。", details: ["交代ロスなし"] }
+          { step: 1, title: "水・草タイプで通常技連打。", details: ["メーターを素早くためる"] },
+          { step: 2, title: "ダイストリーム / ダイソウゲンで撃破。", details: ["高個体・アメXLを確保"] }
+        ]
+      },
+      "dmax-sableye": {
+        month: 10,
+        startDay: 26,
+        endDay: 28,
+        name: "ダイマックス ヤミラミ",
+        tier: "★1 パワースポット",
+        dateInfo: "10/26(月) 18:00〜19:00 マックスマンデー / 10/26〜28 出現率UP",
+        status: "10/26(月) 18:00〜 [次回予告]",
+        dex: 302,
+        cpPL20: "790 - 840",
+        moves: [
+          { name: "イカサマ", type: "あく", color: "bg-stone-700" },
+          { name: "シャドークロー", type: "ゴースト", color: "bg-purple-700" },
+          { name: "パワージェム", type: "いわ", color: "bg-amber-600" }
+        ],
+        weaknesses: [
+          { name: "フェアリー (単一弱点)", color: "bg-pink-600 font-bold" }
+        ],
+        resistances: [
+          { name: "かくとう (無効化)", color: "bg-orange-600" },
+          { name: "ノーマル (無効化)", color: "bg-slate-500" },
+          { name: "エスパー (無効化)", color: "bg-pink-600" },
+          { name: "どく", color: "bg-fuchsia-700" }
+        ],
+        attackers: [
+          { rank: 1, name: "ザシアン (れきせん)", dex: 888, fast: "でんこうせっか", charge: "じゃれつく" },
+          { rank: 2, name: "トゲキッス", dex: 468, fast: "あまえる", charge: "マジカルシャイン" },
+          { rank: 3, name: "サーナイト", dex: 282, fast: "あまえる", charge: "マジカルシャイン" },
+          { rank: 4, name: "アシレーヌ", dex: 730, fast: "あまえる", charge: "ムーンフォース" }
+        ],
+        tanks: [
+          { rank: 1, name: "ハピナス", dex: 242, fast: "はたく", charge: "はかいこうせん" },
+          { rank: 2, name: "ザマゼンタ (たてのおう)", dex: 889, fast: "メタルクロー", charge: "きょじゅうだん*" },
+          { rank: 3, name: "ヨクバリス", dex: 820, fast: "たいあたり", charge: "のしかかり" },
+          { rank: 4, name: "レジスチル", dex: 379, fast: "メタルクロー", charge: "ラスターカノン" }
+        ],
+        tankNote: "💡 ヤミラミの弱点は『フェアリーのみ』！フェアリー技で攻めれば瞬殺できます。あく/ゴースト複合のためキョダイゲンガー戦の壁役に最適。",
+        routine: [
+          { step: 1, title: "フェアリータイプまたは高耐久タンク先発。", details: ["格闘・ノーマル・エスパーは無効化されるため出さない"] },
+          { step: 2, title: "ダイフェアリー / ダイアタックで撃破。", details: ["10/26(月) 18:00のマックスマンデーで集中捕獲推奨"] }
         ]
       },
       "dmax-gmax-gengar": {
+        month: 11,
+        startDay: 1,
+        endDay: 5,
         name: "キョダイマックス ゲンガー",
         tier: "★6 超難関",
         dateInfo: "11/1(日) 〜 11/5(木) ハロウィン本番",
+        status: "11/1(日) 10:00〜 [次回予告]",
         dex: 94,
         cpPL20: "1644 - 1714",
         moves: [
@@ -1181,6 +1199,37 @@
           { step: 2, title: "ドリュウズに交代しダイアース3連発。", details: ["ヒーラーはダイリカバリー支援"] },
           { step: 3, title: "タンクに戻しメーター回収を徹底。", details: ["★6は長期戦のため役割分担徹底"] }
         ]
+      },
+      // 10/24終了のUMAは過去データとして保持（現在・未来一覧には非表示）
+      "dmax-uxie": {
+        month: 10,
+        startDay: 24,
+        endDay: 24,
+        name: "ユクシー",
+        tier: "★5 [終了]",
+        dateInfo: "10/24(土) 14:00 〜 17:00",
+        status: "開催終了",
+        dex: 480
+      },
+      "dmax-mesprit": {
+        month: 10,
+        startDay: 24,
+        endDay: 24,
+        name: "エムリット",
+        tier: "★5 [終了]",
+        dateInfo: "10/24(土) 14:00 〜 17:00",
+        status: "開催終了",
+        dex: 481
+      },
+      "dmax-azelf": {
+        month: 10,
+        startDay: 24,
+        endDay: 24,
+        name: "アグノム",
+        tier: "★5 [終了]",
+        dateInfo: "10/24(土) 14:00 〜 17:00",
+        status: "開催終了",
+        dex: 482
       }
     };
 
@@ -1190,22 +1239,25 @@
     let readNewsIds = new Set();
     
     let activeRaidKey = "palkia-origin"; 
-    let activeDmax9dbKey = "dmax-uxie";
+    let activeDmax9dbKey = "dmax-sneasel"; // 現在出現中のニューラを初期選択
 
     let filterMega = false;
     let filterShadow = false;
 
-    // 過去イベントの判定
-    function isEventPast(ev) {
-      if (ev.month < todayMonth) return true;
-      if (ev.month === todayMonth && ev.endDay < todayDate) return true;
+    // 日時判定ヘルパー
+    function isEventPast(item) {
+      if (item.month < todayMonth) return true;
+      if (item.month === todayMonth && item.endDay < todayDate) return true;
       return false;
     }
-
-    // 本日開催中かどうかの判定
-    function isEventActiveToday(ev) {
-      if (ev.month !== todayMonth) return false;
-      return ev.startDay <= todayDate && ev.endDay >= todayDate;
+    function isEventActive(item) {
+      if (item.month !== todayMonth) return false;
+      return item.startDay <= todayDate && item.endDay >= todayDate;
+    }
+    function isEventFuture(item) {
+      if (item.month > todayMonth) return true;
+      if (item.month === todayMonth && item.startDay > todayDate) return true;
+      return false;
     }
 
     function initStorage() {
@@ -1344,9 +1396,8 @@
       const list = document.getElementById("todayEventsList");
       if (!list) return;
 
-      const activeEvents = ALL_EVENTS.filter(ev => isEventActiveToday(ev));
+      const activeEvents = ALL_EVENTS.filter(ev => isEventActive(ev));
 
-      // 本日終了するものを最優先にソート
       activeEvents.sort((a, b) => {
         const aEnd = (a.endDay === todayDate) ? 0 : 1;
         const bEnd = (b.endDay === todayDate) ? 0 : 1;
@@ -1364,7 +1415,7 @@
         const isEndingToday = (ev.endDay === todayDate);
         let timeOrRange = "";
         if (isEndingToday) {
-          timeOrRange = "本日限定 / 終了";
+          timeOrRange = "本日終了";
         } else if (ev.dateText.includes("連日")) {
           timeOrRange = "連日常設中";
         } else {
@@ -1400,7 +1451,6 @@
       const container = document.getElementById("newsItemsContainer");
       container.innerHTML = "";
 
-      // 終了したイベントに紐づくニュースは自動除外
       const visibleNews = NEWS_ITEMS.filter(n => {
         if (readNewsIds.has(n.id)) return false;
         const targetEv = ALL_EVENTS.find(e => e.id === n.targetId);
@@ -1459,7 +1509,6 @@
       renderEventAccordions();
     }
 
-    // ガントチャート (アクセス当日に連動)
     function renderGanttTimeline() {
       const headerRow = document.getElementById("ganttHeaderRow");
       const bgGrid = document.getElementById("ganttBgGrid");
@@ -1475,7 +1524,6 @@
       let startDay = 1;
       let endDay = daysInMonth;
 
-      // 当月であればアクセスした「今日」を先頭にして月末までを表示
       if (currentGanttMonth === todayMonth) {
         startDay = todayDate;
       }
@@ -1543,7 +1591,6 @@
       });
     }
 
-    // イベント詳細＆過去イベントアーカイブ自動振り分け
     function renderEventAccordions() {
       const container = document.getElementById("eventsAccordionContainer");
       const archiveContainer = document.getElementById("archivedEventsList");
@@ -1668,7 +1715,6 @@
         container.appendChild(details);
       });
 
-      // 過去イベントをアーカイブ一覧へ自動表示
       if (archiveContainer) {
         pastEvents.forEach(ev => {
           const div = document.createElement("div");
@@ -1683,7 +1729,6 @@
           archiveContainer.appendChild(div);
         });
 
-        // 過去の静的アーカイブも保持
         const staticArchives = [
           { title: "ゾロア コミュニティ・デイ", desc: "10/12(土) 開催終了 / 相棒変身ギミック＆色違い初実装" },
           { title: "メグロコ 孵化デイ (2kmタマゴ)", desc: "10/19(日) 開催終了 / 1/2孵化距離＆色違い高確率" }
@@ -1746,9 +1791,12 @@
 
       Object.keys(RAID_DATA).forEach(key => {
         const b = RAID_DATA[key];
+        if (isEventPast(b)) return; // 過去レイドは非表示
+
         const active = (key === activeRaidKey);
         const card = document.createElement("button");
-        
+        const isCurr = isEventActive(b);
+
         card.className = `p-2 rounded-xl border text-left transition flex items-center gap-2 ${
           active
             ? "bg-sky-50 border-sky-500 shadow-sm ring-1 ring-sky-500"
@@ -1762,12 +1810,12 @@
         card.innerHTML = `
           <img src="${getPokeImg(b.dex)}" alt="${b.name}" class="w-10 h-10 object-contain flex-shrink-0">
           <div class="overflow-hidden">
-            <div class="text-[10px] ${b.isCurrent ? 'text-emerald-700' : 'text-purple-700'} font-bold truncate">${b.tier}</div>
+            <div class="text-[10px] ${isCurr ? 'text-emerald-700' : 'text-purple-700'} font-bold truncate">${b.tier}</div>
             <div class="text-xs font-extrabold text-slate-900 truncate">${b.name}</div>
           </div>
         `;
 
-        if (b.isCurrent) {
+        if (isCurr) {
           pickerCurrent.appendChild(card);
         } else {
           pickerFuture.appendChild(card);
@@ -1780,6 +1828,7 @@
       const b = RAID_DATA[activeRaidKey];
       if (!b) return;
 
+      const isCurr = isEventActive(b);
       const weakBadges = b.weaknesses.map(w => `
         <span class="${w.color} text-white text-[11px] font-bold px-2 py-0.5 rounded shadow-sm">
           ${w.name} (${w.mult})
@@ -1791,8 +1840,8 @@
           <img src="${getPokeImg(b.dex)}" alt="${b.name}" class="w-20 h-20 object-contain flex-shrink-0">
           <div class="flex-1 text-center sm:text-left space-y-1">
             <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
-              <span class="text-xs ${b.isCurrent ? 'bg-emerald-100 text-emerald-800 border-emerald-300' : 'bg-purple-100 text-purple-800 border-purple-300'} font-bold px-2 py-0.5 rounded border">${b.tier}</span>
-              <span class="text-xs font-bold ${b.isCurrent ? 'text-emerald-700' : 'text-purple-700'}">${b.status}</span>
+              <span class="text-xs ${isCurr ? 'bg-emerald-100 text-emerald-800 border-emerald-300' : 'bg-purple-100 text-purple-800 border-purple-300'} font-bold px-2 py-0.5 rounded border">${b.tier}</span>
+              <span class="text-xs font-bold ${isCurr ? 'text-emerald-700' : 'text-purple-700'}">${b.status}</span>
             </div>
             <h3 class="text-lg font-black text-slate-900">${b.name}</h3>
             <div class="text-xs text-slate-600">
@@ -1872,19 +1921,34 @@
       });
     }
 
+    // ダイマックス攻略（今と未来で2分割描画）
     function renderDmax9dbSection() {
       renderDmax9dbPicker();
       renderDmax9dbCard();
     }
 
     function renderDmax9dbPicker() {
-      const picker = document.getElementById("dmaxBossPicker");
-      picker.innerHTML = "";
+      const pickerCurrent = document.getElementById("dmaxBossPickerCurrent");
+      const pickerFuture = document.getElementById("dmaxBossPickerFuture");
+      pickerCurrent.innerHTML = "";
+      pickerFuture.innerHTML = "";
+
+      // 過去ボス（UMA等）が選択されている場合は現在有効なボス（ニューラ等）へフォールバック
+      const validCurrentKeys = Object.keys(DMAX_9DB_DATA).filter(k => isEventActive(DMAX_9DB_DATA[k]));
+      const validFutureKeys = Object.keys(DMAX_9DB_DATA).filter(k => isEventFuture(DMAX_9DB_DATA[k]));
+
+      if (!isEventActive(DMAX_9DB_DATA[activeDmax9dbKey]) && !isEventFuture(DMAX_9DB_DATA[activeDmax9dbKey])) {
+        activeDmax9dbKey = validCurrentKeys[0] || validFutureKeys[0] || "dmax-sneasel";
+      }
 
       Object.keys(DMAX_9DB_DATA).forEach(key => {
         const d = DMAX_9DB_DATA[key];
+        if (isEventPast(d)) return; // 過去のダイマックス（10/24終了のUMAなど）は完全除外
+
         const active = (key === activeDmax9dbKey);
         const card = document.createElement("button");
+        const isCurr = isEventActive(d);
+
         card.className = `p-2 rounded-xl border text-left transition flex items-center gap-2 ${
           active
             ? "bg-purple-50 border-purple-500 shadow-sm ring-1 ring-purple-500"
@@ -1892,18 +1956,22 @@
         }`;
         card.onclick = () => {
           activeDmax9dbKey = key;
-          renderDmax9dbCard();
-          renderDmax9dbPicker();
+          renderDmax9dbSection();
         };
 
         card.innerHTML = `
           <img src="${getPokeImg(d.dex)}" alt="${d.name}" class="w-9 h-9 object-contain flex-shrink-0">
           <div class="overflow-hidden">
-            <div class="text-[10px] text-purple-700 font-bold truncate">${d.tier}</div>
+            <div class="text-[10px] ${isCurr ? 'text-purple-700' : 'text-slate-500'} font-bold truncate">${d.tier}</div>
             <div class="text-xs font-extrabold text-slate-900 truncate">${d.name}</div>
           </div>
         `;
-        picker.appendChild(card);
+
+        if (isCurr) {
+          pickerCurrent.appendChild(card);
+        } else {
+          pickerFuture.appendChild(card);
+        }
       });
     }
 
@@ -1922,7 +1990,7 @@
               <div>
                 <h2 class="text-2xl font-black text-white tracking-wide">${d.name}</h2>
                 <div class="text-xs text-purple-200 mt-0.5">
-                  捕獲時CP (PL20): <span class="font-extrabold text-amber-300 text-sm">${d.cpPL20}</span>
+                  捕獲時CP (PL20): <span class="font-extrabold text-amber-300 text-sm">${d.cpPL20 || '-'}</span>
                 </div>
               </div>
               <div class="text-right flex items-center gap-1 bg-purple-900/60 border border-purple-500/40 px-2 py-1 rounded-lg">
@@ -1936,7 +2004,7 @@
             <div class="bg-black/40 border border-purple-500/30 rounded-xl p-2.5">
               <div class="text-[11px] text-purple-300 font-bold mb-1.5">⚡ 使用技一覧 (9DB)</div>
               <div class="flex flex-wrap gap-1.5">
-                ${d.moves.map(m => `
+                ${(d.moves || []).map(m => `
                   <span class="text-xs px-2.5 py-1 rounded-md text-white font-bold ${m.color} flex items-center gap-1">
                     <span class="w-1.5 h-1.5 rounded-full bg-white"></span> ${m.name}
                   </span>
@@ -1948,13 +2016,13 @@
               <div class="bg-pink-950/60 border border-pink-500/40 rounded-lg p-1.5 px-2.5 flex items-center justify-between">
                 <span class="text-xs font-bold text-pink-300">弱点</span>
                 <div class="flex gap-1.5">
-                  ${d.weaknesses.map(w => `<span class="${w.color} text-white text-[11px] font-bold px-2 py-0.5 rounded">${w.name}</span>`).join("")}
+                  ${(d.weaknesses || []).map(w => `<span class="${w.color} text-white text-[11px] font-bold px-2 py-0.5 rounded">${w.name}</span>`).join("")}
                 </div>
               </div>
               <div class="bg-blue-950/60 border border-blue-500/40 rounded-lg p-1.5 px-2.5 flex items-center justify-between">
                 <span class="text-xs font-bold text-blue-300">耐性</span>
                 <div class="flex gap-1.5">
-                  ${d.resistances.map(r => `<span class="${r.color} text-white text-[11px] font-bold px-2 py-0.5 rounded">${r.name}</span>`).join("")}
+                  ${(d.resistances || []).map(r => `<span class="${r.color} text-white text-[11px] font-bold px-2 py-0.5 rounded">${r.name}</span>`).join("")}
                 </div>
               </div>
             </div>
@@ -1965,7 +2033,7 @@
               <span>🗡️</span> アタッカー (マックス技火力重視 TOP 4)
             </h3>
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
-              ${d.attackers.map(a => `
+              ${(d.attackers || []).map(a => `
                 <div class="bg-black/50 border border-purple-500/40 hover:border-sky-400 transition rounded-xl p-2.5 relative flex flex-col items-center text-center">
                   <span class="absolute top-1.5 left-1.5 bg-blue-600 text-white font-black text-[10px] w-5 h-5 rounded flex items-center justify-center">
                     ${a.rank}
@@ -1986,7 +2054,7 @@
               <span>🛡️</span> タンク (耐久＆メーターチャージ速度重視 TOP 4)
             </h3>
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
-              ${d.tanks.map(t => `
+              ${(d.tanks || []).map(t => `
                 <div class="bg-black/50 border border-purple-500/40 hover:border-emerald-400 transition rounded-xl p-2.5 relative flex flex-col items-center text-center">
                   <span class="absolute top-1.5 left-1.5 bg-blue-600 text-white font-black text-[10px] w-5 h-5 rounded flex items-center justify-center">
                     ${t.rank}
@@ -2001,7 +2069,7 @@
               `).join("")}
             </div>
             <div class="text-[11px] text-purple-200/90 bg-black/40 border border-purple-500/30 p-2.5 rounded-lg mt-2">
-              ${d.tankNote}
+              ${d.tankNote || ''}
             </div>
           </div>
 
@@ -2010,7 +2078,7 @@
               <span>📋</span> 立ち回り (9DB実戦定石 3ステップ)
             </h3>
             <div class="space-y-2">
-              ${d.routine.map(r => `
+              ${(d.routine || []).map(r => `
                 <div class="bg-black/60 border border-purple-500/40 rounded-xl p-3 flex items-start gap-3">
                   <div class="bg-blue-600 text-white font-black text-sm w-7 h-7 rounded flex items-center justify-center flex-shrink-0 mt-0.5">
                     ${r.step}
@@ -2067,7 +2135,6 @@
       renderEventAccordions();
       updateGlobalHiddenUI();
 
-      // GitHub Actionsによる定期自動更新日時のフェッチ反映 (data.json と連動)
       fetch('./data.json?t=' + new Date().getTime())
         .then(res => res.json())
         .then(remoteData => {
