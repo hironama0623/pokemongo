@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Pokémon GO 総合攻略ハブ (GameWith / 9DB / ポケマピ 統合版)</title>
+  <title>Pokémon GO 総合攻略ハブ (ポケマピ / GameWith / 9DB / 公式 統合版)</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
@@ -84,8 +84,8 @@
           </h1>
           <div class="text-[11px] text-slate-500 flex items-center gap-2">
             <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span id="autoUpdateTimestamp" class="font-bold text-slate-700">最終自動更新: リアルタイム同期済</span>
-            <span class="text-sky-600 font-semibold hidden sm:inline">GameWith / 9DB / ポケマピ 3大サイト統合仕様</span>
+            <span id="autoUpdateTimestamp" class="font-bold text-slate-700">最終検証・同期: 2026/10/25 (4サイト横断監査済)</span>
+            <span class="text-sky-600 font-semibold hidden sm:inline">ポケマピ / GameWith / 9DB / 公式 4大サイト統合仕様</span>
           </div>
         </div>
       </div>
@@ -107,7 +107,7 @@
         <span>⚔️</span> レイド & ダイマックス
       </button>
       <button id="tabNavGoPass" onclick="switchMainTab('gopass')" class="flex-1 py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1.5 text-slate-600 hover:text-slate-900">
-        <span>🎫</span> GOパス情報 (報酬一覧)
+        <span>🎫</span> GOパス情報 (月間 & イベント)
       </button>
     </nav>
   </div>
@@ -126,19 +126,19 @@
         <div class="bg-white border border-rose-200 rounded-xl p-3.5 shadow-sm">
           <div class="flex items-center justify-between mb-2">
             <h2 class="text-sm font-extrabold text-rose-600 flex items-center gap-1.5">
-              <span>🚨</span> 本日開催中・注目のレイド (<span id="todayHeaderDateLabel">読込中</span>)
+              <span>🚨</span> 本日開催中・注目のイベント (<span id="todayHeaderDateLabel">読込中</span>)
             </h2>
             <span class="text-[10px] bg-rose-50 text-rose-600 px-2 py-0.5 rounded-full font-bold border border-rose-200">要確認</span>
           </div>
           <ul id="todayEventsList" class="text-xs space-y-2 text-slate-700"></ul>
         </div>
 
-        <!-- 📢 直近の公式発表・最新ニュース速報 (日付+件名 / 10日間保持) -->
+        <!-- 📢 直近の公式発表・最新ニュース速報 (日付+件名 / 14日間保持) -->
         <div class="bg-white border border-sky-200 rounded-xl p-3.5 shadow-sm flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between mb-2">
               <h2 class="text-sm font-extrabold text-sky-700 flex items-center gap-1.5">
-                <span>📢</span> 公式発表・最新ニュース速報 (直近10日間)
+                <span>📢</span> 4サイト統合・最新ニュース速報 (直近発表)
               </h2>
               <button onclick="resetReadNews()" class="text-[10px] text-slate-500 hover:text-sky-600 underline">
                 既読リセット
@@ -174,10 +174,10 @@
         <div class="flex flex-wrap items-center gap-1.5 pb-2.5 pt-1 border-b border-slate-100">
           <span class="text-[11px] text-slate-500 font-bold mr-1">絞り込み:</span>
           <button onclick="filterTimelineCategory('all')" id="catBtn-all" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-sky-600 text-white shadow-sm">すべて</button>
-          <button onclick="filterTimelineCategory('main')" id="catBtn-main" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-100 text-slate-600 hover:bg-slate-200">🎪 メイン・シーズン</button>
+          <button onclick="filterTimelineCategory('main')" id="catBtn-main" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-100 text-slate-600 hover:bg-slate-200">🎪 メイン・季節イベント</button>
           <button onclick="filterTimelineCategory('raid')" id="catBtn-raid" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-100 text-slate-600 hover:bg-slate-200">⚔️ レイドバトル</button>
           <button onclick="filterTimelineCategory('dmax')" id="catBtn-dmax" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-100 text-slate-600 hover:bg-slate-200">⚡ マックスバトル</button>
-          <button onclick="filterTimelineCategory('collab')" id="catBtn-collab" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-100 text-slate-600 hover:bg-slate-200">🤝 コラボ・限定</button>
+          <button onclick="filterTimelineCategory('collab')" id="catBtn-collab" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-100 text-slate-600 hover:bg-slate-200">🤝 大型・コラボ・パス</button>
           <button onclick="filterTimelineCategory('gbl')" id="catBtn-gbl" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-100 text-slate-600 hover:bg-slate-200">🥊 GBL</button>
         </div>
 
@@ -193,10 +193,11 @@
 
         <!-- 凡例 -->
         <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-slate-500 mt-2 px-1">
-          <span class="flex items-center gap-1"><span class="w-3 h-2 rounded bg-emerald-100 border border-emerald-400"></span> 伝説・メガレイド</span>
+          <span class="flex items-center gap-1"><span class="w-3 h-2 rounded bg-sky-100 border border-sky-400"></span> メイン・季節イベント</span>
+          <span class="flex items-center gap-1"><span class="w-3 h-2 rounded bg-emerald-100 border border-emerald-400"></span> 伝説・メガ・スーパーメガレイド</span>
           <span class="flex items-center gap-1"><span class="w-3 h-2 rounded bg-rose-100 border border-rose-400"></span> ★5シャドウ (連日常設)</span>
-          <span class="flex items-center gap-1"><span class="w-3 h-2 rounded bg-purple-100 border border-purple-400"></span> マックスバトル</span>
-          <span class="flex items-center gap-1"><span class="w-3 h-2 rounded bg-teal-100 border border-teal-400"></span> コラボ (NPB・イオン等)</span>
+          <span class="flex items-center gap-1"><span class="w-3 h-2 rounded bg-purple-100 border border-purple-400"></span> マックスバトル・マンデー</span>
+          <span class="flex items-center gap-1"><span class="w-3 h-2 rounded bg-teal-100 border border-teal-400"></span> ワイルドエリア・コラボ・GOパス</span>
           <span class="flex items-center gap-1"><span class="w-3 h-2 rounded bg-orange-100 border border-orange-400"></span> GBL</span>
         </div>
       </section>
@@ -205,7 +206,7 @@
       <section class="space-y-3">
         <div class="flex items-center justify-between px-1">
           <h2 class="text-sm font-extrabold text-slate-800 flex items-center gap-1.5">
-            <span>📌</span> イベント詳細・限定タスク一覧 (開催中＆今後予定)
+            <span>📌</span> イベント詳細・ボーナス・出現ポケモン・限定タスク一覧 (開催中＆今後予定)
           </h2>
           <span class="text-[11px] text-slate-500">各カードの「👁 非表示」で個別除外可能</span>
         </div>
@@ -214,34 +215,44 @@
         <!-- 過去の終了イベント アーカイブ (動的自動振り分け) -->
         <details class="bg-white border border-slate-200 rounded-xl overflow-hidden mt-4 shadow-sm group">
           <summary class="p-3 text-xs font-bold text-slate-600 cursor-pointer hover:bg-slate-50 flex items-center justify-between">
-            <span class="flex items-center gap-1.5">📂 アーカイブ（終了済みのイベント履歴）</span>
+            <span class="flex items-center gap-1.5">📂 アーカイブ（2026年10月 終了済みのイベント履歴）</span>
             <span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded text-slate-500 group-open:rotate-180 transition-transform">▼</span>
           </summary>
           <div id="archivedEventsList" class="p-3 pt-0 text-xs text-slate-600 border-t border-slate-100 space-y-2 mt-2"></div>
         </details>
       </section>
 
-      <!-- GBL最下部サマリー -->
+      <!-- シーズン24「黄昏の旅路」＆ GBLサマリー -->
       <section class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
-        <details class="group">
+        <details class="group" open>
           <summary class="p-3 text-xs font-bold text-orange-600 cursor-pointer flex items-center justify-between hover:bg-orange-50/50">
-            <span class="flex items-center gap-1.5">🏆 GOバトルリーグ (GBL: 黄昏の旅路) 現在のメタ早見表 (9DB準拠)</span>
+            <span class="flex items-center gap-1.5">🏆 シーズン24「黄昏の旅路」常設ボーナス・タマゴラインナップ・GBL情報 (2026/9/8〜12/1)</span>
             <span class="text-[10px] text-slate-400 group-open:rotate-180 transition-transform">▼</span>
           </summary>
-          <div class="p-3 pt-1 text-xs border-t border-slate-100 text-slate-700 space-y-2">
-            <p class="text-slate-500">開催期間: 〜10/28(水) 早朝まで (勝利時ほしのすな4倍 / ランク16以上でモルペコ報酬出現)</p>
+          <div class="p-3 pt-1 text-xs border-t border-slate-100 text-slate-700 space-y-2.5">
+            <p class="text-slate-500">シーズン期間: 2026/9/8(火) 10:00 〜 12/1(火) 10:00 / GBL期間: 9/9(水) 5:00 〜 12/2(水) 6:00 (ポケマピ・9DB準拠)</p>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-1">
               <div class="bg-orange-50/50 p-2.5 rounded-lg border border-orange-100">
-                <div class="text-[11px] font-bold text-orange-800">ハイパーリーグ (CP2500)</div>
-                <div class="text-[11px] text-slate-600 mt-1">環境トップ: ジガルデ(パーフェクト)、ギラティナ(アナザー)、コバルオン</div>
+                <div class="text-[11px] font-bold text-orange-800">🥚 2km / 5km タマゴ注目枠</div>
+                <div class="text-[11px] text-slate-600 mt-1">
+                  <strong>2km:</strong> メラルバ、ズピカ、ピチュー、トゲピー、ルリリ<br>
+                  <strong>5km:</strong> ユキハミ、ヤクデ、パピモッチ、オラチフ、イエッサン(♂/♀)、ゴンベ
+                </div>
               </div>
               <div class="bg-orange-50/50 p-2.5 rounded-lg border border-orange-100">
-                <div class="text-[11px] font-bold text-orange-800">マスターリーグ メガ (制限なし)</div>
-                <div class="text-[11px] text-slate-600 mt-1">環境トップ: メガレックウザ、ディアルガ(オリジン)、メガギャラドス</div>
+                <div class="text-[11px] font-bold text-orange-800">🥚 7km / 10km タマゴ注目枠</div>
+                <div class="text-[11px] text-slate-600 mt-1">
+                  <strong>10km:</strong> カルボウ、カヌチャン、ヒトツキ、セビエ、ベロバー、メラルバ<br>
+                  <strong>週間歩行10km:</strong> エレズン、クリムガン、ジジーロン、フカマル
+                </div>
               </div>
               <div class="bg-orange-50/50 p-2.5 rounded-lg border border-orange-100">
-                <div class="text-[11px] font-bold text-orange-800">ファンタジーカップ (SL)</div>
-                <div class="text-[11px] text-slate-600 mt-1">ドラゴン・はがね・フェアリー限定 / マリルリ、クチート、ガラルマッギョ</div>
+                <div class="text-[11px] font-bold text-orange-800">🥊 GBL & 週間スケジュール仕様</div>
+                <div class="text-[11px] text-slate-600 mt-1">
+                  ・毎週月曜 6:00〜21:00：マックスマンデー<br>
+                  ・毎週水曜 18:00〜19:00：レイドアワー<br>
+                  ・毎週木曜 18:00〜19:00：スポットライトアワー(デイリーディスカバリー)
+                </div>
               </div>
             </div>
           </div>
@@ -257,10 +268,10 @@
 
       <div class="flex gap-2 p-1 bg-slate-200/80 rounded-xl border border-slate-300">
         <button id="subTabRaids" onclick="switchBattleSub('raids')" class="flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition bg-white text-emerald-700 shadow-sm">
-          ⚔️ ★5伝説・メガ・シャドウレイド
+          ⚔️ ★5伝説・スーパーメガ・メガ・シャドウレイド
         </button>
         <button id="subTabDmax" onclick="switchBattleSub('dmax')" class="flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition text-slate-600 hover:text-slate-900">
-          💥 ダイマックス攻略 (9DB完全準拠)
+          💥 ダイマックス＆キョダイマックス攻略 (9DB準拠)
         </button>
       </div>
 
@@ -276,7 +287,7 @@
 
         <div>
           <div class="text-xs font-bold text-purple-700 mb-2 flex items-center gap-1.5">
-            <span>🔮 次回予告・未来の予定レイド (10/27 10:00〜):</span>
+            <span>🔮 次回予告・今後の注目レイド (10/28〜 / 10/31限定 / 11月):</span>
           </div>
           <div id="raidBossPickerFuture" class="grid grid-cols-2 sm:grid-cols-4 gap-2"></div>
         </div>
@@ -287,7 +298,7 @@
           <div class="flex flex-wrap items-center justify-between gap-2 mb-3 pb-3 border-b border-slate-100">
             <div>
               <h3 class="text-sm font-black text-slate-900" id="raidRankingTitle">対策DPSランキング TOP 10 (通常ポケモン限定)</h3>
-              <p class="text-[11px] text-slate-500">GameWith / 9DB / ポケマピ レイドシミュレーター基準</p>
+              <p class="text-[11px] text-slate-500">GameWith / 9DB / ポケマピ カウンターリスト(PL50)基準</p>
             </div>
             <div class="flex items-center gap-2">
               <button id="btnToggleMega" onclick="toggleRaidFilter('mega')" class="text-xs font-bold px-3 py-1.5 rounded-lg border transition bg-slate-100 text-slate-600 border-slate-200 hover:bg-slate-200">
@@ -314,7 +325,7 @@
 
         <div>
           <div class="text-xs font-bold text-purple-900 mb-2 flex items-center gap-1.5">
-            <span>🔮 次回予告・未来の予定マックスバトル:</span>
+            <span>🔮 次回予告・今後のマックスバトル (10/26〜ヤミラミ / 11/2〜ワンリキー / 11/14〜ワイルドエリア):</span>
           </div>
           <div id="dmaxBossPickerFuture" class="grid grid-cols-2 sm:grid-cols-4 gap-2"></div>
         </div>
@@ -325,55 +336,117 @@
     </div>
 
     <!-- ============================================================== -->
-    <!-- タブ 3: 🎫 GOパス情報 -->
+    <!-- タブ 3: 🎫 GOパス情報 (月間パス & イベント限定パス完全対応) -->
     <!-- ============================================================== -->
     <div id="tabContentGoPass" class="space-y-4 hidden">
 
       <div class="flex gap-2 p-1 bg-slate-200/80 rounded-xl border border-slate-300">
         <button id="goPassSubCurrent" onclick="switchGoPassSub('current')" class="flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition bg-white text-amber-700 shadow-sm">
-          🎃 現在開催中のGOパス (10月度: カイオーガ)
+          🎃 10月開催のGOパス (10月度:カイオーガ & ハロウィン2026)
         </button>
         <button id="goPassSubFuture" onclick="switchGoPassSub('future')" class="flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition text-slate-600 hover:text-slate-900">
-          🔮 今後予定のGOパス (11月: グラードン / 12月)
+          🔮 11月予定のGOパス (11月度:グラードン & ワイルドウィーク:銀の王冠)
         </button>
       </div>
 
-      <!-- 3-A: 現在開催中 (10月 GOパス) -->
-      <div id="secGoPassCurrent" class="space-y-3">
+      <!-- 3-A: 10月開催中 & 直近開始 (GOパス：10月 & GOパス：ハロウィン2026) -->
+      <div id="secGoPassCurrent" class="space-y-4">
+
+        <!-- ① GOパス：ハロウィン2026 (10/27 10:00〜11/5 20:00) -->
+        <div class="bg-white border-2 border-orange-300 rounded-xl p-4 shadow-sm space-y-3">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl">👻</span>
+              <div>
+                <div class="flex items-center gap-2">
+                  <span class="text-[10px] bg-orange-600 text-white font-bold px-2 py-0.5 rounded">イベント連動パス</span>
+                  <span class="text-[11px] text-orange-700 font-bold">受取期限: 11/7(土) 20:00まで</span>
+                </div>
+                <h2 class="text-base sm:text-lg font-black text-slate-900 mt-0.5">GOパス：ハロウィン2026 (パート1＆パート2共通)</h2>
+                <div class="text-[11px] text-slate-600 font-medium">挑戦期間: 2026年10月27日(火) 10:00 〜 11月5日(木) 20:00</div>
+              </div>
+            </div>
+            <span class="text-xs bg-orange-100 text-orange-800 font-bold px-2.5 py-1 rounded-full border border-orange-300">
+              デラックス: 1,120円 (+10ランク: 1,400円)
+            </span>
+          </div>
+
+          <p class="text-xs text-slate-700 leading-relaxed bg-orange-50/70 p-2.5 rounded-lg border border-orange-200">
+            ハロウィン2026パート1開始（10/27 10:00）と同時に全トレーナーへ無料配布！イベント全体の<strong>「捕獲時アメ倍率」「捕獲時ほしのすな倍率」がこのGOパスのランク到達（マイルストーン）によって解放・強化される仕様</strong>です。
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+            <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+              <div class="font-extrabold text-orange-700 mb-1">🍬 ティア1（ランク10到達で発動）</div>
+              <ul class="text-[11px] text-slate-700 space-y-0.5 list-disc list-inside">
+                <li><strong>無料パス:</strong> ポケモン捕獲時のアメが <strong>2倍</strong></li>
+                <li class="text-amber-700 font-bold"><strong>デラックス版:</strong> ポケモン捕獲時のアメが <strong>3倍</strong></li>
+              </ul>
+            </div>
+            <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+              <div class="font-extrabold text-orange-700 mb-1">✨ ティア2（ランク20到達で発動）</div>
+              <ul class="text-[11px] text-slate-700 space-y-0.5 list-disc list-inside">
+                <li><strong>無料パス:</strong> ポケモン捕獲時の「ほしのすな」が <strong>2倍</strong></li>
+                <li class="text-amber-700 font-bold"><strong>デラックス版:</strong> ポケモン捕獲時の「ほしのすな」が <strong>3倍</strong></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs pt-1">
+            <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+              <strong class="text-emerald-700">【無料版の主な報酬】</strong>
+              <p class="text-[11px] text-slate-600 mt-1">ハロウィンイベントにぴったりなポケモンと遭遇、ポケモンのアメ、ふしぎなアメ、ハイパーボール等</p>
+            </div>
+            <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+              <strong class="text-amber-700">【デラックス版の追加報酬】</strong>
+              <p class="text-[11px] text-slate-600 mt-1">新作着せ替え<strong>「パティシエ トップス」「パティシエ パンツ」</strong>、イベントポケモン追加遭遇、ふしぎなアメXL、プレミアムバトルパス</p>
+            </div>
+            <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+              <strong class="text-sky-700">【Web Store限定特典】</strong>
+              <p class="text-[11px] text-slate-600 mt-1">Web Store購入でハイパーボール×10、げんきのかたまり×5、まんたんのくすり×5、プレパス×1が追加付与（ハイパーボックスはプレパス×5等）</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ② GOパス：2026年10月 (10/6 10:00〜11/3 10:00) -->
         <div class="bg-white border border-purple-200 rounded-xl p-4 shadow-sm">
           <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
             <div class="flex items-center gap-2">
-              <span class="text-2xl">🎃</span>
+              <span class="text-2xl">🌊</span>
               <div>
-                <h2 class="text-base sm:text-lg font-black text-purple-900">GOパス：2026年10月 (ハロウィン・ナイト)</h2>
-                <div class="text-[11px] text-purple-600 font-medium">期間: 2026年10月1日(木) 10:00 〜 11月3日(火) 10:00</div>
+                <div class="flex items-center gap-2">
+                  <span class="text-[10px] bg-purple-600 text-white font-bold px-2 py-0.5 rounded">月間GOパス (現在開催中)</span>
+                  <span class="text-[11px] text-rose-600 font-bold">🔥 10/31(土)〜11/1(日)は1日のPT上限撤廃！</span>
+                </div>
+                <h2 class="text-base sm:text-lg font-black text-purple-900 mt-0.5">GOパス：2026年10月 (カイオーガ & キラチャーム)</h2>
+                <div class="text-[11px] text-purple-600 font-medium">挑戦期間: 2026年10月6日(火) 10:00 〜 11月3日(火・祝) 10:00 (報酬受取: 11/5 10:00まで)</div>
               </div>
             </div>
             <span class="text-xs bg-purple-100 text-purple-800 font-bold px-2.5 py-1 rounded-full border border-purple-300">
-              目玉: カイオーガ & キラチャーム
+              1日上限: 250pt + タスク分 (1ランク=100pt)
             </span>
           </div>
           <p class="text-xs text-slate-700 leading-relaxed bg-purple-50/50 p-2.5 rounded-lg border border-purple-100">
-            無料版でもランク100到達で<strong>カイオーガ</strong>と確定遭遇！デラックス版（1,120円）では合計1,400ポケコインと、フレンド1人を即時キラフレンド化できる「キラチャーム」を獲得可能です。
+            無料版ランク100到達で<strong>カイオーガ</strong>と確定遭遇！有料のデラックス版（1,120円 / +10ランク:1,400円）では最終ランク100でフレンド1人をキラフレンドにできる<strong>「キラチャーム（※使用期限：2026/11/8(日) 23:59まで）」</strong>を獲得可能です。<strong>最後の土日（10/31〜11/1）は1日のGOポイント上限(250pt)が完全撤廃</strong>されます！
           </p>
         </div>
 
         <div class="bg-white border border-slate-200 rounded-xl p-3.5 space-y-2 shadow-sm">
           <h3 class="text-xs sm:text-sm font-extrabold text-amber-700 flex items-center gap-1.5">
-            <span>⭐</span> メジャーマイルストーン（期間中常時発動）
+            <span>⭐</span> GOパス：10月 メジャーマイルストーン（期間中常時発動）
           </h3>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-700">
             <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200">
-              <strong class="text-sky-700">ランク1到達:</strong> ポケモン交換時のアメ+1個、TL31以上はアメXL確定ドロップ
+              <strong class="text-sky-700">ティア1 (ランク1到達):</strong> ポケモン交換時のアメ+1個、TL31以上は交換時アメXL確定
             </div>
             <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200">
-              <strong class="text-sky-700">ランク25到達:</strong> 1日のギフト開封40個（デラックス: 50個）、所持上限+10個
+              <strong class="text-sky-700">ティア2 (ランク25到達):</strong> 1日のギフト開封40個・入手125個・所持上限+10個（デラックスは開封50個・入手150個・所持上限+20個）
             </div>
             <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200">
-              <strong class="text-sky-700">ランク50到達:</strong> おさんぽおこうの効果時間が「30分（2倍）」に延長
+              <strong class="text-sky-700">ティア3 (ランク50到達):</strong> おさんぽおこうの持続時間が「2倍（30分）」に延長
             </div>
             <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200">
-              <strong class="text-sky-700">ランク75到達:</strong> タマゴ孵化時のほしのすな＆獲得XPが増加
+              <strong class="text-sky-700">ティア4 (ランク75到達):</strong> タマゴ孵化時の獲得XP・ほしのすなが増加
             </div>
           </div>
         </div>
@@ -382,12 +455,18 @@
           <div onclick="togglePassTable()" class="p-3.5 bg-slate-50 hover:bg-slate-100 cursor-pointer flex items-center justify-between transition">
             <div class="flex items-center gap-2">
               <span class="text-base">📋</span>
-              <h3 class="text-xs sm:text-sm font-extrabold text-slate-900">ランク別リワード早見表 (ランク1 〜 100)</h3>
+              <h3 class="text-xs sm:text-sm font-extrabold text-slate-900">GOパス：10月 主要ランク別リワード＆ポイント獲得配分表</h3>
             </div>
             <span id="passTableToggleText" class="text-xs text-sky-600 font-bold">▼ 開く</span>
           </div>
 
           <div id="passTableContainer" class="hidden border-t border-slate-200 max-h-96 overflow-y-auto">
+            <div class="p-2.5 bg-sky-50/60 border-b border-slate-200 text-[11px] text-slate-700 flex flex-wrap gap-4">
+              <span><strong>ポイント獲得配分:</strong> レイド1勝 = <strong>100 PTS</strong></span>
+              <span>タマゴ1個孵化 = <strong>40 PTS</strong></span>
+              <span>ポケモン1匹捕獲 = <strong>5 PTS</strong></span>
+              <span>＋デイリー＆ウィークリータスク（上限枠外）</span>
+            </div>
             <table class="w-full text-xs text-left">
               <thead class="bg-slate-100 text-slate-600 sticky top-0 border-b border-slate-200">
                 <tr>
@@ -397,89 +476,70 @@
                 </tr>
               </thead>
               <tbody class="divide-y divide-slate-100 text-slate-700">
-                <tr class="hover:bg-slate-50"><td class="p-2.5 text-center font-bold text-slate-500">1</td><td>モンスターボール ×20</td><td class="text-amber-700 font-medium">モンスターボール ×50 + プレミアムパス ×1</td></tr>
-                <tr class="hover:bg-slate-50"><td class="p-2.5 text-center font-bold text-slate-500">5</td><td>ほしのすな ×1,000</td><td class="text-amber-700 font-medium">ほしのすな ×3,000 + 50ポケコイン</td></tr>
-                <tr class="hover:bg-slate-50"><td class="p-2.5 text-center font-bold text-slate-500">10</td><td>しあわせタマゴ ×1</td><td class="text-amber-700 font-medium">スーパーふかそうち ×1</td></tr>
-                <tr class="hover:bg-slate-50"><td class="p-2.5 text-center font-bold text-slate-500">20</td><td>わざマシンノーマル ×2</td><td class="text-amber-700 font-medium">時限ふかそうち ×1 + 100ポケコイン</td></tr>
-                <tr class="hover:bg-slate-50 bg-sky-50/50"><td class="p-2.5 text-center font-bold text-sky-700">25</td><td class="text-sky-800 font-bold">【マイルストーン】ギフト開封40個</td><td class="text-amber-700 font-bold">ギフト開封50個 + ふしぎなアメ ×5</td></tr>
-                <tr class="hover:bg-slate-50"><td class="p-2.5 text-center font-bold text-slate-500">30</td><td>ダイマックスモグリュー遭遇</td><td class="text-amber-700 font-medium">モグリューのアメXL ×5 + 100ポケコイン</td></tr>
-                <tr class="hover:bg-slate-50"><td class="p-2.5 text-center font-bold text-slate-500">40</td><td>ふしぎなアメ ×2</td><td class="text-amber-700 font-medium">プレミアムバトルパス ×2</td></tr>
-                <tr class="hover:bg-slate-50 bg-sky-50/50"><td class="p-2.5 text-center font-bold text-sky-700">50</td><td class="text-sky-800 font-bold">【マイルストーン】おこう効果30分</td><td class="text-amber-700 font-bold">おこう ×3 + 150ポケコイン</td></tr>
-                <tr class="hover:bg-slate-50"><td class="p-2.5 text-center font-bold text-slate-500">60</td><td>ほしのかけら ×1</td><td class="text-amber-700 font-medium">すごいわざマシンノーマル ×1</td></tr>
-                <tr class="hover:bg-slate-50 bg-sky-50/50"><td class="p-2.5 text-center font-bold text-sky-700">75</td><td class="text-sky-800 font-bold">【マイルストーン】孵化砂・XP増加</td><td class="text-amber-700 font-bold">ふしぎなアメXL ×3 + 150ポケコイン</td></tr>
-                <tr class="hover:bg-slate-50"><td class="p-2.5 text-center font-bold text-slate-500">85</td><td>ハイパーボール ×20</td><td class="text-amber-700 font-medium">ハイパーボール ×50 + 200ポケコイン</td></tr>
-                <tr class="hover:bg-slate-50"><td class="p-2.5 text-center font-bold text-slate-500">95</td><td>ふしぎなアメXL ×2</td><td class="text-amber-700 font-medium">ふしぎなアメXL ×5</td></tr>
-                <tr class="hover:bg-slate-50 bg-amber-50/70 font-bold"><td class="p-2.5 text-center font-black text-amber-700">100</td><td class="text-emerald-700 font-black">✨ カイオーガ (確定遭遇)</td><td class="text-amber-700 font-black">✨ キラチャーム ×1 + 250ポケコイン</td></tr>
+                <tr class="hover:bg-slate-50 bg-sky-50/50"><td class="p-2.5 text-center font-bold text-sky-700">1</td><td class="text-sky-800 font-bold">【マイルストーン】交換アメ+1 & アメXL確定</td><td class="text-amber-700 font-medium">ほしのすな & 経験値ボーナス</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-2.5 text-center font-bold text-slate-500">2</td><td>10,000 XP</td><td class="text-amber-700 font-medium">ほしのすな ×10,000</td></tr>
+                <tr class="hover:bg-slate-50 bg-sky-50/50"><td class="p-2.5 text-center font-bold text-sky-700">25</td><td class="text-sky-800 font-bold">【マイルストーン】ギフト開封40個 / 入手125個 / 所持+10</td><td class="text-amber-700 font-bold">ギフト開封50個 / 入手150個 / 所持+20</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-2.5 text-center font-bold text-slate-500">26</td><td>スーパーボール ×5</td><td class="text-amber-700 font-medium">スーパーボール ×25</td></tr>
+                <tr class="hover:bg-slate-50 bg-sky-50/50"><td class="p-2.5 text-center font-bold text-sky-700">50</td><td class="text-sky-800 font-bold">【マイルストーン】おさんぽおこう効果時間2倍</td><td class="text-amber-700 font-bold">おこう・レアアイテム枠</td></tr>
+                <tr class="hover:bg-slate-50 bg-sky-50/50"><td class="p-2.5 text-center font-bold text-sky-700">75</td><td class="text-sky-800 font-bold">【マイルストーン】タマゴ孵化時XP＆ほしのすな増加</td><td class="text-amber-700 font-bold">ふかそうち・マックス粒子枠</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-2.5 text-center font-bold text-slate-500">97</td><td>カイオーガのアメ ×3</td><td class="text-amber-700 font-medium">カイオーガのアメ ×10</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-2.5 text-center font-bold text-slate-500">98</td><td>ほしのすな ×5,000</td><td class="text-amber-700 font-medium">カイオーガのアメXL ×3</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-2.5 text-center font-bold text-slate-500">99</td><td>5,000 XP</td><td class="text-amber-700 font-medium">スーパーふかそうち ×1</td></tr>
+                <tr class="hover:bg-slate-50 bg-amber-50/70 font-bold"><td class="p-2.5 text-center font-black text-amber-700">100</td><td class="text-emerald-700 font-black">✨ カイオーガ (確定遭遇)</td><td class="text-amber-700 font-black">✨ キラチャーム ×1 (期限:11/8 23:59)</td></tr>
               </tbody>
             </table>
           </div>
         </div>
-
-        <div class="bg-white border border-slate-200 rounded-xl p-3.5 shadow-sm">
-          <h3 class="text-xs sm:text-sm font-extrabold text-sky-700 mb-2 flex items-center gap-1.5">
-            <span>💡</span> 3サイト直伝：今週中にRank 100到達するためのデイリー目標
-          </h3>
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs text-slate-700">
-            <div class="bg-slate-50 p-2 rounded-lg border border-slate-200">
-              <strong class="text-amber-700">1. 初スピン＆初捕獲</strong>
-              <p class="text-[11px] text-slate-500 mt-0.5">毎日欠かさず達成（1日合計 +150pt）</p>
-            </div>
-            <div class="bg-slate-50 p-2 rounded-lg border border-slate-200">
-              <strong class="text-amber-700">2. ハロウィンタスク3回</strong>
-              <p class="text-[11px] text-slate-500 mt-0.5">ポケストップから限定リサーチ達成（+180pt）</p>
-            </div>
-            <div class="bg-slate-50 p-2 rounded-lg border border-slate-200">
-              <strong class="text-amber-700">3. レイド/ダイマックス1戦</strong>
-              <p class="text-[11px] text-slate-500 mt-0.5">無料パスやMPを消費してバトル（+120pt）</p>
-            </div>
-          </div>
-        </div>
       </div>
 
-      <!-- 3-B: 今後予定のGOパス (11月・12月) -->
+      <!-- 3-B: 今後予定のGOパス (11月度:グラードン & ワイルドウィーク:ぎんのおうかん) -->
       <div id="secGoPassFuture" class="space-y-3 hidden">
+        <!-- ① GOパス：11月 (グラードン) -->
         <div class="bg-white border border-teal-200 rounded-xl p-4 shadow-sm space-y-2">
-          <div class="flex items-center justify-between border-b border-slate-100 pb-2">
+          <div class="flex flex-wrap items-center justify-between border-b border-slate-100 pb-2 gap-2">
             <div>
-              <span class="text-xs bg-teal-100 text-teal-800 font-bold px-2 py-0.5 rounded border border-teal-200">2026年11月予定</span>
-              <h3 class="text-base font-black text-slate-900 mt-1">GOパス：ワイルドエリア・シーズン (11/3〜12/1)</h3>
+              <span class="text-xs bg-teal-100 text-teal-800 font-bold px-2 py-0.5 rounded border border-teal-200">月間GOパス：2026年11月</span>
+              <h3 class="text-base font-black text-slate-900 mt-1">GOパス：11月 (11/3 10:00 〜 12/1 10:00)</h3>
+              <div class="text-[11px] text-slate-500">報酬受取期限: 12/3(木) 10:00まで / ポイント上限撤廃土日: 11/28(土)〜11/29(日)</div>
             </div>
-            <span class="text-xs text-teal-700 font-bold">目玉: グラードン</span>
+            <span class="text-xs bg-teal-50 text-teal-800 border border-teal-300 px-2.5 py-1 rounded-full font-bold">目玉: グラードン & ポケコイン</span>
           </div>
           <p class="text-xs text-slate-700 leading-relaxed">
-            11/14〜15の「GOワイルドエリア2026：グローバル」連動パス。ランク100で<strong>グラードン</strong>と遭遇！デラックス版ではGOサファリボール追加支給や、キュレム合体エナジー、ザシアン/ザマゼンタ限定アバターを入手可能です。
+            11月3日(火・祝) 10:00より全世界のトレーナーに無料配布。ランク100で<strong>「グラードン」</strong>と出会えるほか、合計400ポケコインなどが報酬として登場します。マイルストーンボーナス（ランク1：交換アメ+1＆XL確定、ランク25：ギフト上限拡張、ランク50：おさんぽおこう2倍、ランク75：孵化XP・砂増加）も継続発動します。
           </p>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs pt-1">
-            <div class="bg-slate-50 p-2 rounded-lg border border-slate-200">
-              <strong class="text-teal-700">【無料注目】</strong>
-              <ul class="text-[11px] text-slate-600 list-disc list-inside mt-0.5">
-                <li>GOサファリボール先行配布 ×10個</li>
-                <li>すごいわざマシン スペシャル ×1</li>
-                <li>ランク100：グラードン遭遇</li>
-              </ul>
-            </div>
-            <div class="bg-slate-50 p-2 rounded-lg border border-slate-200">
-              <strong class="text-amber-700">【デラックス注目】</strong>
-              <ul class="text-[11px] text-slate-600 list-disc list-inside mt-0.5">
-                <li>ワイルドエリア限定サファリジャケット</li>
-                <li>ホワイト/ブラックキュレム合体エナジー ×200</li>
-                <li>マスターボール ×1個 (Rank 100到達報酬)</li>
-              </ul>
-            </div>
-          </div>
         </div>
 
-        <div class="bg-white border border-sky-200 rounded-xl p-4 shadow-sm space-y-2">
-          <div class="flex items-center justify-between border-b border-slate-100 pb-2">
+        <!-- ② GOパス：ワイルドウィーク (ぎんのおうかん & ダイマックスメルタン) -->
+        <div class="bg-white border-2 border-purple-300 rounded-xl p-4 shadow-sm space-y-2.5">
+          <div class="flex flex-wrap items-center justify-between border-b border-slate-100 pb-2 gap-2">
             <div>
-              <span class="text-xs bg-sky-100 text-sky-800 font-bold px-2 py-0.5 rounded border border-sky-200">2026年12月予定</span>
-              <h3 class="text-base font-black text-slate-900 mt-1">GOパス：ウィンターホリデー＆オールスター (12/1〜12/31)</h3>
+              <span class="text-xs bg-purple-600 text-white font-bold px-2 py-0.5 rounded">ワイルドウィーク＆ワイルドエリア連動</span>
+              <h3 class="text-base font-black text-slate-900 mt-1">GOパス：ワイルドウィーク (11/9 10:00 〜 11/15 18:00)</h3>
+              <div class="text-[11px] text-slate-500">報酬受取期限: 11/17(火) 23:59まで / デラックス価格: 2,100円 (+10ランク: 2,800円)</div>
             </div>
-            <span class="text-xs text-sky-700 font-bold">事前予告</span>
+            <span class="text-xs bg-amber-100 text-amber-800 border border-amber-300 px-2.5 py-1 rounded-full font-bold">目玉: ぎんのおうかん & DMaxメルタン</span>
           </div>
           <p class="text-xs text-slate-700 leading-relaxed">
-            年末の総決算オールスターコミュデイおよびホリデーイベント連動。ギフト上限拡大やふかそうち大量配布など、年末の育成・厳選を加速させるボーナスが満載です。
+            ワイルドウィーク開始（11/9 10:00）からワイルドエリア：グローバル終了（11/15 18:00）まで開催される特別GOパス！<strong>週末の11/14(土)〜11/15(日)は1日のポイント獲得上限が完全撤廃</strong>されます。
           </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs pt-1">
+            <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+              <strong class="text-teal-700">【無料パス注目報酬】</strong>
+              <ul class="text-[11px] text-slate-600 list-disc list-inside mt-1 space-y-0.5">
+                <li><strong>ダイマックス メルタン</strong> 確定遭遇</li>
+                <li>GOワイルドエリア2026 Tシャツ(紫)</li>
+                <li>イベントにぴったりなポケモン遭遇・各種アメ</li>
+              </ul>
+            </div>
+            <div class="bg-amber-50/60 p-2.5 rounded-lg border border-amber-200">
+              <strong class="text-amber-800">【デラックス版（有料）注目報酬】</strong>
+              <ul class="text-[11px] text-slate-700 list-disc list-inside mt-1 space-y-0.5">
+                <li><strong>👑 ぎんのおうかん ×1個</strong>（グッドな相棒以上のポケモン1匹に「すごいとっくん」を行い、HP・攻撃・防御のいずれか1つの個体値を最大まで引き上げる神アイテム！※使用期限：11/22(日) 23:59まで）</li>
+                <li><strong>ダイマックス メルタン</strong> 追加遭遇</li>
+                <li>新作アバター「ジュラルドンパンツ」</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -497,28 +557,30 @@
     const todayDate = now.getDate();
     const todayDow = ["日", "月", "火", "水", "木", "金", "土"][now.getDay()];
 
-    // 初期ニュース（3サイト完全整合済・UMAは永久除外）
+    // 最新ニュース速報（ポケマピ・GameWith・9DB・公式の2026年10月最新記事に完全整合）
     let NEWS_ITEMS = [
-      { id: "news-twitch", date: "2026-10-25", date_label: "10/25", title: "ポケモンナイトアウト公式Twitch配信視聴で限定モルペコ＆アバター配布", details: "Twitch公式チャンネルで30分以上視聴すると、限定リサーチコード（モルペコや限定Tシャツ、スーパーふかそうち）を入手可能。受取期限48時間。", targetId: "ev-twitch" },
-      { id: "news-sneasel", date: "2026-10-24", date_label: "10/24", title: "ダイマックスニューラ★1パワースポット出現率UP中！格闘二重弱点でソロ容易", details: "★1パワースポットにニューラが集中出現。格闘2.56倍二重弱点のためソロ討伐容易。対エスパー・ゴースト戦の強力アタッカーとして厳選推奨。", targetId: "ev-dmax-sneasel" },
-      { id: "news-halloween-diff", date: "2026-10-22", date_label: "10/22", title: "ハロウィンパート1＆パート2の違いまとめ：前半は通常ゴースト、後半は衣装＆色違いボチ", details: "パート1は通常姿のゴースト・あく湧き＋GBL/タイムチャレンジでモルペコ実装。パート2(10/28〜)から魔女帽子ケロマツ等の衣装ポケモン＆ボチ色違い＆キョダイゲンガーが登場します。", targetId: "ev-halloween-p1" },
-      { id: "news-mega-char", date: "2026-10-21", date_label: "10/21", title: "メガリザードンY＆Xレイド出現中！いわ2.56倍二重弱点でソロ・ペア討伐可能", details: "メガリザードンYはいわタイプが二重弱点。ラムパルド・ドサイドン統一で少人数高速周回可能。パルキア特別技あくうせつだんも同時開催中。", targetId: "ev-palkia-char" },
-      { id: "news-landorus", date: "2026-10-18", date_label: "10/18", title: "シャドウランドロス(化身)★5レイドは平日含め連日常設中！こおり二重弱点", details: "土日限定ではなく平日も含め連日常設開催中。こおり技が2.56倍の二重弱点。マンムーやセグレイブで2人討伐可能。", targetId: "ev-shadow-landorus" },
-      { id: "news-wild-area", date: "2026-10-15", date_label: "10/15", title: "11/14〜15「GOワイルドエリア2026」詳細発表！PL40〜50の『つよいポケモン』初解禁", details: "初登場の『つよいポケモン（PL40〜50・高個体保証・GOサファリボール使用）』が野生出現。ホワイト/ブラックキュレム合体伝説レイド開幕。", targetId: "ev-wildarea-2026" }
+      { id: "news-halloween-free-tc", date: "2026-10-25", date_label: "10/25", title: "【公式発表】ハロウィン2026パート1期間中、全トレーナーに「自動完了する無料タイムチャレンジ」配布決定！", details: "10/27(火)10:00〜11/1(日)10:00の期間中、全トレーナーを対象に無料のタイムチャレンジが自動完了状態で付与され、「ふしぎなアメ×6」と初登場の「ハットとケープをつけたピカチュウ」がプレゼントされます！", targetId: "ev-halloween-p1" },
+      { id: "news-sableye-dmax", date: "2026-10-25", date_label: "10/25", title: "10/26(月)朝6時〜「ダイマックスヤミラミ」が登場＆終日マックスマンデー開催！", details: "10/26(月)6:00〜21:00にマックスマンデーが開催！今週（10/26〜11/1）はパワースポットでダイマックスヤミラミの出現率がアップします。弱点はフェアリーのみ。", targetId: "ev-dmax-sableye-week" },
+      { id: "news-chandelure-supermega", date: "2026-10-24", date_label: "10/24", title: "10/31(土)14時〜17時「シャンデラのスーパーメガレイド・デイ」開催！メガレベル4＆専用技『あやしいかぜ＋』解禁", details: "スーパーメガレイドに「メガシャンデラ」が初登場！パーティ内のメガシンカポケモン1匹につきボスのシールドを1枚破壊可能（※ゲンシカイオーガ・グラードンは破壊不可）。無料パス最大6枚配布。", targetId: "ev-supermega-chandelure" },
+      { id: "news-halloween-p1p2", date: "2026-10-23", date_label: "10/23", title: "ハロウィン2026パート1(10/27〜)＆パート2(11/1〜)詳細！新衣装3種・色違いボチ・メガヤミラミ『ナイトヘッド＋』", details: "パート1ではハット＆ケープピカチュウ、トップハットズバット、リボンヤバチャが初登場＆サプライズボックス出現。11/1からのパート2では「色違いのボチ」初実装＆メガヤミラミのメガレベル4（ナイトヘッド＋）が解放されます！", targetId: "ev-halloween-p2" },
+      { id: "news-pawniard-cd", date: "2026-10-22", date_label: "10/22", title: "11月のコミュニティ・デイは「コマタナ」！11月21日(土)14:00〜17:00開催決定", details: "2026年11月のコミュニティ・デイ対象ポケモンが「コマタナ（キリキザン / ドドゲザン）」に決定！11/21(土)14時〜17時に開催されます。", targetId: "ev-cd-pawniard" },
+      { id: "news-nov-schedule", date: "2026-10-20", date_label: "10/20", title: "2026年11月スケジュール＆ワイルドウィーク発表！剣の王ザシアン・盾の王ザマゼンタ・合体キュレム・銀の王冠登場", details: "11/9〜13のワイルドウィークにザシアン(けんのおう)・ザマゼンタ(たてのおう)がエナジー付きで登場！さらに11/14〜15のワイルドエリアグローバルではホワイト/ブラックキュレム、キョダイジュラルドン(色違い)、DMaxディアルガ・パルキアが降臨！", targetId: "ev-wildarea-2026" }
     ];
 
+    // 全イベントデータ（4サイト完全準拠・詳細拡充版）
     const ALL_EVENTS = [
+      // ==================== 10月 ====================
       {
-        id: "ev-orionids",
+        id: "ev-minior-orionids",
         month: 10,
-        title: "オリオン座流星群 観測ウィーク",
+        title: "メテノシャワー：オリオン座流星群",
         barClass: "bar-main",
         category: "main",
-        startDay: 18,
+        startDay: 19,
         endDay: 24,
-        dateText: "10/18(日) 〜 10/24(土) 20:00 [終了]",
-        summary: "夜間のほしのすな獲得量2倍。いわ・ひこうタイプの出現率アップ。メテノ（各種コア色）が野生で出現。",
-        bonuses: ["捕獲時のほしのすな2倍", "夜間にメテノ出現率大幅アップ", "ほしのかけらの効果1.5倍"],
+        dateText: "10/19(月) 17:00 〜 10/24(土) 23:59 [終了]",
+        summary: "流星群が観測できる期間に合わせて、7種類のうち1色のコアの『メテノ』がPokémon GOに初登場！次回は11/14(土)17:00〜11/19(木)23:59の『しし座流星群』で開催されます。",
+        bonuses: ["メテノ（7色のうち1色のコア）が初登場", "夜間の星空連動ピックアップ"],
         wilds: [],
         raids: [],
         tasks: []
@@ -531,366 +593,507 @@
         category: "dmax",
         startDay: 24,
         endDay: 24,
-        dateText: "10/24(土) 14:00〜17:00 [開催終了]",
-        summary: "14:00〜17:00限定。パワースポットにシンオウUMAトリオが出現！日本はユクシー出現。無料MP800配布＆色違い率UP。",
+        dateText: "10/24(土) 14:00 〜 17:00 [開催終了]",
+        summary: "パワースポットにシンオウUMAトリオ（ユクシー・エムリット・アグノム）がダイマックスで登場。",
         bonuses: [],
         wilds: [],
         raids: [],
         tasks: []
       },
       {
-        id: "ev-twitch",
+        id: "ev-dmax-sneasel",
         month: 10,
-        title: "ポケモンナイトアウト Twitch公式配信",
-        barClass: "bar-main",
-        category: "main",
-        startDay: 25,
+        title: "ダイマックスニューラ 出現率UP週間",
+        barClass: "bar-dmax",
+        category: "dmax",
+        startDay: 19,
         endDay: 25,
-        dateText: "10/25(日) 配信時間限定 [本日開催]",
-        summary: "Twitch公式チャンネルで30分以上視聴すると、限定タイムチャレンジコード（モルペコや限定Tシャツ、スーパーふかそうち）を入手可能。",
-        bonuses: ["Twitch Dropsによる限定タイムチャレンジ入手", "プロモコード受取期限48時間"],
+        dateText: "10/19(月) 6:00 〜 10/25(日) 21:00 [本日終了]",
+        summary: "10月第4週のパワースポットピックアップとして『ダイマックスニューラ』が集中出現中！かくとうタイプが2.56倍の二重弱点のためソロ討伐が容易。マニューラへ進化させれば、来週からのギラティナやメガヤミラミ、エスパー・ゴースト系マックスバトルの主力アタッカーとして活躍します。",
+        bonuses: ["パワースポットでのダイマックスニューラ出現率アップ", "かくとう二重弱点でソロ周回容易"],
         wilds: [],
-        raids: [],
-        tasks: [{ task: "Twitch視聴プロモコード入力報酬", rewardDex: 877, rewardName: "モルペコ (リサーチ)", shiny: false }]
+        raids: [
+          { dex: 215, name: "ダイマックス ニューラ", shiny: true, note: "★1〜 パワースポット (〜10/25)", targetKey: "dmax-sneasel", isDmax: true }
+        ],
+        tasks: []
       },
       {
-        id: "ev-fc-seoul",
+        id: "ev-nightout-la",
         month: 10,
-        title: "2026 FCソウル 連動コラボ",
+        title: "ポケモンナイトアウト (LA現地 ＆ Twitch公式配信)",
         barClass: "bar-collab",
         category: "collab",
         startDay: 24,
         endDay: 25,
-        dateText: "10/24(土) 〜 10/25(日) [本日終了]",
-        summary: "韓国ソウル現地および記念コラボタイムチャレンジ。限定ユニフォームピカチュウが出現。",
-        bonuses: ["限定フィールドリサーチ登場", "特別ユニフォームピカチュウ出現", "特別交換+1回"],
-        wilds: [
-          { dex: 25, name: "ピカチュウ", shiny: true, note: "FCソウルユニフォーム" },
-          { dex: 722, name: "モクロー", shiny: true, note: "野生ブースト" },
-          { dex: 906, name: "ニャオハ", shiny: true, note: "野生ブースト" }
-        ],
+        dateText: "10/24(土) 〜 10/25(日) [本日開催]",
+        summary: "ロサンゼルス現地イベントおよび公式Twitch配信連動キャンペーン。11月10日(火)にはロンドンでも開催予定。",
+        bonuses: ["公式配信連動キャンペーン", "24日(土)は韓国でFCソウルコラボも開催"],
+        wilds: [],
         raids: [],
-        tasks: [{ task: "ナイススローを5回投げる", rewardDex: 25, rewardName: "ソウルピカチュウ", shiny: true }]
-      },
-      {
-        id: "ev-dmax-sneasel",
-        month: 10,
-        title: "ダイマックスニューラ 出現率UP",
-        barClass: "bar-dmax",
-        category: "dmax",
-        startDay: 24,
-        endDay: 25,
-        dateText: "10/24(土) 〜 10/25(日) [本日終了]",
-        summary: "★1パワースポットにニューラが集中出現。マニューラへ進化させることで、対エスパーや対ゴースト戦の優秀なあくアタッカーに。",
-        bonuses: ["パワースポットでのニューラ出現枠増加", "消費MP軽減"],
-        wilds: [],
-        raids: [{ dex: 215, name: "ダイマックス ニューラ", shiny: true, note: "★1パワースポット", targetKey: "dmax-sneasel", isDmax: true }],
-        tasks: [{ task: "あくタイプのポケモンを3匹捕獲する", rewardDex: 215, rewardName: "ニューラのアメ ×10", shiny: false }]
-      },
-      {
-        id: "ev-halloween-p1",
-        month: 10,
-        title: "ハロウィン2026 パート1 (通常ゴースト湧き＆モルペコ初実装)",
-        barClass: "bar-main",
-        category: "main",
-        startDay: 22,
-        endDay: 28,
-        dateText: "10/22(木) 10:00 〜 10/28(水) 10:00 [現在開催中]",
-        summary: "【パート1と2の明確な違い】パート1の野生は『衣装なしの通常ゴースト・あくタイプ』が大量出現します（※魔女帽子ケロマツ等の衣装ポケモンやボチの色違いは10/28からのパート2限定です）。目玉の『モルペコ』は野生ではなく、GBL報酬およびタイムチャレンジ報酬でのみ入手可能です！",
-        bonuses: [
-          "ポケモン捕獲時のアメ2倍",
-          "ナイス/グレート/エクセレントスロー捕獲でアメXL確率UP",
-          "色違いゾロア出現率アップ",
-          "GBLランク16以上リワード＆タイムチャレンジでモルペコ確定出現",
-          "ラベンダータウンのアレンジBGM再生"
-        ],
-        wilds: [
-          { dex: 41, name: "ズバット", shiny: true, note: "野生出現" },
-          { dex: 92, name: "ゴース", shiny: true, note: "野生・高頻度" },
-          { dex: 93, name: "ゴースト", shiny: false, note: "進化後枠(砂増)" },
-          { dex: 167, name: "イトマル", shiny: true, note: "野生出現" },
-          { dex: 198, name: "ヤミカラス", shiny: true, note: "野生出現" },
-          { dex: 200, name: "ムウマ", shiny: true, note: "野生出現" },
-          { dex: 215, name: "ニューラ", shiny: true, note: "野生出現" },
-          { dex: 261, name: "ポチエナ", shiny: true, note: "野生出現" },
-          { dex: 302, name: "ヤミラミ", shiny: true, note: "捕獲時すな750" },
-          { dex: 353, name: "カゲボウズ", shiny: true, note: "野生出現" },
-          { dex: 425, name: "フワンテ", shiny: true, note: "野生出現" },
-          { dex: 509, name: "チョロネコ", shiny: true, note: "野生出現" },
-          { dex: 570, name: "ゾロア", shiny: true, note: "相棒変身・色違いUP✨" },
-          { dex: 607, name: "ヒトモシ", shiny: true, note: "野生出現" },
-          { dex: 708, name: "ボクレー", shiny: true, note: "野生出現" },
-          { dex: 971, name: "ボチ (通常色)", shiny: false, note: "※色違いはパート2〜" }
-        ],
-        raids: [
-          { dex: 92, name: "ダイマックス ゴース", shiny: true, note: "★1 パワースポット初登場", targetKey: "dmax-gastly", isDmax: true },
-          { dex: 484, name: "パルキア (オリジン)", shiny: true, note: "〜10/27 10:00まで", targetKey: "palkia-origin", isDmax: false },
-          { dex: 487, name: "ギラティナ (オリジン)", shiny: true, note: "10/27 10:00〜登場", targetKey: "giratina-origin", isDmax: false },
-          { dex: 354, name: "メガジュペッタ", shiny: true, note: "メガレイド", targetKey: "mega-banette", isDmax: false },
-          { dex: 157, name: "ヒスイバクフーン", shiny: true, note: "★3 レイド", isDmax: false },
-          { dex: 197, name: "ブラッキー", shiny: false, note: "★3 レイド", isDmax: false }
-        ],
-        tasks: [
-          { task: "【タイムチャレンジ / GBL報酬】", rewardDex: 877, rewardName: "モルペコ (初実装 / 野生出現なし)", shiny: false },
-          { task: "ゴーストタイプを10匹捕獲する", rewardDex: 442, rewardName: "ミカルゲ", shiny: true },
-          { task: "ゴーストタイプを5匹捕獲する", rewardDex: 971, rewardName: "ボチ", shiny: false },
-          { task: "ポケモンを10匹進化させる", rewardDex: 302, rewardName: "ヤミラミ (メガエナジー付)", shiny: true },
-          { task: "レイドで2回勝つ", rewardDex: 877, rewardName: "モルペコ (レアタスク枠)", shiny: false }
-        ]
-      },
-      {
-        id: "ev-sableye-monday",
-        month: 10,
-        title: "ヤミラミ マックスマンデー",
-        barClass: "bar-dmax",
-        category: "dmax",
-        startDay: 26,
-        endDay: 26,
-        dateText: "10/26(月) 18:00 〜 19:00",
-        summary: "1時間限定で全パワースポットがヤミラミに変化。あく/ゴースト複合のためエスパー技・格闘技に耐性を持ち、対ゲンガー・エスパー戦の壁役として優秀。",
-        bonuses: ["全パワースポットでヤミラミ出現", "バトル勝利時XP2倍"],
-        wilds: [],
-        raids: [{ dex: 302, name: "ダイマックス ヤミラミ", shiny: true, note: "★1パワースポット", targetKey: "dmax-sableye", isDmax: true }],
-        tasks: [{ task: "ヤミラミに勝利する", rewardDex: 302, rewardName: "ヤミラミのアメXL ×2", shiny: false }]
-      },
-      {
-        id: "ev-dmax-sableye-up",
-        month: 10,
-        title: "ダイマックスヤミラミ 出現率UP",
-        barClass: "bar-dmax",
-        category: "dmax",
-        startDay: 26,
-        endDay: 28,
-        dateText: "10/26(月) 〜 10/28(水)",
-        summary: "パワースポットでヤミラミが3日連続出現率アップ。11/1からのキョダイゲンガー戦への準備期間として厳選推奨。",
-        bonuses: ["パワースポットでのヤミラミ出現率増加", "MP回収効率UP"],
-        wilds: [],
-        raids: [{ dex: 302, name: "ダイマックス ヤミラミ", shiny: true, note: "★1パワースポット", targetKey: "dmax-sableye", isDmax: true }],
-        tasks: [{ task: "ゴーストタイプを10匹捕獲する", rewardDex: 302, rewardName: "ヤミラミ", shiny: true }]
+        tasks: []
       },
       {
         id: "ev-palkia-char",
         month: 10,
-        title: "パルキア(オリジン) / メガリザードンX・Y レイド",
+        title: "パルキア / メガリザードンX・Y レイド週間",
         barClass: "bar-raid",
         category: "raid",
         startDay: 21,
         endDay: 27,
-        dateText: "10/21(水) 〜 10/27(火) 10:00まで [現在出現中]",
-        summary: "特別技『あくうせつだん』習得パルキアと、ほのお・ひこう最強メガシンカのメガリザードンY、ドラゴン複合のメガリザードンXが登場中！",
-        bonuses: ["討伐でパルキア特別技あくうせつだん習得", "レイドXP+5000XP"],
+        dateText: "10/21(水) 6:00 〜 10/27(火) 21:30頃 [現在出現中]",
+        summary: "★5伝説レイドに『パルキア』、メガレイドに『メガリザードンX』『メガリザードンY』が登場中！さらに★3レイドにはアローラライチュウ・アローラキュウコン・アローラベトベトン、★1レイドにはキバゴ・ヌメラ・ジャラコ・セビエのドラゴン4種がラインナップされています（ポケマピ検証済）。",
+        bonuses: [
+          "★5伝説：パルキア (〜10/27)",
+          "メガレイド：メガリザードンX / メガリザードンY",
+          "★3：Aライチュウ / Aキュウコン / Aベトベトン",
+          "★1：キバゴ / ヌメラ / ジャラコ / セビエ"
+        ],
         wilds: [],
         raids: [
-          { dex: 484, name: "パルキア (オリジン)", shiny: true, note: "★5 伝説レイド", targetKey: "palkia-origin", isDmax: false },
-          { dex: 6, name: "メガリザードンY / X", shiny: true, note: "メガレイド (現在開催中)", targetKey: "mega-charizard-y", isDmax: false }
+          { dex: 484, name: "パルキア", shiny: true, note: "★5 伝説レイド (〜10/27)", targetKey: "palkia-normal", isDmax: false },
+          { dex: 6, name: "メガリザードンY / X", shiny: true, note: "メガレイド (〜10/27)", targetKey: "mega-charizard-y", isDmax: false },
+          { dex: 26, name: "アローラライチュウ", shiny: true, note: "★3 レイド", isDmax: false },
+          { dex: 38, name: "アローラキュウコン", shiny: true, note: "★3 レイド", isDmax: false },
+          { dex: 610, name: "キバゴ / ヌメラ / ジャラコ / セビエ", shiny: true, note: "★1 レイド (ドラゴン厳選枠)", isDmax: false }
         ],
-        tasks: [{ task: "レイドで1回勝利する", rewardDex: 484, rewardName: "ふしぎなアメ ×3", shiny: false }]
+        tasks: []
       },
       {
-        id: "ev-raid-giratina",
+        id: "ev-dmax-sableye-week",
         month: 10,
-        title: "ギラティナ (オリジン) / メガジュペッタ レイド",
-        barClass: "bar-raid",
-        category: "raid",
-        startDay: 27,
+        title: "ダイマックスヤミラミ 登場 ＆ マックスマンデー",
+        barClass: "bar-dmax",
+        category: "dmax",
+        startDay: 26,
         endDay: 31,
-        dateText: "10/27(火) 10:00 〜 11/3(火) 10:00 [次回予告]",
-        summary: "ハロウィン本番の★5伝説レイド！特別技『シャドーダイブ』習得ギラティナ(オリジン)とメガジュペッタが登場。",
-        bonuses: ["特別技シャドーダイブ習得", "捕獲時のアメ2倍ボーナス重畳"],
+        dateText: "10/26(月) 6:00 〜 11/1(日) 21:00 [マックスマンデー: 10/26(月) 6:00〜21:00]",
+        summary: "10/26(月)朝6時より『ダイマックスヤミラミ』がマックスバトルに初登場！初日の10/26(月) 6:00〜21:00は終日『マックスマンデー』として全国のパワースポットに大量出現します。あく・ゴースト複合で弱点はフェアリーのみ。ノーマル・かくとう・エスパー技を2重耐性で受けられる優秀な壁役としても注目！",
+        bonuses: [
+          "10/26(月) 6:00〜21:00：マックスマンデー終日開催",
+          "10/26(月)〜11/1(日)：パワースポットでのダイマックスヤミラミ出現率UP",
+          "色違いのダイマックスヤミラミ出現チャンス✨"
+        ],
         wilds: [],
         raids: [
-          { dex: 487, name: "ギラティナ (オリジン)", shiny: true, note: "★5 伝説レイド", targetKey: "giratina-origin", isDmax: false },
-          { dex: 354, name: "メガジュペッタ", shiny: true, note: "メガレイド", targetKey: "mega-banette", isDmax: false }
+          { dex: 302, name: "ダイマックス ヤミラミ", shiny: true, note: "マックスバトル (10/26〜11/1)", targetKey: "dmax-sableye", isDmax: true }
         ],
-        tasks: [{ task: "伝説レイドに2回勝つ", rewardDex: 487, rewardName: "ふしぎなアメXL ×1", shiny: false }]
+        tasks: []
       },
       {
-        id: "ev-halloween-p2",
+        id: "ev-aeon-halloween",
         month: 10,
-        title: "ハロウィン2026 パート2 (衣装ポケモン総登場＆色違いボチ＆キョダイゲンガー)",
+        title: "イオンモール ハロウィン タイムチャレンジ (Part1 & Part2)",
+        barClass: "bar-collab",
+        category: "collab",
+        startDay: 19,
+        endDay: 31,
+        dateText: "Part1: 10/19(月)〜10/25(日) / Part2: 10/26(月)〜11/1(日) [挑戦期限: 11/8 20:00]",
+        summary: "全国のイオンモールで『Pokémon GO』を起動すると、ハロウィン限定のタイムチャレンジを受け取れます！10/26(月)からは『Part2受取期間（10/26〜11/1）』がスタート。報酬としてハロウィンにぴったりなポケモンと出会えます（挑戦期限は11/8(日)20:00まで）。",
+        bonuses: [
+          "イオンモール起動で限定タイムチャレンジ付与",
+          "Part2受取期間：10/26(月)〜11/1(日)",
+          "タイムチャレンジ挑戦期限：11/8(日) 20:00まで"
+        ],
+        wilds: [],
+        raids: [],
+        tasks: [
+          { task: "イオンモール限定タイムチャレンジ達成", rewardDex: 94, rewardName: "ハロウィンにぴったりなポケモン遭遇", shiny: true }
+        ]
+      },
+      {
+        id: "ev-halloween-p1",
+        month: 10,
+        title: "🎃 ハロウィン2026 パート1 ＆ GOパス：ハロウィン2026 開幕",
         barClass: "bar-main",
         category: "main",
-        startDay: 28,
+        startDay: 27,
         endDay: 31,
-        dateText: "10/28(水) 10:00 〜 11/3(火) 20:00 [後半切り替え]",
-        summary: "【パート2からの切り替え要素】野生が『ハロウィン衣装ポケモン』に一斉切り替わり！新衣装の『魔女帽子ケロマツ』『衣装モクロー』が登場し、『ボチの色違い✨』が初解禁！さらに10/31〜キョダイマックスゲンガーが降臨します！",
+        dateText: "10/27(火) 10:00 〜 11/1(日) 10:00 [次回メインイベント]",
+        summary: "2026年のハロウィンイベント前半戦！初登場となる『ハットとケープをつけたピカチュウ』『トップハットをかぶったズバット』『リボンをつけたヤバチャ』の3種が実装されます！さらに期間中、全トレーナーに『自動的に完了する無料タイムチャレンジ（ふしぎなアメ×6＋ハット＆ケープピカチュウ）』がプレゼントされるほか、マップ上にいたずら好きのポケモンが残した『ハロウィンのサプライズボックス』が出現！同時開催の『GOパス：ハロウィン2026』を進めると捕獲時アメ2倍（DX3倍）・ほしのすな2倍（DX3倍）が発動します。",
         bonuses: [
-          "ボチの色違いが初解禁✨",
-          "野生・7kmタマゴ・レイドで色違い衣装ポケモン確率アップ",
-          "ポケモン捕獲時のアメ2倍継続",
-          "10/31当日：衣装ポケモン捕獲時にまれに『ふしぎなアメ / アメXL』ドロップ"
+          "🎁 全員配布：自動完了する無料タイムチャレンジ（ふしぎなアメ×6 ＆ ハットとケープのピカチュウ）※受取期限11/1 10:00",
+          "📦 マップ上に「ハロウィンのサプライズボックス」が出現（タップでポケモン遭遇やアメ獲得）",
+          "🍬【GOパスRank10】捕獲時のアメ2倍（デラックスは3倍）",
+          "✨【GOパスRank20】捕獲時のほしのすな2倍（デラックスは3倍）",
+          "🎵 夜間にシオンタウンのアレンジBGM再生 ＆ ポケストップ・ジムがハロウィン仕様にデコレーション"
         ],
         wilds: [
-          { dex: 656, name: "魔女帽子ケロマツ", shiny: true, note: "パート2新衣装✨" },
-          { dex: 722, name: "ハロウィン衣装モクロー", shiny: true, note: "パート2新衣装✨" },
-          { dex: 971, name: "ボチ (色違い解禁)", shiny: true, note: "パート2で色違い初実装✨" },
-          { dex: 25, name: "魔女帽子ピカチュウ", shiny: true, note: "パート2野生出現" },
-          { dex: 37, name: "襟飾りロコン", shiny: true, note: "パート2野生出現" },
-          { dex: 393, name: "いたずらポッチャマ", shiny: true, note: "パート2野生出現" },
-          { dex: 710, name: "飾りバケッチャ", shiny: true, note: "各サイズ・衣装" },
-          { dex: 570, name: "ゾロア", shiny: true, note: "野生継続" }
+          { dex: 41, name: "ズバット (トップハット)", shiny: true, note: "初登場衣装✨・野生出現" },
+          { dex: 426, name: "フワライド (ハロウィン)", shiny: true, note: "衣装・野生出現" },
+          { dex: 570, name: "ゾロア", shiny: true, note: "相棒変身・野生出現" },
+          { dex: 607, name: "ヒトモシ", shiny: true, note: "野生出現" },
+          { dex: 302, name: "ヤミラミ", shiny: true, note: "捕獲時すな750" },
+          { dex: 92, name: "ゴース / カゲボウズ", shiny: true, note: "野生出現" },
+          { dex: 708, name: "ボクレー / バケッチャ", shiny: true, note: "野生出現" },
+          { dex: 971, name: "ボチ", shiny: false, note: "※色違いは11/1パート2〜" }
         ],
         raids: [
-          { dex: 94, name: "キョダイマックス ゲンガー", shiny: true, note: "★6 マックスバトル (10/31〜11/3)", targetKey: "dmax-gmax-gengar", isDmax: true },
-          { dex: 487, name: "ギラティナ (オリジン)", shiny: true, note: "★5 伝説レイド", targetKey: "giratina-origin", isDmax: false },
-          { dex: 656, name: "魔女帽子ケロマツ", shiny: true, note: "★1 レイド (色違い高確率)", isDmax: false },
-          { dex: 722, name: "衣装モクロー", shiny: true, note: "★1 レイド (色違い高確率)", isDmax: false }
+          { dex: 25, name: "ピカチュウ (ハット&ケープ)", shiny: true, note: "★1レイド (初登場衣装✨)", isDmax: false },
+          { dex: 854, name: "ヤバチャ (リボン)", shiny: true, note: "★1レイド (初登場衣装✨)", isDmax: false },
+          { dex: 487, name: "ギラティナ (オリジン)", shiny: true, note: "★5伝説 (10/28 6:00〜)", targetKey: "giratina-origin", isDmax: false },
+          { dex: 302, name: "メガヤミラミ", shiny: true, note: "メガレイド (10/28 6:00〜)", targetKey: "mega-sableye", isDmax: false },
+          { dex: 302, name: "ダイマックス ヤミラミ", shiny: true, note: "マックスバトル (10/26〜11/1)", targetKey: "dmax-sableye", isDmax: true }
         ],
         tasks: [
-          { task: "ゴーストタイプを10匹捕獲する", rewardDex: 971, rewardName: "ボチ (色違いチャンス✨)", shiny: true },
-          { task: "ポケモンを5匹捕獲する", rewardDex: 656, rewardName: "魔女帽子ケロマツ", shiny: true },
-          { task: "ナイススローを5回投げる", rewardDex: 722, rewardName: "衣装モクロー", shiny: true },
-          { task: "おやつを3個あげる", rewardDex: 37, rewardName: "衣装ロコン / ピカチュウ", shiny: true },
-          { task: "7kmタマゴ孵化 (パート2限定枠)", rewardDex: 854, rewardName: "ヤバチャ / 衣装ポケモン各種", shiny: true }
+          { task: "【自動完了タイムチャレンジ（全員無料配布）】", rewardDex: 25, rewardName: "ピカチュウ(ハット&ケープ) ＋ ふしぎなアメ×6", shiny: true },
+          { task: "マップ上の「ハロウィンサプライズボックス」をタップ", rewardDex: 854, rewardName: "イベントポケモン遭遇 / ポケモンのアメ", shiny: true },
+          { task: "イベント限定フィールドリサーチ各種", rewardDex: 41, rewardName: "ズバット(トップハット) / ヤバチャ(リボン) 等", shiny: true },
+          { task: "GOパス：ハロウィン2026 (10/27 10:00〜11/5 20:00)", rewardDex: 94, rewardName: "イベントポケモン & パティシエ衣装(DX)", shiny: true }
+        ]
+      },
+      {
+        id: "ev-raid-giratina-o",
+        month: 10,
+        title: "ギラティナ(オリジン) ＆ メガヤミラミ レイド",
+        barClass: "bar-raid",
+        category: "raid",
+        startDay: 28,
+        endDay: 31,
+        dateText: "10/28(水) 6:00 〜 11/3(火・祝) 21:30頃 [レイドアワー: 10/28(水) 18:00〜19:00]",
+        summary: "10/28(水)朝6時より伝説レイドが『ギラティナ（オリジンフォルム）』に、メガレイドが『メガヤミラミ（〜11/8まで）』に切り替わります！初日の10/28(水)18:00〜19:00にはギラティナ(オリジン)のレイドアワーが開催されます。",
+        bonuses: [
+          "10/28(水) 18:00〜19:00：ギラティナ(オリジン) レイドアワー",
+          "メガヤミラミは11/1(日)10:00〜メガレベル4（ナイトヘッド＋）が解放"
+        ],
+        wilds: [],
+        raids: [
+          { dex: 487, name: "ギラティナ (オリジン)", shiny: true, note: "★5 伝説レイド (10/28〜11/3)", targetKey: "giratina-origin", isDmax: false },
+          { dex: 302, name: "メガヤミラミ", shiny: true, note: "メガレイド (10/28〜11/8)", targetKey: "mega-sableye", isDmax: false }
+        ],
+        tasks: []
+      },
+      {
+        id: "ev-supermega-chandelure",
+        month: 10,
+        title: "🔥 シャンデラのスーパーメガレイド・デイ (メガシャンデラ初登場)",
+        barClass: "bar-raid",
+        category: "raid",
+        startDay: 31,
+        endDay: 31,
+        dateText: "10/31(土) 14:00 〜 17:00 [グローバルチャレンジ: 10/31 9:00〜11/1 12:00]",
+        summary: "スーパーメガレイドに『メガシャンデラ』が初登場！さらにメガレベル4（スーパーマックス）が解放され、メガシンカ中に追加のスペシャルアタック『あやしいかぜ＋（レイド威力145 / PVP威力50・攻防1段階上昇抽選）』を使えるようになります！【重要仕様】バトルパーティ内にメガシンカポケモンを採用することで、スーパーメガレイドボスが張るシールドを1匹につき1枚破壊できます（※ゲンシカイオーガ、ゲンシグラードンはシールドを破壊できません）。",
+        bonuses: [
+          "✨ スーパーメガレイドで色違いのシャンデラに出会いやすくなる",
+          "🎫 ジムから最大6枚の無料レイドパスを獲得可能",
+          "🔓 捕獲したシャンデラは最初から「メガレベル1」が解放状態",
+          "🌍 グローバルチャレンジ(10/31 9:00〜11/1 12:00)達成段階に応じて『あやしいかぜ＋』威力＆CPブースト",
+          "💎 有料チケット(700円)：無料パス追加8枚(合計14枚)、ふしぎなアメXL確率上昇、+5,000 XP、ほしのすな+5,000"
+        ],
+        wilds: [],
+        raids: [
+          { dex: 609, name: "メガシャンデラ (初登場)", shiny: true, note: "スーパーメガレイド (10/31 14:00〜17:00)", targetKey: "mega-chandelure", isDmax: false }
+        ],
+        tasks: [
+          { task: "【重要ギミック】メガシンカポケモンを編成して出撃", rewardDex: 609, rewardName: "ボスのシールド破壊 (※ゲンシカイキ不可)", shiny: true }
         ]
       },
       {
         id: "ev-shadow-landorus",
         month: 10,
-        title: "シャドウランドロス(化身) レイド (連日常設中)",
+        title: "シャドウランドロス(化身) ★5シャドウレイド (連日常設)",
         barClass: "bar-shadow-daily",
         category: "raid",
-        startDay: 14,
+        startDay: 7,
         endDay: 31,
-        dateText: "10/14(水) 〜 11/3(火) 平日含め連日常設中！",
-        summary: "【GameWith/9DB確認済】土日限定ではなく平日も含め連日常設開催中！こおり2.56倍二重弱点。ライトクリスタル8個で暴走鎮静化。",
-        bonuses: ["平日・休日問わず黒タマゴ出現", "高個体シャドウ厳選可能", "ふしぎなアメXLドロップ率UP"],
-        wilds: [],
-        raids: [{ dex: 645, name: "シャドウランドロス (化身)", shiny: true, note: "★5 シャドウレイド (常設)", targetKey: "shadow-landorus", isDmax: false }],
-        tasks: [{ task: "シャドウレイドに1回勝つ", rewardDex: 645, rewardName: "ふしぎなアメ ×3", shiny: false }]
-      },
-      {
-        id: "ev-gbl-twilight",
-        month: 10,
-        title: "GBL 黄昏の旅路 (ハイパー / MLメガ / ファンタジーSL)",
-        barClass: "bar-gbl",
-        category: "gbl",
-        startDay: 22,
-        endDay: 28,
-        dateText: "10/22(木) 〜 10/28(水) 早朝",
-        summary: "ハイパーリーグ、マスターリーグメガ、ファンタジーカップ(SL)が開催。勝利時ほしのすな4倍ボーナス＆ランク16以上でモルペコ報酬出現。",
-        bonuses: ["勝利時のほしのすな4倍", "3勝リワードでモルペコ出現"],
-        wilds: [],
-        raids: [],
-        tasks: [{ task: "GBLで3勝する (ランク16以上)", rewardDex: 877, rewardName: "モルペコ", shiny: false }]
-      },
-      {
-        id: "ev-npb-collab",
-        month: 10,
-        title: "プロ野球12球団コラボイベント (連日常設)",
-        barClass: "bar-collab",
-        category: "collab",
-        startDay: 15,
-        endDay: 31,
-        dateText: "10月中旬 〜 11月中旬 (全国スタジアム常設)",
-        summary: "全国のプロ野球球場周辺でポケストップ増加。限定ステッカーや球団キャップピカチュウが出現。",
-        bonuses: ["スタジアム周辺で特別なピカチュウ出現", "限定ギフトステッカー配布"],
-        wilds: [
-          { dex: 25, name: "ピカチュウ (キャップ)", shiny: true, note: "球団キャップ着用" },
-          { dex: 68, name: "カイリキー", shiny: true, note: "球場周辺ブースト" }
+        dateText: "10/7(水) 6:00 〜 11/3(火・祝) 21:30頃 (平日・休日問わず連日常設中)",
+        summary: "2026年10月のシャドウ★5レイドボスは『シャドウランドロス（けしんフォルム）』！さらにシャドウ★3にはオコリザル・キルリア・ドラピオン、シャドウ★1にはゴース・ワニノコ・タテトプス・フカマルが登場しています。ランドロスはこおりタイプが2.56倍の二重弱点！",
+        bonuses: [
+          "シャドウ★5：シャドウランドロス(けしんフォルム)",
+          "シャドウ★3：オコリザル / キルリア / ドラピオン",
+          "シャドウ★1：ゴース / ワニノコ / タテトプス / フカマル"
         ],
-        raids: [],
-        tasks: [{ task: "グレートスローを12回投げる", rewardDex: 25, rewardName: "コラボピカチュウ", shiny: true }]
-      },
-      {
-        id: "ev-aeon-halloween",
-        month: 10,
-        title: "イオン ハロウィンイベント (連日常設)",
-        barClass: "bar-collab",
-        category: "collab",
-        startDay: 18,
-        endDay: 31,
-        dateText: "10/18(日) 〜 10/31(土) (全国イオンモール)",
-        summary: "全国のイオン系列店舗でチェックインすると限定タイムチャレンジが発生。毎日15:00〜16:00にレイド確定開催。",
-        bonuses: ["チェックインで特別タイムチャレンジ", "店舗周辺でゴースト出現率UP", "無料レイドパス追加1枚(現地限定)"],
-        wilds: [{ dex: 607, name: "ヒトモシ", shiny: true, note: "イオンスポット周辺" }],
-        raids: [{ dex: 487, name: "ギラティナ (オリジン)", shiny: true, note: "15:00〜16:00集中", targetKey: "giratina-origin", isDmax: false }],
-        tasks: [{ task: "イオンのポケストップを回す", rewardDex: 607, rewardName: "きんのズリのみ ×3", shiny: false }]
+        wilds: [],
+        raids: [
+          { dex: 645, name: "シャドウランドロス (化身)", shiny: true, note: "★5 シャドウレイド (〜11/3)", targetKey: "shadow-landorus", isDmax: false },
+          { dex: 443, name: "シャドウフカマル / タテトプス", shiny: true, note: "★1 シャドウレイド注目枠", isDmax: false }
+        ],
+        tasks: []
       },
       {
         id: "ev-gopass-oct",
         month: 10,
-        title: "GOパス：10月度 (常設)",
+        title: "🎫 GOパス：10月 (カイオーガ ＆ キラチャーム / 10/31〜11/1上限撤廃)",
+        barClass: "bar-collab",
+        category: "collab",
+        startDay: 6,
+        endDay: 31,
+        dateText: "10/6(火) 10:00 〜 11/3(火・祝) 10:00 [最後の土日10/31〜11/1はPT上限撤廃]",
+        summary: "無料版ランク100で『カイオーガ』、デラックス版最終ランクで『キラチャーム（期限11/8 23:59）』を獲得可能。1日のポイント上限は250pt（＋タスク分）ですが、10/31(土)0:00〜11/1(日)23:59の2日間は1日のポイント獲得上限が完全撤廃されます！",
+        bonuses: [
+          "Rank1：交換時アメ+1 ＆ TL31以上アメXL確定",
+          "Rank25：ギフト開封最大40個(DX50個)・入手125個(DX150個)",
+          "Rank50：おさんぽおこう効果時間2倍",
+          "Rank75：タマゴ孵化時のXP・ほしのすな増加"
+        ],
+        wilds: [],
+        raids: [],
+        tasks: [
+          { task: "ランク100到達リワード (無料 / デラックス)", rewardDex: 382, rewardName: "カイオーガ / キラチャーム(DX)", shiny: true }
+        ]
+      },
+
+      // ==================== 11月 ====================
+      {
+        id: "ev-halloween-p2",
+        month: 11,
+        title: "🎃 ハロウィン2026 パート2 (色違いボチ初登場 ＆ メガヤミラミLv4解放)",
         barClass: "bar-main",
         category: "main",
         startDay: 1,
-        endDay: 31,
-        dateText: "10/1(木) 〜 10/31(土) [11/3まで受取可]",
-        summary: "無料版ランク100でカイオーガ、デラックス版でキラチャームと1,400ポケコイン獲得。マイルストーンで交換アメXL確定ドロップ。",
-        bonuses: ["交換時アメXL確定", "ギフト所持・開封上限拡張", "おこう効果30分延長"],
-        wilds: [],
-        raids: [],
-        tasks: [{ task: "デイリー・ウィークリーパスタスク全般", rewardDex: 382, rewardName: "カイオーガ", shiny: true }]
+        endDay: 5,
+        dateText: "11/1(日) 10:00 〜 11/5(木) 20:00 [GOパス受取: 11/7 20:00まで]",
+        summary: "11月1日(日)10:00からハロウィン後半戦『パート2』が開幕！待望の『色違いのボチ✨』が初登場するほか、『メガヤミラミ』のメガレベル4（スーパーマックスレベル）が解放され、メガシンカ中に追加のスペシャルアタック『ナイトヘッド＋（レイド威力160 / PVP威力55）』が使用可能になります！また、ハロウィン衣装をつけたモクロー、飾りゲンガー、魔女帽子ケロマツ、襟飾りロコン、いたずらポッチャマ、フワライド、飾りバケッチャなど歴代＆新作ハロウィン衣装ポケモンも総登場！",
+        bonuses: [
+          "✨『色違いのボチ』がPokémon GOに初登場！",
+          "💎 メガヤミラミのスーパーマックスレベル(Lv4)解放＆専用技『ナイトヘッド＋（レイド威力160 / PVP威力55）』解禁",
+          "🍬【GOパスRank10】ポケモン捕獲時のアメ2倍（デラックスは3倍）継続",
+          "✨【GOパスRank20】ポケモン捕獲時のほしのすな2倍（デラックスは3倍）継続",
+          "👗 新作着せ替え「ハロウィン衣装 スカートセット」登場"
+        ],
+        wilds: [
+          { dex: 971, name: "ボチ (色違い初実装✨)", shiny: true, note: "パート2目玉✨" },
+          { dex: 722, name: "ハロウィン衣装モクロー", shiny: true, note: "衣装ポケモン" },
+          { dex: 94, name: "飾りをつけたゲンガー", shiny: true, note: "衣装ポケモン" },
+          { dex: 656, name: "魔女の帽子ケロマツ", shiny: true, note: "衣装ポケモン" },
+          { dex: 37, name: "襟飾りをつけたロコン", shiny: true, note: "衣装ポケモン" },
+          { dex: 393, name: "いたずら飾りポッチャマ", shiny: true, note: "衣装ポケモン" },
+          { dex: 426, name: "いたずら飾りフワライド", shiny: true, note: "衣装ポケモン" },
+          { dex: 710, name: "飾りをつけたバケッチャ", shiny: true, note: "衣装ポケモン" }
+        ],
+        raids: [
+          { dex: 25, name: "ピカチュウ (ハット&ケープ)", shiny: true, note: "★1レイド継続 (初登場衣装✨)", isDmax: false },
+          { dex: 854, name: "ヤバチャ (リボン)", shiny: true, note: "★1レイド継続 (初登場衣装✨)", isDmax: false },
+          { dex: 302, name: "メガヤミラミ (ナイトヘッド+)", shiny: true, note: "メガレイド (〜11/8)", targetKey: "mega-sableye", isDmax: false },
+          { dex: 487, name: "ギラティナ (オリジン)", shiny: true, note: "★5伝説 (〜11/3)", targetKey: "giratina-origin", isDmax: false },
+          { dex: 487, name: "ギラティナ (アナザー)", shiny: true, note: "★5伝説 (11/4〜11/8)", targetKey: "giratina-origin", isDmax: false }
+        ],
+        tasks: [
+          { task: "パート2限定フィールドリサーチ各種", rewardDex: 971, rewardName: "ボチ (色違いチャンス✨) / 衣装ポケモン", shiny: true },
+          { task: "メガヤミラミをスーパーマックスレベルに強化", rewardDex: 302, rewardName: "追加特別技「ナイトヘッド＋」解放", shiny: true }
+        ]
       },
-
-      // --- 11月 ---
       {
-        id: "ev-halloween-p2-nov",
+        id: "ev-dmax-machop-week",
         month: 11,
-        title: "ハロウィン2026 パート2 ＆ キョダイマックスゲンガー",
+        title: "ダイマックスワンリキー 出現率UP ＆ マックスマンデー",
         barClass: "bar-dmax",
         category: "dmax",
-        startDay: 1,
-        endDay: 3,
-        dateText: "10/28(水) 〜 11/3(火) 20:00",
-        summary: "パート2クライマックス！キョダイマックスゲンガーがパワースポットに降臨。魔女帽子ケロマツ、衣装モクロー、色違いボチ厳選の最終期間。",
-        bonuses: ["色違いボチ出現", "衣装ポケモン捕獲時ふしぎなアメドロップチャンス"],
-        wilds: [
-          { dex: 656, name: "魔女帽子ケロマツ", shiny: true, note: "パート2限定✨" },
-          { dex: 722, name: "衣装モクロー", shiny: true, note: "パート2限定✨" },
-          { dex: 971, name: "ボチ", shiny: true, note: "色違い解禁✨" }
+        startDay: 2,
+        endDay: 8,
+        dateText: "11/2(月) 6:00 〜 11/8(日) 21:00 [マックスマンデー: 11/2(月) 6:00〜21:00]",
+        summary: "11月第1週のパワースポットは『ダイマックスワンリキー』が出現率アップ！11/2(月) 6:00〜21:00はマックスマンデーが開催されます。11/14(土)〜15(日)の『キョダイマックスジュラルドン』や『ダイマックスディアルガ』対策の主力かくとうアタッカー（ダイマックスカイリキー）を厳選・育成する絶好の機会です。",
+        bonuses: [
+          "11/2(月) 6:00〜21:00：ワンリキー マックスマンデー",
+          "対キョダイジュラルドン・DMaxディアルガ用の格闘アタッカー厳選"
         ],
-        raids: [{ dex: 94, name: "キョダイマックス ゲンガー", shiny: true, note: "★6 マックスバトル", targetKey: "dmax-gmax-gengar", isDmax: true }],
-        tasks: [{ task: "ゴーストタイプを10匹捕獲する", rewardDex: 971, rewardName: "ボチ", shiny: true }]
+        wilds: [],
+        raids: [
+          { dex: 66, name: "ダイマックス ワンリキー", shiny: true, note: "マックスバトル (11/2〜11/8)", targetKey: "dmax-machop", isDmax: true }
+        ],
+        tasks: []
+      },
+      {
+        id: "ev-gopass-nov",
+        month: 11,
+        title: "🎫 GOパス：11月 (グラードン ＆ ポケコイン / 11/28〜29上限撤廃)",
+        barClass: "bar-collab",
+        category: "collab",
+        startDay: 3,
+        endDay: 30,
+        dateText: "11/3(火・祝) 10:00 〜 12/1(火) 10:00 [受取期限: 12/3 10:00まで]",
+        summary: "11月度の月間GOパス。無料ランク100到達で『グラードン』と確定遭遇できるほか、ポケコイン合計400枚などが報酬に登場！11/28(土)〜11/29(日)の週末は1日のポイント獲得上限(250pt)が撤廃されます。",
+        bonuses: [
+          "Rank1：交換時アメ+1 ＆ TL31以上アメXL確定",
+          "Rank25：ギフト開封上限40個(DX50個)・入手125個(DX150個)",
+          "Rank50：おさんぽおこう効果時間2倍",
+          "11/28(土)〜11/29(日)：ポイント獲得上限撤廃"
+        ],
+        wilds: [],
+        raids: [],
+        tasks: [
+          { task: "GOパス11月 ランク100到達リワード", rewardDex: 383, rewardName: "グラードン ＋ ポケコイン", shiny: true }
+        ]
+      },
+      {
+        id: "ev-wildarea-sendai",
+        month: 11,
+        title: "GOワイルドエリア2026：仙台・東北 / メキシコシティ ＆ 光の祭典",
+        barClass: "bar-collab",
+        category: "collab",
+        startDay: 6,
+        endDay: 8,
+        dateText: "11/6(金) 〜 11/8(日) [リアルイベント先行開催]",
+        summary: "グローバル開催に先駆けて、日本の『仙台・東北』および『メキシコシティ』でリアルイベントが開催！同期間にはインド限定の『光のフェスティバル（11/6〜11/8）』やシンガポールの『PokéXciting!（11/7〜11/8）』も開催されます。",
+        bonuses: ["仙台・東北での先行リアルイベント開催"],
+        wilds: [],
+        raids: [],
+        tasks: []
+      },
+      {
+        id: "ev-wildweek-2026",
+        month: 11,
+        title: "⚡ ワイルドウィーク2026 (ザシアンけんのおう / ザマゼンタたてのおう / 銀の王冠パス)",
+        barClass: "bar-raid",
+        category: "raid",
+        startDay: 9,
+        endDay: 13,
+        dateText: "11/9(月) 10:00 〜 11/13(金) 20:00 [GOパス：ワイルドウィーク同時開催]",
+        summary: "ワイルドエリアグローバル直前の超重要イベント！★5伝説レイドに『ザシアン（けんのおう）』と『ザマゼンタ（たてのおう）』が降臨し、勝利するとフォルムチェンジ用の『ソードエナジー』『シールドエナジー』を獲得できます（レイドアワー：11/9(月)ザシアン、11/10(火)ザマゼンタ）。さらに★5マックスバトルには11/13(金)に『ダイマックスラティオス』等が登場（同日18:00〜19:00集中出現あり）。同時配布の『GOパス：ワイルドウィーク』では無料でダイマックスメルタン、デラックス版で個体値を最大化する『ぎんのおうかん』が入手可能です！※この週（11/9〜11/15）は木曜のデイリーディスカバリーは休止となります。",
+        bonuses: [
+          "🗡️ ザシアン(けんのおう)勝利で「ソードエナジー」獲得 (レイドアワー: 11/9(月) 18:00〜19:00)",
+          "🛡️ ザマゼンタ(たてのおう)勝利で「シールドエナジー」獲得 (レイドアワー: 11/10(火) 18:00〜19:00)",
+          "💥 11/13(金)：★5マックスバトルに「ダイマックスラティオス」登場 (18:00〜19:00集中開催)",
+          "👑「GOパス：ワイルドウィーク」配布（無料：DMaxメルタン / DX：ぎんのおうかん）"
+        ],
+        wilds: [],
+        raids: [
+          { dex: 888, name: "ザシアン (けんのおう)", shiny: true, note: "★5伝説 (ソードエナジー獲得)", targetKey: "zacian-crowned", isDmax: false },
+          { dex: 889, name: "ザマゼンタ (たてのおう)", shiny: true, note: "★5伝説 (シールドエナジー獲得)", targetKey: "zamazenta-crowned", isDmax: false },
+          { dex: 380, name: "ダイマックス ラティオス", shiny: true, note: "★5マックスバトル (11/13)", isDmax: true }
+        ],
+        tasks: [
+          { task: "GOパス：ワイルドウィーク (無料 / デラックス)", rewardDex: 808, rewardName: "ダイマックスメルタン / ぎんのおうかん(DX)", shiny: true }
+        ]
       },
       {
         id: "ev-wildarea-2026",
         month: 11,
-        title: "GOワイルドエリア2026：グローバル",
+        title: "🌍 GOワイルドエリア2026：グローバル (合体キュレム / キョダイジュラルドン / DMaxディアルガ・パルキア)",
         barClass: "bar-collab",
         category: "collab",
         startDay: 14,
         endDay: 15,
-        dateText: "11/14(土) 〜 11/15(日) 各日10:00〜18:00",
-        summary: "大型グローバル祭！初登場の『つよいポケモン（PL40〜50・高個体保証・GOサファリボール必須）』が野生出現。土曜：ホワイトキュレム＆ゼクロム、日曜：ブラックキュレム＆レシラム降臨！",
-        bonuses: ["つよいポケモン出現 (GOサファリボール使用)", "キュレム合体エナジー獲得", "無料レイドパス最大6枚", "孵化距離1/2"],
-        wilds: [
-          { dex: 646, name: "つよいカイリュー", shiny: true, note: "PL40〜50確定" },
-          { dex: 445, name: "つよいガブリアス", shiny: true, note: "PL40〜50確定" },
-          { dex: 884, name: "キョダイジュラルドン", shiny: true, note: "色違い解禁✨" }
+        dateText: "11/14(土) 〜 11/15(日) [土曜:Wキュレム&DMaxディアルガ / 日曜:Bキュレム&DMaxパルキア]",
+        summary: "2026年秋の最大級グローバルイベント！土曜・日曜で出現する伝説レイド＆マックスバトルが劇的に切り替わります！【土曜日(11/14)】★5レイドに『ホワイトキュレム（勝利でブレイズエナジー獲得・こごえるせかい習得可能性あり）』＆『ゼクロム』、マックスバトルに色違い初登場の『キョダイマックスジュラルドン✨』＆初登場『ダイマックスディアルガ』が降臨！【日曜日(11/15)】★5レイドに『ブラックキュレム（勝利でボルトエナジー獲得・こごえるせかい習得可能性あり）』＆『レシラム』、マックスバトルに『キョダイマックスジュラルドン✨』＆初登場『ダイマックスパルキア』が降臨します！また、この土日は『GOパス：ワイルドウィーク』の1日ポイント上限が完全撤廃されます。",
+        bonuses: [
+          "🔥 土曜(11/14)レイド：ホワイトキュレム（ブレイズエナジー＆こごえるせかい）＋ ゼクロム",
+          "⚡ 日曜(11/15)レイド：ブラックキュレム（ボルトエナジー＆こごえるせかい）＋ レシラム",
+          "🏢 土曜(11/14)マックスバトル：キョダイマックスジュラルドン(色違い初実装✨) ＋ ダイマックスディアルガ(初登場)",
+          "🌌 日曜(11/15)マックスバトル：キョダイマックスジュラルドン(色違い初実装✨) ＋ ダイマックスパルキア(初登場)",
+          "🎫 11/14(土)〜11/15(日)は「GOパス：ワイルドウィーク」の1日PT獲得上限なし"
         ],
+        wilds: [],
         raids: [
-          { dex: 646, name: "ホワイト / ブラックキュレム", shiny: true, note: "合体伝説レイド", targetKey: "kyurem-fused", isDmax: false },
-          { dex: 643, name: "レシラム / ゼクロム", shiny: true, note: "特別技習得", targetKey: "kyurem-fused", isDmax: false }
+          { dex: 646, name: "ホワイトキュレム / ブラックキュレム", shiny: true, note: "土曜:Wキュレム / 日曜:Bキュレム", targetKey: "kyurem-fused", isDmax: false },
+          { dex: 644, name: "ゼクロム(土) / レシラム(日)", shiny: true, note: "★5 伝説レイド", isDmax: false },
+          { dex: 884, name: "キョダイマックス ジュラルドン", shiny: true, note: "★6 マックスバトル (色違い初実装✨)", targetKey: "dmax-gmax-duraludon", isDmax: true },
+          { dex: 483, name: "ダイマックス ディアルガ(土) / パルキア(日)", shiny: true, note: "★5 マックスバトル初登場！", targetKey: "dmax-dialga-palkia", isDmax: true }
         ],
-        tasks: [{ task: "GOサファリボールでポケモンを3匹捕獲", rewardDex: 646, rewardName: "キュレム", shiny: true }]
+        tasks: []
       },
-
-      // --- 12月 ---
       {
-        id: "ev-cd-allstar",
-        month: 12,
-        title: "2026 総決算オールスター コミュニティ・デイ",
+        id: "ev-minior-leonids",
+        month: 11,
+        title: "メテノシャワー：しし座流星群",
         barClass: "bar-main",
         category: "main",
-        startDay: 12,
-        endDay: 13,
-        dateText: "12/12(土) 〜 12/13(日) 各日14:00〜17:00",
-        summary: "歴代コミュデイ対象が一挙集結！特別技の一斉習得が可能となる年内最重要育成イベント。",
-        bonuses: ["歴代特別技一斉習得", "XP・すな2倍", "タマゴ距離1/2"],
-        wilds: [{ dex: 624, name: "コマタナ", shiny: true, note: "大量出現" }],
+        startDay: 14,
+        endDay: 19,
+        dateText: "11/14(土) 17:00 〜 11/19(木) 23:59",
+        summary: "10月のオリオン座流星群に続く流星群イベント第2弾！しし座流星群の期間中、7種類のうち1色のコアの『メテノ』が登場します。",
+        bonuses: ["メテノが出現"],
+        wilds: [{ dex: 774, name: "メテノ", shiny: false, note: "流星群期間限定" }],
         raids: [],
-        tasks: [{ task: "ポケモンを5匹捕獲する", rewardDex: 624, rewardName: "コマタナ", shiny: true }]
+        tasks: []
+      },
+      {
+        id: "ev-big-footprints",
+        month: 11,
+        title: "「大きな足跡」イベント ＆ クレセリア・ダークライ・メガジュペッタ",
+        barClass: "bar-main",
+        category: "main",
+        startDay: 16,
+        endDay: 24,
+        dateText: "イベント: 11/16(月)〜11/23(月・祝) / レイド: 11/16(月)〜11/24(火) [レイドアワー: 11/18]",
+        summary: "11/16(月)〜11/23(月・祝)に『大きな足跡』イベントが開催！同時期の11/16(月)〜11/24(火)には★5伝説レイドに『クレセリア』と『ダークライ』がW登場し、メガレイドには『メガジュペッタ』が登場します（11/18(水)18:00〜19:00はクレセリア＆ダークライのレイドアワー）。",
+        bonuses: [
+          "★5レイド：クレセリア ＆ ダークライ (レイドアワー: 11/18(水))",
+          "メガレイド：メガジュペッタ (11/16〜11/24)",
+          "11/20(金)〜11/23(月・祝)：LAIC Twitch配信キャンペーン同時開催"
+        ],
+        wilds: [],
+        raids: [
+          { dex: 491, name: "ダークライ / クレセリア", shiny: true, note: "★5レイド (11/16〜11/24)", isDmax: false },
+          { dex: 354, name: "メガジュペッタ", shiny: true, note: "メガレイド (11/16〜11/24)", targetKey: "mega-banette", isDmax: false }
+        ],
+        tasks: []
+      },
+      {
+        id: "ev-cd-pawniard",
+        month: 11,
+        title: "⚔️ コマタナのコミュニティ・デイ (2026年11月)",
+        barClass: "bar-main",
+        category: "main",
+        startDay: 21,
+        endDay: 21,
+        dateText: "11/21(土) 14:00 〜 17:00",
+        summary: "2026年11月のコミュニティ・デイは『コマタナ』が大量発生！最終進化系の『ドドゲザン』はレイド・マックスバトル・マスターリーグのすべてでトップクラスに君臨するはがね・あく複合の超強力ポケモンです。高個体値＆色違い＆アメXL296個集め必須の最重要コミュデイ！",
+        bonuses: [
+          "コマタナが野生で大量発生＆色違い確率大幅アップ✨",
+          "ドドゲザンへの進化で特別技習得＆アメXL大量確保チャンス",
+          "ルアー・おこう3時間持続＆捕獲ボーナス"
+        ],
+        wilds: [
+          { dex: 624, name: "コマタナ", shiny: true, note: "大量発生・色違い高確率✨" },
+          { dex: 983, name: "ドドゲザン (進化)", shiny: true, note: "環境トップ鋼・悪アタッカー" }
+        ],
+        raids: [],
+        tasks: [
+          { task: "コミュニティ・デイ限定フィールドリサーチ", rewardDex: 624, rewardName: "コマタナ (高個体値チャンス)", shiny: true }
+        ]
+      },
+      {
+        id: "ev-tusk-wish-deoxys",
+        month: 11,
+        title: "「黄昏時の願い」＆ デオキシス全4フォルム・メガメタグロス ＆ 11/28スーパーメガレイドデイ",
+        barClass: "bar-raid",
+        category: "raid",
+        startDay: 24,
+        endDay: 30,
+        dateText: "イベント: 11/24(火)〜11/30(月) / レイド: 11/25(水)〜12/1(火) / スーパーメガレイドデイ: 11/28(土)",
+        summary: "シーズン24「黄昏の旅路」クライマックスイベント『黄昏時の願い（11/24〜11/30）』が開催！11/25(水)〜12/1(火)の★5レイドには『デオキシス（ノーマル・アタック・ディフェンス・スピードの全4フォルム）』が登場し、メガレイドには最強はがね枠の『メガメタグロス』が登場！さらに11/28(土)には『スーパーメガレイド・デイ』が開催されます。ダイマックス枠は11/23〜29に『ニャスパー』、11/30〜12/6に『フリージオ』が出現率UPします。",
+        bonuses: [
+          "11/25(水)〜12/1(火)：デオキシス4フォルム ＆ メガメタグロス登場 (レイドアワー: 11/25)",
+          "11/28(土)：スーパーメガレイド・デイ開催 ＆ GOパス11月ポイント上限撤廃週末",
+          "マックスバトル：11/23〜29 ニャスパー / 11/30〜12/6 フリージオ"
+        ],
+        wilds: [],
+        raids: [
+          { dex: 386, name: "デオキシス (全4フォルム)", shiny: true, note: "★5レイド (11/25〜12/1)", isDmax: false },
+          { dex: 376, name: "メガメタグロス", shiny: true, note: "メガレイド (11/25〜12/1)", isDmax: false },
+          { dex: 677, name: "ダイマックス ニャスパー / フリージオ", shiny: true, note: "11/23〜29 ニャスパー / 11/30〜 フリージオ", isDmax: true }
+        ],
+        tasks: []
+      },
+
+      // ==================== 12月 ====================
+      {
+        id: "ev-dec-new-season",
+        month: 12,
+        title: "新シーズン開幕 ＆ ダイマックスフリージオ週間",
+        barClass: "bar-main",
+        category: "main",
+        startDay: 1,
+        endDay: 6,
+        dateText: "12/1(火) 10:00 新シーズン切り替え / 11/30(月)〜12/6(日) DMaxフリージオ",
+        summary: "12月1日(火)10:00にシーズン24『黄昏の旅路』が終了し、新シーズンが開幕！11/30(月)〜12/6(日)のパワースポットには『ダイマックスフリージオ』が出現率アップします。",
+        bonuses: ["12/1(火)10:00〜：新シーズン＆GOパス：12月開幕（12月以降のRank100伝説はSP背景なし仕様へ変更）"],
+        wilds: [],
+        raids: [
+          { dex: 615, name: "ダイマックス フリージオ", shiny: true, note: "マックスバトル (11/30〜12/6)", isDmax: true }
+        ],
+        tasks: []
       }
     ];
 
+    // レイド対策データ（4サイトの最新カウンターリストPL50基準）
     const RAID_DATA = {
-      "palkia-origin": {
+      "palkia-normal": {
         month: 10,
         startDay: 21,
         endDay: 27,
-        name: "パルキア (オリジンフォルム)",
-        status: "〜10/27(火) 10:00まで [現在出現中]",
+        name: "パルキア (通常フォルム)",
+        status: "〜10/27(火) 21:30頃まで [現在出現中]",
         tier: "★5 伝説レイド",
         dex: 484,
         cpNormal: "2280",
@@ -900,21 +1103,22 @@
           { name: "フェアリー", mult: "1.6倍", color: "bg-pink-600" }
         ],
         minPlayers: "2〜3名",
-        tactics: "特別技『あくうせつだん』が高火力。通常枠ではディアルガ(オリジン)がドラゴン技等倍受けで最も安定します。",
+        tactics: "みず・ドラゴン複合のため、弱点はドラゴンとフェアリーの2タイプのみ。ディアルガ(オリジン)やパルキア(オリジン)、メガレックウザ、メガサーナイトを編成することで少人数でも高速周回が可能です。",
         counters: [
           { name: "ディアルガ (オリジン)", dex: 483, tag: "normal", dps: 43.5, tdo: 980, fast: "りゅうのいぶき", charge: "ときのほうこう*" },
-          { name: "パルキア (オリジン)", dex: 484, tag: "normal", dps: 42.8, tdo: 910, fast: "りゅうのいぶき", charge: "あくうせつだん*" },
-          { name: "ザシアン (れきせん)", dex: 888, tag: "normal", dps: 41.2, tdo: 920, fast: "でんこうせっか", charge: "じゃれつく" },
-          { name: "ゼルネアス", dex: 716, tag: "normal", dps: 40.5, tdo: 910, fast: "ジオコントロール", charge: "ムーンフォース" },
-          { name: "キュレム", dex: 646, tag: "normal", dps: 39.8, tdo: 840, fast: "りゅうのいぶき", charge: "こごえるせかい" },
+          { name: "パルキア (オリジン)", dex: 484, tag: "normal", dps: 42.8, tdo: 910, fast: "ドラゴンテール", charge: "あくうせつだん*" },
+          { name: "ブラックキュレム", dex: 646, tag: "normal", dps: 42.1, tdo: 940, fast: "ドラゴンテール", charge: "げきりん" },
+          { name: "ザシアン (けんのおう)", dex: 888, tag: "normal", dps: 41.5, tdo: 950, fast: "バークアウト", charge: "じゃれつく" },
+          { name: "ゼルネアス", dex: 716, tag: "normal", dps: 40.5, tdo: 910, fast: "ジオコントロール*", charge: "ムーンフォース" },
           { name: "ガブリアス", dex: 445, tag: "normal", dps: 39.2, tdo: 870, fast: "ドラゴンテール", charge: "げきりん" },
-          { name: "オノノクス", dex: 612, tag: "normal", dps: 38.6, tdo: 760, fast: "ドラゴンテール", charge: "ワイドブレイカー" },
-          { name: "ボーマンダ", dex: 373, tag: "normal", dps: 38.1, tdo: 780, fast: "ドラゴンテール", charge: "りゅうせいぐん" },
-          { name: "カイリュー", dex: 149, tag: "normal", dps: 37.8, tdo: 810, fast: "ドラゴンテール", charge: "ドラゴンクロー" },
+          { name: "オノノクス", dex: 612, tag: "normal", dps: 38.6, tdo: 760, fast: "ドラゴンテール", charge: "ワイドブレイカー*" },
+          { name: "ボーマンダ", dex: 373, tag: "normal", dps: 38.1, tdo: 780, fast: "ドラゴンテール", charge: "げきりん*" },
+          { name: "カイリュー", dex: 149, tag: "normal", dps: 37.8, tdo: 810, fast: "ドラゴンテール", charge: "げきりん" },
           { name: "トゲキッス", dex: 468, tag: "normal", dps: 36.5, tdo: 850, fast: "あまえる", charge: "マジカルシャイン" },
           { name: "メガレックウザ", dex: 384, tag: "mega", dps: 56.4, tdo: 1250, fast: "ドラゴンテール", charge: "ワイドブレイカー" },
           { name: "メガサーナイト", dex: 282, tag: "mega", dps: 51.2, tdo: 980, fast: "あまえる", charge: "マジカルシャイン" },
-          { name: "シャドウカイリュー", dex: 149, tag: "shadow", dps: 49.5, tdo: 830, fast: "ドラゴンテール", charge: "ドラゴンクロー" }
+          { name: "シャドウボーマンダ", dex: 373, tag: "shadow", dps: 50.2, tdo: 810, fast: "ドラゴンテール", charge: "げきりん*" },
+          { name: "シャドウカイリュー", dex: 149, tag: "shadow", dps: 49.5, tdo: 830, fast: "ドラゴンテール", charge: "げきりん" }
         ]
       },
       "mega-charizard-y": {
@@ -922,7 +1126,7 @@
         startDay: 21,
         endDay: 27,
         name: "メガリザードンY / メガリザードンX",
-        status: "〜10/27(火) 10:00まで [現在出現中]",
+        status: "〜10/27(火) 21:30頃まで [現在出現中]",
         tier: "メガレイド (★4)",
         dex: 6,
         cpNormal: "1651",
@@ -932,19 +1136,19 @@
           { name: "みず / でんき (Y)", mult: "1.6倍", color: "bg-blue-600" },
           { name: "じめん / いわ / 竜 (X)", mult: "1.6倍", color: "bg-orange-600" }
         ],
-        minPlayers: "1〜2名（いわ統一でソロ・ペア撃破可能！）",
-        tactics: "メガリザードンYは『いわタイプが2.56倍の二重弱点』！ラムパルド、ドサイドン、バンギラス等のいわ統一パーティを組めばソロまたは2人で高速周回可能です。",
+        minPlayers: "1〜2名（Yはいわ統一でソロ討伐可能！）",
+        tactics: "メガリザードンYは『いわタイプが2.56倍の二重弱点』、メガリザードンXも『いわ・じめん・ドラゴンが弱点』のため、どちらに出くわしても対応できる『いわ・じめんタイプ（ドサイドン、ラムパルド、バンギラス等）』を軸にすると安定して高速撃破できます。",
         counters: [
           { name: "ラムパルド", dex: 409, tag: "normal", dps: 52.8, tdo: 740, fast: "うちおとす", charge: "いわなだれ" },
           { name: "ドサイドン", dex: 464, tag: "normal", dps: 48.6, tdo: 1040, fast: "うちおとす", charge: "がんせきほう*" },
           { name: "テラキオン", dex: 639, tag: "normal", dps: 48.2, tdo: 980, fast: "うちおとす", charge: "いわなだれ" },
           { name: "ガチグマ", dex: 901, tag: "normal", dps: 45.1, tdo: 910, fast: "いわくだき", charge: "いわなだれ" },
-          { name: "ギガルガス", dex: 526, tag: "normal", dps: 44.5, tdo: 890, fast: "うちおとす", charge: "メテオビーム*" },
+          { name: "ギガイアス", dex: 526, tag: "normal", dps: 44.5, tdo: 890, fast: "うちおとす", charge: "メテオビーム*" },
           { name: "バンギラス", dex: 248, tag: "normal", dps: 44.0, tdo: 950, fast: "うちおとす*", charge: "ストーンエッジ" },
           { name: "カイオーガ", dex: 382, tag: "normal", dps: 42.1, tdo: 980, fast: "たきのぼり", charge: "こんげんのはどう*" },
-          { name: "ツンデツンデ", dex: 805, tag: "normal", dps: 41.5, tdo: 880, fast: "いわおとし", charge: "いわなだれ" },
+          { name: "ツンデツンデ", dex: 805, tag: "normal", dps: 41.5, tdo: 880, fast: "いわおとし", charge: "ストーンエッジ" },
           { name: "プテラ", dex: 142, tag: "normal", dps: 40.8, tdo: 720, fast: "いわおとし", charge: "いわなだれ" },
-          { name: "ゴローニャ", dex: 76, tag: "normal", dps: 39.5, tdo: 790, fast: "いわおとし", charge: "ストーンエッジ" },
+          { name: "アマルルガ", dex: 699, tag: "normal", dps: 39.5, tdo: 790, fast: "いわおとし", charge: "メテオビーム" },
           { name: "メガディアンシー", dex: 719, tag: "mega", dps: 64.5, tdo: 1320, fast: "いわおとし", charge: "いわなだれ" },
           { name: "メガバンギラス", dex: 248, tag: "mega", dps: 59.2, tdo: 1380, fast: "うちおとす*", charge: "ストーンエッジ" },
           { name: "シャドウラムパルド", dex: 409, tag: "shadow", dps: 63.8, tdo: 760, fast: "うちおとす", charge: "いわなだれ" },
@@ -953,10 +1157,10 @@
       },
       "shadow-landorus": {
         month: 10,
-        startDay: 14,
+        startDay: 7,
         endDay: 31,
-        name: "シャドウランドロス (化身フォルム)",
-        status: "平日・休日問わず連日常設中！(〜11/3)",
+        name: "シャドウランドロス (けしんフォルム)",
+        status: "10/7(水) 〜 11/3(火・祝) 連日常設中！[現在出現中]",
         tier: "★5 シャドウ伝説レイド",
         dex: 645,
         cpNormal: "2050",
@@ -965,34 +1169,35 @@
           { name: "こおり", mult: "2.56倍 (二重弱点)", color: "bg-sky-600 font-extrabold" },
           { name: "みず", mult: "1.6倍", color: "bg-blue-600" }
         ],
-        minPlayers: "2〜3名（二重弱点こおり統一＋暴走時ライトクリスタル8個投入）",
-        tactics: "土日限定ではなく平日も含め連日常設されています！こおり技が2.56倍の二重弱点。通常枠ではマンムー、セグレイブ、ガラルヒヒダルマを揃えるだけで少人数討伐可能です。",
+        minPlayers: "2〜3名（こおり統一＋暴走時ライトクリスタル8個使用）",
+        tactics: "じめん・ひこう複合のため『こおり技が2.56倍の二重弱点』！ホワイトキュレム・ブラックキュレム・マンムー・セグレイブ・グレイシア等のこおり艦隊を揃え、暴走時にライトクリスタルを使用すれば2人でも安定して撃破可能です。",
         counters: [
+          { name: "ホワイトキュレム / キュレム", dex: 646, tag: "normal", dps: 52.1, tdo: 1080, fast: "こおりのキバ", charge: "こごえるせかい*" },
           { name: "マンムー", dex: 473, tag: "normal", dps: 48.5, tdo: 960, fast: "こなゆき", charge: "ゆきなだれ" },
-          { name: "セグレイブ", dex: 998, tag: "normal", dps: 47.9, tdo: 920, fast: "こおりのつぶて", charge: "ゆきなだれ" },
+          { name: "セグレイブ", dex: 998, tag: "normal", dps: 47.9, tdo: 920, fast: "こおりのキバ", charge: "ゆきなだれ" },
           { name: "ガラルヒヒダルマ", dex: 555, tag: "normal", dps: 47.2, tdo: 710, fast: "こおりのキバ", charge: "ゆきなだれ" },
-          { name: "グレイシア", dex: 471, tag: "normal", dps: 44.8, tdo: 810, fast: "こおりのつぶて", charge: "ゆきなだれ" },
-          { name: "ラプラス", dex: 131, tag: "normal", dps: 43.0, tdo: 790, fast: "こおりのいぶき", charge: "れいとうビーム" },
+          { name: "マニューラ", dex: 461, tag: "normal", dps: 45.6, tdo: 780, fast: "こおりのつぶて", charge: "トリプルアクセル" },
+          { name: "グレイシア", dex: 471, tag: "normal", dps: 44.8, tdo: 810, fast: "こおりのいぶき", charge: "ゆきなだれ" },
           { name: "カイオーガ", dex: 382, tag: "normal", dps: 42.5, tdo: 1020, fast: "たきのぼり", charge: "こんげんのはどう*" },
-          { name: "パルキア", dex: 484, tag: "normal", dps: 41.8, tdo: 880, fast: "たきのぼり", charge: "ハイドロポンプ" },
-          { name: "アローラキュウコン", dex: 38, tag: "normal", dps: 40.2, tdo: 760, fast: "こなゆき", charge: "ウェザーボール(氷)" },
+          { name: "クレベース", dex: 713, tag: "normal", dps: 41.2, tdo: 890, fast: "こおりのキバ", charge: "ゆきなだれ" },
+          { name: "バイバニラ", dex: 584, tag: "normal", dps: 40.4, tdo: 760, fast: "こおりの息吹", charge: "ゆきなだれ" },
           { name: "ユキノオー", dex: 460, tag: "normal", dps: 39.1, tdo: 740, fast: "こなゆき", charge: "ウェザーボール(氷)" },
-          { name: "ゲッコウガ", dex: 658, tag: "normal", dps: 38.9, tdo: 690, fast: "みずしゅりけん", charge: "ハイドロカノン*" },
-          { name: "メガレックウザ", dex: 384, tag: "mega", dps: 55.4, tdo: 1190, fast: "エアスラッシュ", charge: "ふぶき" },
+          { name: "ゲンシカイオーガ", dex: 382, tag: "mega", dps: 56.8, tdo: 1350, fast: "たきのぼり", charge: "ふぶき / こんげんのはどう*" },
           { name: "メガユキノオー", dex: 460, tag: "mega", dps: 51.2, tdo: 1050, fast: "こなゆき", charge: "ウェザーボール(氷)" },
-          { name: "シャドウマンムー", dex: 473, tag: "shadow", dps: 58.2, tdo: 940, fast: "こなゆき", charge: "ゆきなだれ" }
+          { name: "シャドウマンムー", dex: 473, tag: "shadow", dps: 58.2, tdo: 940, fast: "こなゆき", charge: "ゆきなだれ" },
+          { name: "シャドウマニューラ", dex: 461, tag: "shadow", dps: 54.6, tdo: 790, fast: "こおりのつぶて", charge: "トリプルアクセル" }
         ]
       },
       "giratina-origin": {
         month: 10,
-        startDay: 27,
+        startDay: 28,
         endDay: 31,
-        name: "ギラティナ (オリジンフォルム)",
-        status: "10/27(火) 10:00 〜 11/3(火) 10:00 [次回予告]",
+        name: "ギラティナ (オリジン) / (11/4〜アナザー)",
+        status: "10/28(水) 6:00 〜 11/3(火) [レイドアワー: 10/28 18:00〜19:00]",
         tier: "★5 伝説レイド",
         dex: 487,
-        cpNormal: "2105",
-        cpBoost: "2631 (霧・強風)",
+        cpNormal: "2105 (アナザー: 1931)",
+        cpBoost: "2631 (霧・強風 / アナザー: 2414)",
         weaknesses: [
           { name: "あく", mult: "1.6倍", color: "bg-stone-700" },
           { name: "ゴースト", mult: "1.6倍", color: "bg-purple-700" },
@@ -1001,64 +1206,135 @@
           { name: "フェアリー", mult: "1.6倍", color: "bg-pink-600" }
         ],
         minPlayers: "2〜3名",
-        tactics: "あくタイプであれば特別技シャドーダイブを2重耐性で無効化可能。通常枠ではパルキア(オリジン)とサザンドラがDPS・TDOともに最高峰です。",
+        tactics: "10/28(水)〜11/3(火)はオリジンフォルム、11/4(水)〜11/8(日)はアナザーフォルムが登場。ボスのゴースト技を軽減できる『あくタイプ（サザンドラ・バンギラス・ドドゲザン・イベルタル）』や高火力の『ドラゴンタイプ（オリジンパルキア・オリジンディアルガ）』が最適解です。",
         counters: [
-          { name: "パルキア (オリジン)", dex: 484, tag: "normal", dps: 46.8, tdo: 980, fast: "りゅうのいぶき", charge: "あくうせつだん*" },
+          { name: "パルキア (オリジン)", dex: 484, tag: "normal", dps: 46.8, tdo: 980, fast: "ドラゴンテール", charge: "あくうせつだん*" },
+          { name: "ネクロズマ (あかつき)", dex: 800, tag: "normal", dps: 46.2, tdo: 950, fast: "シャドークロー", charge: "シャドーレイ" },
           { name: "サザンドラ", dex: 635, tag: "normal", dps: 44.2, tdo: 920, fast: "かみつく", charge: "ぶんまわす*" },
           { name: "ディアルガ (オリジン)", dex: 483, tag: "normal", dps: 43.9, tdo: 990, fast: "りゅうのいぶき", charge: "ときのほうこう*" },
-          { name: "オノノクス", dex: 612, tag: "normal", dps: 43.1, tdo: 840, fast: "ドラゴンテール", charge: "ワイドブレイカー*" },
-          { name: "ガブリアス", dex: 445, tag: "normal", dps: 42.5, tdo: 890, fast: "ドラゴンテール", charge: "げきりん" },
-          { name: "ボーマンダ", dex: 373, tag: "normal", dps: 42.0, tdo: 810, fast: "ドラゴンテール", charge: "りゅうせいぐん" },
-          { name: "バンギラス", dex: 248, tag: "normal", dps: 41.2, tdo: 910, fast: "かみつく", charge: "ぶんまわす" },
-          { name: "カイリュー", dex: 149, tag: "normal", dps: 40.8, tdo: 830, fast: "ドラゴンテール", charge: "ドラゴンクロー" },
-          { name: "トゲキッス", dex: 468, tag: "normal", dps: 39.5, tdo: 880, fast: "あまえる", charge: "マジカルシャイン" },
-          { name: "シャンデラ", dex: 609, tag: "normal", dps: 39.2, tdo: 760, fast: "たたりめ", charge: "シャドーボール" },
+          { name: "バンギラス", dex: 248, tag: "normal", dps: 43.1, tdo: 960, fast: "かみつく", charge: "ぶんまわす" },
+          { name: "ドドゲザン", dex: 983, tag: "normal", dps: 42.5, tdo: 910, fast: "バークアウト", charge: "イカサマ" },
+          { name: "ガブリアス", dex: 445, tag: "normal", dps: 42.0, tdo: 890, fast: "ドラゴンテール", charge: "げきりん" },
+          { name: "イベルタル", dex: 717, tag: "normal", dps: 41.5, tdo: 910, fast: "バークアウト", charge: "あくのはどう" },
+          { name: "ダークライ", dex: 491, tag: "normal", dps: 41.2, tdo: 820, fast: "バークアウト", charge: "シャドーボール" },
+          { name: "シャンデラ", dex: 609, tag: "normal", dps: 40.5, tdo: 760, fast: "たたりめ", charge: "シャドーボール" },
           { name: "メガレックウザ", dex: 384, tag: "mega", dps: 56.2, tdo: 1280, fast: "ドラゴンテール", charge: "ワイドブレイカー" },
-          { name: "メガバンギラス", dex: 248, tag: "mega", dps: 52.4, tdo: 1310, fast: "かみつく", charge: "ぶんまわす" },
-          { name: "メガゲンガー", dex: 94, tag: "mega", dps: 51.8, tdo: 890, fast: "したでなめる*", charge: "シャドーボール" },
-          { name: "シャドウボーマンダ", dex: 373, tag: "shadow", dps: 50.1, tdo: 820, fast: "ドラゴンテール", charge: "りゅうせいぐん" },
-          { name: "シャドウサザンドラ", dex: 635, tag: "shadow", dps: 49.8, tdo: 880, fast: "かみつく", charge: "ぶんまわす*" }
+          { name: "メガバンギラス", dex: 248, tag: "mega", dps: 54.4, tdo: 1360, fast: "かみつく", charge: "ぶんまわす" },
+          { name: "シャドウバンギラス", dex: 248, tag: "shadow", dps: 51.8, tdo: 1020, fast: "かみつく", charge: "ぶんまわす" }
         ]
       },
-      "mega-banette": {
+      "mega-sableye": {
         month: 10,
-        startDay: 27,
+        startDay: 28,
         endDay: 31,
-        name: "メガジュペッタ",
-        status: "10/27(火) 10:00 〜 11/3(火) 10:00 [次回予告]",
+        name: "メガヤミラミ (11/1〜メガLv4＆ナイトヘッド＋解放)",
+        status: "10/28(水) 6:00 〜 11/8(日) 21:30頃 [次回メガレイド]",
         tier: "メガレイド (★4)",
-        dex: 354,
-        cpNormal: "1313",
-        cpBoost: "1642 (霧)",
+        dex: 302,
+        cpNormal: "1068",
+        cpBoost: "1335 (霧)",
         weaknesses: [
-          { name: "あく", mult: "1.6倍", color: "bg-stone-700" },
-          { name: "ゴースト", mult: "1.6倍", color: "bg-purple-700" }
+          { name: "フェアリー (唯一の弱点)", mult: "1.6倍", color: "bg-pink-600 font-extrabold" }
         ],
-        minPlayers: "1〜2名（あく統一でソロ・ペア討伐可能）",
-        tactics: "単ゴーストタイプのため、あくタイプ（サザンドラ、バンギラス、ダークライ）で固めることで被ダメージを抑えつつ高速周回可能です。",
+        minPlayers: "1〜2名（フェアリー統一でソロ・ペア討伐可能）",
+        tactics: "あく・ゴースト複合のため、弱点は『フェアリータイプのみ』！11/1(日)10:00のハロウィンパート2開幕からはメガレベル4（スーパーマックスレベル）が解放され、メガシンカ中に『ナイトヘッド＋（レイド威力160 / PVP威力55）』が使用可能になるため、メガエナジー集めの周回優先度が高いボスです。",
         counters: [
-          { name: "サザンドラ", dex: 635, tag: "normal", dps: 47.5, tdo: 960, fast: "かみつく", charge: "ぶんまわす*" },
-          { name: "ダークライ", dex: 491, tag: "normal", dps: 46.8, tdo: 890, fast: "バークアウト", charge: "シャドーボール" },
-          { name: "バンギラス", dex: 248, tag: "normal", dps: 45.2, tdo: 1020, fast: "かみつく", charge: "ぶんまわす" },
-          { name: "シャンデラ", dex: 609, tag: "normal", dps: 44.1, tdo: 780, fast: "たたりめ", charge: "シャドーボール" },
-          { name: "イベルタル", dex: 717, tag: "normal", dps: 43.8, tdo: 940, fast: "バークアウト", charge: "あくのはどう" },
-          { name: "マニューラ", dex: 461, tag: "normal", dps: 43.0, tdo: 710, fast: "バークアウト", charge: "イカサマ" },
-          { name: "メガバンギラス", dex: 248, tag: "mega", dps: 58.5, tdo: 1390, fast: "かみつく", charge: "ぶんまわす" },
-          { name: "メガゲンガー", dex: 94, tag: "mega", dps: 56.2, tdo: 880, fast: "したでなめる*", charge: "シャドーボール" },
-          { name: "シャドウバンギラス", dex: 248, tag: "shadow", dps: 54.1, tdo: 1040, fast: "かみつく", charge: "ぶんまわす" }
+          { name: "トゲキッス", dex: 468, tag: "normal", dps: 44.5, tdo: 920, fast: "あまえる", charge: "マジカルシャイン / はどうだん" },
+          { name: "ゼルネアス", dex: 716, tag: "normal", dps: 44.2, tdo: 980, fast: "ジオコントロール*", charge: "ムーンフォース" },
+          { name: "ザシアン (けんのおう)", dex: 888, tag: "normal", dps: 43.8, tdo: 960, fast: "でんこうせっか", charge: "じゃれつく" },
+          { name: "ラブトロス (けしん)", dex: 905, tag: "normal", dps: 43.5, tdo: 840, fast: "ようせいの風", charge: "マジカルシャイン" },
+          { name: "サーナイト", dex: 282, tag: "normal", dps: 42.1, tdo: 810, fast: "あまえる", charge: "マジカルシャイン" },
+          { name: "ニンフィア", dex: 700, tag: "normal", dps: 40.5, tdo: 890, fast: "あまえる", charge: "マジカルシャイン" },
+          { name: "カプ・テテフ", dex: 786, tag: "normal", dps: 40.2, tdo: 850, fast: "おどろかす", charge: "しぜんのいかり*" },
+          { name: "フラージェス", dex: 671, tag: "normal", dps: 39.4, tdo: 860, fast: "ようせいの風", charge: "ムーンフォース" },
+          { name: "アシレーヌ", dex: 730, tag: "normal", dps: 38.9, tdo: 830, fast: "あまえる", charge: "ムーンフォース" },
+          { name: "グランブル", dex: 210, tag: "normal", dps: 37.8, tdo: 740, fast: "あまえる", charge: "じゃれつく" },
+          { name: "メガサーナイト", dex: 282, tag: "mega", dps: 56.8, tdo: 1180, fast: "あまえる", charge: "マジカルシャイン" },
+          { name: "メガディアンシー", dex: 719, tag: "mega", dps: 52.4, tdo: 1090, fast: "いわおとし", charge: "ムーンフォース" },
+          { name: "シャドウサーナイト", dex: 282, tag: "shadow", dps: 51.2, tdo: 830, fast: "あまえる", charge: "マジカルシャイン" }
+        ]
+      },
+      "mega-chandelure": {
+        month: 10,
+        startDay: 31,
+        endDay: 31,
+        name: "メガシャンデラ (スーパーメガレイド初登場)",
+        status: "10/31(土) 14:00 〜 17:00 [3時間限定・スーパーメガレイドデイ]",
+        tier: "🔥 スーパーメガレイド",
+        dex: 609,
+        cpNormal: "1868",
+        cpBoost: "2335 (晴天・霧)",
+        weaknesses: [
+          { name: "みず", mult: "1.6倍", color: "bg-blue-600" },
+          { name: "じめん", mult: "1.6倍", color: "bg-amber-700" },
+          { name: "いわ", mult: "1.6倍", color: "bg-amber-600" },
+          { name: "ゴースト", mult: "1.6倍", color: "bg-purple-700" },
+          { name: "あく", mult: "1.6倍", color: "bg-stone-700" }
+        ],
+        minPlayers: "4〜6名以上推奨（※メガシンカポケモンによるシールド破壊必須）",
+        tactics: "【ポケマピ検証・超重要仕様】スーパーメガレイドボスは強力なシールドを展開します。パーティに『メガシンカポケモン（メガバンギラス、メガギャラドス、メガラグラージ等）』を編成すると1匹につきシールドを1枚破壊できますが、『ゲンシカイオーガ・ゲンシグラードンはシールドを破壊できない』ため要注意！必ず通常のメガシンカポケモンを編成して挑みましょう。",
+        counters: [
+          { name: "メガバンギラス (シールド破壊要員)", dex: 248, tag: "mega", dps: 58.6, tdo: 1420, fast: "かみつく", charge: "ぶんまわす" },
+          { name: "メガギャラドス (シールド破壊要員)", dex: 130, tag: "mega", dps: 54.2, tdo: 1310, fast: "かみつく / たきのぼり", charge: "かみくだく / アクアテール*" },
+          { name: "メガラグラージ (シールド破壊要員)", dex: 260, tag: "mega", dps: 53.8, tdo: 1240, fast: "マッドショット", charge: "ハイドロカノン*" },
+          { name: "ネクロズマ (あかつき)", dex: 800, tag: "normal", dps: 49.5, tdo: 1020, fast: "シャドークロー", charge: "シャドーレイ" },
+          { name: "カイオーガ", dex: 382, tag: "normal", dps: 48.2, tdo: 1060, fast: "たきのぼり", charge: "こんげんのはどう*" },
+          { name: "グラードン", dex: 383, tag: "normal", dps: 47.9, tdo: 1040, fast: "マッドショット", charge: "だんがいのつるぎ*" },
+          { name: "サザンドラ", dex: 635, tag: "normal", dps: 46.8, tdo: 960, fast: "かみつく", charge: "ぶんまわす*" },
+          { name: "バンギラス", dex: 248, tag: "normal", dps: 46.1, tdo: 1010, fast: "かみつく", charge: "ぶんまわす" },
+          { name: "ドサイドン", dex: 464, tag: "normal", dps: 45.4, tdo: 990, fast: "どろかけ", charge: "がんせきほう*" },
+          { name: "ガブリアス", dex: 445, tag: "normal", dps: 44.8, tdo: 970, fast: "マッドショット", charge: "だいちのちから*" },
+          { name: "ランドロス (れいじゅう)", dex: 645, tag: "normal", dps: 44.5, tdo: 910, fast: "マッドショット", charge: "ねっさのあらし*" },
+          { name: "ラムパルド", dex: 409, tag: "normal", dps: 44.0, tdo: 720, fast: "うちおとす", charge: "いわなだれ" },
+          { name: "シャドウバンギラス", dex: 248, tag: "shadow", dps: 55.2, tdo: 1040, fast: "かみつく", charge: "ぶんまわす" },
+          { name: "シャドウカイオーガ", dex: 382, tag: "shadow", dps: 54.8, tdo: 1050, fast: "たきのぼり", charge: "こんげんのはどう*" }
+        ]
+      },
+      "zacian-crowned": {
+        month: 11,
+        startDay: 9,
+        endDay: 13,
+        name: "ザシアン(けんのおう) / ザマゼンタ(たてのおう)",
+        status: "11/9(月) 〜 11/13(金) [ワイルドウィーク2026]",
+        tier: "★5 伝説レイド (エナジー獲得)",
+        dex: 888,
+        cpNormal: "2188 (ザシアン)",
+        cpBoost: "2735 (雪・曇り)",
+        weaknesses: [
+          { name: "ほのお (両共通弱点)", mult: "1.6倍", color: "bg-red-600 font-extrabold" },
+          { name: "じめん (両共通弱点)", mult: "1.6倍", color: "bg-amber-700 font-extrabold" },
+          { name: "かくとう (ザマゼンタのみ)", mult: "1.6倍", color: "bg-orange-600" }
+        ],
+        minPlayers: "3〜4名",
+        tactics: "勝利すると『ソードエナジー（ザシアン）』『シールドエナジー（ザマゼンタ）』を獲得可能！どちらもはがね複合のため、『じめんタイプ（グラードン、ランドロス、ガブリアス、ドリュウズ）』と『ほのおタイプ（レシラム、先日初登場のメガシャンデラ、メガリザードンY）』が両ボス共通の最適対策になります。",
+        counters: [
+          { name: "グラードン", dex: 383, tag: "normal", dps: 48.5, tdo: 1080, fast: "マッドショット", charge: "だんがいのつるぎ*" },
+          { name: "ネクロズマ (たそがれ)", dex: 800, tag: "normal", dps: 47.8, tdo: 1090, fast: "メタルクロー", charge: "メテオドライブ" },
+          { name: "ランドロス (れいじゅう)", dex: 645, tag: "normal", dps: 47.1, tdo: 940, fast: "マッドショット", charge: "ねっさのあらし*" },
+          { name: "レシラム", dex: 643, tag: "normal", dps: 46.8, tdo: 990, fast: "ほのおのキバ", charge: "クロスフレイム*" },
+          { name: "シャンデラ", dex: 609, tag: "normal", dps: 45.2, tdo: 820, fast: "ほのおのうず", charge: "オーバーヒート" },
+          { name: "ガブリアス", dex: 445, tag: "normal", dps: 44.6, tdo: 980, fast: "マッドショット", charge: "だいちのちから*" },
+          { name: "ドリュウズ", dex: 530, tag: "normal", dps: 43.9, tdo: 880, fast: "どろかけ", charge: "熱砂の大地" },
+          { name: "ウルガモス", dex: 637, tag: "normal", dps: 43.2, tdo: 890, fast: "ほのおのうず", charge: "オーバーヒート" },
+          { name: "ヒードラン", dex: 485, tag: "normal", dps: 42.5, tdo: 1040, fast: "ほのおのうず", charge: "マグマストーム*" },
+          { name: "ファイヤー", dex: 146, tag: "normal", dps: 41.8, tdo: 850, fast: "ほのおのうず", charge: "オーバーヒート" },
+          { name: "ゲンシグラードン", dex: 383, tag: "mega", dps: 61.2, tdo: 1480, fast: "マッドショット", charge: "だんがいのつるぎ*" },
+          { name: "メガシャンデラ / メガリザードンY", dex: 609, tag: "mega", dps: 58.4, tdo: 1210, fast: "ほのおのうず", charge: "あやしいかぜ+* / ブラストバーン*" },
+          { name: "シャドウグラードン", dex: 383, tag: "shadow", dps: 57.5, tdo: 1090, fast: "マッドショット", charge: "だんがいのつるぎ*" }
         ]
       }
     };
 
+    // ダイマックス対策データ（9DB準拠・最新スケジュール反映）
     const DMAX_9DB_DATA = {
       "dmax-sneasel": {
         month: 10,
-        startDay: 24,
+        startDay: 19,
         endDay: 25,
         name: "ダイマックス ニューラ",
-        tier: "★1 パワースポット",
-        dateInfo: "10/24(土) 〜 10/25(日) [現在出現率UP中]",
-        status: "〜10/25(日) 21:00まで [現在出現中]",
+        tier: "★1〜 パワースポット",
+        dateInfo: "10/19(月) 6:00 〜 10/25(日) 21:00 [本日最終日]",
+        status: "〜10/25(日) 21:00まで [現在出現率UP中]",
         dex: 215,
         cpPL20: "1118 - 1172",
         moves: [
@@ -1067,7 +1343,7 @@
           { name: "つじぎり", type: "あく", color: "bg-stone-700" }
         ],
         weaknesses: [
-          { name: "かくとう (二重弱点)", color: "bg-orange-600 font-extrabold" },
+          { name: "かくとう (2.56倍 二重弱点)", color: "bg-orange-600 font-extrabold" },
           { name: "ほのお", color: "bg-red-600" },
           { name: "いわ", color: "bg-amber-600" },
           { name: "はがね", color: "bg-slate-600" },
@@ -1075,201 +1351,196 @@
           { name: "フェアリー", color: "bg-pink-600" }
         ],
         resistances: [
-          { name: "エスパー (無効化)", color: "bg-pink-600" },
+          { name: "エスパー (2重耐性)", color: "bg-pink-600" },
           { name: "ゴースト", color: "bg-purple-700" },
           { name: "こおり", color: "bg-sky-600" },
           { name: "あく", color: "bg-stone-700" }
         ],
         attackers: [
-          { rank: 1, name: "ウーラオス (いちげき)", dex: 892, fast: "カウンター", charge: "インファイト" },
-          { rank: 2, name: "ザマゼンタ (たてのおう)", dex: 889, fast: "メタルクロー", charge: "きょじゅうだん*" },
-          { rank: 3, name: "リザードン", dex: 6, fast: "ほのおのうず", charge: "ブラストバーン*" },
-          { rank: 4, name: "エースバーン", dex: 815, fast: "ひのこ", charge: "かえんボール" }
+          { rank: 1, name: "カイリキー / ワンリキー", dex: 68, fast: "カウンター", charge: "ばくれつパンチ" },
+          { rank: 2, name: "ウーラオス (いちげき)", dex: 892, fast: "カウンター", charge: "インファイト" },
+          { rank: 3, name: "ザマゼンタ (たてのおう)", dex: 889, fast: "メタルクロー", charge: "きょじゅうだん*" },
+          { rank: 4, name: "エースバーン / リザードン", dex: 815, fast: "ひのこ", charge: "かえんボール*" }
         ],
         tanks: [
           { rank: 1, name: "ザマゼンタ (たてのおう)", dex: 889, fast: "メタルクロー", charge: "きょじゅうだん*" },
-          { rank: 2, name: "ハピナス", dex: 242, fast: "はたく", charge: "はかいこうせん" },
-          { rank: 3, name: "ヨクバリス", dex: 820, fast: "たいあたり", charge: "のしかかり" },
-          { rank: 4, name: "レジスチル", dex: 379, fast: "メタルクロー", charge: "ラスターカノン" }
-        ],
-        tankNote: "💡 <strong>9DB実戦ノート:</strong> かくとう技が『2.56倍の二重弱点』！★1のため、ウーラオスやザマゼンタ等の高火力格闘技で攻めればソロで瞬殺できます。マニューラに進化させることで、対エスパー・ゴースト用の最強格アタッカーを確保できます。",
-        routine: [
-          { step: 1, title: "格闘技持ちまたは0.5秒技タンクでメーター回収。", details: ["エネルギーアイコン回収必須"] },
-          { step: 2, title: "ダイナックル / ダイスチルで一気にHPを削る。", details: ["二重弱点のため数発で撃破"] },
-          { step: 3, title: "捕獲して個体値厳選＆アメ回収。", details: ["消費MPが少なく周回推奨"] }
-        ]
-      },
-      "dmax-gastly": {
-        month: 10,
-        startDay: 22,
-        endDay: 31,
-        name: "ダイマックス ゴース",
-        tier: "★1 パワースポット (ハロウィン)",
-        dateInfo: "ハロウィンパート1〜常設出現中",
-        status: "現在出現中",
-        dex: 92,
-        cpPL20: "656 - 702",
-        moves: [
-          { name: "シャドーボール", type: "ゴースト", color: "bg-purple-700" },
-          { name: "ヘドロばくだん", type: "どく", color: "bg-fuchsia-700" }
-        ],
-        weaknesses: [
-          { name: "あく", color: "bg-stone-700" },
-          { name: "ゴースト", color: "bg-purple-700" },
-          { name: "エスパー", color: "bg-pink-600" },
-          { name: "じめん", color: "bg-amber-700" }
-        ],
-        resistances: [
-          { name: "かくとう (3重耐性)", color: "bg-orange-600" },
-          { name: "ノーマル (2重耐性)", color: "bg-slate-500" },
-          { name: "どく / むし", color: "bg-fuchsia-700" }
-        ],
-        attackers: [
-          { rank: 1, name: "ドリュウズ", dex: 530, fast: "どろかけ", charge: "ドリルライナー" },
-          { rank: 2, name: "ゲンガー", dex: 94, fast: "したでなめる*", charge: "シャドーボール" },
-          { rank: 3, name: "オーロンゲ", dex: 861, fast: "ふいうち", charge: "イカサマ" },
-          { rank: 4, name: "メタグロス", dex: 376, fast: "しねんのずつき", charge: "サイコキネシス" }
-        ],
-        tanks: [
-          { rank: 1, name: "ヨクバリス (ゴースト無効)", dex: 820, fast: "かみつく", charge: "かみくだく" },
-          { rank: 2, name: "ハピナス", dex: 242, fast: "はたく", charge: "サイコキネシス" },
-          { rank: 3, name: "ドリュウズ", dex: 530, fast: "どろかけ", charge: "ドリルライナー" },
-          { rank: 4, name: "ザマゼンタ (たてのおう)", dex: 889, fast: "メタルクロー", charge: "きょじゅうだん*" }
-        ],
-        tankNote: "💡 ★1のためソロで簡単に討伐可能。高個体ダイマックスゲンガー育成およびアメXL集めに最適です。",
-        routine: [
-          { step: 1, title: "地面・悪・ゴースト技でメーターを溜める。", details: ["ソロで1ターン討伐可能"] },
-          { step: 2, title: "ダイアース / ダイホロウで一撃撃破。", details: ["パイルのみでアメ4倍回収推奨"] }
-        ]
-      },
-      "dmax-drilbur": {
-        month: 10,
-        startDay: 1,
-        endDay: 31,
-        name: "ダイマックス モグリュー",
-        tier: "★1 パワースポット (常設)",
-        dateInfo: "10月中常設出現中",
-        status: "連日常設中 [現在出現中]",
-        dex: 529,
-        cpPL20: "740 - 785",
-        moves: [
-          { name: "ドリルライナー", type: "じめん", color: "bg-amber-700" },
-          { name: "いわなだれ", type: "いわ", color: "bg-amber-600" }
-        ],
-        weaknesses: [
-          { name: "みず", color: "bg-blue-600" },
-          { name: "くさ", color: "bg-emerald-600" },
-          { name: "こおり", color: "bg-sky-600" }
-        ],
-        resistances: [
-          { name: "でんき (無効化)", color: "bg-amber-500" },
-          { name: "どく", color: "bg-fuchsia-700" },
-          { name: "いわ", color: "bg-amber-600" }
-        ],
-        attackers: [
-          { rank: 1, name: "カメックス", dex: 9, fast: "みずでっぽう", charge: "ハイドロカノン*" },
-          { rank: 2, name: "フシギバナ", dex: 3, fast: "つるのムチ", charge: "ハードプラント*" },
-          { rank: 3, name: "インテレオン", dex: 818, fast: "みずでっぽう", charge: "なみのり" },
-          { rank: 4, name: "ゴリランダー", dex: 812, fast: "このは", charge: "くさむすび" }
-        ],
-        tanks: [
-          { rank: 1, name: "カメックス", dex: 9, fast: "みずでっぽう", charge: "ハイドロカノン*" },
-          { rank: 2, name: "フシギバナ", dex: 3, fast: "つるのムチ", charge: "ハードプラント*" },
+          { rank: 2, name: "メタグロス", dex: 376, fast: "バレットパンチ", charge: "コメットパンチ*" },
           { rank: 3, name: "ハピナス", dex: 242, fast: "はたく", charge: "はかいこうせん" },
-          { rank: 4, name: "ヨクバリス", dex: 820, fast: "たいあたり", charge: "のしかかり" }
+          { rank: 4, name: "カメックス", dex: 9, fast: "みずでっぽう", charge: "ハイドロカノン*" }
         ],
-        tankNote: "💡 ドリュウズへの進化で対キョダイゲンガー・電気・毒レイドの最重要アタッカーになります。水・草技で容易にソロ討伐可能。",
+        tankNote: "💡 <strong>9DB実戦ノート:</strong> かくとうタイプが『2.56倍の二重弱点』のため、カイリキーやウーラオス、ほのお・はがねアタッカーでソロで瞬殺できます。マニューラに進化させれば来週以降のエスパー・ドラゴン（11/13ラティオス、11/14ディアルガ等）対策としても非常に優秀です。",
         routine: [
-          { step: 1, title: "水・草タイプで通常技連打。", details: ["メーターを素早くためる"] },
-          { step: 2, title: "ダイストリーム / ダイソウゲンで撃破。", details: ["高個体・アメXLを確保"] }
+          { step: 1, title: "0.5秒通常技持ちまたは格闘アタッカーでメーターを溜める。", details: ["スワイプでエネルギーアイコンを回収"] },
+          { step: 2, title: "ダイナックル / ダイバーン / ダイスチルで一撃撃破。", details: ["二重弱点のため1回のダイマックスフェーズで討伐可能"] }
         ]
       },
       "dmax-sableye": {
         month: 10,
         startDay: 26,
-        endDay: 28,
+        endDay: 31,
         name: "ダイマックス ヤミラミ",
-        tier: "★1 パワースポット",
-        dateInfo: "10/26(月) 18:00〜19:00 マックスマンデー / 10/26〜28 出現率UP",
-        status: "10/26(月) 18:00〜 [次回予告]",
+        tier: "★1〜 パワースポット",
+        dateInfo: "10/26(月) 6:00 〜 11/1(日) 21:00 [マックスマンデー: 10/26(月) 6:00〜21:00]",
+        status: "10/26(月) 6:00〜 [明日朝6時より登場]",
         dex: 302,
-        cpPL20: "790 - 840",
+        cpPL20: "794 - 843",
         moves: [
           { name: "イカサマ", type: "あく", color: "bg-stone-700" },
-          { name: "シャドークロー", type: "ゴースト", color: "bg-purple-700" },
+          { name: "かげうち", type: "ゴースト", color: "bg-purple-700" },
           { name: "パワージェム", type: "いわ", color: "bg-amber-600" }
         ],
         weaknesses: [
-          { name: "フェアリー (単一弱点)", color: "bg-pink-600 font-bold" }
+          { name: "フェアリー (唯一の弱点 1.6倍)", color: "bg-pink-600 font-extrabold" }
         ],
         resistances: [
-          { name: "かくとう (無効化)", color: "bg-orange-600" },
-          { name: "ノーマル (無効化)", color: "bg-slate-500" },
-          { name: "エスパー (無効化)", color: "bg-pink-600" },
+          { name: "エスパー (2重耐性)", color: "bg-pink-600" },
+          { name: "ノーマル (2重耐性)", color: "bg-slate-500" },
+          { name: "かくとう (2重耐性)", color: "bg-orange-600" },
           { name: "どく", color: "bg-fuchsia-700" }
         ],
         attackers: [
-          { rank: 1, name: "ザシアン (れきせん)", dex: 888, fast: "でんこうせっか", charge: "じゃれつく" },
-          { rank: 2, name: "トゲキッス", dex: 468, fast: "あまえる", charge: "マジカルシャイン" },
-          { rank: 3, name: "サーナイト", dex: 282, fast: "あまえる", charge: "マジカルシャイン" },
-          { rank: 4, name: "アシレーヌ", dex: 730, fast: "あまえる", charge: "ムーンフォース" }
+          { rank: 1, name: "ザシアン (けんのおう)", dex: 888, fast: "メタルクロー", charge: "きょじゅうざん*" },
+          { rank: 2, name: "ブリムオン", dex: 858, fast: "あまえる", charge: "マジカルシャイン" },
+          { rank: 3, name: "オーロンゲ", dex: 861, fast: "かみつく", charge: "じゃれつく" },
+          { rank: 4, name: "リザードン / インテレオン (高火力等倍)", dex: 6, fast: "りゅうのいぶき", charge: "ブラストバーン*" }
         ],
         tanks: [
-          { rank: 1, name: "ハピナス", dex: 242, fast: "はたく", charge: "はかいこうせん" },
-          { rank: 2, name: "ザマゼンタ (たてのおう)", dex: 889, fast: "メタルクロー", charge: "きょじゅうだん*" },
-          { rank: 3, name: "ヨクバリス", dex: 820, fast: "たいあたり", charge: "のしかかり" },
-          { rank: 4, name: "レジスチル", dex: 379, fast: "メタルクロー", charge: "ラスターカノン" }
+          { rank: 1, name: "ハピナス (ゴースト2重耐性)", dex: 242, fast: "はたく", charge: "マジカルシャイン" },
+          { rank: 2, name: "ヨクバリス (ゴースト2重耐性)", dex: 820, fast: "マッドショット", charge: "のしかかり" },
+          { rank: 3, name: "ザマゼンタ (たてのおう)", dex: 889, fast: "メタルクロー", charge: "きょじゅうだん*" },
+          { rank: 4, name: "オーロンゲ (悪耐性)", dex: 861, fast: "かみつく", charge: "じゃれつく" }
         ],
-        tankNote: "💡 ヤミラミの弱点は『フェアリーのみ』！フェアリー技で攻めれば瞬殺できます。あく/ゴースト複合のためキョダイゲンガー戦の壁役に最適。",
+        tankNote: "💡 <strong>9DB実戦ノート:</strong> 10/26(月)朝6時〜21時のマックスマンデーで大量出現！弱点はフェアリーのみですが、ボスの耐久自体は低いため、フェアリー技（ダイフェアリー）または高火力なダイマックス技で容易にソロ討伐可能です。11/1からのメガレベル4解放（ナイトヘッド＋）に向けた高個体値＆アメXL集めに最適！",
         routine: [
-          { step: 1, title: "フェアリータイプまたは高耐久タンク先発。", details: ["格闘・ノーマル・エスパーは無効化されるため出さない"] },
-          { step: 2, title: "ダイフェアリー / ダイアタックで撃破。", details: ["10/26(月) 18:00のマックスマンデーで集中捕獲推奨"] }
+          { step: 1, title: "0.5秒技持ちタンク（ハピナス・ヨクバリス等）でメーターを高速チャージ。", details: ["ノーマル・格闘・エスパー技はヤミラミに軽減されるためダイマックス時は別タイプへ交代"] },
+          { step: 2, title: "フェアリー技または高火力アタッカーに交代してダイマックス攻撃。", details: ["10/26(月)のマックスマンデーで高個体・色違いを厳選"] }
         ]
       },
-      "dmax-gmax-gengar": {
-        month: 10,
-        startDay: 31,
-        endDay: 31,
-        name: "キョダイマックス ゲンガー",
-        tier: "★6 超難関",
-        dateInfo: "10/31(土) 10:00 〜 11/3(火) 20:00 ハロウィン本番",
-        status: "10/31(土) 10:00〜 [次回予告]",
-        dex: 94,
-        cpPL20: "1644 - 1714",
+      "dmax-machop": {
+        month: 11,
+        startDay: 2,
+        endDay: 8,
+        name: "ダイマックス ワンリキー",
+        tier: "★1〜 パワースポット",
+        dateInfo: "11/2(月) 6:00 〜 11/8(日) 21:00 [マックスマンデー: 11/2(月) 6:00〜21:00]",
+        status: "11/2(月) 6:00〜 [11月第1週ピックアップ]",
+        dex: 66,
+        cpPL20: "678 - 730",
         moves: [
-          { name: "シャドーボール", type: "ゴースト", color: "bg-purple-700" },
-          { name: "ヘドロばくだん", type: "どく", color: "bg-fuchsia-700" },
-          { name: "きあいだま", type: "かくとう", color: "bg-orange-600" }
+          { name: "クロスチョップ", type: "かくとう", color: "bg-orange-600" },
+          { name: "かわらわり", type: "かくとう", color: "bg-orange-600" },
+          { name: "いわなだれ", type: "いわ", color: "bg-amber-600" }
         ],
         weaknesses: [
-          { name: "あく", color: "bg-stone-700" },
-          { name: "ゴースト", color: "bg-purple-700" },
           { name: "エスパー", color: "bg-pink-600" },
-          { name: "じめん", color: "bg-amber-700" }
+          { name: "ひこう", color: "bg-sky-500" },
+          { name: "フェアリー", color: "bg-pink-500" }
         ],
         resistances: [
-          { name: "ノーマル", color: "bg-slate-500" },
-          { name: "かくとう", color: "bg-orange-600" },
-          { name: "どく", color: "bg-fuchsia-700" },
-          { name: "むし", color: "bg-lime-600" }
+          { name: "いわ", color: "bg-amber-600" },
+          { name: "むし", color: "bg-lime-600" },
+          { name: "あく", color: "bg-stone-700" }
         ],
         attackers: [
-          { rank: 1, name: "ドリュウズ", dex: 530, fast: "どろかけ", charge: "ドリルライナー" },
-          { rank: 2, name: "オーロンゲ", dex: 861, fast: "ふいうち", charge: "イカサマ" },
-          { rank: 3, name: "ウーラオス (いちげき)", dex: 892, fast: "ふいうち", charge: "しっぺがえし" },
-          { rank: 4, name: "グラードン", dex: 383, fast: "マッドショット", charge: "だんがいのつるぎ*" }
+          { rank: 1, name: "メタグロス", dex: 376, fast: "しねんのずつき", charge: "サイコキネシス" },
+          { rank: 2, name: "ブリムオン", dex: 858, fast: "ねんりき", charge: "サイコキネシス" },
+          { rank: 3, name: "リザードン", dex: 6, fast: "エアスラッシュ", charge: "ドラゴンクロー" },
+          { rank: 4, name: "アーマーガア / ケンホロウ", dex: 823, fast: "エアスラッシュ", charge: "ゴッドバード" }
         ],
         tanks: [
-          { rank: 1, name: "ハピナス", dex: 242, fast: "はたく", charge: "はかいこうせん" },
-          { rank: 2, name: "ヨクバリス (ゴースト無効)", dex: 820, fast: "たいあたり", charge: "のしかかり" },
-          { rank: 3, name: "ザマゼンタ (たてのおう)", dex: 889, fast: "メタルクロー", charge: "きょじゅうだん*" },
-          { rank: 4, name: "カメックス (ヒーラー)", dex: 9, fast: "みずでっぽう", charge: "ハイドロカノン*" }
+          { rank: 1, name: "ゲンガー (格闘3重耐性)", dex: 94, fast: "シャドークロー", charge: "シャドーボール" },
+          { rank: 2, name: "メタグロス", dex: 376, fast: "しねんのずつき", charge: "サイコキネシス" },
+          { rank: 3, name: "フシギバナ (格闘耐性)", dex: 3, fast: "つるのムチ", charge: "ハードプラント*" },
+          { rank: 4, name: "ヤミラミ (格闘2重耐性)", dex: 302, fast: "シャドークロー", charge: "イカサマ" }
         ],
-        tankNote: "💡 ゴースト無効のヨクバリスや高耐久ハピナスで安全にメーターを回収し、ドリュウズのダイアースで大ダメージを与えます。",
+        tankNote: "💡 <strong>9DB実戦ノート:</strong> 11/14(土)・15(日)のワイルドエリアグローバルで初登場する『キョダイマックスジュラルドン』および『ダイマックスディアルガ』の弱点を突ける最重要かくとうアタッカー！11/2(月)のマックスマンデーで必ず高個体値を確保し、マックス技（ダイナックル）を強化しておきましょう。",
         routine: [
-          { step: 1, title: "ゴースト無効役で通常技を連打。", details: ["エネルギーアイコンを最優先で拾う"] },
-          { step: 2, title: "ドリュウズに交代しダイアース3連発。", details: ["ヒーラーはダイリカバリー支援"] },
-          { step: 3, title: "タンクに戻しメーター回収を徹底。", details: ["★6は長期戦のため役割分担徹底"] }
+          { step: 1, title: "メタグロスやゲンガー（格闘耐性）でメーターを溜める。", details: ["★1のためソロで容易に周回可能"] },
+          { step: 2, title: "ダイサイコ / ダイジェットで一撃撃破。", details: ["パイルのみでワンリキーのアメ・アメXLを大量回収"] }
+        ]
+      },
+      "dmax-gmax-duraludon": {
+        month: 11,
+        startDay: 14,
+        endDay: 15,
+        name: "キョダイマックス ジュラルドン (色違い初実装✨)",
+        tier: "★6 ワイルドエリア目玉",
+        dateInfo: "11/14(土) 〜 11/15(日) [GOワイルドエリア2026：グローバル]",
+        status: "11/14(土)〜11/15(日) [ワイルドエリアグローバル]",
+        dex: 884,
+        cpPL20: "1688 - 1758",
+        moves: [
+          { name: "ラスターカノン", type: "はがね", color: "bg-slate-600" },
+          { name: "ドラゴンクロー", type: "ドラゴン", color: "bg-indigo-600" },
+          { name: "はかいこうせん", type: "ノーマル", color: "bg-slate-500" }
+        ],
+        weaknesses: [
+          { name: "じめん (1.6倍)", color: "bg-amber-700 font-extrabold" },
+          { name: "かくとう (1.6倍)", color: "bg-orange-600 font-extrabold" }
+        ],
+        resistances: [
+          { name: "どく (2重耐性)", color: "bg-fuchsia-700" },
+          { name: "くさ (2重耐性)", color: "bg-emerald-600" },
+          { name: "ノーマル / 水 / 電気 / 飛 / 超 / 虫 / 岩 / 鋼", color: "bg-slate-600" }
+        ],
+        attackers: [
+          { rank: 1, name: "ドリュウズ (ダイアース)", dex: 530, fast: "どろかけ", charge: "熱砂の大地" },
+          { rank: 2, name: "カイリキー (ダイナックル)", dex: 68, fast: "カウンター", charge: "ばくれつパンチ" },
+          { rank: 3, name: "ウーラオス (ダイナックル)", dex: 892, fast: "カウンター", charge: "インファイト" },
+          { rank: 4, name: "エースバーン (キョダイカキュウ等倍)", dex: 815, fast: "ひのこ", charge: "かえんボール*" }
+        ],
+        tanks: [
+          { rank: 1, name: "ドリュウズ (鋼・竜・ノ全耐性)", dex: 530, fast: "マッドショット", charge: "ドリルライナー" },
+          { rank: 2, name: "ザマゼンタ (たてのおう)", dex: 889, fast: "メタルクロー", charge: "きょじゅうだん*" },
+          { rank: 3, name: "メタグロス (鋼・竜・ノ全耐性)", dex: 376, fast: "バレットパンチ", charge: "コメットパンチ*" },
+          { rank: 4, name: "ハピナス (ヒーラー役)", dex: 242, fast: "はたく", charge: "はかいこうせん" }
+        ],
+        tankNote: "💡 <strong>9DB実戦ノート:</strong> はがね・ドラゴン複合のため、弱点は『じめん』と『かくとう』の2タイプのみ！特に『ドリュウズ』はジュラルドンの使用するはがね技・ドラゴン技・ノーマル技のすべてに耐性を持ちながら、0.5秒技のマッドショットで高速チャージ＆弱点のダイアースを撃てる絶対的MVPです！",
+        routine: [
+          { step: 1, title: "ドリュウズ（マッドショット）またはザマゼンタで被ダメを抑えつつメーター回収。", details: ["はがね・ドラゴン・ノーマル技すべてを半減以下で受けられる"] },
+          { step: 2, title: "ダイマックス時はドリュウズのダイアース、またはカイリキーのダイナックル3連発。", details: ["11/2〜8のワンリキー週間＆モグリュー厳選で事前育成必須"] },
+          { step: 3, title: "色違い初登場✨のためパイルのみorきんのズリのみで確実に捕獲。", details: ["同日登場のダイマックスディアルガ(土)にも同じ編成がそのまま刺さります！"] }
+        ]
+      },
+      "dmax-dialga-palkia": {
+        month: 11,
+        startDay: 14,
+        endDay: 15,
+        name: "ダイマックス ディアルガ(土) / パルキア(日)",
+        tier: "★5 伝説マックスバトル",
+        dateInfo: "11/14(土): ディアルガ / 11/15(日): パルキア [ワイルドエリアグローバル初登場]",
+        status: "11/14(土)・15(日) [初登場]",
+        dex: 483,
+        cpPL20: "2217 - 2307 (ディアルガ) / 2190 - 2280 (パルキア)",
+        moves: [
+          { name: "りゅうせいぐん", type: "ドラゴン", color: "bg-indigo-600" },
+          { name: "アイアンヘッド (ディアルガ)", type: "はがね", color: "bg-slate-600" },
+          { name: "ハイドロポンプ (パルキア)", type: "みず", color: "bg-blue-600" }
+        ],
+        weaknesses: [
+          { name: "じめん・かくとう (土曜:ディアルガ)", color: "bg-amber-700 font-bold" },
+          { name: "ドラゴン・フェアリー (日曜:パルキア)", color: "bg-pink-600 font-bold" }
+        ],
+        resistances: [
+          { name: "ディアルガ：毒2重・草2重・鋼・水・電・飛・超・虫・岩", color: "bg-slate-600" },
+          { name: "パルキア：水2重・炎2重・鋼", color: "bg-blue-600" }
+        ],
+        attackers: [
+          { rank: 1, name: "ドリュウズ (土曜:対ディアルガ最適)", dex: 530, fast: "マッドショット", charge: "熱砂の大地" },
+          { rank: 2, name: "カイリキー (土曜:対ディアルガ)", dex: 68, fast: "カウンター", charge: "ばくれつパンチ" },
+          { rank: 3, name: "ザシアン (日曜:対パルキア最適)", dex: 888, fast: "メタルクロー", charge: "じゃれつく" },
+          { rank: 4, name: "ラティオス / ブリムオン (日曜:対パルキア)", dex: 380, fast: "りゅうのいぶき", charge: "ドラゴンクロー" }
+        ],
+        tanks: [
+          { rank: 1, name: "ザシアン (ドラゴン2重耐性)", dex: 888, fast: "メタルクロー", charge: "きょじゅうざん*" },
+          { rank: 2, name: "ドリュウズ (対ディアルガ壁役)", dex: 530, fast: "マッドショット", charge: "ドリルライナー" },
+          { rank: 3, name: "ザマゼンタ (たてのおう)", dex: 889, fast: "メタルクロー", charge: "きょじゅうだん*" },
+          { rank: 4, name: "ハピナス (万能タンク＆リカバリー)", dex: 242, fast: "はたく", charge: "マジカルシャイン" }
+        ],
+        tankNote: "💡 <strong>9DB実戦ノート:</strong> 土曜日のディアルガはキョダイジュラルドンと全く同じ『じめん・かくとう弱点』なので、ドリュウズ＆カイリキー編成で両方回せます！日曜日のパルキアはドラゴン・フェアリー弱点のため、11/9〜13のワイルドウィークで強化したザシアンや11/13登場のダイマックスラティオスが大活躍します。",
+        routine: [
+          { step: 1, title: "土曜(ディアルガ)はドリュウズ、日曜(パルキア)はザシアン/ハピナスでメーター回収。", details: ["りゅうせいぐん被弾時はダイウォール・ダイリカバリーで維持"] },
+          { step: 2, title: "土曜はダイアース/ダイナックル、日曜はダイフェアリー/ダイドラグーンで削る。", details: ["★5伝説マックスバトルのため4人連携推奨"] }
         ]
       }
     };
@@ -1279,7 +1550,7 @@
     let hiddenEventIds = new Set();
     let readNewsIds = new Set();
     
-    let activeRaidKey = "palkia-origin"; 
+    let activeRaidKey = "palkia-normal"; 
     let activeDmax9dbKey = "dmax-sneasel";
 
     let filterMega = false;
@@ -1302,10 +1573,10 @@
 
     function initStorage() {
       try {
-        const savedHidden = localStorage.getItem("pogo_hidden_events_v7");
+        const savedHidden = localStorage.getItem("pogo_hidden_events_v8");
         if (savedHidden) hiddenEventIds = new Set(JSON.parse(savedHidden));
 
-        const savedNews = localStorage.getItem("pogo_read_news_v7");
+        const savedNews = localStorage.getItem("pogo_read_news_v8");
         if (savedNews) readNewsIds = new Set(JSON.parse(savedNews));
       } catch (e) {
         console.error("Storage load error", e);
@@ -1313,12 +1584,12 @@
     }
 
     function saveHiddenEvents() {
-      localStorage.setItem("pogo_hidden_events_v7", JSON.stringify([...hiddenEventIds]));
+      localStorage.setItem("pogo_hidden_events_v8", JSON.stringify([...hiddenEventIds]));
       updateGlobalHiddenUI();
     }
 
     function saveReadNews() {
-      localStorage.setItem("pogo_read_news_v7", JSON.stringify([...readNewsIds]));
+      localStorage.setItem("pogo_read_news_v8", JSON.stringify([...readNewsIds]));
     }
 
     function updateGlobalHiddenUI() {
@@ -1450,7 +1721,7 @@
         return;
       }
 
-      activeEvents.slice(0, 4).forEach(ev => {
+      activeEvents.slice(0, 5).forEach(ev => {
         const isEndingToday = (ev.endDay === todayDate);
         let timeOrRange = "";
         if (isEndingToday) {
@@ -1493,9 +1764,8 @@
       const visibleNews = NEWS_ITEMS.filter(n => {
         if (readNewsIds.has(n.id)) return false;
 
-        // UMA・ユクシー・マックスバトルデイ等の終了単日ニュースは完全ブロック
         const titleStr = n.title || n.text || "";
-        if (titleStr.includes("UMA") || titleStr.includes("ユクシー") || titleStr.includes("マックスバトルデイ") || (n.id && n.id.includes("uma"))) {
+        if (titleStr.includes("UMA") || titleStr.includes("ユクシー") || (n.id && n.id.includes("uma"))) {
           return false;
         }
 
@@ -1507,7 +1777,7 @@
         if (n.date) {
           const itemDt = new Date(n.date);
           const diffDays = Math.floor((now - itemDt) / (1000 * 60 * 60 * 24));
-          if (diffDays > 10) return false;
+          if (diffDays > 14) return false;
         }
         return true;
       });
@@ -1713,13 +1983,15 @@
         const details = document.createElement("details");
         details.className = "bg-white border border-slate-200 rounded-xl overflow-hidden transition group shadow-sm";
         details.id = ev.id;
-        if (index === 0 || index === 1 || ev.id === "ev-halloween-p1" || ev.id === "ev-halloween-p2") details.open = true;
+        if (index < 3 || ev.id === "ev-halloween-p1" || ev.id === "ev-supermega-chandelure" || ev.id === "ev-halloween-p2" || ev.id === "ev-wildarea-2026") {
+          details.open = true;
+        }
 
         let wildsHtml = "";
         if (ev.wilds && ev.wilds.length > 0) {
           wildsHtml = `
             <div>
-              <div class="text-[11px] font-bold text-emerald-700 mb-1 flex items-center gap-1">🌿 【野生出現ポケモン一覧】</div>
+              <div class="text-[11px] font-bold text-emerald-700 mb-1 flex items-center gap-1">🌿 【野生・イベント出現ポケモン一覧】</div>
               <div class="grid grid-cols-2 sm:grid-cols-4 gap-1.5">
                 ${ev.wilds.map(w => `
                   <div class="bg-slate-50 border border-slate-200 p-1.5 rounded-lg flex items-center gap-2">
@@ -1739,7 +2011,7 @@
         if (ev.raids && ev.raids.length > 0) {
           raidsHtml = `
             <div>
-              <div class="text-[11px] font-bold text-rose-700 mb-1 flex items-center gap-1">⚔️ 【レイド・ダイマックス出現】(タップで対策へジャンプ)</div>
+              <div class="text-[11px] font-bold text-rose-700 mb-1 flex items-center gap-1">⚔️ 【レイド・マックスバトル出現】(タップで対策へジャンプ)</div>
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-1.5">
                 ${ev.raids.map(r => `
                   <div onclick="jumpToCounterTarget('${r.targetKey || ''}', ${!!r.isDmax})" class="bg-slate-50 border border-slate-200 hover:border-sky-500 p-2 rounded-lg flex items-center justify-between cursor-pointer transition">
@@ -1762,7 +2034,7 @@
         if (ev.tasks && ev.tasks.length > 0) {
           tasksHtml = `
             <div>
-              <div class="text-[11px] font-bold text-sky-700 mb-1 flex items-center gap-1">📋 【限定リサーチ・GBL・タマゴ報酬】(3サイト検証済)</div>
+              <div class="text-[11px] font-bold text-sky-700 mb-1 flex items-center gap-1">📋 【限定タイムチャレンジ・リサーチ・ギミック詳細】</div>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
                 ${ev.tasks.map(t => `
                   <div class="bg-slate-50 border border-slate-200 p-2 rounded-lg flex items-center justify-between gap-2">
@@ -1782,7 +2054,7 @@
         if (ev.bonuses && ev.bonuses.length > 0) {
           bonusHtml = `
             <div class="flex flex-wrap gap-1 text-[11px]">
-              ${ev.bonuses.map(b => `<span class="bg-slate-100 text-slate-700 px-2 py-0.5 rounded-md border border-slate-200 font-medium">🎁 ${b}</span>`).join("")}
+              ${ev.bonuses.map(b => `<span class="bg-slate-100 text-slate-700 px-2 py-0.5 rounded-md border border-slate-200 font-medium">${b}</span>`).join("")}
             </div>
           `;
         }
@@ -1820,7 +2092,7 @@
           div.innerHTML = `
             <div>
               <strong class="text-slate-800">${ev.title}</strong>
-              <p class="text-[11px] text-slate-500">${ev.dateText} / ${ev.summary.slice(0, 45)}...</p>
+              <p class="text-[11px] text-slate-500">${ev.dateText} / ${ev.summary.slice(0, 50)}...</p>
             </div>
             <span class="text-[10px] bg-slate-200 text-slate-600 px-2 py-0.5 rounded font-bold flex-shrink-0">終了</span>
           `;
@@ -1828,8 +2100,11 @@
         });
 
         const staticArchives = [
-          { title: "ゾロア コミュニティ・デイ", desc: "10/12(土) 開催終了 / 相棒変身ギミック＆色違い初実装" },
-          { title: "メグロコ 孵化デイ (2kmタマゴ)", desc: "10/19(日) 開催終了 / 1/2孵化距離＆色違い高確率" }
+          { title: "メグロコ ふかの日", desc: "10/17(土) 開催終了 / タマゴ孵化距離短縮＆色違いメグロコ確率UP" },
+          { title: "秋の遠足 相棒といっしょ ＆ GOパス：秋の遠足", desc: "10/13(火)〜10/19(月) 開催終了 / おこう2時間持続＆ライボルトメガエナジー報酬" },
+          { title: "ゾロアのコミュニティ・デイ（2026年10月）", desc: "10/10(土) 14:00〜17:00 開催終了 / ゾロア大量発生" },
+          { title: "世界宇宙週間2026イベント", desc: "10/4(日)〜10/10(土) 開催終了" },
+          { title: "キョダイマックスエースバーンのマックスバトルデイ", desc: "10/3(土) 開催終了" }
         ];
         staticArchives.forEach(sa => {
           const div = document.createElement("div");
@@ -1952,7 +2227,7 @@
           </div>
         </div>
         <div class="mt-3 pt-3 border-t border-slate-100 text-xs text-slate-700 leading-relaxed bg-slate-50 p-2.5 rounded-lg border border-slate-200">
-          <strong class="text-sky-700 font-bold">💡 3サイト統合 実戦攻略ノート:</strong> ${b.tactics}
+          <strong class="text-sky-700 font-bold">💡 4サイト統合 実戦攻略ノート:</strong> ${b.tactics}
           <div class="text-rose-600 font-bold mt-1">討伐推奨人数: ${b.minPlayers}</div>
         </div>
       `;
@@ -1967,7 +2242,7 @@
       if (!b) return;
 
       let filtered = b.counters.filter(c => {
-        if (c.tag === "mega" && !filterMega) return false;
+        if (c.tag === "mega" && !filterMega && activeRaidKey !== "mega-chandelure") return false;
         if (c.tag === "shadow" && !filterShadow) return false;
         return true;
       });
@@ -1976,9 +2251,9 @@
       const top10 = filtered.slice(0, 10);
 
       const conditions = [];
-      if (filterMega) conditions.push("メガ含");
+      if (filterMega || activeRaidKey === "mega-chandelure") conditions.push("メガ含");
       if (filterShadow) conditions.push("シャドウ含");
-      if (!filterMega && !filterShadow) conditions.push("通常ポケモン限定");
+      if (!filterMega && !filterShadow && activeRaidKey !== "mega-chandelure") conditions.push("通常ポケモン限定");
       title.textContent = `対策DPSランキング TOP 10 (${conditions.join(" / ")})`;
 
       top10.forEach((c, index) => {
@@ -2109,15 +2384,15 @@
             </div>
 
             <div class="space-y-1.5">
-              <div class="bg-pink-950/60 border border-pink-500/40 rounded-lg p-1.5 px-2.5 flex items-center justify-between">
+              <div class="bg-pink-950/60 border border-pink-500/40 rounded-lg p-1.5 px-2.5 flex flex-wrap items-center justify-between gap-1">
                 <span class="text-xs font-bold text-pink-300">弱点</span>
-                <div class="flex gap-1.5">
+                <div class="flex flex-wrap gap-1">
                   ${(d.weaknesses || []).map(w => `<span class="${w.color} text-white text-[11px] font-bold px-2 py-0.5 rounded">${w.name}</span>`).join("")}
                 </div>
               </div>
-              <div class="bg-blue-950/60 border border-blue-500/40 rounded-lg p-1.5 px-2.5 flex items-center justify-between">
+              <div class="bg-blue-950/60 border border-blue-500/40 rounded-lg p-1.5 px-2.5 flex flex-wrap items-center justify-between gap-1">
                 <span class="text-xs font-bold text-blue-300">耐性</span>
-                <div class="flex gap-1.5">
+                <div class="flex flex-wrap gap-1">
                   ${(d.resistances || []).map(r => `<span class="${r.color} text-white text-[11px] font-bold px-2 py-0.5 rounded">${r.name}</span>`).join("")}
                 </div>
               </div>
@@ -2158,7 +2433,7 @@
                   <img src="${getPokeImg(t.dex)}" alt="${t.name}" class="w-16 h-16 object-contain my-1">
                   <div class="text-xs font-bold text-white truncate w-full mt-1">${t.name}</div>
                   <div class="text-[10px] text-slate-300 mt-1 space-y-0.5 w-full bg-slate-900/60 p-1.5 rounded">
-                    <div class="truncate text-emerald-400 font-semibold">🟢 ${t.fast} (0.5s)</div>
+                    <div class="truncate text-emerald-400 font-semibold">🟢 ${t.fast}</div>
                     <div class="truncate text-slate-300">🔵 ${t.charge}</div>
                   </div>
                 </div>
@@ -2171,7 +2446,7 @@
 
           <div class="space-y-2 pt-2 border-t border-purple-500/30">
             <h3 class="text-sm font-extrabold text-amber-300 flex items-center gap-1.5">
-              <span>📋</span> 立ち回り (9DB実戦定石 3ステップ)
+              <span>📋</span> 立ち回り (9DB実戦定石ステップ)
             </h3>
             <div class="space-y-2">
               ${(d.routine || []).map(r => `
@@ -2242,10 +2517,9 @@
             }
           }
           if (remoteData.latest_news && remoteData.latest_news.length > 0) {
-            // 終了済みのUMAニュースがremoteDataに残っていても強制フィルタリングで完全遮断
             const cleanRemoteNews = remoteData.latest_news.filter(n => {
               const t = n.title || n.text || "";
-              return !t.includes("UMA") && !t.includes("ユクシー") && !t.includes("マックスバトルデイ");
+              return !t.includes("UMA") && !t.includes("ユクシー") && !t.includes("モルペコ");
             });
             if (cleanRemoteNews.length > 0) {
               NEWS_ITEMS = cleanRemoteNews;
