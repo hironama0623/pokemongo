@@ -1,6 +1,7 @@
 import os
 import json
 import datetime
+import re
 import requests
 from bs4 import BeautifulSoup
 from google import genai
@@ -11,9 +12,8 @@ jst = datetime.timezone(datetime.timedelta(hours=9))
 now = datetime.datetime.now(jst)
 today_date_str = now.strftime("%Y-%m-%d")
 now_str = now.strftime("%Y/%m/%d %H:%M JST")
-print(f"[{now_str}] 3大サイト（ポケマピ / GameWith / 9DB）巡回＆クロス照合を開始します...")
+print(f"[{now_str}] 攻略サイト詳細ページ巡回＆解析を開始します...")
 
-# 既存データの読み込み
 try:
     with open("data.json", "r", encoding="utf-8") as f:
         existing_data = json.load(f)
@@ -28,65 +28,74 @@ headers = {
 
 scraped_texts = []
 
-# 1. ポケマピ (イベント一覧・速報)
+# 1. ポケマピのイベント一覧から「直近の個別イベント詳細記事URL」を自動抽出して巡回
+detail_urls = []
 try:
     res = requests.get("https://pokemongo-get.com/events/", headers=headers, timeout=12)
     if res.status_code == 200:
         soup = BeautifulSoup(res.text, "html.parser")
-        for tag in soup(["script", "style", "nav", "footer", "aside"]):
-            tag.decompose()
-        scraped_texts.append("【ポケマピ 最新イベント・ニュース】\n" + soup.get_text(separator="\n", strip=True)[:10000])
+        # /board/数字/ のリンクを上位抽出（ハロウィン等の直近イベント記事）
+        links = soup.find_all("a", href=re.compile(r"/board/\d+/"))
+        for link in links:
+            url = link["href"]
+            if not url.startswith("http"):
+                url = "https://pokemongo-get.com" + url
+            if url not in detail_urls:
+                detail_urls.append(url)
+            if len(detail_urls) >= 4:  # 直近の重要イベント4記事に限定して深掘り
+                break
 except Exception as e:
-    print(f"ポケマピ取得スキップ: {e}")
+    print(f"イベント一覧取得エラー: {e}")
 
-# 2. GameWith (最新イベント速報)
+# 2. 直近個別詳細ページをスクレイピング（ハロウィン詳細などの全ポケモンリストを取得）
+for durl in detail_urls:
+    try:
+        res = requests.get(durl, headers=headers, timeout=10)
+        if res.status_code == 200:
+            dsoup = BeautifulSoup(res.text, "html.parser")
+            title = dsoup.find("title").get_text() if dsoup.find("title") else durl
+            for tag in dsoup(["script", "style", "nav", "footer", "aside"]):
+                tag.decompose()
+            text_chunk = dsoup.get_text(separator="\n", strip=True)[:7000]
+            scraped_texts.append(f"【ポケマピ詳細記事: {title} ({durl})】\n{text_chunk}")
+            print(f"詳細ページ取得成功: {title}")
+    except Exception as e:
+        print(f"詳細ページ取得スキップ ({durl}): {e}")
+
+# 3. GameWith & 9DB の最新速報も補完取得
 try:
-    res = requests.get("https://pokemongo.gamewith.jp/article/show/24434", headers=headers, timeout=12)
-    if res.status_code == 200:
-        soup = BeautifulSoup(res.text, "html.parser")
-        for tag in soup(["script", "style", "nav", "footer", "aside"]):
+    gw_res = requests.get("https://pokemongo.gamewith.jp/article/show/24434", headers=headers, timeout=10)
+    if gw_res.status_code == 200:
+        gsoup = BeautifulSoup(gw_res.text, "html.parser")
+        for tag in gsoup(["script", "style", "nav", "footer", "aside"]):
             tag.decompose()
-        scraped_texts.append("【GameWith 最新速報】\n" + soup.get_text(separator="\n", strip=True)[:8000])
+        scraped_texts.append("【GameWith 最新速報】\n" + gsoup.get_text(separator="\n", strip=True)[:6000])
 except Exception as e:
     print(f"GameWith取得スキップ: {e}")
 
-# 3. 9DB (イベントカレンダー・レイド情報)
-try:
-    res = requests.get("https://9db.jp/pokego/data/1", headers=headers, timeout=12)
-    if res.status_code == 200:
-        soup = BeautifulSoup(res.text, "html.parser")
-        for tag in soup(["script", "style", "nav", "footer", "aside"]):
-            tag.decompose()
-        scraped_texts.append("【9DB 最新スケジュール・対策】\n" + soup.get_text(separator="\n", strip=True)[:8000])
-except Exception as e:
-    print(f"9DB取得スキップ: {e}")
-
 combined_text = "\n\n".join(scraped_texts)
 
-# Gemini API クライアント
+# 4. Gemini API による精密解析
 api_key = os.environ.get("GEMINI_API_KEY")
 if not api_key:
-    print("エラー: GEMINI_API_KEY が設定されていません。")
+    print("エラー: GEMINI_API_KEY が未設定です。")
     exit(1)
 
 client = genai.Client(api_key=api_key)
 
-known_titles = [n.get("title", "") for n in existing_news]
-
 prompt = f"""
-あなたはポケモンGO攻略情報の検証・構造化を行う専門AIアナリストです。
-現在の基準日時（日本時間）: {now_str} (今日の日付: {today_date_str})
+あなたはポケモンGOの最新イベントと出現ポケモンを網羅的にデータベース化する専門AIです。
+現在の基準日時（日本時間）: {now_str} (今日: {today_date_str})
 
-提供された「ポケマピ」「GameWith」「9DB」の3サイトのテキストを相互に照合し、情報の整合性を厳格に確認した上で出力してください。
+以下に提供された「ポケマピ詳細記事（各イベントの個別ページ）」および速報テキストを読み込み、出現ポケモンやタスク報酬を1匹も漏らさずに抽出してください。
 
-【厳格な整合性・クロスバリデーションルール】
-1. 3サイト間で情報が一致している確定情報のみを採用してください。1サイトの誤記や推測、AIの創作ポケモンは絶対に含めないでください。
-   （例：ハロウィンパート1にケロマツは出現しません。ケロマツはパート2です。パート1とパート2の内容を混同しないでください）
-2. 基準日（{today_date_str}）より前に完全に終了したイベント（10/24終了のUMAマックスバトルデイ等）は「new_news」に含めないでください。
-3. ニュース件名は「[日付] 件名」がわかるようにし、クリック時に読める詳細要約（2〜3行）と、連動するイベントID（targetId）を付与してください。
-4. 単日イベントは startDay == endDay を厳守してください。
+【厳格な検証ルール】
+1. 【重要】「UMAトリオ」「マックスバトルデイ」等の10/24終了イベントは完全に終了した過去のものです。いかなる理由があっても本日のニュース（new_news）に含めないでください。
+2. ハロウィン2026 パート1等の重要イベントについては、詳細記事に記載されている野生出現ポケモン、レイド、フィールドリサーチタスクを省略せず可能な限りすべて抽出してください。
+   （例：モルペコ、衣装ピカチュウ、ボチ、ミカルゲ、フワンテ、ヒトモシ、カゲボウズ、ゴース、ボクレー、バケッチャ等、記事内のポケモンを網羅すること）
+3. パート1とパート2の内容を混同しないでください（魔女帽子ケロマツはパート2です）。
 
-出力スキーマ（純粋なJSONのみ出力）：
+出力形式（純粋なJSONのみ出力）：
 {{
   "new_news": [
     {{
@@ -94,8 +103,8 @@ prompt = f"""
       "date": "YYYY-MM-DD",
       "date_label": "M/D",
       "title": "ニュース件名",
-      "details": "ニュースの詳細要約",
-      "targetId": "連動するイベントID（なければ空文字）"
+      "details": "詳細要約（2〜3行）",
+      "targetId": "連動するイベントID（または空文字）"
     }}
   ],
   "events": [
@@ -109,7 +118,7 @@ prompt = f"""
       "endDay": 終了日(数値),
       "startDate": "YYYY-MM-DD",
       "endDate": "YYYY-MM-DD",
-      "dateText": "開催日程テキスト",
+      "dateText": "日程テキスト",
       "summary": "概要",
       "bonuses": ["ボーナス一覧"],
       "wilds": [{{"dex": 図鑑番号, "name": "名前", "shiny": true/false, "note": "備考"}}],
@@ -119,7 +128,7 @@ prompt = f"""
   ]
 }}
 
-【3サイト統合テキスト】:
+【巡回記事テキスト】:
 {combined_text}
 """
 
@@ -147,18 +156,16 @@ try:
         nid = item.get("id", "")
         ntitle = item.get("title", "")
         
-        # 終了したUMAイベント関連ニュースは完全にパージ
-        if "UMA" in ntitle or "uma" in nid:
-            date_str = item.get("date", today_date_str)
-            if date_str <= "2026-10-24":
-                continue
+        # UMAニュースはタイトル・ID・日程問わず完全永久ブロック
+        if "UMA" in ntitle or "uma" in nid or "ユクシー" in ntitle or "マックスバトルデイ" in ntitle:
+            continue
 
         if nid not in seen_ids and ntitle not in seen_titles:
             seen_ids.add(nid)
             seen_titles.add(ntitle)
             unique_news.append(item)
 
-    # 10日間保持ルール（11日以上前の古いニュースを削除）
+    # 10日間ルール（11日以上前の古いニュースを削除）
     valid_news = []
     for item in unique_news:
         date_str = item.get("date", today_date_str)
@@ -168,7 +175,7 @@ try:
             if diff_days <= 10:
                 valid_news.append(item)
             else:
-                print(f"[自動削除] 11日以上前のニュースを除外: {item.get('title')}")
+                print(f"[自動パージ] 11日以上前のニュースを除外: {item.get('title')}")
         except Exception:
             valid_news.append(item)
 
@@ -185,10 +192,10 @@ try:
     with open("data.json", "w", encoding="utf-8") as f:
         json.dump(final_data, f, ensure_ascii=False, indent=2)
 
-    print(f"[{now_str}] 整合性チェック完了: ニュース{len(valid_news)}件保持")
+    print(f"[{now_str}] 解析完了: 有効ニュース{len(valid_news)}件")
 
 except Exception as e:
-    print(f"解析エラー: {e}")
+    print(f"AI解析エラー: {e}")
     existing_data["updated_at"] = now_str
     with open("data.json", "w", encoding="utf-8") as f:
         json.dump(existing_data, f, ensure_ascii=False, indent=2)
