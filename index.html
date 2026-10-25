@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
@@ -84,7 +84,7 @@
           </h1>
           <div class="text-[11px] text-slate-500 flex items-center gap-2">
             <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span id="autoUpdateTimestamp" class="font-bold text-slate-700">最終自動更新: 読込中... (次回予定: 15:00)</span>
+            <span id="autoUpdateTimestamp" class="font-bold text-slate-700">最終自動更新: 読込中...</span>
             <span class="text-sky-600 font-semibold hidden sm:inline">GameWith / 9DB / ポケマピ 3大サイト統合仕様</span>
           </div>
         </div>
@@ -122,37 +122,15 @@
 
       <!-- トップ通知エリア -->
       <section class="grid grid-cols-1 md:grid-cols-2 gap-3">
-        <!-- 🚨 本日開催中・終了間近 -->
+        <!-- 🚨 本日開催中・終了間近 (リアルタイム動的描画) -->
         <div class="bg-white border border-rose-200 rounded-xl p-3.5 shadow-sm">
           <div class="flex items-center justify-between mb-2">
             <h2 class="text-sm font-extrabold text-rose-600 flex items-center gap-1.5">
-              <span>🚨</span> 本日開催中・注目のレイド (10月24日)
+              <span>🚨</span> 本日開催中・注目のレイド (<span id="todayHeaderDateLabel">読込中</span>)
             </h2>
             <span class="text-[10px] bg-rose-50 text-rose-600 px-2 py-0.5 rounded-full font-bold border border-rose-200">要確認</span>
           </div>
-          <ul class="text-xs space-y-2 text-slate-700">
-            <li class="flex items-start gap-2 bg-rose-50/50 p-2 rounded-lg border border-rose-100">
-              <span class="text-amber-600 font-bold flex-shrink-0">14:00〜17:00</span>
-              <div>
-                <strong class="text-sky-700 cursor-pointer hover:underline" onclick="jumpToCounterTarget('dmax-uxie', true)">ダイマックスUMA マックスバトルデイ</strong>
-                <p class="text-[11px] text-slate-500">日本はユクシー出現！無料MP800配布＆色違い率UP（海外招待でエムリット・アグノム参加可能）</p>
-              </div>
-            </li>
-            <li class="flex items-start gap-2 bg-slate-50 p-2 rounded-lg border border-slate-200">
-              <span class="text-emerald-600 font-bold flex-shrink-0">〜10/27まで</span>
-              <div>
-                <strong class="text-emerald-700 cursor-pointer hover:underline" onclick="jumpToCounterTarget('palkia-origin', false)">パルキア(オリジン) ＆ メガリザードンX/Y</strong>
-                <p class="text-[11px] text-slate-500">メガリザードンYはいわ2.56倍二重弱点で少人数撃破可能！パルキア特別技あくうせつだん習得。</p>
-              </div>
-            </li>
-            <li class="flex items-start gap-2 bg-slate-50 p-2 rounded-lg border border-slate-200">
-              <span class="text-rose-600 font-bold flex-shrink-0">連日常設中</span>
-              <div>
-                <strong class="text-rose-700 cursor-pointer hover:underline" onclick="jumpToCounterTarget('shadow-landorus', false)">シャドウランドロス(化身) レイド</strong>
-                <p class="text-[11px] text-slate-500">土日だけでなく平日も連日出現中！こおり2.56倍二重弱点で2人討伐可能。</p>
-              </div>
-            </li>
-          </ul>
+          <ul id="todayEventsList" class="text-xs space-y-2 text-slate-700"></ul>
         </div>
 
         <!-- 📢 直近の公式発表・最新ニュース速報 -->
@@ -227,34 +205,19 @@
       <section class="space-y-3">
         <div class="flex items-center justify-between px-1">
           <h2 class="text-sm font-extrabold text-slate-800 flex items-center gap-1.5">
-            <span>📌</span> イベント詳細・限定タスク一覧 (全イベント完全網羅)
+            <span>📌</span> イベント詳細・限定タスク一覧 (開催中＆今後予定)
           </h2>
           <span class="text-[11px] text-slate-500">各カードの「👁 非表示」で個別除外可能</span>
         </div>
         <div id="eventsAccordionContainer" class="space-y-2.5"></div>
 
-        <!-- 過去の終了イベント アーカイブ -->
+        <!-- 過去の終了イベント アーカイブ (動的自動振り分け) -->
         <details class="bg-white border border-slate-200 rounded-xl overflow-hidden mt-4 shadow-sm group">
           <summary class="p-3 text-xs font-bold text-slate-600 cursor-pointer hover:bg-slate-50 flex items-center justify-between">
-            <span class="flex items-center gap-1.5">📂 アーカイブ（10月に実施済みのイベント履歴）</span>
+            <span class="flex items-center gap-1.5">📂 アーカイブ（終了済みのイベント履歴）</span>
             <span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded text-slate-500 group-open:rotate-180 transition-transform">▼</span>
           </summary>
-          <div class="p-3 pt-0 text-xs text-slate-600 border-t border-slate-100 space-y-2 mt-2">
-            <div class="p-2 bg-slate-50 rounded border border-slate-200 flex justify-between items-center">
-              <div>
-                <strong class="text-slate-800">ゾロア コミュニティ・デイ</strong>
-                <p class="text-[11px] text-slate-500">10/12(土) 開催終了 / 相棒変身ギミック＆色違い初実装</p>
-              </div>
-              <span class="text-[10px] bg-slate-200 text-slate-600 px-2 py-0.5 rounded font-bold">終了</span>
-            </div>
-            <div class="p-2 bg-slate-50 rounded border border-slate-200 flex justify-between items-center">
-              <div>
-                <strong class="text-slate-800">メグロコ 孵化デイ (2kmタマゴ)</strong>
-                <p class="text-[11px] text-slate-500">10/19(日) 開催終了 / 1/2孵化距離＆色違い高確率</p>
-              </div>
-              <span class="text-[10px] bg-slate-200 text-slate-600 px-2 py-0.5 rounded font-bold">終了</span>
-            </div>
-          </div>
+          <div id="archivedEventsList" class="p-3 pt-0 text-xs text-slate-600 border-t border-slate-100 space-y-2 mt-2"></div>
         </details>
       </section>
 
@@ -288,7 +251,7 @@
     </div>
 
     <!-- ============================================================== -->
-    <!-- タブ 2: レイド & ダイマックス対策 (現在開催中最優先 / メガレイド復活 / 9DB準拠) -->
+    <!-- タブ 2: レイド & ダイマックス対策 -->
     <!-- ============================================================== -->
     <div id="tabContentBattles" class="space-y-4 hidden">
 
@@ -339,12 +302,12 @@
         </div>
       </div>
 
-      <!-- 2-B: ダイマックス攻略 (9DBキャプチャ画面を忠実に再現) -->
+      <!-- 2-B: ダイマックス攻略 -->
       <div id="secBattleDmax" class="space-y-4 hidden">
         <div>
           <div class="text-xs font-bold text-slate-600 mb-2 flex items-center justify-between">
             <span>💥 マックスバトル対象を選択 (9DB最新データ):</span>
-            <span class="text-[11px] text-amber-600 font-bold">14:00〜17:00限定UMA開催中</span>
+            <span class="text-[11px] text-amber-600 font-bold" id="dmaxEventStatusBanner"></span>
           </div>
           <div id="dmaxBossPicker" class="grid grid-cols-2 sm:grid-cols-4 gap-2"></div>
         </div>
@@ -354,7 +317,7 @@
     </div>
 
     <!-- ============================================================== -->
-    <!-- タブ 3: 🎫 GOパス情報 (報酬早見表＆折りたたみテーブル) -->
+    <!-- タブ 3: 🎫 GOパス情報 -->
     <!-- ============================================================== -->
     <div id="tabContentGoPass" class="space-y-4 hidden">
 
@@ -519,6 +482,13 @@
   <script>
     const getPokeImg = (dex) => `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${dex}.png`;
 
+    // 端末の現在日時（リアルタイム）を日本時間基準で取得
+    const now = new Date();
+    const todayYear = now.getFullYear();
+    const todayMonth = now.getMonth() + 1;
+    const todayDate = now.getDate();
+    const todayDow = ["日", "月", "火", "水", "木", "金", "土"][now.getDay()];
+
     const NEWS_ITEMS = [
       { id: "news-uma-day", text: "本日14:00〜17:00「ダイマックスUMAマックスバトルデイ」開催！無料MP800受取を忘れずに", targetId: "ev-dmax-uma-day" },
       { id: "news-mega-char", text: "メガリザードンY＆Xレイド出現中！Yはいわ2.56倍二重弱点でソロ・ペア討伐可能", targetId: "ev-palkia-char" },
@@ -601,7 +571,7 @@
         category: "main",
         startDay: 25,
         endDay: 25,
-        dateText: "10/25(日) 配信時間限定",
+        dateText: "10/25(日) 配信時間限定 [本日開催]",
         summary: "Twitch公式チャンネルで30分以上視聴すると、限定リサーチコード（モルペコや限定Tシャツ、スーパー孵化装置）を入手可能。",
         bonuses: ["Twitch Dropsによるタイムチャレンジ入手", "受取期限48時間"],
         wilds: [{ dex: 877, name: "モルペコ", shiny: true, note: "リサーチ報酬" }],
@@ -1214,7 +1184,7 @@
       }
     };
 
-    let currentGanttMonth = 10;
+    let currentGanttMonth = (todayMonth >= 10 && todayMonth <= 12) ? todayMonth : 10;
     let currentCategoryFilter = "all";
     let hiddenEventIds = new Set();
     let readNewsIds = new Set();
@@ -1224,6 +1194,19 @@
 
     let filterMega = false;
     let filterShadow = false;
+
+    // 過去イベントの判定
+    function isEventPast(ev) {
+      if (ev.month < todayMonth) return true;
+      if (ev.month === todayMonth && ev.endDay < todayDate) return true;
+      return false;
+    }
+
+    // 本日開催中かどうかの判定
+    function isEventActiveToday(ev) {
+      if (ev.month !== todayMonth) return false;
+      return ev.startDay <= todayDate && ev.endDay >= todayDate;
+    }
 
     function initStorage() {
       try {
@@ -1351,11 +1334,79 @@
       }
     }
 
+    // 🚨 本日開催中・注目のレイド (リアルタイム動的描画)
+    function renderTodaySection() {
+      const label = document.getElementById("todayHeaderDateLabel");
+      if (label) {
+        label.textContent = `${todayMonth}月${todayDate}日(${todayDow})`;
+      }
+
+      const list = document.getElementById("todayEventsList");
+      if (!list) return;
+
+      const activeEvents = ALL_EVENTS.filter(ev => isEventActiveToday(ev));
+
+      // 本日終了するものを最優先にソート
+      activeEvents.sort((a, b) => {
+        const aEnd = (a.endDay === todayDate) ? 0 : 1;
+        const bEnd = (b.endDay === todayDate) ? 0 : 1;
+        return aEnd - bEnd;
+      });
+
+      list.innerHTML = "";
+
+      if (activeEvents.length === 0) {
+        list.innerHTML = `<li class="p-2 text-slate-500">本日開催中の特別イベントはありません</li>`;
+        return;
+      }
+
+      activeEvents.slice(0, 4).forEach(ev => {
+        const isEndingToday = (ev.endDay === todayDate);
+        let timeOrRange = "";
+        if (isEndingToday) {
+          timeOrRange = "本日限定 / 終了";
+        } else if (ev.dateText.includes("連日")) {
+          timeOrRange = "連日常設中";
+        } else {
+          timeOrRange = `〜${ev.month}/${ev.endDay}まで`;
+        }
+
+        const li = document.createElement("li");
+        li.className = "flex items-start gap-2 p-2 rounded-lg border " + (isEndingToday ? "bg-rose-50/50 border-rose-100" : "bg-slate-50 border-slate-200");
+
+        let jumpTarget = "";
+        let isDmax = false;
+        if (ev.raids && ev.raids.length > 0) {
+          jumpTarget = ev.raids[0].targetKey || "";
+          isDmax = !!ev.raids[0].isDmax;
+        }
+
+        const clickHandler = jumpTarget 
+          ? `onclick="jumpToCounterTarget('${jumpTarget}', ${isDmax})"` 
+          : `onclick="scrollToEventCard('${ev.id}')"`;
+
+        li.innerHTML = `
+          <span class="${isEndingToday ? 'text-amber-600' : 'text-emerald-600'} font-bold flex-shrink-0 text-[11px]">${timeOrRange}</span>
+          <div>
+            <strong class="text-sky-700 cursor-pointer hover:underline text-xs" ${clickHandler}>${ev.title}</strong>
+            <p class="text-[11px] text-slate-500">${ev.summary}</p>
+          </div>
+        `;
+        list.appendChild(li);
+      });
+    }
+
     function renderNewsSection() {
       const container = document.getElementById("newsItemsContainer");
       container.innerHTML = "";
 
-      const visibleNews = NEWS_ITEMS.filter(n => !readNewsIds.has(n.id));
+      // 終了したイベントに紐づくニュースは自動除外
+      const visibleNews = NEWS_ITEMS.filter(n => {
+        if (readNewsIds.has(n.id)) return false;
+        const targetEv = ALL_EVENTS.find(e => e.id === n.targetId);
+        if (targetEv && isEventPast(targetEv)) return false;
+        return true;
+      });
 
       if (visibleNews.length === 0) {
         container.innerHTML = `<div class="text-slate-400 py-2">すべてのニュースを既読にしました。</div>`;
@@ -1382,10 +1433,12 @@
       currentGanttMonth = m;
       [10, 11, 12].forEach(num => {
         const btn = document.getElementById(`monthBtn${num}`);
-        if (num === m) {
-          btn.className = "text-xs px-3 py-1 rounded-md font-bold transition bg-sky-600 text-white shadow-sm";
-        } else {
-          btn.className = "text-xs px-3 py-1 rounded-md font-bold transition text-slate-600 hover:text-slate-900";
+        if (btn) {
+          if (num === m) {
+            btn.className = "text-xs px-3 py-1 rounded-md font-bold transition bg-sky-600 text-white shadow-sm";
+          } else {
+            btn.className = "text-xs px-3 py-1 rounded-md font-bold transition text-slate-600 hover:text-slate-900";
+          }
         }
       });
       renderGanttTimeline();
@@ -1406,6 +1459,7 @@
       renderEventAccordions();
     }
 
+    // ガントチャート (アクセス当日に連動)
     function renderGanttTimeline() {
       const headerRow = document.getElementById("ganttHeaderRow");
       const bgGrid = document.getElementById("ganttBgGrid");
@@ -1417,16 +1471,13 @@
       headerRow.innerHTML = "";
       bgGrid.innerHTML = "";
 
-      let startDay, endDay;
-      if (currentGanttMonth === 10) {
-        startDay = 24;
-        endDay = 31;
-      } else if (currentGanttMonth === 11) {
-        startDay = 1;
-        endDay = 30;
-      } else {
-        startDay = 1;
-        endDay = 31;
+      const daysInMonth = new Date(todayYear, currentGanttMonth, 0).getDate();
+      let startDay = 1;
+      let endDay = daysInMonth;
+
+      // 当月であればアクセスした「今日」を先頭にして月末までを表示
+      if (currentGanttMonth === todayMonth) {
+        startDay = todayDate;
       }
 
       const totalDays = endDay - startDay + 1;
@@ -1436,9 +1487,9 @@
       bgGrid.style.gridTemplateColumns = gridTemplate;
 
       for (let d = startDay; d <= endDay; d++) {
-        const dateObj = new Date(2026, currentGanttMonth - 1, d);
+        const dateObj = new Date(todayYear, currentGanttMonth - 1, d);
         const dowIndex = dateObj.getDay();
-        const isToday = (currentGanttMonth === 10 && d === 24);
+        const isToday = (currentGanttMonth === todayMonth && d === todayDate);
 
         let dowColor = "text-slate-600";
         if (dowIndex === 6) dowColor = "text-sky-600";
@@ -1492,17 +1543,28 @@
       });
     }
 
+    // イベント詳細＆過去イベントアーカイブ自動振り分け
     function renderEventAccordions() {
       const container = document.getElementById("eventsAccordionContainer");
+      const archiveContainer = document.getElementById("archivedEventsList");
       container.innerHTML = "";
+      if (archiveContainer) archiveContainer.innerHTML = "";
 
-      const visibleEvents = ALL_EVENTS.filter(ev => {
-        if (hiddenEventIds.has(ev.id)) return false;
-        if (currentCategoryFilter !== "all" && ev.category !== currentCategoryFilter) return false;
-        return true;
+      const activeEvents = [];
+      const pastEvents = [];
+
+      ALL_EVENTS.forEach(ev => {
+        if (hiddenEventIds.has(ev.id)) return;
+        if (currentCategoryFilter !== "all" && ev.category !== currentCategoryFilter) return;
+
+        if (isEventPast(ev)) {
+          pastEvents.push(ev);
+        } else {
+          activeEvents.push(ev);
+        }
       });
 
-      visibleEvents.forEach((ev, index) => {
+      activeEvents.forEach((ev, index) => {
         const details = document.createElement("details");
         details.className = "bg-white border border-slate-200 rounded-xl overflow-hidden transition group shadow-sm";
         details.id = ev.id;
@@ -1605,6 +1667,40 @@
         `;
         container.appendChild(details);
       });
+
+      // 過去イベントをアーカイブ一覧へ自動表示
+      if (archiveContainer) {
+        pastEvents.forEach(ev => {
+          const div = document.createElement("div");
+          div.className = "p-2 bg-slate-50 rounded border border-slate-200 flex justify-between items-center";
+          div.innerHTML = `
+            <div>
+              <strong class="text-slate-800">${ev.title}</strong>
+              <p class="text-[11px] text-slate-500">${ev.dateText} 開催終了 / ${ev.summary.slice(0, 40)}...</p>
+            </div>
+            <span class="text-[10px] bg-slate-200 text-slate-600 px-2 py-0.5 rounded font-bold flex-shrink-0">終了</span>
+          `;
+          archiveContainer.appendChild(div);
+        });
+
+        // 過去の静的アーカイブも保持
+        const staticArchives = [
+          { title: "ゾロア コミュニティ・デイ", desc: "10/12(土) 開催終了 / 相棒変身ギミック＆色違い初実装" },
+          { title: "メグロコ 孵化デイ (2kmタマゴ)", desc: "10/19(日) 開催終了 / 1/2孵化距離＆色違い高確率" }
+        ];
+        staticArchives.forEach(sa => {
+          const div = document.createElement("div");
+          div.className = "p-2 bg-slate-50 rounded border border-slate-200 flex justify-between items-center";
+          div.innerHTML = `
+            <div>
+              <strong class="text-slate-800">${sa.title}</strong>
+              <p class="text-[11px] text-slate-500">${sa.desc}</p>
+            </div>
+            <span class="text-[10px] bg-slate-200 text-slate-600 px-2 py-0.5 rounded font-bold flex-shrink-0">終了</span>
+          `;
+          archiveContainer.appendChild(div);
+        });
+      }
     }
 
     function scrollToEventCard(id) {
@@ -1965,8 +2061,9 @@
 
     window.onload = function() {
       initStorage();
+      renderTodaySection();
       renderNewsSection();
-      renderGanttTimeline();
+      changeGanttMonth(currentGanttMonth);
       renderEventAccordions();
       updateGlobalHiddenUI();
 
