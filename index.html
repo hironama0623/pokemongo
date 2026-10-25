@@ -122,7 +122,7 @@
 
       <!-- トップ通知エリア -->
       <section class="grid grid-cols-1 md:grid-cols-2 gap-3">
-        <!-- 🚨 本日開催中・注目のレイド (リアルタイム動的描画) -->
+        <!-- 🚨 本日開催中・終了間近 (リアルタイム動的描画) -->
         <div class="bg-white border border-rose-200 rounded-xl p-3.5 shadow-sm">
           <div class="flex items-center justify-between mb-2">
             <h2 class="text-sm font-extrabold text-rose-600 flex items-center gap-1.5">
@@ -490,20 +490,19 @@
   <script>
     const getPokeImg = (dex) => `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${dex}.png`;
 
-    // 端末の現在日時（リアルタイム）を日本時間基準で取得
     const now = new Date();
     const todayYear = now.getFullYear();
     const todayMonth = now.getMonth() + 1;
     const todayDate = now.getDate();
     const todayDow = ["日", "月", "火", "水", "木", "金", "土"][now.getDay()];
 
-    // 初期フォールバックニュース（data.json 読み込み完了までの初期表示）
+    // 初期ニュース（UMA等の終了分を完全排除し、3サイト整合性の取れた最新確定ニュースのみ）
     let NEWS_ITEMS = [
       { id: "news-twitch", date: "2026-10-25", date_label: "10/25", title: "ポケモンナイトアウト公式Twitch配信視聴で限定モルペコ＆アバター配布", details: "Twitch公式チャンネルで30分以上視聴すると、限定リサーチコード（モルペコや限定Tシャツ、スーパーふかそうち）を入手可能。受取期限48時間。", targetId: "ev-twitch" },
       { id: "news-sneasel", date: "2026-10-24", date_label: "10/24", title: "ダイマックスニューラ★1パワースポット出現率UP中！消費MP軽減", details: "★1パワースポットにニューラが集中出現。格闘2.56倍二重弱点のためソロ討伐容易。対エスパー・ゴースト戦の強力アタッカーとして厳選推奨。", targetId: "ev-dmax-sneasel" },
       { id: "news-mega-char", date: "2026-10-21", date_label: "10/21", title: "メガリザードンY＆Xレイド出現中！いわ2.56倍二重弱点でソロ・ペア討伐可能", details: "メガリザードンYはいわタイプが二重弱点。ラムパルド・ドサイドン統一で少人数高速周回可能。パルキア特別技あくうせつだんも同時開催中。", targetId: "ev-palkia-char" },
       { id: "news-landorus", date: "2026-10-18", date_label: "10/18", title: "シャドウランドロス(化身)★5レイドは平日含め連日常設中！こおり二重弱点", details: "土日限定ではなく平日も含め連日常設開催中。こおり技が2.56倍の二重弱点。マンムーやセグレイブで2人討伐可能。", targetId: "ev-shadow-landorus" },
-      { id: "news-halloween-p1", date: "2026-10-17", date_label: "10/17", title: "10/27(火)〜 ハロウィン2026 パート1開催！新衣装ピカチュウ・モルペコ登場", details: "新衣装ピカチュウ（ハット＆ケープ）、魔女帽子ケロマツ、衣装ヤバチャが登場。ポケモン捕獲時のアメ2倍＆アメXL確率UP。", targetId: "ev-halloween-p1" },
+      { id: "news-halloween-p1", date: "2026-10-17", date_label: "10/17", title: "10/27(火)〜 ハロウィン2026 パート1開催！新衣装ピカチュウ・モルペコ初登場", details: "新衣装ピカチュウ、モルペコ、ボチ、ミカルゲが登場。捕獲時のアメ2倍＆ナイススロー以上でアメXL確率UPボーナス。（※魔女帽子ケロマツはパート2から登場）", targetId: "ev-halloween-p1" },
       { id: "news-wild-area", date: "2026-10-15", date_label: "10/15", title: "11/14〜15「GOワイルドエリア2026」詳細発表！PL40〜50の『つよいポケモン』初解禁", details: "初登場の『つよいポケモン（PL40〜50・高個体保証・GOサファリボール使用）』が野生出現。ホワイト/ブラックキュレム合体伝説レイド開幕。", targetId: "ev-wildarea-2026" }
     ];
 
@@ -742,14 +741,16 @@
         startDay: 27,
         endDay: 31,
         dateText: "10/27(火) 10:00 〜 11/1(日) 20:00",
-        summary: "新衣装ピカチュウ（ハット＆ケープ）、魔女帽子ケロマツ、新実装の衣装ヤバチャが登場！捕獲アメ2倍＆ナイス以上でアメXL確率UP。",
+        summary: "【3サイト整合性検証済】モルペコ初登場！新衣装ピカチュウ、ボチ、ミカルゲがピックアップ。ポケモン捕獲時のアメ2倍＆ナイススロー以上でアメXL確率アップボーナス！（※ケロマツはパート2から登場）",
         bonuses: ["ポケモン捕獲時のアメ2倍", "ナイス/グレート/エクセレントスローでアメXL確率UP", "タマゴ孵化距離1/2"],
         wilds: [
-          { dex: 25, name: "新衣装ピカチュウ", shiny: true, note: "ハット＆ケープ" },
-          { dex: 656, name: "衣装ケロマツ", shiny: true, note: "魔女帽子" },
-          { dex: 854, name: "衣装ヤバチャ", shiny: true, note: "初登場✨" },
-          { dex: 877, name: "モルペコ", shiny: true, note: "野生ブースト" },
-          { dex: 442, name: "ミカルゲ", shiny: true, note: "低確率出現" }
+          { dex: 877, name: "モルペコ", shiny: false, note: "初登場✨" },
+          { dex: 25, name: "ハロウィン衣装ピカチュウ", shiny: true, note: "限定衣装" },
+          { dex: 971, name: "ボチ", shiny: false, note: "野生ブースト" },
+          { dex: 442, name: "ミカルゲ", shiny: true, note: "レア枠" },
+          { dex: 425, name: "フワンテ", shiny: true, note: "野生出現" },
+          { dex: 607, name: "ヒトモシ", shiny: true, note: "野生出現" },
+          { dex: 353, name: "カゲボウズ", shiny: true, note: "野生出現" }
         ],
         raids: [
           { dex: 487, name: "ギラティナ (オリジン)", shiny: true, note: "★5 伝説レイド", targetKey: "giratina-origin", isDmax: false },
@@ -757,8 +758,8 @@
         ],
         tasks: [
           { task: "ゴーストタイプを10匹捕獲する", rewardDex: 442, rewardName: "ミカルゲ", shiny: true },
-          { task: "ナイススローを5回投げる", rewardDex: 854, rewardName: "衣装ヤバチャ", shiny: true },
-          { task: "相棒と歩いてアメを3個もらう", rewardDex: 877, rewardName: "モルペコ", shiny: true }
+          { task: "ナイススローを5回投げる", rewardDex: 877, rewardName: "モルペコ", shiny: false },
+          { task: "相棒と歩いてアメを3個もらう", rewardDex: 25, rewardName: "限定ピカチュウ", shiny: true }
         ]
       },
       {
@@ -799,20 +800,21 @@
       {
         id: "ev-halloween-p2",
         month: 11,
-        title: "ハロウィン2026 パート2 (キョダイゲンガー)",
+        title: "ハロウィン2026 パート2 (キョダイゲンガー＆ケロマツ)",
         barClass: "bar-main",
         category: "main",
         startDay: 1,
         endDay: 5,
         dateText: "11/1(日) 10:00 〜 11/5(木) 20:00",
-        summary: "色違いボチ初実装！キョダイマックスゲンガー降臨＆メガヤミラミのスーパーマックス解放。7kmタマゴからハロウィンポケモンが孵化。",
+        summary: "【魔女帽子ケロマツ登場】色違いボチ初実装！魔女帽子ケロマツが野生・タスクに出現。キョダイマックスゲンガー降臨！",
         bonuses: ["色違いボチ初実装", "捕獲時すな2倍", "7kmタマゴ距離1/2"],
         wilds: [
+          { dex: 656, name: "魔女帽子ケロマツ", shiny: true, note: "パート2限定出現✨" },
           { dex: 971, name: "ボチ", shiny: true, note: "色違い初実装✨" },
           { dex: 708, name: "ボクレー", shiny: true, note: "野生ブースト" }
         ],
         raids: [{ dex: 94, name: "キョダイマックス ゲンガー", shiny: true, note: "★6 マックスバトル", targetKey: "dmax-gmax-gengar", isDmax: true }],
-        tasks: [{ task: "おばけポケモンを15匹捕獲する", rewardDex: 971, rewardName: "ボチ", shiny: true }]
+        tasks: [{ task: "おばけポケモンを15匹捕獲する", rewardDex: 656, rewardName: "魔女帽子ケロマツ", shiny: true }]
       },
       {
         id: "ev-wildarea-2026",
@@ -1243,7 +1245,6 @@
     let filterMega = false;
     let filterShadow = false;
 
-    // 日時判定ヘルパー
     function isEventPast(item) {
       if (item.month < todayMonth) return true;
       if (item.month === todayMonth && item.endDay < todayDate) return true;
@@ -1385,7 +1386,6 @@
       }
     }
 
-    // 🚨 本日開催中・注目のレイド (リアルタイム動的描画)
     function renderTodaySection() {
       const label = document.getElementById("todayHeaderDateLabel");
       if (label) {
@@ -1446,14 +1446,26 @@
       });
     }
 
-    // 📢 公式発表・最新ニュース速報 (日付+件名、クリックで詳細/スクロール連動、10日間保持)
+    // 📢 公式発表・最新ニュース速報 (終了したイベントニュースは即除外 / 10日間保持)
     function renderNewsSection() {
       const container = document.getElementById("newsItemsContainer");
       container.innerHTML = "";
 
       const visibleNews = NEWS_ITEMS.filter(n => {
         if (readNewsIds.has(n.id)) return false;
-        // 10日以上前の古いニュースはクライアント側でも安全に非表示
+
+        // UMA等の過去単日イベントニュースは完全に非表示
+        if ((n.title && n.title.includes("UMA")) || (n.id && n.id.includes("uma"))) {
+          if (n.date && n.date <= "2026-10-24") return false;
+        }
+
+        // 連動イベントが終了済みなら除外
+        if (n.targetId) {
+          const targetEv = ALL_EVENTS.find(e => e.id === n.targetId);
+          if (targetEv && isEventPast(targetEv)) return false;
+        }
+
+        // 10日間超えの古いニュースは除外
         if (n.date) {
           const itemDt = new Date(n.date);
           const diffDays = Math.floor((now - itemDt) / (1000 * 60 * 60 * 24));
@@ -1505,7 +1517,6 @@
 
     function handleNewsClick(targetId, detailId) {
       if (targetId) {
-        // レイド・ダイマックスへのジャンプ判定
         if (targetId.startsWith("dmax-")) {
           jumpToCounterTarget(targetId, true);
           return;
@@ -1513,7 +1524,6 @@
           jumpToCounterTarget(targetId, false);
           return;
         }
-        // イベントカードへのスクロール判定
         const card = document.getElementById(targetId);
         if (card) {
           card.open = true;
@@ -1523,7 +1533,6 @@
           return;
         }
       }
-      // targetIdがない場合や見つからない場合はその場で詳細を開く
       if (detailId) {
         toggleNewsDetail(detailId);
       }
@@ -2183,7 +2192,6 @@
       renderEventAccordions();
       updateGlobalHiddenUI();
 
-      // data.json から最新ニュースと更新日時を動的ロード
       fetch('./data.json?t=' + new Date().getTime())
         .then(res => res.json())
         .then(remoteData => {
