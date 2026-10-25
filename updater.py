@@ -30,13 +30,13 @@ headers = {
 
 scraped_sections = []
 
-def extract_structured_text(html_text, max_chars=7500):
+def extract_structured_text(html_text, max_chars=8000):
     soup = BeautifulSoup(html_text, "html.parser")
     title = soup.find("title").get_text(strip=True) if soup.find("title") else ""
     for tag in soup(["script", "style", "nav", "footer", "aside", "noscript", "iframe"]):
         tag.decompose()
     lines = []
-    for el in soup.find_all(["h1", "h2", "h3", "h4", "p", "li", "th", "td"]):
+    for el in soup.find_all(["h1", "h2", "h3", "h4", "p", "li", "th", "td", "dt", "dd"]):
         txt = el.get_text(" ", strip=True)
         if not txt or len(txt) < 2:
             continue
@@ -46,12 +46,12 @@ def extract_structured_text(html_text, max_chars=7500):
             lines.append(txt)
     return title, "\n".join(lines)[:max_chars]
 
-# 1. ポケマピ (イベント一覧 + 最新記事上位6件を動的取得)
+# 1. ポケマピ (イベント一覧 + 開催中/直近イベント記事を優先して最大8件取得)
 pokemapi_urls = []
 try:
     res = requests.get("https://pokemongo-get.com/events/", headers=headers, timeout=12)
     if res.status_code == 200:
-        title, body = extract_structured_text(res.text, 7500)
+        title, body = extract_structured_text(res.text, 8000)
         scraped_sections.append(f"=== [ポケマピ イベントカレンダー一覧] ===\n{body}")
         soup = BeautifulSoup(res.text, "html.parser")
         for link in soup.find_all("a", href=re.compile(r"/board/\d+/")):
@@ -60,7 +60,7 @@ try:
                 url = "https://pokemongo-get.com" + url
             if url not in pokemapi_urls:
                 pokemapi_urls.append(url)
-            if len(pokemapi_urls) >= 6:
+            if len(pokemapi_urls) >= 8:
                 break
 except Exception as e:
     print(f"ポケマピ一覧取得スキップ: {e}")
@@ -69,31 +69,39 @@ for url in pokemapi_urls:
     try:
         res = requests.get(url, headers=headers, timeout=10)
         if res.status_code == 200:
-            title, body = extract_structured_text(res.text, 7500)
-            scraped_sections.append(f"=== [ポケマピ最新記事: {title} ({url})] ===\n{body}")
+            title, body = extract_structured_text(res.text, 8000)
+            scraped_sections.append(f"=== [ポケマピ記事詳細: {title} ({url})] ===\n{body}")
     except Exception as e:
         print(f"ポケマピ記事取得スキップ ({url}): {e}")
 
 # 2. GameWith (トップ・最新イベント・タスク一覧)
-for gw_url in ["https://pokemongo.gamewith.jp/", "https://pokemongo.gamewith.jp/article/show/24434"]:
+for gw_url in [
+    "https://pokemongo.gamewith.jp/",
+    "https://pokemongo.gamewith.jp/article/show/24434",
+    "https://pokemongo.gamewith.jp/article/show/102551" # フィールドリサーチ一覧
+]:
     try:
         gw_res = requests.get(gw_url, headers=headers, timeout=10)
         if gw_res.status_code == 200:
-            title, body = extract_structured_text(gw_res.text, 6000)
+            title, body = extract_structured_text(gw_res.text, 6500)
             scraped_sections.append(f"=== [GameWith: {title}] ===\n{body}")
     except Exception as e:
         print(f"GameWith取得スキップ ({gw_url}): {e}")
 
-# 3. 9DB みんポケ (トップ・最新イベント・フィールドリサーチ)
-try:
-    db_res = requests.get("https://9db.jp/pokemongo/", headers=headers, timeout=10)
-    if db_res.status_code == 200:
-        title, body = extract_structured_text(db_res.text, 6000)
-        scraped_sections.append(f"=== [9DB みんポケ: {title}] ===\n{body}")
-except Exception as e:
-    print(f"9DB取得スキップ: {e}")
+# 3. 9DB みんポケ (トップ・フィールドリサーチ一覧)
+for db_url in [
+    "https://9db.jp/pokemongo/",
+    "https://9db.jp/pokemongo/data/4314" # みんポケ フィールドリサーチ一覧
+]:
+    try:
+        db_res = requests.get(db_url, headers=headers, timeout=10)
+        if db_res.status_code == 200:
+            title, body = extract_structured_text(db_res.text, 6500)
+            scraped_sections.append(f"=== [9DB みんポケ: {title}] ===\n{body}")
+    except Exception as e:
+        print(f"9DB取得スキップ ({db_url}): {e}")
 
-# 4. Pokémon GO 公式サイト (日本語ニュース)
+# 4. Pokémon GO 公式サイト
 try:
     off_res = requests.get("https://pokemongo.com/ja/news", headers=headers, timeout=10)
     if off_res.status_code == 200:
@@ -117,7 +125,7 @@ prompt = f"""
 
 以下の【スクレイピング取得テキスト】のみを根拠として、以下の3つのデータをJSON形式で出力してください：
 1. `new_news`: 最新ニュース速報
-2. `field_research_updates`: イベント開始後に判明した「イベント限定フィールドリサーチ（ポケストップから入手するタスク条件と報酬ポケモン一覧）」の辞書データ
+2. `field_research_updates`: イベント開始後に判明した「イベント限定フィールドリサーチ（ポケストップから入手する具体的なタスク条件と報酬ポケモン一覧）」
 3. `dynamic_events`: 新しく詳細が発表されたイベント情報
 
 【既存イベントID一覧（`targetId` や `field_research_updates` のキーに使用）】
@@ -134,19 +142,20 @@ prompt = f"""
 - "ev-cd-pawniard" (コマタナのコミュニティデイ: 11/21)
 - "ev-tusk-wish-deoxys" (黄昏時の願い・デオキシス・メガメタグロス: 11/24〜)
 
-【絶対遵守のルール】
-1. 過去の記憶（2024年・2025年の古いイベント内容）を絶対に混ぜず、取得テキストに明記されている事実のみを抽出してください。
-2. 記事内に具体的な「イベント限定フィールドリサーチのタスク条件（例：ゴーストタイプのポケモンを5匹捕まえる 等）」と「報酬ポケモン」の対応表が記載されている場合は、必ず `field_research_updates` に対象のイベントIDをキーとして出力してください。
-3. ポケモンの図鑑番号（`dex` / `rewardDex`）は全国図鑑番号を基本とし、特殊フォルム・リージョン・メガシンカ・キョダイマックスは以下の専用IDを指定してください：
-   - ザシアン(けんのおう): 10188 / ザマゼンタ(たてのおう): 10189
-   - ネクロズマ(たそがれ): 10155 / ネクロズマ(あかつき): 10156
-   - ブラックキュレム: 10022 / ホワイトキュレム: 10023
-   - ディアルガ(オリジン): 10245 / パルキア(オリジン): 10246 / ギラティナ(オリジン): 10007
-   - ランドロス(れいじゅう): 10021 / ガラルヒヒダルマ: 10177 / アローラライチュウ: 10100 / アローラキュウコン: 10104
-   - メガリザードンX: 10034 / メガリザードンY: 10035 / メガゲンガー: 10038 / メガギャラドス: 10041
-   - メガバンギラス: 10049 / メガサーナイト: 10051 / メガジュペッタ: 10056 / メガルカリオ: 10059
-   - メガラグラージ: 10064 / メガヤミラミ: 10066 / メガメタグロス: 10076 / ゲンシカイオーガ: 10077 / ゲンシグラードン: 10078 / メガレックウザ: 10079
-   - キョダイカイリキー: 10201 / キョダイゲンガー: 10202 / キョダイオーロンゲ: 10222 / キョダイジュラルドン: 10225
+【フィールドリサーチ抽出の最重要ルール】
+- `field_research_updates` には、**具体的な達成条件（例：「カーブボールを3回投げる」「ゴーストタイプのポケモンを5匹捕まえる」「ポケモンを5匹進化させる」など）が記事内で判明しているタスクのみ**を入れてください。
+- まだイベント開始前で「タスク条件が未判明（報酬ポケモンのみ予告されている状態）」の場合は、そのイベントの `field_research_updates` は出力しないでください（空にしておくことでフロントエンド側の待機表示が維持されます）。
+
+【特殊フォルム図鑑番号（`dex` / `rewardDex`）】
+- ザシアン(けんのおう): 10188 / ザマゼンタ(たてのおう): 10189
+- ネクロズマ(たそがれ): 10155 / ネクロズマ(あかつき): 10156
+- ブラックキュレム: 10022 / ホワイトキュレム: 10023
+- ディアルガ(オリジン): 10245 / パルキア(オリジン): 10246 / ギラティナ(オリジン): 10007
+- ランドロス(れいじゅう): 10021 / ガラルヒヒダルマ: 10177 / アローラライチュウ: 10100 / アローラキュウコン: 10104
+- メガリザードンX: 10034 / メガリザードンY: 10035 / メガゲンガー: 10038 / メガギャラドス: 10041
+- メガバンギラス: 10049 / メガサーナイト: 10051 / メガジュペッタ: 10056 / メガルカリオ: 10059
+- メガラグラージ: 10064 / メガヤミラミ: 10066 / メガメタグロス: 10076 / ゲンシカイオーガ: 10077 / ゲンシグラードン: 10078 / メガレックウザ: 10079
+- キョダイカイリキー: 10201 / キョダイゲンガー: 10202 / キョダイオーロンゲ: 10222 / キョダイジュラルドン: 10225
 
 出力JSONスキーマ（純粋なJSONのみ）：
 {{
@@ -163,35 +172,15 @@ prompt = f"""
   "field_research_updates": {{
     "ev-halloween-p1": [
       {{
-        "task": "具体的なタスク条件（例：ゴーストタイプのポケモンを5匹捕まえる）",
-        "rewardDex": 854,
-        "rewardName": "報酬ポケモン名（例：ヤバチャ(リボン)）",
+        "task": "具体的なタスク条件（例：カーブボールを3回投げる）",
+        "rewardDex": 25,
+        "rewardName": "ピカチュウ (ハット&ケープ)",
         "shiny": true,
         "note": "CP範囲や補足情報"
       }}
     ]
   }},
-  "dynamic_events": [
-    {{
-      "id": "ev-一意の英数字スラッグ",
-      "month": 11,
-      "title": "イベント名",
-      "barClass": "bar-main または bar-cd / bar-raid / bar-dmax / bar-collab",
-      "category": "main または cd / raid / dmax / collab",
-      "barIconDex": 624,
-      "startDay": 1,
-      "endDay": 5,
-      "hasPaid": true,
-      "dateText": "M/D(曜) HH:MM 〜 M/D(曜) HH:MM",
-      "summary": "イベントの全体概要",
-      "freeFeatures": ["無料でできること1"],
-      "paidFeatures": ["有料チケット・課金要素1"],
-      "wilds": [{{ "dex": 25, "name": "ポケモン名", "shiny": true, "note": "補足" }}],
-      "raids": [{{ "dex": 10188, "name": "ボス名", "shiny": true, "note": "★5伝説等", "targetKey": "", "isDmax": false }}],
-      "fieldResearches": [{{ "task": "ポケストップ限定タスク名", "rewardDex": 25, "rewardName": "報酬ポケモン名", "shiny": true, "note": "補足" }}],
-      "tasks": [{{ "task": "タイムチャレンジ等の名称", "rewardDex": 25, "rewardName": "報酬名", "shiny": true }}]
-    }}
-  ]
+  "dynamic_events": []
 }}
 
 【スクレイピング取得テキスト】:
@@ -257,13 +246,24 @@ try:
     valid_news.sort(key=lambda x: x.get("date", today_date_str), reverse=True)
     valid_news = valid_news[:8]
 
-    # 2. イベント別フィールドリサーチの更新統合
+    # 2. イベント別フィールドリサーチの更新統合（未判明・プレースホルダー文字列は弾く安全装置付き）
     merged_fr_updates = dict(existing_fr_updates) if isinstance(existing_fr_updates, dict) else {}
+    placeholder_words = ["未判明", "調査中", "イベント限定フィールドリサーチ", "不明", "判明次第"]
+
     if isinstance(new_fr_updates, dict):
         for ev_id, task_list in new_fr_updates.items():
             if isinstance(task_list, list) and len(task_list) > 0:
-                valid_tasks = [t for t in task_list if t.get("task") and t.get("rewardName")]
-                if valid_tasks:
+                valid_tasks = []
+                for t in task_list:
+                    task_text = str(t.get("task", "")).strip()
+                    reward_name = str(t.get("rewardName", "")).strip()
+                    if not task_text or not reward_name:
+                        continue
+                    # プレースホルダー（条件未判明）ならスキップし、具体的なタスク条件のみ採用
+                    if any(pw in task_text for pw in placeholder_words):
+                        continue
+                    valid_tasks.append(t)
+                if len(valid_tasks) > 0:
                     merged_fr_updates[ev_id] = valid_tasks
 
     # 3. 動的イベントの統合
