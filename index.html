@@ -122,7 +122,7 @@
 
       <!-- トップ通知エリア -->
       <section class="grid grid-cols-1 md:grid-cols-2 gap-3">
-        <!-- 🚨 本日開催中・終了間近 (リアルタイム動的描画) -->
+        <!-- 🚨 本日開催中・注目のレイド (リアルタイム動的描画) -->
         <div class="bg-white border border-rose-200 rounded-xl p-3.5 shadow-sm">
           <div class="flex items-center justify-between mb-2">
             <h2 class="text-sm font-extrabold text-rose-600 flex items-center gap-1.5">
@@ -133,21 +133,21 @@
           <ul id="todayEventsList" class="text-xs space-y-2 text-slate-700"></ul>
         </div>
 
-        <!-- 📢 直近の公式発表・最新ニュース速報 -->
+        <!-- 📢 直近の公式発表・最新ニュース速報 (日付+件名 / 10日間保持) -->
         <div class="bg-white border border-sky-200 rounded-xl p-3.5 shadow-sm flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between mb-2">
               <h2 class="text-sm font-extrabold text-sky-700 flex items-center gap-1.5">
-                <span>📢</span> 公式発表・最新ニュース速報 (3サイト統合)
+                <span>📢</span> 公式発表・最新ニュース速報 (直近10日間)
               </h2>
               <button onclick="resetReadNews()" class="text-[10px] text-slate-500 hover:text-sky-600 underline">
                 既読リセット
               </button>
             </div>
-            <div id="newsItemsContainer" class="space-y-1.5 text-xs"></div>
+            <div id="newsItemsContainer" class="space-y-1.5 text-xs max-h-56 overflow-y-auto pr-1"></div>
           </div>
           <div class="text-[10px] text-slate-400 mt-2 text-right">
-            タップで該当詳細へスクロール / 「✓ 既読」で非表示
+            クリックで詳細表示・該当へスクロール / 「✓ 既読」で非表示
           </div>
         </div>
       </section>
@@ -497,13 +497,14 @@
     const todayDate = now.getDate();
     const todayDow = ["日", "月", "火", "水", "木", "金", "土"][now.getDay()];
 
-    const NEWS_ITEMS = [
-      { id: "news-uma-day", text: "本日14:00〜17:00「ダイマックスUMAマックスバトルデイ」開催！無料MP800受取を忘れずに", targetId: "ev-dmax-uma-day" },
-      { id: "news-mega-char", text: "メガリザードンY＆Xレイド出現中！Yはいわ2.56倍二重弱点でソロ・ペア討伐可能", targetId: "ev-palkia-char" },
-      { id: "news-landorus", text: "シャドウランドロス(化身)★5レイドは土日だけでなく平日も連日出現中！二重弱点氷で攻略推奨", targetId: "ev-shadow-landorus" },
-      { id: "news-twitch", text: "10/25(日) ポケモンナイトアウト公式Twitch配信視聴で限定モルペコ＆アバター配布", targetId: "ev-twitch" },
-      { id: "news-halloween-p1", text: "10/27(火)〜 ハロウィン2026 パート1開催！新衣装ピカチュウ・モルペコ登場", targetId: "ev-halloween-p1" },
-      { id: "news-wild-area", text: "11/14〜15「GOワイルドエリア2026」詳細発表！PL40〜50の『つよいポケモン』とサファリボール初解禁", targetId: "ev-wildarea-2026" }
+    // 初期フォールバックニュース（data.json 読み込み完了までの初期表示）
+    let NEWS_ITEMS = [
+      { id: "news-twitch", date: "2026-10-25", date_label: "10/25", title: "ポケモンナイトアウト公式Twitch配信視聴で限定モルペコ＆アバター配布", details: "Twitch公式チャンネルで30分以上視聴すると、限定リサーチコード（モルペコや限定Tシャツ、スーパーふかそうち）を入手可能。受取期限48時間。", targetId: "ev-twitch" },
+      { id: "news-sneasel", date: "2026-10-24", date_label: "10/24", title: "ダイマックスニューラ★1パワースポット出現率UP中！消費MP軽減", details: "★1パワースポットにニューラが集中出現。格闘2.56倍二重弱点のためソロ討伐容易。対エスパー・ゴースト戦の強力アタッカーとして厳選推奨。", targetId: "ev-dmax-sneasel" },
+      { id: "news-mega-char", date: "2026-10-21", date_label: "10/21", title: "メガリザードンY＆Xレイド出現中！いわ2.56倍二重弱点でソロ・ペア討伐可能", details: "メガリザードンYはいわタイプが二重弱点。ラムパルド・ドサイドン統一で少人数高速周回可能。パルキア特別技あくうせつだんも同時開催中。", targetId: "ev-palkia-char" },
+      { id: "news-landorus", date: "2026-10-18", date_label: "10/18", title: "シャドウランドロス(化身)★5レイドは平日含め連日常設中！こおり二重弱点", details: "土日限定ではなく平日も含め連日常設開催中。こおり技が2.56倍の二重弱点。マンムーやセグレイブで2人討伐可能。", targetId: "ev-shadow-landorus" },
+      { id: "news-halloween-p1", date: "2026-10-17", date_label: "10/17", title: "10/27(火)〜 ハロウィン2026 パート1開催！新衣装ピカチュウ・モルペコ登場", details: "新衣装ピカチュウ（ハット＆ケープ）、魔女帽子ケロマツ、衣装ヤバチャが登場。ポケモン捕獲時のアメ2倍＆アメXL確率UP。", targetId: "ev-halloween-p1" },
+      { id: "news-wild-area", date: "2026-10-15", date_label: "10/15", title: "11/14〜15「GOワイルドエリア2026」詳細発表！PL40〜50の『つよいポケモン』初解禁", details: "初登場の『つよいポケモン（PL40〜50・高個体保証・GOサファリボール使用）』が野生出現。ホワイト/ブラックキュレム合体伝説レイド開幕。", targetId: "ev-wildarea-2026" }
     ];
 
     const ALL_EVENTS = [
@@ -580,7 +581,7 @@
         startDay: 25,
         endDay: 25,
         dateText: "10/25(日) 配信時間限定 [本日開催]",
-        summary: "Twitch公式チャンネルで30分以上視聴すると、限定リサーチコード（モルペコや限定Tシャツ、スーパー孵化装置）を入手可能。",
+        summary: "Twitch公式チャンネルで30分以上視聴すると、限定リサーチコード（モルペコや限定Tシャツ、スーパーふかそうち）を入手可能。",
         bonuses: ["Twitch Dropsによるタイムチャレンジ入手", "受取期限48時間"],
         wilds: [{ dex: 877, name: "モルペコ", shiny: true, note: "リサーチ報酬" }],
         raids: [],
@@ -1020,7 +1021,6 @@
       }
     };
 
-    // ダイマックス攻略データ（現在・未来・過去を日程で自動判定）
     const DMAX_9DB_DATA = {
       "dmax-sneasel": {
         month: 10,
@@ -1200,7 +1200,6 @@
           { step: 3, title: "タンクに戻しメーター回収を徹底。", details: ["★6は長期戦のため役割分担徹底"] }
         ]
       },
-      // 10/24終了のUMAは過去データとして保持（現在・未来一覧には非表示）
       "dmax-uxie": {
         month: 10,
         startDay: 24,
@@ -1239,7 +1238,7 @@
     let readNewsIds = new Set();
     
     let activeRaidKey = "palkia-origin"; 
-    let activeDmax9dbKey = "dmax-sneasel"; // 現在出現中のニューラを初期選択
+    let activeDmax9dbKey = "dmax-sneasel";
 
     let filterMega = false;
     let filterShadow = false;
@@ -1447,14 +1446,19 @@
       });
     }
 
+    // 📢 公式発表・最新ニュース速報 (日付+件名、クリックで詳細/スクロール連動、10日間保持)
     function renderNewsSection() {
       const container = document.getElementById("newsItemsContainer");
       container.innerHTML = "";
 
       const visibleNews = NEWS_ITEMS.filter(n => {
         if (readNewsIds.has(n.id)) return false;
-        const targetEv = ALL_EVENTS.find(e => e.id === n.targetId);
-        if (targetEv && isEventPast(targetEv)) return false;
+        // 10日以上前の古いニュースはクライアント側でも安全に非表示
+        if (n.date) {
+          const itemDt = new Date(n.date);
+          const diffDays = Math.floor((now - itemDt) / (1000 * 60 * 60 * 24));
+          if (diffDays > 10) return false;
+        }
         return true;
       });
 
@@ -1465,18 +1469,64 @@
 
       visibleNews.forEach(n => {
         const item = document.createElement("div");
-        item.className = "flex items-center justify-between gap-2 bg-slate-50 p-2 rounded-lg border border-slate-200";
+        item.className = "bg-slate-50 border border-slate-200 rounded-lg overflow-hidden transition";
+        const dateLabel = n.date_label || (n.date ? n.date.slice(5).replace('-', '/') : `${todayMonth}/${todayDate}`);
+        const hasDetails = !!n.details;
+        const detailId = `news-detail-${n.id}`;
+
         item.innerHTML = `
-          <div class="cursor-pointer hover:text-sky-700 transition flex items-center gap-1.5 flex-1" onclick="scrollToEventCard('${n.targetId}')">
-            <span class="text-sky-600 font-bold">●</span>
-            <span class="line-clamp-1">${n.text}</span>
+          <div class="flex items-center justify-between gap-2 p-2">
+            <div class="cursor-pointer hover:text-sky-700 transition flex items-center gap-1.5 flex-1 min-w-0" onclick="handleNewsClick('${n.targetId || ''}', '${detailId}')">
+              <span class="text-[11px] font-bold text-sky-700 bg-sky-100 border border-sky-200 px-1.5 py-0.5 rounded flex-shrink-0">[${dateLabel}]</span>
+              <span class="line-clamp-1 font-bold text-slate-800 text-xs">${n.title}</span>
+            </div>
+            <div class="flex items-center gap-1.5 flex-shrink-0">
+              ${hasDetails ? `<button onclick="toggleNewsDetail('${detailId}')" class="text-[10px] text-sky-600 hover:text-sky-800 font-bold px-1.5 py-0.5 rounded border border-sky-200 hover:bg-sky-50">詳細 ▼</button>` : ''}
+              <button onclick="markNewsRead('${n.id}')" class="text-[11px] bg-slate-200 hover:bg-emerald-600 hover:text-white text-slate-700 px-2 py-0.5 rounded transition font-bold" title="既読">
+                ✓
+              </button>
+            </div>
           </div>
-          <button onclick="markNewsRead('${n.id}')" class="text-[11px] bg-slate-200 hover:bg-emerald-600 hover:text-white text-slate-700 px-2 py-0.5 rounded transition flex-shrink-0 font-bold">
-            ✓ 既読
-          </button>
+          ${hasDetails ? `
+            <div id="${detailId}" class="hidden p-2.5 pt-1 text-[11px] text-slate-600 border-t border-slate-200 bg-white leading-relaxed">
+              ${n.details}
+              ${n.targetId ? `<div class="mt-1"><a href="javascript:void(0)" onclick="handleNewsClick('${n.targetId}', '')" class="text-sky-600 font-bold hover:underline">関連イベント詳細へジャンプ ↗</a></div>` : ''}
+            </div>
+          ` : ''}
         `;
         container.appendChild(item);
       });
+    }
+
+    function toggleNewsDetail(id) {
+      const el = document.getElementById(id);
+      if (el) el.classList.toggle("hidden");
+    }
+
+    function handleNewsClick(targetId, detailId) {
+      if (targetId) {
+        // レイド・ダイマックスへのジャンプ判定
+        if (targetId.startsWith("dmax-")) {
+          jumpToCounterTarget(targetId, true);
+          return;
+        } else if (RAID_DATA[targetId]) {
+          jumpToCounterTarget(targetId, false);
+          return;
+        }
+        // イベントカードへのスクロール判定
+        const card = document.getElementById(targetId);
+        if (card) {
+          card.open = true;
+          card.scrollIntoView({ behavior: "smooth", block: "start" });
+          card.classList.add("pulse-target");
+          setTimeout(() => card.classList.remove("pulse-target"), 2400);
+          return;
+        }
+      }
+      // targetIdがない場合や見つからない場合はその場で詳細を開く
+      if (detailId) {
+        toggleNewsDetail(detailId);
+      }
     }
 
     function changeGanttMonth(m) {
@@ -1791,7 +1841,7 @@
 
       Object.keys(RAID_DATA).forEach(key => {
         const b = RAID_DATA[key];
-        if (isEventPast(b)) return; // 過去レイドは非表示
+        if (isEventPast(b)) return;
 
         const active = (key === activeRaidKey);
         const card = document.createElement("button");
@@ -1921,7 +1971,6 @@
       });
     }
 
-    // ダイマックス攻略（今と未来で2分割描画）
     function renderDmax9dbSection() {
       renderDmax9dbPicker();
       renderDmax9dbCard();
@@ -1933,7 +1982,6 @@
       pickerCurrent.innerHTML = "";
       pickerFuture.innerHTML = "";
 
-      // 過去ボス（UMA等）が選択されている場合は現在有効なボス（ニューラ等）へフォールバック
       const validCurrentKeys = Object.keys(DMAX_9DB_DATA).filter(k => isEventActive(DMAX_9DB_DATA[k]));
       const validFutureKeys = Object.keys(DMAX_9DB_DATA).filter(k => isEventFuture(DMAX_9DB_DATA[k]));
 
@@ -1943,7 +1991,7 @@
 
       Object.keys(DMAX_9DB_DATA).forEach(key => {
         const d = DMAX_9DB_DATA[key];
-        if (isEventPast(d)) return; // 過去のダイマックス（10/24終了のUMAなど）は完全除外
+        if (isEventPast(d)) return;
 
         const active = (key === activeDmax9dbKey);
         const card = document.createElement("button");
@@ -2135,6 +2183,7 @@
       renderEventAccordions();
       updateGlobalHiddenUI();
 
+      // data.json から最新ニュースと更新日時を動的ロード
       fetch('./data.json?t=' + new Date().getTime())
         .then(res => res.json())
         .then(remoteData => {
@@ -2143,6 +2192,10 @@
             if (timeEl) {
               timeEl.innerText = '最終自動更新: ' + remoteData.updated_at;
             }
+          }
+          if (remoteData.latest_news && remoteData.latest_news.length > 0) {
+            NEWS_ITEMS = remoteData.latest_news;
+            renderNewsSection();
           }
         })
         .catch(() => {});
