@@ -379,3 +379,10 @@ except Exception as e:
     with open("scrape_log.json", "w", encoding="utf-8") as f:
         json.dump(scrape_log, f, ensure_ascii=False, indent=2)
     exit(1)
+
+// （任意）月ボタンも「今月・来月・再来月」に完全自動スライドさせる場合
+      const mGroup = document.getElementById("ganttMonthBtnGroup");
+      if (mGroup) {
+        const m3 = [todayMonth, (todayMonth % 12) + 1, ((todayMonth + 1) % 12) + 1];
+        mGroup.innerHTML = m3.map(m => `<button onclick="changeGanttMonth(${m})" id="monthBtn${m}" class="text-xs px-3 py-1 rounded-md font-bold transition">${m}月</button>`).join("");
+      }
