@@ -15,7 +15,6 @@ jst = datetime.timezone(datetime.timedelta(hours=9))
 now = datetime.datetime.now(jst)
 today_str = now.strftime("%Y-%m-%d")
 now_str = now.strftime("%Y/%m/%d %H:%M JST")
-one_month_ago = (now - datetime.timedelta(days=31)).date()
 valid_months = [now.month, (now.month % 12) + 1, ((now.month + 1) % 12) + 1]
 
 print(f"[{now_str}] 4大サイト深掘りクローラー＆Gemini構造化解析を開始します...")
@@ -95,7 +94,6 @@ def fetch_and_record(source_name: str, url: str, max_chars: int = 8000) -> Optio
             return None
         res.encoding = res.apparent_encoding or "utf-8"
         title, date_hint, body = extract_clean_content(res.text, max_chars=max_chars)
-        # 古い年号専用の記事を除外
         if any(old_y in title for old_y in ["2022", "2023", "2024", "2025"]) and str(now.year) not in title:
             return None
         scraped_docs.append(f"=== [{source_name}] {title} ({url}) ===\n{body}")
@@ -120,9 +118,9 @@ if soup_pm:
     for u in pm_urls:
         fetch_and_record("ポケマピ記事", u, 8500)
 
-# 2. GameWith (トップ + イベント/タスク一覧 + 個別記事4件)
+# 2. GameWith (トップ + イベント/タスク一覧)
 for gw_u in ["https://pokemongo.gamewith.jp/", "https://pokemongo.gamewith.jp/article/show/24434", "https://pokemongo.gamewith.jp/article/show/102210"]:
-    soup_gw = fetch_and_record("GameWith", gw_u, 7500)
+    fetch_and_record("GameWith", gw_u, 7500)
 
 # 3. 9DB みんポケ (トップ + サブ記事4件)
 soup_9db = fetch_and_record("9DBトップ", "https://9db.jp/pokemongo/", 7500)
@@ -218,7 +216,7 @@ class EventGoPassUpdateSchema(BaseModel):
 
 class AIOutputSchema(BaseModel):
     new_news: List[NewsItemSchema]
-     dynamic_events: List[EventItemSchema]
+    dynamic_events: List[EventItemSchema]
     event_gopass: Optional[EventGoPassUpdateSchema] = None
 
 api_key = os.environ.get("GEMINI_API_KEY")
@@ -248,7 +246,7 @@ prompt = f"""
    - "ev-tusk-wish-deoxys" (黄昏時の願い・デオキシス: 11/24〜)
 
 2. 既存イベント（特に開催中のハロウィンイベント等）について、「フィールドリサーチの具体的なタスク条件と報酬ポケモン」「サプライズボックスの中身・出現ポケモン」「GOパスのランク別報酬」などの詳細が記載されていれば、`dynamic_events` と `event_gopass` に漏れなく出力してください。
-3. 新規イベントの発表だけでなく、**発表済みイベントに新しい詳細（タスク条件やサプライズボックス詳細など）が判明した場合も、`new_news` に `【更新】〇〇イベントの限定タスク・詳細が判明！`（`is_update_notice: true`）としてニュースを追加してください。**
+3. 新規イベントの発表だけでなく、発表済みイベントに新しい詳細（タスク条件やサプライズボックス詳細など）が判明した場合も、`new_news` に `【更新】〇〇イベントの限定タスク・詳細が判明！`（`is_update_notice: true`）としてニュースを追加してください。
 
 【スクレイピング取得テキスト】:
 {combined_text}
@@ -256,7 +254,6 @@ prompt = f"""
 
 try:
     response = None
-    # Googleの最新モデル (gemini-3.0-flash / gemini-3.1-pro-preview) を優先試行
     candidate_models = [
         "gemini-3.0-flash",
         "gemini-3.1-pro-preview",
@@ -283,7 +280,6 @@ try:
         except Exception as api_err:
             print(f"{model_name} スキップ: {api_err}")
 
-    # 万が一上記候補がすべて404だった場合、利用可能なモデル一覧から自動検索して実行
     if not response or not response.text:
         for m in client.models.list():
             m_name = getattr(m, "name", "")
@@ -382,3 +378,4 @@ except Exception as e:
     scrape_log["errors"].append(err_msg)
     with open("scrape_log.json", "w", encoding="utf-8") as f:
         json.dump(scrape_log, f, ensure_ascii=False, indent=2)
+    exit(1)
