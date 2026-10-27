@@ -1,6 +1,15 @@
 {
-  "updated_at": "2026/10/28 00:47 JST",
+  "updated_at": "2026/10/28 01:16 JST",
   "latest_news": [
+    {
+      "id": "news-dia-de-muertos-2026",
+      "date": "2026-10-28",
+      "date_label": "10/28",
+      "title": "【メキシコ限定】Día de Muertos en 2026が開催！",
+      "details": "メキシコ限定の死者の日イベント2026が開催決定。期間は10/28 01:00から11/6 11:00まで。",
+      "targetId": "ev-dia-de-muertos-2026",
+      "is_update_notice": false
+    },
     {
       "id": "news-2026-10-28-halloween-p1",
       "date": "2026-10-28",
@@ -9,6 +18,15 @@
       "details": "開催中のハロウィン2026パート1において、ゴーストタイプのポケモンを13匹捕まえる、レイドバトルで1回勝つなどの限定フィールドリサーチタスクやサプライズボックスの詳細情報が判明しました。",
       "targetId": "ev-halloween-p1",
       "is_update_notice": true
+    },
+    {
+      "id": "news-halloween-2026-p1",
+      "date": "2026-10-27",
+      "date_label": "10/27",
+      "title": "ハロウィン2026パート1が開催！",
+      "details": "ピカチュウ(ハットとケープ)、ズバット(トップハット)、ヤバチャ(リボン)が新登場！ハロウィンのサプライズボックスも登場中。",
+      "targetId": "ev-halloween-p1",
+      "is_update_notice": false
     },
     {
       "id": "news-halloween-p1-update",
@@ -81,28 +99,44 @@
         "rewardDex": 25,
         "rewardName": "ピカチュウ (ハットとケープ)",
         "shiny": true,
-        "note": "CP460等"
+        "note": "ハロウィン2026パート1 [確認: 9DBみんポケ・GameWith]",
+        "verified_sources": [
+          "9DBみんポケ",
+          "GameWith"
+        ]
       },
       {
         "task": "レイドバトルで1回勝つ",
         "rewardDex": 25,
         "rewardName": "ピカチュウ (ハットとケープ)",
         "shiny": true,
-        "note": "CP285等"
+        "note": "ハロウィン2026パート1 [確認: 9DBみんポケ・GameWith]",
+        "verified_sources": [
+          "9DBみんポケ",
+          "GameWith"
+        ]
       },
       {
         "task": "レイドバトルで3回勝つ",
         "rewardDex": 25,
         "rewardName": "ピカチュウ (ハットとケープ)",
         "shiny": true,
-        "note": "CP402等"
+        "note": "ハロウィン2026パート1 [確認: 9DBみんポケ・GameWith]",
+        "verified_sources": [
+          "9DBみんポケ",
+          "GameWith"
+        ]
       },
       {
         "task": "ナイススローを6回投げる",
         "rewardDex": 710,
         "rewardName": "バケッチャ",
         "shiny": true,
-        "note": "おひろめ用厳選にも"
+        "note": "ハロウィン2026パート1 [確認: 9DBみんポケ・GameWith]",
+        "verified_sources": [
+          "9DBみんポケ",
+          "GameWith"
+        ]
       }
     ]
   },
@@ -111,7 +145,7 @@
       "id": "ev-halloween-p1",
       "month": 10,
       "title": "ハロウィン2026パート1",
-      "barClass": "bg-purple",
+      "barClass": "bg-purple-600",
       "category": "イベント",
       "barIconDex": 25,
       "startDay": 27,
@@ -119,16 +153,15 @@
       "hasPaid": true,
       "hasFieldResearchPending": false,
       "dateText": "10/27(火)10:00 〜 11/1(日)10:00",
-      "summary": "ピカチュウ(ハットとケープ)、ズバット(トップハット)、ヤバチャ(リボン)が新登場！ハロウィンのサプライズボックスや限定タスクが登場。",
+      "summary": "衣装を身にまとったピカチュウ、ズバット、ヤバチャが登場するハロウィンイベントパート1！フィールドにはサプライズボックスも出現。",
       "freeFeatures": [
-        "ピカチュウ (ハットとケープ)初登場",
-        "ズバット (トップハット)初登場",
-        "ヤバチャ (リボン)初登場",
-        "サプライズボックス登場",
-        "イベント限定フィールドリサーチ"
+        "ピカチュウ(ハットとケープ)初登場",
+        "ズバット(トップハット)初登場",
+        "ヤバチャ(リボン)初登場",
+        "ハロウィンのサプライズボックス出現"
       ],
       "paidFeatures": [
-        "GOパスデラックス：ハロウィン2026 (¥1120)"
+        "GOパスデラックス（1120円）"
       ],
       "wilds": [
         {
@@ -148,9 +181,9 @@
         {
           "dex": 1012,
           "name": "ヤバチャ (リボン)",
-          "shiny": true,
+          "shiny": false,
           "note": "レイド等で登場",
-          "targetKey": "yanbaha",
+          "targetKey": "yabacha",
           "isDmax": false
         }
       ],
@@ -160,73 +193,98 @@
           "rewardDex": 25,
           "rewardName": "ピカチュウ (ハットとケープ)",
           "shiny": true,
-          "note": "CP460等"
+          "note": "ハロウィン2026パート1 [確認: 9DBみんポケ・GameWith]",
+          "verified_sources": [
+            "9DBみんポケ",
+            "GameWith"
+          ]
         },
         {
           "task": "レイドバトルで1回勝つ",
           "rewardDex": 25,
           "rewardName": "ピカチュウ (ハットとケープ)",
           "shiny": true,
-          "note": "CP285等"
+          "note": "ハロウィン2026パート1 [確認: 9DBみんポケ・GameWith]",
+          "verified_sources": [
+            "9DBみんポケ",
+            "GameWith"
+          ]
         },
         {
           "task": "レイドバトルで3回勝つ",
           "rewardDex": 25,
           "rewardName": "ピカチュウ (ハットとケープ)",
           "shiny": true,
-          "note": "CP402等"
+          "note": "ハロウィン2026パート1 [確認: 9DBみんポケ・GameWith]",
+          "verified_sources": [
+            "9DBみんポケ",
+            "GameWith"
+          ]
         },
         {
           "task": "ナイススローを6回投げる",
           "rewardDex": 710,
           "rewardName": "バケッチャ",
           "shiny": true,
-          "note": "おひろめ用厳選にも"
+          "note": "ハロウィン2026パート1 [確認: 9DBみんポケ・GameWith]",
+          "verified_sources": [
+            "9DBみんポケ",
+            "GameWith"
+          ]
         }
       ],
+      "tasks": []
+    },
+    {
+      "id": "ev-dia-de-muertos-2026",
+      "month": 10,
+      "title": "【メキシコ限定】Día de Muertos en 2026",
+      "barClass": "bg-orange-500",
+      "category": "地域限定イベント",
+      "barIconDex": 104,
+      "startDay": 28,
+      "endDay": 6,
+      "hasPaid": false,
+      "hasFieldResearchPending": false,
+      "dateText": "10/28(水)01:00 〜 11/6(金)11:00",
+      "summary": "メキシコ限定で開催される死者の日イベント2026。",
+      "freeFeatures": [
+        "メキシコ地域限定開催"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
       "tasks": []
     }
   ],
   "event_gopass": {
-    "title": "GOパス：ハロウィン2026",
-    "period": "2026/10/27(火)10:00 〜 11/5(木)20:00",
+    "title": "GOパス 10月(2026)",
+    "period": "2026/10/6(火)10:00 〜 11/3(火)10:00",
     "free_summary": [
-      "ランク10到達でティア1ボーナス（捕獲時アメ2倍）",
-      "ランク20到達でティア2ボーナス（捕獲時ほしのすな2倍）"
+      "カイオーガとの出会い",
+      "ふしぎなアメXL",
+      "プレミアムバトルパス",
+      "しあわせタマゴ"
     ],
     "deluxe_summary": [
-      "価格：¥1120",
-      "パティシエトップス、パティシエパンツが入手可能",
-      "ランク10到達でティア1ボーナス（捕獲時アメ3倍）",
-      "ランク20到達でティア2ボーナス（捕獲時ほしのすな3倍）"
+      "キラチャーム",
+      "スーパーふかそうち",
+      "追加のポケモン遭遇"
     ],
     "reward_rows": [
       {
         "rank": "1",
-        "free_reward": "2500XP",
+        "free_reward": "ポケモン交換アメ増加/アメXL確定",
         "free_dex": 0,
-        "deluxe_reward": "5000XP",
+        "deluxe_reward": "ポケモン交換アメ増加/アメXL確定",
         "deluxe_dex": 0
       },
       {
-        "rank": "2",
-        "free_reward": "ほしのすな x10",
-        "free_dex": 0,
-        "deluxe_reward": "ほしのすな x20",
-        "deluxe_dex": 0
-      },
-      {
-        "rank": "10",
-        "free_reward": "ティア1ボーナス (捕獲時アメ2倍)",
-        "free_dex": 0,
-        "deluxe_reward": "ティア1ボーナス (捕獲時アメ3倍)",
-        "deluxe_dex": 0
-      },
-      {
-        "rank": "20",
-        "free_reward": "ティア2ボーナス (捕獲時すな2倍)",
-        "free_dex": 0,
-        "deluxe_reward": "ティア2ボーナス (捕獲時すな3倍)",
+        "rank": "100",
+        "free_reward": "カイオーガ",
+        "free_dex": 382,
+        "deluxe_reward": "キラチャーム",
         "deluxe_dex": 0
       }
     ]
