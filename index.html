@@ -32,7 +32,6 @@
     .bar-shadow-daily { background: linear-gradient(90deg, #fee2e2, #fecaca); border: 1px solid #f87171; color: #991b1b; }
     .bg-9db-card { background: radial-gradient(circle at center, #2e1065 0%, #170b2c 70%, #0d061a 100%); }
     #swipeBackIndicator { transition: transform 0.15s ease-out, opacity 0.15s ease-out; }
-    /* ガントチャート横スクロール時のテキスト＆アイコン左端追従用 */
     .gantt-sticky-label {
       position: sticky;
       left: 6px;
@@ -48,16 +47,15 @@
 </head>
 <body class="min-h-screen flex flex-col">
 
-  <!-- 左端スワイプ時の視覚インジケーター -->
+  <!-- スワイプバックインジケーター -->
   <div id="swipeBackIndicator" class="fixed left-0 top-1/2 -translate-y-1/2 z-50 pointer-events-none opacity-0 -translate-x-full bg-sky-600 text-white px-3 py-2 rounded-r-full shadow-lg font-bold text-xs flex items-center gap-1">
     <span>←</span> 前の画面へ戻る
   </div>
 
-  <!-- フローティング「前の画面に戻る」ボタン -->
+  <!-- フローティング戻るボタン -->
   <button id="floatingBackBtn" onclick="triggerBackNavigation()" class="hidden fixed bottom-5 left-4 z-50 bg-slate-900/90 hover:bg-sky-700 text-white text-xs font-bold px-3.5 py-2.5 rounded-full shadow-xl border border-slate-700 backdrop-blur flex items-center gap-2 transition-all active:scale-95">
     <span class="text-sm">←</span>
     <span id="floatingBackLabel">元のイベントに戻る</span>
-    <span class="text-[10px] text-slate-300 font-normal hidden sm:inline">(スワイプで戻る可)</span>
   </button>
 
   <!-- ヘッダー -->
@@ -71,8 +69,8 @@
           </h1>
           <div class="text-[11px] text-slate-500 flex items-center gap-2">
             <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span id="autoUpdateTimestamp" class="font-bold text-slate-700">自動更新: 毎日 8時 / 12時 / 18時 / 22時</span>
-            <span class="text-sky-600 font-semibold hidden sm:inline">ポケマピ / GameWith / 9DB / 公式 統合仕様</span>
+            <span id="autoUpdateTimestamp" class="font-bold text-slate-700">自動更新: 毎日 7時 / 12時 / 18時 / 22時</span>
+            <span class="text-sky-600 font-semibold hidden sm:inline">ポケマピ / GameWith / 9DB / 公式 統合版</span>
           </div>
         </div>
       </div>
@@ -87,11 +85,11 @@
     </div>
   </header>
 
-  <!-- 4大メインナビゲーションタブ (一番左にシーズン24常設を配置) -->
+  <!-- メインナビゲーション -->
   <div class="max-w-6xl mx-auto w-full px-4 pt-3 pb-1">
     <nav class="grid grid-cols-2 sm:grid-cols-4 gap-1.5 p-1 bg-slate-200/80 rounded-xl border border-slate-300 shadow-inner">
       <button id="tabNavSeason" onclick="switchMainTab('season')" class="py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1 text-slate-600 hover:text-slate-900">
-        <span>🏆</span> シーズン24常設
+        <span>🏆</span> シーズン常設
       </button>
       <button id="tabNavSchedule" onclick="switchMainTab('schedule')" class="py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1 bg-white text-sky-700 shadow-sm">
         <span>📅</span> イベント & 日程
@@ -105,154 +103,87 @@
     </nav>
   </div>
 
-  <!-- メインコンテンツ領域 -->
   <main class="max-w-6xl mx-auto w-full px-4 py-3 flex-1 pb-16">
 
-    <!-- ============================================================== -->
-    <!-- タブ 0 (一番左): 🏆 シーズン24「黄昏の旅路」常設ボーナス・タマゴ・野生・GBL詳細 -->
-    <!-- ============================================================== -->
+    <!-- シーズン常設タブ -->
     <div id="tabContentSeason" class="space-y-4 hidden">
       <div class="bg-white border-2 border-orange-200 rounded-xl p-4 shadow-sm space-y-4">
         <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-3">
           <div>
-            <span class="text-[11px] bg-orange-100 text-orange-800 border border-orange-300 font-bold px-2.5 py-0.5 rounded-full">シーズン24 常設データ (ポケマピ・9DB・GameWith・公式 準拠)</span>
-            <h2 class="text-lg sm:text-xl font-black text-slate-900 mt-1">🏆 シーズン24「黄昏の旅路 (Memories in Motion)」完全ガイド</h2>
-            <p class="text-xs text-slate-500 mt-0.5">開催期間: 2026年9月8日(火) 10:00 〜 2026年12月1日(火) 10:00</p>
+            <span class="text-[11px] bg-orange-100 text-orange-800 border border-orange-300 font-bold px-2.5 py-0.5 rounded-full">シーズン常設データ (4サイト統合)</span>
+            <h2 id="seasonTitleHeading" class="text-lg sm:text-xl font-black text-slate-900 mt-1">🏆 シーズン完全ガイド</h2>
+            <p id="seasonPeriodText" class="text-xs text-slate-500 mt-0.5">開催期間: 2026年9月8日(火) 〜 2026年12月1日(火)</p>
           </div>
         </div>
 
-        <!-- ① シーズン常設ボーナス & 週間定例イベント仕様 -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
           <div class="bg-emerald-50/60 border border-emerald-200 rounded-xl p-3.5 space-y-1.5">
-            <h3 class="text-xs sm:text-sm font-extrabold text-emerald-800 flex items-center gap-1.5">🎁 シーズン期間中の常設ボーナス（全トレーナー共通）</h3>
-            <ul class="text-xs text-slate-700 space-y-1.5 list-disc list-inside leading-relaxed">
-              <li><strong>特別な交換の上限増加：</strong>1日に行える「特別な交換」が <strong>+1回増加（毎日最大2回まで）</strong></li>
-              <li><strong>交換時のほしのすな軽減：</strong>ポケモン交換時に必要なほしのすなが常時割引</li>
-              <li><strong>フレンドとのレイド火力増加：</strong>フレンドと一緒にレイドバトルに参加した際のダメージボーナスがアップ</li>
-              <li><strong>交換時のアメボーナス（GOパスRank1達成後）：</strong>交換時のアメ+1個 ＆ TL31以上は「アメXL」が1個確定ドロップ</li>
-              <li><strong>ポケストップ7日目連続スピン：</strong>連続7日目のスピンで獲得できるXPが大幅増加＆進化アイテム確定</li>
-            </ul>
+            <h3 class="text-xs sm:text-sm font-extrabold text-emerald-800 flex items-center gap-1.5">🎁 シーズン常設ボーナス</h3>
+            <ul id="seasonBonusesList" class="text-xs text-slate-700 space-y-1.5 list-disc list-inside leading-relaxed"></ul>
           </div>
           <div class="bg-sky-50/60 border border-sky-200 rounded-xl p-3.5 space-y-1.5">
-            <h3 class="text-xs sm:text-sm font-extrabold text-sky-800 flex items-center gap-1.5">⏰ 今シーズンの週間定例イベント・大発見仕様</h3>
-            <ul class="text-xs text-slate-700 space-y-1.5 list-disc list-inside leading-relaxed">
-              <li><strong>毎週月曜 6:00〜21:00【マックスマンデー】：</strong>従来の1時間限定から<strong>「月曜終日開催(6:00〜21:00)」</strong>へ大幅拡大！週間ピックアップのダイマックスポケモンがパワースポットに大量出現します。</li>
-              <li><strong>毎週水曜 18:00〜19:00【レイドアワー】：</strong>現在開催中の★5伝説レイドボスが全国のジムに1時間一斉出現します（11/9月・11/10火はワイルドウィーク特別枠で開催）。</li>
-              <li><strong>毎週木曜 18:00〜19:00【デイリーディスカバリー】：</strong>週替わりのスポットライト対象ポケモン大量発生＆特別ボーナス（※11/9〜15のワイルドウィーク週は休止）。</li>
-              <li><strong>フィールドリサーチ7日目【大発見リワード】：</strong>「ふしぎなアメXL」確定チャンスに加え、ガラルバリヤード、ヌメラ、ジャラコ、セビエ、モルペコ、アローラガラガラ等からランダム遭遇。</li>
-            </ul>
+            <h3 class="text-xs sm:text-sm font-extrabold text-sky-800 flex items-center gap-1.5">⏰ 週間定例イベント・大発見仕様</h3>
+            <ul id="seasonRoutinesList" class="text-xs text-slate-700 space-y-1.5 list-disc list-inside leading-relaxed"></ul>
           </div>
         </div>
 
-        <!-- ② タマゴ孵化ラインナップ詳細 -->
         <div class="bg-white border border-slate-200 rounded-xl p-3.5 space-y-2.5">
-          <div class="flex flex-wrap items-center justify-between gap-2">
-            <h3 class="text-xs sm:text-sm font-extrabold text-amber-800 flex items-center gap-1.5">🥚 シーズン24 タマゴ孵化ラインナップ（通常タマゴ ＆ 週間いつでも冒険モード報酬）</h3>
-            <span class="text-[11px] text-slate-500">※イベント開催中はイベント限定タマゴが優先されます</span>
-          </div>
+          <h3 class="text-xs sm:text-sm font-extrabold text-amber-800">🥚 タマゴ孵化ラインナップ</h3>
           <div id="seasonEggGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 text-xs"></div>
         </div>
 
-        <!-- ③ バイオーム別・野生の常設出現ポケモン -->
         <div class="bg-white border border-slate-200 rounded-xl p-3.5 space-y-2.5">
-          <h3 class="text-xs sm:text-sm font-extrabold text-teal-800 flex items-center gap-1.5">🌿 バイオーム（生息地）＆ 半球別・野生の常設出現ポケモン</h3>
+          <h3 class="text-xs sm:text-sm font-extrabold text-teal-800">🌿 バイオーム（生息地）別 出現ポケモン</h3>
           <div id="seasonBiomeGrid" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs"></div>
-        </div>
-
-        <!-- ④ GOバトルリーグ (GBL) シーズン24 詳細 -->
-        <div class="bg-orange-50/50 border border-orange-200 rounded-xl p-3.5 space-y-2.5">
-          <div class="flex flex-wrap items-center justify-between gap-2">
-            <h3 class="text-xs sm:text-sm font-extrabold text-orange-800 flex items-center gap-1.5">🥊 GOバトルリーグ：黄昏の旅路（2026/9/9 5:00 〜 12/2 6:00）</h3>
-            <span class="text-[11px] bg-orange-100 text-orange-800 px-2 py-0.5 rounded font-bold border border-orange-300">ML開催週は勝利時ほしのすな4倍</span>
-          </div>
-          <p class="text-xs text-slate-700 leading-relaxed">
-            ランク19到達時に<strong>「すごいわざマシンスペシャル×1」</strong>が即付与され、シーズン終了時にもランク19以上のトレーナーへ<strong>「すごいわざマシンノーマル×1」</strong>が配布されます。また、ランク20到達以降は3勝リワードのポケモン遭遇枠に「その時点で出現している★5伝説レイドボス」が追加されます。
-          </p>
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs pt-1">
-            <div class="bg-white p-2.5 rounded-lg border border-orange-200">
-              <div class="font-bold text-orange-800">🔵 スーパーリーグ (CP1500以下)</div>
-              <p class="text-[11px] text-slate-600 mt-1"><strong>環境上位：</strong>ドオー、オーダイル(シャドウ可)、マンドリバル、トリトドン、マリルリ、アローラサンドパン、ワタッコ</p>
-            </div>
-            <div class="bg-white p-2.5 rounded-lg border border-orange-200">
-              <div class="font-bold text-orange-800">🟡 ハイパーリーグ (CP2500以下)</div>
-              <p class="text-[11px] text-slate-600 mt-1"><strong>環境上位：</strong>ジガルデ(パーフェクト)、ギラティナ(アナザー)、クレセリア、オーダイル、ラウドボーン、コバルオン、ビリジオン</p>
-            </div>
-            <div class="bg-white p-2.5 rounded-lg border border-orange-200">
-              <div class="font-bold text-orange-800">🟣 マスターリーグ (CP無制限)</div>
-              <p class="text-[11px] text-slate-600 mt-1"><strong>環境上位：</strong>ザシアン(けんのおう)、ブラック/ホワイトキュレム、ネクロズマ(たそがれ/あかつき)、ディアルガ(オリジン)、パルキア(オリジン)、ランドロス(霊獣)</p>
-            </div>
-          </div>
         </div>
       </div>
     </div>
 
-    <!-- ============================================================== -->
-    <!-- タブ 1: イベント ＆ ガントチャート (3ヶ月対応) -->
-    <!-- ============================================================== -->
+    <!-- イベント & 日程タブ -->
     <div id="tabContentSchedule" class="space-y-4">
-
-      <!-- トップ通知エリア -->
       <section class="grid grid-cols-1 md:grid-cols-2 gap-3">
-        <!-- 🚨 本日開催中・終了間近 -->
         <div class="bg-white border border-rose-200 rounded-xl p-3.5 shadow-sm">
           <div class="flex items-center justify-between mb-2">
             <h2 class="text-sm font-extrabold text-rose-600 flex items-center gap-1.5">
               <span>🚨</span> 本日開催中・注目のイベント (<span id="todayHeaderDateLabel">読込中</span>)
             </h2>
-            <span class="text-[10px] bg-rose-50 text-rose-600 px-2 py-0.5 rounded-full font-bold border border-rose-200">タップでイベント詳細欄へ</span>
           </div>
           <ul id="todayEventsList" class="text-xs space-y-2 text-slate-700"></ul>
         </div>
 
-        <!-- 📢 直近の公式発表・最新ニュース速報 -->
         <div class="bg-white border border-sky-200 rounded-xl p-3.5 shadow-sm flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between mb-2">
               <h2 class="text-sm font-extrabold text-sky-700 flex items-center gap-1.5">
-                <span>📢</span> 4サイト統合・最新ニュース速報 (直近発表)
+                <span>📢</span> 4サイト統合・最新ニュース速報 & 更新情報
               </h2>
-              <button onclick="resetReadNews()" class="text-[10px] text-slate-500 hover:text-sky-600 underline">
-                既読リセット
-              </button>
+              <button onclick="resetReadNews()" class="text-[10px] text-slate-500 hover:text-sky-600 underline">既読リセット</button>
             </div>
             <div id="newsItemsContainer" class="space-y-1.5 text-xs max-h-56 overflow-y-auto pr-1"></div>
-          </div>
-          <div class="text-[10px] text-slate-400 mt-2 text-right">
-            タイトルタップで該当イベント詳細欄へスクロール / 「✓」で既読非表示
           </div>
         </div>
       </section>
 
-      <!-- 3ヶ月ガントチャート カレンダー -->
       <section class="bg-white border border-slate-200 rounded-xl p-3.5 shadow-sm">
         <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
           <div class="flex items-center gap-2">
             <h2 class="text-sm font-extrabold text-slate-900 flex items-center gap-1.5">
-              <span>📊</span> イベントスケジュール (ガントチャート・タイムライン)
+              <span>📊</span> イベントスケジュール (ガントチャート)
             </h2>
-            <span class="text-[11px] text-slate-500 hidden sm:inline">| 横スクロール時も文字とアイコンが左端に追従します</span>
           </div>
-
-          <!-- 月切り替えボタン [10月] [11月] [12月] -->
-          <div class="flex items-center gap-1 bg-slate-100 p-1 rounded-lg border border-slate-200">
-            <button onclick="changeGanttMonth(10)" id="monthBtn10" class="text-xs px-3 py-1 rounded-md font-bold transition bg-sky-600 text-white shadow-sm">10月</button>
-            <button onclick="changeGanttMonth(11)" id="monthBtn11" class="text-xs px-3 py-1 rounded-md font-bold transition text-slate-600 hover:text-slate-900">11月</button>
-            <button onclick="changeGanttMonth(12)" id="monthBtn12" class="text-xs px-3 py-1 rounded-md font-bold transition text-slate-600 hover:text-slate-900">12月</button>
-          </div>
+          <div id="ganttMonthButtons" class="flex items-center gap-1 bg-slate-100 p-1 rounded-lg border border-slate-200"></div>
         </div>
 
-        <!-- カテゴリ絞り込みフィルターバー (コミュニティ・デイ追加) -->
         <div class="flex flex-wrap items-center gap-1.5 pb-2.5 pt-1 border-b border-slate-100">
           <span class="text-[11px] text-slate-500 font-bold mr-1">絞り込み:</span>
           <button onclick="filterTimelineCategory('all')" id="catBtn-all" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-sky-600 text-white shadow-sm">すべて</button>
-          <button onclick="filterTimelineCategory('main')" id="catBtn-main" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-100 text-slate-600 hover:bg-slate-200">🎪 メイン・季節イベント</button>
-          <button onclick="filterTimelineCategory('cd')" id="catBtn-cd" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-100 text-slate-600 hover:bg-slate-200">🌱 コミュニティ・デイ</button>
-          <button onclick="filterTimelineCategory('raid')" id="catBtn-raid" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-100 text-slate-600 hover:bg-slate-200">⚔️ レイドバトル</button>
-          <button onclick="filterTimelineCategory('dmax')" id="catBtn-dmax" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-100 text-slate-600 hover:bg-slate-200">⚡ マックスバトル</button>
-          <button onclick="filterTimelineCategory('collab')" id="catBtn-collab" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-100 text-slate-600 hover:bg-slate-200">🤝 大型・コラボ・パス</button>
+          <button onclick="filterTimelineCategory('main')" id="catBtn-main" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-100 text-slate-600 hover:bg-slate-200">🎪 メイン・季節</button>
+          <button onclick="filterTimelineCategory('cd')" id="catBtn-cd" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-100 text-slate-600 hover:bg-slate-200">🌱 コミュデイ</button>
+          <button onclick="filterTimelineCategory('raid')" id="catBtn-raid" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-100 text-slate-600 hover:bg-slate-200">⚔️ レイド</button>
+          <button onclick="filterTimelineCategory('dmax')" id="catBtn-dmax" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-100 text-slate-600 hover:bg-slate-200">⚡ マックス</button>
+          <button onclick="filterTimelineCategory('collab')" id="catBtn-collab" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-100 text-slate-600 hover:bg-slate-200">🤝 コラボ・パス</button>
         </div>
 
-        <!-- 横スクロールコンテナ -->
         <div class="relative overflow-x-auto rounded-lg border border-slate-200 bg-white pb-2 mt-2" id="ganttScrollWrapper">
           <div id="ganttTimelineTable" class="min-w-[960px] select-none">
             <div id="ganttHeaderRow" class="grid sticky top-0 z-20 bg-slate-50 border-b border-slate-200 text-center text-xs font-bold text-slate-600"></div>
@@ -261,330 +192,124 @@
             </div>
           </div>
         </div>
-
-        <!-- 凡例 -->
-        <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-slate-500 mt-2 px-1">
-          <span class="flex items-center gap-1"><span class="w-3 h-2 rounded bg-sky-100 border border-sky-400"></span> メイン・季節イベント</span>
-          <span class="flex items-center gap-1"><span class="w-3 h-2 rounded bg-amber-100 border border-amber-400"></span> コミュニティ・デイ</span>
-          <span class="flex items-center gap-1"><span class="w-3 h-2 rounded bg-emerald-100 border border-emerald-400"></span> 伝説・メガ・スーパーメガレイド</span>
-          <span class="flex items-center gap-1"><span class="w-3 h-2 rounded bg-rose-100 border border-rose-400"></span> ★5シャドウ (連日常設)</span>
-          <span class="flex items-center gap-1"><span class="w-3 h-2 rounded bg-purple-100 border border-purple-400"></span> マックスバトル・マンデー</span>
-          <span class="flex items-center gap-1"><span class="w-3 h-2 rounded bg-teal-100 border border-teal-400"></span> ワイルドエリア・コラボ・GOパス</span>
-        </div>
       </section>
 
-      <!-- イベント詳細アコーディオン一覧 -->
       <section class="space-y-3">
-        <div class="flex flex-wrap items-center justify-between gap-2 px-1">
-          <h2 class="text-sm font-extrabold text-slate-800 flex items-center gap-1.5">
-            <span>📌</span> イベント詳細・無料/有料区分・出現ポケモン・限定タスク一覧
-          </h2>
-          <div class="flex items-center gap-2 text-[11px]">
-            <span class="bg-emerald-50 text-emerald-700 border border-emerald-300 px-2 py-0.5 rounded font-bold">🟢 無料 (全員共通)</span>
-            <span class="bg-amber-50 text-amber-800 border border-amber-300 px-2 py-0.5 rounded font-bold">💎 有料チケット・課金</span>
-          </div>
-        </div>
+        <h2 class="text-sm font-extrabold text-slate-800 flex items-center gap-1.5 px-1">
+          <span>📌</span> イベント詳細・出現ポケモン・限定リサーチ一覧
+        </h2>
         <div id="eventsAccordionContainer" class="space-y-2.5"></div>
-
-        <!-- 過去の終了イベント アーカイブ -->
-        <details class="bg-white border border-slate-200 rounded-xl overflow-hidden mt-4 shadow-sm group">
-          <summary class="p-3 text-xs font-bold text-slate-600 cursor-pointer hover:bg-slate-50 flex items-center justify-between">
-            <span class="flex items-center gap-1.5">📂 アーカイブ（2026年10月 終了済みのイベント履歴）</span>
-            <span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded text-slate-500 group-open:rotate-180 transition-transform">▼</span>
-          </summary>
-          <div id="archivedEventsList" class="p-3 pt-0 text-xs text-slate-600 border-t border-slate-100 space-y-2 mt-2"></div>
-        </details>
       </section>
-
     </div>
 
-    <!-- ============================================================== -->
-    <!-- タブ 2: レイド & ダイマックス対策 -->
-    <!-- ============================================================== -->
+    <!-- レイド & DMaxタブ -->
     <div id="tabContentBattles" class="space-y-4 hidden">
-
       <div class="flex gap-2 p-1 bg-slate-200/80 rounded-xl border border-slate-300">
         <button id="subTabRaids" onclick="switchBattleSub('raids')" class="flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition bg-white text-emerald-700 shadow-sm">
-          ⚔️ ★5伝説・スーパーメガ・メガ・シャドウレイド
+          ⚔️ レイドボス対策 (DPS/TDO)
         </button>
         <button id="subTabDmax" onclick="switchBattleSub('dmax')" class="flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition text-slate-600 hover:text-slate-900">
-          💥 ダイマックス＆キョダイマックス攻略 (TOP 5)
+          💥 ダイマックス攻略 (TOP 5)
         </button>
       </div>
 
-      <!-- 2-A: 通常・メガ・シャドウレイド -->
       <div id="secBattleRaids" class="space-y-4">
         <div>
-          <div class="text-xs font-bold text-emerald-700 mb-2 flex items-center justify-between">
-            <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> 🔴 現在出現中レイド（今すぐ挑戦可能）:</span>
-            <span class="text-[11px] text-slate-500">タップで詳細対策切り替え</span>
-          </div>
+          <div class="text-xs font-bold text-emerald-700 mb-2">🔴 現在出現中レイド:</div>
           <div id="raidBossPickerCurrent" class="grid grid-cols-1 sm:grid-cols-3 gap-2"></div>
         </div>
-
         <div>
-          <div class="text-xs font-bold text-purple-700 mb-2 flex items-center gap-1.5">
-            <span>🔮 次回予告・今後の注目レイド (10/28〜 / 10/31限定 / 11月):</span>
-          </div>
+          <div class="text-xs font-bold text-purple-700 mb-2">🔮 今後の注目レイド:</div>
           <div id="raidBossPickerFuture" class="grid grid-cols-2 sm:grid-cols-4 gap-2"></div>
         </div>
-
-        <!-- ボス概要 (弱点削除・タイプ表示化) -->
         <div id="raidBossOverview" class="bg-white border border-slate-200 rounded-xl p-4 shadow-sm"></div>
-
-        <!-- ✨ おすすめメガシンカ枠 (火力重視 vs アメXL重視 の2軸・独立セクション) -->
         <div id="raidMegaRecommendBox" class="bg-gradient-to-r from-purple-50 via-white to-amber-50 border border-purple-200 rounded-xl p-4 shadow-sm"></div>
-
-        <!-- 対策ランキング（DPS順 ⇔ TDO順 切替 / 初期はメガシャンデラ含め通常ポケモンのみ） -->
+        
         <div class="bg-white border border-slate-200 rounded-xl p-4 shadow-sm">
           <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-3 mb-3 pb-3 border-b border-slate-100">
-            <div>
-              <h3 class="text-sm font-black text-slate-900" id="raidRankingTitle">対策DPSランキング TOP 10 (通常ポケモン限定)</h3>
-              <p class="text-[11px] text-slate-500">技表記統一: <span class="bg-slate-200 text-slate-700 px-1 rounded font-bold">通常</span>＝通常技 / <span class="bg-sky-100 text-sky-800 px-1 rounded font-bold">SP</span>＝スペシャルアタック (*は特別技)</p>
-            </div>
-
-            <div class="flex flex-wrap items-center gap-2">
+            <h3 class="text-sm font-black text-slate-900" id="raidRankingTitle">対策DPSランキング TOP 10</h3>
+            <div class="flex items-center gap-2">
               <div class="flex items-center bg-slate-100 p-1 rounded-lg border border-slate-200">
-                <button id="btnSortDps" onclick="setRaidSortMode('dps')" class="text-xs font-extrabold px-2.5 py-1 rounded-md transition bg-sky-600 text-white shadow-sm flex items-center gap-1">
-                  ⚡ DPS順 <span class="text-[10px] font-normal hidden sm:inline">(討伐速度)</span>
-                </button>
-                <button id="btnSortTdo" onclick="setRaidSortMode('tdo')" class="text-xs font-bold px-2.5 py-1 rounded-md transition text-slate-600 hover:text-slate-900 flex items-center gap-1">
-                  🛡️ TDO順 <span class="text-[10px] font-normal hidden sm:inline">(総ダメ・耐久)</span>
-                </button>
+                <button id="btnSortDps" onclick="setRaidSortMode('dps')" class="text-xs font-extrabold px-2.5 py-1 rounded-md transition bg-sky-600 text-white shadow-sm">⚡ DPS順</button>
+                <button id="btnSortTdo" onclick="setRaidSortMode('tdo')" class="text-xs font-bold px-2.5 py-1 rounded-md transition text-slate-600 hover:text-slate-900">🛡️ TDO順</button>
               </div>
-
-              <button id="btnToggleMega" onclick="toggleRaidFilter('mega')" class="text-xs font-bold px-2.5 py-1.5 rounded-lg border transition bg-slate-100 text-slate-600 border-slate-200 hover:bg-slate-200">
-                ✨ メガ含 (OFF)
-              </button>
-              <button id="btnToggleShadow" onclick="toggleRaidFilter('shadow')" class="text-xs font-bold px-2.5 py-1.5 rounded-lg border transition bg-slate-100 text-slate-600 border-slate-200 hover:bg-slate-200">
-                🔥 シャドウ含 (OFF)
-              </button>
+              <button id="btnToggleMega" onclick="toggleRaidFilter('mega')" class="text-xs font-bold px-2.5 py-1.5 rounded-lg border transition bg-slate-100 text-slate-600 border-slate-200">✨ メガ含 (OFF)</button>
+              <button id="btnToggleShadow" onclick="toggleRaidFilter('shadow')" class="text-xs font-bold px-2.5 py-1.5 rounded-lg border transition bg-slate-100 text-slate-600 border-slate-200">🔥 シャドウ含 (OFF)</button>
             </div>
           </div>
           <div id="raidRankingList" class="space-y-2"></div>
         </div>
       </div>
 
-      <!-- 2-B: ダイマックス攻略 (TOP 5 & ディアルガ/パルキア分割) -->
       <div id="secBattleDmax" class="space-y-4 hidden">
         <div>
-          <div class="text-xs font-bold text-purple-700 mb-2 flex items-center justify-between">
-            <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></span> 🔴 現在出現中マックスバトル（今すぐ挑戦可能）:</span>
-            <span class="text-[11px] text-slate-500">タップで詳細対策切り替え</span>
-          </div>
+          <div class="text-xs font-bold text-purple-700 mb-2">🔴 現在出現中マックスバトル:</div>
           <div id="dmaxBossPickerCurrent" class="grid grid-cols-1 sm:grid-cols-3 gap-2"></div>
         </div>
-
         <div>
-          <div class="text-xs font-bold text-purple-900 mb-2 flex items-center gap-1.5">
-            <span>🔮 次回予告・今後のマックスバトル (11/2〜ワンリキー / 11/14ディアルガ / 11/15パルキア):</span>
-          </div>
+          <div class="text-xs font-bold text-purple-900 mb-2">🔮 今後のマックスバトル:</div>
           <div id="dmaxBossPickerFuture" class="grid grid-cols-2 sm:grid-cols-4 gap-2"></div>
         </div>
-
         <div id="dmax9dbContainer"></div>
       </div>
-
     </div>
 
-    <!-- ============================================================== -->
-    <!-- タブ 3: 🎫 GOパス情報 (全100ランク 1ランク刻み完全収録) -->
-    <!-- ============================================================== -->
+    <!-- GOパス情報タブ -->
     <div id="tabContentGoPass" class="space-y-4 hidden">
-
-      <div class="flex gap-2 p-1 bg-slate-200/80 rounded-xl border border-slate-300">
-        <button id="goPassSubCurrent" onclick="switchGoPassSub('current')" class="flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition bg-white text-amber-700 shadow-sm">
-          🎃 10月開催のGOパス (10月度:全100ランク表 & ハロウィン2026)
-        </button>
-        <button id="goPassSubFuture" onclick="switchGoPassSub('future')" class="flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition text-slate-600 hover:text-slate-900">
-          🔮 11月予定のGOパス (11月度:全100ランク表 & ワイルドウィーク:銀の王冠)
-        </button>
-      </div>
-
-      <!-- 3-A: 10月開催中 & 直近開始 -->
-      <div id="secGoPassCurrent" class="space-y-4">
-        <div class="bg-white border-2 border-orange-300 rounded-xl p-4 shadow-sm space-y-3">
-          <div class="flex flex-wrap items-center justify-between gap-2">
-            <div class="flex items-center gap-2">
-              <span class="text-2xl">👻</span>
-              <div>
-                <div class="flex items-center gap-2">
-                  <span class="text-[10px] bg-orange-600 text-white font-bold px-2 py-0.5 rounded">イベント連動パス</span>
-                  <span class="text-[11px] text-orange-700 font-bold">受取期限: 11/7(土) 20:00まで</span>
-                </div>
-                <h2 class="text-base sm:text-lg font-black text-slate-900 mt-0.5">GOパス：ハロウィン2026 (パート1＆パート2共通)</h2>
-                <div class="text-[11px] text-slate-600 font-medium">挑戦期間: 2026年10月27日(火) 10:00 〜 11月5日(木) 20:00</div>
-              </div>
-            </div>
-            <span class="text-xs bg-amber-100 text-amber-900 font-bold px-2.5 py-1 rounded-full border border-amber-300">
-              🟢 無料版あり / 💎 デラックス: 1,120円 (+10ランク: 1,400円)
-            </span>
-          </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs">
-            <div class="bg-emerald-50/70 p-3 rounded-lg border border-emerald-200 space-y-1">
-              <div class="font-extrabold text-emerald-800">🟢 【無料パス（全トレーナー共通）】でできること</div>
-              <ul class="text-[11px] text-slate-700 space-y-1 list-disc list-inside">
-                <li><strong>ランク10到達：</strong>期間中のポケモン捕獲時のアメが <strong>2倍</strong></li>
-                <li><strong>ランク20到達：</strong>期間中のポケモン捕獲時のほしのすなが <strong>2倍</strong></li>
-                <li><strong>ランク報酬：</strong>ハロウィンイベントポケモン遭遇、アメ、ふしぎなアメ、ボール等</li>
-              </ul>
-            </div>
-            <div class="bg-amber-50/70 p-3 rounded-lg border border-amber-300 space-y-1">
-              <div class="font-extrabold text-amber-900">💎 【有料デラックス版（1,120円）】の課金追加メリット</div>
-              <ul class="text-[11px] text-slate-700 space-y-1 list-disc list-inside">
-                <li><strong>ランク10 / 20到達：</strong>捕獲時のアメ＆ほしのすなが 2倍 → <strong>3倍に強化！</strong></li>
-                <li><strong>限定アバター：</strong>新作「パティシエ トップス」「パティシエ パンツ」</li>
-                <li><strong>追加報酬：</strong>ふしぎなアメXL、プレミアムバトルパス、イベントポケモン追加遭遇</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-white border border-purple-200 rounded-xl p-4 shadow-sm space-y-3">
-          <div class="flex flex-wrap items-center justify-between gap-2">
-            <div class="flex items-center gap-2">
-              <span class="text-2xl">🌊</span>
-              <div>
-                <div class="flex items-center gap-2">
-                  <span class="text-[10px] bg-purple-600 text-white font-bold px-2 py-0.5 rounded">月間GOパス (現在開催中)</span>
-                  <span class="text-[11px] text-rose-600 font-bold">🔥 10/31(土)〜11/1(日)は1日のPT上限(250pt)が完全撤廃！</span>
-                </div>
-                <h2 class="text-base sm:text-lg font-black text-purple-900 mt-0.5">GOパス：2026年10月 (ランク1〜100 全報酬一覧)</h2>
-                <div class="text-[11px] text-purple-600 font-medium">挑戦期間: 2026年10月6日(火) 10:00 〜 11月3日(火・祝) 10:00</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="border border-slate-200 rounded-xl overflow-hidden">
-            <div class="p-3 bg-slate-50 border-b border-slate-200 flex flex-wrap items-center justify-between gap-2">
-              <h3 class="text-xs sm:text-sm font-extrabold text-slate-900">📋 GOパス：10月 ランク1 〜 100 完全報酬表 (1ランク刻み)</h3>
-              <div class="flex flex-wrap items-center gap-2">
-                <button onclick="filterGoPassRows('oct', 'all')" id="btnPassOctAll" class="text-[11px] px-2.5 py-1 rounded font-bold bg-sky-600 text-white">全100ランク表示</button>
-                <button onclick="filterGoPassRows('oct', 'milestone')" id="btnPassOctMilestone" class="text-[11px] px-2.5 py-1 rounded font-bold bg-white border border-slate-300 text-slate-600">⭐ 注目・節目のみ</button>
-                <button onclick="togglePassTable('oct')" id="passTableToggleBtnOct" class="text-[11px] px-2.5 py-1 rounded font-bold bg-slate-200 text-slate-700">▲ 折りたたむ</button>
-              </div>
-            </div>
-            <div id="passTableContainerOct" class="max-h-[480px] overflow-y-auto">
-              <table class="w-full text-xs text-left">
-                <thead class="bg-slate-100 text-slate-600 sticky top-0 z-10 border-b border-slate-200 shadow-sm">
-                  <tr>
-                    <th class="p-2 w-16 text-center">ランク</th>
-                    <th class="p-2 text-emerald-800">🟢 無料パス リワード</th>
-                    <th class="p-2 text-amber-800">💎 デラックス版 追加リワード (有料)</th>
-                  </tr>
-                </thead>
-                <tbody id="goPassTbodyOct" class="divide-y divide-slate-100 text-slate-700"></tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 3-B: 11月予定のGOパス -->
-      <div id="secGoPassFuture" class="space-y-4 hidden">
-        <div class="bg-white border-2 border-purple-300 rounded-xl p-4 shadow-sm space-y-3">
-          <div class="flex flex-wrap items-center justify-between border-b border-slate-100 pb-2 gap-2">
-            <div>
-              <span class="text-xs bg-purple-600 text-white font-bold px-2 py-0.5 rounded">ワイルドウィーク＆ワイルドエリア連動</span>
-              <h3 class="text-base font-black text-slate-900 mt-1">GOパス：ワイルドウィーク (11/9 10:00 〜 11/15 18:00)</h3>
-            </div>
-            <span class="text-xs bg-amber-100 text-amber-900 border border-amber-300 px-2.5 py-1 rounded-full font-bold">🟢 無料：DMaxメルタン / 💎 DX(2,100円)：ぎんのおうかん</span>
-          </div>
-          <p class="text-xs text-slate-700">無料版で<strong>ダイマックスメルタン</strong>＆ワイルドエリアTシャツ、有料デラックス版で個体値を1つ最大まで引き上げる<strong>「👑 ぎんのおうかん×1（期限11/22 23:59）」</strong>を獲得できます。</p>
-        </div>
-
-        <div class="bg-white border border-teal-200 rounded-xl p-4 shadow-sm space-y-3">
-          <div class="flex flex-wrap items-center justify-between gap-2">
-            <h3 class="text-base font-black text-slate-900">📋 GOパス：11月 (11/3〜12/1 / グラードン＆ポケコイン 全100ランク表)</h3>
-            <div class="flex flex-wrap items-center gap-2">
-              <button onclick="filterGoPassRows('nov', 'all')" id="btnPassNovAll" class="text-[11px] px-2.5 py-1 rounded font-bold bg-teal-600 text-white">全100ランク表示</button>
-              <button onclick="filterGoPassRows('nov', 'milestone')" id="btnPassNovMilestone" class="text-[11px] px-2.5 py-1 rounded font-bold bg-white border border-slate-300 text-slate-600">⭐ 注目・節目のみ</button>
-              <button onclick="togglePassTable('nov')" id="passTableToggleBtnNov" class="text-[11px] px-2.5 py-1 rounded font-bold bg-slate-200 text-slate-700">▲ 折りたたむ</button>
-            </div>
-          </div>
-          <div id="passTableContainerNov" class="max-h-[480px] overflow-y-auto border border-slate-200 rounded-xl">
-            <table class="w-full text-xs text-left">
-              <thead class="bg-slate-100 text-slate-600 sticky top-0 z-10 border-b border-slate-200 shadow-sm">
-                <tr>
-                  <th class="p-2 w-16 text-center">ランク</th>
-                  <th class="p-2 text-emerald-800">🟢 無料パス リワード</th>
-                  <th class="p-2 text-amber-800">💎 デラックス版 追加リワード (有料)</th>
-                </tr>
-              </thead>
-              <tbody id="goPassTbodyNov" class="divide-y divide-slate-100 text-slate-700"></tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
+      <div id="goPassContainer" class="space-y-4"></div>
     </div>
 
   </main>
 
   <script>
-    // ============================================================================
-    // ポケモン名＆図鑑番号から特殊フォルム・リージョン・メガ・キョダイマックス画像を自動解決
-    // ============================================================================
+    let MASTER_DATA = {};
+    let currentMainTab = "schedule";
+    let currentBattleSub = "raids";
+    let currentGanttMonth = nowMonth();
+    let currentCategoryFilter = "all";
+    let hiddenEventIds = new Set();
+    let readNewsIds = new Set();
+    let activeRaidKey = "";
+    let activeDmaxKey = "";
+    let filterMega = false;
+    let filterShadow = false;
+    let raidSortMode = "dps";
+    let navHistoryStack = [];
+
+    function nowMonth() { return new Date().getMonth() + 1; }
+    function nowDate() { return new Date().getDate(); }
+    function nowYear() { return new Date().getFullYear(); }
+
     function resolveSpecialFormId(dexOrFormId, pokeName) {
       const id = Number(dexOrFormId) || 25;
       if (id >= 10000) return id;
       if (!pokeName) return id;
       const n = String(pokeName);
       if (n.includes("キョダイ")) {
-        if (n.includes("フシギバナ") || id === 3) return 10195;
-        if (n.includes("リザードン") || id === 6) return 10196;
-        if (n.includes("カメックス") || id === 9) return 10197;
-        if (n.includes("カイリキー") || id === 68) return 10201;
-        if (n.includes("ゲンガー") || id === 94) return 10202;
-        if (n.includes("ラプラス") || id === 131) return 10204;
-        if (n.includes("カビゴン") || id === 143) return 10206;
-        if (n.includes("メルメタル") || id === 809) return 10208;
-        if (n.includes("ゴリランダー") || id === 812) return 10209;
-        if (n.includes("エースバーン") || id === 815) return 10210;
-        if (n.includes("インテレオン") || id === 818) return 10211;
-        if (n.includes("アーマーガア") || id === 823) return 10212;
-        if (n.includes("オーロンゲ") || id === 861) return 10222;
-        if (n.includes("ジュラルドン") || id === 884) return 10225;
-        if (n.includes("ウーラオス") || id === 892) return 10226;
+        if (n.includes("フシギバナ")) return 10195;
+        if (n.includes("リザードン")) return 10196;
+        if (n.includes("カメックス")) return 10197;
+        if (n.includes("ゲンガー")) return 10202;
+        if (n.includes("カイリキー")) return 10201;
+        if (n.includes("オーロンゲ")) return 10222;
+        if (n.includes("ジュラルドン")) return 10225;
       }
-      if ((n.includes("ザシアン") || id === 888) && (n.includes("けん") || n.includes("王"))) return 10188;
-      if ((n.includes("ザマゼンタ") || id === 889) && (n.includes("たて") || n.includes("王"))) return 10189;
-      if ((n.includes("ネクロズマ") || id === 800) && (n.includes("たそがれ") || n.includes("日食"))) return 10155;
-      if ((n.includes("ネクロズマ") || id === 800) && (n.includes("あかつき") || n.includes("月食"))) return 10156;
-      if (n.includes("ブラックキュレム") || (id === 646 && n.includes("ブラック"))) return 10022;
-      if (n.includes("ホワイトキュレム") || (id === 646 && n.includes("ホワイト"))) return 10023;
-      if ((n.includes("ディアルガ") || id === 483) && n.includes("オリジン")) return 10245;
-      if ((n.includes("パルキア") || id === 484) && n.includes("オリジン")) return 10246;
-      if ((n.includes("ギラティナ") || id === 487) && n.includes("オリジン")) return 10007;
-      if ((n.includes("ランドロス") || id === 645) && n.includes("れいじゅう")) return 10021;
-      if ((n.includes("ヒヒダルマ") || id === 555) && n.includes("ガラル")) return 10177;
-      if ((n.includes("ライチュウ") || id === 26) && n.includes("アローラ")) return 10100;
-      if ((n.includes("キュウコン") || id === 38) && n.includes("アローラ")) return 10104;
-      if (n.includes("メガ") || n.includes("ゲンシ")) {
-        if (n.includes("リザードンX")) return 10034;
-        if (n.includes("リザードン")) return 10035;
-        if (n.includes("ゲンガー")) return 10038;
-        if (n.includes("ギャラドス")) return 10041;
-        if (n.includes("バンギラス")) return 10049;
-        if (n.includes("サーナイト")) return 10051;
-        if (n.includes("ジュペッタ")) return 10056;
-        if (n.includes("ルカリオ")) return 10059;
-        if (n.includes("ユキノオー")) return 10060;
-        if (n.includes("ラグラージ")) return 10064;
-        if (n.includes("ヤミラミ")) return 10066;
-        if (n.includes("ディアンシー")) return 10075;
-        if (n.includes("メタグロス")) return 10076;
-        if (n.includes("カイオーガ")) return 10077;
-        if (n.includes("グラードン")) return 10078;
-        if (n.includes("レックウザ")) return 10079;
-      }
+      if (n.includes("ザシアン") && n.includes("けん")) return 10188;
+      if (n.includes("ザマゼンタ") && n.includes("たて")) return 10189;
+      if (n.includes("ギラティナ") && n.includes("オリジン")) return 10007;
+      if (n.includes("ディアルガ") && n.includes("オリジン")) return 10245;
+      if (n.includes("パルキア") && n.includes("オリジン")) return 10246;
+      if (n.includes("メガサーナイト")) return 10051;
+      if (n.includes("メガヤミラミ")) return 10066;
+      if (n.includes("メガリザードンY")) return 10035;
+      if (n.includes("メガバンギラス")) return 10049;
       return id;
     }
 
-    const getPokeImg = (dexOrFormId, pokeName = "") => {
-      const resolvedId = resolveSpecialFormId(dexOrFormId, pokeName);
-      return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${resolvedId}.png`;
-    };
+    function getPokeImg(dex, name = "") {
+      const resolved = resolveSpecialFormId(dex, name);
+      return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${resolved}.png`;
+    }
 
     const TYPE_COLOR_MAP = {
       "ノーマル": "bg-slate-500", "ほのお": "bg-red-600", "みず": "bg-blue-600", "くさ": "bg-emerald-600",
@@ -593,877 +318,79 @@
       "いわ": "bg-stone-600", "ゴースト": "bg-purple-700", "ドラゴン": "bg-indigo-700", "あく": "bg-stone-800",
       "はがね": "bg-slate-600", "フェアリー": "bg-pink-500"
     };
-    const renderTypeBadges = (types) => (types || []).map(t => `<span class="${TYPE_COLOR_MAP[t] || 'bg-slate-600'} text-white text-[11px] font-bold px-2.5 py-0.5 rounded shadow-sm">${t}</span>`).join(" ");
-
-    const now = new Date();
-    const todayYear = now.getFullYear();
-    const todayMonth = now.getMonth() + 1;
-    const todayDate = now.getDate();
-    const todayDow = ["日", "月", "火", "水", "木", "金", "土"][now.getDay()];
-
-    const SEASON_EGGS = [
-      { title: "🥚 2kmタマゴ", list: [{d:636,n:"メラルバ"},{d:938,n:"ズピカ"},{d:172,n:"ピチュー"},{d:175,n:"トゲピー"},{d:298,n:"ルリリ"},{d:406,n:"スボミー"}] },
-      { title: "🥚 5kmタマゴ", list: [{d:872,n:"ユキハミ"},{d:850,n:"ヤクデ"},{d:926,n:"パピモッチ"},{d:942,n:"オラチフ"},{d:876,n:"イエッサン"},{d:446,n:"ゴンベ"}] },
-      { title: "🥚 7kmタマゴ (ギフト)", list: [{d:52,n:"Gニャース"},{d:77,n:"Gポニータ"},{d:83,n:"Gカモネギ"},{d:222,n:"Gサニーゴ"},{d:554,n:"Gダルマッカ"},{d:618,n:"Gマッギョ"}] },
-      { title: "🥚 10kmタマゴ", list: [{d:935,n:"カルボウ"},{d:957,n:"カヌチャン"},{d:679,n:"ヒトツキ"},{d:996,n:"セビエ"},{d:859,n:"ベロバー"},{d:636,n:"メラルバ"}] },
-      { title: "🚶 週間歩行 5kmタマゴ", list: [{d:410,n:"タテトプス"},{d:408,n:"ズガイドス"},{d:433,n:"リーシャン"},{d:440,n:"ピンプク"},{d:848,n:"エレズン"}] },
-      { title: "🚶 週間歩行 10kmタマゴ", list: [{d:848,n:"エレズン"},{d:621,n:"クリムガン"},{d:780,n:"ジジーロン"},{d:443,n:"フカマル"},{d:633,n:"モノズ"},{d:704,n:"ヌメラ"}] }
-    ];
-    const SEASON_BIOMES = [
-      { title: "🏙️ 都市 (City)", desc: "ポリゴン、コイル、ヤブクロン、ニャース、パピモッチ、エレブー、ダンバル、ラルトス等" },
-      { title: "🌲 森林 (Forest)", desc: "モンジャラ、ボクレー、タマゲタケ、ストライク、カイロス、ミニーブ、マシェード、クルミル等" },
-      { title: "⛰️ 山・大地 (Mountain)", desc: "ヨーギラス、サイホーン、ディグダ、イシツブテ、ズガイドス、メレシー、フラエッテ、ココドラ等" },
-      { title: "🌊 水辺・北半球限定", desc: "ミニリュウ、ラプラス、ヒンバス、ウミディグダ / 北半球限定：ナエトル、ヒコザル、ポッチャマ、シキジカ(あき)等" }
-    ];
-
-    let NEWS_ITEMS = [
-      { id: "news-halloween-free-tc", date: "2026-10-25", date_label: "10/25", title: "【公式発表】ハロウィン2026パート1期間中、全トレーナーに「自動完了する無料タイムチャレンジ」配布決定！", details: "10/27(火)10:00〜11/1(日)10:00の期間中、全トレーナーに無料タイムチャレンジが自動完了状態で付与され、「ふしぎなアメ×6」と初登場の「ハットとケープをつけたピカチュウ」がプレゼントされます！", targetId: "ev-halloween-p1" },
-      { id: "news-sableye-dmax", date: "2026-10-25", date_label: "10/25", title: "10/26(月)朝6時〜「ダイマックスヤミラミ」が登場＆終日マックスマンデー開催！", details: "10/26(月)6:00〜21:00にマックスマンデーが開催！今週（10/26〜11/1）はパワースポットでダイマックスヤミラミの出現率がアップします。", targetId: "ev-dmax-sableye-week" },
-      { id: "news-chandelure-supermega", date: "2026-10-24", date_label: "10/24", title: "10/31(土)14時〜17時「シャンデラのスーパーメガレイド・デイ」開催！メガレベル4＆専用技『あやしいかぜ＋』解禁", details: "スーパーメガレイドに「メガシャンデラ」が初登場！パーティ内のメガシンカポケモン1匹につきボスのシールドを1枚破壊可能（※ゲンシカイキは破壊不可）。無料パス最大6枚配布。", targetId: "ev-supermega-chandelure" },
-      { id: "news-halloween-p1p2", date: "2026-10-23", date_label: "10/23", title: "ハロウィン2026パート1(10/27〜)＆パート2(11/1〜)詳細！新衣装3種・色違いボチ・メガヤミラミ『ナイトヘッド＋』", details: "パート1ではハット＆ケープピカチュウ、トップハットズバット、リボンヤバチャが初登場＆サプライズボックス出現。11/1からのパート2では「色違いのボチ」初実装＆メガヤミラミLv4解放！", targetId: "ev-halloween-p2" },
-      { id: "news-pawniard-cd", date: "2026-10-22", date_label: "10/22", title: "11月のコミュニティ・デイは「コマタナ」！11月21日(土)14:00〜17:00開催決定", details: "2026年11月のコミュニティ・デイ対象ポケモンが「コマタナ（キリキザン / ドドゲザン）」に決定！11/21(土)14時〜17時に開催されます。", targetId: "ev-cd-pawniard" },
-      { id: "news-nov-schedule", date: "2026-10-20", date_label: "10/20", title: "2026年11月スケジュール＆ワイルドウィーク発表！剣の王ザシアン・盾の王ザマゼンタ・合体キュレム・銀の王冠登場", details: "11/9〜13のワイルドウィークにザシアン(けんのおう)・ザマゼンタ(たてのおう)がエナジー付きで登場！さらに11/14〜15のワイルドエリアグローバルではホワイト/ブラックキュレム、キョダイジュラルドン(色違い)、DMaxディアルガ・パルキアが降臨！", targetId: "ev-wildarea-2026" }
-    ];
-
-    const ALL_EVENTS = [
-      {
-        id: "ev-dmax-sneasel", month: 10, title: "ダイマックスニューラ 出現率UP週間", barClass: "bar-dmax", category: "dmax", barIconDex: 215,
-        startDay: 19, endDay: 25, hasPaid: false, dateText: "10/19(月) 6:00 〜 10/25(日) 21:00 [終了]",
-        summary: "10月第4週のパワースポットピックアップとして『ダイマックスニューラ』が集中出現。",
-        freeFeatures: ["毎日の無料マックス粒子（最大800MP＋歩行分）で挑戦可能"], paidFeatures: [],
-        wilds: [], raids: [{ dex: 215, name: "ダイマックス ニューラ", shiny: true, note: "★1〜 パワースポット", targetKey: "dmax-sneasel", isDmax: true }],
-        fieldResearches: [], tasks: []
-      },
-      {
-        id: "ev-palkia-char", month: 10, title: "パルキア / メガリザードンX・Y レイド週間", barClass: "bar-raid", category: "raid", barIconDex: 484,
-        startDay: 21, endDay: 27, hasPaid: false, dateText: "10/21(水) 6:00 〜 10/27(火) 21:30頃 [現在出現中]",
-        summary: "★5伝説レイドに『パルキア』、メガレイドに『メガリザードンX』『メガリザードンY』が登場中！さらに★3にAライチュウ・Aキュウコン、★1にキバゴ・ヌメラ・ジャラコ・セビエが登場。",
-        freeFeatures: ["毎日ジムから無料レイドパス1枚獲得", "★5：パルキア / メガ：メガリザードンX・Y"],
-        paidFeatures: ["2戦目以降はプレミアムバトルパスまたはリモートレイドパスが必要"],
-        wilds: [],
-        raids: [
-          { dex: 484, name: "パルキア", shiny: true, note: "★5 伝説レイド (〜10/27)", targetKey: "palkia-normal", isDmax: false },
-          { dex: 10035, name: "メガリザードンY / X", shiny: true, note: "メガレイド (〜10/27)", targetKey: "mega-charizard-y", isDmax: false }
-        ],
-        fieldResearches: [], tasks: []
-      },
-      {
-        id: "ev-dmax-sableye-week", month: 10, title: "ダイマックスヤミラミ 登場 ＆ マックスマンデー", barClass: "bar-dmax", category: "dmax", barIconDex: 302,
-        startDay: 26, endDay: 31, hasPaid: false, dateText: "10/26(月) 6:00 〜 11/1(日) 21:00 [マックスマンデー: 10/26(月) 6:00〜21:00]",
-        summary: "10/26(月)朝6時より『ダイマックスヤミラミ』がマックスバトルに初登場！初日の10/26(月) 6:00〜21:00は終日『マックスマンデー』として全国のパワースポットに大量出現します。",
-        freeFeatures: ["無料で毎日集められるマックス粒子（MP）で挑戦可能", "10/26(月) 6:00〜21:00：マックスマンデー終日開催", "色違いのダイマックスヤミラミ出現チャンス✨"],
-        paidFeatures: [], wilds: [],
-        raids: [{ dex: 302, name: "ダイマックス ヤミラミ", shiny: true, note: "マックスバトル (10/26〜11/1)", targetKey: "dmax-sableye", isDmax: true }],
-        fieldResearches: [], tasks: []
-      },
-      {
-        id: "ev-aeon-halloween", month: 10, title: "イオンモール ハロウィン タイムチャレンジ (Part1 & Part2)", barClass: "bar-collab", category: "collab",
-        startDay: 19, endDay: 31, hasPaid: false, dateText: "Part1: 10/19〜10/25 / Part2: 10/26(月)〜11/1(日) [挑戦期限: 11/8 20:00]",
-        summary: "全国のイオンモールで『Pokémon GO』を起動すると、ハロウィン限定の無料タイムチャレンジを受け取れます！10/26(月)からは『Part2受取期間（10/26〜11/1）』がスタート。",
-        freeFeatures: ["【完全無料】全国のイオンモール現地でゲームを起動するだけでタイムチャレンジ付与"], paidFeatures: [], wilds: [], raids: [],
-        fieldResearches: [],
-        tasks: [{ task: "イオンモール限定タイムチャレンジ達成 (無料)", rewardDex: 94, rewardName: "ハロウィンポケモン遭遇", shiny: true }]
-      },
-      {
-        id: "ev-halloween-p1", month: 10, title: "🎃 ハロウィン2026 パート1 ＆ GOパス：ハロウィン2026", barClass: "bar-main", category: "main",
-        startDay: 27, endDay: 31, hasPaid: true, hasFieldResearchPending: true,
-        dateText: "10/27(火) 10:00 〜 11/1(日) 10:00 [メインイベント]",
-        summary: "新衣装『ハットとケープをつけたピカチュウ』『トップハットをかぶったズバット』『リボンをつけたヤバチャ』の3種が初登場！全トレーナーへの無料配布タイムチャレンジや、マップ上の『ハロウィンのサプライズボックス』が登場します。",
-        freeFeatures: [
-          "🎁【全員無料】自動完了するタイムチャレンジ配布（ふしぎなアメ×6 ＆ ハットとケープのピカチュウ確定）",
-          "📦【無料】マップ上に「ハロウィンのサプライズボックス」が出現",
-          "🍬【無料GOパス】Rank10で捕獲アメ2倍 / Rank20で捕獲ほしのすな2倍"
-        ],
-        paidFeatures: [
-          "💎【GOパスデラックス：1,120円 (+10ランク: 1,400円)】捕獲時アメ3倍・ほしのすな3倍・新作「パティシエ衣装」上下・ふしぎなアメXL"
-        ],
-        wilds: [
-          { dex: 41, name: "ズバット (トップハット)", shiny: true, note: "初登場衣装✨・野生" },
-          { dex: 426, name: "フワライド (ハロウィン)", shiny: true, note: "衣装・野生" },
-          { dex: 570, name: "ゾロア", shiny: true, note: "相棒変身・野生" },
-          { dex: 607, name: "ヒトモシ / ヤミラミ", shiny: true, note: "野生出現" },
-          { dex: 971, name: "ボチ", shiny: false, note: "※色違いは11/1パート2〜" }
-        ],
-        raids: [
-          { dex: 25, name: "ピカチュウ (ハット&ケープ)", shiny: true, note: "★1レイド (初登場衣装✨)", isDmax: false },
-          { dex: 854, name: "ヤバチャ (リボン)", shiny: true, note: "★1レイド (初登場衣装✨)", isDmax: false },
-          { dex: 10007, name: "ギラティナ (オリジン)", shiny: true, note: "★5伝説 (10/28 6:00〜)", targetKey: "giratina-origin", isDmax: false },
-          { dex: 10066, name: "メガヤミラミ", shiny: true, note: "メガレイド (10/28 6:00〜)", targetKey: "mega-sableye", isDmax: false }
-        ],
-        fieldResearches: [
-          { task: "イベント限定フィールドリサーチ（ポケストップ）", rewardDex: 25, rewardName: "ピカチュウ (ハット&ケープ)", shiny: true, note: "10/27 10:00以降タスク条件自動反映" },
-          { task: "イベント限定フィールドリサーチ（ポケストップ）", rewardDex: 41, rewardName: "ズバット (トップハット)", shiny: true, note: "初登場衣装✨" },
-          { task: "イベント限定フィールドリサーチ（ポケストップ）", rewardDex: 854, rewardName: "ヤバチャ (リボン)", shiny: true, note: "初登場衣装✨" },
-          { task: "イベント限定フィールドリサーチ（ポケストップ）", rewardDex: 442, rewardName: "ミカルゲ", shiny: true, note: "レアタスク枠" }
-        ],
-        tasks: [
-          { task: "🟢【無料配布】自動完了タイムチャレンジ", rewardDex: 25, rewardName: "ピカチュウ(ハット&ケープ) ＋ ふしぎなアメ×6", shiny: true },
-          { task: "🟢【無料】マップ上の「ハロウィンサプライズボックス」タップ", rewardDex: 854, rewardName: "イベントポケモン遭遇 / アメ獲得", shiny: true },
-          { task: "💎【有料1,120円】GOパスデラックス：ハロウィン2026", rewardDex: 94, rewardName: "アメ3倍・砂3倍 ＆ パティシエ衣装", shiny: true }
-        ]
-      },
-      {
-        id: "ev-raid-giratina-o", month: 10, title: "ギラティナ(オリジン) ＆ メガヤミラミ レイド", barClass: "bar-raid", category: "raid", barIconDex: 10007,
-        startDay: 28, endDay: 31, hasPaid: false, dateText: "10/28(水) 6:00 〜 11/3(火・祝) 21:30頃 [レイドアワー: 10/28(水) 18:00〜19:00]",
-        summary: "10/28(水)朝6時より伝説レイドが『ギラティナ（オリジンフォルム）』に、メガレイドが『メガヤミラミ（〜11/8まで）』に切り替わります！",
-        freeFeatures: ["1日1枚の無料レイドパスで挑戦可能", "10/28(水) 18:00〜19:00：ギラティナ(オリジン) レイドアワー"], paidFeatures: [], wilds: [],
-        raids: [
-          { dex: 10007, name: "ギラティナ (オリジン)", shiny: true, note: "★5 伝説レイド (10/28〜11/3)", targetKey: "giratina-origin", isDmax: false },
-          { dex: 10066, name: "メガヤミラミ", shiny: true, note: "メガレイド (10/28〜11/8)", targetKey: "mega-sableye", isDmax: false }
-        ], fieldResearches: [], tasks: []
-      },
-      {
-        id: "ev-supermega-chandelure", month: 10, title: "🔥 シャンデラのスーパーメガレイド・デイ", barClass: "bar-raid", category: "raid", barIconDex: 609,
-        startDay: 31, endDay: 31, hasPaid: true, dateText: "10/31(土) 14:00 〜 17:00 [グローバルチャレンジ: 10/31 9:00〜11/1 12:00]",
-        summary: "スーパーメガレイドに『メガシャンデラ』が初登場！メガレベル4解放で専用技『あやしいかぜ＋（レイド威力145 / PVP威力50）』を使えるようになります！パーティ内のメガシンカポケモン1匹につきボスのシールドを1枚破壊可能（※ゲンシカイキは破壊不可）。",
-        freeFeatures: [
-          "🎫【無料】ジムから最大6枚の無料レイドパスを獲得可能！",
-          "✨【無料】色違いシャンデラ確率UP ＆ 捕獲時からメガレベル1解放状態"
-        ],
-        paidFeatures: [
-          "💎【有料チケット：700円】無料パス追加8枚(合計最大14枚)、ふしぎなアメXL確率UP、+5,000 XP、ほしのすな+5,000"
-        ],
-        wilds: [], raids: [{ dex: 609, name: "メガシャンデラ (初登場)", shiny: true, note: "スーパーメガレイド (10/31 14:00〜17:00)", targetKey: "mega-chandelure", isDmax: false }],
-        fieldResearches: [], tasks: []
-      },
-      {
-        id: "ev-shadow-landorus", month: 10, title: "シャドウランドロス(化身) ★5シャドウレイド (常設)", barClass: "bar-shadow-daily", category: "raid", barIconDex: 645,
-        startDay: 7, endDay: 31, hasPaid: false, dateText: "10/7(水) 6:00 〜 11/3(火・祝) 21:30頃 (連日常設中)",
-        summary: "シャドウ★5レイドに『シャドウランドロス（けしんフォルム）』が連日登場中！こおり2.56倍二重弱点。",
-        freeFeatures: ["毎日の無料レイドパスで挑戦可能"], paidFeatures: [], wilds: [],
-        raids: [{ dex: 645, name: "シャドウランドロス (化身)", shiny: true, note: "★5 シャドウレイド (〜11/3)", targetKey: "shadow-landorus", isDmax: false }],
-        fieldResearches: [], tasks: []
-      },
-      {
-        id: "ev-gopass-oct", month: 10, title: "🎫 GOパス：10月 (カイオーガ ＆ キラチャーム)", barClass: "bar-collab", category: "collab", barIconDex: 382,
-        startDay: 6, endDay: 31, hasPaid: true, dateText: "10/6(火) 10:00 〜 11/3(火・祝) 10:00 [10/31〜11/1はPT上限撤廃]",
-        summary: "10/31(土)〜11/1(日)の2日間は1日のポイント獲得上限(250pt)が完全撤廃されます！",
-        freeFeatures: ["🟢【無料】ランク100到達で「カイオーガ」確定遭遇✨"],
-        paidFeatures: ["💎【有料デラックス：1,120円】ランク100到達で「キラチャーム×1」獲得(期限11/8 23:59)"],
-        wilds: [], raids: [], fieldResearches: [], tasks: []
-      },
-      {
-        id: "ev-halloween-p2", month: 11, title: "🎃 ハロウィン2026 パート2 (色違いボチ初登場 ＆ メガヤミラミLv4解放)", barClass: "bar-main", category: "main",
-        startDay: 1, endDay: 5, hasPaid: true, hasFieldResearchPending: true,
-        dateText: "11/1(日) 10:00 〜 11/5(木) 20:00 [GOパス受取: 11/7 20:00まで]",
-        summary: "待望の『色違いのボチ✨』が初登場するほか、『メガヤミラミ』のメガレベル4（スーパーマックスレベル）が解放され、専用技『ナイトヘッド＋（レイド威力160 / PVP威力55）』が使用可能になります！",
-        freeFeatures: [
-          "✨【無料】野生・リサーチ等から『色違いのボチ』が初登場！",
-          "💎【無料】メガヤミラミのスーパーマックスレベル(Lv4)解放＆専用技『ナイトヘッド＋』解禁",
-          "🌿【無料】衣装モクロー、飾りゲンガー、魔女帽子ケロマツ等が野生・リサーチで登場"
-        ],
-        paidFeatures: [
-          "💎【GOパスデラックス：1,120円（パート1共通）】捕獲アメ3倍・ほしのすな3倍・パティシエ衣装"
-        ],
-        wilds: [
-          { dex: 971, name: "ボチ (色違い初実装✨)", shiny: true, note: "パート2目玉✨" },
-          { dex: 722, name: "ハロウィン衣装モクロー", shiny: true, note: "衣装ポケモン" },
-          { dex: 94, name: "飾りをつけたゲンガー", shiny: true, note: "衣装ポケモン" },
-          { dex: 656, name: "魔女の帽子ケロマツ", shiny: true, note: "衣装ポケモン" }
-        ],
-        raids: [
-          { dex: 10066, name: "メガヤミラミ (ナイトヘッド+)", shiny: true, note: "メガレイド (〜11/8)", targetKey: "mega-sableye", isDmax: false },
-          { dex: 10007, name: "ギラティナ (オリジン / 4日〜アナザー)", shiny: true, note: "★5伝説", targetKey: "giratina-origin", isDmax: false }
-        ],
-        fieldResearches: [
-          { task: "パート2限定フィールドリサーチ（ポケストップ）", rewardDex: 971, rewardName: "ボチ (色違い初実装✨)", shiny: true, note: "11/1 10:00以降タスク条件自動反映" },
-          { task: "パート2限定フィールドリサーチ（ポケストップ）", rewardDex: 722, rewardName: "ハロウィン衣装モクロー", shiny: true, note: "衣装枠" },
-          { task: "パート2限定フィールドリサーチ（ポケストップ）", rewardDex: 656, rewardName: "魔女の帽子ケロマツ", shiny: true, note: "衣装枠" },
-          { task: "パート2限定フィールドリサーチ（ポケストップ）", rewardDex: 442, rewardName: "ミカルゲ", shiny: true, note: "レアタスク枠" }
-        ],
-        tasks: []
-      },
-      {
-        id: "ev-dmax-machop-week", month: 11, title: "ダイマックスワンリキー 出現率UP ＆ マックスマンデー", barClass: "bar-dmax", category: "dmax", barIconDex: 66,
-        startDay: 2, endDay: 8, hasPaid: false, dateText: "11/2(月) 6:00 〜 11/8(日) 21:00 [マックスマンデー: 11/2(月) 6:00〜21:00]",
-        summary: "11月第1週のパワースポットは『ダイマックスワンリキー』が出現率アップ！キョダイジュラルドン＆DMaxディアルガ対策の格闘枠厳選に最適。",
-        freeFeatures: ["毎日の無料マックス粒子（MP）で挑戦可能", "11/2(月) 6:00〜21:00：ワンリキー マックスマンデー"], paidFeatures: [], wilds: [],
-        raids: [{ dex: 66, name: "ダイマックス ワンリキー", shiny: true, note: "マックスバトル (11/2〜11/8)", targetKey: "dmax-machop", isDmax: true }],
-        fieldResearches: [], tasks: []
-      },
-      {
-        id: "ev-gopass-nov", month: 11, title: "🎫 GOパス：11月 (グラードン ＆ ポケコイン)", barClass: "bar-collab", category: "collab", barIconDex: 383,
-        startDay: 3, endDay: 30, hasPaid: true, dateText: "11/3(火・祝) 10:00 〜 12/1(火) 10:00 [11/28〜29上限撤廃]",
-        summary: "11月度の月間GOパス。無料ランク100到達で『グラードン』と確定遭遇できるほか、ポケコイン合計400枚などが報酬に登場！",
-        freeFeatures: ["🟢【無料】ランク100到達で「グラードン」確定遭遇✨"],
-        paidFeatures: ["💎【有料デラックス：1,120円】追加ポケコイン、スーパーふかそうち、アメXL等"],
-        wilds: [], raids: [], fieldResearches: [], tasks: []
-      },
-      {
-        id: "ev-wildweek-2026", month: 11, title: "⚡ ワイルドウィーク2026 (剣の王ザシアン / 盾の王ザマゼンタ / 銀の王冠)", barClass: "bar-raid", category: "raid", barIconDex: 10188,
-        startDay: 9, endDay: 13, hasPaid: true, hasFieldResearchPending: true,
-        dateText: "11/9(月) 10:00 〜 11/13(金) 20:00 [GOパス：ワイルドウィーク同時開催]",
-        summary: "★5伝説レイドに『ザシアン（けんのおう）』と『ザマゼンタ（たてのおう）』が降臨し、勝利すると『ソードエナジー』『シールドエナジー』を獲得可能！11/13(金)には★5マックスバトルに『ダイマックスラティオス』が登場！",
-        freeFeatures: [
-          "🟢【無料GOパス報酬】『ダイマックス メルタン』確定遭遇 ＆ ワイルドエリアTシャツ",
-          "🟢【無料パス範囲】ザシアン(けんのおう)・ザマゼンタ(たてのおう)に挑戦＆エナジー獲得可能"
-        ],
-        paidFeatures: [
-          "💎【GOパスデラックス：ワイルドウィーク（2,100円）】『👑 ぎんのおうかん ×1個』獲得（期限11/22 23:59）＋ DMaxメルタン追加遭遇"
-        ],
-        wilds: [],
-        raids: [
-          { dex: 10188, name: "ザシアン (けんのおう)", shiny: true, note: "★5伝説 (ソードエナジー獲得)", targetKey: "zacian-crowned", isDmax: false },
-          { dex: 10189, name: "ザマゼンタ (たてのおう)", shiny: true, note: "★5伝説 (シールドエナジー獲得)", targetKey: "zacian-crowned", isDmax: false }
-        ],
-        fieldResearches: [], tasks: []
-      },
-      {
-        id: "ev-wildarea-2026", month: 11, title: "🌍 GOワイルドエリア2026：グローバル (合体キュレム / キョダイジュラルドン / DMaxディアルガ・パルキア)", barClass: "bar-collab", category: "collab", barIconDex: 10023,
-        startDay: 14, endDay: 15, hasPaid: true, hasFieldResearchPending: true,
-        dateText: "11/14(土) 〜 11/15(日) [土曜:Wキュレム&DMaxディアルガ / 日曜:Bキュレム&DMaxパルキア]",
-        summary: "【土曜(11/14)】★5レイドに『ホワイトキュレム（ブレイズエナジー）』＆『ゼクロム』、マックスバトルに『キョダイマックスジュラルドン(色違い初登場✨)』＆『ダイマックスディアルガ(初登場)』！【日曜(11/15)】★5レイドに『ブラックキュレム（ボルトエナジー）』＆『レシラム』、マックスバトルに『キョダイマックスジュラルドン✨』＆『ダイマックスパルキア(初登場)』！",
-        freeFeatures: [
-          "🟢【無料参加可】W/Bキュレム合体エナジー獲得、キョダイジュラルドン・DMaxディアルガ(土)・DMaxパルキア(日)への参加、GOパス上限撤廃"
-        ],
-        paidFeatures: [
-          "💎【グローバル有料チケット】色違い確率大幅UP、無料レイドパス＆MP上限増加、限定スペシャルリサーチ"
-        ],
-        wilds: [],
-        raids: [
-          { dex: 10023, name: "ホワイトキュレム(土) / ブラックキュレム(日)", shiny: true, note: "合体エナジー獲得", targetKey: "kyurem-fused", isDmax: false },
-          { dex: 10225, name: "キョダイマックス ジュラルドン", shiny: true, note: "★6 マックスバトル (色違い初実装✨)", targetKey: "dmax-gmax-duraludon", isDmax: true },
-          { dex: 483, name: "ダイマックス ディアルガ (土曜限定)", shiny: true, note: "★5 マックスバトル初登場！", targetKey: "dmax-dialga", isDmax: true },
-          { dex: 484, name: "ダイマックス パルキア (日曜限定)", shiny: true, note: "★5 マックスバトル初登場！", targetKey: "dmax-palkia", isDmax: true }
-        ],
-        fieldResearches: [], tasks: []
-      },
-      {
-        id: "ev-big-footprints", month: 11, title: "「大きな足跡」イベント ＆ クレセリア・ダークライ・メガジュペッタ", barClass: "bar-main", category: "main",
-        startDay: 16, endDay: 24, hasPaid: false, hasFieldResearchPending: true,
-        dateText: "11/16(月) 〜 11/24(火) [レイドアワー: 11/18]",
-        summary: "★5伝説レイドに『クレセリア』と『ダークライ』がW登場し、メガレイドには『メガジュペッタ』が登場します。",
-        freeFeatures: ["★5レイド：クレセリア ＆ ダークライ / メガ：メガジュペッタ"], paidFeatures: [], wilds: [],
-        raids: [
-          { dex: 491, name: "ダークライ / クレセリア", shiny: true, note: "★5レイド (11/16〜11/24)", isDmax: false },
-          { dex: 10056, name: "メガジュペッタ", shiny: true, note: "メガレイド (11/16〜11/24)", isDmax: false }
-        ], fieldResearches: [], tasks: []
-      },
-      {
-        id: "ev-cd-pawniard", month: 11, title: "🌱 コマタナのコミュニティ・デイ (2026年11月)", barClass: "bar-cd", category: "cd", barIconDex: 624,
-        startDay: 21, endDay: 21, hasPaid: true, hasFieldResearchPending: true,
-        dateText: "11/21(土) 14:00 〜 17:00",
-        summary: "2026年11月のコミュニティ・デイは『コマタナ』が大量発生！最終進化系の『ドドゲザン』はレイド・マックスバトル・マスターリーグのすべてでトップクラスに君臨するはがね・あく複合の超強力ポケモンです。",
-        freeFeatures: ["🟢【無料】野生でコマタナが大量発生＆色違い確率大幅アップ✨、進化で特別技習得"],
-        paidFeatures: ["💎【コミュデイ限定スペシャルリサーチチケット（140円〜280円）】"],
-        wilds: [{ dex: 624, name: "コマタナ", shiny: true, note: "大量発生✨" }, { dex: 983, name: "ドドゲザン (進化)", shiny: true, note: "鋼・悪トップ" }],
-        raids: [],
-        fieldResearches: [
-          { task: "コマタナを3匹捕まえる（コミュデイ定番タスク）", rewardDex: 624, rewardName: "コマタナ (高個体・色違いチャンス✨)", shiny: true, note: "ほしのすな・ハイパーボール等も出現" }
-        ], tasks: []
-      },
-      {
-        id: "ev-tusk-wish-deoxys", month: 11, title: "「黄昏時の願い」＆ デオキシス全4種・メガメタグロス ＆ 11/28スーパーメガレイドデイ", barClass: "bar-raid", category: "raid", barIconDex: 386,
-        startDay: 24, endDay: 30, hasPaid: true, hasFieldResearchPending: true,
-        dateText: "11/24(火)〜12/1(火) / スーパーメガレイドデイ: 11/28(土)",
-        summary: "★5レイドに『デオキシス（全4フォルム）』、メガレイドに『メガメタグロス』が登場！11/28(土)には『スーパーメガレイド・デイ』が開催されます。",
-        freeFeatures: ["11/25〜12/1：デオキシス4種 ＆ メガメタグロス / 11/28：スーパーメガレイド無料パス配布"],
-        paidFeatures: ["11/28(土) スーパーメガレイド・デイ有料チケット（700円）"],
-        wilds: [], raids: [{ dex: 386, name: "デオキシス (全4種)", shiny: true, note: "★5レイド", isDmax: false }, { dex: 10076, name: "メガメタグロス", shiny: true, note: "メガレイド", isDmax: false }],
-        fieldResearches: [], tasks: []
-      },
-      {
-        id: "ev-dec-new-season", month: 12, title: "新シーズン開幕 ＆ ダイマックスフリージオ週間", barClass: "bar-dmax", category: "dmax", barIconDex: 615,
-        startDay: 1, endDay: 6, hasPaid: false, dateText: "12/1(火) 10:00 新シーズン切り替え / 11/30(月)〜12/6(日) DMaxフリージオ",
-        summary: "12月1日(火)10:00に新シーズンが開幕！パワースポットには『ダイマックスフリージオ』が出現率アップします。",
-        freeFeatures: ["12/1(火)10:00〜：新シーズン＆GOパス：12月開幕"], paidFeatures: [], wilds: [],
-        raids: [{ dex: 615, name: "ダイマックス フリージオ", shiny: true, note: "マックスバトル (11/30〜12/6)", isDmax: true }],
-        fieldResearches: [], tasks: []
-      }
-    ];
-
-    // ============================================================================
-    // レイド対策データ (弱点削除→タイプ表示 / おすすめメガ2軸: 火力 vs アメXL / 専用フォルム画像)
-    // ============================================================================
-    const cItem = (name, dex, tag, dps, tdo, fast, charge) => ({ name, dex, tag, dps, tdo, fast, charge });
-    const dItem = (rank, name, dex, fast, charge) => ({ rank, name, dex, fast, charge });
-
-    const RAID_DATA = {
-      "palkia-normal": {
-        month: 10, startDay: 21, endDay: 27, name: "パルキア (通常フォルム)", status: "〜10/27(火) 21:30頃まで [現在出現中]", tier: "★5 伝説レイド",
-        dex: 484, types: ["みず", "ドラゴン"], shiny: true, shinyText: "✨ 色違いあり (約5%)", cpNormal: "2280", cpBoost: "2850 (雨・強風)", minPlayers: "2〜3名",
-        tactics: "みず・ドラゴンタイプ。ディアルガ(オリジン)やザシアン(けんのおう)はボスのドラゴン技に耐性を持ち、TDO(総ダメージ・場持ち)が非常に高いです。",
-        megaRecs: {
-          attack: [
-            { dex: 10079, name: "メガレックウザ", move: "ドラゴンテール / ワイドブレイカー", desc: "圧倒的DPS1位＆全味方のドラゴン技1.3倍＋捕獲時アメXL確率UPも両立する完全最適解！" },
-            { dex: 10051, name: "メガサーナイト", move: "あまえる / マジカルシャイン", desc: "フェアリー最高峰火力＆りゅうせいぐん2重耐性で場持ち抜群" }
-          ],
-          candy: [
-            { dex: 10077, name: "ゲンシカイオーガ", type: "みず・竜枠", desc: "控え編成だけで味方全体の火力1.1倍＆捕獲時のパルキアのアメ・アメXL確率UP！" },
-            { dex: 10034, name: "メガリザードンX / メガボーマンダ", type: "ドラゴン枠", desc: "ドラゴンタイプ一致でパルキア捕獲時のアメ＋1〜2個＆アメXL確率大幅アップ" }
-          ]
-        },
-        counters: [
-          cItem("パルキア (オリジン)", 10246, "normal", 44.2, 920, "ドラゴンテール", "あくうせつだん*"),
-          cItem("ディアルガ (オリジン)", 10245, "normal", 43.5, 1090, "りゅうのいぶき", "ときのほうこう*"),
-          cItem("ブラックキュレム", 10022, "normal", 42.1, 940, "ドラゴンテール", "げきりん"),
-          cItem("ザシアン (けんのおう)", 10188, "normal", 41.5, 1120, "メタルクロー", "じゃれつく"),
-          cItem("ゼルネアス", 716, "normal", 40.5, 1040, "ジオコントロール*", "ムーンフォース"),
-          cItem("ガブリアス", 445, "normal", 39.2, 870, "ドラゴンテール", "げきりん"),
-          cItem("オノノクス", 612, "normal", 38.6, 760, "ドラゴンテール", "ワイドブレイカー*"),
-          cItem("ボーマンダ", 373, "normal", 38.1, 780, "ドラゴンテール", "げきりん*"),
-          cItem("カイリュー", 149, "normal", 37.8, 840, "ドラゴンテール", "げきりん"),
-          cItem("トゲキッス", 468, "normal", 36.5, 995, "あまえる", "マジカルシャイン"),
-          cItem("メガレックウザ", 10079, "mega", 56.4, 1250, "ドラゴンテール", "ワイドブレイカー"),
-          cItem("メガサーナイト", 10051, "mega", 51.2, 1140, "あまえる", "マジカルシャイン"),
-          cItem("シャドウボーマンダ", 373, "shadow", 50.2, 810, "ドラゴンテール", "げきりん*"),
-          cItem("シャドウカイリュー", 149, "shadow", 49.5, 860, "ドラゴンテール", "げきりん")
-        ]
-      },
-      "mega-charizard-y": {
-        month: 10, startDay: 21, endDay: 27, name: "メガリザードンY / メガリザードンX", status: "〜10/27(火) 21:30頃まで [現在出現中]", tier: "メガレイド (★4)",
-        dex: 10035, types: ["ほのお", "ひこう"], shiny: true, shinyText: "✨ 色違いあり (リザードン)", cpNormal: "1651", cpBoost: "2064 (晴天・強風)", minPlayers: "1〜2名（Yはいわ統一でソロ可）",
-        tactics: "メガリザードンYはいわ二重弱点(2.56倍)。DPS順ならラムパルド、TDO(耐久)順ならドサイドン・バンギラスが安定します。",
-        megaRecs: {
-          attack: [
-            { dex: 10075, name: "メガディアンシー", move: "いわおとし / いわなだれ", desc: "いわタイプ最高DPS！ソロ・ペア高速討伐の最強メガ枠" },
-            { dex: 10049, name: "メガバンギラス", move: "うちおとす* / ストーンエッジ", desc: "ほのお・ひこう技を両方半減しTDO(総ダメージ)が圧倒的1位" }
-          ],
-          candy: [
-            { dex: 10035, name: "メガリザードンY / X", type: "ほのお・ひこう・竜枠", desc: "捕獲対象のリザードンと同タイプのためアメ・アメXL確率アップ！" },
-            { dex: 10078, name: "ゲンシグラードン", type: "ほのおボーナス枠", desc: "控え編成で味方火力アップ＆ほのお一致でリザードンのアメXL確率UP" }
-          ]
-        },
-        counters: [
-          cItem("ラムパルド", 409, "normal", 52.8, 740, "うちおとす", "いわなだれ"),
-          cItem("ドサイドン", 464, "normal", 48.6, 1120, "うちおとす", "がんせきほう*"),
-          cItem("テラキオン", 639, "normal", 48.2, 980, "うちおとす", "いわなだれ"),
-          cItem("ガチグマ", 901, "normal", 45.1, 1050, "いわくだき", "いわなだれ"),
-          cItem("ギガイアス", 526, "normal", 44.5, 960, "うちおとす", "メテオビーム*"),
-          cItem("バンギラス", 248, "normal", 44.0, 1090, "うちおとす*", "ストーンエッジ"),
-          cItem("カイオーガ", 382, "normal", 42.1, 1010, "たきのぼり", "こんげんのはどう*"),
-          cItem("ツンデツンデ", 805, "normal", 41.5, 880, "いわおとし", "ストーンエッジ"),
-          cItem("プテラ", 142, "normal", 40.8, 720, "いわおとし", "いわなだれ"),
-          cItem("アマルルガ", 699, "normal", 39.5, 830, "いわおとし", "メテオビーム"),
-          cItem("メガディアンシー", 10075, "mega", 64.5, 1320, "いわおとし", "いわなだれ"),
-          cItem("メガバンギラス", 10049, "mega", 59.2, 1490, "うちおとす*", "ストーンエッジ"),
-          cItem("シャドウラムパルド", 409, "shadow", 63.8, 760, "うちおとす", "いわなだれ"),
-          cItem("シャドウドサイドン", 464, "shadow", 58.4, 1150, "うちおとす", "がんせきほう*")
-        ]
-      },
-      "shadow-landorus": {
-        month: 10, startDay: 7, endDay: 31, name: "シャドウランドロス (けしんフォルム)", status: "10/7(水) 〜 11/3(火・祝) 連日常設中！[現在出現中]", tier: "★5 シャドウ伝説レイド",
-        dex: 645, types: ["じめん", "ひこう"], shiny: true, shinyText: "✨ 色違いあり (シャドウ色違い)", cpNormal: "2050", cpBoost: "2563 (晴天・強風)", minPlayers: "2〜3名（こおり統一＋クリスタル使用）",
-        tactics: "じめん・ひこう複合のため『こおり技が2.56倍の二重弱点』！ホワイトキュレム・ブラックキュレム・マンムー・セグレイブ等のこおり艦隊で少人数撃破可能です。",
-        megaRecs: {
-          attack: [
-            { dex: 10077, name: "ゲンシカイオーガ", move: "たきのぼり / ふぶき", desc: "高耐久＆高火力に加え、控えにいるだけでも全味方の火力を底上げ" },
-            { dex: 10060, name: "メガユキノオー / メガオニゴーリ", move: "こなゆき / ウェザーボール(氷)", desc: "味方全体のこおりタイプ技を1.3倍にブーストして暴走鎮静化を加速" }
-          ],
-          candy: [
-            { dex: 10078, name: "ゲンシグラードン", type: "じめん枠", desc: "じめん一致でランドロス捕獲時のアメ＆アメXL確率アップ＋味方火力ブースト！" },
-            { dex: 10079, name: "メガレックウザ", type: "ひこう枠", desc: "ひこう一致でランドロスのアメ＆アメXL確率アップ＋味方火力ブースト！" }
-          ]
-        },
-        counters: [
-          cItem("ホワイトキュレム", 10023, "normal", 52.1, 1160, "こおりのキバ", "こごえるせかい*"),
-          cItem("ブラックキュレム", 10022, "normal", 50.4, 1120, "ドラゴンテール", "こごえるせかい*"),
-          cItem("マンムー", 473, "normal", 48.5, 960, "こなゆき", "ゆきなだれ"),
-          cItem("セグレイブ", 998, "normal", 47.9, 990, "こおりのキバ", "ゆきなだれ"),
-          cItem("ガラルヒヒダルマ", 10177, "normal", 47.2, 710, "こおりのキバ", "ゆきなだれ"),
-          cItem("マニューラ", 461, "normal", 45.6, 780, "こおりのつぶて", "トリプルアクセル"),
-          cItem("グレイシア", 471, "normal", 44.8, 830, "こおりのいぶき", "ゆきなだれ"),
-          cItem("カイオーガ", 382, "normal", 42.5, 1050, "たきのぼり", "こんげんのはどう*"),
-          cItem("クレベース", 713, "normal", 41.2, 1020, "こおりのキバ", "ゆきなだれ"),
-          cItem("アローラキュウコン", 10104, "normal", 39.8, 810, "こなゆき", "ウェザーボール(氷)"),
-          cItem("ゲンシカイオーガ", 10077, "mega", 56.8, 1380, "たきのぼり", "ふぶき"),
-          cItem("メガユキノオー", 10060, "mega", 51.2, 1060, "こなゆき", "ウェザーボール(氷)"),
-          cItem("シャドウマンムー", 473, "shadow", 58.2, 940, "こなゆき", "ゆきなだれ"),
-          cItem("シャドウマニューラ", 461, "shadow", 54.6, 790, "こおりのつぶて", "トリプルアクセル")
-        ]
-      },
-      "giratina-origin": {
-        month: 10, startDay: 28, endDay: 31, name: "ギラティナ (オリジン) / (11/4〜アナザー)", status: "10/28(水) 6:00 〜 11/3(火) [レイドアワー: 10/28 18:00〜19:00]", tier: "★5 伝説レイド",
-        dex: 10007, types: ["ゴースト", "ドラゴン"], shiny: true, shinyText: "✨ 色違いあり (約5%)", cpNormal: "2105 (アナザー: 1931)", cpBoost: "2631 (霧・強風)", minPlayers: "2〜3名",
-        tactics: "DPS順ではオリジンパルキアや月食ネクロズマが上位、TDO(耐久)順ではゴースト技を軽減できるあくタイプ（バンギラス・サザンドラ・ドドゲザン）が上位に入ります。",
-        megaRecs: {
-          attack: [
-            { dex: 10049, name: "メガバンギラス", move: "かみつく / ぶんまわす", desc: "ボスのゴースト技に耐性を持ち、味方のあく技ブースト＆TDO1位で最も安定！" },
-            { dex: 10079, name: "メガレックウザ", move: "ドラゴンテール / ワイドブレイカー", desc: "最高DPSかつ味方全体の火力を常時ブースト＋ドラゴン枠のアメXL確率UPも兼任" }
-          ],
-          candy: [
-            { dex: 10079, name: "メガレックウザ", type: "ドラゴン枠", desc: "火力1位でありながらギラティナ捕獲時のアメ＆アメXL確率もアップできる一石二鳥枠！" },
-            { dex: 10038, name: "メガゲンガー / メガヤミラミ", type: "ゴースト枠", desc: "ゴースト一致でギラティナのアメ＆アメXL確率アップ（ヤミラミは10/28同時登場）" }
-          ]
-        },
-        counters: [
-          cItem("パルキア (オリジン)", 10246, "normal", 46.8, 960, "ドラゴンテール", "あくうせつだん*"),
-          cItem("ネクロズマ (あかつき)", 10156, "normal", 46.2, 890, "シャドークロー", "シャドーレイ"),
-          cItem("ブラックキュレム", 10022, "normal", 45.4, 980, "ドラゴンテール", "こごえるせかい*"),
-          cItem("サザンドラ", 635, "normal", 44.2, 1050, "かみつく", "ぶんまわす*"),
-          cItem("ディアルガ (オリジン)", 10245, "normal", 43.9, 1040, "りゅうのいぶき", "ときのほうこう*"),
-          cItem("バンギラス", 248, "normal", 43.1, 1140, "かみつく", "ぶんまわす"),
-          cItem("ドドゲザン", 983, "normal", 42.5, 1080, "バークアウト", "イカサマ"),
-          cItem("イベルタル", 717, "normal", 41.5, 1060, "バークアウト", "あくのはどう"),
-          cItem("ダークライ", 491, "normal", 41.2, 860, "バークアウト", "シャドーボール"),
-          cItem("ガブリアス", 445, "normal", 40.9, 890, "ドラゴンテール", "げきりん"),
-          cItem("メガレックウザ", 10079, "mega", 56.2, 1280, "ドラゴンテール", "ワイドブレイカー"),
-          cItem("メガバンギラス", 10049, "mega", 54.4, 1520, "かみつく", "ぶんまわす"),
-          cItem("メガゲンガー", 10038, "mega", 53.8, 880, "したでなめる*", "シャドーボール"),
-          cItem("シャドウバンギラス", 248, "shadow", 51.8, 1160, "かみつく", "ぶんまわす")
-        ]
-      },
-      "mega-sableye": {
-        month: 10, startDay: 28, endDay: 31, name: "メガヤミラミ (11/1〜メガLv4＆ナイトヘッド＋解放)", status: "10/28(水) 6:00 〜 11/8(日) 21:30頃 [次回メガレイド]", tier: "メガレイド (★4)",
-        dex: 10066, types: ["あく", "ゴースト"], shiny: true, shinyText: "✨ 色違いあり (ヤミラミ)", cpNormal: "1068", cpBoost: "1335 (霧)", minPlayers: "1〜2名（フェアリー統一でソロ・ペア可）",
-        tactics: "11/1(日)10:00からメガレベル4（スーパーマックスレベル）が解放され、専用技『ナイトヘッド＋（レイド威力160 / PVP威力55）』が使用可能になります。",
-        megaRecs: {
-          attack: [
-            { dex: 10051, name: "メガサーナイト", move: "あまえる / マジカルシャイン", desc: "唯一の弱点であるフェアリー最高火力＆味方フェアリー技1.3倍ブースト！" },
-            { dex: 10075, name: "メガディアンシー", move: "いわおとし / ムーンフォース", desc: "高火力ムーンフォースでフェアリー弱点を突ける優秀枠" }
-          ],
-          candy: [
-            { dex: 10049, name: "メガバンギラス / メガヘルガー", type: "あく枠", desc: "あく一致でヤミラミ捕獲時のアメ＆アメXL獲得確率アップ" },
-            { dex: 10038, name: "メガゲンガー / メガジュペッタ", type: "ゴースト枠", desc: "ゴースト一致でヤミラミのアメ＆アメXL獲得確率アップ" }
-          ]
-        },
-        counters: [
-          cItem("ザシアン (けんのおう)", 10188, "normal", 45.2, 1120, "メタルクロー", "じゃれつく"),
-          cItem("トゲキッス", 468, "normal", 44.5, 960, "あまえる", "マジカルシャイン"),
-          cItem("ゼルネアス", 716, "normal", 44.2, 1080, "ジオコントロール*", "ムーンフォース"),
-          cItem("ラブトロス (けしん)", 905, "normal", 43.5, 820, "ようせいの風", "マジカルシャイン"),
-          cItem("サーナイト", 282, "normal", 42.1, 810, "あまえる", "マジカルシャイン"),
-          cItem("ニンフィア", 700, "normal", 40.5, 940, "あまえる", "マジカルシャイン"),
-          cItem("カプ・テテフ", 786, "normal", 40.2, 850, "おどろかす", "しぜんのいかり*"),
-          cItem("フラージェス", 671, "normal", 39.4, 890, "ようせいの風", "ムーンフォース"),
-          cItem("アシレーヌ", 730, "normal", 38.9, 860, "あまえる", "ムーンフォース"),
-          cItem("グランブル", 210, "normal", 37.8, 740, "あまえる", "じゃれつく"),
-          cItem("メガサーナイト", 10051, "mega", 56.8, 1210, "あまえる", "マジカルシャイン"),
-          cItem("メガディアンシー", 10075, "mega", 52.4, 1090, "いわおとし", "ムーンフォース"),
-          cItem("シャドウサーナイト", 282, "shadow", 51.2, 830, "あまえる", "マジカルシャイン")
-        ]
-      },
-      "mega-chandelure": {
-        month: 10, startDay: 31, endDay: 31, name: "メガシャンデラ (スーパーメガレイド初登場)", status: "10/31(土) 14:00 〜 17:00 [3時間限定・スーパーメガレイドデイ]", tier: "🔥 スーパーメガレイド",
-        dex: 609, types: ["ゴースト", "ほのお"], shiny: true, shinyText: "✨ 色違い確率大幅UP！(レイドデイ)", cpNormal: "1868", cpBoost: "2335 (晴天・霧)", minPlayers: "4〜6名以上推奨（※メガシンカによるシールド破壊必須）",
-        tactics: "【超重要仕様】スーパーメガレイドでは、パーティ内の『メガシンカポケモン』1匹につきボスのシールドを1枚破壊できます（※ゲンシカイオーガ・ゲンシグラードンはシールド破壊不可）。下の「おすすめメガシンカ2軸」から目的に合わせて1匹編成しましょう！",
-        megaRecs: {
-          attack: [
-            { dex: 10049, name: "メガバンギラス (シールド破壊＋耐久＆火力1位)", move: "かみつく / ぶんまわす", desc: "ボスのシールドを破壊でき、ほのお・ゴースト両方の技を軽減してTDO・DPSともに最強！" },
-            { dex: 10041, name: "メガギャラドス / メガラグラージ (シールド破壊要員)", move: "かみつく / ハイドロカノン*", desc: "シールド破壊が可能で、ほのお技に耐性を持ちながら弱点を突ける優秀アタッカー" }
-          ],
-          candy: [
-            { dex: 10038, name: "メガゲンガー / メガヤミラミ (シールド破壊＋アメXL両立！)", type: "ゴースト枠", desc: "シールド破壊が可能で、弱点を突きつつ捕獲時のシャンデラのアメ＆アメXL確率もアップする一石二鳥枠！" },
-            { dex: 10035, name: "メガリザードンY / メガヘルガー (シールド破壊＋アメXL両立！)", type: "ほのお枠", desc: "シールド破壊に対応しつつ、ほのお一致でシャンデラ捕獲時のアメ＆アメXL確率をアップ（ヘルガーは悪技で弱点も突けます！）" }
-          ]
-        },
-        counters: [
-          cItem("ネクロズマ (あかつき)", 10156, "normal", 49.5, 920, "シャドークロー", "シャドーレイ"),
-          cItem("カイオーガ", 382, "normal", 48.2, 1120, "たきのぼり", "こんげんのはどう*"),
-          cItem("グラードン", 383, "normal", 47.9, 1060, "マッドショット", "だんがいのつるぎ*"),
-          cItem("サザンドラ", 635, "normal", 46.8, 1090, "かみつく", "ぶんまわす*"),
-          cItem("バンギラス", 248, "normal", 46.1, 1180, "かみつく", "ぶんまわす"),
-          cItem("ドサイドン", 464, "normal", 45.4, 1050, "どろかけ", "がんせきほう*"),
-          cItem("ガブリアス", 445, "normal", 44.8, 990, "マッドショット", "だいちのちから*"),
-          cItem("ランドロス (れいじゅう)", 10021, "normal", 44.5, 910, "マッドショット", "ねっさのあらし*"),
-          cItem("ラムパルド", 409, "normal", 44.0, 720, "うちおとす", "いわなだれ"),
-          cItem("ダークライ", 491, "normal", 43.2, 850, "バークアウト", "シャドーボール"),
-          cItem("メガバンギラス", 10049, "mega", 58.6, 1540, "かみつく", "ぶんまわす"),
-          cItem("メガギャラドス", 10041, "mega", 54.2, 1360, "かみつく", "かみくだく"),
-          cItem("メガラグラージ", 10064, "mega", 53.8, 1240, "マッドショット", "ハイドロカノン*"),
-          cItem("シャドウバンギラス", 248, "shadow", 55.2, 1190, "かみつく", "ぶんまわす"),
-          cItem("シャドウカイオーガ", 382, "shadow", 54.8, 1110, "たきのぼり", "こんげんのはどう*")
-        ]
-      },
-      "zacian-crowned": {
-        month: 11, startDay: 9, endDay: 13, name: "ザシアン(けんのおう) / ザマゼンタ(たてのおう)", status: "11/9(月) 〜 11/13(金) [ワイルドウィーク2026]", tier: "★5 伝説レイド (エナジー獲得)",
-        dex: 10188, types: ["フェアリー", "はがね"], shiny: true, shinyText: "✨ 色違いあり (ザシアン/ザマゼンタ)", cpNormal: "2188 (ザシアン)", cpBoost: "2735 (雪・曇り)", minPlayers: "3〜4名",
-        tactics: "勝利すると『ソードエナジー』『シールドエナジー』を獲得可能！グラードン、日食ネクロズマ、れいじゅうランドロス、レシラムが両ボス共通の最適対策です。",
-        megaRecs: {
-          attack: [
-            { dex: 10078, name: "ゲンシグラードン", move: "マッドショット / だんがいのつるぎ*", desc: "圧倒的DPS・TDO1位！控えにいるだけでも味方の地面・炎技を1.3倍に強化" },
-            { dex: 10035, name: "メガリザードンY / メガシャンデラ", move: "ほのおのうず / ブラストバーン*", desc: "ほのお最高峰火力で両ボスの弱点を突ける" }
-          ],
-          candy: [
-            { dex: 10051, name: "メガサーナイト / メガクチート", type: "フェアリー・鋼枠", desc: "ザシアンのアメ＆アメXL確率アップ（クチートは鋼・妖複合で両対応）" },
-            { dex: 10059, name: "メガルカリオ / メガメタグロス", type: "かくとう・鋼枠", desc: "ザマゼンタ＆ザシアンのアメ＆アメXL獲得確率アップ" }
-          ]
-        },
-        counters: [
-          cItem("グラードン", 383, "normal", 48.5, 1120, "マッドショット", "だんがいのつるぎ*"),
-          cItem("ネクロズマ (たそがれ)", 10155, "normal", 47.8, 1180, "メタルクロー", "メテオドライブ"),
-          cItem("ランドロス (れいじゅう)", 10021, "normal", 47.1, 940, "マッドショット", "ねっさのあらし*"),
-          cItem("レシラム", 643, "normal", 46.8, 1050, "ほのおのキバ", "クロスフレイム*"),
-          cItem("シャンデラ", 609, "normal", 45.2, 820, "ほのおのうず", "オーバーヒート"),
-          cItem("ガブリアス", 445, "normal", 44.6, 990, "マッドショット", "だいちのちから*"),
-          cItem("ドリュウズ", 530, "normal", 43.9, 910, "どろかけ", "熱砂の大地"),
-          cItem("ウルガモス", 637, "normal", 43.2, 890, "ほのおのうず", "オーバーヒート"),
-          cItem("ヒードラン", 485, "normal", 42.5, 1190, "ほのおのうず", "マグマストーム*"),
-          cItem("ファイヤー", 146, "normal", 41.8, 850, "ほのおのうず", "オーバーヒート"),
-          cItem("ゲンシグラードン", 10078, "mega", 61.2, 1520, "マッドショット", "だんがいのつるぎ*"),
-          cItem("メガリザードンY", 10035, "mega", 58.4, 1210, "ほのおのうず", "ブラストバーン*"),
-          cItem("シャドウグラードン", 383, "shadow", 57.5, 1130, "マッドショット", "だんがいのつるぎ*")
-        ]
-      },
-      "kyurem-fused": {
-        month: 11, startDay: 14, endDay: 15, name: "ホワイトキュレム(土) / ブラックキュレム(日)", status: "11/14(土):Wキュレム / 11/15(日):Bキュレム [ワイルドエリアグローバル]", tier: "★5 合体伝説レイド",
-        dex: 10023, types: ["ドラゴン", "こおり"], shiny: true, shinyText: "✨ 色違いあり (キュレム)", cpNormal: "2042 (捕獲時キュレム)", cpBoost: "2553 (雪・強風)", minPlayers: "3〜4名",
-        tactics: "勝利すると『ブレイズエナジー（土曜）』『ボルトエナジー（日曜）』を獲得でき、『こごえるせかい』習得チャンス！日食ネクロズマ、剣の王ザシアン、盾の王ザマゼンタ、メタグロスが最適解です。",
-        megaRecs: {
-          attack: [
-            { dex: 10059, name: "メガルカリオ", move: "発勁* / はどうだん*", desc: "圧倒的DPSでキュレムの弱点を突く格闘最強メガ枠" },
-            { dex: 10076, name: "メガメタグロス", move: "バレットパンチ / コメットパンチ*", desc: "こおり・ドラゴン技を両方半減しTDOが最高峰" }
-          ],
-          candy: [
-            { dex: 10079, name: "メガレックウザ", type: "ドラゴン枠", desc: "高火力で弱点を突きつつ、捕獲時のキュレムのアメ＆アメXL確率もアップできる最優秀枠！" },
-            { dex: 10060, name: "メガユキノオー / メガオニゴーリ", type: "こおり枠", desc: "こおり一致でキュレムのアメ＆アメXL獲得確率アップ" }
-          ]
-        },
-        counters: [
-          cItem("ネクロズマ (たそがれ)", 10155, "normal", 52.4, 1210, "メタルクロー", "メテオドライブ"),
-          cItem("ザシアン (けんのおう)", 10188, "normal", 51.8, 1190, "メタルクロー", "きょじゅうざん*"),
-          cItem("ザマゼンタ (たてのおう)", 10189, "normal", 49.5, 1260, "メタルクロー", "きょじゅうだん*"),
-          cItem("ディアルガ (オリジン)", 10245, "normal", 48.2, 1090, "メタルクロー", "ときのほうこう*"),
-          cItem("テラキオン", 639, "normal", 47.9, 960, "にどげり", "せいなるつるぎ*"),
-          cItem("メタグロス", 376, "normal", 46.8, 1080, "バレットパンチ", "コメットパンチ*"),
-          cItem("パルキア (オリジン)", 10246, "normal", 46.1, 950, "ドラゴンテール", "あくうせつだん*"),
-          cItem("ケルディオ", 647, "normal", 45.2, 910, "けたぐり", "せいなるつるぎ"),
-          cItem("ラムパルド", 409, "normal", 44.8, 730, "うちおとす", "いわなだれ"),
-          cItem("ローブシン", 534, "normal", 43.5, 880, "カウンター", "ばくれつパンチ"),
-          cItem("メガレックウザ", 10079, "mega", 59.4, 1280, "ドラゴンテール", "ワイドブレイカー"),
-          cItem("メガルカリオ", 10059, "mega", 58.1, 1190, "発勁*", "はどうだん*"),
-          cItem("メガメタグロス", 10076, "mega", 57.5, 1390, "バレットパンチ", "コメットパンチ*"),
-          cItem("シャドウメタグロス", 376, "shadow", 56.2, 1090, "バレットパンチ", "コメットパンチ*")
-        ]
-      }
-    };
-
-    // ============================================================================
-    // ダイマックス対策データ（アタッカー＆タンク TOP 5 / ディアルガ・パルキア完全分割 / タイプ表示化）
-    // ============================================================================
-    const DMAX_9DB_DATA = {
-      "dmax-sableye": {
-        month: 10, startDay: 26, endDay: 31, name: "ダイマックス ヤミラミ", tier: "★1〜 パワースポット",
-        dateInfo: "10/26(月) 6:00 〜 11/1(日) 21:00 [マックスマンデー: 10/26(月) 6:00〜21:00]", status: "10/26(月)〜11/1(日) [現在出現率UP中]",
-        dex: 302, types: ["あく", "ゴースト"], shiny: true, shinyText: "✨ 色違いあり", cpPL20: "794 - 843",
-        moves: [{ name: "イカサマ", color: "bg-stone-700" }, { name: "かげうち", color: "bg-purple-700" }, { name: "パワージェム", color: "bg-amber-600" }],
-        attackers: [
-          dItem(1, "ザシアン (けんのおう)", 10188, "メタルクロー", "きょじゅうざん*"),
-          dItem(2, "キョダイオーロンゲ", 10222, "かみつく", "キョダイスイマ / ダイフェアリー"),
-          dItem(3, "ブリムオン", 858, "あまえる", "ダイフェアリー"),
-          dItem(4, "キョダイリザードン", 10196, "りゅうのいぶき", "キョダイゴクエン"),
-          dItem(5, "キョダイインテレオン", 10211, "みずでっぽう", "キョダイソゲキ")
-        ],
-        tanks: [
-          dItem(1, "ハピナス (ゴースト2重耐性)", 242, "はたく", "マジカルシャイン"),
-          dItem(2, "ヨクバリス (ゴースト2重耐性)", 820, "マッドショット", "のしかかり"),
-          dItem(3, "ザマゼンタ (たてのおう)", 10189, "メタルクロー", "きょじゅうだん*"),
-          dItem(4, "キョダイオーロンゲ (悪耐性)", 10222, "かみつく", "じゃれつく"),
-          dItem(5, "カビゴン (ゴースト2重耐性)", 10206, "したでなめる", "のしかかり")
-        ],
-        tankNote: "💡 <strong>9DB実戦ノート:</strong> あく・ゴースト複合タイプ。ボスの耐久自体は低いため、ザシアン(けんのおう)やキョダイマックスオーロンゲ、ブリムオン等で容易にソロ討伐可能です。",
-        routine: [
-          { step: 1, title: "ハピナスやヨクバリス等の0.5秒通常技持ちでメーターを高速チャージ。", details: ["エネルギーアイコンを回収して即ダイマックス"] },
-          { step: 2, title: "フェアリー技または高火力アタッカーに交代してダイマックス攻撃。", details: ["11/1からのメガヤミラミLv4解放に向けた高個体値厳選に最適"] }
-        ]
-      },
-      "dmax-machop": {
-        month: 11, startDay: 2, endDay: 8, name: "ダイマックス ワンリキー", tier: "★1〜 パワースポット",
-        dateInfo: "11/2(月) 6:00 〜 11/8(日) 21:00 [マックスマンデー: 11/2(月) 6:00〜21:00]", status: "11/2(月) 6:00〜 [11月第1週ピックアップ]",
-        dex: 66, types: ["かくとう"], shiny: true, shinyText: "✨ 色違いあり", cpPL20: "678 - 730",
-        moves: [{ name: "クロスチョップ", color: "bg-orange-600" }, { name: "かわらわり", color: "bg-orange-600" }, { name: "いわなだれ", color: "bg-amber-600" }],
-        attackers: [
-          dItem(1, "ラティオス (ダイマックス)", 380, "しねんのずつき", "ダイサイコ"),
-          dItem(2, "メタグロス", 376, "しねんのずつき", "ダイサイコ"),
-          dItem(3, "ブリムオン", 858, "ねんりき", "ダイサイコ"),
-          dItem(4, "キョダイリザードン", 10196, "エアスラッシュ", "ダイジェット"),
-          dItem(5, "キョダイアーマーガア", 10212, "エアスラッシュ", "キョダイフウゲキ")
-        ],
-        tanks: [
-          dItem(1, "キョダイゲンガー (格闘3重耐性)", 10202, "シャドークロー", "キョダイゲンスイ"),
-          dItem(2, "ヤミラミ (格闘2重耐性)", 302, "シャドークロー", "イカサマ"),
-          dItem(3, "メタグロス", 376, "しねんのずつき", "サイコキネシス"),
-          dItem(4, "キョダイフシギバナ (格闘耐性)", 10195, "つるのムチ", "キョダイベンタツ"),
-          dItem(5, "サンダー (ダイマックス)", 145, "でんきショック", "ドリルくちばし")
-        ],
-        tankNote: "💡 <strong>9DB実戦ノート:</strong> 11/14(土)・15(日)のワイルドエリアグローバルで登場する『キョダイマックスジュラルドン』および『ダイマックスディアルガ』対策の最重要かくとう枠！",
-        routine: [
-          { step: 1, title: "キョダイゲンガーやメタグロスでメーターを溜める。", details: ["★1のためソロで容易に周回可能"] },
-          { step: 2, title: "ダイサイコ / ダイジェットで一撃撃破。", details: ["パイルのみでワンリキーのアメ・アメXLを大量回収"] }
-        ]
-      },
-      "dmax-gmax-duraludon": {
-        month: 11, startDay: 14, endDay: 15, name: "キョダイマックス ジュラルドン", tier: "★6 ワイルドエリア目玉",
-        dateInfo: "11/14(土) 〜 11/15(日) [GOワイルドエリア2026：グローバル両日出現]", status: "11/14(土)〜11/15(日) [両日登場]",
-        dex: 10225, types: ["はがね", "ドラゴン"], shiny: true, shinyText: "✨ 色違い初実装！(ワイルドエリア目玉)", cpPL20: "1688 - 1758",
-        moves: [{ name: "ラスターカノン", color: "bg-slate-600" }, { name: "ドラゴンクロー", color: "bg-indigo-600" }, { name: "はかいこうせん", color: "bg-slate-500" }],
-        attackers: [
-          dItem(1, "ドリュウズ (ダイアース)", 530, "どろかけ", "ダイアース"),
-          dItem(2, "キョダイカイリキー", 10201, "カウンター", "キョダイシンゲキ"),
-          dItem(3, "ウーラオス (いちげき)", 892, "カウンター", "ダイナックル"),
-          dItem(4, "カイリキー (ダイマックス)", 68, "カウンター", "ダイナックル"),
-          dItem(5, "キョダイエースバーン (等倍)", 10210, "ひのこ", "キョダイカキュウ")
-        ],
-        tanks: [
-          dItem(1, "ドリュウズ (鋼・竜・ノ全耐性)", 530, "マッドショット", "ドリルライナー"),
-          dItem(2, "ザマゼンタ (たてのおう)", 10189, "メタルクロー", "きょじゅうだん*"),
-          dItem(3, "メタグロス (鋼・竜・ノ全耐性)", 376, "バレットパンチ", "コメットパンチ*"),
-          dItem(4, "キョダイメルメタル", 10208, "でんきショック", "ばかぢから"),
-          dItem(5, "ハピナス (ヒーラー役)", 242, "はたく", "はかいこうせん")
-        ],
-        tankNote: "💡 <strong>9DB実戦ノート:</strong> はがね・ドラゴン複合。『ドリュウズ』はジュラルドンの全技に耐性を持ちながら0.5秒技マッドショットで高速チャージ＆弱点のダイアースを撃てる絶対的MVPです！",
-        routine: [
-          { step: 1, title: "ドリュウズ（マッドショット）またはザマゼンタ(たてのおう)で被ダメを抑えつつメーター回収。", details: ["はがね・ドラゴン・ノーマル技すべてを半減以下で受けられる"] },
-          { step: 2, title: "ダイマックス時はドリュウズのダイアース、またはキョダイカイリキーのキョダイシンゲキ3連発。", details: ["土曜のダイマックスディアルガにも同じ編成がそのまま使えます！"] }
-        ]
-      },
-      "dmax-dialga": {
-        month: 11, startDay: 14, endDay: 14, name: "ダイマックス ディアルガ (土曜限定)", tier: "★5 伝説マックスバトル",
-        dateInfo: "11/14(土) 限定登場 [GOワイルドエリア2026：グローバル 1日目]", status: "11/14(土) 土曜限定 [初登場]",
-        dex: 483, types: ["はがね", "ドラゴン"], shiny: true, shinyText: "✨ 色違いあり (ディアルガ)", cpPL20: "2217 - 2307",
-        moves: [{ name: "りゅうせいぐん", color: "bg-indigo-600" }, { name: "アイアンヘッド", color: "bg-slate-600" }, { name: "かみなり", color: "bg-amber-500" }],
-        attackers: [
-          dItem(1, "ドリュウズ", 530, "どろかけ", "ダイアース"),
-          dItem(2, "キョダイカイリキー", 10201, "カウンター", "キョダイシンゲキ"),
-          dItem(3, "ウーラオス (いちげき)", 892, "カウンター", "ダイナックル"),
-          dItem(4, "カイリキー (ダイマックス)", 68, "カウンター", "ダイナックル"),
-          dItem(5, "ザマゼンタ (たてのおう)", 10189, "メタルクロー", "きょじゅうだん*")
-        ],
-        tanks: [
-          dItem(1, "ドリュウズ (竜・鋼半減＆雷3重耐性)", 530, "マッドショット", "ドリルライナー"),
-          dItem(2, "ザマゼンタ (たてのおう)", 10189, "メタルクロー", "きょじゅうだん*"),
-          dItem(3, "ザシアン (けんのおう: 竜2重耐性)", 10188, "メタルクロー", "きょじゅうざん*"),
-          dItem(4, "メタグロス", 376, "バレットパンチ", "コメットパンチ*"),
-          dItem(5, "ハピナス (ダイリカバリー役)", 242, "はたく", "はかいこうせん")
-        ],
-        tankNote: "💡 <strong>9DB実戦ノート (土曜・ディアルガ専用):</strong> はがね・ドラゴン複合で、使用技は『りゅうせいぐん / アイアンヘッド / かみなり』。ドリュウズは竜・鋼を軽減し、かみなりを3重耐性で無効化しながら0.5秒マッドショットでチャージ＆弱点ダイアースを撃てるため、タンク兼アタッカーとして無双します！",
-        routine: [
-          { step: 1, title: "ドリュウズ（マッドショット）またはザマゼンタ先発でゲージを高速回収。", details: ["かみなり・アイアンヘッド・りゅうせいぐん全てを軽減可能"] },
-          { step: 2, title: "ダイマックス時はドリュウズのダイアース、またはキョダイカイリキーのキョダイシンゲキ。", details: ["キョダイジュラルドンと全く同じパーティで周回可能です"] }
-        ]
-      },
-      "dmax-palkia": {
-        month: 11, startDay: 15, endDay: 15, name: "ダイマックス パルキア (日曜限定)", tier: "★5 伝説マックスバトル",
-        dateInfo: "11/15(日) 限定登場 [GOワイルドエリア2026：グローバル 2日目]", status: "11/15(日) 日曜限定 [初登場]",
-        dex: 484, types: ["みず", "ドラゴン"], shiny: true, shinyText: "✨ 色違いあり (パルキア)", cpPL20: "2190 - 2280",
-        moves: [{ name: "りゅうせいぐん", color: "bg-indigo-600" }, { name: "ハイドロポンプ", color: "bg-blue-600" }, { name: "だいもんじ", color: "bg-red-600" }],
-        attackers: [
-          dItem(1, "ザシアン (けんのおう)", 10188, "メタルクロー", "きょじゅうざん* / じゃれつく"),
-          dItem(2, "ラティオス (ダイマックス)", 380, "りゅうのいぶき", "ダイドラグーン"),
-          dItem(3, "キョダイオーロンゲ", 10222, "かみつく", "キョダイスイマ / ダイフェアリー"),
-          dItem(4, "ディアルガ (ダイマックス)", 483, "りゅうのいぶき", "ダイドラグーン"),
-          dItem(5, "ブリムオン", 858, "あまえる", "ダイフェアリー")
-        ],
-        tanks: [
-          dItem(1, "ザシアン (けんのおう: 竜2重耐性)", 10188, "メタルクロー", "じゃれつく"),
-          dItem(2, "キョダイカメックス (水・炎耐性)", 10197, "みずでっぽう", "キョダイホウゲキ"),
-          dItem(3, "キョダイラプラス (水耐性)", 10204, "みずでっぽう", "キョダイセンリツ"),
-          dItem(4, "ハピナス (万能タンク＆リカバリー)", 242, "はたく", "マジカルシャイン"),
-          dItem(5, "ザマゼンタ (たてのおう)", 10189, "メタルクロー", "きょじゅうだん*")
-        ],
-        tankNote: "💡 <strong>9DB実戦ノート (日曜・パルキア専用):</strong> みず・ドラゴン複合のため、土曜のディアルガとは編成がガラッと変わります！ドラゴン技には『ザシアン(けんのおう)』が2重耐性、ハイドロポンプ・だいもんじには『キョダイカメックス』が耐性を持つため、この2体をタンクにしてラティオスやオーロンゲ、ザシアンで削るのが定石です。",
-        routine: [
-          { step: 1, title: "ザシアン(けんのおう)またはキョダイカメックス(0.5秒みずでっぽう)でメーターを溜める。", details: ["ボスの技が竜ならザシアン、水・炎ならカメックス受けが安定"] },
-          { step: 2, title: "ダイマックス時はラティオスのダイドラグーン、またはオーロンゲ/ブリムオンのダイフェアリー。", details: ["前日(11/13金)登場のダイマックスラティオスが早速アタッカーとして活躍します"] }
-        ]
-      }
-    };
-
-    // GOパス ランク1〜100 ジェネレーター
-    function generateFull100PassData(monthType) {
-      const isOct = (monthType === "oct");
-      const bossName = isOct ? "カイオーガ" : "グラードン";
-      const rows = [];
-      for (let r = 1; r <= 100; r++) {
-        let freeReward = "", deluxeReward = "", isMilestone = false;
-        if (r === 1) {
-          isMilestone = true;
-          freeReward = "⭐【ティア1解放】交換時アメ+1個 ＆ TL31以上は交換アメXL確定 ＋ モンスターボール ×15";
-          deluxeReward = "💎 ほしのすな ×5,000 ＋ プレミアムバトルパス ×1";
-        } else if (r === 25) {
-          isMilestone = true;
-          freeReward = "⭐【ティア2解放】1日のギフト開封40個 / 入手125個 / 所持上限+10個";
-          deluxeReward = "💎【DX強化】1日のギフト開封50個 / 入手150個 / 所持上限+20個 ＋ ふしぎなアメ ×5";
-        } else if (r === 50) {
-          isMilestone = true;
-          freeReward = "⭐【ティア3解放】おさんぽおこう持続時間2倍（30分） ＋ きんのズリのみ ×5";
-          deluxeReward = "💎 スーパーふかそうち ×1 ＋ ほしのかけら ×2";
-        } else if (r === 75) {
-          isMilestone = true;
-          freeReward = "⭐【ティア4解放】タマゴ孵化時の獲得XP・ほしのすな増加 ＋ ハイパーボール ×20";
-          deluxeReward = "💎 ふしぎなアメXL ×3 ＋ スーパーふかそうち ×1";
-        } else if (r === 97) {
-          isMilestone = true; freeReward = `🍬 ${bossName}のアメ ×3`; deluxeReward = `💎 ${bossName}のアメ ×10`;
-        } else if (r === 98) {
-          isMilestone = true; freeReward = "✨ ほしのすな ×5,000"; deluxeReward = `💎 ${bossName}のアメXL ×3`;
-        } else if (r === 99) {
-          isMilestone = true; freeReward = "⚡ 5,000 XP"; deluxeReward = "💎 スーパーふかそうち ×1";
-        } else if (r === 100) {
-          isMilestone = true;
-          freeReward = `👑【最終報酬】✨ ${bossName}（確定遭遇・色違いあり）`;
-          deluxeReward = isOct ? "👑【DX最終報酬】✨ キラチャーム ×1個（期限11/8 23:59）" : "👑【DX最終報酬】✨ すごいわざマシンスペシャル ×1 ＋ ポケコイン ×100";
-        } else if (r % 10 === 0) {
-          isMilestone = true;
-          freeReward = isOct ? `🎯 イベントポケモン遭遇（ランク${r}） ＋ 2,500 XP` : `🪙 ポケコイン ×50 ＋ イベントポケモン遭遇（ランク${r}）`;
-          deluxeReward = (r === 40 || r === 80) ? "💎 プレミアムバトルパス ×1 ＋ ふしぎなアメXL ×2" : "💎 スーパーふかそうち ×1 ＋ ほしのすな ×5,000";
-        } else if (r % 5 === 0) {
-          isMilestone = true;
-          freeReward = "🍬 ふしぎなアメ ×2 ＋ ほしのすな ×2,000";
-          deluxeReward = isOct ? "💎 マックス粒子 ×400MP ＋ ふしぎなアメ ×3" : "💎 ポケコイン ×25 ＋ ふしぎなアメ ×3";
-        } else {
-          const mod = r % 10;
-          if (mod === 2) { freeReward = `ほしのすな ×${1000 + Math.floor(r / 20) * 500}`; deluxeReward = `ほしのすな ×${3000 + Math.floor(r / 20) * 1000}`; }
-          else if (mod === 3) { freeReward = `${1000 + Math.floor(r / 20) * 500} XP`; deluxeReward = `${3000 + Math.floor(r / 20) * 1000} XP`; }
-          else if (mod === 4) { freeReward = r < 40 ? "モンスターボール ×10" : "スーパーボール ×10"; deluxeReward = "ハイパーボール ×15"; }
-          else if (mod === 6) { freeReward = "ズリのみ ×5 / パイルのみ ×3"; deluxeReward = "ぎんのパイルのみ ×3 ＋ ほしのすな ×2,000"; }
-          else if (mod === 7) { freeReward = "わざマシン ノーマル ×1 / まんたんのくすり ×3"; deluxeReward = "わざマシン スペシャル ×2 ＋ げんきのかたまり ×3"; }
-          else if (mod === 8) { freeReward = `ほしのすな ×${1500 + Math.floor(r / 25) * 500}`; deluxeReward = "おこう ×1 ＋ ほしのすな ×3,500"; }
-          else if (mod === 9) { freeReward = r < 50 ? "スーパーボール ×10" : "ハイパーボール ×10"; deluxeReward = `ふしぎなアメ ×2 ＋ ${2500 + Math.floor(r / 25) * 500} XP`; }
-          else { freeReward = "ほしのすな ×1,000 ＋ モンスターボール ×10"; deluxeReward = "ほしのすな ×3,000 ＋ ハイパーボール ×10"; }
-        }
-        rows.push({ rank: r, free: freeReward, deluxe: deluxeReward, isMilestone });
-      }
-      return rows;
+    function renderTypeBadges(types) {
+      return (types || []).map(t => `<span class="${TYPE_COLOR_MAP[t] || 'bg-slate-600'} text-white text-[11px] font-bold px-2 py-0.5 rounded shadow-sm">${t}</span>`).join(" ");
     }
 
-    const GO_PASS_100_OCT = generateFull100PassData("oct");
-    const GO_PASS_100_NOV = generateFull100PassData("nov");
-    let passFilterOct = "all", passFilterNov = "all";
-
-    function renderGoPass100Table(monthType) {
-      const isOct = (monthType === "oct");
-      const tbody = document.getElementById(isOct ? "goPassTbodyOct" : "goPassTbodyNov");
-      if (!tbody) return;
-      const data = isOct ? GO_PASS_100_OCT : GO_PASS_100_NOV;
-      const filterMode = isOct ? passFilterOct : passFilterNov;
-      tbody.innerHTML = "";
-      data.forEach(row => {
-        if (filterMode === "milestone" && !row.isMilestone) return;
-        const tr = document.createElement("tr");
-        tr.id = `pass-${monthType}-rank-${row.rank}`;
-        tr.className = row.rank === 100 ? "bg-amber-100/80 font-bold border-t-2 border-amber-400" : (row.isMilestone ? "bg-sky-50/60 font-semibold" : "hover:bg-slate-50");
-        tr.innerHTML = `<td class="p-2 text-center font-black ${row.isMilestone ? 'text-sky-700' : 'text-slate-500'}">${row.rank}</td><td class="p-2 text-slate-700">${row.free}</td><td class="p-2 text-amber-900">${row.deluxe}</td>`;
-        tbody.appendChild(tr);
+    // 文字列中のポケモン名を自動でイラストチップに変換するマッチャー
+    function formatPokeTextWithImages(text) {
+      if (!text) return "";
+      const pokeMap = {
+        "ピカチュウ": 25, "ズバット": 41, "ゲンガー": 94, "カイリキー": 68, "ラプラス": 131, "カビゴン": 143,
+        "サーナイト": 282, "ヤミラミ": 302, "カイオーガ": 382, "グラードン": 383, "ミカルゲ": 442,
+        "ゾロア": 570, "ヒトモシ": 607, "シャンデラ": 609, "コマタナ": 624, "モクロー": 722,
+        "ヤバチャ": 854, "ブリムオン": 858, "ボチ": 971, "ドドゲザン": 983, "メルタン": 808
+      };
+      let formatted = text;
+      Object.keys(pokeMap).forEach(name => {
+        if (formatted.includes(name)) {
+          const dex = pokeMap[name];
+          const chip = `<span class="inline-flex items-center gap-0.5 bg-slate-100 border border-slate-200 px-1.5 py-0.5 rounded mx-0.5 font-bold text-slate-800"><img src="${getPokeImg(dex, name)}" class="w-4 h-4 object-contain inline"><span>${name}</span></span>`;
+          formatted = formatted.replaceAll(name, chip);
+        }
       });
+      return formatted;
     }
 
-    function filterGoPassRows(monthType, mode) {
-      if (monthType === "oct") passFilterOct = mode; else passFilterNov = mode;
-      renderGoPass100Table(monthType);
+    // アプリ初期化＆データ読み込み
+    window.onload = function() {
+      loadDataAndInit();
+    };
+
+    function loadDataAndInit() {
+      fetch('./data.json?t=' + new Date().getTime())
+        .then(res => res.json())
+        .then(data => {
+          MASTER_DATA = data;
+          if (MASTER_DATA.updated_at) {
+            const timeEl = document.getElementById('autoUpdateTimestamp');
+            if (timeEl) timeEl.innerText = '最終更新: ' + MASTER_DATA.updated_at;
+          }
+          initRaidAndDmaxKeys();
+          renderSeasonTab();
+          renderTodaySection();
+          renderNewsSection();
+          initGanttMonths();
+          renderGanttTimeline();
+          renderEventAccordions();
+          renderGoPassTab();
+        })
+        .catch(err => {
+          console.error("data.json 読み込み失敗:", err);
+        });
     }
 
-    function togglePassTable(monthType) {
-      const container = document.getElementById(monthType === "oct" ? "passTableContainerOct" : "passTableContainerNov");
-      const btn = document.getElementById(monthType === "oct" ? "passTableToggleBtnOct" : "passTableToggleBtnNov");
-      container.classList.toggle("hidden");
-      btn.textContent = container.classList.contains("hidden") ? "▼ 表を開く" : "▲ 折りたたむ";
+    function initRaidAndDmaxKeys() {
+      const raids = MASTER_DATA.raids || {};
+      const dmax = MASTER_DATA.dmax || {};
+      const raidKeys = Object.keys(raids);
+      const dmaxKeys = Object.keys(dmax);
+      if (raidKeys.length > 0 && !activeRaidKey) activeRaidKey = raidKeys[0];
+      if (dmaxKeys.length > 0 && !activeDmaxKey) activeDmaxKey = dmaxKeys[0];
     }
-
-    function renderSeason24Tab() {
-      const eggGrid = document.getElementById("seasonEggGrid");
-      if (eggGrid) {
-        eggGrid.innerHTML = SEASON_EGGS.map(eg => `
-          <div class="bg-slate-50 border border-slate-200 rounded-xl p-2.5">
-            <div class="font-extrabold text-slate-800 mb-1.5">${eg.title}</div>
-            <div class="grid grid-cols-3 gap-1">
-              ${eg.list.map(p => `
-                <div class="bg-white border border-slate-200 rounded p-1 flex flex-col items-center text-center">
-                  <img src="${getPokeImg(p.d, p.n)}" class="w-7 h-7 object-contain">
-                  <span class="text-[10px] font-bold text-slate-700 truncate w-full">${p.n}</span>
-                </div>
-              `).join("")}
-            </div>
-          </div>
-        `).join("");
-      }
-      const biomeGrid = document.getElementById("seasonBiomeGrid");
-      if (biomeGrid) {
-        biomeGrid.innerHTML = SEASON_BIOMES.map(b => `
-          <div class="bg-teal-50/50 border border-teal-200 rounded-xl p-2.5">
-            <div class="font-extrabold text-teal-900 mb-1">${b.title}</div>
-            <p class="text-[11px] text-slate-600 leading-relaxed">${b.desc}</p>
-          </div>
-        `).join("");
-      }
-    }
-
-    let currentMainTab = "schedule";
-    let currentBattleSub = "raids";
-    let currentGanttMonth = (todayMonth >= 10 && todayMonth <= 12) ? todayMonth : 10;
-    let currentCategoryFilter = "all";
-    let hiddenEventIds = new Set();
-    let readNewsIds = new Set();
-    let activeRaidKey = "palkia-normal";
-    let activeDmax9dbKey = "dmax-sableye";
-    let filterMega = false;
-    let filterShadow = false;
-    let raidSortMode = "dps";
-
-    let navHistoryStack = [];
-    function pushNavState(fromEventId, labelText) {
-      navHistoryStack.push({ mainTab: currentMainTab, battleSub: currentBattleSub, scrollY: window.scrollY, eventId: fromEventId || "", label: labelText || "元の画面に戻る" });
-      try { history.pushState({ pogoInternalNav: true }, ""); } catch (e) {}
-      updateBackButtonsUI();
-    }
-    function updateBackButtonsUI() {
-      const floatBtn = document.getElementById("floatingBackBtn"), headerBtn = document.getElementById("headerBackBtn"), floatLabel = document.getElementById("floatingBackLabel");
-      if (navHistoryStack.length > 0) {
-        if (floatLabel) floatLabel.textContent = navHistoryStack[navHistoryStack.length - 1].label;
-        floatBtn.classList.remove("hidden"); headerBtn.classList.remove("hidden");
-      } else {
-        floatBtn.classList.add("hidden"); headerBtn.classList.add("hidden");
-      }
-    }
-    function restorePreviousView() {
-      if (navHistoryStack.length === 0) return;
-      const prev = navHistoryStack.pop();
-      updateBackButtonsUI();
-      switchMainTab(prev.mainTab, true);
-      if (prev.mainTab === "battles") switchBattleSub(prev.battleSub, true);
-      setTimeout(() => {
-        if (prev.eventId) {
-          const card = document.getElementById(prev.eventId);
-          if (card) { card.open = true; card.scrollIntoView({ behavior: "smooth", block: "center" }); card.classList.add("pulse-target"); setTimeout(() => card.classList.remove("pulse-target"), 2000); return; }
-        }
-        window.scrollTo({ top: prev.scrollY, behavior: "smooth" });
-      }, 60);
-    }
-    function triggerBackNavigation() {
-      if (navHistoryStack.length === 0) return;
-      try { history.back(); } catch (e) { restorePreviousView(); }
-    }
-    window.addEventListener("popstate", () => { if (navHistoryStack.length > 0) restorePreviousView(); });
-
-    let touchStartX = 0, touchStartY = 0, isInsideHorizontalScroll = false;
-    window.addEventListener("touchstart", e => {
-      if (navHistoryStack.length === 0 || !e.touches || e.touches.length !== 1) return;
-      touchStartX = e.touches[0].clientX; touchStartY = e.touches[0].clientY;
-      const ganttWrapper = document.getElementById("ganttScrollWrapper");
-      isInsideHorizontalScroll = (ganttWrapper && ganttWrapper.contains(e.target) && touchStartX > 40);
-    }, { passive: true });
-    window.addEventListener("touchmove", e => {
-      if (navHistoryStack.length === 0 || isInsideHorizontalScroll || !e.touches || e.touches.length !== 1) return;
-      const dx = e.touches[0].clientX - touchStartX, dy = Math.abs(e.touches[0].clientY - touchStartY);
-      const ind = document.getElementById("swipeBackIndicator");
-      if (touchStartX < 100 && dx > 25 && dx > dy * 1.5 && ind) {
-        ind.style.opacity = String(Math.min(dx / 100, 1));
-        ind.style.transform = `translate(${Math.min(dx - 80, 16)}px, -50%)`;
-      }
-    }, { passive: true });
-    window.addEventListener("touchend", e => {
-      const ind = document.getElementById("swipeBackIndicator");
-      if (ind) { ind.style.opacity = "0"; ind.style.transform = "translate(-100%, -50%)"; }
-      if (navHistoryStack.length === 0 || isInsideHorizontalScroll || !e.changedTouches || e.changedTouches.length !== 1) return;
-      const dx = e.changedTouches[0].clientX - touchStartX, dy = Math.abs(e.changedTouches[0].clientY - touchStartY);
-      if (touchStartX < 120 && dx > 85 && dx > dy * 1.6) triggerBackNavigation();
-    }, { passive: true });
-
-    function isEventPast(item) { return item.month < todayMonth || (item.month === todayMonth && item.endDay < todayDate); }
-    function isEventActive(item) { return item.month === todayMonth && item.startDay <= todayDate && item.endDay >= todayDate; }
-    function isEventFuture(item) { return item.month > todayMonth || (item.month === todayMonth && item.startDay > todayDate); }
 
     function switchMainTab(tab) {
       currentMainTab = tab;
       const tabs = [
-        { id: "season", nav: "tabNavSeason", content: "tabContentSeason", activeColor: "text-orange-700" },
-        { id: "schedule", nav: "tabNavSchedule", content: "tabContentSchedule", activeColor: "text-sky-700" },
-        { id: "battles", nav: "tabNavBattles", content: "tabContentBattles", activeColor: "text-emerald-700" },
-        { id: "gopass", nav: "tabNavGoPass", content: "tabContentGoPass", activeColor: "text-amber-700" }
+        { id: "season", nav: "tabNavSeason", content: "tabContentSeason", color: "text-orange-700" },
+        { id: "schedule", nav: "tabNavSchedule", content: "tabContentSchedule", color: "text-sky-700" },
+        { id: "battles", nav: "tabNavBattles", content: "tabContentBattles", color: "text-emerald-700" },
+        { id: "gopass", nav: "tabNavGoPass", content: "tabContentGoPass", color: "text-amber-700" }
       ];
       tabs.forEach(t => {
         const active = (t.id === tab);
         document.getElementById(t.nav).className = active
-          ? `py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1 bg-white ${t.activeColor} shadow-sm`
+          ? `py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1 bg-white ${t.color} shadow-sm`
           : `py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1 text-slate-600 hover:text-slate-900`;
         document.getElementById(t.content).classList.toggle("hidden", !active);
       });
@@ -1477,92 +404,127 @@
       document.getElementById("subTabDmax").className = !isRaid ? "flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition bg-white text-purple-700 shadow-sm" : "flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition text-slate-600 hover:text-slate-900";
       document.getElementById("secBattleRaids").classList.toggle("hidden", !isRaid);
       document.getElementById("secBattleDmax").classList.toggle("hidden", isRaid);
-      if (isRaid) renderRaidSection(); else renderDmax9dbSection();
+      if (isRaid) renderRaidSection(); else renderDmaxSection();
     }
 
-    function switchGoPassSub(sub) {
-      const isCurr = (sub === "current");
-      document.getElementById("goPassSubCurrent").className = isCurr ? "flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition bg-white text-amber-700 shadow-sm" : "flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition text-slate-600 hover:text-slate-900";
-      document.getElementById("goPassSubFuture").className = !isCurr ? "flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition bg-white text-teal-700 shadow-sm" : "flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition text-slate-600 hover:text-slate-900";
-      document.getElementById("secGoPassCurrent").classList.toggle("hidden", !isCurr);
-      document.getElementById("secGoPassFuture").classList.toggle("hidden", isCurr);
+    // シーズン常設タブの描画（ポケモン名イラスト化対応）
+    function renderSeasonTab() {
+      const s = MASTER_DATA.season || {};
+      document.getElementById("seasonTitleHeading").textContent = s.title || "🏆 シーズン完全ガイド";
+      document.getElementById("seasonPeriodText").textContent = "開催期間: " + (s.period || "");
+
+      const bonusList = document.getElementById("seasonBonusesList");
+      bonusList.innerHTML = (s.bonuses || []).map(b => `<li>${formatPokeTextWithImages(b)}</li>`).join("");
+
+      const routineList = document.getElementById("seasonRoutinesList");
+      routineList.innerHTML = (s.routines || []).map(r => `<li>${formatPokeTextWithImages(r)}</li>`).join("");
+
+      const eggGrid = document.getElementById("seasonEggGrid");
+      eggGrid.innerHTML = (s.eggs || []).map(eg => `
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-2.5">
+          <div class="font-extrabold text-slate-800 mb-1.5">${eg.title}</div>
+          <div class="grid grid-cols-3 gap-1">
+            ${(eg.list || []).map(p => `
+              <div class="bg-white border border-slate-200 rounded p-1 flex flex-col items-center text-center">
+                <img src="${getPokeImg(p.d, p.n)}" class="w-7 h-7 object-contain">
+                <span class="text-[10px] font-bold text-slate-700 truncate w-full">${p.n}</span>
+              </div>
+            `).join("")}
+          </div>
+        </div>
+      `).join("");
+
+      const biomeGrid = document.getElementById("seasonBiomeGrid");
+      biomeGrid.innerHTML = (s.biomes || []).map(b => `
+        <div class="bg-teal-50/50 border border-teal-200 rounded-xl p-2.5">
+          <div class="font-extrabold text-teal-900 mb-1">${b.title}</div>
+          <p class="text-[11px] text-slate-600 leading-relaxed">${formatPokeTextWithImages(b.desc)}</p>
+        </div>
+      `).join("");
     }
 
+    // 本日開催中イベント
     function renderTodaySection() {
-      const label = document.getElementById("todayHeaderDateLabel");
-      if (label) label.textContent = `${todayMonth}月${todayDate}日(${todayDow})`;
+      const m = nowMonth(), d = nowDate();
+      document.getElementById("todayHeaderDateLabel").textContent = `${m}月${d}日`;
       const list = document.getElementById("todayEventsList");
-      if (!list) return;
-      const activeEvents = ALL_EVENTS.filter(ev => isEventActive(ev));
-      list.innerHTML = activeEvents.length === 0 ? `<li class="p-2 text-slate-500">本日開催中の特別イベントはありません</li>` : "";
-      activeEvents.slice(0, 5).forEach(ev => {
-        const isEndingToday = (ev.endDay === todayDate);
-        const timeOrRange = isEndingToday ? "本日終了" : (ev.dateText.includes("常設") ? "連日常設中" : `〜${ev.month}/${ev.endDay}まで`);
+      const events = MASTER_DATA.events || [];
+      const active = events.filter(ev => ev.month === m && ev.startDay <= d && ev.endDay >= d);
+      list.innerHTML = active.length === 0 ? `<li class="p-2 text-slate-500">本日開催中の特別イベントはありません</li>` : "";
+      active.forEach(ev => {
         const li = document.createElement("li");
-        li.className = "flex items-start gap-2 p-2 rounded-lg border " + (isEndingToday ? "bg-rose-50/50 border-rose-100" : "bg-slate-50 border-slate-200");
+        li.className = "flex items-start gap-2 p-2 rounded-lg border bg-slate-50 border-slate-200";
         li.innerHTML = `
-          <span class="${isEndingToday ? 'text-amber-600' : 'text-emerald-600'} font-bold flex-shrink-0 text-[11px]">${timeOrRange}</span>
+          <span class="text-emerald-600 font-bold flex-shrink-0 text-[11px]">〜${ev.month}/${ev.endDay}</span>
           <div>
             <strong class="text-sky-700 cursor-pointer hover:underline text-xs" onclick="scrollToEventCard('${ev.id}')">${ev.title}</strong>
-            <p class="text-[11px] text-slate-500 line-clamp-2">${ev.summary}</p>
+            <p class="text-[11px] text-slate-500 line-clamp-2">${formatPokeTextWithImages(ev.summary)}</p>
           </div>
         `;
         list.appendChild(li);
       });
     }
 
+    // ニュースセクション
     function renderNewsSection() {
       const container = document.getElementById("newsItemsContainer");
       container.innerHTML = "";
-      const visibleNews = NEWS_ITEMS.filter(n => !readNewsIds.has(n.id));
-      if (visibleNews.length === 0) { container.innerHTML = `<div class="text-slate-400 py-2">すべてのニュースを既読にしました。</div>`; return; }
-      visibleNews.forEach(n => {
+      const news = (MASTER_DATA.latest_news || []).filter(n => !readNewsIds.has(n.id));
+      if (news.length === 0) { container.innerHTML = `<div class="text-slate-400 py-2">すべてのニュースを既読にしました。</div>`; return; }
+      news.forEach(n => {
         const detailId = `news-detail-${n.id}`;
-        const dateLabel = n.date_label || (n.date ? n.date.slice(5).replace('-', '/') : `${todayMonth}/${todayDate}`);
         const item = document.createElement("div");
         item.className = "bg-slate-50 border border-slate-200 rounded-lg overflow-hidden transition";
         item.innerHTML = `
           <div class="flex items-center justify-between gap-2 p-2">
             <div class="cursor-pointer hover:text-sky-700 transition flex items-center gap-1.5 flex-1 min-w-0" onclick="handleNewsClick('${n.targetId || ''}', '${detailId}')">
-              <span class="text-[11px] font-bold text-sky-700 bg-sky-100 border border-sky-200 px-1.5 py-0.5 rounded flex-shrink-0">[${dateLabel}]</span>
+              <span class="text-[11px] font-bold text-sky-700 bg-sky-100 border border-sky-200 px-1.5 py-0.5 rounded flex-shrink-0">[${n.date_label || ''}]</span>
               <span class="line-clamp-1 font-bold text-slate-800 text-xs">${n.title || ''}</span>
             </div>
             <div class="flex items-center gap-1.5 flex-shrink-0">
-              ${n.details ? `<button onclick="toggleNewsDetail('${detailId}')" class="text-[10px] text-sky-600 font-bold px-1.5 py-0.5 rounded border border-sky-200 hover:bg-sky-50">詳細 ▼</button>` : ''}
+              ${n.details ? `<button onclick="toggleNewsDetail('${detailId}')" class="text-[10px] text-sky-600 font-bold px-1.5 py-0.5 rounded border border-sky-200">詳細 ▼</button>` : ''}
               <button onclick="markNewsRead('${n.id}')" class="text-[11px] bg-slate-200 hover:bg-emerald-600 hover:text-white text-slate-700 px-2 py-0.5 rounded font-bold">✓</button>
             </div>
           </div>
-          ${n.details ? `<div id="${detailId}" class="hidden p-2.5 pt-1 text-[11px] text-slate-600 border-t border-slate-200 bg-white leading-relaxed">${n.details}</div>` : ''}
+          ${n.details ? `<div id="${detailId}" class="hidden p-2.5 pt-1 text-[11px] text-slate-600 border-t border-slate-200 bg-white leading-relaxed">${formatPokeTextWithImages(n.details)}</div>` : ''}
         `;
         container.appendChild(item);
       });
     }
-
-    function toggleNewsDetail(id) { const el = document.getElementById(id); if (el) el.classList.toggle("hidden"); }
+    function toggleNewsDetail(id) { document.getElementById(id)?.classList.toggle("hidden"); }
+    function markNewsRead(id) { readNewsIds.add(id); renderNewsSection(); }
+    function resetReadNews() { readNewsIds.clear(); renderNewsSection(); }
     function handleNewsClick(targetId, detailId) {
-      if (targetId) { const card = document.getElementById(targetId); if (card) { scrollToEventCard(targetId); return; } }
-      if (detailId) toggleNewsDetail(detailId);
+      if (targetId) scrollToEventCard(targetId);
+      else toggleNewsDetail(detailId);
     }
 
+    // ガントチャート月ボタン初期化
+    function initGanttMonths() {
+      const container = document.getElementById("ganttMonthButtons");
+      const months = [nowMonth(), (nowMonth() % 12) + 1, ((nowMonth() + 1) % 12) + 1];
+      container.innerHTML = months.map(m => `
+        <button onclick="changeGanttMonth(${m})" id="monthBtn${m}" class="text-xs px-3 py-1 rounded-md font-bold transition ${m === currentGanttMonth ? 'bg-sky-600 text-white shadow-sm' : 'text-slate-600 hover:text-slate-900'}">${m}月</button>
+      `).join("");
+    }
     function changeGanttMonth(m) {
       currentGanttMonth = m;
-      [10, 11, 12].forEach(num => {
+      [nowMonth(), (nowMonth() % 12) + 1, ((nowMonth() + 1) % 12) + 1].forEach(num => {
         const btn = document.getElementById(`monthBtn${num}`);
         if (btn) btn.className = (num === m) ? "text-xs px-3 py-1 rounded-md font-bold transition bg-sky-600 text-white shadow-sm" : "text-xs px-3 py-1 rounded-md font-bold transition text-slate-600 hover:text-slate-900";
       });
       renderGanttTimeline();
     }
-
     function filterTimelineCategory(cat) {
       currentCategoryFilter = cat;
       ["all", "main", "cd", "raid", "dmax", "collab"].forEach(c => {
-        const btn = document.getElementById(`catBtn-${c}`);
-        if (btn) btn.className = (c === cat) ? "text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-sky-600 text-white shadow-sm" : "text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-100 text-slate-600 hover:bg-slate-200";
+        document.getElementById(`catBtn-${c}`).className = (c === cat) ? "text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-sky-600 text-white shadow-sm" : "text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-100 text-slate-600 hover:bg-slate-200";
       });
       renderGanttTimeline();
       renderEventAccordions();
     }
 
+    // ガントチャート描画
     function renderGanttTimeline() {
       const headerRow = document.getElementById("ganttHeaderRow");
       const bgGrid = document.getElementById("ganttBgGrid");
@@ -1570,8 +532,8 @@
       tracksContainer.querySelectorAll(".gantt-event-row").forEach(r => r.remove());
       headerRow.innerHTML = ""; bgGrid.innerHTML = "";
 
-      const daysInMonth = new Date(todayYear, currentGanttMonth, 0).getDate();
-      const startDay = (currentGanttMonth === todayMonth) ? todayDate : 1;
+      const daysInMonth = new Date(nowYear(), currentGanttMonth, 0).getDate();
+      const startDay = (currentGanttMonth === nowMonth()) ? nowDate() : 1;
       const endDay = daysInMonth;
       const totalDays = endDay - startDay + 1;
       const dows = ["日", "月", "火", "水", "木", "金", "土"];
@@ -1580,19 +542,19 @@
       bgGrid.style.gridTemplateColumns = gridTemplate;
 
       for (let d = startDay; d <= endDay; d++) {
-        const dowIndex = new Date(todayYear, currentGanttMonth - 1, d).getDay();
-        const isToday = (currentGanttMonth === todayMonth && d === todayDate);
-        const dowColor = dowIndex === 6 ? "text-sky-600" : (dowIndex === 0 ? "text-rose-600" : "text-slate-600");
+        const dowIndex = new Date(nowYear(), currentGanttMonth - 1, d).getDay();
+        const isToday = (currentGanttMonth === nowMonth() && d === nowDate());
         const cell = document.createElement("div");
         cell.className = `py-1.5 border-r border-slate-200 ${isToday ? "bg-sky-50 text-sky-800 border-b-2 border-b-sky-500 font-black" : ""}`;
-        cell.innerHTML = `<div class="text-[10px] ${dowColor}">${dows[dowIndex]}</div><div class="text-[11px] font-bold">${currentGanttMonth}/${d}</div>`;
+        cell.innerHTML = `<div class="text-[10px] text-slate-600">${dows[dowIndex]}</div><div class="text-[11px] font-bold">${currentGanttMonth}/${d}</div>`;
         headerRow.appendChild(cell);
         const bgCol = document.createElement("div");
         bgCol.className = `border-r border-slate-100 ${isToday ? "bg-sky-50/40" : ""}`;
         bgGrid.appendChild(bgCol);
       }
 
-      const monthEvents = ALL_EVENTS.filter(ev => !hiddenEventIds.has(ev.id) && ev.month === currentGanttMonth && (currentCategoryFilter === "all" || ev.category === currentCategoryFilter));
+      const events = MASTER_DATA.events || [];
+      const monthEvents = events.filter(ev => !hiddenEventIds.has(ev.id) && ev.month === currentGanttMonth && (currentCategoryFilter === "all" || ev.category === currentCategoryFilter));
 
       monthEvents.forEach(ev => {
         const evStart = Math.max(ev.startDay, startDay), evEnd = Math.min(ev.endDay, endDay);
@@ -1605,584 +567,238 @@
         row.style.gridTemplateColumns = gridTemplate;
 
         const bar = document.createElement("div");
-        bar.className = `${ev.barClass} h-7 rounded-md px-1.5 text-[11px] font-bold flex items-center justify-between cursor-pointer shadow-sm hover:brightness-95 transition z-10`;
+        bar.className = `${ev.barClass || 'bar-main'} h-7 rounded-md px-1.5 text-[11px] font-bold flex items-center justify-between cursor-pointer shadow-sm hover:brightness-95 transition z-10`;
         bar.style.gridColumn = `${colStart} / span ${colSpan}`;
         bar.onclick = () => scrollToEventCard(ev.id);
 
-        const iconHtml = ev.barIconDex
-          ? `<img src="${getPokeImg(ev.barIconDex, ev.title)}" class="w-5 h-5 object-contain flex-shrink-0 drop-shadow-sm bg-white/70 rounded-full p-0.5">`
-          : "";
-
+        const iconHtml = ev.barIconDex ? `<img src="${getPokeImg(ev.barIconDex, ev.title)}" class="w-5 h-5 object-contain flex-shrink-0 drop-shadow-sm bg-white/70 rounded-full p-0.5">` : "";
         bar.innerHTML = `
-          <div class="gantt-sticky-label">
-            ${iconHtml}
-            <span class="truncate">${ev.title}</span>
-          </div>
-          <button onclick="hideEvent('${ev.id}', event)" class="text-[10px] opacity-70 hover:opacity-100 hover:bg-rose-500 hover:text-white bg-white/70 px-1 py-0.5 rounded leading-none flex-shrink-0 ml-1" title="非表示">✕</button>
+          <div class="gantt-sticky-label">${iconHtml}<span class="truncate">${ev.title}</span></div>
+          <button onclick="hideEvent('${ev.id}', event)" class="text-[10px] opacity-70 hover:opacity-100 bg-white/70 px-1 py-0.5 rounded ml-1">✕</button>
         `;
         row.appendChild(bar);
         tracksContainer.appendChild(row);
       });
     }
 
+    // イベント詳細アコーディオン
     function renderEventAccordions() {
       const container = document.getElementById("eventsAccordionContainer");
-      const archiveContainer = document.getElementById("archivedEventsList");
       container.innerHTML = "";
-      if (archiveContainer) archiveContainer.innerHTML = "";
+      const events = MASTER_DATA.events || [];
+      const active = events.filter(ev => !hiddenEventIds.has(ev.id) && (currentCategoryFilter === "all" || ev.category === currentCategoryFilter));
 
-      const activeEvents = [], pastEvents = [];
-      ALL_EVENTS.forEach(ev => {
-        if (hiddenEventIds.has(ev.id)) return;
-        if (currentCategoryFilter !== "all" && ev.category !== currentCategoryFilter) return;
-        if (isEventPast(ev)) pastEvents.push(ev); else activeEvents.push(ev);
-      });
-
-      activeEvents.forEach((ev, index) => {
+      active.forEach((ev, index) => {
         const details = document.createElement("details");
-        details.className = "bg-white border border-slate-200 rounded-xl overflow-hidden transition group shadow-sm";
+        details.className = "bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm group";
         details.id = ev.id;
-        if (index < 3 || ev.id === "ev-halloween-p1" || ev.id === "ev-supermega-chandelure" || ev.id === "ev-halloween-p2" || ev.id === "ev-wildarea-2026") details.open = true;
-
-        const hasFree = ev.freeFeatures && ev.freeFeatures.length > 0;
-        const hasPaid = ev.paidFeatures && ev.paidFeatures.length > 0;
-        const freeVsPaidHtml = (hasFree || hasPaid) ? `
-          <div class="grid grid-cols-1 ${hasFree && hasPaid ? 'md:grid-cols-2' : ''} gap-2">
-            ${hasFree ? `<div class="bg-emerald-50/70 border border-emerald-200 rounded-lg p-2.5"><div class="text-[11px] font-extrabold text-emerald-800 mb-1">🟢 【無料（全トレーナー共通）】でできること</div><ul class="text-[11px] text-slate-700 space-y-0.5 list-disc list-inside">${ev.freeFeatures.map(f => `<li>${f}</li>`).join("")}</ul></div>` : ''}
-            ${hasPaid ? `<div class="bg-amber-50/70 border border-amber-300 rounded-lg p-2.5"><div class="text-[11px] font-extrabold text-amber-900 mb-1">💎 【有料チケット・課金】で追加される要素</div><ul class="text-[11px] text-slate-700 space-y-0.5 list-disc list-inside">${ev.paidFeatures.map(p => `<li>${p}</li>`).join("")}</ul></div>` : ''}
-          </div>
-        ` : "";
+        if (index < 3) details.open = true;
 
         const wildsHtml = (ev.wilds && ev.wilds.length > 0) ? `
           <div>
-            <div class="text-[11px] font-bold text-emerald-700 mb-1">🌿 【野生・イベント出現ポケモン一覧】</div>
+            <div class="text-[11px] font-bold text-emerald-700 mb-1">🌿 【野生・出現ポケモン】</div>
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-1.5">
               ${ev.wilds.map(w => `<div class="bg-slate-50 border border-slate-200 p-1.5 rounded-lg flex items-center gap-2"><img src="${getPokeImg(w.dex, w.name)}" class="w-8 h-8 object-contain flex-shrink-0"><div class="overflow-hidden"><div class="text-[11px] font-bold truncate text-slate-800">${w.name} ${w.shiny ? '✨' : ''}</div><div class="text-[10px] text-slate-500 truncate">${w.note || ''}</div></div></div>`).join("")}
             </div>
           </div>
         ` : "";
 
-        const shortTitle = ev.title.replace(/[^\w\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FAF]/g, "").slice(0, 10);
         const raidsHtml = (ev.raids && ev.raids.length > 0) ? `
           <div>
-            <div class="text-[11px] font-bold text-rose-700 mb-1">⚔️ 【レイド・マックスバトル出現】(タップで対策へジャンプ / スワイプで戻れます)</div>
+            <div class="text-[11px] font-bold text-rose-700 mb-1">⚔️ 【レイド・マックスバトル】</div>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-1.5">
-              ${ev.raids.map(r => `<div onclick="jumpToCounterTarget('${r.targetKey || ''}', ${!!r.isDmax}, '${ev.id}', '${shortTitle}へ戻る')" class="bg-slate-50 border border-slate-200 hover:border-sky-500 p-2 rounded-lg flex items-center justify-between cursor-pointer transition"><div class="flex items-center gap-2 overflow-hidden"><img src="${getPokeImg(r.dex, r.name)}" class="w-9 h-9 object-contain flex-shrink-0"><div class="overflow-hidden"><div class="text-[11px] font-bold truncate text-slate-800">${r.name} ${r.shiny ? '✨' : ''}</div><div class="text-[10px] text-slate-500 truncate">${r.note || ''}</div></div></div>${r.targetKey ? `<span class="text-[10px] bg-sky-600 text-white font-bold px-2 py-0.5 rounded flex-shrink-0">対策 ↗</span>` : ''}</div>`).join("")}
+              ${ev.raids.map(r => `<div onclick="jumpToCounterTarget('${r.targetKey || ''}', ${!!r.isDmax}, '${ev.id}')" class="bg-slate-50 border border-slate-200 hover:border-sky-500 p-2 rounded-lg flex items-center justify-between cursor-pointer transition"><div class="flex items-center gap-2 overflow-hidden"><img src="${getPokeImg(r.dex, r.name)}" class="w-9 h-9 object-contain flex-shrink-0"><div class="overflow-hidden"><div class="text-[11px] font-bold truncate text-slate-800">${r.name} ${r.shiny ? '✨' : ''}</div><div class="text-[10px] text-slate-500 truncate">${r.note || ''}</div></div></div>${r.targetKey ? `<span class="text-[10px] bg-sky-600 text-white px-2 py-0.5 rounded">対策 ↗</span>` : ''}</div>`).join("")}
             </div>
           </div>
         ` : "";
 
-        let fieldResearchHtml = "";
-        if (ev.fieldResearches && ev.fieldResearches.length > 0) {
-          fieldResearchHtml = `
-            <div class="bg-teal-50/40 border border-teal-200 rounded-lg p-2.5">
-              <div class="flex flex-wrap items-center justify-between gap-1 mb-1.5">
-                <div class="text-[11px] font-extrabold text-teal-800 flex items-center gap-1">🔍 【イベント限定フィールドリサーチ一覧 (ポケストップ入手)】</div>
-                <span class="text-[10px] text-teal-700 bg-teal-100/80 px-2 py-0.5 rounded font-bold">当日判明分も自動更新で随時追加</span>
-              </div>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
-                ${ev.fieldResearches.map(fr => `
-                  <div class="bg-white border border-teal-200/80 p-2 rounded-lg flex items-center justify-between gap-2 shadow-sm">
-                    <div class="min-w-0">
-                      <div class="text-[11px] text-slate-800 font-bold">${fr.task}</div>
-                      ${fr.note ? `<div class="text-[10px] text-slate-500">${fr.note}</div>` : ''}
-                    </div>
-                    <div class="flex items-center gap-1.5 flex-shrink-0 bg-amber-50/70 px-2 py-1 rounded border border-amber-200">
-                      <img src="${getPokeImg(fr.rewardDex, fr.rewardName)}" class="w-7 h-7 object-contain">
-                      <span class="text-[11px] font-extrabold text-amber-800">${fr.rewardName} ${fr.shiny ? '✨' : ''}</span>
-                    </div>
-                  </div>
-                `).join("")}
-              </div>
-            </div>
-          `;
-        } else if (ev.hasFieldResearchPending) {
-          fieldResearchHtml = `
-            <div class="bg-teal-50/30 border border-dashed border-teal-300 rounded-lg p-2 text-[11px] text-teal-800 flex items-center justify-between">
-              <span>🔍 <strong>イベント限定フィールドリサーチ：</strong>イベント開始後、4サイトでタスク詳細が判明次第、自動更新でここに一覧表示されます。</span>
-            </div>
-          `;
-        }
-
-        const tasksHtml = (ev.tasks && ev.tasks.length > 0) ? `
-          <div>
-            <div class="text-[11px] font-bold text-sky-700 mb-1">⏱️ 【タイムチャレンジ・特別報酬・イベントギミック】</div>
+        const frHtml = (ev.fieldResearches && ev.fieldResearches.length > 0) ? `
+          <div class="bg-teal-50/40 border border-teal-200 rounded-lg p-2.5">
+            <div class="text-[11px] font-extrabold text-teal-800 mb-1.5">🔍 【イベント限定フィールドリサーチ】</div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
-              ${ev.tasks.map(t => `
-                <div class="bg-slate-50 border border-slate-200 p-2 rounded-lg flex items-center justify-between gap-2">
-                  <span class="text-[11px] text-slate-700 font-medium">${t.task}</span>
-                  <div class="flex items-center gap-1.5 flex-shrink-0">
-                    <img src="${getPokeImg(t.rewardDex, t.rewardName)}" class="w-7 h-7 object-contain">
-                    <span class="text-[11px] font-bold text-amber-600">${t.rewardName} ${t.shiny ? '✨' : ''}</span>
-                  </div>
+              ${ev.fieldResearches.map(fr => `
+                <div class="bg-white border border-teal-200 p-2 rounded-lg flex items-center justify-between gap-2 shadow-sm">
+                  <div class="min-w-0"><div class="text-[11px] text-slate-800 font-bold">${fr.task}</div>${fr.note ? `<div class="text-[10px] text-slate-500">${fr.note}</div>` : ''}</div>
+                  <div class="flex items-center gap-1.5 bg-amber-50 px-2 py-1 rounded border border-amber-200 flex-shrink-0"><img src="${getPokeImg(fr.rewardDex, fr.rewardName)}" class="w-7 h-7 object-contain"><span class="text-[11px] font-extrabold text-amber-800">${fr.rewardName} ${fr.shiny ? '✨' : ''}</span></div>
                 </div>
               `).join("")}
             </div>
           </div>
-        ` : "";
-
-        const badgeTypeHtml = ev.hasPaid
-          ? `<span class="text-[10px] bg-amber-50 text-amber-800 border border-amber-300 px-1.5 py-0.5 rounded font-bold">🟢無料 ＆ 💎有料チケットあり</span>`
-          : `<span class="text-[10px] bg-emerald-50 text-emerald-700 border border-emerald-300 px-1.5 py-0.5 rounded font-bold">🟢完全無料</span>`;
+        ` : (ev.hasFieldResearchPending ? `<div class="bg-teal-50/30 border border-dashed border-teal-300 rounded-lg p-2 text-[11px] text-teal-800">🔍 フィールドリサーチ情報は判明次第順次追加されます。</div>` : "");
 
         details.innerHTML = `
           <summary class="p-3.5 cursor-pointer flex items-center justify-between gap-2 hover:bg-slate-50 transition">
             <div class="flex items-center gap-2.5">
               ${ev.barIconDex ? `<img src="${getPokeImg(ev.barIconDex, ev.title)}" class="w-9 h-9 object-contain flex-shrink-0">` : ''}
               <div>
-                <div class="flex flex-wrap items-center gap-2">
-                  <span class="text-[11px] text-sky-600 font-bold">${ev.dateText}</span>
-                  ${badgeTypeHtml}
-                </div>
+                <span class="text-[11px] text-sky-600 font-bold">${ev.dateText || ''}</span>
                 <h3 class="text-sm font-extrabold text-slate-900 mt-0.5">${ev.title}</h3>
               </div>
             </div>
-            <div class="flex items-center gap-2 flex-shrink-0">
-              <button onclick="hideEvent('${ev.id}', event)" class="text-[11px] text-slate-500 hover:text-rose-600 bg-slate-100 px-2.5 py-1 rounded-md border border-slate-200 font-bold">👁 非表示</button>
-              <span class="text-slate-400 group-open:rotate-180 transition-transform text-xs">▼</span>
-            </div>
+            <button onclick="hideEvent('${ev.id}', event)" class="text-[11px] text-slate-500 hover:text-rose-600 bg-slate-100 px-2 py-1 rounded font-bold">👁 非表示</button>
           </summary>
           <div class="p-3.5 pt-0 border-t border-slate-100 space-y-3 mt-1 text-xs">
-            <div class="text-slate-700 leading-relaxed bg-slate-50 p-2.5 rounded-lg border border-slate-200">${ev.summary}</div>
-            ${freeVsPaidHtml}
+            <div class="text-slate-700 leading-relaxed bg-slate-50 p-2.5 rounded-lg border border-slate-200">${formatPokeTextWithImages(ev.summary)}</div>
             ${wildsHtml}
             ${raidsHtml}
-            ${fieldResearchHtml}
-            ${tasksHtml}
+            ${frHtml}
           </div>
         `;
         container.appendChild(details);
       });
     }
 
+    // レイド対策タブ
+    function renderRaidSection() {
+      const raids = MASTER_DATA.raids || {};
+      const keys = Object.keys(raids);
+      if (keys.length === 0) return;
+      if (!activeRaidKey || !raids[activeRaidKey]) activeRaidKey = keys[0];
+
+      const pickerCurr = document.getElementById("raidBossPickerCurrent");
+      const pickerFut = document.getElementById("raidBossPickerFuture");
+      pickerCurr.innerHTML = ""; pickerFut.innerHTML = "";
+
+      keys.forEach(k => {
+        const b = raids[k];
+        const btn = document.createElement("button");
+        const active = (k === activeRaidKey);
+        btn.className = `p-2 rounded-xl border text-left transition flex items-center gap-2 ${active ? "bg-sky-50 border-sky-500 shadow-sm ring-1 ring-sky-500" : "bg-white border-slate-200"}`;
+        btn.onclick = () => { activeRaidKey = k; renderRaidSection(); };
+        btn.innerHTML = `<img src="${getPokeImg(b.dex, b.name)}" class="w-11 h-11 object-contain"><div class="overflow-hidden flex-1"><div class="text-[10px] text-emerald-700 font-bold">${b.tier}</div><div class="text-xs font-extrabold text-slate-900 truncate">${b.name}</div></div>`;
+        pickerCurr.appendChild(btn);
+      });
+
+      const b = raids[activeRaidKey];
+      document.getElementById("raidBossOverview").innerHTML = `
+        <div class="flex items-center gap-4">
+          <img src="${getPokeImg(b.dex, b.name)}" class="w-20 h-20 object-contain">
+          <div>
+            <div class="text-xs text-emerald-700 font-bold">${b.tier}</div>
+            <h3 class="text-lg font-black text-slate-900">${b.name}</h3>
+            <div class="flex gap-1.5 mt-1">${renderTypeBadges(b.types)}</div>
+          </div>
+        </div>
+        <div class="mt-3 p-2.5 bg-slate-50 rounded-lg border text-xs">${formatPokeTextWithImages(b.tactics)}</div>
+      `;
+
+      renderRaidRanking();
+    }
+
+    function renderRaidRanking() {
+      const list = document.getElementById("raidRankingList");
+      list.innerHTML = "";
+      const b = (MASTER_DATA.raids || {})[activeRaidKey];
+      if (!b || !b.counters) return;
+
+      let counters = [...b.counters];
+      const isDps = (raidSortMode === "dps");
+      counters.sort((x, y) => isDps ? (y.dps - x.dps) : (y.tdo - x.tdo));
+
+      counters.slice(0, 10).forEach((c, idx) => {
+        const row = document.createElement("div");
+        row.className = "bg-slate-50 border p-2.5 rounded-lg flex items-center justify-between gap-3 shadow-sm";
+        row.innerHTML = `
+          <div class="flex items-center gap-3"><span class="w-6 font-black text-slate-500">#${idx+1}</span><img src="${getPokeImg(c.dex, c.name)}" class="w-10 h-10 object-contain"><div><div class="text-xs font-bold">${c.name}</div><div class="text-[10px] text-slate-500">${c.fast} / ${c.charge}</div></div></div>
+          <div class="text-right font-mono text-xs font-black text-sky-700">${isDps ? c.dps.toFixed(1) + ' DPS' : c.tdo + ' TDO'}</div>
+        `;
+        list.appendChild(row);
+      });
+    }
+
+    function setRaidSortMode(mode) {
+      raidSortMode = mode;
+      document.getElementById("btnSortDps").className = mode === "dps" ? "text-xs font-extrabold px-2.5 py-1 rounded bg-sky-600 text-white shadow-sm" : "text-xs font-bold px-2.5 py-1 rounded text-slate-600";
+      document.getElementById("btnSortTdo").className = mode === "tdo" ? "text-xs font-extrabold px-2.5 py-1 rounded bg-emerald-600 text-white shadow-sm" : "text-xs font-bold px-2.5 py-1 rounded text-slate-600";
+      renderRaidRanking();
+    }
+    function toggleRaidFilter(type) {
+      if (type === "mega") filterMega = !filterMega;
+      if (type === "shadow") filterShadow = !filterShadow;
+      renderRaidRanking();
+    }
+
+    // ダイマックス攻略タブ
+    function renderDmaxSection() {
+      const dmax = MASTER_DATA.dmax || {};
+      const keys = Object.keys(dmax);
+      if (keys.length === 0) return;
+      if (!activeDmaxKey || !dmax[activeDmaxKey]) activeDmaxKey = keys[0];
+
+      const pickerCurr = document.getElementById("dmaxBossPickerCurrent");
+      pickerCurr.innerHTML = "";
+      keys.forEach(k => {
+        const d = dmax[k];
+        const btn = document.createElement("button");
+        const active = (k === activeDmaxKey);
+        btn.className = `p-2 rounded-xl border text-left transition flex items-center gap-2 ${active ? "bg-purple-50 border-purple-500 shadow-sm ring-1 ring-purple-500" : "bg-white border-slate-200"}`;
+        btn.onclick = () => { activeDmaxKey = k; renderDmaxSection(); };
+        btn.innerHTML = `<img src="${getPokeImg(d.dex, d.name)}" class="w-10 h-10 object-contain"><div class="overflow-hidden flex-1"><div class="text-[10px] text-purple-700 font-bold">${d.tier}</div><div class="text-xs font-extrabold truncate">${d.name}</div></div>`;
+        pickerCurr.appendChild(btn);
+      });
+
+      const d = dmax[activeDmaxKey];
+      document.getElementById("dmax9dbContainer").innerHTML = `
+        <div class="bg-9db-card border border-purple-500/40 rounded-2xl p-4 text-white shadow-xl space-y-4">
+          <div class="flex items-center gap-4 border-b border-purple-500/20 pb-3">
+            <img src="${getPokeImg(d.dex, d.name)}" class="w-16 h-16 object-contain">
+            <div>
+              <h2 class="text-xl font-black">${d.name}</h2>
+              <div class="flex gap-1.5 mt-1">${renderTypeBadges(d.types)}</div>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-sm font-extrabold text-sky-300 mb-2">🗡️ アタッカー TOP 5</h3>
+            <div class="grid grid-cols-2 sm:grid-cols-5 gap-2">
+              {(d.attackers || []).map(a => `
+                <div class="bg-black/50 border border-purple-500/40 rounded-xl p-2 text-center flex flex-col items-center">
+                  <span class="bg-blue-600 text-white font-black text-[10px] w-5 h-5 rounded mb-1">#${a.rank}</span>
+                  <img src="${getPokeImg(a.dex, a.name)}" class="w-12 h-12 object-contain my-1">
+                  <div class="text-xs font-bold truncate w-full">${a.name}</div>
+                </div>
+              `).join("")}
+            </div>
+          </div>
+          <div class="bg-black/40 p-3 rounded-lg text-xs text-purple-200">${formatPokeTextWithImages(d.tankNote || '')}</div>
+        </div>
+      `;
+    }
+
+    // GOパスタブ描画
+    function renderGoPassTab() {
+      const container = document.getElementById("goPassContainer");
+      const gp = MASTER_DATA.event_gopass || {};
+      container.innerHTML = `
+        <div class="bg-white border-2 border-orange-300 rounded-xl p-4 shadow-sm space-y-3">
+          <h2 class="text-base font-black text-slate-900">${gp.title || 'GOパス'}</h2>
+          <div class="text-xs text-slate-600 font-medium">${gp.period || ''}</div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+            <div class="bg-emerald-50 p-3 rounded-lg border border-emerald-200">
+              <div class="font-extrabold text-emerald-800 mb-1">🟢 無料パス メリット</div>
+              <ul class="list-disc list-inside space-y-1">${(gp.free_summary || []).map(f => `<li>${formatPokeTextWithImages(f)}</li>`).join("")}</ul>
+            </div>
+            <div class="bg-amber-50 p-3 rounded-lg border border-amber-300">
+              <div class="font-extrabold text-amber-900 mb-1">💎 有料デラックス版 メリット</div>
+              <ul class="list-disc list-inside space-y-1">${(gp.deluxe_summary || []).map(ds => `<li>${formatPokeTextWithImages(ds)}</li>`).join("")}</ul>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
     function scrollToEventCard(id) {
-      if (currentMainTab !== "schedule") switchMainTab("schedule");
+      switchMainTab("schedule");
       const card = document.getElementById(id);
       if (card) {
-        pushNavState("", "上部の一覧へ戻る");
         card.open = true;
         card.scrollIntoView({ behavior: "smooth", block: "start" });
         card.classList.add("pulse-target");
         setTimeout(() => card.classList.remove("pulse-target"), 2400);
       }
     }
-    function setRaidSortMode(mode) {
-      raidSortMode = mode;
-      const isDps = (mode === "dps");
-      document.getElementById("btnSortDps").className = isDps ? "text-xs font-extrabold px-2.5 py-1 rounded-md transition bg-sky-600 text-white shadow-sm flex items-center gap-1" : "text-xs font-bold px-2.5 py-1 rounded-md transition text-slate-600 hover:text-slate-900 flex items-center gap-1";
-      document.getElementById("btnSortTdo").className = !isDps ? "text-xs font-extrabold px-2.5 py-1 rounded-md transition bg-emerald-600 text-white shadow-sm flex items-center gap-1" : "text-xs font-bold px-2.5 py-1 rounded-md transition text-slate-600 hover:text-slate-900 flex items-center gap-1";
-      renderRaidRanking();
-    }
-
-    function toggleRaidFilter(type) {
-      if (type === "mega") {
-        filterMega = !filterMega;
-        const btn = document.getElementById("btnToggleMega");
-        btn.className = filterMega ? "text-xs font-bold px-2.5 py-1.5 rounded-lg border transition bg-purple-100 text-purple-700 border-purple-300 shadow-sm" : "text-xs font-bold px-2.5 py-1.5 rounded-lg border transition bg-slate-100 text-slate-600 border-slate-200";
-        btn.textContent = filterMega ? "✨ メガ含 (ON)" : "✨ メガ含 (OFF)";
-      } else if (type === "shadow") {
-        filterShadow = !filterShadow;
-        const btn = document.getElementById("btnToggleShadow");
-        btn.className = filterShadow ? "text-xs font-bold px-2.5 py-1.5 rounded-lg border transition bg-rose-100 text-rose-700 border-rose-300 shadow-sm" : "text-xs font-bold px-2.5 py-1.5 rounded-lg border transition bg-slate-100 text-slate-600 border-slate-200";
-        btn.textContent = filterShadow ? "🔥 シャドウ含 (ON)" : "🔥 シャドウ含 (OFF)";
-      }
-      renderRaidRanking();
-    }
-
-    function renderRaidSection() {
-      renderRaidPicker();
-      renderRaidOverview();
-      renderRaidMegaRecommendations();
-      renderRaidRanking();
-    }
-
-    function renderRaidPicker() {
-      const pickerCurrent = document.getElementById("raidBossPickerCurrent");
-      const pickerFuture = document.getElementById("raidBossPickerFuture");
-      pickerCurrent.innerHTML = ""; pickerFuture.innerHTML = "";
-      Object.keys(RAID_DATA).forEach(key => {
-        const b = RAID_DATA[key];
-        if (isEventPast(b)) return;
-        const active = (key === activeRaidKey), isCurr = isEventActive(b);
-        const card = document.createElement("button");
-        card.className = `p-2 rounded-xl border text-left transition flex items-center gap-2 ${active ? "bg-sky-50 border-sky-500 shadow-sm ring-1 ring-sky-500" : "bg-white border-slate-200 hover:bg-slate-50"}`;
-        card.onclick = () => { activeRaidKey = key; renderRaidSection(); };
-        card.innerHTML = `
-          <img src="${getPokeImg(b.dex, b.name)}" class="w-11 h-11 object-contain flex-shrink-0">
-          <div class="overflow-hidden flex-1">
-            <div class="flex items-center justify-between gap-1">
-              <span class="text-[10px] ${isCurr ? 'text-emerald-700' : 'text-purple-700'} font-bold truncate">${b.tier}</span>
-              <span class="text-[10px] bg-amber-50 text-amber-700 border border-amber-300 px-1.5 rounded font-bold flex-shrink-0">${b.shiny ? '✨色違い有' : '色違い無'}</span>
-            </div>
-            <div class="text-xs font-extrabold text-slate-900 truncate mt-0.5">${b.name}</div>
-          </div>
-        `;
-        if (isCurr) pickerCurrent.appendChild(card); else pickerFuture.appendChild(card);
-      });
-    }
-
-    function renderRaidOverview() {
-      const container = document.getElementById("raidBossOverview");
-      const b = RAID_DATA[activeRaidKey];
-      if (!b) return;
-      const isCurr = isEventActive(b);
-      container.innerHTML = `
-        <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4">
-          <img src="${getPokeImg(b.dex, b.name)}" class="w-24 h-24 object-contain flex-shrink-0">
-          <div class="flex-1 text-center sm:text-left space-y-1.5">
-            <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
-              <span class="text-xs ${isCurr ? 'bg-emerald-100 text-emerald-800 border-emerald-300' : 'bg-purple-100 text-purple-800 border-purple-300'} font-bold px-2 py-0.5 rounded border">${b.tier}</span>
-              <span class="text-xs bg-amber-100 text-amber-800 border border-amber-300 font-extrabold px-2.5 py-0.5 rounded-full">${b.shinyText || '✨ 色違いあり'}</span>
-              <span class="text-xs font-bold ${isCurr ? 'text-emerald-700' : 'text-purple-700'}">${b.status}</span>
-            </div>
-            <h3 class="text-lg font-black text-slate-900">${b.name}</h3>
-            <div class="flex flex-wrap items-center justify-center sm:justify-start gap-1.5 pt-0.5">
-              <span class="text-xs text-slate-500 font-bold">タイプ:</span>
-              ${renderTypeBadges(b.types)}
-              <span class="text-xs text-slate-400 mx-1">|</span>
-              <span class="text-xs text-slate-600">100%CP: <strong class="text-amber-600 font-bold">${b.cpNormal}</strong> (ブースト: <strong class="text-amber-700 font-bold">${b.cpBoost}</strong>)</span>
-            </div>
-          </div>
-        </div>
-        <div class="mt-3 pt-3 border-t border-slate-100 text-xs text-slate-700 leading-relaxed bg-slate-50 p-2.5 rounded-lg border border-slate-200">
-          <strong class="text-sky-700 font-bold">💡 実戦攻略ノート:</strong> ${b.tactics}
-          <div class="text-rose-600 font-bold mt-1">討伐推奨人数: ${b.minPlayers}</div>
-        </div>
-      `;
-    }
-
-    function renderRaidMegaRecommendations() {
-      const box = document.getElementById("raidMegaRecommendBox");
-      const b = RAID_DATA[activeRaidKey];
-      if (!box || !b || !b.megaRecs) return;
-      const isSuperMega = (activeRaidKey === "mega-chandelure");
-
-      box.innerHTML = `
-        <div class="flex flex-wrap items-center justify-between gap-2 mb-2.5">
-          <h3 class="text-sm font-black text-purple-900 flex items-center gap-1.5">
-            <span>✨</span> おすすめメガシンカ・ゲンシカイキ編成（火力重視 ＆ アメXLボーナス重視の2軸）
-          </h3>
-          ${isSuperMega ? `<span class="text-[11px] bg-rose-600 text-white font-extrabold px-2.5 py-0.5 rounded-full shadow-sm">🔥 スーパーメガ仕様：メガシンカ1匹につきボスのシールド1枚破壊！（※ゲンシカイキは破壊不可）</span>` : ''}
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
-          <div class="bg-white/90 border border-purple-200 rounded-xl p-3 space-y-2 shadow-sm">
-            <div class="font-extrabold text-purple-800 flex items-center gap-1 border-b border-purple-100 pb-1">
-              <span>🗡️</span> 軸1：討伐火力・味方ブースト${isSuperMega ? '・シールド破壊' : ''}でおすすめ
-            </div>
-            ${(b.megaRecs.attack || []).map(m => `
-              <div class="flex items-start gap-2.5">
-                <img src="${getPokeImg(m.dex, m.name)}" class="w-11 h-11 object-contain flex-shrink-0">
-                <div>
-                  <div class="font-black text-slate-900">${m.name}</div>
-                  <div class="text-[11px] text-sky-700 font-semibold">${m.move}</div>
-                  <p class="text-[11px] text-slate-600 leading-snug mt-0.5">${m.desc}</p>
-                </div>
-              </div>
-            `).join("")}
-          </div>
-          <div class="bg-white/90 border border-amber-200 rounded-xl p-3 space-y-2 shadow-sm">
-            <div class="font-extrabold text-amber-800 flex items-center gap-1 border-b border-amber-100 pb-1">
-              <span>🍬</span> 軸2：捕獲時のアメ＋1〜2個 ＆ アメXL確率UPでおすすめ
-            </div>
-            ${(b.megaRecs.candy || []).map(m => `
-              <div class="flex items-start gap-2.5">
-                <img src="${getPokeImg(m.dex, m.name)}" class="w-11 h-11 object-contain flex-shrink-0">
-                <div>
-                  <div class="font-black text-slate-900">${m.name} <span class="text-[10px] bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded font-bold">${m.type}</span></div>
-                  <p class="text-[11px] text-slate-600 leading-snug mt-0.5">${m.desc}</p>
-                </div>
-              </div>
-            `).join("")}
-          </div>
-        </div>
-      `;
-    }
-
-    function renderRaidRanking() {
-      const list = document.getElementById("raidRankingList");
-      const title = document.getElementById("raidRankingTitle");
-      list.innerHTML = "";
-      const b = RAID_DATA[activeRaidKey];
-      if (!b) return;
-
-      let filtered = b.counters.filter(c => {
-        if (c.tag === "mega" && !filterMega) return false;
-        if (c.tag === "shadow" && !filterShadow) return false;
-        return true;
-      });
-
-      const isDpsMode = (raidSortMode === "dps");
-      filtered.sort((x, y) => isDpsMode ? (y.dps - x.dps || y.tdo - x.tdo) : (y.tdo - x.tdo || y.dps - x.dps));
-
-      const top10 = filtered.slice(0, 10);
-      const maxVal = top10.length > 0 ? (isDpsMode ? top10[0].dps : top10[0].tdo) : 1;
-
-      const conditions = [];
-      if (filterMega) conditions.push("メガ含");
-      if (filterShadow) conditions.push("シャドウ含");
-      if (!filterMega && !filterShadow) conditions.push("通常ポケモン限定");
-
-      title.textContent = `${isDpsMode ? "⚡ 対策DPSランキング (討伐速度重視)" : "🛡️ 対策TDOランキング (総ダメ・耐久重視)"} TOP 10 (${conditions.join(" / ")})`;
-
-      top10.forEach((c, index) => {
-        const tagBadge = c.tag === "mega"
-          ? `<span class="text-[10px] bg-purple-100 text-purple-700 font-bold px-1.5 py-0.5 rounded border border-purple-300">メガ/ゲンシ</span>`
-          : (c.tag === "shadow" ? `<span class="text-[10px] bg-rose-100 text-rose-700 font-bold px-1.5 py-0.5 rounded border border-rose-300">シャドウ</span>` : `<span class="text-[10px] bg-slate-200 text-slate-600 px-1.5 py-0.5 rounded font-bold">通常</span>`);
-
-        const rankColor = index === 0 ? "text-amber-500 text-base font-black" : (index <= 2 ? "text-slate-700 text-sm font-black" : "text-slate-400");
-        const currentVal = isDpsMode ? c.dps : c.tdo;
-        const barWidthPct = Math.max(20, Math.round((currentVal / maxVal) * 100));
-
-        const row = document.createElement("div");
-        row.className = "bg-slate-50 border border-slate-200 hover:bg-slate-100 p-2.5 rounded-lg flex items-center justify-between gap-3 transition shadow-sm";
-        row.innerHTML = `
-          <div class="flex items-center gap-3 overflow-hidden flex-1">
-            <span class="w-6 text-center font-bold ${rankColor} flex-shrink-0">#${index + 1}</span>
-            <img src="${getPokeImg(c.dex, c.name)}" class="w-11 h-11 object-contain flex-shrink-0">
-            <div class="overflow-hidden flex-1">
-              <div class="text-xs font-bold text-slate-900 flex items-center gap-1.5">
-                <span class="truncate">${c.name}</span>
-                ${tagBadge}
-              </div>
-              <div class="text-[11px] text-slate-700 flex flex-wrap items-center gap-2 mt-1">
-                <span><span class="bg-slate-200 text-slate-700 px-1.5 py-0.2 rounded text-[10px] font-bold mr-1">通常</span>${c.fast}</span>
-                <span><span class="bg-sky-100 text-sky-800 px-1.5 py-0.2 rounded text-[10px] font-bold mr-1">SP</span><strong class="text-sky-700">${c.charge}</strong></span>
-              </div>
-              <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden mt-1.5">
-                <div class="${isDpsMode ? 'bg-sky-500' : 'bg-emerald-500'} h-full rounded-full" style="width: ${barWidthPct}%"></div>
-              </div>
-            </div>
-          </div>
-          <div class="text-right flex-shrink-0 min-w-[76px]">
-            ${isDpsMode
-              ? `<div class="text-sm font-black text-sky-700 font-mono">${c.dps.toFixed(1)} <span class="text-[10px]">DPS</span></div><div class="text-[10px] text-slate-500 font-mono">TDO: <strong>${c.tdo}</strong></div>`
-              : `<div class="text-sm font-black text-emerald-700 font-mono">${c.tdo} <span class="text-[10px]">TDO</span></div><div class="text-[10px] text-slate-500 font-mono">DPS: <strong>${c.dps.toFixed(1)}</strong></div>`
-            }
-          </div>
-        `;
-        list.appendChild(row);
-      });
-    }
-
-    function renderDmax9dbSection() {
-      renderDmax9dbPicker();
-      renderDmax9dbCard();
-    }
-
-    function renderDmax9dbPicker() {
-      const pickerCurrent = document.getElementById("dmaxBossPickerCurrent");
-      const pickerFuture = document.getElementById("dmaxBossPickerFuture");
-      pickerCurrent.innerHTML = ""; pickerFuture.innerHTML = "";
-      Object.keys(DMAX_9DB_DATA).forEach(key => {
-        const d = DMAX_9DB_DATA[key];
-        if (isEventPast(d)) return;
-        const active = (key === activeDmax9dbKey), isCurr = isEventActive(d);
-        const card = document.createElement("button");
-        card.className = `p-2 rounded-xl border text-left transition flex items-center gap-2 ${active ? "bg-purple-50 border-purple-500 shadow-sm ring-1 ring-purple-500" : "bg-white border-slate-200 hover:bg-slate-50"}`;
-        card.onclick = () => { activeDmax9dbKey = key; renderDmax9dbSection(); };
-        card.innerHTML = `
-          <img src="${getPokeImg(d.dex, d.name)}" class="w-10 h-10 object-contain flex-shrink-0">
-          <div class="overflow-hidden flex-1">
-            <div class="flex items-center justify-between gap-1">
-              <span class="text-[10px] ${isCurr ? 'text-purple-700' : 'text-slate-500'} font-bold truncate">${d.tier}</span>
-              <span class="text-[10px] bg-amber-50 text-amber-700 border border-amber-300 px-1.5 rounded font-bold flex-shrink-0">${d.shiny ? '✨色違い有' : '色違い無'}</span>
-            </div>
-            <div class="text-xs font-extrabold text-slate-900 truncate mt-0.5">${d.name}</div>
-          </div>
-        `;
-        if (isCurr) pickerCurrent.appendChild(card); else pickerFuture.appendChild(card);
-      });
-    }
-
-    function renderDmax9dbCard() {
-      const container = document.getElementById("dmax9dbContainer");
-      const d = DMAX_9DB_DATA[activeDmax9dbKey];
-      if (!d) return;
-
-      container.innerHTML = `
-        <div class="bg-9db-card border border-purple-500/40 rounded-2xl p-4 shadow-xl space-y-4">
-          <div class="border-b border-purple-500/20 pb-3 flex flex-col sm:flex-row items-center justify-between gap-3">
-            <div class="flex items-center gap-3.5">
-              <img src="${getPokeImg(d.dex, d.name)}" class="w-20 h-20 object-contain flex-shrink-0 drop-shadow-lg">
-              <div>
-                <div class="flex flex-wrap items-center gap-2 mb-1">
-                  <span class="text-[11px] text-purple-300 font-semibold">📅 ${d.dateInfo}</span>
-                  <span class="text-xs bg-amber-400/20 text-amber-300 border border-amber-400/50 font-extrabold px-2.5 py-0.5 rounded-full">${d.shinyText || '✨ 色違いあり'}</span>
-                </div>
-                <h2 class="text-xl sm:text-2xl font-black text-white tracking-wide">${d.name}</h2>
-                <div class="flex flex-wrap items-center gap-2 mt-1">
-                  <span class="text-xs text-purple-200 font-bold">タイプ:</span>
-                  ${renderTypeBadges(d.types)}
-                  <span class="text-xs text-purple-200 ml-1">捕獲時100%CP (PL20): <strong class="text-amber-300 text-sm">${d.cpPL20 || '-'}</strong></span>
-                </div>
-              </div>
-            </div>
-            <div class="text-right flex items-center gap-1 bg-purple-900/60 border border-purple-500/40 px-3 py-1.5 rounded-lg flex-shrink-0">
-              <span class="text-amber-400 text-sm">👾</span>
-              <span class="font-black text-white text-sm sm:text-base">${d.tier}</span>
-            </div>
-          </div>
-
-          <div class="bg-black/40 border border-purple-500/30 rounded-xl p-2.5 flex flex-wrap items-center gap-2">
-            <span class="text-[11px] text-purple-300 font-bold">⚡ ボスの使用技:</span>
-            ${(d.moves || []).map(m => `<span class="text-xs px-2.5 py-0.5 rounded-md text-white font-bold ${m.color}">${m.name}</span>`).join("")}
-          </div>
-
-          <div class="space-y-2">
-            <h3 class="text-sm font-extrabold text-sky-300 flex items-center gap-1.5">
-              <span>🗡️</span> アタッカー (ダイマックス・キョダイマックス火力 TOP 5)
-            </h3>
-            <div class="grid grid-cols-2 sm:grid-cols-5 gap-2">
-              ${(d.attackers || []).map(a => `
-                <div class="bg-black/50 border border-purple-500/40 hover:border-sky-400 transition rounded-xl p-2 relative flex flex-col items-center text-center">
-                  <span class="absolute top-1.5 left-1.5 bg-blue-600 text-white font-black text-[10px] w-5 h-5 rounded flex items-center justify-center">#${a.rank}</span>
-                  <img src="${getPokeImg(a.dex, a.name)}" class="w-14 h-14 object-contain my-1">
-                  <div class="text-xs font-bold text-white truncate w-full">${a.name}</div>
-                  <div class="text-[10px] text-slate-200 mt-1 space-y-1 w-full bg-slate-900/80 p-1.5 rounded text-left">
-                    <div class="truncate"><span class="bg-slate-700 text-slate-200 px-1 rounded font-bold mr-1">通常</span>${a.fast}</div>
-                    <div class="truncate text-sky-300 font-bold"><span class="bg-sky-900 text-sky-200 px-1 rounded font-bold mr-1">SP</span>${a.charge}</div>
-                  </div>
-                </div>
-              `).join("")}
-            </div>
-          </div>
-
-          <div class="space-y-2">
-            <h3 class="text-sm font-extrabold text-emerald-300 flex items-center gap-1.5">
-              <span>🛡️</span> タンク (耐久＆0.5秒高速メーターチャージ TOP 5)
-            </h3>
-            <div class="grid grid-cols-2 sm:grid-cols-5 gap-2">
-              ${(d.tanks || []).map(t => `
-                <div class="bg-black/50 border border-purple-500/40 hover:border-emerald-400 transition rounded-xl p-2 relative flex flex-col items-center text-center">
-                  <span class="absolute top-1.5 left-1.5 bg-emerald-600 text-white font-black text-[10px] w-5 h-5 rounded flex items-center justify-center">#${t.rank}</span>
-                  <img src="${getPokeImg(t.dex, t.name)}" class="w-14 h-14 object-contain my-1">
-                  <div class="text-xs font-bold text-white truncate w-full">${t.name}</div>
-                  <div class="text-[10px] text-slate-200 mt-1 space-y-1 w-full bg-slate-900/80 p-1.5 rounded text-left">
-                    <div class="truncate text-emerald-300 font-bold"><span class="bg-emerald-900 text-emerald-200 px-1 rounded font-bold mr-1">通常</span>${t.fast}</div>
-                    <div class="truncate"><span class="bg-slate-700 text-slate-200 px-1 rounded font-bold mr-1">SP</span>${t.charge}</div>
-                  </div>
-                </div>
-              `).join("")}
-            </div>
-            <div class="text-[11px] text-purple-200/90 bg-black/40 border border-purple-500/30 p-2.5 rounded-lg mt-2">
-              ${d.tankNote || ''}
-            </div>
-          </div>
-
-          <div class="space-y-2 pt-2 border-t border-purple-500/30">
-            <h3 class="text-sm font-extrabold text-amber-300">📋 立ち回り (9DB実戦定石ステップ)</h3>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-              ${(d.routine || []).map(r => `
-                <div class="bg-black/60 border border-purple-500/40 rounded-xl p-2.5 flex items-start gap-2.5">
-                  <div class="bg-blue-600 text-white font-black text-xs w-6 h-6 rounded flex items-center justify-center flex-shrink-0 mt-0.5">${r.step}</div>
-                  <div>
-                    <div class="text-xs font-extrabold text-white">${r.title}</div>
-                    <ul class="text-[11px] text-purple-200/90 list-disc list-inside mt-0.5">${r.details.map(det => `<li>${det}</li>`).join("")}</ul>
-                  </div>
-                </div>
-              `).join("")}
-            </div>
-          </div>
-        </div>
-      `;
-    }
-
-    function jumpToCounterTarget(targetKey, isDmax, fromEventId, backLabel) {
-      if (!targetKey) return;
-      pushNavState(fromEventId || "", backLabel || "元のイベントに戻る");
-      switchMainTab("battles");
-      if (isDmax) {
-        switchBattleSub("dmax");
-        if (DMAX_9DB_DATA[targetKey]) { activeDmax9dbKey = targetKey; renderDmax9dbSection(); }
-      } else {
-        switchBattleSub("raids");
-        if (RAID_DATA[targetKey]) { activeRaidKey = targetKey; renderRaidSection(); }
-      }
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-
-    function hideEvent(id, e) { if (e) e.stopPropagation(); hiddenEventIds.add(id); renderGanttTimeline(); renderEventAccordions(); updateGlobalHiddenUI(); }
-    function restoreAllHiddenEvents() { hiddenEventIds.clear(); renderGanttTimeline(); renderEventAccordions(); updateGlobalHiddenUI(); }
-    function updateGlobalHiddenUI() {
-      const btn = document.getElementById("globalRestoreBtn"), count = document.getElementById("globalHiddenCount");
-      if (hiddenEventIds.size > 0) { btn.classList.remove("hidden"); count.textContent = hiddenEventIds.size; } else { btn.classList.add("hidden"); }
-    }
-    function markNewsRead(id) { readNewsIds.add(id); renderNewsSection(); }
-    function resetReadNews() { readNewsIds.clear(); renderNewsSection(); }
-
-    window.onload = function() {
-      renderSeason24Tab();
-      renderTodaySection();
-      renderNewsSection();
-      changeGanttMonth(currentGanttMonth);
-      renderEventAccordions();
-      renderGoPass100Table("oct");
-      renderGoPass100Table("nov");
-
-      fetch('./data.json?t=' + new Date().getTime())
-        .then(res => res.json())
-        .then(remoteData => {
-          if (remoteData.updated_at) {
-            const timeEl = document.getElementById('autoUpdateTimestamp');
-            if (timeEl) timeEl.innerText = '最終自動更新: ' + remoteData.updated_at;
-          }
-          if (remoteData.latest_news && remoteData.latest_news.length > 0) {
-            const cleanRemoteNews = remoteData.latest_news.filter(n => {
-              const t = n.title || n.text || "";
-              return !t.includes("UMA") && !t.includes("ユクシー") && !t.includes("モルペコ");
-            });
-            if (cleanRemoteNews.length > 0) { NEWS_ITEMS = cleanRemoteNews; renderNewsSection(); }
-          }
-
-          let needsRerender = false;
-
-          // ① 当日判明したイベント別フィールドリサーチの自動合体 (field_research_updates)
-          if (remoteData.field_research_updates && typeof remoteData.field_research_updates === "object") {
-            Object.keys(remoteData.field_research_updates).forEach(evId => {
-              const targetEv = ALL_EVENTS.find(e => e.id === evId);
-              const newTasks = remoteData.field_research_updates[evId];
-              if (targetEv && Array.isArray(newTasks) && newTasks.length > 0) {
-                newTasks.forEach(t => { t.rewardDex = resolveSpecialFormId(t.rewardDex, t.rewardName); });
-                targetEv.fieldResearches = newTasks;
-                needsRerender = true;
-              }
-            });
-          }
-
-          // ② 新規イベント・既存イベント更新データの自動マージ (dynamic_events)
-          if (remoteData.dynamic_events && Array.isArray(remoteData.dynamic_events)) {
-            remoteData.dynamic_events.forEach(dynEv => {
-              if (!dynEv.id || !dynEv.title) return;
-              (dynEv.wilds || []).forEach(w => { w.dex = resolveSpecialFormId(w.dex, w.name); });
-              (dynEv.raids || []).forEach(r => { r.dex = resolveSpecialFormId(r.dex, r.name); });
-              (dynEv.fieldResearches || []).forEach(fr => { fr.rewardDex = resolveSpecialFormId(fr.rewardDex, fr.rewardName); });
-              (dynEv.tasks || []).forEach(t => { t.rewardDex = resolveSpecialFormId(t.rewardDex, t.rewardName); });
-
-              const existingEv = ALL_EVENTS.find(e => e.id === dynEv.id || e.title === dynEv.title);
-              if (!existingEv) {
-                ALL_EVENTS.push(dynEv);
-                needsRerender = true;
-              } else {
-                if (dynEv.fieldResearches && dynEv.fieldResearches.length > 0) {
-                  existingEv.fieldResearches = dynEv.fieldResearches;
-                  needsRerender = true;
-                }
-                if (dynEv.wilds && dynEv.wilds.length > (existingEv.wilds || []).length) {
-                  existingEv.wilds = dynEv.wilds;
-                  needsRerender = true;
-                }
-              }
-            });
-          }
-
-          if (needsRerender) {
-            renderTodaySection();
-            renderGanttTimeline();
-            renderEventAccordions();
-          }
-        })
-        .catch(() => {});
-    };
+    function hideEvent(id, e) { if(e)e.stopPropagation(); hiddenEventIds.add(id); renderGanttTimeline(); renderEventAccordions(); }
+    function restoreAllHiddenEvents() { hiddenEventIds.clear(); renderGanttTimeline(); renderEventAccordions(); }
+    function triggerBackNavigation() { window.history.back(); }
   </script>
 </body>
 </html>
