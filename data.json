@@ -1,6 +1,15 @@
 {
-  "updated_at": "2026/10/28 00:35 JST",
+  "updated_at": "2026/10/28 00:47 JST",
   "latest_news": [
+    {
+      "id": "news-2026-10-28-halloween-p1",
+      "date": "2026-10-28",
+      "date_label": "2026年10月28日",
+      "title": "【更新】ハロウィン2026パート1イベントの限定タスク・サプライズボックス詳細が判明！",
+      "details": "開催中のハロウィン2026パート1において、ゴーストタイプのポケモンを13匹捕まえる、レイドバトルで1回勝つなどの限定フィールドリサーチタスクやサプライズボックスの詳細情報が判明しました。",
+      "targetId": "ev-halloween-p1",
+      "is_update_notice": true
+    },
     {
       "id": "news-halloween-p1-update",
       "date": "2026-10-27",
@@ -67,36 +76,159 @@
   ],
   "field_research_updates": {
     "ev-halloween-p1": [
-      { "task": "ポケモンを5匹捕まえる", "rewardDex": 41, "rewardName": "ズバット (トップハット)", "shiny": true, "note": "初登場衣装✨ (CP256〜286)" },
-      { "task": "ゴーストタイプのポケモンを10匹捕まえる", "rewardDex": 25, "rewardName": "ピカチュウ (ハット&ケープ) / ヤバチャ (リボン)", "shiny": true, "note": "初登場衣装✨" },
-      { "task": "ポケモンを15匹捕まえる", "rewardDex": 854, "rewardName": "ヤバチャ (リボン)", "shiny": true, "note": "初登場衣装✨・真作チャンス" },
-      { "task": "ナイススローを5回投げる", "rewardDex": 37, "rewardName": "ロコン (ハロウィン) / フワライド (ハロウィン)", "shiny": true, "note": "ハロウィン衣装枠" },
-      { "task": "グレートスローを5回連続で投げる / レイドで2回勝つ", "rewardDex": 442, "rewardName": "ミカルゲ", "shiny": true, "note": "レアタスク枠✨ (CP829〜888)" },
-      { "task": "ポケモンを10匹進化させる / 強化を5回行う", "rewardDex": 10066, "rewardName": "ゲンガー / ヤミラミ / ジュペッタのメガエナジー×25", "shiny": false, "note": "メガエナジー枠" }
+      {
+        "task": "ゴーストタイプのポケモンを13匹捕まえる",
+        "rewardDex": 25,
+        "rewardName": "ピカチュウ (ハットとケープ)",
+        "shiny": true,
+        "note": "CP460等"
+      },
+      {
+        "task": "レイドバトルで1回勝つ",
+        "rewardDex": 25,
+        "rewardName": "ピカチュウ (ハットとケープ)",
+        "shiny": true,
+        "note": "CP285等"
+      },
+      {
+        "task": "レイドバトルで3回勝つ",
+        "rewardDex": 25,
+        "rewardName": "ピカチュウ (ハットとケープ)",
+        "shiny": true,
+        "note": "CP402等"
+      },
+      {
+        "task": "ナイススローを6回投げる",
+        "rewardDex": 710,
+        "rewardName": "バケッチャ",
+        "shiny": true,
+        "note": "おひろめ用厳選にも"
+      }
     ]
   },
-  "dynamic_events": [],
+  "dynamic_events": [
+    {
+      "id": "ev-halloween-p1",
+      "month": 10,
+      "title": "ハロウィン2026パート1",
+      "barClass": "bg-purple",
+      "category": "イベント",
+      "barIconDex": 25,
+      "startDay": 27,
+      "endDay": 1,
+      "hasPaid": true,
+      "hasFieldResearchPending": false,
+      "dateText": "10/27(火)10:00 〜 11/1(日)10:00",
+      "summary": "ピカチュウ(ハットとケープ)、ズバット(トップハット)、ヤバチャ(リボン)が新登場！ハロウィンのサプライズボックスや限定タスクが登場。",
+      "freeFeatures": [
+        "ピカチュウ (ハットとケープ)初登場",
+        "ズバット (トップハット)初登場",
+        "ヤバチャ (リボン)初登場",
+        "サプライズボックス登場",
+        "イベント限定フィールドリサーチ"
+      ],
+      "paidFeatures": [
+        "GOパスデラックス：ハロウィン2026 (¥1120)"
+      ],
+      "wilds": [
+        {
+          "dex": 25,
+          "name": "ピカチュウ (ハットとケープ)",
+          "shiny": true,
+          "note": "新登場"
+        },
+        {
+          "dex": 41,
+          "name": "ズバット (トップハット)",
+          "shiny": true,
+          "note": "新登場"
+        }
+      ],
+      "raids": [
+        {
+          "dex": 1012,
+          "name": "ヤバチャ (リボン)",
+          "shiny": true,
+          "note": "レイド等で登場",
+          "targetKey": "yanbaha",
+          "isDmax": false
+        }
+      ],
+      "fieldResearches": [
+        {
+          "task": "ゴーストタイプのポケモンを13匹捕まえる",
+          "rewardDex": 25,
+          "rewardName": "ピカチュウ (ハットとケープ)",
+          "shiny": true,
+          "note": "CP460等"
+        },
+        {
+          "task": "レイドバトルで1回勝つ",
+          "rewardDex": 25,
+          "rewardName": "ピカチュウ (ハットとケープ)",
+          "shiny": true,
+          "note": "CP285等"
+        },
+        {
+          "task": "レイドバトルで3回勝つ",
+          "rewardDex": 25,
+          "rewardName": "ピカチュウ (ハットとケープ)",
+          "shiny": true,
+          "note": "CP402等"
+        },
+        {
+          "task": "ナイススローを6回投げる",
+          "rewardDex": 710,
+          "rewardName": "バケッチャ",
+          "shiny": true,
+          "note": "おひろめ用厳選にも"
+        }
+      ],
+      "tasks": []
+    }
+  ],
   "event_gopass": {
-    "title": "GOパス：ハロウィン2026 (パート1＆パート2共通)",
-    "period": "挑戦期間: 2026年10月27日(火) 10:00 〜 11月5日(木) 20:00",
+    "title": "GOパス：ハロウィン2026",
+    "period": "2026/10/27(火)10:00 〜 11/5(木)20:00",
     "free_summary": [
-      "ランク10到達：期間中のポケモン捕獲時のアメが 2倍",
-      "ランク20到達：期間中のポケモン捕獲時のほしのすなが 2倍",
-      "ランク報酬：ハロウィン衣装ロコン・ヤミラミ・ヤバチャ・ゾロア等と遭遇、アメ、ボール等"
+      "ランク10到達でティア1ボーナス（捕獲時アメ2倍）",
+      "ランク20到達でティア2ボーナス（捕獲時ほしのすな2倍）"
     ],
     "deluxe_summary": [
-      "ランク10 / 20到達：捕獲時のアメ＆ほしのすなが 2倍 → 3倍に強化！",
-      "限定アバター：新作「パティシエ トップス」「パティシエ パンツ」",
-      "追加報酬：ミカルゲ遭遇、リボンヤバチャ、ふしぎなアメXL、プレミアムバトルパス等"
+      "価格：¥1120",
+      "パティシエトップス、パティシエパンツが入手可能",
+      "ランク10到達でティア1ボーナス（捕獲時アメ3倍）",
+      "ランク20到達でティア2ボーナス（捕獲時ほしのすな3倍）"
     ],
     "reward_rows": [
-      { "rank": "Rank 1", "free_reward": "ハロウィン衣装ロコン 遭遇 ＋ モンスターボール×10", "free_dex": 37, "deluxe_reward": "ヤバチャ(リボン) 遭遇 ＋ ほしのすな×2,500", "deluxe_dex": 854 },
-      { "rank": "Rank 5", "free_reward": "ヤミラミ 遭遇 ＋ ほしのすな×1,000", "free_dex": 302, "deluxe_reward": "ズバット(トップハット) 遭遇 ＋ プレミアムバトルパス×1", "deluxe_dex": 41 },
-      { "rank": "Rank 10", "free_reward": "⭐【ボーナス解放】期間中の捕獲時アメ2倍 ＋ フワライド(ハロウィン)遭遇", "free_dex": 426, "deluxe_reward": "💎【DX強化】期間中の捕獲時アメ3倍 ＋ パティシエトップス(衣装)", "deluxe_dex": 25 },
-      { "rank": "Rank 15", "free_reward": "ゾロア 遭遇 ＋ ふしぎなアメ×2", "free_dex": 570, "deluxe_reward": "ピカチュウ(ハット&ケープ) 遭遇 ＋ ふしぎなアメXL×1", "deluxe_dex": 25 },
-      { "rank": "Rank 20", "free_reward": "⭐【ボーナス解放】期間中の捕獲時ほしのすな2倍 ＋ ヤバチャ(リボン)遭遇", "free_dex": 854, "deluxe_reward": "💎【DX強化】期間中の捕獲時ほしのすな3倍 ＋ パティシエパンツ(衣装)", "deluxe_dex": 854 },
-      { "rank": "Rank 25", "free_reward": "ピカチュウ(ハット&ケープ) 遭遇 ＋ 2,500 XP", "free_dex": 25, "deluxe_reward": "ミカルゲ 遭遇 ＋ スーパーふかそうち×1", "deluxe_dex": 442 },
-      { "rank": "Rank 30〜", "free_reward": "ボチ / ハロウィン衣装モクロー / ほしのすな 等", "free_dex": 971, "deluxe_reward": "ミカルゲ追加遭遇 / ふしぎなアメXL / ほしのすな 等", "deluxe_dex": 442 }
+      {
+        "rank": "1",
+        "free_reward": "2500XP",
+        "free_dex": 0,
+        "deluxe_reward": "5000XP",
+        "deluxe_dex": 0
+      },
+      {
+        "rank": "2",
+        "free_reward": "ほしのすな x10",
+        "free_dex": 0,
+        "deluxe_reward": "ほしのすな x20",
+        "deluxe_dex": 0
+      },
+      {
+        "rank": "10",
+        "free_reward": "ティア1ボーナス (捕獲時アメ2倍)",
+        "free_dex": 0,
+        "deluxe_reward": "ティア1ボーナス (捕獲時アメ3倍)",
+        "deluxe_dex": 0
+      },
+      {
+        "rank": "20",
+        "free_reward": "ティア2ボーナス (捕獲時すな2倍)",
+        "free_dex": 0,
+        "deluxe_reward": "ティア2ボーナス (捕獲時すな3倍)",
+        "deluxe_dex": 0
+      }
     ]
   }
 }

@@ -1,0 +1,66 @@
+{
+  "executed_at": "2026/10/28 00:47 JST",
+  "status": "success",
+  "model_used": "gemini-flash-lite-latest",
+  "crawled_pages": [
+    {
+      "source": "GameWith",
+      "url": "https://pokemongo.gamewith.jp/",
+      "title": "ポケモンGO攻略｜ポケGO速報まとめサイト - ゲームウィズ",
+      "date_hint": "2026-10-27T22:07:07"
+    },
+    {
+      "source": "GameWith",
+      "url": "https://pokemongo.gamewith.jp/article/show/24434",
+      "title": "シャドウバースの評価とアプリ情報 - ゲームウィズ",
+      "date_hint": "2026-07-07T18:28:54"
+    },
+    {
+      "source": "GameWith",
+      "url": "https://pokemongo.gamewith.jp/article/show/102210",
+      "title": "【FGO】暁の山稜の周回効率とドロップ素材｜復刻アポクリファ - ゲームウィズ",
+      "date_hint": "2020-03-27T13:29:21"
+    },
+    {
+      "source": "9DBトップ",
+      "url": "https://9db.jp/pokemongo/",
+      "title": "ポケモンGO攻略 - みんポケ",
+      "date_hint": ""
+    },
+    {
+      "source": "9DB記事",
+      "url": "https://9db.jp/pokemongo/data/3905",
+      "title": "【ポケモンGO】コミュニティデイ開催履歴まとめ",
+      "date_hint": ""
+    },
+    {
+      "source": "9DB記事",
+      "url": "https://9db.jp/pokemongo/data/6606",
+      "title": "【ポケモンGO】新・個体値ランクチェッカー",
+      "date_hint": ""
+    },
+    {
+      "source": "9DB記事",
+      "url": "https://9db.jp/pokemongo/data/26442",
+      "title": "【ポケモンGO】ハロウィン2026パート1",
+      "date_hint": ""
+    },
+    {
+      "source": "9DB記事",
+      "url": "https://9db.jp/pokemongo/data/4351",
+      "title": "【ポケモンGO】開催イベント一覧",
+      "date_hint": ""
+    },
+    {
+      "source": "公式サイト",
+      "url": "https://pokemongo.com/ja/news",
+      "title": "ニュース – Pokémon GO",
+      "date_hint": ""
+    }
+  ],
+  "updated_events": [
+    "ev-halloween-p1"
+  ],
+  "added_news": [],
+  "errors": []
+}
