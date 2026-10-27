@@ -22,7 +22,7 @@ jobs:
 
       - name: 必要なライブラリのインストール
         run: |
-          pip install requests beautifulsoup4 google-genai
+          pip install -U requests beautifulsoup4 google-genai pydantic
 
       - name: AI自動解析スクリプトの実行
         env:
@@ -33,6 +33,6 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add data.json
-          git commit -m "AI auto update Pokemon GO data [skip ci]" || exit 0
+          git add data.json scrape_log.json
+          git commit -m "AI auto update Pokemon GO data & logs [skip ci]" || exit 0
           git push
