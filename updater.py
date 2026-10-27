@@ -17,7 +17,7 @@ today_str = now.strftime("%Y-%m-%d")
 now_str = now.strftime("%Y/%m/%d %H:%M JST")
 valid_months = [now.month, (now.month % 12) + 1, ((now.month + 1) % 12) + 1]
 
-print(f"[{now_str}] 4大サイト深掘りクローラー＆Gemini構造化解析を開始します...")
+print(f"[{now_str}] 4大サイト深掘りクローラー＆クロスチェック解析を開始します...")
 
 try:
     with open("data.json", "r", encoding="utf-8") as f:
@@ -34,8 +34,8 @@ scrape_log = {
     "status": "running",
     "model_used": "",
     "crawled_pages": [],
+    "verified_field_researches": {},
     "updated_events": [],
-    "added_news": [],
     "errors": []
 }
 
@@ -43,7 +43,8 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
 }
 
-def extract_clean_content(html_text: str, max_chars: int = 8000) -> tuple[str, str, str]:
+def extract_clean_content(html_text: str, max_chars: int = 10000) -> tuple[str, str, str]:
+    """記事全体の概要に加え、記事後半にある『フィールドリサーチ表・サプライズボックス・GOパス表』を優先抽出する"""
     soup = BeautifulSoup(html_text, "html.parser")
     title = soup.find("title").get_text(strip=True) if soup.find("title") else "No Title"
 
@@ -58,33 +59,58 @@ def extract_clean_content(html_text: str, max_chars: int = 8000) -> tuple[str, s
     for tag in soup(["script", "style", "nav", "footer", "aside", "noscript", "iframe", "svg"]):
         tag.decompose()
 
-    lines = []
+    general_lines = []
+    priority_research_lines = []
+    in_priority_section = False
+
     for el in soup.find_all(["h1", "h2", "h3", "h4", "p", "li", "tr"]):
-        if el.name == "tr":
+        if el.name in ["h1", "h2", "h3", "h4"]:
+            txt = el.get_text(" ", strip=True)
+            if not txt:
+                continue
+            header_line = f"\n### 【{txt}】"
+            general_lines.append(header_line)
+            if any(k in txt for k in ["フィールドリサーチ", "タスク", "リサーチ", "サプライズボックス", "GOパス", "タイムチャレンジ", "野生"]):
+                in_priority_section = True
+                priority_research_lines.append(header_line)
+            else:
+                in_priority_section = False
+        elif el.name == "tr":
             cells = [c.get_text(" ", strip=True) for c in el.find_all(["th", "td"]) if c.get_text(strip=True)]
             if cells:
-                lines.append(" | ".join(cells))
-        elif el.name in ["h1", "h2", "h3", "h4"]:
-            txt = el.get_text(" ", strip=True)
-            if txt:
-                lines.append(f"\n### 【{txt}】")
+                row_str = " | ".join(cells)
+                general_lines.append(row_str)
+                if in_priority_section or any(k in row_str for k in ["捕まえる", "投げる", "勝つ", "進化", "強化", "孵化", "スピン", "ヤバチャ", "ピカチュウ", "ズバット", "ミカルゲ", "ボチ"]):
+                    priority_research_lines.append(row_str)
         else:
             if el.find_parent("tr"):
                 continue
             txt = el.get_text(" ", strip=True)
             if txt and len(txt) >= 2:
-                lines.append(txt)
+                general_lines.append(txt)
+                if in_priority_section:
+                    priority_research_lines.append(txt)
 
-    dedup = []
-    for line in lines:
-        if not dedup or dedup[-1] != line:
-            dedup.append(line)
-    return title, date_hint, "\n".join(dedup)[:max_chars]
+    def dedup_list(lst):
+        res = []
+        for item in lst:
+            if not res or res[-1] != item:
+                res.append(item)
+        return res
+
+    gen_text = "\n".join(dedup_list(general_lines))[:5500]
+    prio_text = "\n".join(dedup_list(priority_research_lines))[:5500]
+
+    combined = gen_text
+    if prio_text:
+        combined += "\n\n--- [重要セクション（フィールドリサーチ・タスク・テーブル抜粋）] ---\n" + prio_text
+
+    return title, date_hint, combined[:max_chars]
 
 scraped_docs = []
 visited_urls = set()
 
-def fetch_and_record(source_name: str, url: str, max_chars: int = 8000) -> Optional[BeautifulSoup]:
+def fetch_and_record(source_name: str, url: str, max_chars: int = 10000) -> Optional[BeautifulSoup]:
     if url in visited_urls:
         return None
     visited_urls.add(url)
@@ -96,15 +122,15 @@ def fetch_and_record(source_name: str, url: str, max_chars: int = 8000) -> Optio
         title, date_hint, body = extract_clean_content(res.text, max_chars=max_chars)
         if any(old_y in title for old_y in ["2022", "2023", "2024", "2025"]) and str(now.year) not in title:
             return None
-        scraped_docs.append(f"=== [{source_name}] {title} ({url}) ===\n{body}")
+        scraped_docs.append(f"=== [サイト名: {source_name}] {title} ({url}) ===\n{body}")
         scrape_log["crawled_pages"].append({"source": source_name, "url": url, "title": title, "date_hint": date_hint})
         return BeautifulSoup(res.text, "html.parser")
     except Exception as e:
         scrape_log["errors"].append(f"{source_name} ({url}): {str(e)}")
         return None
 
-# 1. ポケマピ (一覧 + 最新記事8件)
-soup_pm = fetch_and_record("ポケマピ一覧", "https://pokemongo-get.com/events/", 7000)
+# 1. ポケマピ (イベント一覧 + 個別記事8件)
+soup_pm = fetch_and_record("ポケマピ", "https://pokemongo-get.com/events/", 7000)
 if soup_pm:
     pm_urls = []
     for a in soup_pm.find_all("a", href=re.compile(r"/board/\d+/")):
@@ -116,14 +142,33 @@ if soup_pm:
         if len(pm_urls) >= 8:
             break
     for u in pm_urls:
-        fetch_and_record("ポケマピ記事", u, 8500)
+        fetch_and_record("ポケマピ", u, 10000)
 
-# 2. GameWith (トップ + イベント/タスク一覧)
-for gw_u in ["https://pokemongo.gamewith.jp/", "https://pokemongo.gamewith.jp/article/show/24434", "https://pokemongo.gamewith.jp/article/show/102210"]:
-    fetch_and_record("GameWith", gw_u, 7500)
+# 2. GameWith (トップ + イベントまとめ + タスク一覧 + 個別イベント記事4件)
+gw_seeds = [
+    "https://pokemongo.gamewith.jp/",
+    "https://pokemongo.gamewith.jp/article/show/24434",
+    "https://pokemongo.gamewith.jp/article/show/102210"
+]
+gw_sub_urls = []
+for gw_u in gw_seeds:
+    soup_gw = fetch_and_record("GameWith", gw_u, 9000)
+    if soup_gw:
+        for a in soup_gw.find_all("a", href=re.compile(r"article/show/\d+")):
+            txt = a.get_text(strip=True)
+            href = a["href"]
+            if not href.startswith("http"):
+                href = "https://pokemongo.gamewith.jp" + href
+            if any(k in txt for k in ["ハロウィン", "イベント", "GOパス", "リサーチ", "ワイルド", "シャンデラ", "ヤミラミ"]):
+                if href not in visited_urls and href not in gw_sub_urls:
+                    gw_sub_urls.append(href)
+            if len(gw_sub_urls) >= 5:
+                break
+for u in gw_sub_urls:
+    fetch_and_record("GameWith", u, 10000)
 
-# 3. 9DB みんポケ (トップ + サブ記事4件)
-soup_9db = fetch_and_record("9DBトップ", "https://9db.jp/pokemongo/", 7500)
+# 3. 9DB みんポケ (トップ + 個別イベント・リサーチ記事5件)
+soup_9db = fetch_and_record("9DBみんポケ", "https://9db.jp/pokemongo/", 9000)
 if soup_9db:
     db_urls = []
     for a in soup_9db.find_all("a", href=re.compile(r"/pokemongo/data/\d+")):
@@ -132,13 +177,13 @@ if soup_9db:
             u = "https://9db.jp" + u
         if u not in visited_urls and u not in db_urls:
             db_urls.append(u)
-        if len(db_urls) >= 4:
+        if len(db_urls) >= 5:
             break
     for u in db_urls:
-        fetch_and_record("9DB記事", u, 8000)
+        fetch_and_record("9DBみんポケ", u, 10000)
 
 # 4. 公式サイト
-fetch_and_record("公式サイト", "https://pokemongo.com/ja/news", 7000)
+fetch_and_record("公式サイト", "https://pokemongo.com/ja/news", 7500)
 
 combined_text = "\n\n".join(scraped_docs)
 print(f"巡回完了: 合計 {len(scrape_log['crawled_pages'])} ページ ({len(combined_text)} 文字) を抽出しました。")
@@ -168,11 +213,12 @@ class EventRaidRefSchema(BaseModel):
     isDmax: bool = False
 
 class FieldResearchItemSchema(BaseModel):
-    task: str
+    task: str = Field(description="ポケストップから入手する正確なタスク条件文（スクレイピング本文に明記されているもののみ）")
     rewardDex: int
-    rewardName: str
+    rewardName: str = Field(description="報酬ポケモン名（複数いる場合は ' / ' 区切り）")
     shiny: bool
-    note: str = ""
+    note: str = Field(default="", description="確認できたサイト名や補足")
+    verified_sources: List[str] = Field(description="このタスクと報酬の組み合わせが確認できた出典サイト名のリスト（例: ['ポケマピ', 'GameWith', '9DBみんポケ']）")
 
 class SpecialTaskItemSchema(BaseModel):
     task: str
@@ -227,11 +273,15 @@ if not api_key:
 client = genai.Client(api_key=api_key)
 
 prompt = f"""
-あなたはポケモンGO攻略サイト（ポケマピ、GameWith、9DB、公式サイト）の情報を統合するAIです。
+あなたはポケモンGOの4大攻略サイト（ポケマピ、GameWith、9DBみんポケ、公式サイト）のデータを厳密にクロスチェック（照合）するデータベース管理AIです。
 現在の日本時間: {now_str} (今日の日付: {today_str} / 対象月: {valid_months})
 
-【重要ルール】
-1. 既存イベントID一覧（該当イベントの更新時は必ずこのIDを維持してください。一覧にない新規イベントは `ev-` から始まる新IDを付与してください）：
+【最重要：フィールドリサーチ＆サプライズボックス等の抽出における絶対ルール】
+1. **推測・過去記憶の完全禁止**:
+   あなたの事前知識（2023〜2025年のハロウィン等の過去タスク）は一切使用禁止です。必ず下の【スクレイピング取得テキスト】のテーブル・箇条書きに実際に書かれているタスク条件と報酬のみを抽出してください。
+2. **複数サイトの整合性チェック (`verified_sources`)**:
+   `fieldResearches` を出力する際は、ポケマピ・GameWith・9DBみんポケ等の複数サイトを見比べ、整合性が取れている正確なタスク文言（例：「ゴーストタイプのポケモンを〇匹捕まえる」「ポケモンを〇回強化する」など）と報酬ポケモンの対応のみを出力し、`verified_sources` に確認できたサイト名を記録してください。
+3. **既存イベントID一覧**:
    - "ev-halloween-p1" (ハロウィン2026パート1: 10/27〜11/1)
    - "ev-halloween-p2" (ハロウィン2026パート2: 11/1〜11/5)
    - "ev-supermega-chandelure" (シャンデラのスーパーメガレイドデイ: 10/31)
@@ -244,9 +294,7 @@ prompt = f"""
    - "ev-big-footprints" (大きな足跡イベント: 11/16〜11/24)
    - "ev-cd-pawniard" (コマタナのコミュニティデイ: 11/21)
    - "ev-tusk-wish-deoxys" (黄昏時の願い・デオキシス: 11/24〜)
-
-2. 既存イベント（特に開催中のハロウィンイベント等）について、「フィールドリサーチの具体的なタスク条件と報酬ポケモン」「サプライズボックスの中身・出現ポケモン」「GOパスのランク別報酬」などの詳細が記載されていれば、`dynamic_events` と `event_gopass` に漏れなく出力してください。
-3. 新規イベントの発表だけでなく、発表済みイベントに新しい詳細（タスク条件やサプライズボックス詳細など）が判明した場合も、`new_news` に `【更新】〇〇イベントの限定タスク・詳細が判明！`（`is_update_notice: true`）としてニュースを追加してください。
+   ※上記にない新規イベントが発表された場合は、`ev-` から始まる新しいIDを付与して `dynamic_events` に追加してください。
 
 【スクレイピング取得テキスト】:
 {combined_text}
@@ -263,14 +311,14 @@ try:
 
     for model_name in candidate_models:
         try:
-            print(f"Geminiモデル ({model_name}) で構造化解析を実行中...")
+            print(f"Geminiモデル ({model_name}) でクロスチェック解析を実行中...")
             response = client.models.generate_content(
                 model=model_name,
                 contents=prompt,
                 config=types.GenerateContentConfig(
                     response_mime_type="application/json",
                     response_schema=AIOutputSchema,
-                    temperature=0.1
+                    temperature=0.0
                 )
             )
             if response and response.text:
@@ -286,14 +334,13 @@ try:
             if "gemini" in m_name and "flash" in m_name:
                 try:
                     clean_name = m_name.replace("models/", "")
-                    print(f"自動検出モデル ({clean_name}) で再試行中...")
                     response = client.models.generate_content(
                         model=clean_name,
                         contents=prompt,
                         config=types.GenerateContentConfig(
                             response_mime_type="application/json",
                             response_schema=AIOutputSchema,
-                            temperature=0.1
+                            temperature=0.0
                         )
                     )
                     if response and response.text:
@@ -307,7 +354,7 @@ try:
 
     parsed: AIOutputSchema = AIOutputSchema.model_validate_json(response.text)
 
-    # 1. イベントとフィールドリサーチの統合
+    # 1. イベントとフィールドリサーチの整合性フィルタリング＆統合
     event_map = {ev["id"]: ev for ev in existing_events if isinstance(ev, dict) and "id" in ev}
     merged_fr_updates = dict(existing_fr_updates) if isinstance(existing_fr_updates, dict) else {}
 
@@ -315,10 +362,24 @@ try:
         ev_dict = ev_obj.model_dump()
         ev_id = ev_dict["id"]
         if ev_dict["month"] in valid_months:
+            # フィールドリサーチのクロスチェック検証（具体的なタスク名があり、出典が確認されたもののみ採用）
+            raw_frs = ev_dict.get("fieldResearches", [])
+            verified_frs = []
+            for fr in raw_frs:
+                sources = fr.get("verified_sources", [])
+                task_txt = fr.get("task", "")
+                if task_txt and "イベント限定フィールドリサーチ" not in task_txt and len(sources) >= 1:
+                    src_label = "・".join(sources)
+                    fr["note"] = f"{fr.get('note', '')} [確認: {src_label}]".strip()
+                    verified_frs.append(fr)
+
+            if verified_frs:
+                ev_dict["fieldResearches"] = verified_frs
+                merged_fr_updates[ev_id] = verified_frs
+                scrape_log["verified_field_researches"][ev_id] = verified_frs
+
             event_map[ev_id] = ev_dict
             scrape_log["updated_events"].append(ev_id)
-            if ev_dict.get("fieldResearches"):
-                merged_fr_updates[ev_id] = ev_dict["fieldResearches"]
 
     # 2. ニュースの統合
     all_news_pool = [n.model_dump() for n in parsed.new_news] + existing_news
@@ -379,10 +440,3 @@ except Exception as e:
     with open("scrape_log.json", "w", encoding="utf-8") as f:
         json.dump(scrape_log, f, ensure_ascii=False, indent=2)
     exit(1)
-
-// （任意）月ボタンも「今月・来月・再来月」に完全自動スライドさせる場合
-      const mGroup = document.getElementById("ganttMonthBtnGroup");
-      if (mGroup) {
-        const m3 = [todayMonth, (todayMonth % 12) + 1, ((todayMonth + 1) % 12) + 1];
-        mGroup.innerHTML = m3.map(m => `<button onclick="changeGanttMonth(${m})" id="monthBtn${m}" class="text-xs px-3 py-1 rounded-md font-bold transition">${m}月</button>`).join("");
-      }
