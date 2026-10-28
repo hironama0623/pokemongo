@@ -1,58 +1,13 @@
 {
-  "updated_at": "2026/10/28 18:40 JST",
+  "updated_at": "2026/10/28 08:35 JST",
   "latest_news": [
     {
-      "id": "news-20261028-giratina-o",
-      "date": "2026-10-28",
-      "date_label": "10/28(水)",
-      "title": "伝説レイドに「ギラティナ(オリジン)」、メガレイドに「メガヤミラミ」が登場！",
-      "details": "本日10月28日(水)5:00より、伝説レイドバトルに「ギラティナ(オリジンフォルム)」、メガレイドに「メガヤミラミ」が登場しています（11月3日(火・祝)まで）。また、本日18:00〜19:00にはギラティナ(オリジンフォルム)のレイドアワーが開催され、現地レイド完了でふしぎなアメXLを獲得できます。",
-      "targetId": "ev-raid-giratina-o",
-      "is_update_notice": true
-    },
-    {
-      "id": "news-20261028-halloween-surprise-box",
-      "date": "2026-10-28",
-      "date_label": "10/28(水)",
-      "title": "ハロウィン2026パート1：フィールドに「サプライズボックス」が出現中！",
-      "details": "「ハロウィン2026パート1」開催中、マップ上に「ハロウィンのサプライズボックス」が落ちている場合があります。タップするとポケモンと出会えたり、アメが手に入ることが確認されています。",
-      "targetId": "ev-halloween-p1",
-      "is_update_notice": true
-    },
-    {
-      "id": "news-dia-de-muertos-2026",
+      "id": "news-halloween-p1-update",
       "date": "2026-10-28",
       "date_label": "10/28",
-      "title": "【メキシコ限定】Día de Muertos en 2026が開催！",
-      "details": "メキシコ限定の死者の日イベント2026が開催決定。期間は10/28 01:00から11/6 11:00まで。",
-      "targetId": "ev-dia-de-muertos-2026",
-      "is_update_notice": false
-    },
-    {
-      "id": "news-2026-10-28-halloween-p1",
-      "date": "2026-10-28",
-      "date_label": "2026年10月28日",
-      "title": "【更新】ハロウィン2026パート1イベントの限定タスク・サプライズボックス詳細が判明！",
-      "details": "開催中のハロウィン2026パート1において、ゴーストタイプのポケモンを13匹捕まえる、レイドバトルで1回勝つなどの限定フィールドリサーチタスクやサプライズボックスの詳細情報が判明しました。",
-      "targetId": "ev-halloween-p1",
-      "is_update_notice": true
-    },
-    {
-      "id": "news-halloween-2026-p1",
-      "date": "2026-10-27",
-      "date_label": "10/27",
-      "title": "ハロウィン2026パート1が開催！",
-      "details": "ハロウィン2026パート1が開催！ピカチュウ(ハットとケープ)、ズバット(トップハット)、ヤバチャ(リボン)が初登場します。",
-      "targetId": "ev-halloween-p1",
-      "is_update_notice": false
-    },
-    {
-      "id": "news-halloween-p1-update",
-      "date": "2026-10-27",
-      "date_label": "10/27",
       "is_update_notice": true,
-      "title": "【更新】「ハロウィン2026パート1」の限定フィールドリサーチ＆サプライズボックスの中身・GOパス報酬が判明！",
-      "details": "10/27(火)10時のイベント開始に伴い、ポケストップ限定フィールドリサーチのタスク条件（ヤバチャ・衣装ピカチュウ・衣装ズバット・ミカルゲ等）と、マップ上の「サプライズボックス」から出現するポケモン・お菓子の詳細、GOパス：ハロウィンのランク別報酬を反映しました！",
+      "title": "【更新】「ハロウィン2026パート1」フィールドリサーチ全報酬ポケモン＆サプライズボックス仕様・新規レイド対策を追加！",
+      "details": "ポケストップ限定フィールドリサーチで出現する具体的なポケモン一覧（リボンヤバチャ・衣装ピカチュウ・衣装ズバット・バケッチャ4種・ミカルゲ・ゾロア等）と、サプライズボックスの独立枠、さらに11月登場のダークライ・クレセリア・メガジュペッタ等の対策ページをすべて反映しました！",
       "targetId": "ev-halloween-p1"
     },
     {
@@ -90,413 +45,103 @@
       "title": "ハロウィン2026パート1(10/27〜)＆パート2(11/1〜)詳細！新衣装3種・色違いボチ・メガヤミラミ『ナイトヘッド＋』",
       "details": "パート1ではハット＆ケープピカチュウ、トップハットズバット、リボンヤバチャが初登場＆サプライズボックス出現。11/1からのパート2では「色違いのボチ」初実装＆メガヤミラミのメガレベル4（ナイトヘッド＋）が解放されます！",
       "targetId": "ev-halloween-p2"
+    },
+    {
+      "id": "news-pawniard-cd",
+      "date": "2026-10-22",
+      "date_label": "10/22",
+      "is_update_notice": false,
+      "title": "11月のコミュニティ・デイは「コマタナ」！11月21日(土)14:00〜17:00開催決定",
+      "details": "2026年11月のコミュニティ・デイ対象ポケモンが「コマタナ（キリキザン / ドドゲザン）」に決定！11/21(土)14時〜17時に開催されます。",
+      "targetId": "ev-cd-pawniard"
+    },
+    {
+      "id": "news-nov-schedule",
+      "date": "2026-10-20",
+      "date_label": "10/20",
+      "is_update_notice": false,
+      "title": "2026年11月スケジュール＆ワイルドウィーク発表！剣の王ザシアン・盾の王ザマゼンタ・合体キュレム・銀の王冠登場",
+      "details": "11/9〜13のワイルドウィークにザシアン(けんのおう)・ザマゼンタ(たてのおう)がエナジー付きで登場！さらに11/14〜15のワイルドエリアグローバルではホワイト/ブラックキュレム、キョダイジュラルドン(色違い)、DMaxディアルガ・パルキアが降臨！",
+      "targetId": "ev-wildarea-2026"
     }
   ],
   "field_research_updates": {
     "ev-halloween-p1": [
       {
+        "task": "ゴーストタイプのポケモンを5匹捕まえる",
+        "rewardDex": 41,
+        "rewardName": "ズバット(トップハット) / ヒトモシ / ゾロア",
+        "shiny": true,
+        "note": "初登場衣装ズバット(CP256〜286) / ヒトモシ(CP396〜431) / ゾロア(CP468〜503)"
+      },
+      {
+        "task": "ゴーストタイプのポケモンを10匹捕まえる",
+        "rewardDex": 854,
+        "rewardName": "ヤバチャ(リボン) / ヤミラミ",
+        "shiny": true,
+        "note": "初登場衣装ヤバチャ(CP451〜488) / ヤミラミ(CP594〜632)"
+      },
+      {
         "task": "ゴーストタイプのポケモンを13匹捕まえる",
-        "rewardDex": 460,
-        "rewardName": "ユキハミ",
-        "shiny": false,
-        "note": "GameWith / 9DBみんポケ [確認: GameWith・9DBみんポケ]",
-        "verified_sources": [
-          "GameWith",
-          "9DBみんポケ"
-        ]
-      },
-      {
-        "task": "レイドバトルで1回勝つ",
-        "rewardDex": 285,
-        "rewardName": "ドッコラー",
-        "shiny": false,
-        "note": "GameWith / 9DBみんポケ [確認: GameWith・9DBみんポケ]",
-        "verified_sources": [
-          "GameWith",
-          "9DBみんポケ"
-        ]
-      },
-      {
-        "task": "レイドバトルで3回勝つ",
-        "rewardDex": 402,
-        "rewardName": "バケッチャ",
-        "shiny": false,
-        "note": "GameWith / 9DBみんポケ [確認: GameWith・9DBみんポケ]",
-        "verified_sources": [
-          "GameWith",
-          "9DBみんポケ"
-        ]
+        "rewardDex": 442,
+        "rewardName": "ミカルゲ / ボチ",
+        "shiny": true,
+        "note": "レア枠ミカルゲ✨(CP829〜888) / ボチ(CP426〜460)"
       },
       {
         "task": "ナイススローを6回投げる",
-        "rewardDex": 515,
-        "rewardName": "バケッチャ",
+        "rewardDex": 710,
+        "rewardName": "バケッチャ(ちいさい) / バケッチャ(ふつう) / バケッチャ(おおきい) / バケッチャ(とくだい)",
+        "shiny": true,
+        "note": "全4サイズ出現✨ (CP515 / CP523 / CP533 / CP536)"
+      },
+      {
+        "task": "レイドバトルで1回勝つ",
+        "rewardDex": 854,
+        "rewardName": "ヤバチャ(リボン) / ズバット(トップハット)",
+        "shiny": true,
+        "note": "初登場衣装✨ (CP488 / CP285)"
+      },
+      {
+        "task": "レイドバトルで3回勝つ",
+        "rewardDex": 25,
+        "rewardName": "ピカチュウ(ハットとケープ) / ミカルゲ",
+        "shiny": true,
+        "note": "初登場衣装ピカチュウ✨(CP402) / ミカルゲ✨(CP888)"
+      },
+      {
+        "task": "ポケモンを5回強化する / 進化させる",
+        "rewardDex": 10066,
+        "rewardName": "ゲンガー / ヤミラミ / ジュペッタ / ヘルガーのメガエナジー×25",
         "shiny": false,
-        "note": "GameWith / 9DBみんポケ [確認: GameWith・9DBみんポケ]",
-        "verified_sources": [
-          "GameWith",
-          "9DBみんポケ"
-        ]
+        "note": "メガエナジー確定枠"
       }
     ]
   },
-  "dynamic_events": [
-    {
-      "id": "ev-halloween-p1",
-      "month": 10,
-      "title": "ハロウィン2026パート1",
-      "barClass": "bg-purple-600",
-      "category": "event",
-      "barIconDex": 359,
-      "startDay": 27,
-      "endDay": 1,
-      "hasPaid": false,
-      "hasFieldResearchPending": false,
-      "dateText": "10/27(火)10:00〜11/1(日)10:00",
-      "summary": "ハロウィン2026パート1が開催中！",
-      "freeFeatures": [
-        "ハロウィンイベントパート1開催"
-      ],
-      "paidFeatures": [],
-      "wilds": [],
-      "raids": [
-        {
-          "dex": 487,
-          "name": "ギラティナ(オリジン)",
-          "shiny": true,
-          "note": "伝説レイド",
-          "targetKey": "giratina-o",
-          "isDmax": false
-        },
-        {
-          "dex": 302,
-          "name": "メガヤミラミ",
-          "shiny": true,
-          "note": "メガレイド",
-          "targetKey": "mega-sableye",
-          "isDmax": false
-        }
-      ],
-      "fieldResearches": [],
-      "tasks": []
-    },
-    {
-      "id": "ev-dia-de-muertos-2026",
-      "month": 10,
-      "title": "【メキシコ限定】Día de Muertos en 2026",
-      "barClass": "bg-orange-500",
-      "category": "地域限定イベント",
-      "barIconDex": 104,
-      "startDay": 28,
-      "endDay": 6,
-      "hasPaid": false,
-      "hasFieldResearchPending": false,
-      "dateText": "10/28(水)01:00 〜 11/6(金)11:00",
-      "summary": "メキシコ限定で開催される死者の日イベント2026。",
-      "freeFeatures": [
-        "メキシコ地域限定開催"
-      ],
-      "paidFeatures": [],
-      "wilds": [],
-      "raids": [],
-      "fieldResearches": [],
-      "tasks": []
-    },
-    {
-      "id": "ev-raid-giratina-o",
-      "month": 10,
-      "title": "ギラティナ(オリジン)・メガヤミラミ",
-      "barClass": "bg-yellow-600",
-      "category": "raid",
-      "barIconDex": 487,
-      "startDay": 28,
-      "endDay": 3,
-      "hasPaid": false,
-      "hasFieldResearchPending": false,
-      "dateText": "10/28(水)〜11/3(火)",
-      "summary": "ギラティナ(オリジン)とメガヤミラミが登場",
-      "freeFeatures": [
-        "伝説レイド・メガレイド出現"
-      ],
-      "paidFeatures": [],
-      "wilds": [],
-      "raids": [
-        {
-          "dex": 487,
-          "name": "ギラティナ(オリジン)",
-          "shiny": true,
-          "note": "伝説レイド",
-          "targetKey": "giratina-o",
-          "isDmax": false
-        },
-        {
-          "dex": 302,
-          "name": "メガヤミラミ",
-          "shiny": true,
-          "note": "メガレイド",
-          "targetKey": "mega-sableye",
-          "isDmax": false
-        }
-      ],
-      "fieldResearches": [],
-      "tasks": []
-    },
-    {
-      "id": "ev-gopass-nov",
-      "month": 11,
-      "title": "GOパス11月・グラードン",
-      "barClass": "bg-green-600",
-      "category": "gopass",
-      "barIconDex": 383,
-      "startDay": 3,
-      "endDay": 1,
-      "hasPaid": true,
-      "hasFieldResearchPending": false,
-      "dateText": "11/3(火)〜12/1(火)",
-      "summary": "GOパス11月が開催。グラードンや400ポケコインなどが入手可能",
-      "freeFeatures": [
-        "グラードンとの出会い",
-        "400ポケコイン"
-      ],
-      "paidFeatures": [
-        "追加の1000ポケコイン",
-        "スーパーふかそうち"
-      ],
-      "wilds": [],
-      "raids": [],
-      "fieldResearches": [],
-      "tasks": []
-    },
-    {
-      "id": "ev-halloween-p2",
-      "month": 11,
-      "title": "ハロウィン2026パート2",
-      "barClass": "bg-purple-700",
-      "category": "event",
-      "barIconDex": 359,
-      "startDay": 1,
-      "endDay": 5,
-      "hasPaid": false,
-      "hasFieldResearchPending": false,
-      "dateText": "11/1(日)10:00〜11/5(木)20:00",
-      "summary": "ハロウィン2026パート2が開催予定",
-      "freeFeatures": [
-        "ハロウィンイベントパート2開催"
-      ],
-      "paidFeatures": [],
-      "wilds": [],
-      "raids": [],
-      "fieldResearches": [],
-      "tasks": []
-    },
-    {
-      "id": "ev-supermega-chandelure",
-      "month": 10,
-      "title": "シャンデラのスーパーメガレイドデイ",
-      "barClass": "bg-red-600",
-      "category": "raid",
-      "barIconDex": 609,
-      "startDay": 31,
-      "endDay": 31,
-      "hasPaid": false,
-      "hasFieldResearchPending": false,
-      "dateText": "10/31(土)14:00〜17:00",
-      "summary": "シャンデラのスーパーメガレイドデイが開催予定",
-      "freeFeatures": [
-        "スーパーメガレイドデイ開催"
-      ],
-      "paidFeatures": [],
-      "wilds": [],
-      "raids": [],
-      "fieldResearches": [],
-      "tasks": []
-    },
-    {
-      "id": "ev-dmax-sableye-week",
-      "month": 10,
-      "title": "ダイマックスヤミラミ週間",
-      "barClass": "bg-blue-600",
-      "category": "maxbattle",
-      "barIconDex": 302,
-      "startDay": 26,
-      "endDay": 1,
-      "hasPaid": false,
-      "hasFieldResearchPending": false,
-      "dateText": "10/26(月)〜11/1(日)",
-      "summary": "ダイマックスヤミラミの出現率がアップ",
-      "freeFeatures": [
-        "ダイマックスヤミラミ出現率アップ"
-      ],
-      "paidFeatures": [],
-      "wilds": [],
-      "raids": [],
-      "fieldResearches": [],
-      "tasks": []
-    },
-    {
-      "id": "ev-dmax-machop-week",
-      "month": 11,
-      "title": "ダイマックスワンリキー週間",
-      "barClass": "bg-blue-600",
-      "category": "maxbattle",
-      "barIconDex": 66,
-      "startDay": 2,
-      "endDay": 8,
-      "hasPaid": false,
-      "hasFieldResearchPending": false,
-      "dateText": "11/2(月)〜11/8(日)",
-      "summary": "ダイマックスワンリキーの出現率がアップ",
-      "freeFeatures": [
-        "ダイマックスワンリキー出現率アップ"
-      ],
-      "paidFeatures": [],
-      "wilds": [],
-      "raids": [],
-      "fieldResearches": [],
-      "tasks": []
-    },
-    {
-      "id": "ev-wildweek-2026",
-      "month": 11,
-      "title": "ワイルドウィーク",
-      "barClass": "bg-yellow-500",
-      "category": "event",
-      "barIconDex": 0,
-      "startDay": 9,
-      "endDay": 13,
-      "hasPaid": false,
-      "hasFieldResearchPending": false,
-      "dateText": "11/9(月)〜11/13(金)",
-      "summary": "ワイルドウィーク2026が開催予定",
-      "freeFeatures": [
-        "ワイルドウィーク開催"
-      ],
-      "paidFeatures": [],
-      "wilds": [],
-      "raids": [],
-      "fieldResearches": [],
-      "tasks": []
-    },
-    {
-      "id": "ev-wildarea-2026",
-      "month": 11,
-      "title": "GOワイルドエリア2026グローバル",
-      "barClass": "bg-yellow-700",
-      "category": "event",
-      "barIconDex": 0,
-      "startDay": 14,
-      "endDay": 15,
-      "hasPaid": true,
-      "hasFieldResearchPending": false,
-      "dateText": "11/14(土)〜11/15(日)",
-      "summary": "GOワイルドエリア2026グローバルが開催予定",
-      "freeFeatures": [
-        "GOワイルドエリアグローバル開催"
-      ],
-      "paidFeatures": [
-        "有料チケット特典"
-      ],
-      "wilds": [],
-      "raids": [],
-      "fieldResearches": [],
-      "tasks": []
-    },
-    {
-      "id": "ev-big-footprints",
-      "month": 11,
-      "title": "大きな足跡イベント",
-      "barClass": "bg-orange-600",
-      "category": "event",
-      "barIconDex": 0,
-      "startDay": 16,
-      "endDay": 24,
-      "hasPaid": false,
-      "hasFieldResearchPending": false,
-      "dateText": "11/16(月)〜11/24(火)",
-      "summary": "大きな足跡イベントが開催予定",
-      "freeFeatures": [
-        "大きな足跡イベント開催"
-      ],
-      "paidFeatures": [],
-      "wilds": [],
-      "raids": [],
-      "fieldResearches": [],
-      "tasks": []
-    },
-    {
-      "id": "ev-cd-pawniard",
-      "month": 11,
-      "title": "コマタナのコミュニティデイ",
-      "barClass": "bg-yellow-600",
-      "category": "community",
-      "barIconDex": 624,
-      "startDay": 21,
-      "endDay": 21,
-      "hasPaid": false,
-      "hasFieldResearchPending": false,
-      "dateText": "11/21(土)14:00〜17:00",
-      "summary": "コマタナのコミュニティデイが開催予定",
-      "freeFeatures": [
-        "コマタナ大量発生"
-      ],
-      "paidFeatures": [],
-      "wilds": [],
-      "raids": [],
-      "fieldResearches": [],
-      "tasks": []
-    },
-    {
-      "id": "ev-tusk-wish-deoxys",
-      "month": 11,
-      "title": "黄昏時の願い・デオキシス",
-      "barClass": "bg-purple-600",
-      "category": "event",
-      "barIconDex": 386,
-      "startDay": 24,
-      "endDay": 30,
-      "hasPaid": false,
-      "hasFieldResearchPending": false,
-      "dateText": "11/24(火)〜11/30(月)",
-      "summary": "黄昏時の願いイベントとデオキシス出現",
-      "freeFeatures": [
-        "黄昏時の願い開催"
-      ],
-      "paidFeatures": [],
-      "wilds": [],
-      "raids": [],
-      "fieldResearches": [],
-      "tasks": []
-    }
-  ],
+  "dynamic_events": [],
+  "dynamic_raids": {},
+  "dynamic_dmax": {},
   "event_gopass": {
-    "title": "GOパス10月",
-    "period": "2026/10/6(火)10:00〜11/3(火)10:00",
+    "title": "GOパス：ハロウィン2026 (パート1＆パート2共通)",
+    "period": "挑戦期間: 2026年10月27日(火) 10:00 〜 11月5日(木) 20:00",
     "free_summary": [
-      "カイオーガ",
-      "ふしぎなアメXL",
-      "プレミアムバトルパス",
-      "しあわせタマゴ"
+      "ランク10到達：期間中のポケモン捕獲時のアメが 2倍",
+      "ランク20到達：期間中のポケモン捕獲時のほしのすなが 2倍",
+      "ランク報酬：ハット＆ケープピカチュウ・トップハットズバット・リボンヤバチャ・ゾロア等と遭遇"
     ],
     "deluxe_summary": [
-      "キラチャーム",
-      "スーパーふかそうち",
-      "さらにポケモンと遭遇"
+      "ランク10 / 20到達：捕獲時のアメ＆ほしのすなが 2倍 → 3倍に強化！",
+      "限定アバター：新作「パティシエ トップス」「パティシエ パンツ」",
+      "追加報酬：ミカルゲ遭遇、リボンヤバチャ、ふしぎなアメXL、プレミアムバトルパス等"
     ],
     "reward_rows": [
-      {
-        "rank": "1",
-        "free_reward": "ポケモン交換でポケモンのアメ1個増加・ポケモン交換でアメXL確定(TL31以上)",
-        "free_dex": 0,
-        "deluxe_reward": "ポケモン交換でポケモンのアメ1個増加・ポケモン交換でアメXL確定(TL31以上)",
-        "deluxe_dex": 0
-      },
-      {
-        "rank": "100",
-        "free_reward": "カイオーガ",
-        "free_dex": 382,
-        "deluxe_reward": "キラチャーム",
-        "deluxe_dex": 0
-      }
+      { "rank": "Rank 1", "free_reward": "ズバット(トップハット) 遭遇 ＋ モンスターボール×10", "free_dex": 41, "deluxe_reward": "ヤバチャ(リボン) 遭遇 ＋ ほしのすな×2,500", "deluxe_dex": 854 },
+      { "rank": "Rank 5", "free_reward": "ヤミラミ 遭遇 ＋ ほしのすな×1,000", "free_dex": 302, "deluxe_reward": "ズバット(トップハット) 遭遇 ＋ プレミアムバトルパス×1", "deluxe_dex": 41 },
+      { "rank": "Rank 10", "free_reward": "⭐【ボーナス解放】期間中の捕獲時アメ2倍 ＋ フワライド(ハロウィン)遭遇", "free_dex": 426, "deluxe_reward": "💎【DX強化】期間中の捕獲時アメ3倍 ＋ パティシエトップス(衣装)", "deluxe_dex": 25 },
+      { "rank": "Rank 15", "free_reward": "ゾロア 遭遇 ＋ ふしぎなアメ×2", "free_dex": 570, "deluxe_reward": "ピカチュウ(ハットとケープ) 遭遇 ＋ ふしぎなアメXL×1", "deluxe_dex": 25 },
+      { "rank": "Rank 20", "free_reward": "⭐【ボーナス解放】期間中の捕獲時ほしのすな2倍 ＋ ヤバチャ(リボン)遭遇", "free_dex": 854, "deluxe_reward": "💎【DX強化】期間中の捕獲時ほしのすな3倍 ＋ パティシエパンツ(衣装)", "deluxe_dex": 854 },
+      { "rank": "Rank 25", "free_reward": "ピカチュウ(ハットとケープ) 遭遇 ＋ 2,500 XP", "free_dex": 25, "deluxe_reward": "ミカルゲ 遭遇 ＋ スーパーふかそうち×1", "deluxe_dex": 442 },
+      { "rank": "Rank 30〜", "free_reward": "ボチ / ハロウィン衣装モクロー / バケッチャ 遭遇 ＋ ほしのすな", "free_dex": 971, "deluxe_reward": "ミカルゲ追加遭遇 ＋ ふしぎなアメXL / ほしのすな", "deluxe_dex": 442 }
     ]
   }
 }
