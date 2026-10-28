@@ -1,5 +1,5 @@
 {
-  "executed_at": "2026/10/28 12:35 JST",
+  "executed_at": "2026/10/28 18:40 JST",
   "status": "success",
   "model_used": "gemini-flash-lite-latest",
   "crawled_pages": [
@@ -7,7 +7,7 @@
       "source": "GameWith",
       "url": "https://pokemongo.gamewith.jp/",
       "title": "ポケモンGO攻略｜ポケGO速報まとめサイト - ゲームウィズ",
-      "date_hint": "2026-10-28T11:26:57"
+      "date_hint": "2026-10-28T17:35:30"
     },
     {
       "source": "GameWith",
@@ -65,26 +65,26 @@
     },
     {
       "source": "9DBみんポケ",
-      "url": "https://9db.jp/pokemongo/data/6606",
-      "title": "【ポケモンGO】新・個体値ランクチェッカー",
-      "date_hint": ""
-    },
-    {
-      "source": "9DBみんポケ",
       "url": "https://9db.jp/pokemongo/data/9906",
       "title": "【ポケモンGO】レイド自動マッチング(旧招待レイド)",
       "date_hint": ""
     },
     {
       "source": "9DBみんポケ",
-      "url": "https://9db.jp/pokemongo/data/19",
-      "title": "【ポケモンGO】雑談掲示板(913345コメント)",
+      "url": "https://9db.jp/pokemongo/data/6606",
+      "title": "【ポケモンGO】新・個体値ランクチェッカー",
       "date_hint": ""
     },
     {
       "source": "9DBみんポケ",
-      "url": "https://9db.jp/pokemongo/data/26442",
-      "title": "【ポケモンGO】ハロウィン2026パート1",
+      "url": "https://9db.jp/pokemongo/data/4351",
+      "title": "【ポケモンGO】開催イベント一覧",
+      "date_hint": ""
+    },
+    {
+      "source": "9DBみんポケ",
+      "url": "https://9db.jp/pokemongo/data/2308",
+      "title": "【ポケモンGO】レイドボスの開催日程（最新版）",
       "date_hint": ""
     },
     {
@@ -94,56 +94,20 @@
       "date_hint": ""
     }
   ],
-  "verified_field_researches": {
-    "ev-halloween-p1": [
-      {
-        "task": "ゴーストタイプのポケモンを13匹捕まえる",
-        "rewardDex": 460,
-        "rewardName": "ユキハミ",
-        "shiny": false,
-        "note": "GameWith / 9DBみんポケ [確認: GameWith・9DBみんポケ]",
-        "verified_sources": [
-          "GameWith",
-          "9DBみんポケ"
-        ]
-      },
-      {
-        "task": "レイドバトルで1回勝つ",
-        "rewardDex": 285,
-        "rewardName": "ドッコラー",
-        "shiny": false,
-        "note": "GameWith / 9DBみんポケ [確認: GameWith・9DBみんポケ]",
-        "verified_sources": [
-          "GameWith",
-          "9DBみんポケ"
-        ]
-      },
-      {
-        "task": "レイドバトルで3回勝つ",
-        "rewardDex": 402,
-        "rewardName": "バケッチャ",
-        "shiny": false,
-        "note": "GameWith / 9DBみんポケ [確認: GameWith・9DBみんポケ]",
-        "verified_sources": [
-          "GameWith",
-          "9DBみんポケ"
-        ]
-      },
-      {
-        "task": "ナイススローを6回投げる",
-        "rewardDex": 515,
-        "rewardName": "バケッチャ",
-        "shiny": false,
-        "note": "GameWith / 9DBみんポケ [確認: GameWith・9DBみんポケ]",
-        "verified_sources": [
-          "GameWith",
-          "9DBみんポケ"
-        ]
-      }
-    ]
-  },
+  "verified_field_researches": {},
   "updated_events": [
-    "ev-halloween-p1"
+    "ev-halloween-p1",
+    "ev-halloween-p2",
+    "ev-supermega-chandelure",
+    "ev-dmax-sableye-week",
+    "ev-raid-giratina-o",
+    "ev-dmax-machop-week",
+    "ev-gopass-nov",
+    "ev-wildweek-2026",
+    "ev-wildarea-2026",
+    "ev-big-footprints",
+    "ev-cd-pawniard",
+    "ev-tusk-wish-deoxys"
   ],
   "errors": []
 }
