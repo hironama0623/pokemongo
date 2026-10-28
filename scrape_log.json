@@ -1,7 +1,7 @@
 {
-  "executed_at": "2026/10/28 22:50 JST",
+  "executed_at": "2026/10/29 07:30 JST",
   "status": "success",
-  "model_used": "gemini-3.5-flash-lite",
+  "model_used": "gemini-flash-latest",
   "crawled_pages": [
     {
       "source": "GameWith",
@@ -65,20 +65,20 @@
     },
     {
       "source": "9DBみんポケ",
+      "url": "https://9db.jp/pokemongo/data/26625",
+      "title": "【ポケモンGO】大きな足跡",
+      "date_hint": ""
+    },
+    {
+      "source": "9DBみんポケ",
+      "url": "https://9db.jp/pokemongo/data/26660",
+      "title": "【ポケモンGO】ムゲンダイナ再来",
+      "date_hint": ""
+    },
+    {
+      "source": "9DBみんポケ",
       "url": "https://9db.jp/pokemongo/data/6606",
       "title": "【ポケモンGO】新・個体値ランクチェッカー",
-      "date_hint": ""
-    },
-    {
-      "source": "9DBみんポケ",
-      "url": "https://9db.jp/pokemongo/data/12965",
-      "title": "【ポケモンGO】ポケふた交換掲示板(2138380コメント)",
-      "date_hint": ""
-    },
-    {
-      "source": "9DBみんポケ",
-      "url": "https://9db.jp/pokemongo/data/19",
-      "title": "【ポケモンGO】雑談掲示板(913457コメント)",
       "date_hint": ""
     },
     {
@@ -95,44 +95,51 @@
     }
   ],
   "verified_field_researches": {
-    "ev-halloween-p1": [
+    "ev-big-footprints": [
       {
-        "task": "ゴーストタイプのポケモンを5匹捕まえる",
-        "rewardDex": 302,
-        "rewardName": "ヤミラミ / カゲボウズ / ヒトモシ",
+        "task": "マックスバトルで1回勝つ",
+        "rewardDex": 374,
+        "rewardName": "ダンバル",
         "shiny": true,
-        "note": "ハロウィンフィールドリサーチ [確認: GameWith・9DBみんポケ]",
+        "note": "CP375〜404 [確認: 9DBみんポケ・GameWith]",
         "verified_sources": [
-          "GameWith",
-          "9DBみんポケ"
-        ]
-      }
-    ],
-    "ev-halloween-p2": [
-      {
-        "task": "ゴーストタイプのポケモンを7匹捕まえる",
-        "rewardDex": 562,
-        "rewardName": "デスマス / ガラルデスマス",
-        "shiny": true,
-        "note": "パート2リサーチ [確認: GameWith]",
-        "verified_sources": [
+          "9DBみんポケ",
           "GameWith"
+        ]
+      },
+      {
+        "task": "パワースポットに3回アクセスする",
+        "rewardDex": 66,
+        "rewardName": "ワンリキー",
+        "shiny": true,
+        "note": "CP503〜544 [確認: 9DBみんポケ・GameWith]",
+        "verified_sources": [
+          "9DBみんポケ",
+          "GameWith"
+        ]
+      },
+      {
+        "task": "マックス粒子を500MP集める",
+        "rewardDex": 92,
+        "rewardName": "ゴース",
+        "shiny": true,
+        "note": "CP478〜529 [確認: 9DBみんポケ]",
+        "verified_sources": [
+          "9DBみんポケ"
         ]
       }
     ]
   },
   "updated_events": [
-    "ev-halloween-p1",
-    "ev-raid-giratina-o",
-    "ev-supermega-chandelure",
-    "ev-halloween-p2",
-    "ev-big-footprints",
-    "ev-tusk-wish-deoxys"
+    "ev-big-footprints"
   ],
   "added_or_updated_raids": [
-    "giratina-origin",
-    "darkrai"
+    "darkrai",
+    "cresselia",
+    "mega-banette"
   ],
-  "added_or_updated_dmax": [],
+  "added_or_updated_dmax": [
+    "dmax-eternatus"
+  ],
   "errors": []
 }
