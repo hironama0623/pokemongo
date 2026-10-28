@@ -1,13 +1,13 @@
 {
-  "executed_at": "2026/10/28 18:40 JST",
+  "executed_at": "2026/10/28 20:56 JST",
   "status": "success",
-  "model_used": "gemini-flash-lite-latest",
+  "model_used": "gemini-flash-latest",
   "crawled_pages": [
     {
       "source": "GameWith",
       "url": "https://pokemongo.gamewith.jp/",
       "title": "ポケモンGO攻略｜ポケGO速報まとめサイト - ゲームウィズ",
-      "date_hint": "2026-10-28T17:35:30"
+      "date_hint": "2026-10-28T20:46:25"
     },
     {
       "source": "GameWith",
@@ -65,14 +65,20 @@
     },
     {
       "source": "9DBみんポケ",
+      "url": "https://9db.jp/pokemongo/data/6606",
+      "title": "【ポケモンGO】新・個体値ランクチェッカー",
+      "date_hint": ""
+    },
+    {
+      "source": "9DBみんポケ",
       "url": "https://9db.jp/pokemongo/data/9906",
       "title": "【ポケモンGO】レイド自動マッチング(旧招待レイド)",
       "date_hint": ""
     },
     {
       "source": "9DBみんポケ",
-      "url": "https://9db.jp/pokemongo/data/6606",
-      "title": "【ポケモンGO】新・個体値ランクチェッカー",
+      "url": "https://9db.jp/pokemongo/data/12965",
+      "title": "【ポケモンGO】ポケふた交換掲示板(2137946コメント)",
       "date_hint": ""
     },
     {
@@ -82,32 +88,88 @@
       "date_hint": ""
     },
     {
-      "source": "9DBみんポケ",
-      "url": "https://9db.jp/pokemongo/data/2308",
-      "title": "【ポケモンGO】レイドボスの開催日程（最新版）",
-      "date_hint": ""
-    },
-    {
       "source": "公式サイト",
       "url": "https://pokemongo.com/ja/news",
       "title": "ニュース – Pokémon GO",
       "date_hint": ""
     }
   ],
-  "verified_field_researches": {},
+  "verified_field_researches": {
+    "ev-halloween-p1": [
+      {
+        "task": "ゴーストタイプのポケモンを13匹捕まえる",
+        "rewardDex": 442,
+        "rewardName": "ミカルゲ / ヤミラミ",
+        "shiny": true,
+        "note": "ミカルゲCP460、ヤミラミCP631 [確認: GameWith・9DBみんポケ]",
+        "verified_sources": [
+          "GameWith",
+          "9DBみんポケ"
+        ]
+      },
+      {
+        "task": "ナイススローを6回投げる",
+        "rewardDex": 710,
+        "rewardName": "バケッチャ(ちいさい) / バケッチャ(ふつう) / バケッチャ(おおきい) / バケッチャ(とくだい)",
+        "shiny": true,
+        "note": "サイズランダム [確認: GameWith・9DBみんポケ]",
+        "verified_sources": [
+          "GameWith",
+          "9DBみんポケ"
+        ]
+      },
+      {
+        "task": "ポケモンを10匹捕まえる",
+        "rewardDex": 607,
+        "rewardName": "ヒトモシ / ボクレー / デスマス",
+        "shiny": true,
+        "note": "CP457 / CP529 / CP460 [確認: GameWith・9DBみんポケ]",
+        "verified_sources": [
+          "GameWith",
+          "9DBみんポケ"
+        ]
+      }
+    ],
+    "ev-big-footprints": [
+      {
+        "task": "レイドバトルで1回勝つ",
+        "rewardDex": 354,
+        "rewardName": "ジュペッタ / ヤミカラス",
+        "shiny": true,
+        "note": "CP985 / CP629 [確認: GameWith・9DBみんポケ]",
+        "verified_sources": [
+          "GameWith",
+          "9DBみんポケ"
+        ]
+      }
+    ],
+    "ev-tusk-wish-deoxys": [
+      {
+        "task": "エスパータイプのポケモンを5匹捕まえる",
+        "rewardDex": 374,
+        "rewardName": "ダンバル / ラルトス",
+        "shiny": true,
+        "note": "CP417 / CP231 [確認: GameWith・9DBみんポケ]",
+        "verified_sources": [
+          "GameWith",
+          "9DBみんポケ"
+        ]
+      }
+    ]
+  },
   "updated_events": [
-    "ev-halloween-p1",
-    "ev-halloween-p2",
-    "ev-supermega-chandelure",
-    "ev-dmax-sableye-week",
     "ev-raid-giratina-o",
-    "ev-dmax-machop-week",
-    "ev-gopass-nov",
-    "ev-wildweek-2026",
-    "ev-wildarea-2026",
+    "ev-halloween-p1",
     "ev-big-footprints",
-    "ev-cd-pawniard",
     "ev-tusk-wish-deoxys"
+  ],
+  "added_or_updated_raids": [
+    "cresselia",
+    "darkrai",
+    "mega-metagross"
+  ],
+  "added_or_updated_dmax": [
+    "dmax-machop"
   ],
   "errors": []
 }
