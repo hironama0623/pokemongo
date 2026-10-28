@@ -602,16 +602,9 @@
 
     function decorateTextWithPokeIcons(rawText) {
       if (!rawText) return "";
-      let html = String(rawText);
-      for (const [pName, pDex] of POKE_NAME_DEX_DICT) {
-        if (html.includes(pName)) {
-          const imgUrl = getPokeImg(pDex, pName);
-          const badge = `<span class="inline-flex items-center gap-0.5 bg-white border border-slate-200 px-1 py-0.2 rounded shadow-2xs font-bold text-slate-800 align-baseline mx-0.5"><img src="${imgUrl}" class="w-3.5 h-3.5 object-contain inline-block"><span>${pName}</span></span>`;
-          html = html.split(pName).join(badge);
-        }
-      }
-      return html;
+      return String(rawText);
     }
+
 
     const renderPokeChip = (dex, name, extraText = "") => `
       <span class="inline-flex items-center gap-1 bg-white border border-slate-200 rounded-md px-1.5 py-0.5 shadow-2xs">
