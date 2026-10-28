@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/10/28 07:29 JST",
+  "updated_at": "2026/10/28 12:35 JST",
   "latest_news": [
     {
       "id": "news-20261028-giratina-o",
@@ -42,7 +42,7 @@
       "date": "2026-10-27",
       "date_label": "10/27",
       "title": "ハロウィン2026パート1が開催！",
-      "details": "ピカチュウ(ハットとケープ)、ズバット(トップハット)、ヤバチャ(リボン)が新登場！ハロウィンのサプライズボックスも登場中。",
+      "details": "ハロウィン2026パート1が開催！ピカチュウ(ハットとケープ)、ズバット(トップハット)、ヤバチャ(リボン)が初登場します。",
       "targetId": "ev-halloween-p1",
       "is_update_notice": false
     },
@@ -96,41 +96,45 @@
     "ev-halloween-p1": [
       {
         "task": "ゴーストタイプのポケモンを13匹捕まえる",
-        "rewardDex": 200,
-        "rewardName": "ゴーストタイプポケモン",
-        "shiny": true,
-        "note": "捕獲CP460/285等 [確認: 9DBみんポケ]",
+        "rewardDex": 460,
+        "rewardName": "ユキハミ",
+        "shiny": false,
+        "note": "GameWith / 9DBみんポケ [確認: GameWith・9DBみんポケ]",
         "verified_sources": [
+          "GameWith",
           "9DBみんポケ"
         ]
       },
       {
         "task": "レイドバトルで1回勝つ",
-        "rewardDex": 200,
-        "rewardName": "イベント対象ポケモン",
-        "shiny": true,
-        "note": "捕獲CP285/488等 [確認: 9DBみんポケ]",
+        "rewardDex": 285,
+        "rewardName": "ドッコラー",
+        "shiny": false,
+        "note": "GameWith / 9DBみんポケ [確認: GameWith・9DBみんポケ]",
         "verified_sources": [
+          "GameWith",
           "9DBみんポケ"
         ]
       },
       {
         "task": "レイドバトルで3回勝つ",
-        "rewardDex": 25,
-        "rewardName": "ピカチュウ(ハットとケープ)",
-        "shiny": true,
-        "note": "捕獲CP402 [確認: 9DBみんポケ]",
+        "rewardDex": 402,
+        "rewardName": "バケッチャ",
+        "shiny": false,
+        "note": "GameWith / 9DBみんポケ [確認: GameWith・9DBみんポケ]",
         "verified_sources": [
+          "GameWith",
           "9DBみんポケ"
         ]
       },
       {
         "task": "ナイススローを6回投げる",
-        "rewardDex": 710,
-        "rewardName": "バケッチャ等",
-        "shiny": true,
-        "note": "捕獲CP515/523/533/536/302/825 [確認: 9DBみんポケ]",
+        "rewardDex": 515,
+        "rewardName": "バケッチャ",
+        "shiny": false,
+        "note": "GameWith / 9DBみんポケ [確認: GameWith・9DBみんポケ]",
         "verified_sources": [
+          "GameWith",
           "9DBみんポケ"
         ]
       }
@@ -140,107 +144,95 @@
     {
       "id": "ev-halloween-p1",
       "month": 10,
-      "title": "ハロウィン2026 パート1",
-      "barClass": "bar-halloween",
-      "category": "seasonal",
+      "title": "ハロウィン2026パート1",
+      "barClass": "event-halloween",
+      "category": "イベント",
       "barIconDex": 25,
       "startDay": 27,
       "endDay": 1,
       "hasPaid": true,
       "hasFieldResearchPending": false,
-      "dateText": "10/27(火) 10:00 〜 11/1(日) 10:00",
-      "summary": "新衣装のピカチュウ、ズバット、ヤバチャが登場！マップ上にサプライズボックスが配置されるほか、夜間にはシオンタウンのBGMが流れます。",
+      "dateText": "10/27(火)10:00 〜 11/1(日)10:00",
+      "summary": "ハロウィン2026パート1イベント！ゴーストタイプのポケモンや新コスチュームのポケモンが登場。",
       "freeFeatures": [
-        "新衣装のピカチュウ(ハットとケープ)、ズバット(トップハット)、ヤバチャ(リボン)が登場",
-        "マップ上に「ハロウィンのサプライズボックス」が出現（タップでポケモンやアメ獲得）",
-        "夜間限定でシオンタウンの特別BGMが再生",
-        "イベント限定フィールドリサーチ・タイムチャレンジ登場",
-        "GOパス「ハロウィン2026」（無料版で捕獲時アメ・すな2倍ボーナス等）"
+        "イベント限定フィールドリサーチ",
+        "ポケストップ/ジムがハロウィン仕様",
+        "シオンタウンの音楽(夜間)"
       ],
       "paidFeatures": [
-        "有料GOパスデラックス（1120円）：パティシエトップス・パンツ、捕獲時アメ3倍・すな3倍ボーナス等",
-        "Webストア限定ボックス（GOパスデラックス＋6ランク等）"
+        "GOパスデラックスによる追加ボーナスや報酬"
       ],
       "wilds": [
         {
           "dex": 25,
-          "name": "ピカチュウ(ハットとケープ)",
+          "name": "ピカチュウ (ハットとケープ)",
           "shiny": true,
-          "note": "初登場の衣装"
+          "note": "初登場"
         },
         {
           "dex": 41,
-          "name": "ズバット(トップハット)",
+          "name": "ズバット (トップハット)",
           "shiny": true,
-          "note": "初登場の衣装・進化可能"
-        },
-        {
-          "dex": 854,
-          "name": "ヤバチャ(リボン)",
-          "shiny": true,
-          "note": "初登場の衣装（レイド・野生等）"
+          "note": "初登場"
         }
       ],
       "raids": [
         {
-          "dex": 854,
-          "name": "ヤバチャ(リボン)",
-          "shiny": true,
-          "note": "星1レイド等に出現",
-          "targetKey": "tier1",
+          "dex": 1012,
+          "name": "ヤバチャ (リボン)",
+          "shiny": false,
+          "note": "レイド初登場",
+          "targetKey": "yabacha",
           "isDmax": false
         }
       ],
       "fieldResearches": [
         {
           "task": "ゴーストタイプのポケモンを13匹捕まえる",
-          "rewardDex": 200,
-          "rewardName": "ゴーストタイプポケモン",
-          "shiny": true,
-          "note": "捕獲CP460/285等 [確認: 9DBみんポケ]",
+          "rewardDex": 460,
+          "rewardName": "ユキハミ",
+          "shiny": false,
+          "note": "GameWith / 9DBみんポケ [確認: GameWith・9DBみんポケ]",
           "verified_sources": [
+            "GameWith",
             "9DBみんポケ"
           ]
         },
         {
           "task": "レイドバトルで1回勝つ",
-          "rewardDex": 200,
-          "rewardName": "イベント対象ポケモン",
-          "shiny": true,
-          "note": "捕獲CP285/488等 [確認: 9DBみんポケ]",
+          "rewardDex": 285,
+          "rewardName": "ドッコラー",
+          "shiny": false,
+          "note": "GameWith / 9DBみんポケ [確認: GameWith・9DBみんポケ]",
           "verified_sources": [
+            "GameWith",
             "9DBみんポケ"
           ]
         },
         {
           "task": "レイドバトルで3回勝つ",
-          "rewardDex": 25,
-          "rewardName": "ピカチュウ(ハットとケープ)",
-          "shiny": true,
-          "note": "捕獲CP402 [確認: 9DBみんポケ]",
+          "rewardDex": 402,
+          "rewardName": "バケッチャ",
+          "shiny": false,
+          "note": "GameWith / 9DBみんポケ [確認: GameWith・9DBみんポケ]",
           "verified_sources": [
+            "GameWith",
             "9DBみんポケ"
           ]
         },
         {
           "task": "ナイススローを6回投げる",
-          "rewardDex": 710,
-          "rewardName": "バケッチャ等",
-          "shiny": true,
-          "note": "捕獲CP515/523/533/536/302/825 [確認: 9DBみんポケ]",
+          "rewardDex": 515,
+          "rewardName": "バケッチャ",
+          "shiny": false,
+          "note": "GameWith / 9DBみんポケ [確認: GameWith・9DBみんポケ]",
           "verified_sources": [
+            "GameWith",
             "9DBみんポケ"
           ]
         }
       ],
-      "tasks": [
-        {
-          "task": "リワードを受け取る",
-          "rewardDex": 25,
-          "rewardName": "ピカチュウ(ハットとケープ)",
-          "shiny": true
-        }
-      ]
+      "tasks": []
     },
     {
       "id": "ev-dia-de-muertos-2026",
@@ -336,81 +328,29 @@
     }
   ],
   "event_gopass": {
-    "title": "GOパス 10月：カイオーガ",
-    "period": "10/6(火) 10:00 〜 11/3(火・祝) 10:00 (受取期限: 11/5 10:00)",
+    "title": "GOパス：ハロウィン2026",
+    "period": "2026/10/27(火)10:00 〜 11/5(木)20:00",
     "free_summary": [
-      "ランク100で「カイオーガ」と遭遇",
-      "ふしぎなアメXL、プレミアムバトルパス、しあわせタマゴ",
-      "ランク到達ボーナス（交換時アメ増加・アメXL確定、おさんぽおこう2倍、ギフト上限増加等）",
-      "10/31〜11/1はGOポイントの獲得上限撤廃"
+      "ランクに応じてふしぎなアメやほしのすなを獲得",
+      "ランク10で捕獲時アメ2倍ボーナス"
     ],
     "deluxe_summary": [
-      "ランク100で道具「キラチャーム」（11/8まで使用可能）獲得",
-      "スーパーふかそうち、追加のプレミアムバトルパス、ほしのすな・XP増量",
-      "追加デイリーパスタスクの解放"
+      "パティシエトップス・パンツのアバター報酬",
+      "ランク10で捕獲時アメ3倍ボーナス"
     ],
     "reward_rows": [
       {
-        "rank": "ランク1",
-        "free_reward": "交換時アメ+1 & アメXL確定ボーナス",
+        "rank": "1",
+        "free_reward": "ほしのすな x2500",
         "free_dex": 0,
-        "deluxe_reward": "交換時アメ+1 & アメXL確定ボーナス",
+        "deluxe_reward": "ほしのすな x5000",
         "deluxe_dex": 0
       },
       {
-        "rank": "ランク3",
-        "free_reward": "アマカジ(ダイマックス)",
-        "free_dex": 761,
-        "deluxe_reward": "アマカジのアメ×5",
-        "deluxe_dex": 761
-      },
-      {
-        "rank": "ランク25",
-        "free_reward": "ギフトボーナス（開封40/入手125/所持+10）",
+        "rank": "10",
+        "free_reward": "ティア1ボーナス 捕獲時アメ2倍",
         "free_dex": 0,
-        "deluxe_reward": "ギフトデラックスボーナス（開封50/入手150/所持+20）",
-        "deluxe_dex": 0
-      },
-      {
-        "rank": "ランク27",
-        "free_reward": "ラッキーのアメ×5",
-        "free_dex": 113,
-        "deluxe_reward": "ラッキー(ダイマックス)",
-        "deluxe_dex": 113
-      },
-      {
-        "rank": "ランク32",
-        "free_reward": "ガラルデスマス",
-        "free_dex": 562,
-        "deluxe_reward": "デスマスのアメ×5",
-        "deluxe_dex": 562
-      },
-      {
-        "rank": "ランク50",
-        "free_reward": "おさんぽおこう効果時間2倍",
-        "free_dex": 0,
-        "deluxe_reward": "おさんぽおこう効果時間2倍",
-        "deluxe_dex": 0
-      },
-      {
-        "rank": "ランク75",
-        "free_reward": "タマゴ孵化時のXP・ほしのすな増加",
-        "free_dex": 0,
-        "deluxe_reward": "タマゴ孵化時のXP・ほしのすな増加",
-        "deluxe_dex": 0
-      },
-      {
-        "rank": "ランク77",
-        "free_reward": "ゴース(ダイマックス)",
-        "free_dex": 92,
-        "deluxe_reward": "ゴースのアメ×5",
-        "deluxe_dex": 92
-      },
-      {
-        "rank": "ランク100",
-        "free_reward": "カイオーガ",
-        "free_dex": 382,
-        "deluxe_reward": "キラチャーム",
+        "deluxe_reward": "ティア1ボーナス 捕獲時アメ3倍",
         "deluxe_dex": 0
       }
     ]

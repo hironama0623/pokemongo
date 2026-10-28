@@ -1,13 +1,13 @@
 {
-  "executed_at": "2026/10/28 07:29 JST",
+  "executed_at": "2026/10/28 12:35 JST",
   "status": "success",
-  "model_used": "gemini-flash-latest",
+  "model_used": "gemini-flash-lite-latest",
   "crawled_pages": [
     {
       "source": "GameWith",
       "url": "https://pokemongo.gamewith.jp/",
       "title": "ポケモンGO攻略｜ポケGO速報まとめサイト - ゲームウィズ",
-      "date_hint": "2026-10-27T22:07:07"
+      "date_hint": "2026-10-28T11:26:57"
     },
     {
       "source": "GameWith",
@@ -25,7 +25,7 @@
       "source": "GameWith",
       "url": "https://pokemongo.gamewith.jp/article/show/38870",
       "title": "【ポケモンGO】イベント最新情報まとめ！期間や次回の内容 - ゲームウィズ",
-      "date_hint": "2026-10-28T04:24:10"
+      "date_hint": "2026-10-28T09:09:30"
     },
     {
       "source": "GameWith",
@@ -71,20 +71,20 @@
     },
     {
       "source": "9DBみんポケ",
-      "url": "https://9db.jp/pokemongo/data/26442",
-      "title": "【ポケモンGO】ハロウィン2026パート1",
-      "date_hint": ""
-    },
-    {
-      "source": "9DBみんポケ",
-      "url": "https://9db.jp/pokemongo/data/4351",
-      "title": "【ポケモンGO】開催イベント一覧",
+      "url": "https://9db.jp/pokemongo/data/9906",
+      "title": "【ポケモンGO】レイド自動マッチング(旧招待レイド)",
       "date_hint": ""
     },
     {
       "source": "9DBみんポケ",
       "url": "https://9db.jp/pokemongo/data/19",
-      "title": "【ポケモンGO】雑談掲示板(913297コメント)",
+      "title": "【ポケモンGO】雑談掲示板(913345コメント)",
+      "date_hint": ""
+    },
+    {
+      "source": "9DBみんポケ",
+      "url": "https://9db.jp/pokemongo/data/26442",
+      "title": "【ポケモンGO】ハロウィン2026パート1",
       "date_hint": ""
     },
     {
@@ -98,50 +98,52 @@
     "ev-halloween-p1": [
       {
         "task": "ゴーストタイプのポケモンを13匹捕まえる",
-        "rewardDex": 200,
-        "rewardName": "ゴーストタイプポケモン",
-        "shiny": true,
-        "note": "捕獲CP460/285等 [確認: 9DBみんポケ]",
+        "rewardDex": 460,
+        "rewardName": "ユキハミ",
+        "shiny": false,
+        "note": "GameWith / 9DBみんポケ [確認: GameWith・9DBみんポケ]",
         "verified_sources": [
+          "GameWith",
           "9DBみんポケ"
         ]
       },
       {
         "task": "レイドバトルで1回勝つ",
-        "rewardDex": 200,
-        "rewardName": "イベント対象ポケモン",
-        "shiny": true,
-        "note": "捕獲CP285/488等 [確認: 9DBみんポケ]",
+        "rewardDex": 285,
+        "rewardName": "ドッコラー",
+        "shiny": false,
+        "note": "GameWith / 9DBみんポケ [確認: GameWith・9DBみんポケ]",
         "verified_sources": [
+          "GameWith",
           "9DBみんポケ"
         ]
       },
       {
         "task": "レイドバトルで3回勝つ",
-        "rewardDex": 25,
-        "rewardName": "ピカチュウ(ハットとケープ)",
-        "shiny": true,
-        "note": "捕獲CP402 [確認: 9DBみんポケ]",
+        "rewardDex": 402,
+        "rewardName": "バケッチャ",
+        "shiny": false,
+        "note": "GameWith / 9DBみんポケ [確認: GameWith・9DBみんポケ]",
         "verified_sources": [
+          "GameWith",
           "9DBみんポケ"
         ]
       },
       {
         "task": "ナイススローを6回投げる",
-        "rewardDex": 710,
-        "rewardName": "バケッチャ等",
-        "shiny": true,
-        "note": "捕獲CP515/523/533/536/302/825 [確認: 9DBみんポケ]",
+        "rewardDex": 515,
+        "rewardName": "バケッチャ",
+        "shiny": false,
+        "note": "GameWith / 9DBみんポケ [確認: GameWith・9DBみんポケ]",
         "verified_sources": [
+          "GameWith",
           "9DBみんポケ"
         ]
       }
     ]
   },
   "updated_events": [
-    "ev-halloween-p1",
-    "ev-raid-giratina-o",
-    "ev-gopass-nov"
+    "ev-halloween-p1"
   ],
   "errors": []
 }
