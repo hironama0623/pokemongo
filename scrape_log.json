@@ -1,5 +1,5 @@
 {
-  "executed_at": "2026/10/29 12:39 JST",
+  "executed_at": "2026/10/29 18:41 JST",
   "status": "success",
   "model_used": "gemini-flash-lite-latest",
   "crawled_pages": [
@@ -7,7 +7,7 @@
       "source": "GameWith",
       "url": "https://pokemongo.gamewith.jp/",
       "title": "ポケモンGO攻略｜ポケGO速報まとめサイト - ゲームウィズ",
-      "date_hint": "2026-10-29T12:18:48"
+      "date_hint": "2026-10-29T15:51:49"
     },
     {
       "source": "GameWith",
@@ -43,7 +43,7 @@
       "source": "GameWith",
       "url": "https://pokemongo.gamewith.jp/article/show/583244",
       "title": "【ポケモンGO】2026年11月のイベントスケジュールまとめ - ゲームウィズ",
-      "date_hint": "2026-10-29T12:20:33"
+      "date_hint": "2026-10-29T12:46:22"
     },
     {
       "source": "GameWith",
@@ -65,12 +65,6 @@
     },
     {
       "source": "9DBみんポケ",
-      "url": "https://9db.jp/pokemongo/data/26660",
-      "title": "【ポケモンGO】ムゲンダイナ再来",
-      "date_hint": ""
-    },
-    {
-      "source": "9DBみんポケ",
       "url": "https://9db.jp/pokemongo/data/6606",
       "title": "【ポケモンGO】新・個体値ランクチェッカー",
       "date_hint": ""
@@ -83,8 +77,14 @@
     },
     {
       "source": "9DBみんポケ",
-      "url": "https://9db.jp/pokemongo/data/26146",
-      "title": "【ポケモンGO】コミュニティデイ：コマタナ",
+      "url": "https://9db.jp/pokemongo/data/26439",
+      "title": "【ポケモンGO】スポットライトアワー：ゴース(進化時XP2倍)",
+      "date_hint": ""
+    },
+    {
+      "source": "9DBみんポケ",
+      "url": "https://9db.jp/pokemongo/data/9906",
+      "title": "【ポケモンGO】レイド自動マッチング(旧招待レイド)",
       "date_hint": ""
     },
     {
@@ -97,9 +97,9 @@
   "verified_field_researches": {
     "ev-halloween-p1": [
       {
-        "task": "ゴーストタイプのポケモンを5匹捕まえる",
+        "task": "ゴーストタイプのポケモンを3匹捕まえる",
         "rewardDex": 302,
-        "rewardName": "ヤミラミ / カゲボウズ / ヨマワル",
+        "rewardName": "ヤミラミ / ヒトモシ / ゾロア",
         "shiny": true,
         "note": "イベント限定タスク [確認: GameWith・9DBみんポケ]",
         "verified_sources": [
@@ -109,10 +109,48 @@
       },
       {
         "task": "ナイススローを3回投げる",
-        "rewardDex": 711,
+        "rewardDex": 710,
         "rewardName": "バケッチャ(ちいさい) / バケッチャ(ふつう) / バケッチャ(おおきい) / バケッチャ(とくだい)",
         "shiny": true,
-        "note": "サイズ違い [確認: GameWith・9DBみんポケ]",
+        "note": "サイズ違いのバケッチャが出現 [確認: GameWith]",
+        "verified_sources": [
+          "GameWith"
+        ]
+      }
+    ],
+    "ev-halloween-p2": [
+      {
+        "task": "ゴーストタイプのポケモンを5匹進化させる",
+        "rewardDex": 442,
+        "rewardName": "ミカルゲ",
+        "shiny": true,
+        "note": "レア報酬 [確認: GameWith・9DBみんポケ]",
+        "verified_sources": [
+          "GameWith",
+          "9DBみんポケ"
+        ]
+      }
+    ],
+    "ev-big-footprints": [
+      {
+        "task": "レイドバトルで3回勝つ",
+        "rewardDex": 491,
+        "rewardName": "ダークライ",
+        "shiny": true,
+        "note": "イベントリサーチ報酬 [確認: GameWith・9DBみんポケ]",
+        "verified_sources": [
+          "GameWith",
+          "9DBみんポケ"
+        ]
+      }
+    ],
+    "ev-cd-pawniard": [
+      {
+        "task": "コマタナを3匹捕まえる",
+        "rewardDex": 624,
+        "rewardName": "コマタナ",
+        "shiny": true,
+        "note": "コミュニティデイ限定タスク [確認: GameWith・9DBみんポケ]",
         "verified_sources": [
           "GameWith",
           "9DBみんポケ"
@@ -122,25 +160,18 @@
   },
   "updated_events": [
     "ev-halloween-p1",
-    "ev-halloween-p2",
     "ev-supermega-chandelure",
+    "ev-halloween-p2",
     "ev-dmax-sableye-week",
-    "ev-raid-giratina-o",
     "ev-dmax-machop-week",
-    "ev-gopass-nov",
-    "ev-wildweek-2026",
-    "ev-wildarea-2026",
     "ev-big-footprints",
     "ev-cd-pawniard",
-    "ev-tusk-wish-deoxys",
-    "ev-dec-new-season"
+    "ev-tusk-wish-deoxys"
   ],
   "added_or_updated_raids": [
     "darkrai",
     "cresselia",
-    "mega-banette",
-    "deoxys-normal",
-    "mega-metagross"
+    "mega-banette"
   ],
   "added_or_updated_dmax": [],
   "errors": []
