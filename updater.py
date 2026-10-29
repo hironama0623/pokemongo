@@ -1,5 +1,6 @@
 import os
 import json
+import time
 import datetime
 import re
 import traceback
@@ -17,7 +18,7 @@ today_str = now.strftime("%Y-%m-%d")
 now_str = now.strftime("%Y/%m/%d %H:%M JST")
 valid_months = [now.month, (now.month % 12) + 1, ((now.month + 1) % 12) + 1]
 
-print(f"[{now_str}] 2段階AI解析クローラー（①イベント・対策 / ②フィールドリサーチ全件）を開始します...")
+print(f"[{now_str}] 2段階AI解析クローラー（①フィールドリサーチ全件 / ②イベント・対策）を開始します...")
 
 try:
     with open("data.json", "r", encoding="utf-8") as f:
@@ -36,6 +37,7 @@ scrape_log = {
     "executed_at": now_str,
     "status": "running",
     "model_used": "",
+    "available_models_detected": [],
     "crawled_pages": [],
     "extracted_research_count": 0,
     "updated_events": [],
@@ -46,14 +48,13 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
 }
 
-def extract_html_text(html_text: str, is_research_only: bool = False, max_chars: int = 12000) -> tuple[str, str]:
+def extract_html_text(html_text: str, is_research_only: bool = False, max_chars: int = 10000) -> tuple[str, str]:
     soup = BeautifulSoup(html_text, "html.parser")
     title = soup.find("title").get_text(strip=True) if soup.find("title") else "No Title"
 
     for tag in soup(["script", "style", "nav", "footer", "aside", "noscript", "iframe", "svg"]):
         tag.decompose()
 
-    # 画像タグのalt/titleやファイル名からポケモン名・図鑑番号をテキスト化
     for img in soup.find_all("img"):
         alt_txt = (img.get("alt") or img.get("title") or img.get("data-name") or "").strip()
         src_txt = img.get("data-src") or img.get("src") or ""
@@ -97,7 +98,7 @@ event_docs = []
 research_docs = []
 visited_urls = set()
 
-def fetch_page(source_name: str, url: str, target_list: list, is_research_only: bool = False, max_chars: int = 12000) -> Optional[BeautifulSoup]:
+def fetch_page(source_name: str, url: str, target_list: list, is_research_only: bool = False, max_chars: int = 10000) -> Optional[BeautifulSoup]:
     if url in visited_urls:
         return None
     visited_urls.add(url)
@@ -116,36 +117,35 @@ def fetch_page(source_name: str, url: str, target_list: list, is_research_only: 
         scrape_log["errors"].append(f"{source_name} ({url}): {str(e)}")
         return None
 
-# --- A. フィールドリサーチ専用ページ（3サイト）を `research_docs` に収集 ---
+# --- A. フィールドリサーチ専用ページ（3サイト）を収集 ---
 for src, r_url in [
     ("ポケマピ(リサーチ一覧)", "https://pokemongo-get.com/research_field/"),
     ("GameWith(タスク一覧)", "https://pokemongo.gamewith.jp/article/show/102210"),
     ("9DBみんポケ(リサーチ一覧)", "https://9db.jp/pokemongo/data/1508")
 ]:
-    fetch_page(src, r_url, research_docs, is_research_only=True, max_chars=15000)
+    fetch_page(src, r_url, research_docs, is_research_only=True, max_chars=12000)
 
-# --- B. イベント・最新記事を `event_docs` に収集 ---
-soup_pm = fetch_page("ポケマピ(イベント)", "https://pokemongo-get.com/events/", event_docs, False, 7000)
+# --- B. イベント・最新記事を収集 ---
+soup_pm = fetch_page("ポケマピ(イベント)", "https://pokemongo-get.com/events/", event_docs, False, 6500)
 if soup_pm:
     pm_urls = []
     for a in soup_pm.find_all("a", href=re.compile(r"/board/\d+/")):
         u = a["href"] if a["href"].startswith("http") else "https://pokemongo-get.com" + a["href"]
         if u not in visited_urls and u not in pm_urls:
             pm_urls.append(u)
-        if len(pm_urls) >= 6:
+        if len(pm_urls) >= 5:
             break
     for u in pm_urls:
-        fetch_page("ポケマピ(記事)", u, event_docs, False, 10000)
-        # 記事内のフィールドリサーチセクションもresearch_docsに共有
+        fetch_page("ポケマピ(記事)", u, event_docs, False, 9000)
         if event_docs:
-            research_docs.append(event_docs[-1][:8000])
+            research_docs.append(event_docs[-1][:6000])
 
-soup_gw = fetch_page("GameWith(イベント)", "https://pokemongo.gamewith.jp/article/show/24434", event_docs, False, 8000)
-soup_9db = fetch_page("9DB(トップ)", "https://9db.jp/pokemongo/", event_docs, False, 8000)
-fetch_page("公式サイト", "https://pokemongo.com/ja/news", event_docs, False, 7000)
+fetch_page("GameWith(イベント)", "https://pokemongo.gamewith.jp/article/show/24434", event_docs, False, 7500)
+fetch_page("9DB(トップ)", "https://9db.jp/pokemongo/", event_docs, False, 7500)
+fetch_page("公式サイト", "https://pokemongo.com/ja/news", event_docs, False, 6500)
 
 # ==============================================================================
-# Gemini 共通呼び出し関数（3.0-flash / 3.1-pro 自動フォールバック）
+# Gemini API 利用可能モデル自動検出 ＆ 共通呼び出し関数
 # ==============================================================================
 api_key = os.environ.get("GEMINI_API_KEY")
 if not api_key:
@@ -154,10 +154,46 @@ if not api_key:
 
 client = genai.Client(api_key=api_key)
 
+def get_available_flash_models() -> List[str]:
+    """APIサーバーに問い合わせて、現在このAPIキーで使える本物のFlash系モデル名を自動取得する"""
+    primary_3_flash = []
+    secondary_flash = []
+    try:
+        for m in client.models.list():
+            m_name = getattr(m, "name", "").replace("models/", "")
+            # 画像・音声専用やPro（無料枠Limit:0）を除外し、テキスト生成可能なFlashモデルを抽出
+            if "gemini" in m_name and "flash" in m_name:
+                if any(x in m_name for x in ["tts", "image", "vision", "audio", "thinking"]):
+                    continue
+                if "3" in m_name or "latest" in m_name:
+                    primary_3_flash.append(m_name)
+                else:
+                    secondary_flash.append(m_name)
+    except Exception as e:
+        print(f"モデル一覧取得警告: {e}")
+
+    found_models = primary_3_flash + secondary_flash
+    fallbacks = [
+        "gemini-3-flash-preview",
+        "gemini-3.0-flash-preview",
+        "gemini-3.0-flash-001",
+        "gemini-flash-latest",
+        "gemini-2.5-flash-lite"
+    ]
+    for fb in fallbacks:
+        if fb not in found_models:
+            found_models.append(fb)
+
+    scrape_log["available_models_detected"] = found_models
+    print(f"検出された利用可能Flashモデル候補: {found_models}")
+    return found_models
+
+AVAILABLE_MODELS = get_available_flash_models()
+
 def call_gemini_structured(prompt_text: str, schema_cls):
-    candidate_models = ["gemini-3.0-flash", "gemini-3.1-pro-preview", "gemini-2.5-flash", "gemini-2.0-flash"]
-    for m_name in candidate_models:
+    for m_name in AVAILABLE_MODELS:
         try:
+            print(f"モデル [{m_name}] で解析を実行中...")
             resp = client.models.generate_content(
                 model=m_name,
                 contents=prompt_text,
@@ -169,21 +205,23 @@ def call_gemini_structured(prompt_text: str, schema_cls):
             )
             if resp and resp.text:
                 scrape_log["model_used"] = m_name
+                print(f"成功: [{m_name}] で構造化データを取得しました！")
+                time.sleep(5)  # 無料枠のレート制限回避ウェイト
                 return schema_cls.model_validate_json(resp.text)
         except Exception as err:
             print(f"[{m_name}] スキップ: {err}")
-    raise RuntimeError("Geminiモデルからの構造化レスポンス取得に失敗しました。")
+    raise RuntimeError("すべてのモデル候補からの構造化レスポンス取得に失敗しました。")
 
 # ==============================================================================
 # Step 1: フィールドリサーチ全件（イベント限定 ＋ 常設）の専門解析
 # ==============================================================================
 class FullResearchItemSchema(BaseModel):
-    category: str = Field(description="'event' (イベント限定), 'catch' (捕獲・スロー系), 'battle' (レイド・バトル・ロケット団系), 'explore' (探索・強化・進化・相棒・孵化系), 'mega' (メガエナジー・アイテム報酬) のいずれか")
+    category: str = Field(description="'event' (イベント限定), 'catch' (捕獲・スロー系), 'battle' (レイド・バトル系), 'explore' (探索・強化・進化・孵化系), 'mega' (メガエナジー・アイテム報酬) のいずれか")
     event_id: str = Field(default="", description="categoryが'event'の場合、対応するイベントID（例: 'ev-halloween-p1', 'ev-halloween-p2' 等。常設なら空文字）")
-    EventName: str = Field(default="", description="イベント限定ならイベント名（例: 'ハロウィン2026パート1'）、常設なら 'シーズン常設'")
-    task: str = Field(description="ポケストップから入手する正確なタスク条件文（例：『ゴーストタイプのポケモンを13匹捕まえる』）")
+    EventName: str = Field(default="", description="イベント限定ならイベント名（例: '🎃 ハロウィン2026 限定'）、常設なら '🌿 シーズン常設'")
+    task: str = Field(description="ポケストップから入手する正確なタスク条件文")
     rewardDex: int = Field(description="メイン報酬ポケモンの全国図鑑番号")
-    rewardName: str = Field(description="【省略絶対禁止】出現する具体的なポケモン名すべて（複数候補は ' / ' 区切り。例：'ヤバチャ(リボン) / ヤミラミ'。『ゴーストタイプポケモン』『イベント対象ポケモン』『〇〇等』は厳禁）")
+    rewardName: str = Field(description="【省略絶対禁止】出現する具体的なポケモン名すべて（複数候補は ' / ' 区切り。『ゴーストタイプポケモン』『イベント対象ポケモン』『〇〇等』は厳禁）")
     shiny: bool = Field(description="色違いチャンスの有無")
     cp_info: str = Field(default="", description="100%CPやCP範囲（例: 'CP451〜488'）")
     verified_sites: List[str] = Field(description="確認したサイト名（ポケマピ, GameWith, 9DB）")
@@ -211,14 +249,14 @@ research_prompt = f"""
    - CP632 = ヤミラミ
    - CP825 = モルペコ または フワライド(ハロウィン: CP1020)
    - CP888 = ミカルゲ
-3. 現在開催中のハロウィン2026パート1のイベント限定タスクには `category: "event"`, `event_id: "ev-halloween-p1"` を設定してください（11/1からのパート2なら `ev-halloween-p2`）。
+3. ハロウィン2026パート1のイベント限定タスクには `category: "event"`, `event_id: "ev-halloween-p1"` を設定してください（11/1からのパート2なら `ev-halloween-p2`）。
 
 【リサーチ専用スクレイピングテキスト】:
 {chr(10).join(research_docs)}
 """
 
 # ==============================================================================
-# Step 2: イベント・ニュース・新規レイド/DMax対策の専門解析
+# Step 2: イベント・ニュース・GOパスの専門解析
 # ==============================================================================
 class NewsItemSchema(BaseModel):
     id: str
