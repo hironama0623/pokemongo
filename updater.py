@@ -155,13 +155,11 @@ if not api_key:
 client = genai.Client(api_key=api_key)
 
 def get_available_flash_models() -> List[str]:
-    """APIサーバーに問い合わせて、現在このAPIキーで使える本物のFlash系モデル名を自動取得する"""
     primary_3_flash = []
     secondary_flash = []
     try:
         for m in client.models.list():
             m_name = getattr(m, "name", "").replace("models/", "")
-            # 画像・音声専用やPro（無料枠Limit:0）を除外し、テキスト生成可能なFlashモデルを抽出
             if "gemini" in m_name and "flash" in m_name:
                 if any(x in m_name for x in ["tts", "image", "vision", "audio", "thinking"]):
                     continue
@@ -185,7 +183,6 @@ def get_available_flash_models() -> List[str]:
             found_models.append(fb)
 
     scrape_log["available_models_detected"] = found_models
-    print(f"検出された利用可能Flashモデル候補: {found_models}")
     return found_models
 
 AVAILABLE_MODELS = get_available_flash_models()
@@ -242,12 +239,12 @@ research_prompt = f"""
    - CP285〜286 = ズバット(トップハット)
    - CP402 = ピカチュウ(ハットとケープ)
    - CP431 = ヒトモシ
-   - CP460 = ボチ
+   - CP460 = ボチ または ポッチャマ(ハロウィン)
    - CP488 = ヤバチャ(リボン)
    - CP503 = ゾロア
    - CP515 / 523 / 533 / 536 = バケッチャ(ちいさい / ふつう / おおきい / とくだい)
    - CP632 = ヤミラミ
-   - CP825 = モルペコ または フワライド(ハロウィン: CP1020)
+   - CP825 = モルペコ または ムウマ
    - CP888 = ミカルゲ
 3. ハロウィン2026パート1のイベント限定タスクには `category: "event"`, `event_id: "ev-halloween-p1"` を設定してください（11/1からのパート2なら `ev-halloween-p2`）。
 
@@ -413,11 +410,22 @@ try:
             seen_titles.add(t_key)
             unique_news.append(item)
 
-    valid_news = [
-        item for item in unique_news
-        if (now.date() - datetime.datetime.strptime(item.get("date", today_str), "%Y-%m-%d").date()).days <= 14
-    ] if unique_news else []
-    valid_news.sort(key=lambda x: x.get("date", today_str), reverse=True)
+    # 日付フォーマットの揺れ（2026/10/29 18:00 など）を修正して安全にパース
+    valid_news = []
+    for item in unique_news:
+        date_str = item.get("date", today_str)
+        # スラッシュをハイフンに、スペース以降(時刻)を削除して正規化
+        safe_date_str = date_str.replace("/", "-").split(" ")[0]
+        try:
+            dt = datetime.datetime.strptime(safe_date_str, "%Y-%m-%d").date()
+            if (now.date() - dt).days <= 14:
+                valid_news.append(item)
+        except Exception as e:
+            # パースできなくてもとりあえず残す（クラッシュ回避）
+            print(f"日付パースエラー回避: {item.get('date')} -> {e}")
+            valid_news.append(item)
+
+    valid_news.sort(key=lambda x: str(x.get("date", today_str)).replace("/", "-").split(" ")[0], reverse=True)
 
     final_data = {
         "updated_at": now_str,
