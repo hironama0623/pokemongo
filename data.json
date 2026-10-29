@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/10/29 21:33 JST",
+  "updated_at": "2026/10/29 22:52 JST",
   "latest_news": [
     {
       "id": "news-supermega-chandelure",
@@ -9,6 +9,33 @@
       "details": "10月31日14時から17時まで、スーパーメガレイドデイが開催されメガシャンデラが初登場します。",
       "targetId": "ev-supermega-chandelure",
       "is_update_notice": false
+    },
+    {
+      "id": "news-20261029-01",
+      "date": "2026-10-29",
+      "date_label": "10/29",
+      "title": "ムゲンダイナ再来イベントが開催決定！",
+      "details": "ムゲンダイナ(ムゲンダイマックス)とバトルができるムゲンダイナ再来イベントの開催が発表されました。",
+      "targetId": "ev-eternatus-returns-2026",
+      "is_update_notice": false
+    },
+    {
+      "id": "news-20261029-02",
+      "date": "2026-10-29",
+      "date_label": "10/29",
+      "title": "大きな足跡イベントの情報が発表！",
+      "details": "ムゲンダイナが復刻登場する「大きな足跡」イベントの開催情報が公開されました。",
+      "targetId": "ev-big-footprints-2026",
+      "is_update_notice": false
+    },
+    {
+      "id": "news-20261029-03",
+      "date": "2026-10-29",
+      "date_label": "10/29",
+      "title": "コマタナのコミュニティ・デイに関する注意点",
+      "details": "相棒にしなくても進化タスクが進むボーナスは削除されたため、進化の際はご注意ください。",
+      "targetId": "ev-pawniard-cd",
+      "is_update_notice": true
     },
     {
       "id": "news-2026-1029-spotlight",
@@ -26,15 +53,6 @@
       "title": "コマタナのコミュニティデイが開催決定！",
       "details": "相棒にしなくても進化タスクが進むボーナスは削除されたため注意が必要です。コマタナのコミュニティデイ詳細情報をチェックしましょう。",
       "targetId": "ev-pawniard-cd",
-      "is_update_notice": false
-    },
-    {
-      "id": "news-2026-1029-eternatus",
-      "date": "2026-10-29",
-      "date_label": "10/29",
-      "title": "ムゲンダイナ再来イベントが開催決定！",
-      "details": "ムゲンダイナ(ムゲンダイマックス)とバトルができるムゲンダイナ再来イベントが開催決定しました。",
-      "targetId": "ev-eternatus-return",
       "is_update_notice": false
     },
     {
@@ -72,24 +90,6 @@
       "details": "11月21日(土)14時から17時までコマタナのコミュニティデイが開催。限定技ドゲザンを覚えるほか、進化条件の緩和も実施されます。",
       "targetId": "ev-cd-pawniard",
       "is_update_notice": false
-    },
-    {
-      "id": "news-20261029-eternatus-max",
-      "date": "2026-10-29",
-      "date_label": "10/29",
-      "title": "ムゲンダイナ(ムゲンダイマックス)再来イベントが11/21(土)に開催決定！",
-      "details": "11月21日(土)11:00〜14:00の3時間限定で、大半のパワースポットに★6マックスバトルとしてムゲンダイナ(ムゲンダイマックス)が降臨！勝利報酬でムゲンダイナのアメ・アメXLが大量入手可能。",
-      "targetId": "ev-big-footprints",
-      "is_update_notice": true
-    },
-    {
-      "id": "news-20261029-big-footprints",
-      "date": "2026-10-29",
-      "date_label": "10/29",
-      "title": "新イベント「大きな足跡」発表！GOパス連動やSP背景ダイマックスが登場",
-      "details": "11月16日(月)10:00〜11月23日(月)20:00開催。過去のマックスバトル登場ポケモンがSP背景付きで復刻。GOパス「大きな足跡」も配信され、ムゲンダイナ所持者はアメ100個が入手可能。",
-      "targetId": "ev-big-footprints",
-      "is_update_notice": true
     }
   ],
   "all_field_researches": [],
@@ -900,6 +900,58 @@
           "shiny": true,
           "note": "メガレイドボス",
           "targetKey": "mega_sableye",
+          "isDmax": false
+        }
+      ],
+      "tasks": []
+    },
+    {
+      "id": "ev-halloween-2026-part1",
+      "month": 10,
+      "title": "ハロウィン2026 パート1",
+      "barClass": "bar-halloween",
+      "category": "event",
+      "barIconDex": 25,
+      "startDay": 27,
+      "endDay": 1,
+      "hasPaid": false,
+      "dateText": "10月27日(火)10:00〜11月1日(日)10:00",
+      "summary": "ハロウィンイベント第1弾が開催！仮装したピカチュウやズバットが新登場するほか、ハロウィンに合わせたゴースト・あくタイプポケモンが多数出現します。",
+      "freeFeatures": [
+        "特別な衣装を身にまとったピカチュウ・ズバットの出現",
+        "メガハロウィンSL・マスターリーグの開催"
+      ],
+      "paidFeatures": [],
+      "wilds": [
+        {
+          "dex": 25,
+          "name": "ピカチュウ (ハットとケープ)",
+          "shiny": true,
+          "note": "イベント限定衣装"
+        },
+        {
+          "dex": 41,
+          "name": "ズバット (トップハット)",
+          "shiny": true,
+          "note": "イベント限定衣装"
+        }
+      ],
+      "specialGimmicks": [],
+      "raids": [
+        {
+          "dex": 487,
+          "name": "ギラティナ (オリジンフォルム)",
+          "shiny": true,
+          "note": "伝説レイドバトル",
+          "targetKey": "legendary",
+          "isDmax": false
+        },
+        {
+          "dex": 302,
+          "name": "メガヤミラミ",
+          "shiny": true,
+          "note": "メガレイド",
+          "targetKey": "mega",
           "isDmax": false
         }
       ],

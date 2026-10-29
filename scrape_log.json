@@ -1,7 +1,7 @@
 {
-  "executed_at": "2026/10/29 21:33 JST",
+  "executed_at": "2026/10/29 22:52 JST",
   "status": "success",
-  "model_used": "gemini-flash-lite-latest",
+  "model_used": "gemini-flash-latest",
   "available_models_detected": [
     "gemini-flash-latest",
     "gemini-flash-lite-latest",
@@ -38,7 +38,7 @@
       "source": "9DB(トップ)",
       "url": "https://9db.jp/pokemongo/",
       "title": "ポケモンGO攻略 - みんポケ",
-      "chars": 2995
+      "chars": 2966
     },
     {
       "source": "公式サイト",
@@ -49,10 +49,7 @@
   ],
   "extracted_research_count": 0,
   "updated_events": [
-    "ev-halloween-2026-p1",
-    "ev-dia-de-muertos-2026",
-    "ev-giratina-origin-raid",
-    "ev-mega-sableye-raid"
+    "ev-halloween-2026-part1"
   ],
   "errors": []
 }
