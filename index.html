@@ -88,9 +88,9 @@
 
   <!-- 4大メインナビゲーションタブ -->
   <div class="max-w-6xl mx-auto w-full px-4 pt-3 pb-1">
-    <nav class="grid grid-cols-2 sm:grid-cols-4 gap-1.5 p-1 bg-slate-200/80 rounded-xl border border-slate-300 shadow-inner">
+    <nav class="grid grid-cols-2 sm:grid-cols-5 gap-1.5 p-1 bg-slate-200/80 rounded-xl border border-slate-300 shadow-inner">
       <button id="tabNavSeason" onclick="switchMainTab('season')" class="py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1 text-slate-600 hover:text-slate-900">
-        <span>🏆</span> シーズン24常設
+        <span>🏆</span> シーズン常設
       </button>
       <button id="tabNavSchedule" onclick="switchMainTab('schedule')" class="py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1 bg-white text-sky-700 shadow-sm">
         <span>📅</span> イベント & 日程
@@ -98,7 +98,10 @@
       <button id="tabNavBattles" onclick="switchMainTab('battles')" class="py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1 text-slate-600 hover:text-slate-900">
         <span>⚔️</span> レイド & DMax
       </button>
-      <button id="tabNavGoPass" onclick="switchMainTab('gopass')" class="py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1 text-slate-600 hover:text-slate-900">
+      <button id="tabNavResearch" onclick="switchMainTab('research')" class="py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1 text-slate-600 hover:text-slate-900">
+        <span>🔍</span> リサーチ一覧
+      </button>
+      <button id="tabNavGoPass" onclick="switchMainTab('gopass')" class="py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1 col-span-2 sm:col-span-1 text-slate-600 hover:text-slate-900">
         <span>🎫</span> GOパス (全100)
       </button>
     </nav>
@@ -501,7 +504,32 @@
       </div>
 
     </div>
+    <!-- ============================================================== -->
+    <!-- タブ 4 (新規追加): 🔍 フィールドリサーチ全一覧 (イベント限定 ＆ 常設) -->
+    <!-- ============================================================== -->
+    <div id="tabContentResearch" class="space-y-4 hidden">
+      <div class="bg-white border-2 border-teal-200 rounded-xl p-4 shadow-sm space-y-3">
+        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-3">
+          <div>
+            <span class="text-[11px] bg-teal-100 text-teal-800 border border-teal-300 font-bold px-2.5 py-0.5 rounded-full">ポケマピ・GameWith・9DB リアルタイム統合</span>
+            <h2 class="text-base sm:text-lg font-black text-slate-900 mt-1">🔍 フィールドリサーチ全一覧（イベント限定 ＆ シーズン常設）</h2>
+            <p class="text-xs text-slate-500 mt-0.5">ここで「🎃 イベント限定」に分類されたタスクが、自動的に「イベント & 日程」タブの各イベント詳細欄にも連動表示されます。</p>
+          </div>
+          <input type="text" id="researchSearchInput" oninput="renderMasterResearchTab()" placeholder="ポケモン名・タスク名で検索..." class="text-xs border border-slate-300 rounded-lg px-3 py-1.5 w-full sm:w-56 focus:outline-none focus:border-teal-500">
+        </div>
 
+        <div class="flex flex-wrap items-center gap-1.5">
+          <button onclick="setResearchFilter('all')" id="resFilter-all" class="text-xs px-3 py-1 rounded-full font-bold bg-teal-600 text-white shadow-sm">すべて表示</button>
+          <button onclick="setResearchFilter('event')" id="resFilter-event" class="text-xs px-3 py-1 rounded-full font-bold bg-slate-100 text-slate-600 hover:bg-slate-200">🎃 イベント限定のみ</button>
+          <button onclick="setResearchFilter('catch')" id="resFilter-catch" class="text-xs px-3 py-1 rounded-full font-bold bg-slate-100 text-slate-600 hover:bg-slate-200">⚾ 捕獲・スロー系</button>
+          <button onclick="setResearchFilter('battle')" id="resFilter-battle" class="text-xs px-3 py-1 rounded-full font-bold bg-slate-100 text-slate-600 hover:bg-slate-200">⚔️ レイド・バトル系</button>
+          <button onclick="setResearchFilter('explore')" id="resFilter-explore" class="text-xs px-3 py-1 rounded-full font-bold bg-slate-100 text-slate-600 hover:bg-slate-200">🥚 強化・進化・探索</button>
+          <button onclick="setResearchFilter('mega')" id="resFilter-mega" class="text-xs px-3 py-1 rounded-full font-bold bg-slate-100 text-slate-600 hover:bg-slate-200">💎 メガエナジー</button>
+        </div>
+
+        <div id="masterResearchListContainer" class="grid grid-cols-1 md:grid-cols-2 gap-2.5 pt-1"></div>
+      </div>
+    </div>
   </main>
 
   <script>
@@ -1748,7 +1776,8 @@
         { id: "season", nav: "tabNavSeason", content: "tabContentSeason", activeColor: "text-orange-700" },
         { id: "schedule", nav: "tabNavSchedule", content: "tabContentSchedule", activeColor: "text-sky-700" },
         { id: "battles", nav: "tabNavBattles", content: "tabContentBattles", activeColor: "text-emerald-700" },
-        { id: "gopass", nav: "tabNavGoPass", content: "tabContentGoPass", activeColor: "text-amber-700" }
+        { id: "gopass", nav: "tabNavGoPass", content: "tabContentGoPass", activeColor: "text-amber-700" },
+        { id: "research", nav: "tabNavResearch", content: "tabContentResearch", activeColor: "text-teal-700" },
       ];
       tabs.forEach(t => {
         const active = (t.id === tab);
@@ -2477,11 +2506,101 @@
       const trimmed = String(name).trim().replace(/など$|等$/, "");
       return !vagueList.includes(trimmed);
     }
+    // ============================================================================
+    // 🔍 フィールドリサーチ全一覧マスターデータ ＆ イベント限定タスク自動連動ロジック
+    // ============================================================================
+    let currentResearchFilter = "all";
+    let ALL_FIELD_RESEARCHES = [
+      // 🎃 ハロウィン2026 パート1 イベント限定タスク（3サイト完全一致データ）
+      { category: "event", event_id: "ev-halloween-p1", EventName: "🎃 ハロウィン2026 パート1 限定", task: "ゴーストタイプのポケモンを5匹捕まえる", rewardDex: 41, rewardName: "ズバット(トップハット) / ヒトモシ / ゾロア", shiny: true, note: "衣装ズバット(CP256〜286) / ヒトモシ(CP396〜431) / ゾロア(CP468〜503)" },
+      { category: "event", event_id: "ev-halloween-p1", EventName: "🎃 ハロウィン2026 パート1 限定", task: "ゴーストタイプのポケモンを10匹捕まえる", rewardDex: 854, rewardName: "ヤバチャ(リボン) / ヤミラミ", shiny: true, note: "初登場リボンヤバチャ(CP451〜488) / ヤミラミ(CP594〜632)" },
+      { category: "event", event_id: "ev-halloween-p1", EventName: "🎃 ハロウィン2026 パート1 限定", task: "ゴーストタイプのポケモンを13匹捕まえる", rewardDex: 442, rewardName: "ミカルゲ / ボチ", shiny: true, note: "レア枠ミカルゲ✨(CP829〜888) / ボチ(CP426〜460)" },
+      { category: "event", event_id: "ev-halloween-p1", EventName: "🎃 ハロウィン2026 パート1 限定", task: "ナイススローを6回投げる", rewardDex: 710, rewardName: "バケッチャ(ちいさい) / バケッチャ(ふつう) / バケッチャ(おおきい) / バケッチャ(とくだい)", shiny: true, note: "全4サイズ出現✨ (100%CP: 515 / 523 / 533 / 536)" },
+      { category: "event", event_id: "ev-halloween-p1", EventName: "🎃 ハロウィン2026 パート1 限定", task: "レイドバトルで1回勝つ", rewardDex: 854, rewardName: "ヤバチャ(リボン) / ズバット(トップハット)", shiny: true, note: "初登場衣装✨ (100%CP: 488 / 286)" },
+      { category: "event", event_id: "ev-halloween-p1", EventName: "🎃 ハロウィン2026 パート1 限定", task: "レイドバトルで3回勝つ", rewardDex: 25, rewardName: "ピカチュウ(ハットとケープ) / ミカルゲ", shiny: true, note: "初登場衣装ピカチュウ✨(100%CP: 402) / ミカルゲ✨(100%CP: 888)" },
+      { category: "event", event_id: "ev-halloween-p1", EventName: "🎃 ハロウィン2026 パート1 限定", task: "ポケモンを5回強化する / 進化させる", rewardDex: 10066, rewardName: "ゲンガー / ヤミラミ / ジュペッタ / ヘルガーのメガエナジー×25", shiny: false, note: "ハロウィン限定メガエナジー枠" },
+      // 🌿 シーズン常設の主要注目タスク
+      { category: "catch", event_id: "", EventName: "🌿 シーズン常設", task: "グレートスローを5回連続で投げる", rewardDex: 327, rewardName: "パッチール", shiny: true, note: "常設レア枠✨ (100%CP: 523)" },
+      { category: "catch", event_id: "", EventName: "🌿 シーズン常設", task: "エクセレントスローを3回連続で投げる", rewardDex: 443, rewardName: "フカマル / ヨーギラス / ダンバル", shiny: true, note: "600族高個体値厳選タスク✨" },
+      { category: "battle", event_id: "", EventName: "🌿 シーズン常設", task: "レイドバトルで5回勝つ", rewardDex: 142, rewardName: "プテラ / アローラガラガラ / ガラルバリヤード", shiny: true, note: "常設レイド系タスク✨" },
+      { category: "explore", event_id: "", EventName: "🌿 シーズン常設", task: "タマゴを2個かえす", rewardDex: 704, rewardName: "ヌメラ / エレズン", shiny: true, note: "常設タマゴ孵化タスク✨" },
+      { category: "mega", event_id: "", EventName: "🌿 シーズン常設", task: "ポケモンを10回強化する", rewardDex: 10035, rewardName: "フシギバナ / リザードン / カメックスのメガエナジー×25", shiny: false, note: "常設メガエナジー枠" }
+    ];
 
+    function setResearchFilter(cat) {
+      currentResearchFilter = cat;
+      ["all", "event", "catch", "battle", "explore", "mega"].forEach(c => {
+        const btn = document.getElementById(`resFilter-${c}`);
+        if (btn) btn.className = (c === cat) ? "text-xs px-3 py-1 rounded-full font-bold bg-teal-600 text-white shadow-sm" : "text-xs px-3 py-1 rounded-full font-bold bg-slate-100 text-slate-600 hover:bg-slate-200";
+      });
+      renderMasterResearchTab();
+    }
+
+    function syncEventResearchFromMaster() {
+      // リサーチ全一覧の中から「イベント限定 (category === 'event')」を抽出し、該当イベントの fieldResearches に自動同期
+      const byEv = {};
+      ALL_FIELD_RESEARCHES.forEach(r => {
+        if (r.category === "event" && r.event_id) {
+          if (!byEv[r.event_id]) byEv[r.event_id] = [];
+          byEv[r.event_id].push({
+            task: r.task,
+            rewardDex: r.rewardDex,
+            rewardName: r.rewardName,
+            shiny: r.shiny,
+            note: r.note
+          });
+        }
+      });
+      Object.keys(byEv).forEach(evId => {
+        const targetEv = ALL_EVENTS.find(e => e.id === evId);
+        if (targetEv && byEv[evId].length > 0) {
+          targetEv.fieldResearches = byEv[evId];
+          targetEv.hasFieldResearchPending = false;
+        }
+      });
+    }
+
+    function renderMasterResearchTab() {
+      const container = document.getElementById("masterResearchListContainer");
+      if (!container) return;
+      const q = (document.getElementById("researchSearchInput")?.value || "").trim().toLowerCase();
+
+      const filtered = ALL_FIELD_RESEARCHES.filter(r => {
+        if (currentResearchFilter !== "all" && r.category !== currentResearchFilter) return false;
+        if (q && !r.task.toLowerCase().includes(q) && !r.rewardName.toLowerCase().includes(q) && !(r.EventName || "").toLowerCase().includes(q)) return false;
+        return true;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = `<div class="col-span-2 text-center py-6 text-slate-400 text-xs">該当するフィールドリサーチがありません</div>`;
+        return;
+      }
+
+      container.innerHTML = filtered.map(r => {
+        const isEv = (r.category === "event");
+        return `
+          <div class="${isEv ? 'bg-amber-50/40 border-amber-300' : 'bg-slate-50 border-slate-200'} border p-3 rounded-xl flex flex-col justify-between gap-2 shadow-2xs">
+            <div>
+              <div class="flex items-center justify-between gap-1 mb-1">
+                <span class="text-[10px] font-extrabold px-2 py-0.5 rounded ${isEv ? 'bg-orange-600 text-white' : 'bg-teal-100 text-teal-800'}">${r.EventName || (isEv ? '🎃 イベント限定' : '🌿 常設タスク')}</span>
+                ${r.event_id ? `<button onclick="scrollToEventCard('${r.event_id}')" class="text-[10px] text-sky-600 font-bold hover:underline">イベント詳細へ ↗</button>` : ''}
+              </div>
+              <div class="text-xs font-black text-slate-900">📋 ${r.task}</div>
+              ${r.note ? `<div class="text-[10px] text-slate-500 mt-0.5">${r.note}</div>` : ''}
+            </div>
+            <div class="flex flex-wrap items-center gap-1.5 pt-1.5 border-t border-slate-200/60">
+              ${renderRewardBadgesHtml(r.rewardDex, r.rewardName, r.shiny)}
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
     // ============================================================================
     // 6. 初期描画 ＆ data.json からの自動マージ（新規レイド・DMax対策の自動生成含む）
     // ============================================================================
     window.onload = function() {
+      syncEventResearchFromMaster();
+      renderMasterResearchTab();
       renderSeason24Tab();
       renderTodaySection();
       renderNewsSection();
@@ -2494,6 +2613,12 @@
       fetch('./data.json?t=' + new Date().getTime())
         .then(res => res.json())
         .then(remoteData => {
+          if (Array.isArray(remoteData.all_field_researches) && remoteData.all_field_researches.length > 0) {
+            ALL_FIELD_RESEARCHES = remoteData.all_field_researches.filter(r => isSpecificRewardNameJS(r.rewardName));
+            syncEventResearchFromMaster();
+            renderMasterResearchTab();
+            needsRerender = true;
+          }
           if (remoteData.updated_at) {
             const timeEl = document.getElementById('autoUpdateTimestamp');
             if (timeEl) timeEl.innerText = '最終自動更新: ' + remoteData.updated_at;
