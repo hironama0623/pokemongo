@@ -1,178 +1,58 @@
 {
-  "executed_at": "2026/10/29 18:41 JST",
+  "executed_at": "2026/10/29 21:33 JST",
   "status": "success",
   "model_used": "gemini-flash-lite-latest",
+  "available_models_detected": [
+    "gemini-flash-latest",
+    "gemini-flash-lite-latest",
+    "gemini-3-flash-preview",
+    "gemini-3.1-flash-lite-preview",
+    "gemini-3.1-flash-lite",
+    "gemini-3.5-flash",
+    "gemini-3.5-flash-lite",
+    "gemini-3.6-flash",
+    "gemini-3.7-flash",
+    "gemini-3.8-flash",
+    "gemini-3.1-flash-live-preview",
+    "gemini-2.5-flash",
+    "gemini-2.5-flash-lite",
+    "gemini-omni-flash-preview",
+    "gemini-omni-1.1-flash",
+    "gemini-3.0-flash-preview",
+    "gemini-3.0-flash-001"
+  ],
   "crawled_pages": [
     {
-      "source": "GameWith",
-      "url": "https://pokemongo.gamewith.jp/",
-      "title": "ポケモンGO攻略｜ポケGO速報まとめサイト - ゲームウィズ",
-      "date_hint": "2026-10-29T15:51:49"
-    },
-    {
-      "source": "GameWith",
-      "url": "https://pokemongo.gamewith.jp/article/show/24434",
-      "title": "シャドウバースの評価とアプリ情報 - ゲームウィズ",
-      "date_hint": "2026-07-07T18:28:54"
-    },
-    {
-      "source": "GameWith",
+      "source": "GameWith(タスク一覧)",
       "url": "https://pokemongo.gamewith.jp/article/show/102210",
       "title": "【FGO】暁の山稜の周回効率とドロップ素材｜復刻アポクリファ - ゲームウィズ",
-      "date_hint": "2020-03-27T13:29:21"
+      "chars": 2061
     },
     {
-      "source": "GameWith",
-      "url": "https://pokemongo.gamewith.jp/article/show/38870",
-      "title": "【ポケモンGO】イベント最新情報まとめ！期間や次回の内容 - ゲームウィズ",
-      "date_hint": "2026-10-29T12:18:24"
+      "source": "GameWith(イベント)",
+      "url": "https://pokemongo.gamewith.jp/article/show/24434",
+      "title": "シャドウバースの評価とアプリ情報 - ゲームウィズ",
+      "chars": 1767
     },
     {
-      "source": "GameWith",
-      "url": "https://pokemongo.gamewith.jp/article/show/577622",
-      "title": "【ポケモンGO】2026年10月のイベントスケジュールまとめ - ゲームウィズ",
-      "date_hint": "2026-10-28T06:35:08"
-    },
-    {
-      "source": "GameWith",
-      "url": "https://pokemongo.gamewith.jp/article/show/578391",
-      "title": "【ポケモンGO】GOパス10月のリワード内容と挑戦期間 - ゲームウィズ",
-      "date_hint": "2026-10-07T19:13:19"
-    },
-    {
-      "source": "GameWith",
-      "url": "https://pokemongo.gamewith.jp/article/show/583244",
-      "title": "【ポケモンGO】2026年11月のイベントスケジュールまとめ - ゲームウィズ",
-      "date_hint": "2026-10-29T12:46:22"
-    },
-    {
-      "source": "GameWith",
-      "url": "https://pokemongo.gamewith.jp/article/show/583362",
-      "title": "【ポケモンGO】GOパス11月(2026年)のリワード内容と挑戦期間 - ゲームウィズ",
-      "date_hint": "2026-10-21T09:29:19"
-    },
-    {
-      "source": "9DBみんポケ",
+      "source": "9DB(トップ)",
       "url": "https://9db.jp/pokemongo/",
       "title": "ポケモンGO攻略 - みんポケ",
-      "date_hint": ""
-    },
-    {
-      "source": "9DBみんポケ",
-      "url": "https://9db.jp/pokemongo/data/3905",
-      "title": "【ポケモンGO】コミュニティデイ開催履歴まとめ",
-      "date_hint": ""
-    },
-    {
-      "source": "9DBみんポケ",
-      "url": "https://9db.jp/pokemongo/data/6606",
-      "title": "【ポケモンGO】新・個体値ランクチェッカー",
-      "date_hint": ""
-    },
-    {
-      "source": "9DBみんポケ",
-      "url": "https://9db.jp/pokemongo/data/4351",
-      "title": "【ポケモンGO】開催イベント一覧",
-      "date_hint": ""
-    },
-    {
-      "source": "9DBみんポケ",
-      "url": "https://9db.jp/pokemongo/data/26439",
-      "title": "【ポケモンGO】スポットライトアワー：ゴース(進化時XP2倍)",
-      "date_hint": ""
-    },
-    {
-      "source": "9DBみんポケ",
-      "url": "https://9db.jp/pokemongo/data/9906",
-      "title": "【ポケモンGO】レイド自動マッチング(旧招待レイド)",
-      "date_hint": ""
+      "chars": 2995
     },
     {
       "source": "公式サイト",
       "url": "https://pokemongo.com/ja/news",
       "title": "ニュース – Pokémon GO",
-      "date_hint": ""
+      "chars": 370
     }
   ],
-  "verified_field_researches": {
-    "ev-halloween-p1": [
-      {
-        "task": "ゴーストタイプのポケモンを3匹捕まえる",
-        "rewardDex": 302,
-        "rewardName": "ヤミラミ / ヒトモシ / ゾロア",
-        "shiny": true,
-        "note": "イベント限定タスク [確認: GameWith・9DBみんポケ]",
-        "verified_sources": [
-          "GameWith",
-          "9DBみんポケ"
-        ]
-      },
-      {
-        "task": "ナイススローを3回投げる",
-        "rewardDex": 710,
-        "rewardName": "バケッチャ(ちいさい) / バケッチャ(ふつう) / バケッチャ(おおきい) / バケッチャ(とくだい)",
-        "shiny": true,
-        "note": "サイズ違いのバケッチャが出現 [確認: GameWith]",
-        "verified_sources": [
-          "GameWith"
-        ]
-      }
-    ],
-    "ev-halloween-p2": [
-      {
-        "task": "ゴーストタイプのポケモンを5匹進化させる",
-        "rewardDex": 442,
-        "rewardName": "ミカルゲ",
-        "shiny": true,
-        "note": "レア報酬 [確認: GameWith・9DBみんポケ]",
-        "verified_sources": [
-          "GameWith",
-          "9DBみんポケ"
-        ]
-      }
-    ],
-    "ev-big-footprints": [
-      {
-        "task": "レイドバトルで3回勝つ",
-        "rewardDex": 491,
-        "rewardName": "ダークライ",
-        "shiny": true,
-        "note": "イベントリサーチ報酬 [確認: GameWith・9DBみんポケ]",
-        "verified_sources": [
-          "GameWith",
-          "9DBみんポケ"
-        ]
-      }
-    ],
-    "ev-cd-pawniard": [
-      {
-        "task": "コマタナを3匹捕まえる",
-        "rewardDex": 624,
-        "rewardName": "コマタナ",
-        "shiny": true,
-        "note": "コミュニティデイ限定タスク [確認: GameWith・9DBみんポケ]",
-        "verified_sources": [
-          "GameWith",
-          "9DBみんポケ"
-        ]
-      }
-    ]
-  },
+  "extracted_research_count": 0,
   "updated_events": [
-    "ev-halloween-p1",
-    "ev-supermega-chandelure",
-    "ev-halloween-p2",
-    "ev-dmax-sableye-week",
-    "ev-dmax-machop-week",
-    "ev-big-footprints",
-    "ev-cd-pawniard",
-    "ev-tusk-wish-deoxys"
+    "ev-halloween-2026-p1",
+    "ev-dia-de-muertos-2026",
+    "ev-giratina-origin-raid",
+    "ev-mega-sableye-raid"
   ],
-  "added_or_updated_raids": [
-    "darkrai",
-    "cresselia",
-    "mega-banette"
-  ],
-  "added_or_updated_dmax": [],
   "errors": []
 }

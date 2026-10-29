@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/10/29 18:41 JST",
+  "updated_at": "2026/10/29 21:33 JST",
   "latest_news": [
     {
       "id": "news-supermega-chandelure",
@@ -8,6 +8,33 @@
       "title": "シャンデラのスーパーメガレイドデイ開催！",
       "details": "10月31日14時から17時まで、スーパーメガレイドデイが開催されメガシャンデラが初登場します。",
       "targetId": "ev-supermega-chandelure",
+      "is_update_notice": false
+    },
+    {
+      "id": "news-2026-1029-spotlight",
+      "date": "2026-10-29",
+      "date_label": "10/29",
+      "title": "スポットライトアワー：ゴース(進化時XP2倍)が開催！",
+      "details": "スポットライトアワーとしてゴースが大量出現。進化時の獲得XPが2倍になるボーナスが開催されます。",
+      "targetId": "spotlight-gastly-2026",
+      "is_update_notice": false
+    },
+    {
+      "id": "news-2026-1029-pawniard-cd",
+      "date": "2026-10-29",
+      "date_label": "10/29",
+      "title": "コマタナのコミュニティデイが開催決定！",
+      "details": "相棒にしなくても進化タスクが進むボーナスは削除されたため注意が必要です。コマタナのコミュニティデイ詳細情報をチェックしましょう。",
+      "targetId": "ev-pawniard-cd",
+      "is_update_notice": false
+    },
+    {
+      "id": "news-2026-1029-eternatus",
+      "date": "2026-10-29",
+      "date_label": "10/29",
+      "title": "ムゲンダイナ再来イベントが開催決定！",
+      "details": "ムゲンダイナ(ムゲンダイマックス)とバトルができるムゲンダイナ再来イベントが開催決定しました。",
+      "targetId": "ev-eternatus-return",
       "is_update_notice": false
     },
     {
@@ -63,35 +90,9 @@
       "details": "11月16日(月)10:00〜11月23日(月)20:00開催。過去のマックスバトル登場ポケモンがSP背景付きで復刻。GOパス「大きな足跡」も配信され、ムゲンダイナ所持者はアメ100個が入手可能。",
       "targetId": "ev-big-footprints",
       "is_update_notice": true
-    },
-    {
-      "id": "news-20261029-spotlight-gastly",
-      "date": "2026-10-29",
-      "date_label": "10/29",
-      "title": "本日18時よりスポットライトアワー開催！ゴース大量発生＆進化XP2倍",
-      "details": "10月29日(木)18:00〜19:00はゴースが大量発生。期間中はポケモン進化時の獲得XPが2倍になるため、しあわせタマゴを使って一気にXPを稼ぎましょう。",
-      "targetId": "ev-halloween-p1",
-      "is_update_notice": false
-    },
-    {
-      "id": "news-2026-10-28-dead-muertos",
-      "date": "2026-10-28",
-      "date_label": "10/28",
-      "title": "【メキシコ限定】Día de Muertos en 2026が開催！",
-      "details": "メキシコ限定の死者の日2026イベントが開催中です。",
-      "targetId": "ev-halloween-p1",
-      "is_update_notice": false
-    },
-    {
-      "id": "news-2026-10-28-giratina-raid",
-      "date": "2026-10-28",
-      "date_label": "10/28",
-      "title": "伝説レイドにギラティナ(オリジン)が登場！",
-      "details": "伝説レイドバトルにギラティナ(オリジン)が復刻登場。同日18:00からはレイドアワーも開催されます。",
-      "targetId": "ev-raid-giratina-o",
-      "is_update_notice": false
     }
   ],
+  "all_field_researches": [],
   "field_research_updates": {
     "ev-halloween-p1": [
       {
@@ -786,6 +787,122 @@
       "specialGimmicks": [],
       "raids": [],
       "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-halloween-2026-p1",
+      "month": 10,
+      "title": "ハロウィン2026パート1",
+      "barClass": "bg-purple-600",
+      "category": "イベント",
+      "barIconDex": 302,
+      "startDay": 27,
+      "endDay": 1,
+      "hasPaid": false,
+      "dateText": "10/27(火) 10:00～11/1(日) 10:00",
+      "summary": "ハロウィンイベントのパート1が開催！ズバット(トップハット)やピカチュウ(ハットとケーブ)などのハロウィン仕様のポケモンが登場。",
+      "freeFeatures": [
+        "ハロウィン仕様の仮装ポケモンが登場",
+        "色違い確率調査対象のポケモンが出現"
+      ],
+      "paidFeatures": [],
+      "wilds": [
+        {
+          "dex": 41,
+          "name": "ズバット (トップハット)",
+          "shiny": true,
+          "note": "イベント限定衣装"
+        },
+        {
+          "dex": 25,
+          "name": "ピカチュウ (ハットとケーブ)",
+          "shiny": true,
+          "note": "イベント限定衣装"
+        }
+      ],
+      "specialGimmicks": [],
+      "raids": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-dia-de-muertos-2026",
+      "month": 10,
+      "title": "【メキシコ限定】Día de Muertos en 2026",
+      "barClass": "bg-amber-600",
+      "category": "海外限定",
+      "barIconDex": 442,
+      "startDay": 28,
+      "endDay": 6,
+      "hasPaid": false,
+      "dateText": "10/28(水) 01:00～11/6(金) 11:00",
+      "summary": "メキシコ限定で「死者の日」を祝うDía de Muertos en 2026が開催。",
+      "freeFeatures": [
+        "メキシコ限定の特別な spawns やボーナス"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "specialGimmicks": [],
+      "raids": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-giratina-origin-raid",
+      "month": 10,
+      "title": "伝説：ギラティナ(オリジン)",
+      "barClass": "bg-red-600",
+      "category": "レイド",
+      "barIconDex": 487,
+      "startDay": 28,
+      "endDay": 3,
+      "hasPaid": false,
+      "dateText": "10/28(水) 05:00～11/3(火) 21:00",
+      "summary": "伝説レイドにギラティナ（オリジンフォルム）が降臨。",
+      "freeFeatures": [
+        "伝説レイドバトルでの出現"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "specialGimmicks": [],
+      "raids": [
+        {
+          "dex": 487,
+          "name": "ギラティナ (オリジンフォルム)",
+          "shiny": true,
+          "note": "伝説レイドボス",
+          "targetKey": "giratina_origin",
+          "isDmax": false
+        }
+      ],
+      "tasks": []
+    },
+    {
+      "id": "ev-mega-sableye-raid",
+      "month": 10,
+      "title": "メガ：メガヤミラミ",
+      "barClass": "bg-pink-600",
+      "category": "メガレイド",
+      "barIconDex": 302,
+      "startDay": 28,
+      "endDay": 3,
+      "hasPaid": false,
+      "dateText": "10/28(水) 05:00～11/3(火) 21:00",
+      "summary": "メガレイドにメガヤミラミが登場。",
+      "freeFeatures": [
+        "メガレイドでの出現"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "specialGimmicks": [],
+      "raids": [
+        {
+          "dex": 302,
+          "name": "メガヤミラミ",
+          "shiny": true,
+          "note": "メガレイドボス",
+          "targetKey": "mega_sableye",
+          "isDmax": false
+        }
+      ],
       "tasks": []
     }
   ],
@@ -1917,43 +2034,20 @@
     }
   },
   "event_gopass": {
-    "title": "GOパス 10月(2026)",
-    "period": "2026年10月6日(火)10:00 〜 11月3日(火)10:00",
+    "title": "GOパス：10月(2026)",
+    "period": "10/6(火) 10:00～11/3(火) 10:00",
     "free_summary": [
-      "カイオーガとの出会いやふしぎなアメXLを獲得可能",
-      "デイリー・ウィークリータスクでGOポイントを収集"
+      "通常のGOパス報酬が獲得可能"
     ],
     "deluxe_summary": [
-      "キラチャームや追加のスーパーふかそうちを獲得可能",
-      "ギフト上限アップや交換ボーナスなどのランク特典"
+      "デラックス報酬の追加アイテムやポケモンが獲得可能"
     ],
     "reward_rows": [
       {
-        "rank": "1",
-        "free_reward": "ポケモン交換でアメ1個増加・アメXL確定",
+        "rank": "Rank 1",
+        "free_reward": "ほしのすな",
         "free_dex": 0,
-        "deluxe_reward": "ポケモン交換でアメ1個増加・アメXL確定",
-        "deluxe_dex": 0
-      },
-      {
-        "rank": "25",
-        "free_reward": "ギフト上限アップ",
-        "free_dex": 0,
-        "deluxe_reward": "ギフト上限デラックスボーナス",
-        "deluxe_dex": 0
-      },
-      {
-        "rank": "50",
-        "free_reward": "おさんぽおこう効果時間2倍",
-        "free_dex": 0,
-        "deluxe_reward": "おさんぽおこう効果時間2倍",
-        "deluxe_dex": 0
-      },
-      {
-        "rank": "100",
-        "free_reward": "カイオーガ",
-        "free_dex": 382,
-        "deluxe_reward": "キラチャーム",
+        "deluxe_reward": "プレミアムレイドパス",
         "deluxe_dex": 0
       }
     ]
