@@ -1,7 +1,7 @@
 {
-  "executed_at": "2026/10/29 22:52 JST",
+  "executed_at": "2026/10/30 07:32 JST",
   "status": "success",
-  "model_used": "gemini-flash-latest",
+  "model_used": "gemini-flash-lite-latest",
   "available_models_detected": [
     "gemini-flash-latest",
     "gemini-flash-lite-latest",
@@ -26,19 +26,19 @@
       "source": "GameWith(タスク一覧)",
       "url": "https://pokemongo.gamewith.jp/article/show/102210",
       "title": "【FGO】暁の山稜の周回効率とドロップ素材｜復刻アポクリファ - ゲームウィズ",
-      "chars": 2061
+      "chars": 2056
     },
     {
       "source": "GameWith(イベント)",
       "url": "https://pokemongo.gamewith.jp/article/show/24434",
       "title": "シャドウバースの評価とアプリ情報 - ゲームウィズ",
-      "chars": 1767
+      "chars": 1761
     },
     {
       "source": "9DB(トップ)",
       "url": "https://9db.jp/pokemongo/",
       "title": "ポケモンGO攻略 - みんポケ",
-      "chars": 2966
+      "chars": 3005
     },
     {
       "source": "公式サイト",
@@ -49,7 +49,9 @@
   ],
   "extracted_research_count": 0,
   "updated_events": [
-    "ev-halloween-2026-part1"
+    "ev-halloween-2026-p1",
+    "ev-dia-de-muertos-2026",
+    "ev-giratina-origin"
   ],
   "errors": []
 }

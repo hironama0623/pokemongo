@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/10/29 22:52 JST",
+  "updated_at": "2026/10/30 07:32 JST",
   "latest_news": [
     {
       "id": "news-supermega-chandelure",
@@ -38,15 +38,6 @@
       "is_update_notice": true
     },
     {
-      "id": "news-2026-1029-spotlight",
-      "date": "2026-10-29",
-      "date_label": "10/29",
-      "title": "スポットライトアワー：ゴース(進化時XP2倍)が開催！",
-      "details": "スポットライトアワーとしてゴースが大量出現。進化時の獲得XPが2倍になるボーナスが開催されます。",
-      "targetId": "spotlight-gastly-2026",
-      "is_update_notice": false
-    },
-    {
       "id": "news-2026-1029-pawniard-cd",
       "date": "2026-10-29",
       "date_label": "10/29",
@@ -56,39 +47,48 @@
       "is_update_notice": false
     },
     {
-      "id": "news-1",
-      "date": "2026-10-29",
-      "date_label": "10/29",
-      "title": "大きな足跡イベントでムゲンダイナ再登場！",
-      "details": "11月16日から「大きな足跡」イベントが開催決定！伝説のムゲンダイナが再登場し、メガジュペッタやクレセリア、ダークライなどのレイドボスも出現します。",
-      "targetId": "ev-big-footprints",
-      "is_update_notice": false
-    },
-    {
-      "id": "news-2",
-      "date": "2026-10-29",
-      "date_label": "10/29",
-      "title": "GOパス大きな足跡の詳細が判明！",
-      "details": "11月のGOパスおよび「大きな足跡」に関連する報酬やボーナス詳細が発表されました。グラードンや豪華報酬をゲットしましょう。",
-      "targetId": "ev-gopass-nov",
-      "is_update_notice": false
-    },
-    {
-      "id": "news-3",
-      "date": "2026-10-29",
-      "date_label": "10/29",
-      "title": "ドドゲザンの進化緩和条件が変更に！",
-      "details": "コマタナのコミュニティデイ開催に向けて、コマタナからドドゲザンへの進化緩和条件が変更されることが発表されました。",
-      "targetId": "ev-cd-pawniard",
-      "is_update_notice": true
-    },
-    {
       "id": "news-cd-pawniard",
       "date": "2026-10-29",
       "date_label": "10月29日",
       "title": "11月コミュニティデイはコマタナ！",
       "details": "11月21日(土)14時から17時までコマタナのコミュニティデイが開催。限定技ドゲザンを覚えるほか、進化条件の緩和も実施されます。",
       "targetId": "ev-cd-pawniard",
+      "is_update_notice": false
+    },
+    {
+      "id": "news-1",
+      "date": "10/29",
+      "date_label": "10/29",
+      "title": "スポットライトアワー：ゴース(進化時XP2倍)が開催！",
+      "details": "スポットライトアワー：ゴース(進化時XP2倍)が開催！",
+      "targetId": "ev-gastly-spotlight",
+      "is_update_notice": false
+    },
+    {
+      "id": "news-2",
+      "date": "10/29",
+      "date_label": "10/29",
+      "title": "コマタナのコミュニティデイ：相棒にしなくても進化タスクが進むボーナスは削除されたため注意！",
+      "details": "相棒にしなくても進化タスクが進むボーナスは削除されたため注意！コマタナのコミュニティデイ",
+      "targetId": "ev-pawniard-comday",
+      "is_update_notice": false
+    },
+    {
+      "id": "news-3",
+      "date": "10/29",
+      "date_label": "10/29",
+      "title": "ムゲンダイナ再来イベントが開催決定！ムゲンダイナ(ムゲンダイマックス)とバトルができる",
+      "details": "ムゲンダイナ再来イベントが開催決定！ムゲンダイナ(ムゲンダイマックス)とバトルができる",
+      "targetId": "ev-eternatus-return",
+      "is_update_notice": false
+    },
+    {
+      "id": "news-4",
+      "date": "10/28",
+      "date_label": "10/28",
+      "title": "レイドアワー：ギラティナ(オリジン)が開催！",
+      "details": "レイドアワー：ギラティナ(オリジン)が開催！",
+      "targetId": "ev-giratina-origin",
       "is_update_notice": false
     }
   ],
@@ -794,16 +794,16 @@
       "month": 10,
       "title": "ハロウィン2026パート1",
       "barClass": "bg-purple-600",
-      "category": "イベント",
-      "barIconDex": 302,
+      "category": "ハロウィン",
+      "barIconDex": 94,
       "startDay": 27,
       "endDay": 1,
       "hasPaid": false,
       "dateText": "10/27(火) 10:00～11/1(日) 10:00",
-      "summary": "ハロウィンイベントのパート1が開催！ズバット(トップハット)やピカチュウ(ハットとケーブ)などのハロウィン仕様のポケモンが登場。",
+      "summary": "ハロウィン2026イベントのパート1が開催！",
       "freeFeatures": [
-        "ハロウィン仕様の仮装ポケモンが登場",
-        "色違い確率調査対象のポケモンが出現"
+        "ズバット (トップハット)の色違い実装・出現",
+        "ピカチュウ (ハットとケーブ)の色違い実装・出現"
       ],
       "paidFeatures": [],
       "wilds": [
@@ -811,13 +811,13 @@
           "dex": 41,
           "name": "ズバット (トップハット)",
           "shiny": true,
-          "note": "イベント限定衣装"
+          "note": "イベント限定"
         },
         {
           "dex": 25,
           "name": "ピカチュウ (ハットとケーブ)",
           "shiny": true,
-          "note": "イベント限定衣装"
+          "note": "イベント限定"
         }
       ],
       "specialGimmicks": [],
@@ -828,16 +828,16 @@
       "id": "ev-dia-de-muertos-2026",
       "month": 10,
       "title": "【メキシコ限定】Día de Muertos en 2026",
-      "barClass": "bg-amber-600",
-      "category": "海外限定",
-      "barIconDex": 442,
+      "barClass": "bg-orange-500",
+      "category": "地域限定",
+      "barIconDex": 104,
       "startDay": 28,
       "endDay": 6,
       "hasPaid": false,
       "dateText": "10/28(水) 01:00～11/6(金) 11:00",
-      "summary": "メキシコ限定で「死者の日」を祝うDía de Muertos en 2026が開催。",
+      "summary": "メキシコ限定の死者の日イベントが開催！",
       "freeFeatures": [
-        "メキシコ限定の特別な spawns やボーナス"
+        "メキシコ限定イベントボーナス"
       ],
       "paidFeatures": [],
       "wilds": [],
@@ -952,6 +952,45 @@
           "shiny": true,
           "note": "メガレイド",
           "targetKey": "mega",
+          "isDmax": false
+        }
+      ],
+      "tasks": []
+    },
+    {
+      "id": "ev-giratina-origin",
+      "month": 10,
+      "title": "伝説：ギラティナ(オリジン) ＆ メガ：メガヤミラミ",
+      "barClass": "bg-red-600",
+      "category": "レイド",
+      "barIconDex": 487,
+      "startDay": 28,
+      "endDay": 3,
+      "hasPaid": false,
+      "dateText": "10/28(水) 05:00～11/3(火) 21:00",
+      "summary": "伝説レイドにギラティナ(オリジン)、メガレイドにメガヤミラミが登場！",
+      "freeFeatures": [
+        "ギラティナ(オリジン)の伝説レイド出現",
+        "メガヤミラミのメガレイド出現"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "specialGimmicks": [],
+      "raids": [
+        {
+          "dex": 487,
+          "name": "ギラティナ(オリジン)",
+          "shiny": true,
+          "note": "伝説レイド",
+          "targetKey": "giratina_origin",
+          "isDmax": false
+        },
+        {
+          "dex": 302,
+          "name": "メガヤミラミ",
+          "shiny": true,
+          "note": "メガレイド",
+          "targetKey": "mega_sableye",
           "isDmax": false
         }
       ],
@@ -2089,14 +2128,14 @@
     "title": "GOパス：10月(2026)",
     "period": "10/6(火) 10:00～11/3(火) 10:00",
     "free_summary": [
-      "通常のGOパス報酬が獲得可能"
+      "無料のGOパス報酬を獲得可能"
     ],
     "deluxe_summary": [
-      "デラックス報酬の追加アイテムやポケモンが獲得可能"
+      "デラックスパスで豪華な報酬を追加獲得可能"
     ],
     "reward_rows": [
       {
-        "rank": "Rank 1",
+        "rank": "1",
         "free_reward": "ほしのすな",
         "free_dex": 0,
         "deluxe_reward": "プレミアムレイドパス",
