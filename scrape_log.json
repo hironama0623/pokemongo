@@ -1,13 +1,13 @@
 {
-  "executed_at": "2026/10/29 07:30 JST",
+  "executed_at": "2026/10/29 12:39 JST",
   "status": "success",
-  "model_used": "gemini-flash-latest",
+  "model_used": "gemini-flash-lite-latest",
   "crawled_pages": [
     {
       "source": "GameWith",
       "url": "https://pokemongo.gamewith.jp/",
       "title": "ポケモンGO攻略｜ポケGO速報まとめサイト - ゲームウィズ",
-      "date_hint": "2026-10-28T20:46:25"
+      "date_hint": "2026-10-29T12:18:48"
     },
     {
       "source": "GameWith",
@@ -25,7 +25,7 @@
       "source": "GameWith",
       "url": "https://pokemongo.gamewith.jp/article/show/38870",
       "title": "【ポケモンGO】イベント最新情報まとめ！期間や次回の内容 - ゲームウィズ",
-      "date_hint": "2026-10-28T09:09:30"
+      "date_hint": "2026-10-29T12:18:24"
     },
     {
       "source": "GameWith",
@@ -43,7 +43,7 @@
       "source": "GameWith",
       "url": "https://pokemongo.gamewith.jp/article/show/583244",
       "title": "【ポケモンGO】2026年11月のイベントスケジュールまとめ - ゲームウィズ",
-      "date_hint": "2026-10-28T05:19:17"
+      "date_hint": "2026-10-29T12:20:33"
     },
     {
       "source": "GameWith",
@@ -65,12 +65,6 @@
     },
     {
       "source": "9DBみんポケ",
-      "url": "https://9db.jp/pokemongo/data/26625",
-      "title": "【ポケモンGO】大きな足跡",
-      "date_hint": ""
-    },
-    {
-      "source": "9DBみんポケ",
       "url": "https://9db.jp/pokemongo/data/26660",
       "title": "【ポケモンGO】ムゲンダイナ再来",
       "date_hint": ""
@@ -88,6 +82,12 @@
       "date_hint": ""
     },
     {
+      "source": "9DBみんポケ",
+      "url": "https://9db.jp/pokemongo/data/26146",
+      "title": "【ポケモンGO】コミュニティデイ：コマタナ",
+      "date_hint": ""
+    },
+    {
       "source": "公式サイト",
       "url": "https://pokemongo.com/ja/news",
       "title": "ニュース – Pokémon GO",
@@ -95,51 +95,53 @@
     }
   ],
   "verified_field_researches": {
-    "ev-big-footprints": [
+    "ev-halloween-p1": [
       {
-        "task": "マックスバトルで1回勝つ",
-        "rewardDex": 374,
-        "rewardName": "ダンバル",
+        "task": "ゴーストタイプのポケモンを5匹捕まえる",
+        "rewardDex": 302,
+        "rewardName": "ヤミラミ / カゲボウズ / ヨマワル",
         "shiny": true,
-        "note": "CP375〜404 [確認: 9DBみんポケ・GameWith]",
+        "note": "イベント限定タスク [確認: GameWith・9DBみんポケ]",
         "verified_sources": [
-          "9DBみんポケ",
-          "GameWith"
+          "GameWith",
+          "9DBみんポケ"
         ]
       },
       {
-        "task": "パワースポットに3回アクセスする",
-        "rewardDex": 66,
-        "rewardName": "ワンリキー",
+        "task": "ナイススローを3回投げる",
+        "rewardDex": 711,
+        "rewardName": "バケッチャ(ちいさい) / バケッチャ(ふつう) / バケッチャ(おおきい) / バケッチャ(とくだい)",
         "shiny": true,
-        "note": "CP503〜544 [確認: 9DBみんポケ・GameWith]",
+        "note": "サイズ違い [確認: GameWith・9DBみんポケ]",
         "verified_sources": [
-          "9DBみんポケ",
-          "GameWith"
-        ]
-      },
-      {
-        "task": "マックス粒子を500MP集める",
-        "rewardDex": 92,
-        "rewardName": "ゴース",
-        "shiny": true,
-        "note": "CP478〜529 [確認: 9DBみんポケ]",
-        "verified_sources": [
+          "GameWith",
           "9DBみんポケ"
         ]
       }
     ]
   },
   "updated_events": [
-    "ev-big-footprints"
+    "ev-halloween-p1",
+    "ev-halloween-p2",
+    "ev-supermega-chandelure",
+    "ev-dmax-sableye-week",
+    "ev-raid-giratina-o",
+    "ev-dmax-machop-week",
+    "ev-gopass-nov",
+    "ev-wildweek-2026",
+    "ev-wildarea-2026",
+    "ev-big-footprints",
+    "ev-cd-pawniard",
+    "ev-tusk-wish-deoxys",
+    "ev-dec-new-season"
   ],
   "added_or_updated_raids": [
     "darkrai",
     "cresselia",
-    "mega-banette"
+    "mega-banette",
+    "deoxys-normal",
+    "mega-metagross"
   ],
-  "added_or_updated_dmax": [
-    "dmax-eternatus"
-  ],
+  "added_or_updated_dmax": [],
   "errors": []
 }

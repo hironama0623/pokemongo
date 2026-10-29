@@ -1,6 +1,33 @@
 {
-  "updated_at": "2026/10/29 07:30 JST",
+  "updated_at": "2026/10/29 12:39 JST",
   "latest_news": [
+    {
+      "id": "news-supermega-chandelure",
+      "date": "2026-10-31",
+      "date_label": "10月31日",
+      "title": "シャンデラのスーパーメガレイドデイ開催！",
+      "details": "10月31日14時から17時まで、スーパーメガレイドデイが開催されメガシャンデラが初登場します。",
+      "targetId": "ev-supermega-chandelure",
+      "is_update_notice": false
+    },
+    {
+      "id": "news-big-footprints",
+      "date": "2026-10-29",
+      "date_label": "10月29日",
+      "title": "大きな足跡イベントでムゲンダイナ再登場！",
+      "details": "大きな足跡イベントおよびムゲンダイナ再来イベントの開催が発表されました。クレセリア、ダークライ、メガジュペッタ等も登場予定です。",
+      "targetId": "ev-big-footprints",
+      "is_update_notice": true
+    },
+    {
+      "id": "news-cd-pawniard",
+      "date": "2026-10-29",
+      "date_label": "10月29日",
+      "title": "11月コミュニティデイはコマタナ！",
+      "details": "11月21日(土)14時から17時までコマタナのコミュニティデイが開催。限定技ドゲザンを覚えるほか、進化条件の緩和も実施されます。",
+      "targetId": "ev-cd-pawniard",
+      "is_update_notice": false
+    },
     {
       "id": "news-20261029-eternatus-max",
       "date": "2026-10-29",
@@ -63,33 +90,6 @@
       "details": "11月3日(火)10:00から開始される11月GOパスでは、無料リワードでグラードンや400ポケコイン、デラックス版ではさらに追加1000ポケコインやスーパーふかそうちが手に入ります。",
       "targetId": "ev-gopass-nov",
       "is_update_notice": false
-    },
-    {
-      "id": "news-20261028-nov-schedule",
-      "date": "2026-10-28",
-      "date_label": "10/28(水)",
-      "title": "2026年11月イベントスケジュール公開！クレセリア＆ダークライ、メガメタグロス初登場",
-      "details": "11月はコマタナのコミュニティデイ(11/21)や大きな足跡イベントでのクレセリア・ダークライ・メガジュペッタ復刻、月末の黄昏時の願いイベントにてデオキシス各フォルムとメガメタグロスが登場します。",
-      "targetId": "ev-big-footprints",
-      "is_update_notice": false
-    },
-    {
-      "id": "news-halloween-p1-update",
-      "date": "2026-10-28",
-      "date_label": "10/28",
-      "is_update_notice": true,
-      "title": "【更新】「ハロウィン2026パート1」フィールドリサーチ全報酬ポケモン＆サプライズボックス仕様・新規レイド対策を追加！",
-      "details": "ポケストップ限定フィールドリサーチで出現する具体的なポケモン一覧（リボンヤバチャ・衣装ピカチュウ・衣装ズバット・バケッチャ4種・ミカルゲ・ゾロア等）と、サプライズボックスの独立枠、さらに11月登場のダークライ・クレセリア・メガジュペッタ等の対策ページをすべて反映しました！",
-      "targetId": "ev-halloween-p1"
-    },
-    {
-      "id": "news-2026-10-28-halloween-p1",
-      "date": "2026-10-27",
-      "date_label": "10/27",
-      "title": "ハロウィン2026パート1が開催！",
-      "details": "ハロウィン2026パート1イベントが開催中！ズバット(トップハット)やピカチュウ(ハット&ケープ)などの特別なすがたや色違いが登場します。",
-      "targetId": "ev-halloween-p1",
-      "is_update_notice": false
     }
   ],
   "field_research_updates": {
@@ -97,9 +97,20 @@
       {
         "task": "ゴーストタイプのポケモンを5匹捕まえる",
         "rewardDex": 302,
-        "rewardName": "ヤミラミ / カゲボウズ / ヒトモシ",
+        "rewardName": "ヤミラミ / カゲボウズ / ヨマワル",
         "shiny": true,
-        "note": "ハロウィンフィールドリサーチ [確認: GameWith・9DBみんポケ]",
+        "note": "イベント限定タスク [確認: GameWith・9DBみんポケ]",
+        "verified_sources": [
+          "GameWith",
+          "9DBみんポケ"
+        ]
+      },
+      {
+        "task": "ナイススローを3回投げる",
+        "rewardDex": 711,
+        "rewardName": "バケッチャ(ちいさい) / バケッチャ(ふつう) / バケッチャ(おおきい) / バケッチャ(とくだい)",
+        "shiny": true,
+        "note": "サイズ違い [確認: GameWith・9DBみんポケ]",
         "verified_sources": [
           "GameWith",
           "9DBみんポケ"
@@ -170,19 +181,18 @@
     {
       "id": "ev-raid-giratina-o",
       "month": 10,
-      "title": "ギラティナ(オリジン)＆メガヤミラミ出現",
-      "barClass": "bg-indigo-700",
-      "category": "レイドボス",
+      "title": "ギラティナオリジン・メガヤミラミレイド",
+      "barClass": "bg-yellow-700",
+      "category": "レイド",
       "barIconDex": 487,
       "startDay": 28,
       "endDay": 3,
       "hasPaid": false,
       "hasFieldResearchPending": false,
-      "dateText": "10/28(水)5:00〜11/3(火)21:00",
-      "summary": "伝説レイドに「ギラティナ(オリジンフォルム)」、メガレイドに「メガヤミラミ」が降臨！",
+      "dateText": "10/28(水) 05:00 〜 11/3(火) 21:00",
+      "summary": "伝説レイドにギラティナ(オリジン)、メガレイドにメガヤミラミが登壇。",
       "freeFeatures": [
-        "ギラティナ(オリジン)の色違い確率アップ",
-        "メガヤミラミの色違い実装"
+        "ギラティナ(オリジン)とメガヤミラミの復刻登場"
       ],
       "paidFeatures": [],
       "wilds": [],
@@ -190,98 +200,7 @@
       "raids": [
         {
           "dex": 487,
-          "name": "ギラティナ(オリジンフォルム)",
-          "shiny": true,
-          "note": "★5伝説レイド",
-          "targetKey": "giratina-origin",
-          "isDmax": false
-        },
-        {
-          "dex": 302,
-          "name": "メガヤミラミ",
-          "shiny": true,
-          "note": "メガレイド",
-          "targetKey": "mega-banette",
-          "isDmax": false
-        }
-      ],
-      "fieldResearches": [],
-      "tasks": []
-    },
-    {
-      "id": "ev-halloween-p1",
-      "month": 10,
-      "title": "ハロウィン2026パート1",
-      "barClass": "bg-purple-700",
-      "category": "イベント",
-      "barIconDex": 302,
-      "startDay": 27,
-      "endDay": 1,
-      "hasPaid": false,
-      "hasFieldResearchPending": false,
-      "dateText": "10/27(火)10:00〜11/1(日)10:00",
-      "summary": "ハロウィン2026イベントのパート1！トップハット姿のズバットやハット&ケープ姿のピカチュウ、ゴーストタイプのポケモンたちが多数出現します。",
-      "freeFeatures": [
-        "ズバット(トップハット)の色違い初登場",
-        "ピカチュウ(ハット&ケープ)の登場",
-        "ゴーストタイプの出現率アップ"
-      ],
-      "paidFeatures": [],
-      "wilds": [
-        {
-          "dex": 41,
-          "name": "ズバット(トップハット)",
-          "shiny": true,
-          "note": "イベント初登場"
-        },
-        {
-          "dex": 25,
-          "name": "ピカチュウ(ハット&ケープ)",
-          "shiny": true,
-          "note": "限定衣装"
-        },
-        {
-          "dex": 302,
-          "name": "ヤミラミ",
-          "shiny": true,
-          "note": ""
-        },
-        {
-          "dex": 353,
-          "name": "カゲボウズ",
-          "shiny": true,
-          "note": ""
-        },
-        {
-          "dex": 442,
-          "name": "ミカルゲ",
-          "shiny": true,
-          "note": ""
-        },
-        {
-          "dex": 607,
-          "name": "ヒトモシ",
-          "shiny": true,
-          "note": ""
-        },
-        {
-          "dex": 711,
-          "name": "バケッチャ",
-          "shiny": true,
-          "note": ""
-        },
-        {
-          "dex": 947,
-          "name": "ボチ",
-          "shiny": true,
-          "note": ""
-        }
-      ],
-      "specialGimmicks": [],
-      "raids": [
-        {
-          "dex": 487,
-          "name": "ギラティナ(オリジンフォルム)",
+          "name": "ギラティナ(オリジン)",
           "shiny": true,
           "note": "伝説レイド",
           "targetKey": "giratina-origin",
@@ -292,7 +211,97 @@
           "name": "メガヤミラミ",
           "shiny": true,
           "note": "メガレイド",
-          "targetKey": "mega-banette",
+          "targetKey": "mega-sableye",
+          "isDmax": false
+        }
+      ],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-halloween-p1",
+      "month": 10,
+      "title": "ハロウィン2026パート1",
+      "barClass": "bg-purple-800",
+      "category": "イベント",
+      "barIconDex": 302,
+      "startDay": 27,
+      "endDay": 1,
+      "hasPaid": false,
+      "hasFieldResearchPending": false,
+      "dateText": "10/27(火) 10:00 〜 11/1(日) 10:00",
+      "summary": "ズバット(トップハット)やピカチュウ(ハット＆ケープ)が登場するハロウィンイベントの前半戦。",
+      "freeFeatures": [
+        "野生でゴーストタイプやイベント限定ポケモンの出現率アップ",
+        "レイドボスにメガヤミラミやギラティナ(オリジン)が登場"
+      ],
+      "paidFeatures": [],
+      "wilds": [
+        {
+          "dex": 41,
+          "name": "ズバット(トップハット)",
+          "shiny": true,
+          "note": "ハロウィン衣装"
+        },
+        {
+          "dex": 25,
+          "name": "ピカチュウ(ハット＆ケープ)",
+          "shiny": true,
+          "note": "ハロウィン衣装"
+        },
+        {
+          "dex": 302,
+          "name": "ヤミラミ",
+          "shiny": true,
+          "note": "通常出現"
+        },
+        {
+          "dex": 429,
+          "name": "フワライド(ハロウィン)",
+          "shiny": true,
+          "note": "衣装姿"
+        },
+        {
+          "dex": 570,
+          "name": "ゾロア",
+          "shiny": true,
+          "note": "変身して出現"
+        },
+        {
+          "dex": 607,
+          "name": "ヒトモシ",
+          "shiny": true,
+          "note": "人気枠"
+        },
+        {
+          "dex": 711,
+          "name": "バケッチャ",
+          "shiny": true,
+          "note": "各種サイズ出現"
+        },
+        {
+          "dex": 1013,
+          "name": "ボチ",
+          "shiny": true,
+          "note": "ゴースト枠"
+        }
+      ],
+      "specialGimmicks": [],
+      "raids": [
+        {
+          "dex": 302,
+          "name": "メガヤミラミ",
+          "shiny": true,
+          "note": "メガレイド",
+          "targetKey": "mega-sableye",
+          "isDmax": false
+        },
+        {
+          "dex": 487,
+          "name": "ギラティナ(オリジン)",
+          "shiny": true,
+          "note": "伝説レイド",
+          "targetKey": "giratina-origin",
           "isDmax": false
         },
         {
@@ -308,9 +317,20 @@
         {
           "task": "ゴーストタイプのポケモンを5匹捕まえる",
           "rewardDex": 302,
-          "rewardName": "ヤミラミ / カゲボウズ / ヒトモシ",
+          "rewardName": "ヤミラミ / カゲボウズ / ヨマワル",
           "shiny": true,
-          "note": "ハロウィンフィールドリサーチ [確認: GameWith・9DBみんポケ]",
+          "note": "イベント限定タスク [確認: GameWith・9DBみんポケ]",
+          "verified_sources": [
+            "GameWith",
+            "9DBみんポケ"
+          ]
+        },
+        {
+          "task": "ナイススローを3回投げる",
+          "rewardDex": 711,
+          "rewardName": "バケッチャ(ちいさい) / バケッチャ(ふつう) / バケッチャ(おおきい) / バケッチャ(とくだい)",
+          "shiny": true,
+          "note": "サイズ違い [確認: GameWith・9DBみんポケ]",
           "verified_sources": [
             "GameWith",
             "9DBみんポケ"
@@ -322,260 +342,75 @@
     {
       "id": "ev-big-footprints",
       "month": 11,
-      "title": "大きな足跡 イベント",
-      "barClass": "bg-purple-800 text-white",
-      "category": "ダイマックス / レイド",
-      "barIconDex": 890,
+      "title": "大きな足跡イベント",
+      "barClass": "bg-purple-700",
+      "category": "イベント",
+      "barIconDex": 888,
       "startDay": 16,
-      "endDay": 23,
-      "hasPaid": true,
+      "endDay": 24,
+      "hasPaid": false,
       "hasFieldResearchPending": false,
-      "dateText": "11月16日(月) 10:00 〜 11月23日(月) 20:00",
-      "summary": "すべての道はムゲンダイナへ続く！過去にマックスバトルに登場したポケモンたちが復刻出現し、捕獲時にスペシャル背景が付く可能性があります。11月21日(土)にはムゲンダイマックスのムゲンダイナが再来！伝説レイドにはダークライとクレセリア、メガレイドにはメガジュペッタが登場。",
+      "dateText": "11/16(月) 10:00 〜 11/23(月) 20:00",
+      "summary": "ムゲンダイナ再登場およびクレセリア、ダークライ、メガジュペッタが降臨する大型イベント。",
       "freeFeatures": [
-        "過去のダイマックスポケモンがパワースポットに多数復刻",
-        "マックスバトルで捕獲したポケモンにスペシャル背景が付く可能性あり",
-        "野生イベント対象捕獲時やマックスバトル勝利時に確率でマックス粒子を入手",
-        "パワースポットの出現数が増加",
-        "11/19(木) 18:00〜19:00 スポットライトアワー（捕獲時すな2倍）",
-        "11/21(土) 11:00〜14:00 「ムゲンダイナ再来」★6ムゲンダイマックスバトル（MP獲得量8倍・上限2400・リモート上限30回）",
-        "無料GOパス「大きな足跡」で様々なDmaxポケモンやムゲンダイナ（所持者はアメ100個）を獲得可能"
+        "伝説レイドにクレセリア、ダークライが登場",
+        "メガレイドにメガジュペッタが登場"
       ],
-      "paidFeatures": [
-        "「GOパスデラックス：大きな足跡」（700円）で追加リワードやDmaxポケモンを獲得可能（ワイルドウィークGOパスのティア1受取者は無料アップグレード）"
-      ],
-      "wilds": [
-        {
-          "dex": 1,
-          "name": "フシギダネ",
-          "shiny": true,
-          "note": "ダイマックス対象ポケモン"
-        },
-        {
-          "dex": 4,
-          "name": "ヒトカゲ",
-          "shiny": true,
-          "note": "ダイマックス対象ポケモン"
-        },
-        {
-          "dex": 7,
-          "name": "ゼニガメ",
-          "shiny": true,
-          "note": "ダイマックス対象ポケモン"
-        },
-        {
-          "dex": 66,
-          "name": "ワンリキー",
-          "shiny": true,
-          "note": "ダイマックス対象ポケモン"
-        },
-        {
-          "dex": 92,
-          "name": "ゴース",
-          "shiny": true,
-          "note": "ダイマックス対象ポケモン"
-        },
-        {
-          "dex": 133,
-          "name": "イーブイ",
-          "shiny": true,
-          "note": "ダイマックス対象ポケモン"
-        },
-        {
-          "dex": 374,
-          "name": "ダンバル",
-          "shiny": true,
-          "note": "ダイマックス対象ポケモン"
-        },
-        {
-          "dex": 819,
-          "name": "ホシガリス",
-          "shiny": true,
-          "note": "ダイマックス対象ポケモン"
-        },
-        {
-          "dex": 821,
-          "name": "ココガラ",
-          "shiny": true,
-          "note": "ダイマックス対象ポケモン"
-        },
-        {
-          "dex": 831,
-          "name": "ウールー",
-          "shiny": true,
-          "note": "ダイマックス対象ポケモン"
-        }
-      ],
-      "specialGimmicks": [
-        {
-          "gimmick_name": "🎫 GOパス：大きな足跡",
-          "description": "イベント期間中にGOポイントを集めてランクを上げることでボーナスとリワードを獲得。ムゲンダイナ未所持者はムゲンダイナと遭遇でき、既に所持している場合はムゲンダイナのアメ×100個が入手可能です。",
-          "spawns_or_rewards": [
-            {
-              "dex": 890,
-              "name": "ムゲンダイナ",
-              "shiny": false,
-              "note": "所持済みの場合はムゲンダイナのアメ×100個"
-            },
-            {
-              "dex": 374,
-              "name": "ダンバル",
-              "shiny": true,
-              "note": "ランクリワードDmaxポケモン"
-            },
-            {
-              "dex": 66,
-              "name": "ワンリキー",
-              "shiny": true,
-              "note": "ランクリワードDmaxポケモン"
-            }
-          ]
-        },
-        {
-          "gimmick_name": "🌌 ムゲンダイナ再来（ムゲンダイマックス）",
-          "description": "11月21日(土)11:00〜14:00限定でパワースポットに★6ムゲンダイマックスバトルが登場。勝利しても捕獲はできませんが、ムゲンダイナのアメとアメXLが大量にドロップします。",
-          "spawns_or_rewards": [
-            {
-              "dex": 890,
-              "name": "ムゲンダイナ",
-              "shiny": false,
-              "note": "捕獲不可・アメ＆アメXL大量ドロップ"
-            }
-          ]
-        }
-      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "specialGimmicks": [],
       "raids": [
-        {
-          "dex": 491,
-          "name": "ダークライ",
-          "shiny": true,
-          "note": "★5伝説レイド (11/16〜11/24)",
-          "targetKey": "darkrai",
-          "isDmax": false
-        },
         {
           "dex": 488,
           "name": "クレセリア",
           "shiny": true,
-          "note": "★5伝説レイド (11/16〜11/24)",
+          "note": "伝説レイド",
           "targetKey": "cresselia",
+          "isDmax": false
+        },
+        {
+          "dex": 491,
+          "name": "ダークライ",
+          "shiny": true,
+          "note": "伝説レイド",
+          "targetKey": "darkrai",
           "isDmax": false
         },
         {
           "dex": 354,
           "name": "メガジュペッタ",
           "shiny": true,
-          "note": "メガレイド (11/16〜11/24)",
+          "note": "メガレイド",
           "targetKey": "mega-banette",
           "isDmax": false
-        },
-        {
-          "dex": 890,
-          "name": "ムゲンダイナ(ムゲンダイマックス)",
-          "shiny": false,
-          "note": "★6マックスバトル (11/21 11:00〜14:00)",
-          "targetKey": "dmax-eternatus",
-          "isDmax": true
         }
       ],
-      "fieldResearches": [
-        {
-          "task": "マックスバトルで1回勝つ",
-          "rewardDex": 374,
-          "rewardName": "ダンバル",
-          "shiny": true,
-          "note": "CP375〜404 [確認: 9DBみんポケ・GameWith]",
-          "verified_sources": [
-            "9DBみんポケ",
-            "GameWith"
-          ]
-        },
-        {
-          "task": "パワースポットに3回アクセスする",
-          "rewardDex": 66,
-          "rewardName": "ワンリキー",
-          "shiny": true,
-          "note": "CP503〜544 [確認: 9DBみんポケ・GameWith]",
-          "verified_sources": [
-            "9DBみんポケ",
-            "GameWith"
-          ]
-        },
-        {
-          "task": "マックス粒子を500MP集める",
-          "rewardDex": 92,
-          "rewardName": "ゴース",
-          "shiny": true,
-          "note": "CP478〜529 [確認: 9DBみんポケ]",
-          "verified_sources": [
-            "9DBみんポケ"
-          ]
-        }
-      ],
-      "tasks": [
-        {
-          "task": "GOパス：大きな足跡 ランク15到達",
-          "rewardDex": 0,
-          "rewardName": "ほしのすな2倍ボーナス発動",
-          "shiny": false
-        },
-        {
-          "task": "GOパス：大きな足跡 ランク35到達",
-          "rewardDex": 0,
-          "rewardName": "フィールド効果「ダイマックスほう」のすな＆アメ消費1/2ボーナス",
-          "shiny": false
-        },
-        {
-          "task": "GOパス：大きな足跡 ランク55到達",
-          "rewardDex": 0,
-          "rewardName": "マックスバトル勝利時アメ＆アメXL追加ボーナス",
-          "shiny": false
-        },
-        {
-          "task": "GOパス：大きな足跡 最終ランク達成",
-          "rewardDex": 890,
-          "rewardName": "ムゲンダイナ（またはムゲンダイナのアメ×100）",
-          "shiny": false
-        }
-      ]
+      "fieldResearches": [],
+      "tasks": []
     },
     {
       "id": "ev-tusk-wish-deoxys",
       "month": 11,
-      "title": "黄昏時の願い",
-      "barClass": "bg-teal-700",
+      "title": "黄昏時の願い＆デオキシス",
+      "barClass": "bg-cyan-700",
       "category": "イベント",
       "barIconDex": 386,
       "startDay": 24,
       "endDay": 30,
       "hasPaid": false,
       "hasFieldResearchPending": false,
-      "dateText": "11/24(火)〜11/30(月)",
-      "summary": "デオキシス4フォルムとメガメタグロスが登場する「黄昏時の願い」イベント！",
+      "dateText": "11/24(火) 〜 11/30(月)",
+      "summary": "デオキシス4フォルムの復刻とメガメタグロスが登場するイベント。",
       "freeFeatures": [
-        "デオキシス(ノーマル/ディフェンス/アタック/スピード)が一斉登場",
-        "メガメタグロスのメガレイド初登場"
+        "デオキシス各フォルムのレイド登場"
       ],
       "paidFeatures": [],
-      "wilds": [
-        {
-          "dex": 386,
-          "name": "デオキシス",
-          "shiny": true,
-          "note": "レイド出現"
-        },
-        {
-          "dex": 376,
-          "name": "ダンバル",
-          "shiny": true,
-          "note": "出現率アップ"
-        }
-      ],
+      "wilds": [],
       "specialGimmicks": [],
       "raids": [
         {
           "dex": 386,
-          "name": "デオキシス(ノーマルフォルム)",
+          "name": "デオキシス(ノーマル)",
           "shiny": true,
           "note": "伝説レイド",
           "targetKey": "deoxys-normal",
@@ -597,18 +432,17 @@
       "id": "ev-supermega-chandelure",
       "month": 10,
       "title": "シャンデラのスーパーメガレイドデイ",
-      "barClass": "bg-red-600",
-      "category": "レイドデイ",
+      "barClass": "bg-red-700",
+      "category": "レイド",
       "barIconDex": 609,
       "startDay": 31,
       "endDay": 31,
       "hasPaid": false,
       "hasFieldResearchPending": false,
-      "dateText": "10/31(土)14:00〜17:00",
-      "summary": "シャンデラのスーパーメガレイドデイが開催！強力なスーパーメガレイドボスに挑戦しよう。",
+      "dateText": "10/31(土) 14:00 〜 17:00",
+      "summary": "メガシャンデラが初登場するスーパーメガレイドデイ。",
       "freeFeatures": [
-        "スーパーメガレイドにメガシャンデラ登場",
-        "無料レイドパス追加"
+        "メガシャンデラの初登場とレイドパス追加"
       ],
       "paidFeatures": [],
       "wilds": [],
@@ -618,7 +452,7 @@
           "dex": 609,
           "name": "メガシャンデラ",
           "shiny": true,
-          "note": "スーパーメガレイドデイ",
+          "note": "スーパーメガレイド初登場",
           "targetKey": "mega-chandelure",
           "isDmax": false
         }
@@ -630,18 +464,17 @@
       "id": "ev-halloween-p2",
       "month": 11,
       "title": "ハロウィン2026パート2",
-      "barClass": "bg-purple-800",
+      "barClass": "bg-purple-900",
       "category": "イベント",
-      "barIconDex": 442,
+      "barIconDex": 429,
       "startDay": 1,
       "endDay": 5,
       "hasPaid": false,
       "hasFieldResearchPending": false,
-      "dateText": "11/1(日)10:00〜11/5(木)20:00",
-      "summary": "ハロウィンイベントの後半戦パート2！ゴースト・あくタイプのポケモンたちがさらに盛り上がりを見せる。",
+      "dateText": "11/1(日) 10:00 〜 11/5(木) 20:00",
+      "summary": "ハロウィンイベントの後半戦。ゴースト・あくタイプの出現がさらに加熱。",
       "freeFeatures": [
-        "イベント限定ボーナス",
-        "新コスチュームポケモンの出現"
+        "ハロウィン後半のボーナスや限定リサーチ"
       ],
       "paidFeatures": [],
       "wilds": [
@@ -649,62 +482,218 @@
           "dex": 302,
           "name": "ヤミラミ",
           "shiny": true,
-          "note": ""
+          "note": "野生出現"
         },
         {
-          "dex": 354,
-          "name": "ジュペッタ",
+          "dex": 355,
+          "name": "ヨマワル",
           "shiny": true,
-          "note": ""
+          "note": "野生出現"
         },
         {
-          "dex": 562,
-          "name": "デスマス",
+          "dex": 353,
+          "name": "カゲボウズ",
           "shiny": true,
-          "note": ""
+          "note": "野生出現"
         },
         {
           "dex": 607,
           "name": "ヒトモシ",
           "shiny": true,
-          "note": ""
+          "note": "野生出現"
         },
         {
-          "dex": 710,
+          "dex": 711,
           "name": "バケッチャ",
           "shiny": true,
-          "note": ""
-        },
-        {
-          "dex": 947,
-          "name": "ボチ",
-          "shiny": true,
-          "note": ""
+          "note": "野生出現"
         }
       ],
       "specialGimmicks": [],
-      "raids": [
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-dmax-sableye-week",
+      "month": 10,
+      "title": "ダイマックスヤミラミ週間",
+      "barClass": "bg-indigo-700",
+      "category": "マックスバトル",
+      "barIconDex": 302,
+      "startDay": 26,
+      "endDay": 1,
+      "hasPaid": false,
+      "hasFieldResearchPending": false,
+      "dateText": "10/26(月) 〜 11/1(日)",
+      "summary": "パワースポットにダイマックスヤミラミが出現する週間イベント。",
+      "freeFeatures": [
+        "ダイマックスヤミラミの出現率アップ"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "specialGimmicks": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-dmax-machop-week",
+      "month": 11,
+      "title": "マックスマンデー：ワンリキー",
+      "barClass": "bg-blue-600",
+      "category": "マックスバトル",
+      "barIconDex": 66,
+      "startDay": 2,
+      "endDay": 8,
+      "hasPaid": false,
+      "hasFieldResearchPending": false,
+      "dateText": "11/2(月) 6:00 〜 21:00 (週間通して出現)",
+      "summary": "ダイマックスワンリキーの出現率がアップするマックスバトル週間。",
+      "freeFeatures": [
+        "ダイマックスワンリキー大量発生"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "specialGimmicks": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-gopass-nov",
+      "month": 11,
+      "title": "GOパス11月：グラードン",
+      "barClass": "bg-green-700",
+      "category": "GOパス",
+      "barIconDex": 383,
+      "startDay": 3,
+      "endDay": 1,
+      "hasPaid": true,
+      "hasFieldResearchPending": false,
+      "dateText": "11/3(火) 10:00 〜 12/1(火) 10:00",
+      "summary": "グラードンやポケコインが報酬として手に入る11月のGOパス。",
+      "freeFeatures": [
+        "無料報酬でグラードンや400ポケコインを獲得可能"
+      ],
+      "paidFeatures": [
+        "デラックス版で追加の1000ポケコインやスーパーふかそうちを獲得"
+      ],
+      "wilds": [],
+      "specialGimmicks": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-wildweek-2026",
+      "month": 11,
+      "title": "ワイルドウィーク：2026",
+      "barClass": "bg-amber-600",
+      "category": "イベント",
+      "barIconDex": 641,
+      "startDay": 9,
+      "endDay": 13,
+      "hasPaid": false,
+      "hasFieldResearchPending": false,
+      "dateText": "11/9(月) 10:00 〜 11/13(金) 20:00",
+      "summary": "野生での激熱ポケモン出現が期待されるワイルドウィーク2026。",
+      "freeFeatures": [
+        "野生ポケモンの出現ラインナップ刷新"
+      ],
+      "paidFeatures": [],
+      "wilds": [
         {
-          "dex": 487,
-          "name": "ギラティナ(アナザーフォルム)",
+          "dex": 641,
+          "name": "トルネロス",
           "shiny": true,
-          "note": "伝説レイド",
-          "targetKey": "giratina-another",
-          "isDmax": false
+          "note": "イベント連動枠"
         }
       ],
-      "fieldResearches": [
+      "specialGimmicks": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-wildarea-2026",
+      "month": 11,
+      "title": "GOワイルドエリア2026グローバル",
+      "barClass": "bg-amber-700",
+      "category": "リアル・グローバル",
+      "barIconDex": 483,
+      "startDay": 14,
+      "endDay": 15,
+      "hasPaid": true,
+      "hasFieldResearchPending": false,
+      "dateText": "11/14(土) 10:00 〜 11/15(日) 18:00",
+      "summary": "世界中のトレーナーが参加可能なGOワイルドエリア2026グローバルイベント。",
+      "freeFeatures": [
+        "グローバル共通の特別野生湧きやボーナス"
+      ],
+      "paidFeatures": [
+        "有料チケット購入で限定スペシャルリサーチや高個体狙い"
+      ],
+      "wilds": [],
+      "specialGimmicks": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-cd-pawniard",
+      "month": 11,
+      "title": "コミュニティデイ：コマタナ",
+      "barClass": "bg-slate-700",
+      "category": "コミュニティデイ",
+      "barIconDex": 624,
+      "startDay": 21,
+      "endDay": 21,
+      "hasPaid": false,
+      "hasFieldResearchPending": false,
+      "dateText": "11/21(土) 14:00 〜 17:00",
+      "summary": "コマタナが大量発生するコミュニティデイ。進化系ドドゲザンに限定技「ドゲザン」を習得可能。",
+      "freeFeatures": [
+        "コマタナ大量発生",
+        "あく・はがねレイド1回勝利でキリキザンからドドゲザンへ進化可能に"
+      ],
+      "paidFeatures": [
+        "有料スペシャルリサーチ"
+      ],
+      "wilds": [
         {
-          "task": "ゴーストタイプのポケモンを7匹捕まえる",
-          "rewardDex": 562,
-          "rewardName": "デスマス / ガラルデスマス",
+          "dex": 624,
+          "name": "コマタナ",
           "shiny": true,
-          "note": "パート2リサーチ [確認: GameWith]",
-          "verified_sources": [
-            "GameWith"
-          ]
+          "note": "大量発生"
         }
       ],
+      "specialGimmicks": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-dec-new-season",
+      "month": 12,
+      "title": "新シーズン＆DMaxフリージオ",
+      "barClass": "bg-blue-800",
+      "category": "シーズン・マックス",
+      "barIconDex": 615,
+      "startDay": 1,
+      "endDay": 6,
+      "hasPaid": false,
+      "hasFieldResearchPending": false,
+      "dateText": "12/1(火) 10:00 〜",
+      "summary": "新シーズンの開幕とダイマックスフリージオがマックスバトルに登場。",
+      "freeFeatures": [
+        "新シーズンボーナス開始"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "specialGimmicks": [],
+      "raids": [],
+      "fieldResearches": [],
       "tasks": []
     }
   ],
@@ -714,322 +703,26 @@
       "startDay": 16,
       "endDay": 24,
       "name": "クレセリア",
-      "status": "upcoming",
-      "tier": "伝説★5",
+      "status": "実装済み",
+      "tier": "★5伝説",
       "dex": 488,
       "types": [
         "エスパー"
       ],
       "shiny": true,
-      "shinyText": "色違い実装済み（青紫の三日月模様）",
-      "cpNormal": "1555〜1633",
-      "cpBoost": "1944〜2041",
-      "minPlayers": "3〜5人",
-      "tactics": "あく、ゴースト、むしタイプが弱点。極めて高い防御ステータスを誇るため人数が必要です。メガゲンガー、メガバンギラス、ギラティナ(オリジン)、サザンドラ等で弱点を突きましょう。",
+      "shinyText": "色違い実装済み",
+      "cpNormal": "1555 - 1633",
+      "cpBoost": "1944 - 2041",
+      "minPlayers": "2〜5人",
+      "tactics": "むし、ゴースト、あくタイプが弱点。ゲンガーやバンギラス、ギラティナ等で攻めよう。",
       "megaRecs": {
         "attack": [
           {
-            "dex": 248,
-            "name": "メガバンギラス",
-            "move": "かみつく / ぶんまわす",
-            "type": "あく",
-            "desc": "圧倒的な耐久と攻撃力でエスパー技を軽減しつつ最高効率で削る"
-          },
-          {
-            "dex": 94,
-            "name": "メガゲンガー",
-            "move": "したでなめる / シャドーボール",
+            "dex": 354,
+            "name": "メガジュペッタ",
+            "move": "シャドークロー / シャドーボール",
             "type": "ゴースト",
-            "desc": "最高峰のDPSを発揮するがエスパー技が直撃すると大ダメージを受けるため回避推奨"
-          }
-        ],
-        "candy": [
-          {
-            "dex": 150,
-            "name": "メガミュウツーY",
-            "move": "",
-            "type": "",
-            "desc": "エスパータイプのアメ・アメXLボーナス用"
-          },
-          {
-            "dex": 65,
-            "name": "メガフーディン",
-            "move": "",
-            "type": "",
-            "desc": "エスパータイプのアメ・アメXLボーナス用"
-          }
-        ]
-      },
-      "counters": [
-        {
-          "name": "メガバンギラス",
-          "dex": 248,
-          "tag": "mega",
-          "dps": 21.5,
-          "tdo": 880,
-          "fast": "かみつく",
-          "charge": "ぶんまわす"
-        },
-        {
-          "name": "メガゲンガー",
-          "dex": 94,
-          "tag": "mega",
-          "dps": 22.9,
-          "tdo": 620,
-          "fast": "したでなめる",
-          "charge": "シャドーボール"
-        },
-        {
-          "name": "シャドウバンギラス",
-          "dex": 248,
-          "tag": "shadow",
-          "dps": 20.3,
-          "tdo": 760,
-          "fast": "かみつく",
-          "charge": "ぶんまわす"
-        },
-        {
-          "name": "サザンドラ",
-          "dex": 635,
-          "tag": "normal",
-          "dps": 19.2,
-          "tdo": 710,
-          "fast": "かみつく",
-          "charge": "ぶんまわす"
-        },
-        {
-          "name": "ギラティナ(オリジン)",
-          "dex": 487,
-          "tag": "normal",
-          "dps": 18.8,
-          "tdo": 750,
-          "fast": "シャドークロー",
-          "charge": "シャドーダイブ"
-        },
-        {
-          "name": "シャドウマニューラ",
-          "dex": 461,
-          "tag": "shadow",
-          "dps": 19.5,
-          "tdo": 540,
-          "fast": "バークアウト",
-          "charge": "イカサマ"
-        },
-        {
-          "name": "メガヘルガー",
-          "dex": 229,
-          "tag": "mega",
-          "dps": 19.0,
-          "tdo": 670,
-          "fast": "バークアウト",
-          "charge": "イカサマ"
-        },
-        {
-          "name": "ダークライ",
-          "dex": 491,
-          "tag": "normal",
-          "dps": 18.9,
-          "tdo": 620,
-          "fast": "バークアウト",
-          "charge": "シャドーボール"
-        },
-        {
-          "name": "シャドウシャンデラ",
-          "dex": 609,
-          "tag": "shadow",
-          "dps": 19.7,
-          "tdo": 580,
-          "fast": "たたりめ",
-          "charge": "シャドーボール"
-        },
-        {
-          "name": "イベルタル",
-          "dex": 717,
-          "tag": "normal",
-          "dps": 18.1,
-          "tdo": 690,
-          "fast": "バークアウト",
-          "charge": "あくのはどう"
-        }
-      ]
-    },
-    "darkrai": {
-      "month": 11,
-      "startDay": 16,
-      "endDay": 24,
-      "name": "ダークライ",
-      "status": "upcoming",
-      "tier": "伝説★5",
-      "dex": 491,
-      "types": [
-        "あく"
-      ],
-      "shiny": true,
-      "shinyText": "色違い実装済み（紫がかった体色）",
-      "cpNormal": "2059〜2136",
-      "cpBoost": "2574〜2671",
-      "minPlayers": "3〜5人",
-      "tactics": "かくとう、フェアリー、むしタイプが弱点。特に高火力なメガバシャーモ、ローブシン、ケルディオ、トゲキッス、サーナイトなどでパーティを固めましょう。シャドーボールやきあいだまの高威力技に注意が必要です。",
-      "megaRecs": {
-        "attack": [
-          {
-            "dex": 257,
-            "name": "メガバシャーモ",
-            "move": "カウンター / きあいだま",
-            "type": "かくとう",
-            "desc": "トップクラスのかくとうDPSを誇り味方の攻撃力も大きく底上げ"
-          },
-          {
-            "dex": 282,
-            "name": "メガサーナイト",
-            "move": "あまえる / マジカルシャイン",
-            "type": "フェアリー",
-            "desc": "ダークライのあく技・ゴースト技・きあいだま全てに安定した耐性を持つ"
-          }
-        ],
-        "candy": [
-          {
-            "dex": 302,
-            "name": "メガヤミラミ",
-            "move": "",
-            "type": "",
-            "desc": "あくタイプのアメ・アメXLボーナス用"
-          },
-          {
-            "dex": 229,
-            "name": "メガヘルガー",
-            "move": "",
-            "type": "",
-            "desc": "あくタイプのアメ・アメXLボーナス用"
-          }
-        ]
-      },
-      "counters": [
-        {
-          "name": "メガバシャーモ",
-          "dex": 257,
-          "tag": "mega",
-          "dps": 22.8,
-          "tdo": 684,
-          "fast": "カウンター",
-          "charge": "きあいだま"
-        },
-        {
-          "name": "テラキオン",
-          "dex": 639,
-          "tag": "normal",
-          "dps": 21.9,
-          "tdo": 722,
-          "fast": "にどげり",
-          "charge": "せいなるつるぎ"
-        },
-        {
-          "name": "メガサーナイト",
-          "dex": 282,
-          "tag": "mega",
-          "dps": 21.2,
-          "tdo": 690,
-          "fast": "あまえる",
-          "charge": "マジカルシャイン"
-        },
-        {
-          "name": "シャドウカイリキー",
-          "dex": 68,
-          "tag": "shadow",
-          "dps": 20.8,
-          "tdo": 610,
-          "fast": "カウンター",
-          "charge": "ばくれつパンチ"
-        },
-        {
-          "name": "ケルディオ",
-          "dex": 647,
-          "tag": "normal",
-          "dps": 20.4,
-          "tdo": 670,
-          "fast": "けたぐり",
-          "charge": "せいなるつるぎ"
-        },
-        {
-          "name": "ローブシン",
-          "dex": 534,
-          "tag": "normal",
-          "dps": 19.8,
-          "tdo": 640,
-          "fast": "カウンター",
-          "charge": "ばくれつパンチ"
-        },
-        {
-          "name": "シャドウハリテヤマ",
-          "dex": 297,
-          "tag": "shadow",
-          "dps": 19.5,
-          "tdo": 590,
-          "fast": "カウンター",
-          "charge": "ばくれつパンチ"
-        },
-        {
-          "name": "ルカリオ",
-          "dex": 448,
-          "tag": "normal",
-          "dps": 19.3,
-          "tdo": 530,
-          "fast": "カウンター",
-          "charge": "はどうだん"
-        },
-        {
-          "name": "トゲキッス",
-          "dex": 468,
-          "tag": "normal",
-          "dps": 18.2,
-          "tdo": 650,
-          "fast": "あまえる",
-          "charge": "マジカルシャイン"
-        },
-        {
-          "name": "フェローチェ",
-          "dex": 795,
-          "tag": "normal",
-          "dps": 21.0,
-          "tdo": 410,
-          "fast": "むしのさざめき",
-          "charge": "きあいのタスキ"
-        }
-      ]
-    },
-    "mega-metagross": {
-      "month": 11,
-      "startDay": 25,
-      "endDay": 1,
-      "name": "メガメタグロス",
-      "status": "upcoming",
-      "tier": "メガレイド",
-      "dex": 376,
-      "types": [
-        "はがね",
-        "エスパー"
-      ],
-      "shiny": true,
-      "shinyText": "色違い実装済み（金と銀のメタリックカラー）",
-      "cpNormal": "2166 - 2253",
-      "cpBoost": "2708 - 2817 (雪・強風)",
-      "minPlayers": "3〜4人",
-      "tactics": "はがね・エスパータイプのため、ほのお・じめん・ゴースト・あくタイプが弱点。メガリザードンY、ゲンシグラードン、メガゲンガー、メガバンギラスが極めて有効。",
-      "megaRecs": {
-        "attack": [
-          {
-            "dex": 6,
-            "name": "メガリザードンY",
-            "move": "ほのおのうず / ブラストバーン",
-            "type": "ほのお",
-            "desc": "はがね技に耐性を持ち、超高火力ほのお技で圧倒的DPSを誇る。"
-          },
-          {
-            "dex": 248,
-            "name": "メガバンギラス",
-            "move": "かみつく / ぶんまわす",
-            "type": "あく",
-            "desc": "エスパー技を2重耐性で受けつつ、大ダメージを与える。"
+            "desc": "ゴーストタイプトップの火力でクレセリアの弱点を突く"
           }
         ],
         "candy": [
@@ -1038,80 +731,341 @@
             "name": "メガメタグロス",
             "move": "バレットパンチ / コメットパンチ",
             "type": "はがね",
-            "desc": "自身と同タイプのためアメ・アメXL集めに最適。"
+            "desc": "エスパータイプの飴ボーナス追加"
           }
         ]
       },
       "counters": [
         {
-          "name": "ゲンシグラードン",
-          "dex": 383,
+          "name": "メガジュペッタ",
+          "dex": 354,
           "tag": "mega",
-          "dps": 28.2,
-          "tdo": 1150,
-          "fast": "マッドショット",
-          "charge": "だんがいのつるぎ"
-        },
-        {
-          "name": "メガリザードンY",
-          "dex": 6,
-          "tag": "mega",
-          "dps": 27.8,
-          "tdo": 890,
-          "fast": "ほのおのうず",
-          "charge": "ブラストバーン"
-        },
-        {
-          "name": "メガゲンガー",
-          "dex": 94,
-          "tag": "mega",
-          "dps": 28.5,
-          "tdo": 710,
+          "dps": 22.0,
+          "tdo": 620,
           "fast": "シャドークロー",
           "charge": "シャドーボール"
         },
         {
-          "name": "メガバンギラス",
+          "name": "シャンデラ",
+          "dex": 609,
+          "tag": "shadow",
+          "dps": 20.5,
+          "tdo": 580,
+          "fast": "たたりめ",
+          "charge": "シャドーボール"
+        },
+        {
+          "name": "ダークライ",
+          "dex": 491,
+          "tag": "normal",
+          "dps": 19.8,
+          "tdo": 650,
+          "fast": "バークアウト",
+          "charge": "あくのはどう"
+        },
+        {
+          "name": "ギラティナ(オリジン)",
+          "dex": 487,
+          "tag": "normal",
+          "dps": 18.9,
+          "tdo": 720,
+          "fast": "シャドークロー",
+          "charge": "シャドーボール"
+        },
+        {
+          "name": "バンギラス",
           "dex": 248,
-          "tag": "mega",
-          "dps": 25.1,
-          "tdo": 920,
+          "tag": "shadow",
+          "dps": 19.5,
+          "tdo": 690,
           "fast": "かみつく",
           "charge": "ぶんまわす"
         },
         {
-          "name": "レシラム",
-          "dex": 643,
-          "tag": "normal",
-          "dps": 22.9,
-          "tdo": 780,
-          "fast": "ほのおのキバ",
-          "charge": "クロスフレイム"
+          "name": "メガヘルガー",
+          "dex": 229,
+          "tag": "mega",
+          "dps": 20.8,
+          "tdo": 590,
+          "fast": "バークアウト",
+          "charge": "イカサマ"
         },
         {
-          "name": "シャドウシャンデラ",
+          "name": "ハッサム",
+          "dex": 212,
+          "tag": "shadow",
+          "dps": 18.2,
+          "tdo": 510,
+          "fast": "むすくい",
+          "charge": "シザークロス"
+        },
+        {
+          "name": "サザンドラ",
+          "dex": 635,
+          "tag": "normal",
+          "dps": 18.4,
+          "tdo": 610,
+          "fast": "バークアウト",
+          "charge": "ぶんまわす"
+        },
+        {
+          "name": "マニューラ",
+          "dex": 461,
+          "tag": "shadow",
+          "dps": 19.1,
+          "tdo": 450,
+          "fast": "バークアウト",
+          "charge": "イカサマ"
+        },
+        {
+          "name": "ゲノセクト",
+          "dex": 649,
+          "tag": "normal",
+          "dps": 18.0,
+          "tdo": 530,
+          "fast": "メタルクロウ",
+          "charge": "シザークロス"
+        }
+      ]
+    },
+    "darkrai": {
+      "month": 11,
+      "startDay": 16,
+      "endDay": 24,
+      "name": "ダークライ",
+      "status": "実装済み",
+      "tier": "★5伝説",
+      "dex": 491,
+      "types": [
+        "あく"
+      ],
+      "shiny": true,
+      "shinyText": "色違い実装済み",
+      "cpNormal": "2136 - 2280",
+      "cpBoost": "2671 - 2850",
+      "minPlayers": "2〜5人",
+      "tactics": "かくとう、むし、フェアリータイプが弱点。特にルカリオやカイリキー、トゲキッス等で攻めよう。",
+      "megaRecs": {
+        "attack": [
+          {
+            "dex": 448,
+            "name": "メガルカリオ",
+            "move": "カウンター / はどうだん",
+            "type": "かくとう",
+            "desc": "圧倒的なDPSでダークライの弱点を突き潰す最高峰アタッカー"
+          }
+        ],
+        "candy": [
+          {
+            "dex": 302,
+            "name": "メガヤミラミ",
+            "move": "バークアウト / イカサマ",
+            "type": "あく",
+            "desc": "あくタイプの飴ボーナス追加用"
+          }
+        ]
+      },
+      "counters": [
+        {
+          "name": "メガルカリオ",
+          "dex": 448,
+          "tag": "mega",
+          "dps": 22.4,
+          "tdo": 850,
+          "fast": "カウンター",
+          "charge": "はどうだん"
+        },
+        {
+          "name": "カイリキー",
+          "dex": 68,
+          "tag": "shadow",
+          "dps": 20.1,
+          "tdo": 620,
+          "fast": "カウンター",
+          "charge": "ばくれつパンチ"
+        },
+        {
+          "name": "ニンフィア",
+          "dex": 700,
+          "tag": "normal",
+          "dps": 17.5,
+          "tdo": 590,
+          "fast": "あまえる",
+          "charge": "マジカルシャイン"
+        },
+        {
+          "name": "サーナイト",
+          "dex": 282,
+          "tag": "shadow",
+          "dps": 19.8,
+          "tdo": 540,
+          "fast": "あまえる",
+          "charge": "マジカルシャイン"
+        },
+        {
+          "name": "マニューラ",
+          "dex": 461,
+          "tag": "shadow",
+          "dps": 19.2,
+          "tdo": 480,
+          "fast": "バークアウト",
+          "charge": "きあいだま"
+        },
+        {
+          "name": "メガサーナイト",
+          "dex": 282,
+          "tag": "mega",
+          "dps": 21.5,
+          "tdo": 780,
+          "fast": "あまえる",
+          "charge": "マジカルシャイン"
+        },
+        {
+          "name": "ハリテヤマ",
+          "dex": 297,
+          "tag": "shadow",
+          "dps": 18.1,
+          "tdo": 580,
+          "fast": "カウンター",
+          "charge": "ばくれつパンチ"
+        },
+        {
+          "name": "キノガッサ",
+          "dex": 286,
+          "tag": "shadow",
+          "dps": 21.0,
+          "tdo": 410,
+          "fast": "カウンター",
+          "charge": "ばくれつパンチ"
+        },
+        {
+          "name": "トゲキッス",
+          "dex": 468,
+          "tag": "normal",
+          "dps": 16.8,
+          "tdo": 610,
+          "fast": "あまえる",
+          "charge": "マジカルシャイン"
+        },
+        {
+          "name": "バシャーモ",
+          "dex": 257,
+          "tag": "shadow",
+          "dps": 19.9,
+          "tdo": 460,
+          "fast": "カウンター",
+          "charge": "きあいだま"
+        }
+      ]
+    },
+    "mega-metagross": {
+      "month": 11,
+      "startDay": 25,
+      "endDay": 1,
+      "name": "メガメタグロス",
+      "status": "実装済み",
+      "tier": "メガレイド",
+      "dex": 376,
+      "types": [
+        "はがね",
+        "エスパー"
+      ],
+      "shiny": true,
+      "shinyText": "色違い実装済み",
+      "cpNormal": "2100 - 2200",
+      "cpBoost": "2625 - 2750",
+      "minPlayers": "2〜5人",
+      "tactics": "ほのお、じめん、ゴースト、あくタイプが弱点。メガリザードンYやグラードン、シャンデラで攻めよう。",
+      "megaRecs": {
+        "attack": [
+          {
+            "dex": 6,
+            "name": "メガリザードンY",
+            "move": "ほのおのうず / ブラストバーン",
+            "type": "ほのお",
+            "desc": "圧倒的なほのお火力でメタグロスを圧倒"
+          }
+        ],
+        "candy": [
+          {
+            "dex": 376,
+            "name": "メガメタグロス",
+            "move": "バレットパンチ / コメットパンチ",
+            "type": "はがね",
+            "desc": "はがね・エスパーの飴ボーナス"
+          }
+        ]
+      },
+      "counters": [
+        {
+          "name": "メガリザードンY",
+          "dex": 6,
+          "tag": "mega",
+          "dps": 24.5,
+          "tdo": 850,
+          "fast": "ほのおのうず",
+          "charge": "ブラストバーン"
+        },
+        {
+          "name": "ゲンシグラードン",
+          "dex": 383,
+          "tag": "mega",
+          "dps": 23.8,
+          "tdo": 920,
+          "fast": "マッドショット",
+          "charge": "だんつちのちから"
+        },
+        {
+          "name": "シャンデラ",
           "dex": 609,
           "tag": "shadow",
-          "dps": 24.3,
-          "tdo": 670,
+          "dps": 21.5,
+          "tdo": 610,
           "fast": "ほのおのうず",
           "charge": "オーバーヒート"
         },
         {
-          "name": "シャドウグラードン",
-          "dex": 383,
+          "name": "ファイヤー",
+          "dex": 146,
           "tag": "shadow",
-          "dps": 23.5,
-          "tdo": 810,
+          "dps": 20.8,
+          "tdo": 640,
+          "fast": "ほのおのうず",
+          "charge": "ゴッドバード"
+        },
+        {
+          "name": "バシャーモ",
+          "dex": 257,
+          "tag": "shadow",
+          "dps": 21.0,
+          "tdo": 520,
+          "fast": "カウンター",
+          "charge": "ブラストバーン"
+        },
+        {
+          "name": "ガブリアス",
+          "dex": 445,
+          "tag": "shadow",
+          "dps": 20.2,
+          "tdo": 710,
           "fast": "マッドショット",
-          "charge": "だんがいのつるぎ"
+          "charge": "だいちのちから"
+        },
+        {
+          "name": "メガバシャーモ",
+          "dex": 257,
+          "tag": "mega",
+          "dps": 22.8,
+          "tdo": 700,
+          "fast": "カウンター",
+          "charge": "ブラストバーン"
         },
         {
           "name": "ヒードラン",
           "dex": 485,
           "tag": "normal",
-          "dps": 20.8,
-          "tdo": 820,
+          "dps": 18.5,
+          "tdo": 750,
           "fast": "ほのおのうず",
           "charge": "マグマストーム"
         },
@@ -1119,19 +1073,19 @@
           "name": "ダークライ",
           "dex": 491,
           "tag": "normal",
-          "dps": 20.4,
-          "tdo": 630,
+          "dps": 19.5,
+          "tdo": 650,
           "fast": "バークアウト",
-          "charge": "シャドーボール"
+          "charge": "あくのはどう"
         },
         {
-          "name": "ランドロス(霊獣)",
+          "name": "ランドロス(れいじゅう)",
           "dex": 645,
           "tag": "normal",
-          "dps": 21.6,
-          "tdo": 720,
+          "dps": 19.0,
+          "tdo": 680,
           "fast": "マッドショット",
-          "charge": "ねっさのあらし"
+          "charge": "じしん"
         }
       ]
     },
@@ -1296,86 +1250,202 @@
       "startDay": 16,
       "endDay": 24,
       "name": "メガジュペッタ",
-      "status": "upcoming",
+      "status": "実装済み",
       "tier": "メガレイド",
       "dex": 354,
       "types": [
         "ゴースト"
       ],
       "shiny": true,
-      "shinyText": "色違い実装済み（青緑色）",
-      "cpNormal": "1247〜1313",
-      "cpBoost": "1559〜1642",
-      "minPlayers": "2〜3人",
-      "tactics": "あくタイプ、ゴーストタイプが弱点。攻撃力が非常に高いものの耐久は控えめなため、あくタイプで固めて相手のゴースト技を軽減しつつメガバンギラスやサザンドラで押し切るのが最も安全です。",
+      "shinyText": "色違い実装済み",
+      "cpNormal": "1370 - 1450",
+      "cpBoost": "1713 - 1813",
+      "minPlayers": "2〜4人",
+      "tactics": "あく、ゴーストタイプが弱点。ダークライやサザンドラ、バンギラスで一気に攻めよう。",
       "megaRecs": {
         "attack": [
-          {
-            "dex": 248,
-            "name": "メガバンギラス",
-            "move": "かみつく / ぶんまわす",
-            "type": "あく",
-            "desc": "ゴースト技に耐性を持ちつつ抜群の高火力で一気にHPを削る最適解"
-          },
           {
             "dex": 229,
             "name": "メガヘルガー",
             "move": "バークアウト / イカサマ",
             "type": "あく",
-            "desc": "味方のあくタイプの火力を継続ブースト"
+            "desc": "あくタイプの火力を底上げ"
           }
         ],
         "candy": [
           {
-            "dex": 94,
-            "name": "メガゲンガー",
-            "move": "",
-            "type": "",
-            "desc": "ゴーストタイプのアメ・アメXLボーナス用"
-          },
-          {
             "dex": 354,
             "name": "メガジュペッタ",
-            "move": "",
-            "type": "",
-            "desc": "ゴーストタイプのアメ・アメXLボーナス用"
+            "move": "シャドークロー / シャドーボール",
+            "type": "ゴースト",
+            "desc": "ゴーストタイプの飴ボーナス追加"
           }
         ]
       },
       "counters": [
         {
-          "name": "メガバンギラス",
-          "dex": 248,
+          "name": "メガヘルガー",
+          "dex": 229,
           "tag": "mega",
-          "dps": 28.5,
-          "tdo": 890,
-          "fast": "かみつく",
-          "charge": "ぶんまわす"
+          "dps": 22.5,
+          "tdo": 610,
+          "fast": "バークアウト",
+          "charge": "イカサマ"
         },
         {
-          "name": "メガゲンガー",
-          "dex": 94,
-          "tag": "mega",
-          "dps": 29.8,
-          "tdo": 590,
-          "fast": "シャドークロー",
-          "charge": "シャドーボール"
-        },
-        {
-          "name": "シャドウバンギラス",
-          "dex": 248,
-          "tag": "shadow",
-          "dps": 26.9,
-          "tdo": 770,
-          "fast": "かみつく",
-          "charge": "ぶんまわす"
+          "name": "ダークライ",
+          "dex": 491,
+          "tag": "normal",
+          "dps": 20.8,
+          "tdo": 680,
+          "fast": "バークアウト",
+          "charge": "あくのはどう"
         },
         {
           "name": "サザンドラ",
           "dex": 635,
           "tag": "normal",
-          "dps": 25.1,
-          "tdo": 710,
+          "dps": 19.6,
+          "tdo": 640,
+          "fast": "バークアウト",
+          "charge": "ぶんまわす"
+        },
+        {
+          "name": "バンギラス",
+          "dex": 248,
+          "tag": "shadow",
+          "dps": 20.1,
+          "tdo": 720,
+          "fast": "かみつく",
+          "charge": "ぶんまわす"
+        },
+        {
+          "name": "シャンデラ",
+          "dex": 609,
+          "tag": "shadow",
+          "dps": 21.0,
+          "tdo": 590,
+          "fast": "たたりめ",
+          "charge": "シャドーボール"
+        },
+        {
+          "name": "ギラティナ(オリジン)",
+          "dex": 487,
+          "tag": "normal",
+          "dps": 19.2,
+          "tdo": 740,
+          "fast": "シャドークロー",
+          "charge": "シャドーボール"
+        },
+        {
+          "name": "マニューラ",
+          "dex": 461,
+          "tag": "shadow",
+          "dps": 19.8,
+          "tdo": 480,
+          "fast": "バークアウト",
+          "charge": "イカサマ"
+        },
+        {
+          "name": "イベルタル",
+          "dex": 717,
+          "tag": "normal",
+          "dps": 18.5,
+          "tdo": 660,
+          "fast": "バークアウト",
+          "charge": "あくのはどう"
+        },
+        {
+          "name": "フーパ(はいまる)",
+          "dex": 720,
+          "tag": "normal",
+          "dps": 18.9,
+          "tdo": 510,
+          "fast": "おどろかす",
+          "charge": "シャドーボール"
+        },
+        {
+          "name": "メガギャラドス",
+          "dex": 130,
+          "tag": "mega",
+          "dps": 21.0,
+          "tdo": 800,
+          "fast": "たきのぼり",
+          "charge": "かみくだく"
+        }
+      ]
+    },
+    "deoxys-normal": {
+      "month": 11,
+      "startDay": 25,
+      "endDay": 1,
+      "name": "デオキシス(ノーマル)",
+      "status": "実装済み",
+      "tier": "★5伝説",
+      "dex": 386,
+      "types": [
+        "エスパー"
+      ],
+      "shiny": true,
+      "shinyText": "色違い実装済み",
+      "cpNormal": "1225 - 1299",
+      "cpBoost": "1532 - 1624",
+      "minPlayers": "2〜4人",
+      "tactics": "むし、ゴースト、あくタイプが弱点。防御が低いため少人数でも攻略しやすい。",
+      "megaRecs": {
+        "attack": [
+          {
+            "dex": 354,
+            "name": "メガジュペッタ",
+            "move": "シャドークロー / シャドーボール",
+            "type": "ゴースト",
+            "desc": "高火力で一気に押し切る"
+          }
+        ],
+        "candy": [
+          {
+            "dex": 376,
+            "name": "メガメタグロス",
+            "move": "バレットパンチ / コメットパンチ",
+            "type": "はがね",
+            "desc": "アメボーナス追加"
+          }
+        ]
+      },
+      "counters": [
+        {
+          "name": "メガジュペッタ",
+          "dex": 354,
+          "tag": "mega",
+          "dps": 23.5,
+          "tdo": 580,
+          "fast": "シャドークロー",
+          "charge": "シャドーボール"
+        },
+        {
+          "name": "ダークライ",
+          "dex": 491,
+          "tag": "normal",
+          "dps": 21.2,
+          "tdo": 620,
+          "fast": "バークアウト",
+          "charge": "あくのはどう"
+        },
+        {
+          "name": "シャンデラ",
+          "dex": 609,
+          "tag": "shadow",
+          "dps": 22.0,
+          "tdo": 540,
+          "fast": "たたりめ",
+          "charge": "シャドーボール"
+        },
+        {
+          "name": "バンギラス",
+          "dex": 248,
+          "tag": "shadow",
+          "dps": 20.8,
+          "tdo": 650,
           "fast": "かみつく",
           "charge": "ぶんまわす"
         },
@@ -1383,55 +1453,55 @@
           "name": "ギラティナ(オリジン)",
           "dex": 487,
           "tag": "normal",
-          "dps": 24.3,
-          "tdo": 730,
+          "dps": 19.8,
+          "tdo": 700,
           "fast": "シャドークロー",
-          "charge": "シャドーダイブ"
-        },
-        {
-          "name": "ダークライ",
-          "dex": 491,
-          "tag": "normal",
-          "dps": 24.8,
-          "tdo": 640,
-          "fast": "バークアウト",
-          "charge": "あくのはどう"
-        },
-        {
-          "name": "シャドウマニューラ",
-          "dex": 461,
-          "tag": "shadow",
-          "dps": 25.4,
-          "tdo": 520,
-          "fast": "バークアウト",
-          "charge": "イカサマ"
-        },
-        {
-          "name": "シャドウシャンデラ",
-          "dex": 609,
-          "tag": "shadow",
-          "dps": 25.7,
-          "tdo": 560,
-          "fast": "たたりめ",
           "charge": "シャドーボール"
-        },
-        {
-          "name": "イベルタル",
-          "dex": 717,
-          "tag": "normal",
-          "dps": 23.5,
-          "tdo": 680,
-          "fast": "バークアウト",
-          "charge": "あくのはどう"
         },
         {
           "name": "メガヘルガー",
           "dex": 229,
           "tag": "mega",
-          "dps": 24.9,
-          "tdo": 660,
+          "dps": 21.8,
+          "tdo": 560,
           "fast": "バークアウト",
           "charge": "イカサマ"
+        },
+        {
+          "name": "サザンドラ",
+          "dex": 635,
+          "tag": "normal",
+          "dps": 19.1,
+          "tdo": 590,
+          "fast": "バークアウト",
+          "charge": "ぶんまわす"
+        },
+        {
+          "name": "マニューラ",
+          "dex": 461,
+          "tag": "shadow",
+          "dps": 20.1,
+          "tdo": 420,
+          "fast": "バークアウト",
+          "charge": "イカサマ"
+        },
+        {
+          "name": "ハッサム",
+          "dex": 212,
+          "tag": "shadow",
+          "dps": 18.9,
+          "tdo": 480,
+          "fast": "むすくい",
+          "charge": "シザークロス"
+        },
+        {
+          "name": "イベルタル",
+          "dex": 717,
+          "tag": "normal",
+          "dps": 18.7,
+          "tdo": 610,
+          "fast": "バークアウト",
+          "charge": "あくのはどう"
         }
       ]
     }
@@ -1700,54 +1770,36 @@
     }
   },
   "event_gopass": {
-    "title": "GOパス：11月(2026)",
-    "period": "2026/11/03(火)10:00 〜 12/01(火)10:00",
+    "title": "GOパス10月",
+    "period": "2026/10/6(火) 10:00 〜 11/3(火) 10:00",
     "free_summary": [
-      "グラードンとの確定遭遇",
-      "400ポケコイン",
-      "しあわせタマゴ、ふしぎなアメXL、ほしのすな等の育成素材",
-      "ランクマイルストーンボーナス（交換アメ増加、ギフト上限UP、おさんぽおこう2倍、タマゴ孵化ボーナス）"
+      "カイオーガとの遭遇やふしぎなアメXLを獲得可能",
+      "ポケモン交換時のアメ増加やギフト上限アップ等のボーナス"
     ],
     "deluxe_summary": [
-      "追加の1000ポケコイン（無料版と合わせて合計1400ポケコイン）",
-      "スーパーふかそうち、追加のプレミアムバトルパス",
-      "追加のポケモン遭遇リワード",
-      "デラックス限定ギフトボーナス（開封50個・入手150個・所持20個増加）"
+      "最終ランクリワードとしてキラチャームが入手可能",
+      "追加のポケポイントタスクやスーパーふかそうちを獲得"
     ],
     "reward_rows": [
       {
-        "rank": "ランク1",
-        "free_reward": "交換時ポケモンのアメ+1個 / アメXL確定(TL31以上)",
+        "rank": "1",
+        "free_reward": "ポケモン交換でアメ1個増加＆アメXL確定",
         "free_dex": 0,
-        "deluxe_reward": "交換時ボーナス適用",
+        "deluxe_reward": "デラックスボーナス有効化",
         "deluxe_dex": 0
       },
       {
-        "rank": "ランク25",
-        "free_reward": "ギフト開封上限40 / 入手125 / 所持+10",
+        "rank": "50",
+        "free_reward": "おさんぽおこう効果時間2倍",
         "free_dex": 0,
-        "deluxe_reward": "ギフト開封上限50 / 入手150 / 所持+20",
+        "deluxe_reward": "おさんぽおこう効果時間2倍",
         "deluxe_dex": 0
       },
       {
-        "rank": "ランク50",
-        "free_reward": "おさんぽおこうの効果時間2倍",
-        "free_dex": 0,
-        "deluxe_reward": "おさんぽおこうの効果時間2倍",
-        "deluxe_dex": 0
-      },
-      {
-        "rank": "ランク75",
-        "free_reward": "タマゴ孵化時XP・ほしのすな増加",
-        "free_dex": 0,
-        "deluxe_reward": "タマゴ孵化時XP・ほしのすな増加",
-        "deluxe_dex": 0
-      },
-      {
-        "rank": "ランク100",
-        "free_reward": "グラードン",
-        "free_dex": 383,
-        "deluxe_reward": "追加1000ポケコイン＆スーパーふかそうち",
+        "rank": "100",
+        "free_reward": "カイオーガ",
+        "free_dex": 382,
+        "deluxe_reward": "キラチャーム",
         "deluxe_dex": 0
       }
     ]
