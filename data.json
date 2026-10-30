@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/10/30 18:43 JST",
+  "updated_at": "2026/10/30 22:52 JST",
   "latest_news": [
     {
       "id": "news-supermega-chandelure",
@@ -11,12 +11,30 @@
       "is_update_notice": false
     },
     {
-      "id": "news-20261030-01",
-      "date": "2026/10/30",
+      "id": "news-20261030-super-mega-chandelure",
+      "date": "2026/10/30 12:00",
       "date_label": "10/30",
       "title": "スーパーメガレイドデイ：メガシャンデラが開催！",
-      "details": "明日10月31日14時より、スーパーメガレイドデイ：メガシャンデラが開催されます。",
-      "targetId": "ev-super-mega-chandelure-2026",
+      "details": "明日14時よりスーパーメガレイドデイが開催され、メガシャンデラがレイドバトルに登場します。",
+      "targetId": "ev-super-mega-chandelure-raid-day",
+      "is_update_notice": false
+    },
+    {
+      "id": "news-20261029-eternatus-returns",
+      "date": "2026/10/29 06:36",
+      "date_label": "10/29",
+      "title": "ムゲンダイナ再来イベントが開催決定！",
+      "details": "ムゲンダイナ(ムゲンダイマックス)とバトルができる再来イベントの開催が決定しました。",
+      "targetId": "ev-eternatus-returns",
+      "is_update_notice": false
+    },
+    {
+      "id": "news-20261029-giant-footprints",
+      "date": "2026/10/29 05:50",
+      "date_label": "10/29",
+      "title": "大きな足跡イベントの情報が発表！ムゲンダイナ復刻登場",
+      "details": "大きな足跡イベントの情報が解禁され、ムゲンダイナが復刻登場することが告知されました。",
+      "targetId": "ev-giant-footprints",
       "is_update_notice": false
     },
     {
@@ -65,30 +83,12 @@
       "is_update_notice": false
     },
     {
-      "id": "news-20261027-01",
-      "date": "2026-10-27",
+      "id": "news-20261027-compensation-timeresearch",
+      "date": "2026/10/27 13:05",
       "date_label": "10/27",
-      "title": "不具合のお詫びタイムチャレンジ配布",
-      "details": "先日発生していた問題のお詫びとして、しあわせタマゴが獲得できるタイムチャレンジが配布されています。",
-      "targetId": "",
-      "is_update_notice": false
-    },
-    {
-      "id": "news-1",
-      "date": "10/29",
-      "date_label": "10/29",
-      "title": "スポットライトアワー：ゴース(進化時XP2倍)が開催！",
-      "details": "スポットライトアワー：ゴース(進化時XP2倍)が開催！",
-      "targetId": "ev-gastly-spotlight",
-      "is_update_notice": false
-    },
-    {
-      "id": "news-2",
-      "date": "10/29",
-      "date_label": "10/29",
-      "title": "コマタナのコミュニティデイ：相棒にしなくても進化タスクが進むボーナスは削除されたため注意！",
-      "details": "相棒にしなくても進化タスクが進むボーナスは削除されたため注意！コマタナのコミュニティデイ",
-      "targetId": "ev-pawniard-comday",
+      "title": "不具合のお詫びとしてタイムチャレンジが配布！",
+      "details": "先日発生していた問題のお詫びとして「しあわせタマゴ」がもらえるタイムチャレンジが配布されました。",
+      "targetId": "news-compensation-timeresearch",
       "is_update_notice": false
     }
   ],
@@ -908,52 +908,36 @@
     {
       "id": "ev-halloween-2026-part1",
       "month": 10,
-      "title": "ハロウィン2026パート1",
+      "title": "ハロウィン2026 パート1",
       "barClass": "event",
-      "category": "季節イベント",
+      "category": "event",
       "barIconDex": 41,
       "startDay": 27,
       "endDay": 1,
       "hasPaid": false,
-      "dateText": "10月27日(火) 10:00〜11月1日(日) 10:00",
-      "summary": "ハロウィン2026パート1が開催中！特別な衣装を身にまとったポケモンたちが登場します。",
+      "dateText": "10月27日(火) 10:00～11月1日(日) 10:00",
+      "summary": "ハロウィンイベント第1弾が開催中。特別な仮装をしたピカチュウやズバットが出現します。",
       "freeFeatures": [
-        "特別衣装ポケモンの野生出現・色違い実装"
+        "仮装ポケモンが野生などで出現",
+        "捕獲時・タマゴ孵化時のアメボーナス等"
       ],
       "paidFeatures": [],
       "wilds": [
         {
+          "dex": 25,
+          "name": "ピカチュウ (ハットとケーブ)",
+          "shiny": true,
+          "note": "イベント限定衣装"
+        },
+        {
           "dex": 41,
           "name": "ズバット (トップハット)",
           "shiny": true,
-          "note": "特別衣装"
-        },
-        {
-          "dex": 25,
-          "name": "ピカチュウ (ハットとケープ)",
-          "shiny": true,
-          "note": "特別衣装"
+          "note": "イベント限定衣装"
         }
       ],
       "specialGimmicks": [],
-      "raids": [
-        {
-          "dex": 487,
-          "name": "ギラティナ(オリジンフォルム)",
-          "shiny": true,
-          "note": "伝説レイド",
-          "targetKey": "legendary",
-          "isDmax": false
-        },
-        {
-          "dex": 302,
-          "name": "メガヤミラミ",
-          "shiny": true,
-          "note": "メガレイド",
-          "targetKey": "mega",
-          "isDmax": false
-        }
-      ],
+      "raids": [],
       "tasks": []
     },
     {
@@ -1051,6 +1035,67 @@
           "shiny": true,
           "note": "スーパーメガレイド",
           "targetKey": "mega",
+          "isDmax": false
+        }
+      ],
+      "tasks": []
+    },
+    {
+      "id": "ev-super-mega-chandelure-raid-day",
+      "month": 10,
+      "title": "スーパーメガレイドデイ：メガシャンデラ",
+      "barClass": "raid",
+      "category": "raid",
+      "barIconDex": 609,
+      "startDay": 31,
+      "endDay": 31,
+      "hasPaid": false,
+      "dateText": "10月31日(土) 14:00～17:00",
+      "summary": "新要素「スーパーメガレイド」にメガシャンデラが登場するレイドデイが開催されます。",
+      "freeFeatures": [
+        "スーパーメガレイドにメガシャンデラが登場",
+        "色違いのメガシャンデラに出会いやすくなるボーナス"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "specialGimmicks": [],
+      "raids": [
+        {
+          "dex": 609,
+          "name": "メガシャンデラ",
+          "shiny": true,
+          "note": "スーパーメガレイド",
+          "targetKey": "mega",
+          "isDmax": false
+        }
+      ],
+      "tasks": []
+    },
+    {
+      "id": "ev-legendary-giratina-origin",
+      "month": 10,
+      "title": "伝説レイド：ギラティナ(オリジンフォルム)",
+      "barClass": "raid",
+      "category": "raid",
+      "barIconDex": 487,
+      "startDay": 28,
+      "endDay": 3,
+      "hasPaid": false,
+      "dateText": "10月28日(水) 05:00～11月3日(火) 21:00",
+      "summary": "伝説レイドバトルにギラティナ(オリジンフォルム)が登場します。",
+      "freeFeatures": [
+        "伝説レイドバトルにギラティナ(オリジンフォルム)が登場"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "specialGimmicks": [],
+      "raids": [
+        {
+          "dex": 487,
+          "name": "ギラティナ(オリジンフォルム)",
+          "shiny": true,
+          "note": "伝説レイド",
+          "targetKey": "legendary",
           "isDmax": false
         }
       ],
