@@ -19,7 +19,8 @@ LOG_RETENTION_DAYS = 30
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36")
 
-GEMINI_MODELS = [os.environ.get("GEMINI_MODEL", "gemini-2.5-flash"), "gemini-2.5-pro"]
+# 先頭から順に試す。モデルの提供終了(404)時は次へ。名前は https://ai.google.dev/gemini-api/docs/models で確認
+GEMINI_MODELS = [m for m in dict.fromkeys([os.environ.get("GEMINI_MODEL", "gemini-3.8-flash"), "gemini-3.6-flash", "gemini-3.1-flash-lite"]) if m]
 
 # max_articles: 1回に見る記事の上限 / min_chars: これ未満は「本文が取れていない疑い」(suspect_empty)
 # link_re: 記事URLの正規表現（group(1)=記事キー）。min_id: これ未満の数値IDは古い記事として無視。
