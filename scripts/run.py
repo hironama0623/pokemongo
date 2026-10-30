@@ -31,12 +31,14 @@ def _fetch_page(source, url, role, log, getter, min_chars, dump=None):
     e.update(chars_fetched=len(text), article_updated=date.isoformat() if date else None, date_kind=kind, status="ok")
     if "[frlist" in raw or "[eventimage" in raw:
         e["reason"] = "未展開ショートコード(frlist等)あり: 表が本文HTMLに無い可能性"
+    e["preview"] = text[:80].replace("\n", " ")
+    dkey = source if role == "article" else f"{source}-{role}"
+    if dump is not None and dump.get(dkey, 0) < 2:  # 診断モードのみ: 原因調査用に生HTMLを各サイト2件まで保存
+        dump[dkey] = dump.get(dkey, 0) + 1
+        config.LOGS.joinpath("debug").mkdir(parents=True, exist_ok=True)
+        (config.LOGS / "debug" / f"{dkey}-{url.rstrip('/').split('/')[-1]}.html").write_text(html[:400000], encoding="utf-8")
     if len(text) < min_chars:
         e["status"] = "suspect_empty"
-        if dump is not None and dump.get(source, 0) < 3:  # 診断モードのみ: 原因調査用に生HTMLを少数保存
-            dump[source] = dump.get(source, 0) + 1
-            config.LOGS.joinpath("debug").mkdir(parents=True, exist_ok=True)
-            (config.LOGS / "debug" / f"{source}-{url.rstrip('/').split('/')[-1]}.html").write_text(html[:150000], encoding="utf-8")
     elif date is None:
         e["status"] = "date_unknown"
     return e, {"site": source, "url": url, "text": text, "updated": e["article_updated"], "date": date, "hash": extract.content_hash(text)}
@@ -74,6 +76,16 @@ def run(now, log, diagnose=False, no_news=False, getter=fetch.get, llm=an.gemini
             else:
                 art["entry"] = e
                 queue.append(art)
+
+        # 同じ本文が3ページ以上ある＝記事固有の中身が取れておらず共通テンプレだけ取れている。AI解析しない
+        cnt = {}
+        for a in queue:
+            if a["site"] == key:
+                cnt[a["hash"]] = cnt.get(a["hash"], 0) + 1
+        for a in [a for a in queue if a["site"] == key and cnt[a["hash"]] >= 3]:
+            a["entry"].update(status="suspect_empty", action="skipped_empty",
+                              reason=f"同一本文が{cnt[a['hash']]}ページで一致（記事固有の本文が取れていない/共通部分のみ）")
+            queue.remove(a)
 
     ok = sum(1 for e in log.entries if e["role"] != "index" and e["status"] in ("ok", "date_unknown", "suspect_empty"))
     if diagnose:

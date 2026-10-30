@@ -16,7 +16,7 @@ class RunLog:
     def add(self, source, url, role, **kw):
         e = {"source": source, "url": url, "role": role,  # role: index / hub / article
              "status": None, "http_status": None, "article_updated": None, "date_kind": None,
-             "chars_fetched": 0, "chars_sent": 0, "action": None, "reason": None, "error": None}
+             "chars_fetched": 0, "chars_sent": 0, "action": None, "reason": None, "error": None, "preview": None}
         e.update(kw)
         self.entries.append(e)
         return e
@@ -58,11 +58,11 @@ class RunLog:
                  f"取得成功 {s['fetched_ok']} / 取得失敗 {s['fetch_failed']} / AI解析 {s['analyzed']} / スキップ {s['skipped']} / 解析失敗 {s['failed']}", ""]
         for n in p["notes"]:
             lines.append(f"- NOTE: {n}")
-        lines += ["", "| サイト | 種別 | URL | 状態 | HTTP | 記事更新日 | 取得文字数 | AI送信文字数 | 処理 | 理由/エラー |",
-                  "|---|---|---|---|---|---|---|---|---|---|"]
+        lines += ["", "| サイト | 種別 | URL | 状態 | HTTP | 記事更新日 | 取得文字数 | AI送信文字数 | 処理 | 理由/エラー | 冒頭80字 |",
+                  "|---|---|---|---|---|---|---|---|---|---|---|"]
         for e in p["entries"]:
-            lines.append("| {source} | {role} | {url} | {status} | {http_status} | {article_updated} | {chars_fetched} | {chars_sent} | {action} | {why} |".format(
-                why=(e.get("reason") or e.get("error") or ""), **{k: ("" if v is None else v) for k, v in e.items() if k != "reason" and k != "error"}))
+            lines.append("| {source} | {role} | {url} | {status} | {http_status} | {article_updated} | {chars_fetched} | {chars_sent} | {action} | {why} | {pv} |".format(pv=(e.get("preview") or "").replace("|", "/"), 
+                why=(e.get("reason") or e.get("error") or ""), **{k: ("" if v is None else v) for k, v in e.items() if k not in ("reason", "error", "preview")}))
         return "\n".join(lines) + "\n"
 
     def _prune(self):

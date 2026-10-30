@@ -166,6 +166,21 @@ class T(unittest.TestCase):
         self.assertEqual(read("event_details.json")["events"], {})
         self.assertTrue(any(e["action"] == "fetch_only" for e in log.entries))
 
+    def test_identical_bodies_are_skipped_as_boilerplate(self):
+        same = page("2026年10月30日 10:00", "<p>共通テンプレだけ</p>")
+        for i in (1, 2, 3):
+            PAGES[f"https://9db.jp/pokemongo/data/2650{i}"] = same
+        PAGES["https://9db.jp/pokemongo/"] = idx("/pokemongo/data/26501", "/pokemongo/data/26502", "/pokemongo/data/26503")
+        try:
+            calls = []
+            _, log = go(fake_llm_factory(calls))
+            e = act(log, "26501")
+            self.assertEqual(e["action"], "skipped_empty")
+            self.assertIn("同一本文", e["reason"])
+            self.assertFalse(any("26501" in c for c in calls))
+        finally:
+            PAGES["https://9db.jp/pokemongo/"] = idx("/pokemongo/data/26442", "/pokemongo/data/20859")
+
     def test_div_br_body_is_recovered(self):
         body = "<div>" + "<br>".join(f"行{i}：[frlist id=\"1\"] ゴーストタイプを{i}匹捕まえる ヨマワル" for i in range(40)) + "</div>"
         text, _, _ = extract.html_to_text(f"<html><body><article><h1>見出し</h1>{body}</article></body></html>")
