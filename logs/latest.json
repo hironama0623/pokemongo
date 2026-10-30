@@ -1,11 +1,11 @@
 {
- "run_at": "2026-10-31T00:08:02.905833+09:00",
+ "run_at": "2026-10-31T00:16:06.043138+09:00",
  "run_status": "ok",
  "summary": {
   "fetched_ok": 189,
   "fetch_failed": 0,
   "analyzed": 0,
-  "skipped": 32,
+  "skipped": 86,
   "failed": 0
  },
  "notes": [
@@ -25,7 +25,8 @@
    "chars_sent": 0,
    "action": null,
    "reason": "記事リンク 72 件",
-   "error": null
+   "error": null,
+   "preview": null
   },
   {
    "source": "pokemapi",
@@ -35,11 +36,12 @@
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
-   "chars_fetched": 216504,
+   "chars_fetched": 216502,
    "chars_sent": 0,
    "action": null,
    "reason": "記事リンク 40 件",
-   "error": null
+   "error": null,
+   "preview": null
   },
   {
    "source": "pokemapi",
@@ -53,763 +55,818 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "ポケモン | アイテム | すべて | 大発見 イベント バトル 捕獲 スローボーナス 進化・強化 相棒・フレンド タマゴ ARマッピング スポンサー ポケスト"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10782/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10780/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10779/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10778/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10777/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10776/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10775/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10774/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10773/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10772/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10771/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10770/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10758/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10757/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10754/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10753/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10748/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10732/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10728/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10711/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10702/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10692/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10689/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10680/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10678/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10677/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10640/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10637/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10634/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10631/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10628/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10618/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10609/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10596/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10589/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10584/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10566/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10565/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10564/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10562/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10547/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10546/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10522/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10515/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10509/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10508/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10493/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10492/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10490/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10489/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10483/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10482/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10481/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "pokemapi",
    "url": "https://pokemongo-get.com/board/10472/",
    "role": "article",
-   "status": "date_unknown",
+   "status": "suspect_empty",
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
    "chars_fetched": 574,
    "chars_sent": 0,
-   "action": "fetch_only",
-   "reason": "診断モード: AI解析なし",
-   "error": null
+   "action": "skipped_empty",
+   "reason": "同一本文が54ページで一致（記事固有の本文が取れていない/共通部分のみ）",
+   "error": null,
+   "preview": "ポケゴボード 【ポケモンGO】招待レイド掲示板 【ポケモンGO】個体値厳選ツール【GOバトルリーグ】 【ポケモンGO】人気のバトルパーティ検索【GOバトルリーグ"
   },
   {
    "source": "gamewith",
@@ -819,11 +876,12 @@
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
-   "chars_fetched": 1675728,
+   "chars_fetched": 1675701,
    "chars_sent": 0,
    "action": null,
    "reason": "記事リンク 1296 件",
-   "error": null
+   "error": null,
+   "preview": null
   },
   {
    "source": "gamewith",
@@ -833,11 +891,12 @@
    "http_status": 200,
    "article_updated": "2026-10-30T11:11:06+09:00",
    "date_kind": "modified",
-   "chars_fetched": 9240,
+   "chars_fetched": 9217,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -847,11 +906,12 @@
    "http_status": 200,
    "article_updated": "2026-10-30T13:12:10+09:00",
    "date_kind": "modified",
-   "chars_fetched": 9700,
+   "chars_fetched": 9677,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -861,11 +921,12 @@
    "http_status": 200,
    "article_updated": "2026-10-30T17:32:04+09:00",
    "date_kind": "modified",
-   "chars_fetched": 11743,
+   "chars_fetched": 11720,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -875,11 +936,12 @@
    "http_status": 200,
    "article_updated": "2026-10-30T13:28:20+09:00",
    "date_kind": "modified",
-   "chars_fetched": 8820,
+   "chars_fetched": 8797,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -889,11 +951,12 @@
    "http_status": 200,
    "article_updated": "2026-10-29T05:15:19+09:00",
    "date_kind": "modified",
-   "chars_fetched": 8520,
+   "chars_fetched": 8497,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -903,11 +966,12 @@
    "http_status": 200,
    "article_updated": "2026-10-27T18:14:03+09:00",
    "date_kind": "modified",
-   "chars_fetched": 8936,
+   "chars_fetched": 8913,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -917,11 +981,12 @@
    "http_status": 200,
    "article_updated": "2026-10-23T16:35:41+09:00",
    "date_kind": "modified",
-   "chars_fetched": 9447,
+   "chars_fetched": 9424,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -931,11 +996,12 @@
    "http_status": 200,
    "article_updated": "2026-10-30T18:28:04+09:00",
    "date_kind": "modified",
-   "chars_fetched": 12627,
+   "chars_fetched": 12604,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -945,11 +1011,12 @@
    "http_status": 200,
    "article_updated": "2026-10-21T09:29:19+09:00",
    "date_kind": "modified",
-   "chars_fetched": 9961,
+   "chars_fetched": 9938,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -959,11 +1026,12 @@
    "http_status": 200,
    "article_updated": "2026-10-28T17:59:21+09:00",
    "date_kind": "modified",
-   "chars_fetched": 10249,
+   "chars_fetched": 10226,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -973,11 +1041,12 @@
    "http_status": 200,
    "article_updated": "2026-10-20T12:55:52+09:00",
    "date_kind": "modified",
-   "chars_fetched": 10083,
+   "chars_fetched": 10060,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -987,11 +1056,12 @@
    "http_status": 200,
    "article_updated": "2026-10-30T15:16:54+09:00",
    "date_kind": "modified",
-   "chars_fetched": 12566,
+   "chars_fetched": 12543,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1001,11 +1071,12 @@
    "http_status": 200,
    "article_updated": "2026-10-17T03:13:03+09:00",
    "date_kind": "modified",
-   "chars_fetched": 8333,
+   "chars_fetched": 8310,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1015,11 +1086,12 @@
    "http_status": 200,
    "article_updated": "2026-10-16T14:32:37+09:00",
    "date_kind": "modified",
-   "chars_fetched": 9584,
+   "chars_fetched": 9561,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1029,11 +1101,12 @@
    "http_status": 200,
    "article_updated": "2026-10-30T15:53:36+09:00",
    "date_kind": "modified",
-   "chars_fetched": 13592,
+   "chars_fetched": 13569,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1043,11 +1116,12 @@
    "http_status": 200,
    "article_updated": "2026-10-30T02:33:32+09:00",
    "date_kind": "modified",
-   "chars_fetched": 10173,
+   "chars_fetched": 10150,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1057,11 +1131,12 @@
    "http_status": 200,
    "article_updated": "2026-10-30T16:56:03+09:00",
    "date_kind": "modified",
-   "chars_fetched": 10793,
+   "chars_fetched": 10770,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1071,11 +1146,12 @@
    "http_status": 200,
    "article_updated": "2026-10-30T08:28:05+09:00",
    "date_kind": "modified",
-   "chars_fetched": 10889,
+   "chars_fetched": 10866,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1085,11 +1161,12 @@
    "http_status": 200,
    "article_updated": "2026-10-30T09:12:46+09:00",
    "date_kind": "modified",
-   "chars_fetched": 13302,
+   "chars_fetched": 13279,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1099,11 +1176,12 @@
    "http_status": 200,
    "article_updated": "2026-10-11T12:07:22+09:00",
    "date_kind": "modified",
-   "chars_fetched": 9493,
+   "chars_fetched": 9470,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1113,11 +1191,12 @@
    "http_status": 200,
    "article_updated": "2026-10-12T11:14:33+09:00",
    "date_kind": "modified",
-   "chars_fetched": 8433,
+   "chars_fetched": 8410,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1127,11 +1206,12 @@
    "http_status": 200,
    "article_updated": "2026-10-30T15:11:03+09:00",
    "date_kind": "modified",
-   "chars_fetched": 9992,
+   "chars_fetched": 9969,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1141,11 +1221,12 @@
    "http_status": 200,
    "article_updated": "2026-10-09T07:01:08+09:00",
    "date_kind": "modified",
-   "chars_fetched": 8397,
+   "chars_fetched": 8376,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1155,11 +1236,12 @@
    "http_status": 200,
    "article_updated": "2026-10-30T07:24:23+09:00",
    "date_kind": "modified",
-   "chars_fetched": 8645,
+   "chars_fetched": 8624,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1169,11 +1251,12 @@
    "http_status": 200,
    "article_updated": "2026-10-29T22:20:22+09:00",
    "date_kind": "modified",
-   "chars_fetched": 11871,
+   "chars_fetched": 11850,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1183,11 +1266,12 @@
    "http_status": 200,
    "article_updated": "2026-10-30T18:13:18+09:00",
    "date_kind": "modified",
-   "chars_fetched": 11555,
+   "chars_fetched": 11534,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1197,11 +1281,12 @@
    "http_status": 200,
    "article_updated": "2026-10-25T17:52:14+09:00",
    "date_kind": "modified",
-   "chars_fetched": 11035,
+   "chars_fetched": 11014,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1211,11 +1296,12 @@
    "http_status": 200,
    "article_updated": "2026-10-25T12:02:10+09:00",
    "date_kind": "modified",
-   "chars_fetched": 9225,
+   "chars_fetched": 9204,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1225,11 +1311,12 @@
    "http_status": 200,
    "article_updated": "2026-10-28T11:34:23+09:00",
    "date_kind": "modified",
-   "chars_fetched": 10787,
+   "chars_fetched": 10766,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1239,11 +1326,12 @@
    "http_status": 200,
    "article_updated": "2026-10-01T22:20:33+09:00",
    "date_kind": "modified",
-   "chars_fetched": 8198,
+   "chars_fetched": 8177,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1253,11 +1341,12 @@
    "http_status": 200,
    "article_updated": "2026-09-28T00:58:22+09:00",
    "date_kind": "modified",
-   "chars_fetched": 9255,
+   "chars_fetched": 9234,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1267,11 +1356,12 @@
    "http_status": 200,
    "article_updated": "2026-10-19T05:51:45+09:00",
    "date_kind": "modified",
-   "chars_fetched": 9795,
+   "chars_fetched": 9774,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1281,11 +1371,12 @@
    "http_status": 200,
    "article_updated": "2026-10-28T12:38:20+09:00",
    "date_kind": "modified",
-   "chars_fetched": 10367,
+   "chars_fetched": 10346,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1295,11 +1386,12 @@
    "http_status": 200,
    "article_updated": "2026-10-17T23:07:03+09:00",
    "date_kind": "modified",
-   "chars_fetched": 10607,
+   "chars_fetched": 10586,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1309,11 +1401,12 @@
    "http_status": 200,
    "article_updated": "2026-09-28T05:37:16+09:00",
    "date_kind": "modified",
-   "chars_fetched": 7617,
+   "chars_fetched": 7596,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1323,11 +1416,12 @@
    "http_status": 200,
    "article_updated": "2026-10-22T03:58:24+09:00",
    "date_kind": "modified",
-   "chars_fetched": 10626,
+   "chars_fetched": 10605,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1337,11 +1431,12 @@
    "http_status": 200,
    "article_updated": "2026-09-28T16:20:32+09:00",
    "date_kind": "modified",
-   "chars_fetched": 11108,
+   "chars_fetched": 11087,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1351,11 +1446,12 @@
    "http_status": 200,
    "article_updated": "2026-10-07T19:13:19+09:00",
    "date_kind": "modified",
-   "chars_fetched": 14025,
+   "chars_fetched": 14004,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1365,11 +1461,12 @@
    "http_status": 200,
    "article_updated": "2026-10-13T01:47:15+09:00",
    "date_kind": "modified",
-   "chars_fetched": 8189,
+   "chars_fetched": 8168,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1379,11 +1476,12 @@
    "http_status": 200,
    "article_updated": "2026-10-05T12:30:08+09:00",
    "date_kind": "modified",
-   "chars_fetched": 9561,
+   "chars_fetched": 9540,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1393,11 +1491,12 @@
    "http_status": 200,
    "article_updated": "2026-09-22T18:08:47+09:00",
    "date_kind": "modified",
-   "chars_fetched": 10139,
+   "chars_fetched": 10118,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1407,11 +1506,12 @@
    "http_status": 200,
    "article_updated": "2026-10-28T06:35:08+09:00",
    "date_kind": "modified",
-   "chars_fetched": 12419,
+   "chars_fetched": 12398,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1421,11 +1521,12 @@
    "http_status": 200,
    "article_updated": "2026-10-22T12:00:48+09:00",
    "date_kind": "modified",
-   "chars_fetched": 12022,
+   "chars_fetched": 12001,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1435,11 +1536,12 @@
    "http_status": 200,
    "article_updated": "2026-09-15T14:10:09+09:00",
    "date_kind": "modified",
-   "chars_fetched": 8809,
+   "chars_fetched": 8788,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1449,11 +1551,12 @@
    "http_status": 200,
    "article_updated": "2026-09-14T12:28:19+09:00",
    "date_kind": "modified",
-   "chars_fetched": 8356,
+   "chars_fetched": 8335,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1463,11 +1566,12 @@
    "http_status": 200,
    "article_updated": "2026-10-06T14:14:21+09:00",
    "date_kind": "modified",
-   "chars_fetched": 10935,
+   "chars_fetched": 10914,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1477,11 +1581,12 @@
    "http_status": 200,
    "article_updated": "2026-10-30T04:22:26+09:00",
    "date_kind": "modified",
-   "chars_fetched": 14294,
+   "chars_fetched": 14273,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1491,11 +1596,12 @@
    "http_status": 200,
    "article_updated": "2026-10-06T10:48:17+09:00",
    "date_kind": "modified",
-   "chars_fetched": 9627,
+   "chars_fetched": 9606,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1505,11 +1611,12 @@
    "http_status": 200,
    "article_updated": "2026-10-02T06:18:51+09:00",
    "date_kind": "modified",
-   "chars_fetched": 10836,
+   "chars_fetched": 10815,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1519,11 +1626,12 @@
    "http_status": 200,
    "article_updated": "2026-10-06T10:13:45+09:00",
    "date_kind": "modified",
-   "chars_fetched": 11903,
+   "chars_fetched": 11882,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1533,11 +1641,12 @@
    "http_status": 200,
    "article_updated": "2026-10-06T02:52:33+09:00",
    "date_kind": "modified",
-   "chars_fetched": 10495,
+   "chars_fetched": 10474,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1547,11 +1656,12 @@
    "http_status": 200,
    "article_updated": "2026-09-20T09:44:59+09:00",
    "date_kind": "modified",
-   "chars_fetched": 10867,
+   "chars_fetched": 10846,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1561,11 +1671,12 @@
    "http_status": 200,
    "article_updated": "2026-09-23T10:11:05+09:00",
    "date_kind": "modified",
-   "chars_fetched": 12803,
+   "chars_fetched": 12782,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1575,11 +1686,12 @@
    "http_status": 200,
    "article_updated": "2026-09-20T16:54:22+09:00",
    "date_kind": "modified",
-   "chars_fetched": 11123,
+   "chars_fetched": 11102,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1589,11 +1701,12 @@
    "http_status": 200,
    "article_updated": "2026-09-11T10:32:07+09:00",
    "date_kind": "modified",
-   "chars_fetched": 10813,
+   "chars_fetched": 10792,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1603,11 +1716,12 @@
    "http_status": 200,
    "article_updated": "2026-09-15T18:28:04+09:00",
    "date_kind": "modified",
-   "chars_fetched": 11969,
+   "chars_fetched": 11948,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1617,11 +1731,12 @@
    "http_status": 200,
    "article_updated": "2026-09-14T14:14:29+09:00",
    "date_kind": "modified",
-   "chars_fetched": 12087,
+   "chars_fetched": 12066,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1631,11 +1746,12 @@
    "http_status": 200,
    "article_updated": "2026-10-30T09:04:55+09:00",
    "date_kind": "modified",
-   "chars_fetched": 13490,
+   "chars_fetched": 13469,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1645,11 +1761,12 @@
    "http_status": 200,
    "article_updated": "2026-09-19T22:38:20+09:00",
    "date_kind": "modified",
-   "chars_fetched": 9041,
+   "chars_fetched": 9020,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1659,11 +1776,12 @@
    "http_status": 200,
    "article_updated": "2026-09-27T20:52:07+09:00",
    "date_kind": "modified",
-   "chars_fetched": 8663,
+   "chars_fetched": 8642,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1673,11 +1791,12 @@
    "http_status": 200,
    "article_updated": "2026-09-27T11:39:21+09:00",
    "date_kind": "modified",
-   "chars_fetched": 9165,
+   "chars_fetched": 9144,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1687,11 +1806,12 @@
    "http_status": 200,
    "article_updated": "2026-10-07T10:21:19+09:00",
    "date_kind": "modified",
-   "chars_fetched": 10304,
+   "chars_fetched": 10283,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1701,11 +1821,12 @@
    "http_status": 200,
    "article_updated": "2026-10-02T11:32:30+09:00",
    "date_kind": "modified",
-   "chars_fetched": 13432,
+   "chars_fetched": 13411,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1715,11 +1836,12 @@
    "http_status": 200,
    "article_updated": "2026-09-09T06:26:10+09:00",
    "date_kind": "modified",
-   "chars_fetched": 14013,
+   "chars_fetched": 13992,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1729,11 +1851,12 @@
    "http_status": 200,
    "article_updated": "2026-09-18T12:23:32+09:00",
    "date_kind": "modified",
-   "chars_fetched": 9597,
+   "chars_fetched": 9576,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1743,11 +1866,12 @@
    "http_status": 200,
    "article_updated": "2026-10-01T05:50:11+09:00",
    "date_kind": "modified",
-   "chars_fetched": 10039,
+   "chars_fetched": 10018,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1757,11 +1881,12 @@
    "http_status": 200,
    "article_updated": "2026-09-07T00:07:00+09:00",
    "date_kind": "modified",
-   "chars_fetched": 8063,
+   "chars_fetched": 8042,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1771,11 +1896,12 @@
    "http_status": 200,
    "article_updated": "2026-09-07T23:00:40+09:00",
    "date_kind": "modified",
-   "chars_fetched": 27199,
+   "chars_fetched": 27178,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1785,11 +1911,12 @@
    "http_status": 200,
    "article_updated": "2026-09-07T19:53:24+09:00",
    "date_kind": "modified",
-   "chars_fetched": 12891,
+   "chars_fetched": 12870,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1799,11 +1926,12 @@
    "http_status": 200,
    "article_updated": "2026-08-14T15:06:05+09:00",
    "date_kind": "modified",
-   "chars_fetched": 12050,
+   "chars_fetched": 12029,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1813,11 +1941,12 @@
    "http_status": 200,
    "article_updated": "2026-08-30T12:20:12+09:00",
    "date_kind": "modified",
-   "chars_fetched": 11269,
+   "chars_fetched": 11248,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1827,11 +1956,12 @@
    "http_status": 200,
    "article_updated": "2026-08-31T05:52:15+09:00",
    "date_kind": "modified",
-   "chars_fetched": 11752,
+   "chars_fetched": 11731,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1841,11 +1971,12 @@
    "http_status": 200,
    "article_updated": "2026-09-09T01:30:27+09:00",
    "date_kind": "modified",
-   "chars_fetched": 12714,
+   "chars_fetched": 12693,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1855,11 +1986,12 @@
    "http_status": 200,
    "article_updated": "2026-08-04T01:29:36+09:00",
    "date_kind": "modified",
-   "chars_fetched": 11830,
+   "chars_fetched": 11809,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1869,11 +2001,12 @@
    "http_status": 200,
    "article_updated": "2026-09-09T18:37:01+09:00",
    "date_kind": "modified",
-   "chars_fetched": 10139,
+   "chars_fetched": 10118,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1883,11 +2016,12 @@
    "http_status": 200,
    "article_updated": "2026-08-31T05:24:28+09:00",
    "date_kind": "modified",
-   "chars_fetched": 14408,
+   "chars_fetched": 14387,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1897,11 +2031,12 @@
    "http_status": 200,
    "article_updated": "2026-08-07T17:26:07+09:00",
    "date_kind": "modified",
-   "chars_fetched": 13868,
+   "chars_fetched": 13847,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1911,11 +2046,12 @@
    "http_status": 200,
    "article_updated": "2026-08-09T14:37:21+09:00",
    "date_kind": "modified",
-   "chars_fetched": 9359,
+   "chars_fetched": 9338,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1925,11 +2061,12 @@
    "http_status": 200,
    "article_updated": "2026-07-19T10:08:11+09:00",
    "date_kind": "modified",
-   "chars_fetched": 8845,
+   "chars_fetched": 8824,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "gamewith",
@@ -1939,11 +2076,12 @@
    "http_status": 200,
    "article_updated": "2026-10-30T06:46:21+09:00",
    "date_kind": "modified",
-   "chars_fetched": 19426,
+   "chars_fetched": 19405,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "- ホーム - ゲーム検索 - 新規登録 - ログイン - 2カラム 3カラム - pickup game icon pickup game icon 他の攻略"
   },
   {
    "source": "9db",
@@ -1953,11 +2091,12 @@
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
-   "chars_fetched": 76329,
+   "chars_fetched": 75962,
    "chars_sent": 0,
    "action": null,
    "reason": "記事リンク 134 件",
-   "error": null
+   "error": null,
+   "preview": null
   },
   {
    "source": "9db",
@@ -1971,7 +2110,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### 実装済みマックスバトルボスポケモンまとめ 最終更新日 | 2026年10月29日 星4出現ポケモン追加 目次 - はじめに - 実装済みマックスバトルボ"
   },
   {
    "source": "9db",
@@ -1985,7 +2125,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### ムゲンダイナ再来 開催日(日本時間) 2026/11/21(土)11:00 〜 14:00 公式発表 目次 - イベントまとめ - 公式発表 - ムゲン"
   },
   {
    "source": "9db",
@@ -1995,11 +2136,12 @@
    "http_status": 200,
    "article_updated": "2026-10-30T07:57:58+09:00",
    "date_kind": "modified",
-   "chars_fetched": 1799,
+   "chars_fetched": 1775,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "先日発生していた問題のお詫びとしてしあわせタマゴがもらえるタイムチャレンジが配布！ 2026年10月30日 07:57 14件 不具合まとめ 不具合のタグ ログ"
   },
   {
    "source": "9db",
@@ -2013,7 +2155,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### ピカチュウ (ハットとケーブ)の色違い確率調査 / ハロウィン2026パート1 - ハロウィン2026パート1 - 色違い確率調査一覧 調査期間中に遭遇"
   },
   {
    "source": "9db",
@@ -2027,7 +2170,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### ズバット (トップハット)の色違い確率調査 / ハロウィン2026パート1 - ハロウィン2026パート1 - 色違い確率調査一覧 調査期間中に遭遇した"
   },
   {
    "source": "9db",
@@ -2041,7 +2185,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### 【メキシコ限定】Día de Muertos en 2026 開催日(日本時間) 2026/10/28(水)1:00 〜 11/6(金)11:00 開催"
   },
   {
    "source": "9db",
@@ -2055,7 +2200,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### GOパス：11月(2026) 開催日(日本時間) 2026/11/3(火)10:00 〜 12/1(火)10:00 公式発表 目次 - GOパス：11月"
   },
   {
    "source": "9db",
@@ -2065,11 +2211,12 @@
    "http_status": 200,
    "article_updated": "2026-10-27T13:36:28+09:00",
    "date_kind": "modified",
-   "chars_fetched": 1877,
+   "chars_fetched": 1853,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "マックスマンデー：ワンリキー 2026年10月27日 13:36 2件 マックスマンデー：ワンリキー 開催日(日本時間) 2026/11/2(月)6:00 〜 "
   },
   {
    "source": "9db",
@@ -2083,7 +2230,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### 大きな足跡 開催日(日本時間) 2026/11/16(月)10:00 〜 11/23(月)20:00 公式発表 目次 - イベントまとめ - GOパス："
   },
   {
    "source": "9db",
@@ -2097,7 +2245,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### レイドアワー：ギラティナ(アナザー) 開催日(日本時間) 2026/11/4(水)18:00 〜 19:00 目次 - 対策ポケモン - レイドバトル日"
   },
   {
    "source": "9db",
@@ -2107,11 +2256,12 @@
    "http_status": 200,
    "article_updated": "2026-10-25T19:17:01+09:00",
    "date_kind": "modified",
-   "chars_fetched": 1848,
+   "chars_fetched": 1824,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "スポットライトアワー：ヒメグマ(魔女の帽子)(進化時XP2倍) 2026年10月25日 19:17 2件 スポットライトアワー：ヒメグマ(魔女の帽子)(進化時X"
   },
   {
    "source": "9db",
@@ -2125,7 +2275,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### adidasコラボ 開催日(日本時間) 2026/9/25(金) 〜 2027/1/15(金)23:59 公式発表 目次 - イベントまとめ - タイム"
   },
   {
    "source": "9db",
@@ -2139,7 +2290,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### 【海外限定】ポケモン30周年記念モール探索イベント 開催日(日本時間) 2026/10/1(木) 〜 2027/3/28(日) 公式発表 目次 - イベ"
   },
   {
    "source": "9db",
@@ -2153,7 +2305,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### GOパス：10月(2026) 開催日(日本時間) 2026/10/6(火)10:00 〜 11/3(火)10:00 公式発表 目次 - GOパス：10月"
   },
   {
    "source": "9db",
@@ -2167,7 +2320,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### 【欧州限定】欧州宇宙機関（ESA）コラボイベント 開催日(日本時間) 2026/10/4(日) 〜 2027/4/30(金) 公式発表 目次 - イベン"
   },
   {
    "source": "9db",
@@ -2181,7 +2335,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### ハロウィン2026パート2 開催日(日本時間) 2026/11/1(日)10:00 〜 11/5(木)20:00 ボチ色違い ??? % 準備中 公式発"
   },
   {
    "source": "9db",
@@ -2195,7 +2350,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### ハロウィン2026パート1 開催日(日本時間) 2026/10/27(火)10:00 〜 11/1(日)10:00 ズバット(トップハット)色違い 1."
   },
   {
    "source": "9db",
@@ -2205,11 +2361,12 @@
    "http_status": 200,
    "article_updated": "2026-10-30T09:56:09+09:00",
    "date_kind": "modified",
-   "chars_fetched": 1818,
+   "chars_fetched": 1795,
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "スポットライトアワー：ゴース(進化時XP2倍) 2026年10月30日 09:56 5件 スポットライトアワー：ゴース(進化時XP2倍) 開催日(日本時間) 2"
   },
   {
    "source": "9db",
@@ -2223,7 +2380,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### 伝説シャドウ：ランドロス(けしん) 開催日(日本時間) 2026/10/7(水)5:00 〜 11/3(火)21:00 目次 - 対策ポケモン - レイ"
   },
   {
    "source": "9db",
@@ -2237,7 +2395,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### メガ：メガヤミラミ 開催日(日本時間) 2026/10/28(水)5:00 〜 11/3(火)21:00 目次 - 対策ポケモン - レイドバトル日程 "
   },
   {
    "source": "9db",
@@ -2251,7 +2410,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### レイドアワー：ギラティナ(オリジン) 開催日(日本時間) 2026/10/28(水)18:00 〜 19:00 目次 - 対策ポケモン - レイドバトル"
   },
   {
    "source": "9db",
@@ -2265,7 +2425,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### 伝説：ギラティナ(オリジン) 開催日(日本時間) 2026/10/28(水)5:00 〜 11/3(火)21:00 目次 - 対策ポケモン - レイドバ"
   },
   {
    "source": "9db",
@@ -2279,7 +2440,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### ワイルドエリア2026：仙台・東北 開催日(日本時間) 2026/11/6(金)10:00 〜 11/8(日)18:00 開催場所 仙台市宮城野区 榴岡"
   },
   {
    "source": "9db",
@@ -2293,7 +2455,8 @@
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
-   "error": null
+   "error": null,
+   "preview": "### 「伝説のポケモンと出会う レジェンドリサーチ in日本橋＆八重洲」連動イベント 開催日(日本時間) 2026/9/9(水) 〜 11/29(日) 開催場"
   },
   {
    "source": "9db",
@@ -2307,7 +2470,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### GOバトルリーグ：黄昏の旅路 GOバトルリーグ シーズン別 仕様 | 1 | 2 | 3 | 4 5 | 6 | 7 | 8 | 9 10 | 調整 |"
   },
   {
    "source": "9db",
@@ -2321,7 +2485,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### シーズン24：黄昏の旅路 開催日(日本時間) 2026/9/8(火)10:00 〜 12/1(火)10:00 公式発表 目次 - イベントまとめ - タ"
   },
   {
    "source": "9db",
@@ -2335,7 +2500,8 @@
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
-   "error": null
+   "error": null,
+   "preview": "### 【日本ANA限定】「ポケモンジェット 緑」連動イベント 開催日(日本時間) 2026/9/18(金)14:00 〜 2027/8/31(火)20:00 "
   },
   {
    "source": "9db",
@@ -2349,7 +2515,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### スーパーメガレイドデイ：メガシャンデラ 開催日(日本時間) 2026/10/31(土)14:00 〜 17:00 シャンデラ色違い ??? % 準備中 "
   },
   {
    "source": "9db",
@@ -2363,7 +2530,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### コミュニティデイ：コマタナ 開催日(日本時間) 2026/11/21(土)14:00 〜 17:00 公式発表 目次 - イベントまとめ - 公式発表 "
   },
   {
    "source": "official",
@@ -2377,7 +2545,8 @@
    "chars_sent": 0,
    "action": null,
    "reason": "記事リンク 30 件",
-   "error": null
+   "error": null,
+   "preview": null
   },
   {
    "source": "official",
@@ -2391,7 +2560,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "トレーナーの皆さん 「マックスバトル」が盛りだくさんの1週間がやってきます！「ムゲンダイナ」が再来し、「マックス粒子」をたくさん入手できます。さらに、「GOパス"
   },
   {
    "source": "official",
@@ -2405,7 +2575,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "トレーナーの皆さん 「Pokémon GO ワイルドエリア：仙台・東北」および「Pokémon GO ワイルドエリア：メキシコシティ」の「イベント GO スタン"
   },
   {
    "source": "official",
@@ -2419,7 +2590,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### 2026年11月の「コミュニティ・デイ」：「コマタナ」 日本時間2026年11月21日14:00から17:00まで 11月の「コミュニティ・デイ」は、は"
   },
   {
    "source": "official",
@@ -2433,7 +2605,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### GOパス：11月 日本時間2026年11月3日10:00から2026年12月1日10:00までの期間で、11月の「GOパス」と「GOパスデラックス」が『"
   },
   {
    "source": "official",
@@ -2447,7 +2620,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### ワイルドウィーク 日本時間2026年11月9日10:00から2026年11月13日20:00まで  ### 初めて「ダイマックス」して登場するポケモン "
   },
   {
    "source": "official",
@@ -2461,7 +2635,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### 「シャンデラ」の「スーパーメガレイド・デイ」 日本時間2026年10月31日14:00から17:00まで  ### 初登場の「メガシンカ」したポケモン "
   },
   {
    "source": "official",
@@ -2475,7 +2650,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### 『Pokémon GO』のゲームプレイのアップデートについて トレーナーの皆さん いつも、仲間と一緒に冒険を続けている世界中のトレーナーの皆さんに、感謝"
   },
   {
    "source": "official",
@@ -2489,7 +2665,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### ハロウィン2026パート2 日本時間2026年11月1日10:00から2026年11月5日20:00まで  ### 登場するポケモン 運が良ければ、色違"
   },
   {
    "source": "official",
@@ -2503,7 +2680,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "トレーナーの皆さん 『ポケモン GO』公式パートナーである「イオンモール」で、ハロウィンを楽しめる特別なイベントを開催します！ 2026年10月19日（月）から"
   },
   {
    "source": "official",
@@ -2517,7 +2695,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### ハロウィン2026パート1 日本時間2026年10月27日10:00から2026年11月1日10:00まで  ### 初登場するポケモン イベント中は、"
   },
   {
    "source": "official",
@@ -2531,7 +2710,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### 「ダイマックスユクシー・エムリット・アグノム」マックスバトルデイ 日本時間2026年10月24日14:00から17:00まで  ### 「ダイマックス」"
   },
   {
    "source": "official",
@@ -2545,7 +2725,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### 『Pokémon GO』の「メテノシャワー」  ### 初めて登場するポケモン ながれぼしポケモンの「メテノ」が『Pokémon GO』に初めて登場しま"
   },
   {
    "source": "official",
@@ -2559,7 +2740,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### 「メグロコふかの日」 日本時間2026年10月17日11:00から17:00まで  ### 登場するポケモン 「メグロコ」が2kmタマゴからたくさんかえ"
   },
   {
    "source": "official",
@@ -2573,7 +2755,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "ポケモンとadidas の期間限定コレクションの発売をお祝い！『Pokémon GO』のトレーナーの皆さんは、対象のadidasの店舗や世界中の対象小売店をぜひ"
   },
   {
    "source": "official",
@@ -2587,7 +2770,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "トレーナーの皆さん、アローラ！2027年2月、「Pokémon GO Tour」が再び開催されます！今回は 『ポケットモンスター サン・ムーン』 と 『ポケット"
   },
   {
    "source": "official",
@@ -2601,7 +2785,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### 秋の遠足：相棒といっしょ 日本時間2026年10月13日10:00から2026年10月19日20:00まで  ### 初めて登場するポケモン 運が良けれ"
   },
   {
    "source": "official",
@@ -2615,7 +2800,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### GOパス：10月 日本時間2026年10月6日10:00から2026年11月3日10:00までの期間で、10月の「GOパス」と「GOパスデラックス」が『"
   },
   {
    "source": "official",
@@ -2629,7 +2815,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### 世界宇宙週間2026 日本時間2026年10月4日00:00から2026年10月10日23:59まで  ### 初めて登場するポケモン イベント中は、新"
   },
   {
    "source": "official",
@@ -2643,7 +2830,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### 2026年10月の「コミュニティ・デイ」：「ゾロア」 日本時間2026年10月10日14:00から17:00まで 10月の「コミュニティ・デイ」ではわる"
   },
   {
    "source": "official",
@@ -2657,7 +2845,8 @@
    "chars_sent": 0,
    "action": "fetch_only",
    "reason": "診断モード: AI解析なし",
-   "error": null
+   "error": null,
+   "preview": "### 選べるタイムチャレンジ：黄昏の旅路 2026年9月23日10:00から2026年9月28日20:00まで 『Pokémon GO』でイベントが開催されな"
   }
  ]
 }
