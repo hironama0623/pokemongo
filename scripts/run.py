@@ -57,8 +57,9 @@ def run(now, log, diagnose=False, no_news=False, getter=fetch.get, llm=an.gemini
     for key, cfg in config.SOURCES.items():
         cands = fetch.discover(key, cfg, log, getter)
         pages = [(u, "hub") for u in cfg["hubs"]] + [(u, "article") for _, u, _ in cands[:cfg["max_articles"]]]
-        if len(cands) > cfg["max_articles"]:
-            log.note(f"{key}: 候補{len(cands)}件のうち上限{cfg["max_articles"]}件のみ取得（超過分は古い順）")
+        limit = cfg["max_articles"]
+        if len(cands) > limit:
+            log.note(f"{key}: 候補{len(cands)}件のうち上限{limit}件のみ取得（超過分は古い順）")
         for url, role in pages:
             sleep(config.REQUEST_INTERVAL)
             e, art = _fetch_page(key, url, role, log, getter, cfg["min_chars"], dump)
