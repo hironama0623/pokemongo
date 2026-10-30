@@ -41,10 +41,11 @@ def _fetch_page(source, url, role, log, getter, min_chars, dump=None):
         e["status"] = "suspect_empty"
     elif date is None:
         e["status"] = "date_unknown"
-    return e, {"site": source, "url": url, "text": text, "updated": e["article_updated"], "date": date, "hash": extract.content_hash(text)}
+    header = extract.page_header(soup)
+    return e, {"site": source, "url": url, "text": (header + "\n\n" + text) if header else text, "updated": e["article_updated"], "date": date, "hash": extract.content_hash(text)}
 
 
-def run(now, log, diagnose=False, no_news=False, getter=fetch.get, llm=an.gemini_call, sleep=time.sleep):
+def run(now, log, diagnose=False, no_news=False, getter=fetch.get, llm=an.gemini_call, sleep=time.sleep, render_getter=None):
     cutoff = now - dt.timedelta(days=config.WINDOW_DAYS)
     state = store.load("state.json", {"articles": {}})
     details = store.load("event_details.json", {"schema_version": 1, "events": {}})
@@ -58,13 +59,14 @@ def run(now, log, diagnose=False, no_news=False, getter=fetch.get, llm=an.gemini
     shutil.rmtree(config.LOGS / "debug", ignore_errors=True)
     for key, cfg in config.SOURCES.items():
         cands = fetch.discover(key, cfg, log, getter)
+        page_get = (render_getter or fetch.get_rendered) if cfg.get("render") else getter
         pages = [(u, "hub") for u in cfg["hubs"]] + [(u, "article") for _, u, _ in cands[:cfg["max_articles"]]]
         limit = cfg["max_articles"]
         if len(cands) > limit:
             log.note(f"{key}: 候補{len(cands)}件のうち上限{limit}件のみ取得（超過分は古い順）")
         for url, role in pages:
             sleep(config.REQUEST_INTERVAL)
-            e, art = _fetch_page(key, url, role, log, getter, cfg["min_chars"], dump)
+            e, art = _fetch_page(key, url, role, log, page_get, cfg["min_chars"], dump)
             if art is None:
                 continue
             if role == "article" and art["date"] and art["date"] < cutoff:
@@ -187,6 +189,8 @@ def main(argv=None):
     except Exception as ex:  # noqa: BLE001  握りつぶさず、ログに残して失敗終了
         log.note(f"想定外のエラー: {type(ex).__name__}: {ex}")
         status = "failed"
+    finally:
+        fetch.close_renderer()
     if status == "failed" and "--diagnose" not in argv:
         mark_failed(now, "")
     log.save(status)

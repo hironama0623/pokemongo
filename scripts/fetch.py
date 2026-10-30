@@ -51,3 +51,53 @@ def discover(source_key, cfg, log, getter=get):
         found = [f for f in found if f[0].isdigit() and int(f[0]) >= min_id]
         found.sort(key=lambda f: int(f[0]), reverse=True)
     return found
+
+
+# --- JS描画が必要なサイト（ポケマピの記事本文は Vue が後から描画する）用 -----------------
+_pw = _browser = None
+_sel_timeouts = 0
+
+
+def get_rendered(url):
+    """ヘッドレスChromiumで描画後のHTMLを返す。(html|None, http_status|None, error|None)"""
+    global _pw, _browser, _sel_timeouts
+    try:
+        if _browser is None:
+            from playwright.sync_api import sync_playwright  # 遅延import（通常サイトでは不要）
+            _pw = sync_playwright().start()
+            _browser = _pw.chromium.launch()
+        ctx = _browser.new_context(user_agent=config.UA, locale="ja-JP")
+        ctx.route("**/*", lambda r: r.abort() if r.request.resource_type in ("image", "media", "font") else r.continue_())
+        page = ctx.new_page()
+        try:
+            resp = page.goto(url, wait_until="domcontentloaded", timeout=30000)
+            status = resp.status if resp else None
+            try:  # Vue が #app を表示するまで待つ。3回連続で出なければ待ち時間を短縮（全件が遅くならないように）
+                page.wait_for_selector("#app", state="visible", timeout=1500 if _sel_timeouts >= 3 else 12000)
+                _sel_timeouts = 0
+            except Exception:  # noqa: BLE001
+                _sel_timeouts += 1
+            try:
+                page.wait_for_load_state("networkidle", timeout=6000)
+            except Exception:  # noqa: BLE001
+                pass
+            html = page.content()
+        finally:
+            ctx.close()
+        if status and status != 200:
+            return None, status, f"HTTP {status}"
+        return html, status, None
+    except Exception as e:  # noqa: BLE001
+        return None, None, f"{type(e).__name__}: {str(e)[:150]}"
+
+
+def close_renderer():
+    global _pw, _browser
+    try:
+        if _browser:
+            _browser.close()
+        if _pw:
+            _pw.stop()
+    except Exception:  # noqa: BLE001
+        pass
+    _pw = _browser = None

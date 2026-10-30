@@ -72,7 +72,7 @@ def html_to_text(html):
         alt = (img.get("alt") or "").strip()
         img.replace_with(f" {alt} " if alt else " ")
     container = None
-    for sel in ("article", ".entry-content", "#main", "main", "#contents", "#content"):
+    for sel in ("#the-content", "article", ".entry-content", "#main", "main", "#contents", "#content"):
         c = soup.select_one(sel)
         if c and len(c.get_text(strip=True)) >= 300:
             container = c
@@ -143,3 +143,15 @@ def extract_links(html, base_url, link_re):
             seen.add(url)
             out.append((m.group(1), url, a.get_text(" ", strip=True)[:80]))
     return out
+
+
+def page_header(soup):
+    """<title> と og:description（イベント名・期間が入っていることが多い）。本文とは別に保持してAIに渡す。"""
+    t = soup.find("title")
+    d = soup.find("meta", attrs={"property": "og:description"}) or soup.find("meta", attrs={"name": "description"})
+    parts = []
+    if t and t.get_text(strip=True):
+        parts.append("タイトル: " + re.sub(r"\s+", " ", t.get_text(strip=True)))
+    if d and d.get("content"):
+        parts.append("概要: " + re.sub(r"\s+", " ", d["content"]).strip()[:600])
+    return "\n".join(parts)

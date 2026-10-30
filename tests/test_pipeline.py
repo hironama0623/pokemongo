@@ -82,7 +82,7 @@ def reset():
 
 def go(llm, g=getter, **kw):
     log = RunLog(NOW)
-    status, _ = runner.run(NOW, log, getter=g, llm=llm, sleep=lambda s: None, **kw)
+    status, _ = runner.run(NOW, log, getter=g, llm=llm, sleep=lambda s: None, render_getter=g, **kw)
     log.save(status)
     return status, log
 
@@ -191,6 +191,40 @@ class T(unittest.TestCase):
         a = extract.content_hash("本文\n更新日時: 2026年10月29日 09:34")
         b = extract.content_hash("本文\n更新日時: 2026年10月30日 21:33")
         self.assertEqual(a, b)
+
+
+try:
+    import playwright  # noqa: F401
+    HAS_PW = True
+except ImportError:
+    HAS_PW = False
+
+
+@unittest.skipUnless(HAS_PW, "playwright 未インストール")
+class RenderTest(unittest.TestCase):
+    def test_vue_like_page_is_rendered(self):
+        import http.server, threading
+        from scripts import fetch
+        html = ("<html><head><title>T</title></head><body><div id='the-content'><div id='app' style='display:none'></div></div>"
+                "<script>setTimeout(function(){var a=document.getElementById('app');a.innerHTML="
+                "'<table><tr><td>ゴーストを13匹捕まえる</td><td>ヨマワル</td></tr></table>';a.style.display='block';},300);</script></body></html>")
+
+        class H(http.server.BaseHTTPRequestHandler):
+            def do_GET(self):
+                self.send_response(200); self.send_header("Content-Type", "text/html; charset=utf-8"); self.end_headers()
+                self.wfile.write(html.encode("utf-8"))
+            def log_message(self, *a): pass
+        srv = http.server.HTTPServer(("127.0.0.1", 0), H)
+        threading.Thread(target=srv.serve_forever, daemon=True).start()
+        try:
+            url = f"http://127.0.0.1:{srv.server_port}/"
+            raw = fetch.get_rendered(url)
+            self.assertIsNone(raw[2], raw[2])
+            text, _, _ = extract.html_to_text(raw[0])
+            self.assertIn("ヨマワル", text)
+            self.assertIn("ゴーストを13匹捕まえる | ヨマワル", text)
+        finally:
+            srv.shutdown(); fetch.close_renderer()
 
 
 if __name__ == "__main__":
