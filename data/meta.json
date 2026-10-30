@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "last_run_at": "2026-10-31T01:03:13.555913+09:00",
+  "last_run_status": "partial",
+  "last_success_at": "2026-10-31T01:03:13.555913+09:00",
+  "counts": {
+    "fetched_ok": 189,
+    "fetch_failed": 0,
+    "analyzed": 0,
+    "skipped": 32,
+    "failed": 152,
+    "events_auto": 0,
+    "news": 0
+  }
+}
