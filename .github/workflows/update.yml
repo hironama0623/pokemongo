@@ -19,6 +19,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 40
     permissions:
       contents: write
     steps:
@@ -31,6 +32,9 @@ jobs:
 
       - name: 依存ライブラリ
         run: pip install -r requirements.txt
+
+      - name: ブラウザ(Chromium)の準備
+        run: python -m playwright install --with-deps chromium
 
       - name: 取得・解析・検証・保存
         id: update
