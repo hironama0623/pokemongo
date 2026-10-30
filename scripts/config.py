@@ -13,6 +13,7 @@ REQUEST_INTERVAL = float(os.environ.get("REQUEST_INTERVAL", "1.0"))  # 秒
 TIMEOUT = 20
 RETRIES = 2
 ANALYZE_BUDGET_SEC = int(os.environ.get("ANALYZE_BUDGET_SEC", "1320"))  # AI解析に使う最大秒数(22分)。超過分は次回の実行に回す
+AI_MIN_INTERVAL = float(os.environ.get("AI_MIN_INTERVAL", "6.0"))  # AI呼び出し間隔(秒)。429対策
 MAX_AI_CHARS = 60000        # AIに渡す上限。切り詰めた場合は chars_sent に反映される
 NEWS_RETENTION_DAYS = 45
 LOG_RETENTION_DAYS = 30

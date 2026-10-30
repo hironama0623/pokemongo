@@ -2,8 +2,9 @@
 import json
 import os
 import re
+import time
 
-from . import schemas
+from . import config, schemas
 
 
 class AnalyzeError(Exception):
@@ -50,10 +51,15 @@ def build_prompt(article, known_events, year):
 
 
 _client = None
+_last_call = 0.0
 
 
 def gemini_call(model, prompt):
-    global _client
+    global _client, _last_call
+    wait = config.AI_MIN_INTERVAL - (time.monotonic() - _last_call)  # 無料枠のレート制限(429)を避ける間隔
+    if wait > 0:
+        time.sleep(wait)
+    _last_call = time.monotonic()
     from google import genai  # 遅延import（テスト・診断モードでは不要）
     from google.genai import types
     if _client is None:
@@ -68,17 +74,54 @@ def parse_json(text):
     return json.loads(text)
 
 
-def analyze(article, known_events, models, call=gemini_call, year=2026):
+def _retry_delay(msg, attempt):
+    m = re.search(r"retry(?:Delay)?\D{0,12}(\d+(?:\.\d+)?)s", msg or "")
+    return min(float(m.group(1)) + 2, 60) if m else min(15 * attempt, 45)
+
+
+def _transient(msg):
+    return any(k in msg for k in ("429", "503", "RESOURCE_EXHAUSTED", "UNAVAILABLE", "500", "DEADLINE"))
+
+
+def normalize(facts):
+    """AIの軽微な形のズレを直す（文字列だけで返されたポケモン名を {"name":..} にする等）。値は変えない。"""
+    if not isinstance(facts, dict):
+        return facts
+
+    def fix(lst):
+        return [{"name": x.strip()} if isinstance(x, str) and x.strip() else x for x in lst] if isinstance(lst, list) else lst
+    for k in ("wilds", "raids", "eggs"):
+        if k in facts:
+            facts[k] = fix(facts[k])
+    sb = facts.get("surprise_box")
+    if isinstance(sb, dict):
+        for k in ("pokemon", "items"):
+            if k in sb:
+                sb[k] = fix(sb[k])
+    for k in ("field_research", "time_challenge"):
+        for t in facts.get(k) or []:
+            if isinstance(t, dict) and "rewards" in t:
+                t["rewards"] = fix(t["rewards"])
+    return facts
+
+
+def analyze(article, known_events, models, call=gemini_call, year=2026, sleep=time.sleep, tries=3):
     prompt = build_prompt(article, known_events, year)
     errors = []
     for m in models:
-        try:
-            facts = parse_json(call(m, prompt))
-        except Exception as e:  # noqa: BLE001
-            errors.append(f"{m}: {type(e).__name__}: {str(e)[:150]}")
-            continue
-        err = schemas.validate("article", facts)
-        if err is None:
-            return facts
-        errors.append(f"{m}: {err}")
+        for attempt in range(1, tries + 1):
+            try:
+                facts = normalize(parse_json(call(m, prompt)))
+            except Exception as e:  # noqa: BLE001
+                msg = f"{type(e).__name__}: {str(e)}"
+                if _transient(msg) and attempt < tries:  # 429/503 は待って同じモデルで再試行
+                    sleep(_retry_delay(msg, attempt))
+                    continue
+                errors.append(f"{m}: {msg[:150]}")
+                break
+            err = schemas.validate("article", facts)
+            if err is None:
+                return facts
+            errors.append(f"{m}: {err}")
+            break
     raise AnalyzeError(" / ".join(errors))
