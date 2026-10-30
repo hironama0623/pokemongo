@@ -37,7 +37,7 @@ class RunLog:
                 s["analyzed"] += 1
             elif a.startswith("skipped"):
                 s["skipped"] += 1
-            elif a.endswith("failed"):
+            elif a in ("analyze_failed", "validation_failed"):
                 s["failed"] += 1
         return s
 

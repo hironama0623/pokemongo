@@ -56,16 +56,26 @@ def discover(source_key, cfg, log, getter=get):
 # --- JS描画が必要なサイト（ポケマピの記事本文は Vue が後から描画する）用 -----------------
 _pw = _browser = None
 _sel_timeouts = 0
+_launch_error = None
 
 
 def get_rendered(url):
     """ヘッドレスChromiumで描画後のHTMLを返す。(html|None, http_status|None, error|None)"""
-    global _pw, _browser, _sel_timeouts
+    global _pw, _browser, _sel_timeouts, _launch_error
+    if _launch_error:  # 起動に失敗済みなら、全ページで同じ失敗を繰り返さず即座に返す
+        return None, None, _launch_error
     try:
         if _browser is None:
             from playwright.sync_api import sync_playwright  # 遅延import（通常サイトでは不要）
             _pw = sync_playwright().start()
-            _browser = _pw.chromium.launch()
+            try:
+                _browser = _pw.chromium.launch()
+            except Exception as e:  # noqa: BLE001  起動失敗: 後始末して以後は即失敗
+                _pw.stop()
+                _pw = None
+                _launch_error = ("Chromiumを起動できません。ワークフローの『ブラウザ(Chromium)の準備』"
+                                 f"ステップ（playwright install --with-deps chromium）を確認してください: {str(e)[:120]}")
+                return None, None, _launch_error
         ctx = _browser.new_context(user_agent=config.UA, locale="ja-JP")
         ctx.route("**/*", lambda r: r.abort() if r.request.resource_type in ("image", "media", "font") else r.continue_())
         page = ctx.new_page()
@@ -92,7 +102,8 @@ def get_rendered(url):
 
 
 def close_renderer():
-    global _pw, _browser
+    global _pw, _browser, _launch_error
+    _launch_error = None
     try:
         if _browser:
             _browser.close()

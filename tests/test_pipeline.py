@@ -226,6 +226,24 @@ class RenderTest(unittest.TestCase):
         finally:
             srv.shutdown(); fetch.close_renderer()
 
+    def test_launch_failure_is_reported_once_and_fast(self):
+        from scripts import fetch
+        fetch.close_renderer()
+        old = os.environ.get("PLAYWRIGHT_BROWSERS_PATH")
+        os.environ["PLAYWRIGHT_BROWSERS_PATH"] = str(TMP / "no-browsers")  # ブラウザ未インストールを再現
+        try:
+            a = fetch.get_rendered("http://127.0.0.1:1/")
+            b = fetch.get_rendered("http://127.0.0.1:1/")
+            self.assertIn("Chromiumを起動できません", a[2])
+            self.assertEqual(a[2], b[2])  # asyncio ループのエラーに化けない・2回目も同じ即時失敗
+            self.assertNotIn("asyncio", b[2])
+        finally:
+            if old is None:
+                os.environ.pop("PLAYWRIGHT_BROWSERS_PATH", None)
+            else:
+                os.environ["PLAYWRIGHT_BROWSERS_PATH"] = old
+            fetch.close_renderer()
+
 
 if __name__ == "__main__":
     unittest.main()
