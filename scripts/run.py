@@ -7,6 +7,7 @@
 終了コード: 0=ok/partial, 1=failed（1ページも取得できない / 保存前検証NG / APIキー無し）。失敗時も data/ は前回のまま。
 """
 import copy
+import shutil
 import datetime as dt
 import json
 import os
@@ -18,7 +19,7 @@ from . import compat, config, extract, fetch, merge, pokedex, schemas, store
 from .logger import RunLog
 
 
-def _fetch_page(source, url, role, log, getter):
+def _fetch_page(source, url, role, log, getter, min_chars, dump=None):
     e = log.add(source, url, role)
     html, status, err = getter(url)
     e["http_status"] = status
@@ -30,8 +31,12 @@ def _fetch_page(source, url, role, log, getter):
     e.update(chars_fetched=len(text), article_updated=date.isoformat() if date else None, date_kind=kind, status="ok")
     if "[frlist" in raw or "[eventimage" in raw:
         e["reason"] = "未展開ショートコード(frlist等)あり: 表が本文HTMLに無い可能性"
-    if len(text) < config.MIN_BODY_CHARS:
+    if len(text) < min_chars:
         e["status"] = "suspect_empty"
+        if dump is not None and dump.get(source, 0) < 3:  # 診断モードのみ: 原因調査用に生HTMLを少数保存
+            dump[source] = dump.get(source, 0) + 1
+            config.LOGS.joinpath("debug").mkdir(parents=True, exist_ok=True)
+            (config.LOGS / "debug" / f"{source}-{url.rstrip('/').split('/')[-1]}.html").write_text(html[:150000], encoding="utf-8")
     elif date is None:
         e["status"] = "date_unknown"
     return e, {"site": source, "url": url, "text": text, "updated": e["article_updated"], "date": date, "hash": extract.content_hash(text)}
@@ -47,15 +52,16 @@ def run(now, log, diagnose=False, no_news=False, getter=fetch.get, llm=an.gemini
     index = store.load("event_index.json", {"events": []})["events"]
     names = store.load("pokemon.json", {"names": {}})["names"]
 
-    queue = []
+    queue, dump = [], ({} if diagnose else None)
+    shutil.rmtree(config.LOGS / "debug", ignore_errors=True)
     for key, cfg in config.SOURCES.items():
         cands = fetch.discover(key, cfg, log, getter)
-        pages = [(u, "hub") for u in cfg["hubs"]] + [(u, "article") for _, u, _ in cands[:config.MAX_ARTICLES_PER_SOURCE]]
-        if len(cands) > config.MAX_ARTICLES_PER_SOURCE:
-            log.note(f"{key}: 候補{len(cands)}件のうち上限{config.MAX_ARTICLES_PER_SOURCE}件のみ取得（超過分は古い順）")
+        pages = [(u, "hub") for u in cfg["hubs"]] + [(u, "article") for _, u, _ in cands[:cfg["max_articles"]]]
+        if len(cands) > cfg["max_articles"]:
+            log.note(f"{key}: 候補{len(cands)}件のうち上限{cfg["max_articles"]}件のみ取得（超過分は古い順）")
         for url, role in pages:
             sleep(config.REQUEST_INTERVAL)
-            e, art = _fetch_page(key, url, role, log, getter)
+            e, art = _fetch_page(key, url, role, log, getter, cfg["min_chars"], dump)
             if art is None:
                 continue
             if role == "article" and art["date"] and art["date"] < cutoff:

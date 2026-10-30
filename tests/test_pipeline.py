@@ -166,6 +166,12 @@ class T(unittest.TestCase):
         self.assertEqual(read("event_details.json")["events"], {})
         self.assertTrue(any(e["action"] == "fetch_only" for e in log.entries))
 
+    def test_div_br_body_is_recovered(self):
+        body = "<div>" + "<br>".join(f"行{i}：[frlist id=\"1\"] ゴーストタイプを{i}匹捕まえる ヨマワル" for i in range(40)) + "</div>"
+        text, _, _ = extract.html_to_text(f"<html><body><article><h1>見出し</h1>{body}</article></body></html>")
+        self.assertGreater(len(text), 500)
+        self.assertIn("ヨマワル", text)
+
     def test_hash_ignores_timestamps(self):
         a = extract.content_hash("本文\n更新日時: 2026年10月29日 09:34")
         b = extract.content_hash("本文\n更新日時: 2026年10月30日 21:33")

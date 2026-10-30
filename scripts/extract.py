@@ -100,7 +100,18 @@ def html_to_text(html):
             lines.append(f"- {txt}")
         else:
             lines.append(txt)
-    return "\n".join(lines).strip(), soup, raw_text
+    structured = "\n".join(lines).strip()
+    # <div>+<br> だけで書かれた本文は上のタグ巡回で拾えないため、短すぎる場合は全文テキストで補う
+    full, prev = [], None
+    for l in container.get_text("\n").split("\n"):
+        l = re.sub(r"\s+", " ", l).strip()
+        if len(l) >= 2 and l != prev:
+            full.append(l)
+            prev = l
+    full_text = "\n".join(full)
+    if len(structured) < 600 and len(full_text) > len(structured) * 1.5:
+        structured = full_text
+    return structured, soup, raw_text
 
 
 def content_hash(text):
