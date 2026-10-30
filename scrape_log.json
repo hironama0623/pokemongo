@@ -1,5 +1,5 @@
 {
-  "executed_at": "2026/10/30 12:40 JST",
+  "executed_at": "2026/10/30 18:43 JST",
   "status": "success",
   "model_used": "gemini-flash-latest",
   "available_models_detected": [
@@ -38,7 +38,7 @@
       "source": "9DB(トップ)",
       "url": "https://9db.jp/pokemongo/",
       "title": "ポケモンGO攻略 - みんポケ",
-      "chars": 3016
+      "chars": 3028
     },
     {
       "source": "公式サイト",
@@ -49,7 +49,7 @@
   ],
   "extracted_research_count": 0,
   "updated_events": [
-    "ev-super-mega-chandelure-202610",
+    "ev-super-mega-chandelure-2026",
     "ev-halloween-2026-part1"
   ],
   "errors": []

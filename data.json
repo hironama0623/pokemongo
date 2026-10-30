@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/10/30 12:40 JST",
+  "updated_at": "2026/10/30 18:43 JST",
   "latest_news": [
     {
       "id": "news-supermega-chandelure",
@@ -12,28 +12,28 @@
     },
     {
       "id": "news-20261030-01",
-      "date": "2026-10-30",
+      "date": "2026/10/30",
       "date_label": "10/30",
-      "title": "明日14時からスーパーメガレイドデイ：メガシャンデラが開催！",
-      "details": "10月31日(土)14時よりメガシャンデラが登場するスーパーメガレイドデイが開催されます。",
-      "targetId": "ev-super-mega-chandelure-202610",
+      "title": "スーパーメガレイドデイ：メガシャンデラが開催！",
+      "details": "明日10月31日14時より、スーパーメガレイドデイ：メガシャンデラが開催されます。",
+      "targetId": "ev-super-mega-chandelure-2026",
       "is_update_notice": false
     },
     {
       "id": "news-20261029-01",
-      "date": "2026-10-29",
+      "date": "2026/10/29",
       "date_label": "10/29",
-      "title": "ムゲンダイナ再来！「大きな足跡」イベント開催決定",
-      "details": "ムゲンダイナ(ムゲンダイマックス)とバトルができる復刻イベント「大きな足跡」の開催が発表されました。",
-      "targetId": "ev-eternatus-return-2026",
+      "title": "ムゲンダイナ再来イベント「大きな足跡」が開催決定！",
+      "details": "ムゲンダイナが復刻登場し、ムゲンダイマックスバトルが開催されることが発表されました。",
+      "targetId": "ev-eternatus-footprints-2026",
       "is_update_notice": false
     },
     {
       "id": "news-20261029-02",
-      "date": "2026-10-29",
+      "date": "2026/10/29",
       "date_label": "10/29",
-      "title": "コマタナのコミュニティ・デイ ボーナス変更注意",
-      "details": "相棒にしなくても進化タスクが進むボーナスは削除されたためご注意ください。",
+      "title": "コマタナのコミュニティ・デイ進化タスクに関する注意",
+      "details": "相棒にしなくても進化タスクが進むボーナスは削除されたため、進化条件の進行にご注意ください。",
       "targetId": "",
       "is_update_notice": true
     },
@@ -908,18 +908,17 @@
     {
       "id": "ev-halloween-2026-part1",
       "month": 10,
-      "title": "ハロウィン2026 パート1",
-      "barClass": "bar-event",
-      "category": "イベント",
+      "title": "ハロウィン2026パート1",
+      "barClass": "event",
+      "category": "季節イベント",
       "barIconDex": 41,
       "startDay": 27,
-      "endDay": 31,
+      "endDay": 1,
       "hasPaid": false,
-      "dateText": "10月27日(火) 10:00～11月1日(日) 10:00",
-      "summary": "ハロウィンを祝う特別な衣装のポケモンたちが野生やレイドに登場します。",
+      "dateText": "10月27日(火) 10:00〜11月1日(日) 10:00",
+      "summary": "ハロウィン2026パート1が開催中！特別な衣装を身にまとったポケモンたちが登場します。",
       "freeFeatures": [
-        "特別な衣装を着たポケモンの出現",
-        "捕獲時・博士送り時のアメ増加ボーナス"
+        "特別衣装ポケモンの野生出現・色違い実装"
       ],
       "paidFeatures": [],
       "wilds": [
@@ -927,13 +926,13 @@
           "dex": 41,
           "name": "ズバット (トップハット)",
           "shiny": true,
-          "note": "イベント限定衣装"
+          "note": "特別衣装"
         },
         {
           "dex": 25,
           "name": "ピカチュウ (ハットとケープ)",
           "shiny": true,
-          "note": "イベント限定衣装"
+          "note": "特別衣装"
         }
       ],
       "specialGimmicks": [],
@@ -1011,6 +1010,36 @@
       "freeFeatures": [
         "メガシャンデラがレイドバトルに大量出現",
         "無料レイドパスの追加配布"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "specialGimmicks": [],
+      "raids": [
+        {
+          "dex": 609,
+          "name": "メガシャンデラ",
+          "shiny": true,
+          "note": "スーパーメガレイド",
+          "targetKey": "mega",
+          "isDmax": false
+        }
+      ],
+      "tasks": []
+    },
+    {
+      "id": "ev-super-mega-chandelure-2026",
+      "month": 10,
+      "title": "スーパーメガレイドデイ：メガシャンデラ",
+      "barClass": "raid",
+      "category": "レイドデイ",
+      "barIconDex": 609,
+      "startDay": 31,
+      "endDay": 31,
+      "hasPaid": false,
+      "dateText": "10月31日(土) 14:00〜17:00",
+      "summary": "新機能スーパーメガレイドにメガシャンデラが登場するレイドデイが開催されます。",
+      "freeFeatures": [
+        "メガシャンデラのスーパーメガレイドバトル開催"
       ],
       "paidFeatures": [],
       "wilds": [],
