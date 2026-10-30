@@ -1,6 +1,2568 @@
 {
-  "updated_at": "2026/10/31 01:03 JST",
+  "updated_at": "2026/10/31 02:24 JST",
   "latest_news": [],
-  "field_research_updates": {},
-  "dynamic_events": []
+  "field_research_updates": {
+    "ev-cd-pawniard": [
+      {
+        "task": "コマタナをつかまえる",
+        "rewardDex": 25,
+        "rewardName": "ほしのすな",
+        "shiny": false,
+        "note": "出典: official"
+      },
+      {
+        "task": "コマタナをつかまえる",
+        "rewardDex": 25,
+        "rewardName": "ハイパーボール",
+        "shiny": false,
+        "note": "出典: official"
+      },
+      {
+        "task": "コマタナをつかまえる",
+        "rewardDex": 624,
+        "rewardName": "コマタナ",
+        "shiny": true,
+        "note": "出典: official"
+      }
+    ],
+    "ev-halloween-p2": [
+      {
+        "task": "（詳細不明）",
+        "rewardDex": 971,
+        "rewardName": "ボチ",
+        "shiny": true,
+        "note": "出典: pokemapi"
+      }
+    ],
+    "ev-auto-tv-anime-collaboration-2026": [
+      {
+        "task": "ポケモンを10匹捕まえる",
+        "rewardDex": 25,
+        "rewardName": "モンスターボール",
+        "shiny": false,
+        "note": "出典: pokemapi"
+      },
+      {
+        "task": "ポケモンを20匹捕まえる",
+        "rewardDex": 25,
+        "rewardName": "モンスターボール",
+        "shiny": false,
+        "note": "出典: pokemapi"
+      },
+      {
+        "task": "ポケモンを捕まえるときにきのみ5個を使う",
+        "rewardDex": 25,
+        "rewardName": "XP",
+        "shiny": false,
+        "note": "出典: pokemapi"
+      },
+      {
+        "task": "ナイススローを10回投げる",
+        "rewardDex": 25,
+        "rewardName": "ズリのみ",
+        "shiny": false,
+        "note": "出典: pokemapi"
+      }
+    ],
+    "ev-auto-pikachu-autumn-picnic-2026": [
+      {
+        "task": "「オレンジ色のハンボクを身にまとったピカチュウ」がいるポケストップを回す",
+        "rewardDex": 25,
+        "rewardName": "ピカチュウ(オレンジ色のハンボク)",
+        "shiny": true,
+        "note": "出典: pokemapi"
+      },
+      {
+        "task": "イベントエリア内のポケストップから受け取る",
+        "rewardDex": 25,
+        "rewardName": "ピカチュウ(オレンジ色のハンボク)",
+        "shiny": true,
+        "note": "出典: pokemapi"
+      },
+      {
+        "task": "イベントエリア内のポケストップから受け取る",
+        "rewardDex": 25,
+        "rewardName": "ポケモンとの出会い",
+        "shiny": false,
+        "note": "出典: pokemapi"
+      },
+      {
+        "task": "イベントエリア内のポケストップから受け取る",
+        "rewardDex": 25,
+        "rewardName": "ほしのすな",
+        "shiny": false,
+        "note": "出典: pokemapi"
+      }
+    ],
+    "ev-auto-autumn-buddy-trek-2026": [
+      {
+        "task": "イベント限定タスク",
+        "rewardDex": 84,
+        "rewardName": "ドードー",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "イベント限定タスク",
+        "rewardDex": 309,
+        "rewardName": "ラクライ",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "イベント限定タスク",
+        "rewardDex": 25,
+        "rewardName": "アノクサ",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "イベント限定タスク",
+        "rewardDex": 25,
+        "rewardName": "ライボルトのメガエナジー",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "イベント限定タスク",
+        "rewardDex": 25,
+        "rewardName": "ふしぎなアメ",
+        "shiny": false,
+        "note": "出典: gamewith"
+      }
+    ]
+  },
+  "dynamic_events": [
+    {
+      "id": "ev-auto-spotlight-gastly",
+      "title": "ev-auto-spotlight-gastly",
+      "wilds": [
+        {
+          "dex": 92,
+          "name": "ゴース",
+          "shiny": false,
+          "note": "出現率UP"
+        }
+      ]
+    },
+    {
+      "id": "ev-cd-pawniard",
+      "title": "コマタナのコミュニティ・デイ",
+      "wilds": [
+        {
+          "dex": 624,
+          "name": "コマタナ",
+          "shiny": true,
+          "note": "スペシャル背景をともなう個体が出現する場合あり"
+        }
+      ]
+    },
+    {
+      "id": "ev-wildweek-2026",
+      "title": "ワイルドウィーク2026",
+      "wilds": [
+        {
+          "dex": 81,
+          "name": "コイル",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 714,
+          "name": "オンバット",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 777,
+          "name": "トゲデマル",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 621,
+          "name": "クリムガン",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 968,
+          "name": "ミミズズ",
+          "shiny": true,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "ev-halloween-p2",
+      "title": "ハロウィン2026 パート2",
+      "wilds": [
+        {
+          "dex": 971,
+          "name": "ボチ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 302,
+          "name": "メガヤミラミ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 607,
+          "name": "ヒトモシ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 722,
+          "name": "モクロー(ハロウィン衣装)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 94,
+          "name": "ゲンガー(飾りをつけた)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 25,
+          "name": "ピカチュウ(魔女の帽子)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 37,
+          "name": "ロコン(襟飾りをつけた)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 393,
+          "name": "ポッチャマ(ハロウィンいたずら飾りをつけた)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 426,
+          "name": "フワライド(ハロウィンいたずら飾りをつけた)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 656,
+          "name": "ケロマツ(魔女の帽子)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 710,
+          "name": "バケッチャ(飾りをつけた)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 25,
+          "name": "ピカチュウ(ハットとケープをつけた)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 854,
+          "name": "ヤバチャ(リボンをつけた)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 94,
+          "name": "ゲンガー(飾りつき)",
+          "shiny": true,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "ev-auto-pokemon-go-10th-anniversary-lab",
+      "title": "ev-auto-pokemon-go-10th-anniversary-lab",
+      "wilds": [
+        {
+          "dex": 1,
+          "name": "フシギダネ",
+          "shiny": true,
+          "note": "相棒のGOスナップショット写真を撮ると出現"
+        },
+        {
+          "dex": 4,
+          "name": "ヒトカゲ",
+          "shiny": true,
+          "note": "相棒のGOスナップショット写真を撮ると出現"
+        },
+        {
+          "dex": 7,
+          "name": "ゼニガメ",
+          "shiny": true,
+          "note": "相棒のGOスナップショット写真を撮ると出現"
+        }
+      ]
+    },
+    {
+      "id": "ev-auto-pokemon-night-out",
+      "title": "ev-auto-pokemon-night-out",
+      "wilds": [
+        {
+          "dex": 92,
+          "name": "ゴース",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 100,
+          "name": "ビリリダマ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 105,
+          "name": "ガラガラ (アローラ)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 163,
+          "name": "ホーホー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 198,
+          "name": "ヤミカラス",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 228,
+          "name": "デルビル",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 309,
+          "name": "ラクライ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 318,
+          "name": "キバニア",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 403,
+          "name": "コリンク",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 570,
+          "name": "ゾロア",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 595,
+          "name": "バチュル",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 656,
+          "name": "ケロマツ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 702,
+          "name": "デデンネ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 821,
+          "name": "ココガラ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 201,
+          "name": "アンノーン(P)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 201,
+          "name": "アンノーン(N)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 201,
+          "name": "アンノーン(O)",
+          "shiny": true,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "ev-auto-festival-of-lights-india-2026",
+      "title": "ev-auto-festival-of-lights-india-2026",
+      "wilds": [
+        {
+          "dex": 4,
+          "name": "ヒトカゲ",
+          "shiny": true,
+          "note": "18時～19時35分の各5分間出現率アップ"
+        },
+        {
+          "dex": 25,
+          "name": "ピカチュウ(サリー)",
+          "shiny": true,
+          "note": "スペシャル背景(確率)、18時～19時35分の各5分間出現率アップ"
+        },
+        {
+          "dex": 25,
+          "name": "ピカチュウ(クルタ)",
+          "shiny": true,
+          "note": "スペシャル背景(確率)、18時～19時35分の各5分間出現率アップ"
+        },
+        {
+          "dex": 170,
+          "name": "チョンチー",
+          "shiny": true,
+          "note": "18時～19時35分の各5分間出現率アップ"
+        },
+        {
+          "dex": 179,
+          "name": "メリープ",
+          "shiny": true,
+          "note": "18時～19時35分の各5分間出現率アップ"
+        },
+        {
+          "dex": 323,
+          "name": "バクーダ",
+          "shiny": true,
+          "note": "18時～19時35分の各5分間出現率アップ"
+        },
+        {
+          "dex": 607,
+          "name": "ヒトモシ",
+          "shiny": true,
+          "note": "18時～19時35分の各5分間出現率アップ"
+        },
+        {
+          "dex": 608,
+          "name": "ランプラー",
+          "shiny": true,
+          "note": "18時～19時35分の各5分間出現率アップ"
+        },
+        {
+          "dex": 755,
+          "name": "ネマシュ",
+          "shiny": true,
+          "note": "18時～19時35分の各5分間出現率アップ"
+        },
+        {
+          "dex": 938,
+          "name": "ズピカ",
+          "shiny": true,
+          "note": "18時～19時35分の各5分間出現率アップ"
+        }
+      ]
+    },
+    {
+      "id": "ev-auto-fall-marathon-buddy-trek-2026",
+      "title": "ev-auto-fall-marathon-buddy-trek-2026",
+      "wilds": [
+        {
+          "dex": 77,
+          "name": "ポニータ",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 84,
+          "name": "ドードー",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 309,
+          "name": "ラクライ",
+          "shiny": true,
+          "note": "色違い確率up"
+        },
+        {
+          "dex": 522,
+          "name": "シママ",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 227,
+          "name": "エアームド",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 77,
+          "name": "ポニータ(ガラル)",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 187,
+          "name": "ハネッコ",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 557,
+          "name": "イシズマイ",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 25,
+          "name": "アノクサ",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 58,
+          "name": "ガーディ(ヒスイ)",
+          "shiny": true,
+          "note": "色違い確率up"
+        },
+        {
+          "dex": 290,
+          "name": "ツチニン",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 694,
+          "name": "エリキテル",
+          "shiny": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "ev-auto-world-space-week-2026",
+      "title": "ev-auto-world-space-week-2026",
+      "wilds": [
+        {
+          "dex": 25,
+          "name": "ピカチュウ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 35,
+          "name": "ピッピ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 81,
+          "name": "コイル",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 121,
+          "name": "スターミー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 337,
+          "name": "ルナトーン",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 338,
+          "name": "ソルロック",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 606,
+          "name": "リグレー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 824,
+          "name": "サッチムシ",
+          "shiny": true,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "ev-auto-pokemon-go-esa-collaboration",
+      "title": "ev-auto-pokemon-go-esa-collaboration",
+      "wilds": [
+        {
+          "dex": 25,
+          "name": "ピカチュウ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 35,
+          "name": "ピッピ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 81,
+          "name": "コイル",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 121,
+          "name": "スターミー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 337,
+          "name": "ルナトーン",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 338,
+          "name": "ソルロック",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 606,
+          "name": "リグレー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 824,
+          "name": "サッチムシ",
+          "shiny": true,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "ev-auto-zorua-community-day-2026-10",
+      "title": "ev-auto-zorua-community-day-2026-10",
+      "wilds": [
+        {
+          "dex": 570,
+          "name": "ゾロア",
+          "shiny": true,
+          "note": "相棒ポケモンに化けて出現"
+        }
+      ]
+    },
+    {
+      "id": "ev-auto-wild-area-2026-sendai",
+      "title": "ev-auto-wild-area-2026-sendai",
+      "wilds": [
+        {
+          "dex": 27,
+          "name": "サンド (アローラ)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 50,
+          "name": "ディグダ (アローラ)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 81,
+          "name": "コイル",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 90,
+          "name": "シェルダー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 95,
+          "name": "イワーク",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 137,
+          "name": "ポリゴン",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 213,
+          "name": "ツボツボ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 227,
+          "name": "エアームド",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 299,
+          "name": "ノズパス",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 304,
+          "name": "ココドラ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 374,
+          "name": "ダンバル",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 393,
+          "name": "ポッチャマ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 410,
+          "name": "タテトプス",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 436,
+          "name": "ドーミラー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 448,
+          "name": "ルカリオ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 529,
+          "name": "モグリュー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 597,
+          "name": "テッシード",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 599,
+          "name": "ギアル",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 618,
+          "name": "マッギョ (ガラル)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 631,
+          "name": "アイアント",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 25,
+          "name": "ヌメイル (ヒスイ)",
+          "shiny": true,
+          "note": "new!"
+        },
+        {
+          "dex": 821,
+          "name": "ココガラ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 959,
+          "name": "カヌチャン",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 968,
+          "name": "ミミズズ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 4,
+          "name": "ヒトカゲ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 129,
+          "name": "コイキング",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 147,
+          "name": "ミニリュウ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 207,
+          "name": "グライガー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 328,
+          "name": "ナックラー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 333,
+          "name": "チルット",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 339,
+          "name": "ドジョッチ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 371,
+          "name": "タツベイ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 443,
+          "name": "フカマル",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 602,
+          "name": "シビシラス",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 610,
+          "name": "キバゴ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 631,
+          "name": "クイタラン",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 633,
+          "name": "モノズ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 690,
+          "name": "クズモー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 696,
+          "name": "チゴラス",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 698,
+          "name": "アマルス",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 704,
+          "name": "ヌメラ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 714,
+          "name": "オンバット",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 776,
+          "name": "バクガメス",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 782,
+          "name": "ジャラコ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 840,
+          "name": "カジッチュ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 850,
+          "name": "ヤクデ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 996,
+          "name": "セビエ",
+          "shiny": true,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "ev-wildarea-2026",
+      "title": "GOワイルドエリア2026：グローバル",
+      "wilds": [
+        {
+          "dex": 27,
+          "name": "サンド (アローラ)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 50,
+          "name": "ディグダ (アローラ)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 81,
+          "name": "コイル",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 90,
+          "name": "シェルダー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 95,
+          "name": "イワーク",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 137,
+          "name": "ポリゴン",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 213,
+          "name": "ツボツボ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 227,
+          "name": "エアームド",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 299,
+          "name": "ノズパス",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 304,
+          "name": "ココドラ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 374,
+          "name": "ダンバル",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 393,
+          "name": "ポッチャマ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 410,
+          "name": "タテトプス",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 436,
+          "name": "ドーミラー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 448,
+          "name": "ルカリオ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 529,
+          "name": "モグリュー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 597,
+          "name": "テッシード",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 599,
+          "name": "ギアル",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 618,
+          "name": "マッギョ (ガラル)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 631,
+          "name": "アイアント",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 821,
+          "name": "ココガラ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 959,
+          "name": "カヌチャン",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 4,
+          "name": "ヒトカゲ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 129,
+          "name": "コイキング",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 147,
+          "name": "ミニリュウ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 207,
+          "name": "グライガー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 328,
+          "name": "ナックラー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 333,
+          "name": "チルット",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 339,
+          "name": "ドジョッチ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 371,
+          "name": "タツベイ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 443,
+          "name": "フカマル",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 602,
+          "name": "シビシラス",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 610,
+          "name": "キバゴ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 631,
+          "name": "クイタラン",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 633,
+          "name": "モノズ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 690,
+          "name": "クズモー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 696,
+          "name": "チゴラス",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 698,
+          "name": "アマルス",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 704,
+          "name": "ヌメラ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 714,
+          "name": "オンバット",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 776,
+          "name": "バクガメス",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 782,
+          "name": "ジャラコ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 850,
+          "name": "ヤクデ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 996,
+          "name": "セビエ",
+          "shiny": true,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "ev-auto-harvest-festival-takeover",
+      "title": "ev-auto-harvest-festival-takeover",
+      "wilds": [
+        {
+          "dex": 109,
+          "name": "ドガース",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 218,
+          "name": "マグマッグ",
+          "shiny": true,
+          "note": "色違い確率up"
+        },
+        {
+          "dex": 322,
+          "name": "ドンメル",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 126,
+          "name": "ブーバー",
+          "shiny": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "ev-auto-harvest-festival-applin-gathering",
+      "title": "ev-auto-harvest-festival-applin-gathering",
+      "wilds": [
+        {
+          "dex": 25,
+          "name": "花飾りをつけたモンメン",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 840,
+          "name": "カジッチュ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 819,
+          "name": "ホシガリス",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 915,
+          "name": "グルトン",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 929,
+          "name": "ミニーブ",
+          "shiny": true,
+          "note": "色違い確率up"
+        }
+      ]
+    },
+    {
+      "id": "ev-auto-tv-anime-collaboration-2026",
+      "title": "ev-auto-tv-anime-collaboration-2026",
+      "wilds": [
+        {
+          "dex": 906,
+          "name": "ニャオハ",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 909,
+          "name": "ホゲータ",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 912,
+          "name": "クワッス",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 925,
+          "name": "パピモッチ",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 940,
+          "name": "カイデン",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 113,
+          "name": "ラッキー",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 111,
+          "name": "サイホーン",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 133,
+          "name": "イーブイ",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 856,
+          "name": "ミブリム",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 938,
+          "name": "コジオ",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 959,
+          "name": "カヌチャン",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 744,
+          "name": "イワンコ",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 25,
+          "name": "キャプテン帽子をかぶったピカチュウ",
+          "shiny": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "ev-auto-team-mega-2026",
+      "title": "ev-auto-team-mega-2026",
+      "wilds": [
+        {
+          "dex": 13,
+          "name": "ビードル",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 16,
+          "name": "ポッポ",
+          "shiny": true,
+          "note": "9/8(火)10時～9/11(金)10時まで色違い確率up"
+        },
+        {
+          "dex": 25,
+          "name": "ココガラ",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 228,
+          "name": "デルビル",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 318,
+          "name": "キバニア",
+          "shiny": true,
+          "note": "9/11(金)10時～9/14(月)10時まで色違い確率up"
+        },
+        {
+          "dex": 25,
+          "name": "カラミンゴ",
+          "shiny": true,
+          "note": "色違い初登場"
+        },
+        {
+          "dex": 661,
+          "name": "ヤヤコマ",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 587,
+          "name": "エモンガ",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 14,
+          "name": "コクーン",
+          "shiny": false,
+          "note": "9/10(木)レア出現率UP"
+        },
+        {
+          "dex": 15,
+          "name": "スピアー",
+          "shiny": false,
+          "note": "9/10(木)レア出現率UP"
+        },
+        {
+          "dex": 229,
+          "name": "ヘルガー",
+          "shiny": false,
+          "note": "9/13(日)レア出現率UP"
+        }
+      ]
+    },
+    {
+      "id": "ev-auto-gible-community-day-classic-2026-09",
+      "title": "ev-auto-gible-community-day-classic-2026-09",
+      "wilds": [
+        {
+          "dex": 443,
+          "name": "フカマル",
+          "shiny": true,
+          "note": "スペシャル背景付きの個体も出現"
+        }
+      ]
+    },
+    {
+      "id": "ev-auto-phantump-mastery-series",
+      "title": "ev-auto-phantump-mastery-series",
+      "wilds": [
+        {
+          "dex": 420,
+          "name": "チェリンボ",
+          "shiny": true,
+          "note": "色違い確率アップ"
+        },
+        {
+          "dex": 425,
+          "name": "フワンテ",
+          "shiny": true,
+          "note": "色違い確率アップ"
+        }
+      ]
+    },
+    {
+      "id": "ev-auto-autumn-buddy-trek-2026",
+      "title": "ev-auto-autumn-buddy-trek-2026",
+      "wilds": [
+        {
+          "dex": 77,
+          "name": "ポニータ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 84,
+          "name": "ドードー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 234,
+          "name": "オドシシ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 309,
+          "name": "ラクライ",
+          "shiny": true,
+          "note": "色違い確率アップ"
+        },
+        {
+          "dex": 331,
+          "name": "サボネア",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 522,
+          "name": "シママ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 227,
+          "name": "エアームド",
+          "shiny": true,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "ev-auto-2026-fc-seoul-event",
+      "title": "ev-auto-2026-fc-seoul-event",
+      "wilds": [
+        {
+          "dex": 58,
+          "name": "ガーディ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 136,
+          "name": "ブースター",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 255,
+          "name": "アチャモ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 228,
+          "name": "デルビル",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 667,
+          "name": "シシコ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 725,
+          "name": "ニャビー",
+          "shiny": true,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "ev-auto-spotlight-gastly",
+      "month": 10,
+      "title": "ゴースのスポットライトアワー",
+      "barClass": "bar-collab",
+      "category": "collab",
+      "startDay": 29,
+      "endDay": 29,
+      "hasPaid": false,
+      "dateText": "2026/10/29(木)18時～19時",
+      "summary": "ゴースの出現率がアップし、ポケモンを進化させたときにもらえるXPが2倍になります。",
+      "freeFeatures": [
+        "ゴースの出現率UP",
+        "ポケモンを進化させたときにもらえるXPが2倍"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-gbl-twilight-journey",
+      "month": 10,
+      "title": "GOバトルリーグ：黄昏の旅路",
+      "barClass": "bar-collab",
+      "category": "collab",
+      "startDay": 28,
+      "endDay": 28,
+      "hasPaid": false,
+      "dateText": "2026/10/28(水)～2026/12/2(水)",
+      "summary": "GOバトルリーグの新シーズン。ランク報酬の変更、伝説ポケモンのラインナップ更新、技の調整などが実施される。",
+      "freeFeatures": [
+        "バトルをテーマにしたタイムチャレンジ",
+        "ランク報酬のポケモン",
+        "勝利時のほしのすな4倍"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-tuesday-showcase-day",
+      "month": 10,
+      "title": "火曜日：おひろめデイ",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 27,
+      "endDay": 27,
+      "hasPaid": false,
+      "dateText": "2026/10/27(火)",
+      "summary": "ポケストップおひろめが開催され、最大5ヶ所まで参加可能。対象は「グレートな相棒」「くさタイプ」「ドラゴンタイプ」「フェアリータイプ」のポケモンによる大きさ競争。",
+      "freeFeatures": [
+        "ポケストップおひろめ"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-puebla-regional-2027",
+      "month": 10,
+      "title": "2027年プエブラ地域選手権 Twitch Drops",
+      "barClass": "bar-collab",
+      "category": "collab",
+      "startDay": 25,
+      "endDay": 26,
+      "hasPaid": false,
+      "dateText": "2026年10月25日〜2026年10月26日",
+      "summary": "2027年プエブラ地域選手権のTwitch放送を45分間視聴することで、アイテム報酬を獲得できるキャンペーン。",
+      "freeFeatures": [
+        "Twitch放送を45分間視聴で報酬獲得"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-2026-nov-schedule",
+      "month": 11,
+      "title": "ポケモンGOの2026年11月のスケジュール",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 1,
+      "endDay": 30,
+      "hasPaid": false,
+      "dateText": "2026年11月",
+      "summary": "2026年11月のレイド、マックスバトル、スポットライトアワー等のスケジュール",
+      "freeFeatures": [],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-pokemon-go-10th-anniversary-lab",
+      "month": 10,
+      "title": "Pokémon GO 10周年記念 ウィロー博士の助手ピカチュウ登場",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 7,
+      "endDay": 28,
+      "hasPaid": false,
+      "dateText": "2026年10月7日～12月31日",
+      "summary": "「Pokémon GO Lab.」を訪れて起動することでタイムチャレンジを受け取れるほか、現地限定レイドバトルやGOスナップショットサプライズが実施される。",
+      "freeFeatures": [
+        "無料タイムチャレンジ",
+        "現地限定レイドバトル",
+        "GOスナップショットサプライズ"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-pokemon-night-out",
+      "month": 10,
+      "title": "Pokémon Night Out",
+      "barClass": "bar-collab",
+      "category": "collab",
+      "startDay": 28,
+      "endDay": 28,
+      "hasPaid": false,
+      "dateText": "2026/11/2(月)16:58まで",
+      "summary": "Twitchライブ配信視聴による限定タイムチャレンジ配布およびイベントボーナス",
+      "freeFeatures": [
+        "限定タイムチャレンジ",
+        "ルアーモジュール効果1時間持続(おうごんルアー除く)"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-max-battle-day-uxie-mesprit-azelf",
+      "month": 10,
+      "title": "「ダイマックスユクシー・エムリット・アグノム」マックスバトルデイ",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 24,
+      "endDay": 24,
+      "hasPaid": true,
+      "dateText": "2026/10/24(土)14時～17時",
+      "summary": "ダイマックスユクシー・エムリット・アグノムがマックスバトルに初登場するイベント。地域限定で出現する。",
+      "freeFeatures": [
+        "ダイマックスユクシー・エムリット・アグノムがマックスバトルに初登場",
+        "リモートレイド上限が20回に増加(10/24朝9時～10/25昼12時)",
+        "1日で集められるマックス粒子上限が1,600に増加",
+        "すべてのパワースポットでダイマックスポケモンが登場",
+        "パワースポットの更新間隔短縮",
+        "追加のパワースポット出現",
+        "パワースポットで得られるマックス粒子量が8倍",
+        "特別な交換が1日3回まで可能",
+        "探索で得られるマックス粒子が2倍",
+        "マックス粒子を受け取れる探索距離が1/4"
+      ],
+      "paidFeatures": [
+        "有料タイムチャレンジ",
+        "マックスバトルで得られるXPが2倍"
+      ],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-festival-of-lights-india-2026",
+      "month": 11,
+      "title": "光のフェスティバル（インド限定）",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 6,
+      "endDay": 8,
+      "hasPaid": false,
+      "dateText": "2026/11/6(金)13時30分～2026/11/8(日)23時30分",
+      "summary": "インド限定の光のフェスティバル。ルアーモジュール持続時間3倍、発光するポケモンが出現。特定の時間帯に野生出現率アップあり。",
+      "freeFeatures": [
+        "ルアーモジュール持続時間3倍",
+        "イベント限定ステッカー",
+        "タイムチャレンジ"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-sandile-hatch-day",
+      "month": 10,
+      "title": "メグロコふかの日",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 17,
+      "endDay": 17,
+      "hasPaid": true,
+      "dateText": "2026/10/17(土)11時～17時",
+      "summary": "メグロコが2kmタマゴからかえりやすくなるイベント。タマゴふか時のアメ2倍、ふか距離1/2などのボーナスが発生。",
+      "freeFeatures": [
+        "メグロコが2kmタマゴからかえりやすくなる",
+        "色違いのメグロコがタマゴからかえりやすくなる",
+        "タマゴふか時のアメ2倍",
+        "ふか距離1/2",
+        "ポケストップから2kmタマゴを獲得しやすくなる",
+        "ジムから2kmタマゴを獲得しやすくなる（13:30以降修正）"
+      ],
+      "paidFeatures": [
+        "タマゴふか距離が1/4",
+        "有料タイムチャレンジ"
+      ],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-pokemon-x-adidas-2026",
+      "month": 9,
+      "title": "ポケモンとadidasの期間限定コレクション",
+      "barClass": "bar-collab",
+      "category": "collab",
+      "startDay": 24,
+      "endDay": 28,
+      "hasPaid": false,
+      "dateText": "2027年1月15日(金)20時まで受け取り可能",
+      "summary": "対象のadidas店舗を訪れて『Pokémon GO』を開くと、無料タイムチャレンジを受け取れる。",
+      "freeFeatures": [
+        "adidas Pokémon Cap",
+        "adidas Pokémon Jacket",
+        "ルカリオ",
+        "ルカリオのメガエナジー"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-fall-marathon-buddy-trek-2026",
+      "month": 10,
+      "title": "秋の遠足：相棒といっしょ",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 13,
+      "endDay": 19,
+      "hasPaid": true,
+      "dateText": "2026/10/13(火)10時～2026/10/19(月)20時",
+      "summary": "相棒といっしょに歩くことをテーマにしたイベント。新ポケモン「アノクサ」「アノホラグサ」が登場し、GOパスやタイムチャレンジが実施される。",
+      "freeFeatures": [
+        "無料タイムチャレンジ",
+        "GOパス：秋の遠足"
+      ],
+      "paidFeatures": [
+        "GOパスデラックス：秋の遠足",
+        "GOパスデラックス：秋の遠足 + 6ランク"
+      ],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-world-space-week-2026",
+      "month": 10,
+      "title": "世界宇宙週間2026",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 4,
+      "endDay": 10,
+      "hasPaid": false,
+      "dateText": "2026/10/4(日)0時～2026/10/10(土)23時59分",
+      "summary": "ポケモンGOとESA（欧州宇宙機関）が提携し、ヨーロッパ各地の対象施設で宇宙と探査を祝うイベント。",
+      "freeFeatures": [
+        "タイムチャレンジ",
+        "レイドバトル",
+        "野生出現率アップ"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-pokemon-go-esa-collaboration",
+      "month": 10,
+      "title": "ポケモンGO×ESA コラボイベント",
+      "barClass": "bar-collab",
+      "category": "collab",
+      "startDay": 4,
+      "endDay": 28,
+      "hasPaid": false,
+      "dateText": "2026/10/4(日)～2027/4/30(金)",
+      "summary": "ポケモンGOとESA（欧州宇宙機関）が提携し、ヨーロッパの対象博物館や施設で開催されるイベント。宇宙飛行士ピカチュウの登場や、対象施設でのポケモン出現率アップなどが実施される。",
+      "freeFeatures": [
+        "宇宙飛行士ピカチュウのレイドバトル",
+        "対象施設でのロケーション背景付きポケモン入手",
+        "対象施設周辺でのポケモン出現率アップ"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-zorua-community-day-2026-10",
+      "month": 10,
+      "title": "ゾロアのコミュニティ・デイ（2026年10月）",
+      "barClass": "bar-cd",
+      "category": "cd",
+      "startDay": 10,
+      "endDay": 10,
+      "hasPaid": true,
+      "dateText": "2026/10/10(土)14時～17時",
+      "summary": "相棒ポケモンに化けたゾロアが大量出現するコミュニティ・デイ。捕獲時XP3倍、アメ2倍、アメXL確率2倍などのボーナスが発生。",
+      "freeFeatures": [
+        "ゾロアが野生で大量出現",
+        "色違いのゾロアと出会える可能性",
+        "スペシャル背景をともなうゾロアと出会える可能性",
+        "ポケモン捕獲時XP3倍",
+        "ポケモン捕獲時アメ2倍",
+        "ポケモン捕獲時アメXL確率2倍",
+        "おこう効果3時間継続",
+        "GOスナップショットサプライズ発生",
+        "ルアーモジュール効果1時間継続",
+        "特別な交換1日最大2回",
+        "交換に必要なほしのすな50%減少"
+      ],
+      "paidFeatures": [
+        "スペシャルリサーチチケット",
+        "コミュニティアンバサダー主催イベントでのタイムチャレンジ"
+      ],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-choose-your-path-twilight-journey",
+      "month": 9,
+      "title": "選べるタイムチャレンジ：黄昏の旅路",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 23,
+      "endDay": 28,
+      "hasPaid": false,
+      "dateText": "2026/9/23(水) 10時～2026/9/28(月) 20時",
+      "summary": "トレーナーごとに「選択肢が4個あるバージョン」または「選択肢が3個あるバージョン」のいずれかが配信されるタイムチャレンジ。探索、捕まえる、バトルのコースから選択し、ボーナスやタスクが決定する。",
+      "freeFeatures": [
+        "選べるタイムチャレンジ"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-wild-area-2026-sendai",
+      "month": 11,
+      "title": "ワイルドエリア2026：仙台・東北",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 6,
+      "endDay": 8,
+      "hasPaid": true,
+      "dateText": "2026/11/6(金)～2026/11/8(日)",
+      "summary": "仙台・東北で開催されるワイルドエリア2026。チケット購入者限定のイベントで、キョダイマックスジュラルドンが初登場するほか、ロケーション背景付きのポケモンや限定タイムチャレンジなどが楽しめる。",
+      "freeFeatures": [],
+      "paidFeatures": [
+        "イベント限定スペシャルリサーチ",
+        "タイムチャレンジ",
+        "GOスタンプラリー",
+        "ロケーション背景付きポケモン",
+        "GOサファリボール",
+        "特別な交換回数増加",
+        "交換ほしのすな半減",
+        "ふか距離短縮",
+        "レイドパス配布枚数増加",
+        "マックス粒子上限増加",
+        "おこう・ルアー効果延長"
+      ],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-gigantamax-cinderace-raid-day",
+      "month": 10,
+      "title": "キョダイマックスエースバーンのマックスバトルデイ",
+      "barClass": "bar-dmax",
+      "category": "dmax",
+      "startDay": 3,
+      "endDay": 3,
+      "hasPaid": true,
+      "dateText": "2026/10/3(土)14時～17時",
+      "summary": "キョダイマックスエースバーンがマックスバトルに登場。色違いが初実装される。",
+      "freeFeatures": [
+        "キョダイマックスエースバーンがマックスバトルに登場",
+        "色違いのキョダイマックスエースバーンが初登場",
+        "リモートレイド上限が20回に増加(2026/10/3 9時～2026/10/4 12時)",
+        "1日で集められるマックス粒子の上限が1,600に増加",
+        "すべてのパワースポットでキョダイマックスポケモンが登場",
+        "パワースポットの更新間隔短縮",
+        "追加のパワースポットが出現",
+        "パワースポットで得られるマックス粒子量が8倍",
+        "特別な交換が1日3回まで可能",
+        "探索で得られるマックス粒子が2倍",
+        "マックス粒子を受け取れる探索距離が1/4"
+      ],
+      "paidFeatures": [
+        "有料タイムチャレンジ",
+        "マックスバトルで得られるXPが2倍",
+        "ダイキノコ×1",
+        "25,000 XP",
+        "マックス粒子×6,400 MP"
+      ],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-harvest-festival-takeover",
+      "month": 10,
+      "title": "収穫祭：占拠",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 2,
+      "endDay": 5,
+      "hasPaid": true,
+      "dateText": "2026/10/2(金)0時～2026/10/5(月)20時",
+      "summary": "GOロケット団の占拠イベント。12kmタマゴのラインナップ変更、シャドウゼクロムの登場、GOロケット団リーダーの使用ポケモン変更など。",
+      "freeFeatures": [
+        "GOロケット団の出現率UP",
+        "わざマシンスペシャルでシャドウポケモンの「やつあたり」を忘れさせることが可能",
+        "シャドウゼクロム登場",
+        "シャドウヤンチャム、シャドウコソクムシ、シャドウカリキリ、シャドウスナバァ初登場"
+      ],
+      "paidFeatures": [
+        "GOパス：収穫祭（スーパーロケットレーダー獲得可能）"
+      ],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-harvest-festival-applin-gathering",
+      "month": 9,
+      "title": "収穫祭：「カジッチュ」集め",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 29,
+      "endDay": 28,
+      "hasPaid": true,
+      "dateText": "2026/9/29(火)10時～2026/10/5(月)20時",
+      "summary": "カジッチュの色違いが初登場するイベント。ハーブルアーの効果変更や、りんごアイテムの入手、タイムチャレンジなどが実施される。",
+      "freeFeatures": [
+        "カジッチュの色違い初登場",
+        "アップリューの色違い初登場",
+        "タルップルの色違い初登場",
+        "カミッチュの色違い初登場",
+        "カミツオロチの色違い初登場",
+        "ミニーブの色違い確率アップ",
+        "ハーブルアーが「りんご」のみを引き寄せる",
+        "タイムチャレンジ"
+      ],
+      "paidFeatures": [
+        "GOパスデラックス：収穫祭",
+        "GOパスデラックス：収穫祭 + 6ランク",
+        "GOパスによる追加ボーナス（ハーブルアー効果1時間持続、ほしのすな増加など）"
+      ],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-tv-anime-collaboration-2026",
+      "month": 9,
+      "title": "テレビアニメコラボ",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 16,
+      "endDay": 22,
+      "hasPaid": true,
+      "dateText": "2026/9/16(水)10時～2026/9/22(火)20時",
+      "summary": "アニメポケットモンスター「ワンダーボヤージュ」とのコラボイベント。フリードのゴーグルをつけたヒトカゲ系統が登場し、GOパスやタイムチャレンジ、ポケストップおひろめなどが実施される。",
+      "freeFeatures": [
+        "無料タイムチャレンジ",
+        "GOスナップショットサプライズ",
+        "ポケストップおひろめ"
+      ],
+      "paidFeatures": [
+        "GOパス：コラボセレブレーションイベント",
+        "GOパスデラックス"
+      ],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-staraptor-super-mega-raid-day",
+      "month": 9,
+      "title": "ムクホークのスーパーメガレイド・デイ",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 19,
+      "endDay": 19,
+      "hasPaid": true,
+      "dateText": "2026/9/19(土)14時～17時",
+      "summary": "ムクホークのスーパーメガレイド・デイ。色違いのメガムクホークが初登場。",
+      "freeFeatures": [
+        "リモートレイド上限20回",
+        "ジムから最大6枚の無料レイドパス",
+        "スーパーメガレイドで捕まえたムクホークはメガレベル1解放状態",
+        "色違いのムクホークに出会いやすくなる"
+      ],
+      "paidFeatures": [
+        "ジムから追加で8枚の無料レイドパス(合計14枚)",
+        "レイドバトルでふしぎなアメXL獲得確率上昇",
+        "スーパーメガレイドで5,000 XP追加獲得",
+        "スーパーメガレイドでほしのすな5,000個追加獲得",
+        "プレミアムバトルパス1枚付属"
+      ],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-team-mega-2026",
+      "month": 9,
+      "title": "チームメガ",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 8,
+      "endDay": 14,
+      "hasPaid": true,
+      "dateText": "2026/9/8(火)10時～2026/9/14(月)20時",
+      "summary": "「チームメガ」イベント。カラミンゴの色違いが初登場し、オラチフとマフィティフが新登場する。",
+      "freeFeatures": [
+        "カラミンゴの色違い初登場",
+        "オラチフ・マフィティフ新登場",
+        "メガスピアー・メガヘルガーのメガエナジー入手",
+        "9/10(木)博士転送時のアメ2倍(ビードル・コクーン・スピアー)",
+        "9/13(日)博士転送時のアメ2倍(デルビル・ヘルガー)"
+      ],
+      "paidFeatures": [
+        "GOパスデラックス：チームメガ（700円）",
+        "GOパスデラックス：チームメガ + 6ランク（980円）",
+        "タマゴふか時のほしのすな2倍",
+        "ふか距離1/2"
+      ],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-gible-community-day-classic-2026-09",
+      "month": 9,
+      "title": "フカマルのコミュニティ・デイ（復刻）（2026年9月）",
+      "barClass": "bar-cd",
+      "category": "cd",
+      "startDay": 12,
+      "endDay": 12,
+      "hasPaid": true,
+      "dateText": "2026/9/12(土)14時～17時",
+      "summary": "フカマルのコミュニティ・デイ（復刻）イベント。野生での出現率アップ、スペシャル背景付きフカマルの登場、限定わざ「だいちのちから」の習得などが特徴。",
+      "freeFeatures": [
+        "フカマルの野生出現率アップ",
+        "色違いフカマルとの遭遇率アップ",
+        "スペシャル背景付きフカマルとの遭遇",
+        "ポケモン捕獲時のXP3倍",
+        "おこう効果3時間継続",
+        "GOスナップショットサプライズ",
+        "ルアーモジュール効果1時間継続（14:00～21:00）",
+        "ガブリアスへの進化で「だいちのちから」習得"
+      ],
+      "paidFeatures": [
+        "有料スペシャルリサーチ"
+      ],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-legend-research-nihonbashi-yaesu",
+      "month": 9,
+      "title": "伝説のポケモンと出会う レジェンドリサーチ in日本橋＆八重洲 連動イベント",
+      "barClass": "bar-collab",
+      "category": "collab",
+      "startDay": 9,
+      "endDay": 28,
+      "hasPaid": false,
+      "dateText": "2026/9/9(水)～2026/11/29(日)",
+      "summary": "日本橋・八重洲周辺で開催される「伝説のポケモンと出会う レジェンドリサーチ in日本橋＆八重洲」と連携したイベント。会場に特別な画像を使用したポケストップとジムが新しく設置される。",
+      "freeFeatures": [
+        "特別な画像を使用したポケストップとジムの設置"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-phantump-mastery-series",
+      "month": 9,
+      "title": "ボクレーのマスタリーシリーズ",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 26,
+      "endDay": 26,
+      "hasPaid": true,
+      "dateText": "2026/9/26(土)10時～20時",
+      "summary": "ボクレーの色違い確率がアップするイベント。ナイススロー以上で捕獲時のXPが2倍、アメが増加するボーナスが発生。",
+      "freeFeatures": [
+        "フィールドリサーチ",
+        "無料タイムチャレンジ",
+        "ボクレーの色違い確率アップ",
+        "野生でチェリンボの色違い確率アップ",
+        "野生でフワンテの色違い確率アップ",
+        "ナイススロー以上で捕獲時のXP2倍",
+        "ナイススロー以上で捕獲時のアメ増加"
+      ],
+      "paidFeatures": [
+        "有料タイムチャレンジ（280円）"
+      ],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-pikachu-korea-2026",
+      "month": 9,
+      "title": "ピカチュウのお出かけin韓国2026",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 24,
+      "endDay": 26,
+      "hasPaid": false,
+      "dateText": "韓国時間 2026/9/24(木)10時～9/26(土)20時まで",
+      "summary": "韓国全域で開催されるイベント。オレンジ色のハンボクを身にまとったピカチュウが初登場し、レイドバトルやタイムチャレンジで色違いと出会いやすくなる。",
+      "freeFeatures": [
+        "博士送信時のポケモンのアメ2倍",
+        "レイドバトルでもらえるほしのすな2倍",
+        "マップ上に花火のエフェクトが登場",
+        "イベント限定の無料タイムチャレンジ"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-pikachu-autumn-picnic-2026",
+      "month": 9,
+      "title": "ピカチュウのオータムピクニック2026",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 18,
+      "endDay": 28,
+      "hasPaid": false,
+      "dateText": "2026/9/18(金)10時～10/11(日)20時まで",
+      "summary": "韓国内の一部地域限定イベント。オレンジ色のハンボクを身にまとったピカチュウが初登場し、色違いも実装される。",
+      "freeFeatures": [
+        "オレンジ色のハンボクを身にまとったピカチュウ（色違い初登場・確率UP）",
+        "ルアーモジュールの効果が2時間持続",
+        "イベントをテーマにした紙吹雪",
+        "イベント限定タイムチャレンジ",
+        "イベント限定フィールドリサーチ",
+        "イベントテーマのステッカー"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-go-pass-september-2026",
+      "month": 9,
+      "title": "GOパス：9月",
+      "barClass": "bar-collab",
+      "category": "collab",
+      "startDay": 8,
+      "endDay": 28,
+      "hasPaid": true,
+      "dateText": "2026/9/8(火)10時～2026/10/6(火)10時",
+      "summary": "GOパス：9月の内容。1日のポイント取得上限は250 PTS。レイドバトルで1回勝つ：100 PTS、タマゴを1個かえす：40 PTS、ポケモンを1匹捕まえる：5 PTS。2026/10/3(土)0時～10/4(日)23:59はポイント上限なし。",
+      "freeFeatures": [
+        "1日のポイント取得上限：250 PTS",
+        "メジャーマイルストーン達成ボーナス（ティア1：交換時アメ追加・アメXL確実入手、ティア2：ギフト開封数・入手数増加）"
+      ],
+      "paidFeatures": [
+        "GOパスデラックスへのアップグレード",
+        "ティア2ボーナス強化（ギフト開封数・入手数・バッグ所持数増加）",
+        "ティア3ボーナス（おさんぽおこう効果時間2倍）",
+        "ティア4ボーナス（タマゴ孵化時のほしのすな・XP増加）",
+        "リワード（ラティオス、ふしぎなアメXL、プレミアムバトルパス、しあわせタマゴ、ジゲンふかそうち、スーパーふかそうち等）"
+      ],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-2026-september-schedule",
+      "month": 9,
+      "title": "ポケモンGOの2026年9月のスケジュール",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 1,
+      "endDay": 30,
+      "hasPaid": false,
+      "dateText": "2026年9月",
+      "summary": "2026年9月のレイド、マックスバトル、スポットライトアワー等のスケジュール",
+      "freeFeatures": [],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-twilight-journey-season",
+      "month": 9,
+      "title": "ポケモンGOの新シーズン「黄昏の旅路」",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 8,
+      "endDay": 28,
+      "hasPaid": false,
+      "dateText": "2026/9/8(火)10時～2026/12/1(火)10時まで",
+      "summary": "新シーズン「黄昏の旅路」のシーズンフィールドリサーチタスク、タマゴ、週間リワード、大発見の内容に関する情報。",
+      "freeFeatures": [],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-pokemon-jet-green-event",
+      "month": 9,
+      "title": "「ポケモンジェット 緑」連動イベント",
+      "barClass": "bar-collab",
+      "category": "collab",
+      "startDay": 18,
+      "endDay": 28,
+      "hasPaid": false,
+      "dateText": "2026/9/18(金) 14時～2027/8/31(火) 20時",
+      "summary": "ポケモン30周年特別企画「ポケモンジェット 緑」の就航を記念したANAとのコラボイベント。日本全国の空港に設置されるジムでのレイドバトルや、期間限定のタイムチャレンジが実施される。",
+      "freeFeatures": [
+        "空港ジムでの特別なレイドバトル",
+        "期間限定タイムチャレンジ"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-go-wild-area-stamp-rally-2026",
+      "month": 11,
+      "title": "Pokémon GO ワイルドエリア：イベント GO スタンプラリー",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 6,
+      "endDay": 8,
+      "hasPaid": true,
+      "dateText": "チケットで指定された日程の現地時間10:00から20:00まで",
+      "summary": "「Pokémon GO ワイルドエリア：仙台・東北」および「メキシコシティ」における「イベント GO スタンプラリー」の開催時間に関するアップデート。各都市7箇所のポケストップを巡るスタンプラリー。",
+      "freeFeatures": [],
+      "paidFeatures": [
+        "イベント GO スタンプラリー"
+      ],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-autumn-buddy-trek-2026",
+      "month": 10,
+      "title": "秋の遠足相棒といっしょ",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 13,
+      "endDay": 19,
+      "hasPaid": true,
+      "dateText": "2026年10月13日(火)10:00~19日(月)20:00",
+      "summary": "初登場のアノクサとその進化系アノホラグサが登場。タイムチャレンジ報酬でマラソンバイザーピカチュウが再登場する。",
+      "freeFeatures": [
+        "無料タイムチャレンジ",
+        "イベントフィールドリサーチタスク"
+      ],
+      "paidFeatures": [
+        "イベントGOパス"
+      ],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-shadow-tornadus-raid",
+      "month": 11,
+      "title": "シャドウトルネロス(化身)レイド",
+      "barClass": "bar-raid",
+      "category": "raid",
+      "startDay": 4,
+      "endDay": 28,
+      "hasPaid": false,
+      "dateText": "11月4日(水)~8日(日)、11月16日(月)~12月1日(火)",
+      "summary": "シャドウレイドにトルネロス(化身フォルム)が登場。11月9日から15日までは出現しない。",
+      "freeFeatures": [],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-raid-hour-giratina-altered-2026-11-04",
+      "month": 11,
+      "title": "レイドアワー：ギラティナ(アナザー)",
+      "barClass": "bar-raid",
+      "category": "raid",
+      "startDay": 4,
+      "endDay": 4,
+      "hasPaid": false,
+      "dateText": "2026/11/4(水)18:00 〜 19:00",
+      "summary": "ギラティナ(アナザー)が登場するレイドアワー",
+      "freeFeatures": [],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-go-pass-autumn-trek",
+      "month": 10,
+      "title": "GOパス：秋の遠足",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 13,
+      "endDay": 19,
+      "hasPaid": true,
+      "dateText": "2026年10月13日(火)10:00〜10月19日(月)20:00",
+      "summary": "GOポイントを集めてランクを上げ、進行度に応じて報酬が貰える期間限定のGOパスイベント。有料版のデラックスも登場。",
+      "freeFeatures": [
+        "イベントにぴったりなポケモンと遭遇",
+        "おこう×1",
+        "ふしぎなアメ×3",
+        "ハイパーボール",
+        "ランク10：おこうが2時間持続(おさんぽおこうを除く)",
+        "ランク20：相棒探索メガエナジー5倍(ラクライ、ライボルト)"
+      ],
+      "paidFeatures": [
+        "イベントにぴったりなポケモンと遭遇",
+        "おこう×5",
+        "ライボルトのメガエナジー×1000",
+        "ふしぎなアメXL×9"
+      ],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-laic-2027-twitch-drops",
+      "month": 11,
+      "title": "LAIC2027配信ボーナスタイムチャレンジ",
+      "barClass": "bar-collab",
+      "category": "collab",
+      "startDay": 20,
+      "endDay": 28,
+      "hasPaid": false,
+      "dateText": "2026年11月20日〜12月5日",
+      "summary": "LAIC2027大会のTwitch配信を視聴することで入手できるタイムチャレンジ。視聴時間に応じて報酬が異なる。",
+      "freeFeatures": [
+        "Twitch配信視聴によるタイムチャレンジ入手",
+        "ダイケンキ(ハイドロカノン習得)などの報酬"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-wakuwaku-pokemon-go-lab",
+      "month": 10,
+      "title": "わくわくPokémon GO Lab.大調査",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 7,
+      "endDay": 28,
+      "hasPaid": false,
+      "dateText": "2026年10月7日(水)~2040年12月31日(月)23:59",
+      "summary": "ポケモンセンターメガトウキョーのPokémon GO Lab.で開催されるイベント。ウィロー博士の助手ピカチュウのレイドやタイムチャレンジが登場する。",
+      "freeFeatures": [
+        "特別なレイドバトル（1日1回）",
+        "限定タイムチャレンジ",
+        "サプライズショットでの出会い"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-2026-fc-seoul-event",
+      "month": 10,
+      "title": "2026FCソウルイベント(韓国)",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 24,
+      "endDay": 24,
+      "hasPaid": false,
+      "dateText": "2026年10月24日(土) 9:00~20:00",
+      "summary": "韓国のソウルワールドカップ競技場一帯で開催されるリアルイベント。ロケーション背景付きのポケモンやタイムチャレンジが登場する。",
+      "freeFeatures": [
+        "対象ポケモンの色違い率UP",
+        "ルアーモジュールが2時間持続",
+        "ナイススロー以上でアメ増加",
+        "野生ポケモン出現変化",
+        "レイドボス変化",
+        "無料タイムチャレンジ",
+        "マップ上で紙吹雪エフェクト",
+        "ポケモンGOブース登場"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-familymart-partner-research-2026",
+      "month": 9,
+      "title": "ファミリーマートパートナーリサーチ(黄昏の旅路シーズン)",
+      "barClass": "bar-collab",
+      "category": "collab",
+      "startDay": 15,
+      "endDay": 28,
+      "hasPaid": false,
+      "dateText": "スタンプ付与期間: 9月15日〜10月5日、交換期間: 9月15日〜11月30日",
+      "summary": "全国のファミリーマートにてファミペイを提示し、対象のファミマル商品を購入してスタンプをためることで、タイムチャレンジのプロモコードと交換できる。",
+      "freeFeatures": [
+        "タイムチャレンジ",
+        "ポケストップ・ジムスピン時のアイテム量2倍",
+        "特別なフィールドリサーチの入手"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    }
+  ]
 }
