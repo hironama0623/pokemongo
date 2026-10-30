@@ -42,7 +42,7 @@ def _fetch_page(source, url, role, log, getter, min_chars, dump=None):
     elif date is None:
         e["status"] = "date_unknown"
     header = extract.page_header(soup)
-    return e, {"site": source, "url": url, "text": (header + "\n\n" + text) if header else text, "updated": e["article_updated"], "date": date, "hash": extract.content_hash(text)}
+    return e, {"site": source, "url": url, "text": (header + "\n\n" + text) if header else text, "updated": e["article_updated"], "date": date, "hash": extract.content_hash(text), "header": header}
 
 
 def run(now, log, diagnose=False, no_news=False, getter=fetch.get, llm=an.gemini_call, sleep=time.sleep, render_getter=None):
@@ -85,9 +85,15 @@ def run(now, log, diagnose=False, no_news=False, getter=fetch.get, llm=an.gemini
             if a["site"] == key:
                 cnt[a["hash"]] = cnt.get(a["hash"], 0) + 1
         for a in [a for a in queue if a["site"] == key and cnt[a["hash"]] >= 3]:
-            a["entry"].update(status="suspect_empty", action="skipped_empty",
-                              reason=f"同一本文が{cnt[a['hash']]}ページで一致（記事固有の本文が取れていない/共通部分のみ）")
-            queue.remove(a)
+            n = cnt[a["hash"]]
+            if len(a.get("header") or "") >= 60:  # 本文(Vue描画)が取れなくても、タイトル+概要にイベント名・期間・要点が入っている
+                a["text"] = a["header"]
+                a["hash"] = extract.content_hash(a["header"])
+                a["entry"].update(chars_fetched=len(a["header"]), reason=f"本文未取得(同一本文{n}ページ一致): タイトル/概要のみで解析")
+            else:
+                a["entry"].update(status="suspect_empty", action="skipped_empty",
+                                  reason=f"同一本文が{n}ページで一致（記事固有の本文が取れていない/共通部分のみ）")
+                queue.remove(a)
 
     ok = sum(1 for e in log.entries if e["role"] != "index" and e["status"] in ("ok", "date_unknown", "suspect_empty"))
     if diagnose:

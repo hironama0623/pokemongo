@@ -30,7 +30,7 @@ SOURCES = {
         "indexes": ["https://pokemongo-get.com/pokego02416/", "https://pokemongo-get.com/"],
         "hubs": ["https://pokemongo-get.com/research_fi/"],
         "link_re": r"^https://pokemongo-get\.com/board/(\d+)/?$",
-        "min_id": 10450, "max_articles": 60, "min_chars": 500,
+        "min_id": 10450, "max_articles": 60, "min_chars": 300,
         "render": True,   # 記事本文が Vue(JS)描画のためヘッドレスブラウザで取得
     },
     "gamewith": {
