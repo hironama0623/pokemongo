@@ -75,6 +75,7 @@ def merge_article(details, events, facts, src, index, now):
                            "dateText": info.get("dateText"), "summary": info.get("summary"), "hasPaid": info.get("hasPaid"),
                            "freeFeatures": info.get("freeFeatures", []), "paidFeatures": info.get("paidFeatures", []),
                            "created_at": now.isoformat(), "sources": [dict(src)]}
+            known[eid] = events[eid]  # 以降の日程比較などで参照するため（KeyError防止）
             changes.append({"event_id": eid, "section": "new_event", "added": [title], "kind": "new_event", "src": src})
     elif eid in known and eid in events:
         _src_add(events[eid], src)

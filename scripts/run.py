@@ -134,7 +134,12 @@ def run(now, log, diagnose=False, no_news=False, getter=fetch.get, llm=an.gemini
                 pokedex.fill_dex(r, names, unresolved)
         trial_d, trial_e = copy.deepcopy(details), copy.deepcopy(events["events"])
         src = {"site": art["site"], "url": art["url"], "fetched_at": now.isoformat(), "article_updated": art["updated"]}
-        ch, warns = merge.merge_article(trial_d, trial_e, facts, src, index, now)
+        try:
+            ch, warns = merge.merge_article(trial_d, trial_e, facts, src, index, now)
+        except Exception as ex:  # noqa: BLE001  1記事の統合失敗で全体を止めない（その記事だけ失敗扱いにしてログへ）
+            e.update(action="validation_failed", error=f"統合処理エラー {type(ex).__name__}: {ex}")
+            problems += 1
+            continue
         err = schemas.validate("details", trial_d) or schemas.validate("events", {"schema_version": 1, "events": trial_e})
         if err:
             e.update(action="validation_failed", error=err)
