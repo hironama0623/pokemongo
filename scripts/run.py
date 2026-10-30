@@ -109,8 +109,13 @@ def run(now, log, diagnose=False, no_news=False, getter=fetch.get, llm=an.gemini
 
     changes, unresolved, analyzed_ok, problems = [], set(), [], 0
     queue.sort(key=lambda a: a["date"] or now, reverse=True)
+    t0, budget_skipped = time.monotonic(), 0
     for art in queue:
         e = art["entry"]
+        if time.monotonic() - t0 > config.ANALYZE_BUDGET_SEC:  # 実行時間の上限前に切り上げて、ここまでの結果を必ず保存する
+            e.update(action="skipped_budget", reason="1回の実行時間の上限のため次回に回しました（未解析のまま・ハッシュ未保存）")
+            budget_skipped += 1
+            continue
         art["text"] = art["text"][:config.MAX_AI_CHARS]
         e["chars_sent"] = len(art["text"])
         known = index + [dict(v) for v in events["events"].values()]
@@ -158,7 +163,9 @@ def run(now, log, diagnose=False, no_news=False, getter=fetch.get, llm=an.gemini
         state["articles"][a["url"]] = {"hash": a["hash"], "analyzed_at": now.isoformat(), "article_updated": a["updated"]}
 
     bad = ("http_error", "fetch_error", "suspect_empty")
-    status = "ok" if problems == 0 and not any(e["status"] in bad for e in log.entries) else "partial"
+    if budget_skipped:
+        log.note(f"時間上限のため {budget_skipped} 件を次回に回しました。次回の実行で続きから解析します。")
+    status = "ok" if problems == 0 and not budget_skipped and not any(e["status"] in bad for e in log.entries) else "partial"
     meta.update({"schema_version": 1, "last_run_at": now.isoformat(), "last_run_status": status, "last_success_at": now.isoformat(),
                  "counts": {**log.summary(), "events_auto": len(events["events"]), "news": len(news["items"])}})
     if changes:
