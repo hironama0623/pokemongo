@@ -359,7 +359,7 @@
   "shadow-landorus": {
    "month": 10,
    "startDay": 7,
-   "endDay": 31,
+   "endDay": 3,
    "name": "シャドウランドロス (けしんフォルム)",
    "status": "10/7(水) 〜 11/3(火・祝) 連日常設中！[現在出現中]",
    "tier": "★5 シャドウ伝説レイド",
@@ -531,12 +531,13 @@
      "fast": "こおりのつぶて",
      "charge": "トリプルアクセル"
     }
-   ]
+   ],
+   "endMonth": 11
   },
   "giratina-origin": {
    "month": 10,
    "startDay": 28,
-   "endDay": 31,
+   "endDay": 3,
    "name": "ギラティナ (オリジン) / (11/4〜アナザー)",
    "status": "10/28(水) 6:00 〜 11/3(火) [レイドアワー: 10/28 18:00〜19:00]",
    "tier": "★5 伝説レイド",
@@ -708,12 +709,13 @@
      "fast": "かみつく",
      "charge": "ぶんまわす"
     }
-   ]
+   ],
+   "endMonth": 11
   },
   "mega-sableye": {
    "month": 10,
    "startDay": 28,
-   "endDay": 31,
+   "endDay": 8,
    "name": "メガヤミラミ (11/1〜メガLv4＆ナイトヘッド＋解放)",
    "status": "10/28(水) 6:00 〜 11/8(日) 21:30頃 [次回メガレイド]",
    "tier": "メガレイド (★4)",
@@ -876,7 +878,8 @@
      "fast": "あまえる",
      "charge": "マジカルシャイン"
     }
-   ]
+   ],
+   "endMonth": 11
   },
   "mega-chandelure": {
    "month": 10,

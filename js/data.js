@@ -95,7 +95,21 @@ function adaptLegacy(ev) {
   });
 }
 
+// ---- 手書き(旧)データのレイド/マックスバトル：開催期間(_s/_e)と表示用の期間文字を付ける ----
+function withPeriod(b) {
+  const Y = 2026;
+  b._s = new Date(Y, b.month - 1, b.startDay, 0, 0, 0);
+  b._e = new Date(Y, (b.endMonth || b.month) - 1, b.endDay, 23, 59, 59);
+  const em = b.endMonth || b.month;
+  b.periodText = (b.startDay === b.endDay && em === b.month) ? `${b.month}/${b.startDay}` : `${b.month}/${b.startDay}〜${em}/${b.endDay}`;
+  return b;
+}
+
 // ---- 自動取得のイベント -> 画面用 ----
+const PLACEHOLDER_RE = /詳細不明|内容不明|不明$|ぴったり|を含むイベント|^イベント限定(?:タスク|リサーチ)?$/;
+const isPlaceholderTask = t => !t || PLACEHOLDER_RE.test(String(t.task || "")) || !String(t.task || "").trim() ||
+  (t.rewards || []).some(r => PLACEHOLDER_RE.test(String(r.name || "")));
+
 function adaptAuto(ev, det) {
   det = det || {};
   const s = parseJst(ev.start, false), e = parseJst(ev.end, true);
@@ -114,7 +128,7 @@ function adaptAuto(ev, det) {
     eggs: (det.eggs || []).map(mapMon),
     surpriseBox: sb && ((sb.pokemon || []).length || (sb.items || []).length)
       ? { pokemon: (sb.pokemon || []).map(mapMon), items: sb.items || [] } : null,
-    fieldResearches: det.field_research || [], tasks: det.time_challenge || [],
+    fieldResearches: (det.field_research || []).filter(t => !isPlaceholderTask(t)), tasks: (det.time_challenge || []).filter(t => !isPlaceholderTask(t)),
     sources: mergeSources(ev.sources, [...(det.wilds || []), ...(det.field_research || [])].flatMap(x => x.sources || [])),
     auto: true, updatedAt: det.updated_at || null,
   };
@@ -155,7 +169,25 @@ function buildEvents(manual, autoEvents, autoDetails) {
     .map(ev => adaptAuto(ev, (autoDetails || {})[ev.id]))
     .filter(Boolean)
     .sort((a, b) => a._s - b._s);
+  // 「レイドアワー：○○」は独立のイベントにせず、同じボスのレイドの無料欄に書き足す（同じボスのレイドが無ければ単独で残す）
+  const bossCore = s => String(s).replace(/[(（].*?[)）]/g, "").replace(/[\s\u3000]/g, "");
+  const rest = [];
   autos.forEach(a => {
+    const m = /^レイドアワー[:：\s]*(.+)$/.exec(String(a.title).replace(/&amp;/g, "&"));
+    if (m) {
+      const boss = bossCore(m[1]);
+      const host = boss.length >= 3 && list.find(h => h.category === "raid" && Math.abs(h._e - a._s) < 10 * 864e5 && (bossCore(h.title).includes(boss) || (h.raids || []).some(r => bossCore(r.name).includes(boss))));
+      if (host) {
+        const p = isoParts(a.start), q = isoParts(a.end);
+        const when = p ? `${p.mo}/${p.d}(${DOW[new Date(Date.UTC(p.y, p.mo - 1, p.d)).getUTCDay()]}) ${p.hh ? +p.hh + ":" + p.mm : ""}${q && q.hh ? "〜" + (+q.hh) + ":" + q.mm : ""}` : "";
+        host.freeFeatures = [...(host.freeFeatures || []), `${when}：${m[1]} レイドアワー`];
+        EVENT_ALIAS[a.id] = host.id;
+        return;
+      }
+    }
+    rest.push(a);
+  });
+  rest.forEach(a => {
     const hit = list.find(b => sameTitle(b.title, a.title) && overlaps(b, a));
     if (hit) mergeInto(hit, a); else list.push(a);
   });
@@ -187,6 +219,8 @@ async function loadAll() {
   if (!gopass) { const i = DATA_ERRORS.indexOf("data/gopass.json"); if (i >= 0) DATA_ERRORS.splice(i, 1); }
   RAID_DATA = mRaid.raids || {};
   DMAX_9DB_DATA = mDmax.dmax || {};
+  Object.values(RAID_DATA).forEach(withPeriod);
+  Object.values(DMAX_9DB_DATA).forEach(withPeriod);
   SEASON_EGGS = mSeason.eggs || [];
   SEASON_BIOMES = mSeason.biomes || [];
   MON.learnNames(poke.names);

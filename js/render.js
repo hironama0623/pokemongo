@@ -197,6 +197,18 @@ function renderGanttTimeline() {
     });
 }
 
+// 左（本日開催中）の高さに合わせて、右のニュース欄を縦に広げる（2列表示のときだけ）
+function syncNewsHeight() {
+  const left = document.getElementById("todayCard"), card = document.getElementById("newsCard"), box = document.getElementById("newsItemsContainer");
+  if (!left || !card || !box) return;
+  if (window.innerWidth < 768) { box.style.maxHeight = ""; return; }
+  card.style.alignSelf = "start"; box.style.maxHeight = "0px";
+  const chrome = card.offsetHeight;
+  card.style.alignSelf = "";
+  box.style.maxHeight = Math.max(224, left.offsetHeight - chrome) + "px";
+}
+window.addEventListener("resize", () => syncNewsHeight());
+
 function renderSeason24Tab() {
   const eggs = document.getElementById("seasonEggGrid"), biome = document.getElementById("seasonBiomeGrid");
   eggs.innerHTML = SEASON_EGGS.map(g => `<div class="bg-slate-50 border border-slate-200 rounded-lg p-2"><div class="font-bold text-slate-700 mb-1">${esc(g.title)}</div><div class="flex flex-wrap gap-x-2 gap-y-1">${g.list.map(m => mon(m.n, { dex: m.d, size: 28 })).join("")}</div></div>`).join("");
@@ -257,4 +269,6 @@ window.onload = async function () {
   changeGanttRange(currentGanttRange);
   renderEventAccordions();
   renderGoPassTab();
+  syncNewsHeight();
+  setTimeout(syncNewsHeight, 600);   // 画像の読み込み後に高さが変わるため再調整
 };

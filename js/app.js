@@ -351,26 +351,29 @@
     renderRaidRanking();
   }
 
+  // レイド/マックスバトルの選択カード：開催中・今後を「終了が早い順」に1列で並べる。期間は小さく添える（カードの高さは変えない）
+  function bossPickerCard(b, key, active, ring, onPick, imgCls) {
+    const card = document.createElement("button");
+    card.className = `p-2 rounded-xl border text-left transition flex items-center gap-2 ${active ? ring : "bg-white border-slate-200 hover:bg-slate-50"}`;
+    card.onclick = onPick;
+    const live = isEventActive(b);
+    card.innerHTML = `<img src="${getPokeImg(b.dex, b.name)}" class="${imgCls} object-contain flex-shrink-0"><div class="overflow-hidden flex-1">
+      <div class="text-[10px] leading-[12px] ${live ? "text-emerald-700" : "text-purple-700"} font-bold truncate">${live ? "● " : ""}${b.tier}</div>
+      <div class="text-xs leading-[16px] font-extrabold text-slate-900 truncate">${b.name}${b.shiny ? " ✨" : ""}</div>
+      <div class="text-[10px] leading-[12px] text-slate-500 truncate">${b.periodText || ""}</div></div>`;
+    return card;
+  }
+  function sortedBosses(data) {
+    return Object.keys(data).filter(k => !isEventPast(data[k])).sort((x, y) => data[x]._e - data[y]._e || data[x]._s - data[y]._s);
+  }
+
   function renderRaidPicker() {
-    const pickerCurrent = document.getElementById("raidBossPickerCurrent");
-    const pickerFuture = document.getElementById("raidBossPickerFuture");
-    pickerCurrent.innerHTML = "";
-    pickerFuture.innerHTML = "";
-    Object.keys(RAID_DATA).forEach(key => {
-      const b = RAID_DATA[key];
-      if (isEventPast(b)) return;
-      const active = (key === activeRaidKey),
-        isCurr = isEventActive(b);
-      const card = document.createElement("button");
-      card.className = `p-2 rounded-xl border text-left transition flex items-center gap-2 ${active ? "bg-sky-50 border-sky-500 shadow-sm ring-1 ring-sky-500" : "bg-white border-slate-200 hover:bg-slate-50"}`;
-      card.onclick = () => {
-        activeRaidKey = key;
-        renderRaidSection();
-      };
-      card.innerHTML = ` <img src="${getPokeImg(b.dex, b.name)}" class="w-11 h-11 object-contain flex-shrink-0"> <div class="overflow-hidden flex-1"> <div class="flex items-center justify-between gap-1"> <span class="text-[10px] ${isCurr ? 'text-emerald-700' : 'text-purple-700'} font-bold truncate">${b.tier}</span> <span class="text-[10px] bg-amber-50 text-amber-700 border border-amber-300 px-1.5 rounded font-bold flex-shrink-0">${b.shiny ? '✨色違い有' : '色違い無'}</span> </div> <div class="text-xs font-extrabold text-slate-900 truncate mt-0.5">${b.name}</div> </div> `;
-      if (isCurr) pickerCurrent.appendChild(card);
-      else pickerFuture.appendChild(card);
-    });
+    const picker = document.getElementById("raidBossPickerFuture");
+    picker.innerHTML = "";
+    const keys = sortedBosses(RAID_DATA);
+    if (!keys.includes(activeRaidKey) && keys.length) activeRaidKey = keys[0];
+    keys.forEach(key => picker.appendChild(bossPickerCard(RAID_DATA[key], key, key === activeRaidKey,
+      "bg-sky-50 border-sky-500 shadow-sm ring-1 ring-sky-500", () => { activeRaidKey = key; renderRaidSection(); }, "w-11 h-11")));
   }
 
   function renderRaidOverview() {
@@ -427,25 +430,12 @@
   }
 
   function renderDmax9dbPicker() {
-    const pickerCurrent = document.getElementById("dmaxBossPickerCurrent");
-    const pickerFuture = document.getElementById("dmaxBossPickerFuture");
-    pickerCurrent.innerHTML = "";
-    pickerFuture.innerHTML = "";
-    Object.keys(DMAX_9DB_DATA).forEach(key => {
-      const d = DMAX_9DB_DATA[key];
-      if (isEventPast(d)) return;
-      const active = (key === activeDmax9dbKey),
-        isCurr = isEventActive(d);
-      const card = document.createElement("button");
-      card.className = `p-2 rounded-xl border text-left transition flex items-center gap-2 ${active ? "bg-purple-50 border-purple-500 shadow-sm ring-1 ring-purple-500" : "bg-white border-slate-200 hover:bg-slate-50"}`;
-      card.onclick = () => {
-        activeDmax9dbKey = key;
-        renderDmax9dbSection();
-      };
-      card.innerHTML = ` <img src="${getPokeImg(d.dex, d.name)}" class="w-10 h-10 object-contain flex-shrink-0"> <div class="overflow-hidden flex-1"> <div class="flex items-center justify-between gap-1"> <span class="text-[10px] ${isCurr ? 'text-purple-700' : 'text-slate-500'} font-bold truncate">${d.tier}</span> <span class="text-[10px] bg-amber-50 text-amber-700 border border-amber-300 px-1.5 rounded font-bold flex-shrink-0">${d.shiny ? '✨色違い有' : '色違い無'}</span> </div> <div class="text-xs font-extrabold text-slate-900 truncate mt-0.5">${d.name}</div> </div> `;
-      if (isCurr) pickerCurrent.appendChild(card);
-      else pickerFuture.appendChild(card);
-    });
+    const picker = document.getElementById("dmaxBossPickerFuture");
+    picker.innerHTML = "";
+    const keys = sortedBosses(DMAX_9DB_DATA);
+    if (!keys.includes(activeDmax9dbKey) && keys.length) activeDmax9dbKey = keys[0];
+    keys.forEach(key => picker.appendChild(bossPickerCard(DMAX_9DB_DATA[key], key, key === activeDmax9dbKey,
+      "bg-purple-50 border-purple-500 shadow-sm ring-1 ring-purple-500", () => { activeDmax9dbKey = key; renderDmax9dbSection(); }, "w-10 h-10")));
   }
 
   function renderDmax9dbCard() {

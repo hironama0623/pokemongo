@@ -24,7 +24,7 @@ PROMPT = """あなたはポケモンGO攻略記事から事実だけを抜き出
    イベント・レイド・マックスバトル等に関係しない記事なら relevant=false, event_id="" 。
    NEW のときは event_info に title / category / start / end を必ず入れる。
 4. 日付は {year} 年として ISO 形式（例 2026-10-27T10:00 / 時刻不明なら 2026-10-27）。
-5. field_research は「タスク条件」と「報酬ポケモン」の対応。報酬が複数ならすべて rewards に入れる。CP が書いてあれば cp に文字列で。
+5. field_research の task は記事に書かれたタスク条件そのもの（例:「ポケモンを10回キャッチする」）だけを入れる。条件が書かれていない・分からない場合は項目自体を出力しない（「詳細不明」「イベント限定タスク」などの仮の文言は禁止）。field_research は「タスク条件」と「報酬ポケモン」の対応。報酬が複数ならすべて rewards に入れる。CP が書いてあれば cp に文字列で。
 6. surprise_box は中身（ポケモン名・アイテム名）が本文に明記されているときだけ。
 7. ポケモン名は記事の表記のまま、フォルム違いは「ズバット(トップハット)」のように括弧で。dex は通常種で確実に分かる全国図鑑番号のみ。フォルム違い・不明は null 。
 8. category: main=季節/大型イベント, cd=コミュニティ・デイ, raid=レイド系, dmax=マックスバトル系, collab=コラボ/GOパス/その他。
@@ -90,6 +90,18 @@ def _transient(msg):
     return any(k in msg for k in ("429", "503", "RESOURCE_EXHAUSTED", "UNAVAILABLE", "500", "DEADLINE"))
 
 
+_PLACEHOLDER = re.compile(r"詳細不明|内容不明|不明$|ぴったり|を含むイベント|^イベント限定(?:タスク|リサーチ)?$|^タスク$")
+
+
+def _is_placeholder_task(t):
+    """記事に具体的な内容が無いのにAIが埋めた「ひな形」のタスク（例:「詳細不明」「イベントにぴったりなポケモン」）を捨てる。"""
+    if not isinstance(t, dict):
+        return False
+    task = str(t.get("task") or "").strip()
+    names = " ".join(str(r.get("name", "")) for r in (t.get("rewards") or []) if isinstance(r, dict))
+    return bool(_PLACEHOLDER.search(task) or _PLACEHOLDER.search(names) or not task)
+
+
 def normalize(facts):
     """AIの軽微な形のズレを直す（文字列だけで返されたポケモン名を {"name":..} にする等）。値は変えない。"""
     if not isinstance(facts, dict):
@@ -109,6 +121,8 @@ def normalize(facts):
         for t in facts.get(k) or []:
             if isinstance(t, dict) and "rewards" in t:
                 t["rewards"] = fix(t["rewards"])
+        if isinstance(facts.get(k), list):
+            facts[k] = [t for t in facts[k] if not _is_placeholder_task(t)]
     return facts
 
 

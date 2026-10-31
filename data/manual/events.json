@@ -81,7 +81,7 @@
    "category": "dmax",
    "barIconDex": 302,
    "startDay": 26,
-   "endDay": 31,
+   "endDay": 1,
    "hasPaid": false,
    "dateText": "10/26(月) 6:00 〜 11/1(日) 21:00 [マックスマンデー: 10/26(月) 6:00〜21:00]",
    "summary": "10/26(月)朝6時より『ダイマックスヤミラミ』がマックスバトルに初登場！初日の10/26(月) 6:00〜21:00は終日『マックスマンデー』として全国のパワースポットに大量出現します。",
@@ -103,7 +103,8 @@
     }
    ],
    "fieldResearches": [],
-   "tasks": []
+   "tasks": [],
+   "endMonth": 11
   },
   {
    "id": "ev-aeon-halloween",
@@ -270,15 +271,15 @@
   {
    "id": "ev-raid-giratina-o",
    "month": 10,
-   "title": "ギラティナ(オリジン) ＆ メガヤミラミ レイド",
+   "title": "ギラティナ(オリジン) レイド",
    "barClass": "bar-raid",
    "category": "raid",
    "barIconDex": 10007,
    "startDay": 28,
-   "endDay": 31,
+   "endDay": 3,
    "hasPaid": false,
    "dateText": "10/28(水) 6:00 〜 11/3(火・祝) 21:30頃 [レイドアワー: 10/28(水) 18:00〜19:00]",
-   "summary": "10/28(水)朝6時より伝説レイドが『ギラティナ（オリジンフォルム）』に、メガレイドが『メガヤミラミ（〜11/8まで）』に切り替わります！",
+   "summary": "10/28(水)朝6時より伝説レイドが『ギラティナ（オリジンフォルム）』に切り替わります！",
    "freeFeatures": [
     "1日1枚の無料レイドパスで挑戦可能",
     "10/28(水) 18:00〜19:00：ギラティナ(オリジン) レイドアワー"
@@ -293,7 +294,30 @@
      "note": "★5 伝説レイド (10/28〜11/3)",
      "targetKey": "giratina-origin",
      "isDmax": false
-    },
+    }
+   ],
+   "fieldResearches": [],
+   "tasks": [],
+   "endMonth": 11
+  },
+  {
+   "id": "ev-raid-mega-sableye",
+   "month": 10,
+   "title": "メガヤミラミ メガレイド",
+   "barClass": "bar-raid",
+   "category": "raid",
+   "barIconDex": 10066,
+   "startDay": 28,
+   "endDay": 8,
+   "hasPaid": false,
+   "dateText": "10/28(水) 6:00 〜 11/8(日) 21:30頃",
+   "summary": "10/28(水)朝6時よりメガレイドが『メガヤミラミ』に切り替わります！（〜11/8まで）",
+   "freeFeatures": [
+    "1日1枚の無料レイドパスで挑戦可能"
+   ],
+   "paidFeatures": [],
+   "wilds": [],
+   "raids": [
     {
      "dex": 10066,
      "name": "メガヤミラミ",
@@ -304,7 +328,8 @@
     }
    ],
    "fieldResearches": [],
-   "tasks": []
+   "tasks": [],
+   "endMonth": 11
   },
   {
    "id": "ev-supermega-chandelure",
@@ -726,22 +751,20 @@
   {
    "id": "ev-tusk-wish-deoxys",
    "month": 11,
-   "title": "「黄昏時の願い」＆ デオキシス全4種・メガメタグロス ＆ 11/28スーパーメガレイドデイ",
+   "title": "デオキシス(全4フォルム) ★5レイド",
    "barClass": "bar-raid",
    "category": "raid",
    "barIconDex": 386,
    "startDay": 24,
-   "endDay": 30,
-   "hasPaid": true,
+   "endDay": 1,
+   "hasPaid": false,
    "hasFieldResearchPending": true,
-   "dateText": "11/24(火)〜12/1(火) / スーパーメガレイドデイ: 11/28(土)",
-   "summary": "★5レイドに『デオキシス（全4フォルム）』、メガレイドに『メガメタグロス』が登場！11/28(土)には『スーパーメガレイド・デイ』が開催されます。",
+   "dateText": "11/24(火) 〜 12/1(火)",
+   "summary": "11/24(火)から★5レイドに『デオキシス（全4フォルム）』が登場します。",
    "freeFeatures": [
-    "11/25〜12/1：デオキシス4種 ＆ メガメタグロス / 11/28：スーパーメガレイド無料パス配布"
+    "11/25〜12/1：デオキシス4種が登場"
    ],
-   "paidFeatures": [
-    "11/28(土) スーパーメガレイド・デイ有料チケット（700円）"
-   ],
+   "paidFeatures": [],
    "wilds": [],
    "raids": [
     {
@@ -750,7 +773,31 @@
      "shiny": true,
      "note": "★5レイド",
      "isDmax": false
-    },
+    }
+   ],
+   "fieldResearches": [],
+   "tasks": [],
+   "endMonth": 12
+  },
+  {
+   "id": "ev-raid-mega-metagross",
+   "month": 11,
+   "title": "メガメタグロス メガレイド",
+   "barClass": "bar-raid",
+   "category": "raid",
+   "barIconDex": 10076,
+   "startDay": 24,
+   "endDay": 1,
+   "hasPaid": false,
+   "hasFieldResearchPending": false,
+   "dateText": "11/24(火) 〜 12/1(火)",
+   "summary": "メガレイドに『メガメタグロス』が登場します。",
+   "freeFeatures": [
+    "11/25〜12/1：メガメタグロスが登場"
+   ],
+   "paidFeatures": [],
+   "wilds": [],
+   "raids": [
     {
      "dex": 10076,
      "name": "メガメタグロス",
@@ -759,6 +806,31 @@
      "isDmax": false
     }
    ],
+   "fieldResearches": [],
+   "tasks": [],
+   "endMonth": 12
+  },
+  {
+   "id": "ev-super-mega-raid-day-1128",
+   "month": 11,
+   "title": "スーパーメガレイド・デイ",
+   "barClass": "bar-raid",
+   "category": "raid",
+   "barIconDex": 10076,
+   "startDay": 28,
+   "endDay": 28,
+   "hasPaid": true,
+   "hasFieldResearchPending": false,
+   "dateText": "11/28(土)",
+   "summary": "11/28(土)に『スーパーメガレイド・デイ』が開催されます。",
+   "freeFeatures": [
+    "11/28：スーパーメガレイド無料パス配布"
+   ],
+   "paidFeatures": [
+    "11/28(土) スーパーメガレイド・デイ有料チケット（700円）"
+   ],
+   "wilds": [],
+   "raids": [],
    "fieldResearches": [],
    "tasks": []
   },

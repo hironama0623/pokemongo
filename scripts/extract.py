@@ -78,7 +78,7 @@ def html_to_text(html):
             container = c
             break
     container = container or soup.body or soup
-    lines, last = [], None
+    lines, last, h1_idx = [], None, set()
     for el in container.find_all(["h1", "h2", "h3", "h4", "p", "li", "tr", "dt", "dd"]):
         if el.name in ("p", "li", "dt", "dd"):
             if el.find_parent("tr") or el.find(["li", "p", "tr", "table"]):
@@ -95,11 +95,18 @@ def html_to_text(html):
             continue
         last = txt
         if el.name in ("h1", "h2", "h3", "h4"):
+            if el.name == "h1":
+                h1_idx.add(len(lines))
             lines.append(f"\n### {txt}")
         elif el.name == "li":
             lines.append(f"- {txt}")
         else:
             lines.append(txt)
+    # GameWith等はサイト共通メニュー(ホーム/ゲーム検索/ログイン…)が <nav> ではなく <ul> で本文の前に付く。
+    # 記事タイトル(h1)より前に長い行の並びがあれば、メニューとみなして捨てる
+    h1 = next((i for i, l in enumerate(lines) if l.startswith("\n### ") and i in h1_idx), None)
+    if h1 is not None and h1 >= 8:
+        lines = lines[h1:]
     structured = "\n".join(lines).strip()
     # <div>+<br> だけで書かれた本文は上のタグ巡回で拾えないため、短すぎる場合は全文テキストで補う
     full, prev = [], None

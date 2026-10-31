@@ -86,7 +86,7 @@
   <!-- トップ通知エリア -->  
   <section class="grid grid-cols-1 md:grid-cols-2 gap-3">  
     <!-- 🚨 本日開催中・終了間近 -->  
-    <div class="bg-white border border-rose-200 rounded-xl p-3.5 shadow-sm">  
+    <div id="todayCard" class="bg-white border border-rose-200 rounded-xl p-3.5 shadow-sm">  
       <div class="flex items-center justify-between mb-2">  
         <h2 class="text-sm font-extrabold text-rose-600 flex items-center gap-1.5">  
           <span>🚨</span> 本日開催中・注目のイベント (<span id="todayHeaderDateLabel">読込中</span>)  
@@ -97,7 +97,7 @@
     </div>
 
     <!-- 📢 直近の公式発表・最新ニュース速報 -->  
-    <div class="bg-white border border-sky-200 rounded-xl p-3.5 shadow-sm flex flex-col justify-between">  
+    <div id="newsCard" class="bg-white border border-sky-200 rounded-xl p-3.5 shadow-sm flex flex-col justify-between">  
       <div>  
         <div class="flex items-center justify-between mb-2">  
           <h2 class="text-sm font-extrabold text-sky-700 flex items-center gap-1.5">  
@@ -107,7 +107,7 @@
             既読リセット  
           </button>  
         </div>  
-        <div id="newsItemsContainer" class="space-y-1.5 text-xs max-h-56 overflow-y-auto pr-1"></div>  
+        <div id="newsItemsContainer" class="space-y-1.5 text-xs max-h-72 overflow-y-auto pr-1"></div>  
       </div>  
       <div class="text-[10px] text-slate-400 mt-2 text-right">  
         タイトルタップで該当イベント詳細欄へスクロール / 「✓」で既読非表示  
@@ -202,17 +202,9 @@
 
   <!-- 2-A: 通常・メガ・シャドウレイド -->  
   <div id="secBattleRaids" class="space-y-4">  
-    <div>  
-      <div class="text-xs font-bold text-emerald-700 mb-2 flex items-center justify-between">  
-        <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> 🔴 現在出現中レイド（今すぐ挑戦可能）:</span>  
-        <span class="text-[11px] text-slate-500">タップで詳細対策切り替え</span>  
-      </div>  
-      <div id="raidBossPickerCurrent" class="grid grid-cols-1 sm:grid-cols-3 gap-2"></div>  
-    </div>
-
-    <div>  
+        <div>  
       <div class="text-xs font-bold text-purple-700 mb-2 flex items-center gap-1.5">  
-        <span>🔮 次回予告・今後の注目レイド (10/28〜 / 10/31限定 / 11月):</span>  
+        <span>🔮 開催中・今後のレイド（終了が早い順）</span>  
       </div>  
       <div id="raidBossPickerFuture" class="grid grid-cols-2 sm:grid-cols-4 gap-2"></div>  
     </div>
@@ -255,17 +247,9 @@
 
   <!-- 2-B: ダイマックス攻略 (TOP 5 & ディアルガ/パルキア分割) -->  
   <div id="secBattleDmax" class="space-y-4 hidden">  
-    <div>  
-      <div class="text-xs font-bold text-purple-700 mb-2 flex items-center justify-between">  
-        <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></span> 🔴 現在出現中マックスバトル（今すぐ挑戦可能）:</span>  
-        <span class="text-[11px] text-slate-500">タップで詳細対策切り替え</span>  
-      </div>  
-      <div id="dmaxBossPickerCurrent" class="grid grid-cols-1 sm:grid-cols-3 gap-2"></div>  
-    </div>
-
-    <div>  
+        <div>  
       <div class="text-xs font-bold text-purple-900 mb-2 flex items-center gap-1.5">  
-        <span>🔮 次回予告・今後のマックスバトル (11/2〜ワンリキー / 11/14ディアルガ / 11/15パルキア):</span>  
+        <span>🔮 開催中・今後のマックスバトル（終了が早い順）</span>  
       </div>  
       <div id="dmaxBossPickerFuture" class="grid grid-cols-2 sm:grid-cols-4 gap-2"></div>  
     </div>
