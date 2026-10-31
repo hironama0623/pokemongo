@@ -1,6 +1,7 @@
 """設定。取得先・期間・上限はここだけで管理する（SPEC.md 5章）。"""
 import datetime as dt
 import os
+import re
 from pathlib import Path
 
 JST = dt.timezone(dt.timedelta(hours=9))
@@ -29,7 +30,7 @@ GEMINI_MODELS = [m for m in dict.fromkeys([os.environ.get("GEMINI_MODEL", "gemin
 # link_re: 記事URLの正規表現（group(1)=記事キー）。min_id: これ未満の数値IDは古い記事として無視。
 # 数値IDでないサイト（公式）は一覧の並び順（新しい順）で上位 max_articles 件を見る。
 # 解析の中身（プロンプト・抽出方法）を変えたら上げる。全記事が一度だけ解析し直される
-ANALYSIS_VERSION = "2"
+ANALYSIS_VERSION = "3"
 
 SITE_PRIORITY = {"official": 0, "pokemapi": 1, "9db": 2, "gamewith": 3}   # 解析の優先順（上限に達したとき後ろは次回へ回る）
 
@@ -64,3 +65,14 @@ SOURCES = {
         "min_id": None, "max_articles": 20, "min_chars": 300,
     },
 }
+
+
+# 「レイド/マックスバトルの対策ポケモン」記事の判定（タイトル/冒頭に両方の語がある）
+_COUNTER_A = re.compile(r"対策|おすすめポケモン|最強|アタッカー|攻略")
+_COUNTER_B = re.compile(r"レイド|マックスバトル|ダイマックス|キョダイマックス|ボス")
+
+
+def is_counter_article(article):
+    head = (article.get("header") or "") or article.get("text", "")[:300]
+    head = head[:300]
+    return bool(_COUNTER_A.search(head) and _COUNTER_B.search(head))

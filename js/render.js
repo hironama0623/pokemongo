@@ -255,7 +255,7 @@ function renderStatusBar() {
   if (battles) {
     const n = document.createElement("div");
     n.className = "text-[11px] bg-amber-50 border border-amber-300 text-amber-900 rounded-lg p-2";
-    n.innerHTML = "⚠ このタブの対策ポケモン・数値（DPS/TDO等）は旧データで、出典が確認できていません。4サイトで照合した出典付きのデータに置き換え予定です。";
+    n.innerHTML = "ℹ 「◯/◯サイト」の表示があるカードは、各サイトの対策記事から自動取得・統合したデータです（DPS/TDOは載せているサイトの数字をそのまま表示）。「旧データ（出典未確認）」と書かれたカードは、自動データに置き換わるまで暫定表示です。";
     battles.insertBefore(n, battles.firstChild);
   }
 }

@@ -202,8 +202,107 @@ function buildNews(items) {
   })).sort((a, b) => String(b.date).localeCompare(String(a.date)));
 }
 
+// ---- レイド/マックスバトルの対策：自動取得（data/counters.json）を、旧データと突き合わせて画面用に統合する ----
+const bossClass = n => /^(スーパーメガ|メガ)/.test(n) ? "mega" : /^シャドウ/.test(n) ? "shadow" : /^キョダイ/.test(n) ? "gmax" : /^ダイマックス/.test(n) ? "dmax" : "normal";
+const bossBase = n => normName(n).replace(/^(スーパーメガ|キョダイマックス|ダイマックス|キョダイ|メガ|シャドウ|ゲンシ)/, "").replace(/[(（].*?[)）]/g, "").replace(/[XYＸＹ]$/, "");
+const bossForm = n => { const m = /[(（](.*?)[)）]/.exec(String(n)); return m ? normName(m[1]) : ""; };
+const cname = n => normName(n).replace(/\*/g, "");
+
+// サイトごとの対策リストを1つのランキングにする。
+// ・載っているサイト数が多いポケモンほど上（サイト間の整合性）、同数ならサイト内の順位の良さで並べる
+// ・DPS/TDO は載せているサイトの数字をそのまま使う（複数サイトが載せていれば最初に見つかったもの）
+function consensus(auto, role) {
+  const sites = Object.keys(auto.by_site), map = new Map();
+  sites.forEach(s => {
+    const list = (auto.by_site[s].counters || []).filter(c => (c.role || "attacker") === role).sort((a, b) => (a.rank || 99) - (b.rank || 99));
+    list.forEach((c, i) => {
+      const k = cname(c.name);
+      const m = map.get(k) || { name: c.name, dex: c.dex || null, tag: c.tag || "normal", sites: [], pts: 0, fast: "", charge: "", dps: null, tdo: null };
+      m.sites.push(s);
+      m.pts += (list.length - i) / list.length;
+      if (!m.fast && c.fast) m.fast = c.fast;
+      if (!m.charge && c.charged) m.charge = c.charged;
+      if (m.dps == null && c.dps != null) m.dps = Number(c.dps);
+      if (m.tdo == null && c.tdo != null) m.tdo = Number(c.tdo);
+      if (!m.dex && c.dex) m.dex = c.dex;
+      map.set(k, m);
+    });
+  });
+  const out = [...map.values()].sort((a, b) => b.sites.length - a.sites.length || b.pts - a.pts);
+  out.forEach((m, i) => {
+    m.ord = i; m.rank = i + 1;
+    const names = m.sites.map(s => SITE_LABEL[s] || s).join("・");
+    m.siteBadge = `<span class="inline-block text-[9px] leading-none px-1 py-0.5 rounded bg-sky-100 text-sky-800 border border-sky-200 font-bold" title="${esc(names)}">${m.sites.length}/${sites.length}サイト</span>`;
+  });
+  return out;
+}
+
+function autoNote(auto) {
+  const names = Object.keys(auto.by_site).map(s => SITE_LABEL[s] || s).join("・");
+  return `対策データ：${names} の記事から自動取得（${Object.keys(auto.by_site).length}サイト統合）`;
+}
+
+function applyAuto(entry, auto) {
+  const att = consensus(auto, "attacker"), tank = consensus(auto, "tank");
+  entry.auto = true; entry.autoNote = autoNote(auto); entry.siteCount = Object.keys(auto.by_site).length;
+  if (entry.isDmax) {
+    entry.attackers = att.slice(0, 5); entry.tanks = tank.slice(0, 5);
+    entry.moves = entry.moves || []; entry.routine = []; entry.tankNote = "";
+  } else {
+    entry.counters = att.concat(tank.filter(t => !att.some(a => cname(a.name) === cname(t.name))));
+  }
+  if ((!entry.types || !entry.types.length) && auto.types) entry.types = auto.types;
+  return entry;
+}
+
+function buildBattleData(autoBosses) {
+  const bosses = Object.entries(autoBosses).map(([k, v]) => Object.assign({ key: k }, v)).filter(b => b.by_site && Object.keys(b.by_site).length);
+  const used = new Set();
+  const matches = (auto, name, kind) => {
+    if (auto.kind !== kind) return false;
+    const n = normName(name), base = bossBase(auto.name);
+    if (!base || !n.includes(base)) return false;
+    const ac = bossClass(auto.name), mc = bossClass(name);
+    if (kind === "raid" ? ac !== mc : (ac === "gmax") !== (mc === "gmax")) return false;
+    const f = bossForm(auto.name);
+    return !f || n.includes(f);
+  };
+  [[RAID_DATA, "raid"], [DMAX_9DB_DATA, "dmax"]].forEach(([data, kind]) => {
+    Object.values(data).forEach(e => { e.isDmax = kind === "dmax"; });
+    Object.keys(data).forEach(k => {
+      // 旧データ1件につき、自動データ1件。フォルム違いが複数当てはまるときは、名前の中で先に出てくるフォルムを優先
+      const pos = b => { const f = bossForm(b.name), i = f ? normName(data[k].name).indexOf(f) : 999; return i < 0 ? 999 : i; };
+      const cands = bosses.filter(b => !used.has(b.key) && matches(b, data[k].name, kind)).sort((x, y) => pos(x) - pos(y));
+      if (cands.length) { used.add(cands[0].key); applyAuto(data[k], cands[0]); }
+    });
+  });
+  // 旧データに無いボス：開催期間は、同じボスが載っているイベントから取る（期間が分からないボスは出さない）
+  bosses.filter(b => !used.has(b.key)).forEach(b => {
+    const kind = b.kind, base = bossBase(b.name), f = bossForm(b.name), bc = bossClass(b.name);
+    let best = null;
+    ALL_EVENTS.forEach(ev => {
+      if (ev._e < Date.now()) return;
+      (ev.raids || []).forEach(r => {
+        if (bossBase(r.name) !== base) return;
+        if (f && !normName(r.name).includes(f) && !/全\d*(?:種|フォルム)/.test(r.name)) return;   // 「全4種」のイベントは各フォルムが対象
+        const rc = bossClass(r.name), isD = ev.category === "dmax" || rc === "dmax" || rc === "gmax" || /マックス/.test(r.note || "");
+        if (kind === "dmax" ? !isD : (isD || (bc === "mega") !== (rc === "mega" || /メガ/.test(r.note || "")) || (bc === "shadow") !== (rc === "shadow"))) return;
+        if (!best || ev._e < best.ev._e) best = { ev, r };
+      });
+    });
+    if (!best) return;
+    const { ev, r } = best, p = `${ev._s.getMonth() + 1}/${ev._s.getDate()}〜${ev._e.getMonth() + 1}/${ev._e.getDate()}`;
+    const entry = {
+      name: b.name, tier: b.tier || r.note || (kind === "dmax" ? "マックスバトル" : "レイド"), dex: r.dex || MON.dexOf(b.name, null) || MON.dexOf(base, null),
+      types: b.types || [], shiny: !!r.shiny, _s: ev._s, _e: ev._e, periodText: p, status: p, dateInfo: p, isDmax: kind === "dmax",
+    };
+    applyAuto(entry, b);
+    (kind === "dmax" ? DMAX_9DB_DATA : RAID_DATA)[b.key] = entry;
+  });
+}
+
 async function loadAll() {
-  const [mEv, mRaid, mDmax, mSeason, aEv, aDet, aNews, poke, meta, gopass] = await Promise.all([
+  const [mEv, mRaid, mDmax, mSeason, aEv, aDet, aNews, poke, meta, gopass, aCounters] = await Promise.all([
     loadJSON("data/manual/events.json", { events: [] }),
     loadJSON("data/manual/raids.json", { raids: {} }),
     loadJSON("data/manual/dmax.json", { dmax: {} }),
@@ -214,6 +313,7 @@ async function loadAll() {
     loadJSON("data/pokemon.json", { names: {} }),
     loadJSON("data/meta.json", null),
     loadJSON("data/gopass.json", null),
+    loadJSON("data/counters.json", { bosses: {} }),
   ]);
   // gopass.json は任意（まだ無い場合は 404 になるので、エラー表示の対象にしない）
   if (!gopass) { const i = DATA_ERRORS.indexOf("data/gopass.json"); if (i >= 0) DATA_ERRORS.splice(i, 1); }
@@ -229,4 +329,5 @@ async function loadAll() {
   NEWS_ITEMS = buildNews(aNews.items);
   GOPASS = gopass;
   META = meta;
+  buildBattleData(aCounters.bosses || {});
 }

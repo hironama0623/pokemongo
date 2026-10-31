@@ -15,7 +15,7 @@ import sys
 import time
 
 from . import analyze as an
-from . import compat, config, extract, fetch, merge, pokedex, schemas, store
+from . import compat, config, counters as ctr, extract, fetch, merge, pokedex, schemas, store
 from .logger import RunLog
 
 
@@ -72,6 +72,7 @@ def run(now, log, diagnose=False, no_news=False, getter=fetch.get, llm=an.gemini
     details = store.load("event_details.json", {"schema_version": 1, "events": {}})
     events = store.load("events.json", {"schema_version": 1, "events": {}})
     news = store.load("news.json", {"schema_version": 1, "items": []})
+    counters = store.load("counters.json", {"schema_version": 1, "bosses": {}})
     meta = store.load("meta.json", {"schema_version": 1})
     index = store.load("event_index.json", {"events": []})["events"]
     names = store.load("pokemon.json", {"names": {}})["names"]
@@ -132,6 +133,7 @@ def run(now, log, diagnose=False, no_news=False, getter=fetch.get, llm=an.gemini
     queue.sort(key=lambda a: config.SITE_PRIORITY.get(a["site"], 9))
     _dump_research_text(queue)
     changes, unresolved, analyzed_ok, problems = [], set(), [], 0
+    counters_changed = False
     queue.sort(key=lambda a: a["date"] or now, reverse=True)
     t0, budget_skipped, quota_hit = time.monotonic(), 0, None
     for art in queue:
@@ -144,8 +146,12 @@ def run(now, log, diagnose=False, no_news=False, getter=fetch.get, llm=an.gemini
         e["chars_sent"] = len(art["text"])
         known = index + [dict(v) for v in events["events"].values()]
         an.last_info.clear()
+        is_counter = config.is_counter_article(art)   # レイド/マックスバトルの対策記事は、イベント抽出ではなく対策の抽出を行う
         try:
-            facts = an.analyze(art, known, config.GEMINI_MODELS, call=llm)
+            if is_counter:
+                facts = an.analyze_counters(art, config.GEMINI_MODELS, call=llm)
+            else:
+                facts = an.analyze(art, known, config.GEMINI_MODELS, call=llm)
             e.update(model=an.last_info.get("model"), ai_calls=an.last_info.get("attempts"), ai_seconds=an.last_info.get("seconds"))
         except an.QuotaExhausted as ex:
             e.update(ai_calls=an.last_info.get("attempts"), ai_seconds=an.last_info.get("seconds"))
@@ -158,6 +164,25 @@ def run(now, log, diagnose=False, no_news=False, getter=fetch.get, llm=an.gemini
             e.update(ai_calls=an.last_info.get("attempts"), ai_seconds=an.last_info.get("seconds"))
             e.update(action="analyze_failed", error=str(ex)[:400])
             problems += 1
+            continue
+        if is_counter:
+            if not facts.get("bosses"):
+                e.update(action="analyzed", reason="対策記事だが対策ポケモンの記載なし")
+                analyzed_ok.append(art)
+                continue
+            trial_c = copy.deepcopy(counters)
+            src = {"site": art["site"], "url": art["url"], "fetched_at": now.isoformat(), "article_updated": art["updated"]}
+            touched = ctr.merge_counters(trial_c, facts, src, names, unresolved, now)
+            err = schemas.validate("counters", trial_c)
+            if err:
+                e.update(action="validation_failed", error=err)
+                problems += 1
+                continue
+            counters = trial_c
+            analyzed_ok.append(art)
+            e.update(action="analyzed", reason="対策: " + "、".join(touched)[:120])
+            if touched:
+                counters_changed = True
             continue
         if not facts["relevant"]:
             e.update(action="analyzed", reason="対象外の記事（イベント情報なし）")
@@ -202,14 +227,14 @@ def run(now, log, diagnose=False, no_news=False, getter=fetch.get, llm=an.gemini
     status = "ok" if problems == 0 and not budget_skipped and not any(e["status"] in bad for e in log.entries) else "partial"
     meta.update({"schema_version": 1, "last_run_at": now.isoformat(), "last_run_status": status, "last_success_at": now.isoformat(),
                  "counts": {**log.summary(), "events_auto": len(events["events"]), "news": len(news["items"])}})
-    if changes:
+    if changes or counters_changed:
         meta["last_content_change_at"] = now.isoformat()
-    for kind, obj in (("details", details), ("events", events), ("news", news), ("meta", meta)):
+    for kind, obj in (("details", details), ("events", events), ("news", news), ("meta", meta), ("counters", counters)):
         err = schemas.validate(kind, obj)
         if err:
             log.note(f"保存前検証NG: {err}。data/ は更新しません。")
             return "failed", False
-    for name, obj in (("event_details.json", details), ("events.json", events), ("news.json", news), ("state.json", state), ("meta.json", meta)):
+    for name, obj in (("event_details.json", details), ("events.json", events), ("news.json", news), ("counters.json", counters), ("state.json", state), ("meta.json", meta)):
         store.save(name, obj)
     try:  # 旧 index.html 向け互換出力（第2段階で削除）。失敗しても本処理は成功扱い、ただしログに残す
         (config.ROOT / "data.json").write_text(json.dumps(compat.build_legacy(details, events, news, meta, index), ensure_ascii=False, indent=2), encoding="utf-8")

@@ -131,8 +131,8 @@ def normalize(facts):
     return facts
 
 
-def analyze(article, known_events, models, call=gemini_call, year=2026, sleep=time.sleep, tries=3):
-    prompt = build_prompt(article, known_events, year)
+def _ask(prompt, kind, norm, models, call, sleep, tries):
+    """プロンプトを送り、スキーマ検証を通った結果を返す。429/503は待って再試行し、ダメなら次のモデルへ。"""
     errors, calls, t0 = [], 0, time.monotonic()
     for m in models:
         if m in _dead:
@@ -140,7 +140,7 @@ def analyze(article, known_events, models, call=gemini_call, year=2026, sleep=ti
         for attempt in range(1, tries + 1):
             calls += 1
             try:
-                facts = normalize(parse_json(call(m, prompt)))
+                facts = norm(parse_json(call(m, prompt)))
             except Exception as e:  # noqa: BLE001
                 msg = f"{type(e).__name__}: {str(e)}"
                 if re.search(r"PerDay|per day|daily", msg, re.I) and "429" in msg:
@@ -152,7 +152,7 @@ def analyze(article, known_events, models, call=gemini_call, year=2026, sleep=ti
                     continue
                 errors.append(f"{m}: {msg[:150]}")
                 break
-            err = schemas.validate("article", facts)
+            err = schemas.validate(kind, facts)
             if err is None:
                 last_info.clear()
                 last_info.update(model=m, attempts=calls, seconds=round(time.monotonic() - t0, 1))
@@ -164,3 +164,79 @@ def analyze(article, known_events, models, call=gemini_call, year=2026, sleep=ti
     if all(m in _dead for m in models):
         raise QuotaExhausted(" / ".join(errors) or "全モデルが1日の利用上限に到達")
     raise AnalyzeError(" / ".join(errors))
+
+
+def analyze(article, known_events, models, call=gemini_call, year=2026, sleep=time.sleep, tries=3):
+    return _ask(build_prompt(article, known_events, year), "article", normalize, models, call, sleep, tries)
+
+
+# ---- 対策記事（レイド/マックスバトルのおすすめポケモン） ----
+COUNTER_PROMPT = """あなたはポケモンGO攻略記事から事実だけを抜き出す抽出器です。以下の【記事本文】は、レイドバトルまたはマックスバトルのボスに対する「おすすめポケモン（対策）」の記事です。本文だけを根拠にJSONを1つ返してください。
+
+【厳守ルール】
+1. 記事本文に書かれている事実だけを書く。あなたの記憶・推測は絶対に混ぜない。数値（dps/tdo）も記事に書かれているものだけ。無ければ null 。
+2. ボスごとに1要素。name は記事の表記のまま（例「ヤミラミ」「メガヤミラミ」「ギラティナ(オリジン)」）。フォルム違いは括弧で。kind は raid（レイドバトル。メガ・シャドウ含む）か dmax（マックスバトル。ダイマックス/キョダイマックス）。
+3. counters は記事が挙げる「おすすめポケモン」を、記事に載っている順に rank=1,2,3… で。上位10件まで。role は attacker（火力・アタッカー）か tank（耐久・タンク役。記事が分けていなければ attacker）。
+4. tag: メガシンカ/ゲンシカイキは mega、シャドウは shadow、ダイマックス/キョダイマックスは dmax、それ以外は normal 。
+5. fast=通常技、charged=スペシャル技（ゲージ技）。書かれていなければ null 。ポケモン名は記事の表記のまま。フォルム違いは括弧で。
+6. 対策ポケモンが本文に1匹も書かれていない（画像のみ・表が空など）ボスは出力しない。記事がボスの対策記事でなければ relevant=false, bosses=[] 。
+
+【出力JSONの形】
+{{"relevant": true,
+ "bosses": [{{"name": "", "kind": "raid", "tier": "★5", "types": ["あく"],
+   "counters": [{{"name": "", "rank": 1, "role": "attacker", "tag": "normal", "fast": "", "charged": "", "dps": null, "tdo": null, "note": ""}}]}}]}}
+
+【記事】サイト={site} URL={url} 記事更新日={updated}
+【記事本文】
+{body}
+"""
+
+
+def normalize_counters(facts):
+    """AIの軽微なズレを直し、中身の無いものを捨てる（数字だけの名前、空の対策、重複）。"""
+    if not isinstance(facts, dict):
+        return facts
+    out = []
+    for b in facts.get("bosses") or []:
+        if not isinstance(b, dict):
+            continue
+        seen, cs = set(), []
+        for i, c in enumerate(b.get("counters") or []):
+            if isinstance(c, str):
+                c = {"name": c}
+            if not isinstance(c, dict):
+                continue
+            name = str(c.get("name") or "").strip()
+            if not name or re.fullmatch(r"[0-9,.]+", name):
+                continue
+            c["name"] = name
+            c.setdefault("role", "attacker")
+            if c.get("role") not in ("attacker", "tank"):
+                c["role"] = "attacker"
+            if c.get("tag") not in ("normal", "mega", "shadow", "dmax"):
+                c["tag"] = "mega" if name.startswith(("メガ", "ゲンシ")) else ("shadow" if name.startswith("シャドウ") else ("dmax" if re.match(r"(キョダイ|ダイマックス)", name) else "normal"))
+            if c.get("rank") is None:
+                c["rank"] = i + 1
+            for k in ("dps", "tdo"):
+                v = c.get(k)
+                if isinstance(v, str):
+                    try:
+                        c[k] = float(v.replace(",", ""))
+                    except ValueError:
+                        c[k] = None
+            k = (c["role"], name)
+            if k in seen:
+                continue
+            seen.add(k)
+            cs.append(c)
+        b["counters"] = cs
+        if cs and str(b.get("name") or "").strip():
+            out.append(b)
+    facts["bosses"] = out
+    facts.setdefault("relevant", bool(out))
+    return facts
+
+
+def analyze_counters(article, models, call=gemini_call, sleep=time.sleep, tries=3):
+    prompt = COUNTER_PROMPT.format(site=article["site"], url=article["url"], updated=article.get("updated") or "不明", body=article["text"])
+    return _ask(prompt, "counter_article", normalize_counters, models, call, sleep, tries)

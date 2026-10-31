@@ -39,6 +39,19 @@ ARTICLE = {
     },
 }
 
+# --- 対策記事（レイド/マックスバトルのおすすめポケモン）からAIが返す形 ---
+_COUNTER = {"type": "object", "required": ["name"],
+            "properties": {"name": _STR, "rank": {"type": ["integer", "null"], "minimum": 1, "maximum": 100},
+                           "role": {"enum": ["attacker", "tank"]}, "tag": {"enum": ["normal", "mega", "shadow", "dmax"]},
+                           "fast": _NSTR, "charged": _NSTR, "note": _NSTR,
+                           "dps": {"type": ["number", "null"], "minimum": 0}, "tdo": {"type": ["number", "null"], "minimum": 0}}}
+_BOSS = {"type": "object", "required": ["name", "kind", "counters"],
+         "properties": {"name": _STR, "kind": {"enum": ["raid", "dmax"]}, "tier": _NSTR,
+                        "types": {"type": "array", "items": _STR},
+                        "counters": {"type": "array", "minItems": 1, "items": _COUNTER}}}
+COUNTER_ARTICLE = {"type": "object", "required": ["relevant", "bosses"],
+                   "properties": {"relevant": {"type": "boolean"}, "bosses": {"type": "array", "items": _BOSS}}}
+
 # --- 保存するファイルの形 ---
 _with_src = lambda base: {**base, "required": base.get("required", []) + ["sources"],  # noqa: E731
                           "properties": {**base["properties"], "sources": _SRCS}}
@@ -76,12 +89,23 @@ NEWS = {
                        "kind": {"enum": ["new_event", "event_update", "schedule_changed"]},
                        "title": _STR, "details": _STR, "targetId": _STR}})}},
 }
+COUNTERS = {
+    "type": "object", "required": ["schema_version", "bosses"],
+    "properties": {"schema_version": {"const": 1}, "bosses": {"type": "object", "additionalProperties": {
+        "type": "object", "required": ["name", "kind", "by_site"],
+        "properties": {"name": _STR, "kind": {"enum": ["raid", "dmax"]}, "tier": _NSTR, "types": {"type": "array", "items": _STR},
+                       "updated_at": _NSTR,
+                       "by_site": {"type": "object", "minProperties": 1, "additionalProperties": {
+                           "type": "object", "required": ["url", "counters"],
+                           "properties": {"url": _STR, "article_updated": _NSTR, "fetched_at": _NSTR,
+                                          "counters": {"type": "array", "minItems": 1, "items": _COUNTER}}}}}}}},
+}
 META = {"type": "object", "required": ["schema_version", "last_run_at", "last_run_status"],
         "properties": {"schema_version": {"const": 1}, "last_run_at": _STR,
                        "last_run_status": {"enum": ["ok", "partial", "failed"]},
                        "last_success_at": _NSTR, "last_content_change_at": _NSTR, "counts": {"type": "object"}}}
 
-SCHEMAS = {"article": ARTICLE, "details": DETAILS, "events": EVENTS, "news": NEWS, "meta": META}
+SCHEMAS = {"counter_article": COUNTER_ARTICLE, "counters": COUNTERS, "article": ARTICLE, "details": DETAILS, "events": EVENTS, "news": NEWS, "meta": META}
 
 
 def validate(kind, obj):

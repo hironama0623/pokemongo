@@ -364,3 +364,32 @@ class NormalizeResearch(unittest.TestCase):
         out = an.normalize(f)
         self.assertEqual(out["field_research"], [{"task": "ナイススローを6回", "rewards": [{"name": "ボチ"}]}])
         self.assertEqual(out["time_challenge"], [])
+
+
+class CountersTest(unittest.TestCase):
+    ART = {"site": "gamewith", "url": "https://x/1", "text": "タイトル: ダイマックスヤミラミ対策おすすめポケモン\\n本文", "header": "タイトル: ダイマックスヤミラミ対策おすすめポケモン", "updated": "2026-10-30T10:00:00+09:00"}
+
+    def test_is_counter_article(self):
+        self.assertTrue(config.is_counter_article(self.ART))
+        self.assertFalse(config.is_counter_article({"text": "ハロウィン2026パート1 開催決定", "header": "タイトル: ハロウィン2026パート1"}))
+
+    def test_analyze_and_merge(self):
+        from scripts import analyze as an, counters as ctr
+        an._dead.clear()
+        out = {"relevant": True, "bosses": [{"name": "ダイマックスヤミラミ", "kind": "dmax", "tier": "★1",
+               "counters": [{"name": "ザシアン(けんのおう)", "rank": 1, "role": "attacker", "fast": "メタルクロー"},
+                            {"name": "285", "rank": 2}, {"name": "ハピナス", "rank": 1, "role": "tank"}]},
+               {"name": "空ボス", "kind": "raid", "counters": []}]}
+        facts = an.analyze_counters(self.ART, ["m1"], call=lambda m, p: json.dumps(out, ensure_ascii=False), sleep=lambda s: None)
+        self.assertEqual([b["name"] for b in facts["bosses"]], ["ダイマックスヤミラミ"])
+        self.assertEqual([c["name"] for c in facts["bosses"][0]["counters"]], ["ザシアン(けんのおう)", "ハピナス"])
+        store_ = {"schema_version": 1, "bosses": {}}
+        src = {"site": "gamewith", "url": "https://x/1", "fetched_at": "t", "article_updated": "2026-10-30"}
+        ctr.merge_counters(store_, facts, src, {"ハピナス": 242}, set(), dt.datetime(2026, 10, 31))
+        from scripts import schemas
+        self.assertIsNone(schemas.validate("counters", store_))
+        self.assertIn("dmax:ヤミラミ", store_["bosses"])
+        # 別サイトの同じボスは同じ項目にサイト別で入る
+        src2 = {"site": "9db", "url": "https://y/2", "fetched_at": "t", "article_updated": "2026-10-31"}
+        ctr.merge_counters(store_, facts, src2, {}, set(), dt.datetime(2026, 10, 31))
+        self.assertEqual(sorted(store_["bosses"]["dmax:ヤミラミ"]["by_site"]), ["9db", "gamewith"])
