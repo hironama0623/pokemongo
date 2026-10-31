@@ -188,7 +188,7 @@
             {
               "site": "pokemapi",
               "url": "https://pokemongo-get.com/board/10780/",
-              "fetched_at": "2026-10-31T07:30:18.765651+09:00",
+              "fetched_at": "2026-10-31T08:39:40.909284+09:00",
               "article_updated": null
             },
             {
@@ -273,6 +273,12 @@
               "url": "https://pokemongo-get.com/board/10776/",
               "fetched_at": "2026-10-31T02:24:27.697788+09:00",
               "article_updated": null
+            },
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10778/",
+              "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+              "article_updated": null
             }
           ]
         },
@@ -287,11 +293,301 @@
               "url": "https://9db.jp/pokemongo/data/26429",
               "fetched_at": "2026-10-31T07:30:18.765651+09:00",
               "article_updated": "2026-10-30T15:15:13+09:00"
+            },
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10778/",
+              "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "デスカーン",
+          "dex": 563,
+          "shiny": true,
+          "tier": "★3",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10778/",
+              "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "オーロット",
+          "dex": 709,
+          "shiny": true,
+          "tier": "★3",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10778/",
+              "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "ダダリン",
+          "dex": 781,
+          "shiny": true,
+          "tier": "★3",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10778/",
+              "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "ハットとケープをつけたピカチュウ",
+          "dex": 25,
+          "shiny": true,
+          "tier": "★1",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10778/",
+              "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "リボンをつけたヤバチャ",
+          "dex": 1012,
+          "shiny": true,
+          "tier": "★1",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10778/",
+              "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+              "article_updated": null
             }
           ]
         }
       ],
-      "updated_at": "2026-10-31T07:30:18.765651+09:00"
+      "updated_at": "2026-10-31T08:39:40.909284+09:00",
+      "surprise_box": {
+        "pokemon": [
+          {
+            "name": "襟飾りをつけたロコン",
+            "sources": [
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10778/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              }
+            ]
+          },
+          {
+            "name": "トップハットをかぶったズバット",
+            "sources": [
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10778/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              }
+            ]
+          },
+          {
+            "name": "ハロウィン衣装をつけたゲンガー",
+            "sources": [
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10778/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              }
+            ]
+          },
+          {
+            "name": "ハロウィンいたずら飾りをつけたポッチャマ",
+            "sources": [
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10778/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              }
+            ]
+          },
+          {
+            "name": "ハロウィンいたずら飾りをつけたフワライド",
+            "sources": [
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10778/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              }
+            ]
+          },
+          {
+            "name": "カチューシャをつけたオンバット",
+            "sources": [
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10778/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              }
+            ]
+          },
+          {
+            "name": "ムウマ",
+            "dex": 200,
+            "sources": [
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10778/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              }
+            ]
+          },
+          {
+            "name": "ヨマワル",
+            "dex": 353,
+            "sources": [
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10778/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              }
+            ]
+          },
+          {
+            "name": "バケッチャ(こだましゅ)",
+            "dex": 710,
+            "sources": [
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10778/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              }
+            ]
+          },
+          {
+            "name": "バケッチャ(ちゅうだましゅ)",
+            "dex": 710,
+            "sources": [
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10778/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              }
+            ]
+          },
+          {
+            "name": "バケッチャ(おおだましゅ)",
+            "dex": 710,
+            "sources": [
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10778/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              }
+            ]
+          },
+          {
+            "name": "バケッチャ(ギガだましゅ)",
+            "dex": 710,
+            "sources": [
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10778/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              }
+            ]
+          },
+          {
+            "name": "ハットとケープをつけたピカチュウ",
+            "sources": [
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10778/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              }
+            ]
+          },
+          {
+            "name": "リボンをつけたヤバチャ",
+            "sources": [
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10778/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              }
+            ]
+          }
+        ],
+        "items": [
+          {
+            "name": "ピカチュウのアメ",
+            "qty": "×1",
+            "sources": [
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10778/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              }
+            ]
+          },
+          {
+            "name": "ズバットのアメ",
+            "qty": "×1",
+            "sources": [
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10778/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              }
+            ]
+          },
+          {
+            "name": "ヤバチャのアメ",
+            "qty": "×1",
+            "sources": [
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10778/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              }
+            ]
+          },
+          {
+            "name": "ふしぎなアメ",
+            "qty": "×6",
+            "sources": [
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10778/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              }
+            ]
+          }
+        ]
+      }
     },
     "ev-auto-tuesday-showcase-day": {
       "updated_at": "2026-10-31T02:24:27.697788+09:00"
@@ -10533,6 +10829,12 @@
               "url": "https://9db.jp/pokemongo/data/26425",
               "fetched_at": "2026-10-31T07:30:18.765651+09:00",
               "article_updated": "2026-10-28T18:00:02+09:00"
+            },
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10776/",
+              "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+              "article_updated": null
             }
           ]
         }
@@ -10706,6 +11008,118 @@
               "article_updated": null
             }
           ]
+        },
+        {
+          "name": "パルキア",
+          "dex": 484,
+          "shiny": true,
+          "tier": "★5",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10775/",
+              "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "メガリザードンX",
+          "dex": 6,
+          "shiny": true,
+          "tier": "★4",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10775/",
+              "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "メガリザードンY",
+          "dex": 6,
+          "shiny": true,
+          "tier": "★4",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10775/",
+              "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "アローラライチュウ",
+          "dex": 26,
+          "shiny": true,
+          "tier": "★3",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10775/",
+              "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "アローラキュウコン",
+          "dex": 38,
+          "shiny": true,
+          "tier": "★3",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10775/",
+              "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "アローラベトベトン",
+          "dex": 89,
+          "shiny": true,
+          "tier": "★3",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10775/",
+              "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "ハットとケープをつけたピカチュウ",
+          "dex": 25,
+          "shiny": true,
+          "tier": "★1",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10775/",
+              "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "リボンをつけたヤバチャ",
+          "dex": 854,
+          "shiny": true,
+          "tier": "★1",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10775/",
+              "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+              "article_updated": null
+            }
+          ]
         }
       ],
       "time_challenge": [
@@ -10745,10 +11159,358 @@
               "article_updated": "2026-10-31T05:06:42+09:00"
             }
           ]
+        },
+        {
+          "task": "自動的に完了する無料タイムチャレンジ",
+          "rewards": [
+            {
+              "name": "ふしぎなアメ"
+            },
+            {
+              "name": "ハットとケープをつけた ピカチュウ"
+            }
+          ],
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10771/",
+              "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+              "article_updated": null
+            }
+          ]
         }
       ],
       "surprise_box": {
-        "pokemon": [],
+        "pokemon": [
+          {
+            "name": "襟飾りをつけたロコン",
+            "sources": [
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10775/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              },
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10772/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              },
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10771/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              }
+            ]
+          },
+          {
+            "name": "トップハットをかぶったズバット",
+            "sources": [
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10775/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              },
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10772/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              },
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10771/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              }
+            ]
+          },
+          {
+            "name": "ハロウィン衣装をつけたゲンガー",
+            "sources": [
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10775/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              },
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10772/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              },
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10771/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              }
+            ]
+          },
+          {
+            "name": "ハロウィンいたずら飾りをつけたポッチャマ",
+            "sources": [
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10775/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              },
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10772/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              },
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10771/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              }
+            ]
+          },
+          {
+            "name": "ハロウィンいたずら飾りをつけたフワライド",
+            "sources": [
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10775/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              },
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10772/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              },
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10771/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              }
+            ]
+          },
+          {
+            "name": "カチューシャをつけたオンバット",
+            "sources": [
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10775/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              },
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10772/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              },
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10771/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              }
+            ]
+          },
+          {
+            "name": "ムウマ",
+            "dex": 200,
+            "sources": [
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10775/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              },
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10772/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              },
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10771/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              }
+            ]
+          },
+          {
+            "name": "ヨマワル",
+            "dex": 353,
+            "sources": [
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10775/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              },
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10772/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              },
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10771/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              }
+            ]
+          },
+          {
+            "name": "バケッチャ(こだましゅ)",
+            "dex": 710,
+            "sources": [
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10775/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              },
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10772/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              },
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10771/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              }
+            ]
+          },
+          {
+            "name": "バケッチャ(ちゅうだましゅ)",
+            "dex": 710,
+            "sources": [
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10775/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              },
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10772/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              },
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10771/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              }
+            ]
+          },
+          {
+            "name": "バケッチャ(おおだましゅ)",
+            "dex": 710,
+            "sources": [
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10775/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              },
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10772/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              },
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10771/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              }
+            ]
+          },
+          {
+            "name": "バケッチャ(ギガだましゅ)",
+            "dex": 710,
+            "sources": [
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10775/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              },
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10772/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              },
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10771/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              }
+            ]
+          },
+          {
+            "name": "ハットとケープをつけたピカチュウ",
+            "sources": [
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10775/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              },
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10772/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              },
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10771/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              }
+            ]
+          },
+          {
+            "name": "リボンをつけたヤバチャ",
+            "sources": [
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10775/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              },
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10772/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              },
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10771/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              }
+            ]
+          }
+        ],
         "items": [
           {
             "name": "ふしぎなアメ",
@@ -10759,12 +11521,66 @@
                 "url": "https://pokemongo.com/ja/news/halloween-part-1-2026",
                 "fetched_at": "2026-10-31T07:30:18.765651+09:00",
                 "article_updated": null
+              },
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10775/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              },
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10772/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              },
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10771/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              }
+            ]
+          },
+          {
+            "name": "ピカチュウのアメ",
+            "qty": "×1",
+            "sources": [
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10775/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              }
+            ]
+          },
+          {
+            "name": "ズバットのアメ",
+            "qty": "×1",
+            "sources": [
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10775/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
+              }
+            ]
+          },
+          {
+            "name": "ヤバチャのアメ",
+            "qty": "×1",
+            "sources": [
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10775/",
+                "fetched_at": "2026-10-31T08:39:40.909284+09:00",
+                "article_updated": null
               }
             ]
           }
         ]
       },
-      "updated_at": "2026-10-31T07:30:18.765651+09:00",
+      "updated_at": "2026-10-31T08:39:40.909284+09:00",
       "field_research": [
         {
           "task": "ゴーストタイプのポケモンを13匹捕まえる",
