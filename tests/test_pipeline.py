@@ -351,3 +351,16 @@ class MergeNewEvent(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class NormalizeResearch(unittest.TestCase):
+    def test_placeholder_numeric_and_empty_rewards_dropped(self):
+        from scripts import analyze as an
+        f = {"field_research": [
+            {"task": "（詳細不明）", "rewards": [{"name": "ボチ"}]},
+            {"task": "ゴーストタイプを13匹捕まえる", "rewards": [{"name": "460"}]},
+            {"task": "ナイススローを6回", "rewards": [{"name": "ボチ"}, {"name": "515"}]}],
+            "time_challenge": [{"task": "x", "rewards": []}]}
+        out = an.normalize(f)
+        self.assertEqual(out["field_research"], [{"task": "ナイススローを6回", "rewards": [{"name": "ボチ"}]}])
+        self.assertEqual(out["time_challenge"], [])

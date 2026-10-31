@@ -125,7 +125,7 @@ def content_hash(text):
     """更新日時など毎回変わる表記を除いてハッシュ化（無駄なAI再解析を防ぐ）。"""
     t = _STAMP_RE.sub("", text)
     t = re.sub(r"(?m)^.*(?:最終更新|更新日時?).*$", "", t)
-    t = re.sub(r"\s+", "", t)
+    t = re.sub(r"\s+", "", t) + "|v" + config.ANALYSIS_VERSION
     return hashlib.sha256(t.encode("utf-8")).hexdigest()
 
 

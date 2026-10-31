@@ -122,7 +122,12 @@ def normalize(facts):
             if isinstance(t, dict) and "rewards" in t:
                 t["rewards"] = fix(t["rewards"])
         if isinstance(facts.get(k), list):
-            facts[k] = [t for t in facts[k] if not _is_placeholder_task(t)]
+            for t in facts[k]:
+                if isinstance(t, dict) and isinstance(t.get("rewards"), list):
+                    # 報酬が画像だけの表では、AIがCP値（285 など）を名前として拾うことがある。数字だけの名前は報酬名ではないので捨てる
+                    t["rewards"] = [r for r in t["rewards"] if not (isinstance(r, dict) and re.fullmatch(r"[0-9,]+", str(r.get("name", "")).strip()))]
+            # 仮の文言のタスクと、報酬が1つも残らないタスクは捨てる（報酬が空のままだと検証で記事ごと失敗するため）
+            facts[k] = [t for t in facts[k] if not _is_placeholder_task(t) and isinstance(t, dict) and t.get("rewards")]
     return facts
 
 
