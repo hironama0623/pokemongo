@@ -1,17 +1,18 @@
 {
- "run_at": "2026-10-31T23:26:31.550925+09:00",
+ "run_at": "2026-11-01T00:14:28.505652+09:00",
  "run_status": "partial",
  "summary": {
   "fetched_ok": 185,
   "fetch_failed": 0,
-  "analyzed": 145,
-  "skipped": 33,
-  "failed": 2
+  "analyzed": 141,
+  "skipped": 39,
+  "failed": 0
  },
  "notes": [
   "gamewith: 候補100件のうち上限80件のみ取得（超過分は古い順）",
   "official: 候補30件のうち上限20件のみ取得（超過分は古い順）",
-  "図鑑番号を解決できなかった名前: ['1,000 XP', '1,031 XP', '2,026 XP', '2,500 XP', '4,500 XP', '5,000 XP', '500XP', 'GBLで活躍するポケモン', 'XP', 'adidas Pokémon Cap', 'adidas Pokémon Jacket', 'あまーいりんご', 'いいキズぐすり', 'おこう', 'きんのズリのみ', 'ぎんのパイルのみ', 'げんきのかけら', 'しあわせタマゴ', 'すっぱいりんご', 'ふかそうち', 'ふしぎなアメ', 'ふしぎなパーツ', 'ほしのかけら', 'ほしのすな', 'ほしのすな x1,000', 'ほしのすな x2,026', 'ほしのすな×1000', 'みついりりんご', 'わざマシンスペシャル', 'わざマシンノーマル', 'アメ', 'アメ x26', 'アメXL', 'キズぐすり', 'スーパーふかそうち', 'スーパーボール', 'ズリのみ', 'ダイキnoshi', 'ダイキノコ', 'ハイパーボール', 'パイルのみ', 'プレミアムバトルパス', 'プレミアムレイドパス', 'ポケモン', 'マックス粒子', 'メガエナジー', 'モンスターボール', 'ルアーモジュール', 'ロケットレーダー', '経験値', '経験者×1000XP'] → data/pokemon.json に追記してください"
+  "上限（時間またはAIの利用回数）のため 6 件を次回に回しました。次回の実行で続きから解析します。",
+  "図鑑番号を解決できなかった名前: ['1 30(730) ドラゴンテール ワイドブレイカー *', '1 34(1498) ドラゴンテール ダイマックスほう *', '1,000 XP', '1,000XP', '1,031 XP', '1,500XP', '2 29(1140) ドラゴンテール ワイドブレイカー', '2 32(1098) ドラゴンテール フリーズボルト *', '2,000 XP', '2,026 XP', '2,500 XP', '2,500XP', '3 30(999) サイコカッター シャドーレイ *', '3,000XP', '4 29(986) こおりのキバ コールドフレア *', '5 27(846) こおりのキバ きょけんとつげき *', '5,000 XP', '500XP', '6 27(1020) ドラゴンテール あくうせつだん *', '7 27(1384) りゅうのいぶき ときのほうこう *', '8 26(741) ドラゴンテール ワイドブレイカー *', 'GOポイント', 'XP', 'あまえる', 'あまーいりんご', 'いいキズぐすり', 'おこう', 'おどろかす', 'きんのズリのみ', 'ぎんのパイルのみ', 'げんきのかけら', 'こおりのつぶて', 'こおりのキバ', 'こなゆき', 'しねんのずつき', 'すっぱいりんご', 'たきのぼり', 'でんきショック', 'ねんりき', 'ふかそうち', 'ふしぎなアメ', 'ふしぎなパーツ', 'ほしのかけら', 'ほしのすな', 'みついりりんご', 'めざめるパワー氷', 'ようせいのかぜ', 'わざマシンスペシャル', 'わざマシンノーマル', 'アメ', 'アメXL', 'イベントテーマの ステッカー', 'キズぐすり', 'サイコカッター', 'シ ャ ド ウ', 'シャドウ', 'スーパーふかそうち', 'スーパーボール', 'ズリのみ', 'タネマシンガン', 'ダイキノコ', 'ドラゴンテール', 'ナナのみ', 'ハイパーボール', 'パイルのみ', 'プレミアム バトルパス', 'プレミアムバトルパス', 'プレミアムレイドパス', 'ボルトチェンジ', 'マックス粒子', 'メガエナジー', 'メタルクロー', 'モンスターボール', 'ルアーモジュール', '経験値', '経験値×4200XP', '通 常', '通常'] → data/pokemon.json に追記してください"
  ],
  "entries": [
   {
@@ -22,7 +23,7 @@
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
-   "chars_fetched": 367269,
+   "chars_fetched": 367270,
    "chars_sent": 0,
    "action": null,
    "reason": "記事リンク 73 件",
@@ -40,7 +41,7 @@
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
-   "chars_fetched": 214477,
+   "chars_fetched": 214479,
    "chars_sent": 0,
    "action": null,
    "reason": "記事リンク 37 件",
@@ -66,7 +67,7 @@
    "preview": "ポケモン | アイテム | すべて | 大発見 イベント バトル 捕獲 スローボーナス 進化・強化 相棒・フレンド タマゴ ARマッピング スポンサー ポケスト",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 6.2
+   "ai_seconds": 5.7
   },
   {
    "source": "pokemapi",
@@ -84,7 +85,7 @@
    "preview": "- この問題の補填として、影響を受けたトレーナーに向けて、影響を受けた時間帯に使用された以下のアイテムなどが自動的に返還されています。 リモートレイドパス ダイ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 5.5
+   "ai_seconds": 5.7
   },
   {
    "source": "pokemapi",
@@ -102,7 +103,7 @@
    "preview": "シャンデラスーパーメガレイドデイタイムチャレンジ(1/1) 1 /1 | ポケモンを1匹捕まえる バンギラス バンギラス ポケモンを15回強化する メガエナジー",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 6.3
+   "ai_seconds": 7.1
   },
   {
    "source": "pokemapi",
@@ -119,7 +120,7 @@
    "error": null,
    "preview": "メガシャンデラ new! 色違いも初登場! 色違いの メガシャンデラ 色違い初登場! ゲットチャレンジ 対象：シャンデラ 色違い確率up 通常 CP 1867 ",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
+   "ai_calls": 2,
    "ai_seconds": 5.5
   },
   {
@@ -133,12 +134,12 @@
    "chars_fetched": 2363,
    "chars_sent": 3112,
    "action": "analyzed",
-   "reason": "wilds+8; surprise_box+8",
+   "reason": "新情報なし",
    "error": null,
    "preview": "ハットとケープをつけた ピカチュウ new! トップハットをかぶった ズバット new! リボンをつけた ヤバチャ new! - 運が良ければ色違いのポケモンと",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 7.5
+   "ai_seconds": 7.8
   },
   {
    "source": "pokemapi",
@@ -151,12 +152,12 @@
    "chars_fetched": 3437,
    "chars_sent": 4172,
    "action": "analyzed",
-   "reason": "raids+1",
+   "reason": "新情報なし",
    "error": null,
    "preview": "野生でのポケモン捕獲時、またはマックスバトル後に、 「マックス粒子」を受け取れることがあります。 - 「おでかけキャッチャー」または「Pokémon GO Pl",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 2,
-   "ai_seconds": 20.6
+   "ai_calls": 1,
+   "ai_seconds": 5.0
   },
   {
    "source": "pokemapi",
@@ -174,7 +175,7 @@
    "preview": "ゼルネアス ↑ 9/30(水)-10/6(火) (レイドアワー： 9/30(水)) イベルタル ↑ 10/7(水)-10/13(火) (レイドアワー： 10/7",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 5.4
+   "ai_seconds": 5.1
   },
   {
    "source": "pokemapi",
@@ -187,12 +188,12 @@
    "chars_fetched": 883,
    "chars_sent": 1627,
    "action": "analyzed",
-   "reason": "対象外の記事（イベント情報なし）",
+   "reason": "新情報なし",
    "error": null,
    "preview": "ホーム メガシンカしたポケモンやゲンシカイキしたポケモンが、「GOバトルリーグ」のより多くのリーグやカップに参加できるようになりました（これらのポケモンのCPが",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 6.3
+   "ai_seconds": 5.5
   },
   {
    "source": "pokemapi",
@@ -205,12 +206,12 @@
    "chars_fetched": 2363,
    "chars_sent": 3083,
    "action": "analyzed",
-   "reason": "raids+7",
+   "reason": "surprise_box+1",
    "error": null,
    "preview": "ハットとケープをつけた ピカチュウ new! トップハットをかぶった ズバット new! リボンをつけた ヤバチャ new! - 運が良ければ色違いのポケモンと",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 6.5
+   "ai_seconds": 7.6
   },
   {
    "source": "pokemapi",
@@ -228,7 +229,7 @@
    "preview": "スーパーリーグ： メガバージョン ハイパーリーグ： メガバージョン マスターリーグ： メガバージョン スーパーリーグ ハイパーリーグ マスターリーグ 闘争心カッ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 4.2
+   "ai_seconds": 4.3
   },
   {
    "source": "pokemapi",
@@ -246,7 +247,7 @@
    "preview": "ホーム 2027年プエブラ地域選手権のTwitchを45分間視聴で、「ほしのかけら×1、わざマシンノーマル×25、わざマシンスペシャル×25」を獲得できます ポ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 6.1
+   "ai_seconds": 5.6
   },
   {
    "source": "pokemapi",
@@ -264,7 +265,7 @@
    "preview": "- 「コマタナ」が野生でいつもより多く出現します。 コマタナ キリキザン ドドゲザン - 運が良ければ色違いの「コマタナ」や、「スペシャル背景」をともなう「コマ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 6.5
+   "ai_seconds": 6.8
   },
   {
    "source": "pokemapi",
@@ -277,12 +278,12 @@
    "chars_fetched": 3547,
    "chars_sent": 4253,
    "action": "analyzed",
-   "reason": "raids+8",
+   "reason": "raids+1; 対策: パルキア、メガリザードンX、メガリザードンY、シャドウランドロス",
    "error": null,
    "preview": "ホーム パルキア、メガリザードンX、メガリザードンY登場に伴うレイドボス変更｜今回のラインナップは、現地時間 2026/10/21(水)6時～2026/10/2",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 6.1
+   "ai_calls": 2,
+   "ai_seconds": 5.8
   },
   {
    "source": "pokemapi",
@@ -300,7 +301,7 @@
    "preview": "- 日本時間 2026/11/28(土)0時～2026/11/29(日)23時59分まで は、1日あたり獲得できる「GOポイント」の上限がなくなります。 - 「",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 5.5
+   "ai_seconds": 1.6
   },
   {
    "source": "pokemapi",
@@ -313,12 +314,12 @@
    "chars_fetched": 2689,
    "chars_sent": 3267,
    "action": "analyzed",
-   "reason": "raids+19",
+   "reason": "新情報なし",
    "error": null,
    "preview": "ギラティナ (オリジン) ↑ 10/28(水)-11/3(火) (レイドアワー： 10/28(水)) ギラティナ (アナザー) ↑ 11/4(水)-11/8(日",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 6.3
+   "ai_seconds": 6.6
   },
   {
    "source": "pokemapi",
@@ -331,12 +332,12 @@
    "chars_fetched": 3225,
    "chars_sent": 3699,
    "action": "analyzed",
-   "reason": "wilds+1; raids+2",
+   "reason": "新情報なし",
    "error": null,
    "preview": "ダイマックス レジドラゴ new! ダイマックス メルタン new! - 「ダイマックスレジドラゴ」は星5マックスバトル、「ダイマックスメルタン」は「GOパス：",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 5.7
+   "ai_seconds": 5.4
   },
   {
    "source": "pokemapi",
@@ -354,7 +355,7 @@
    "preview": "メガシャンデラ new! 色違いも初登場! 色違いの メガシャンデラ 色違い初登場! ゲットチャレンジ 対象：シャンデラ 色違い確率up 通常 CP 1867 ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 6.1
+   "ai_seconds": 6.2
   },
   {
    "source": "pokemapi",
@@ -372,7 +373,7 @@
    "preview": "色違いのボチ 色違い初登場! 色違いのハカドッグ 色違い初登場! - 「ボチ」は野生で出会えるほか、「GOパス」や「フィールドリサーチ」のタスクを完了することで",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 5.4
+   "ai_seconds": 5.6
   },
   {
    "source": "pokemapi",
@@ -385,12 +386,12 @@
    "chars_fetched": 1258,
    "chars_sent": 1938,
    "action": "analyzed",
-   "reason": "time_challenge+4",
+   "reason": "raids+1; time_challenge+13",
    "error": null,
    "preview": "- このイベントはいつまで？：ポケモンGOアプリ内のイベント情報に「10月7日～12月31日まで」と表示されています。 - 公式発表「「Pokémon GO L",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 6.3
+   "ai_seconds": 6.0
   },
   {
    "source": "pokemapi",
@@ -403,12 +404,12 @@
    "chars_fetched": 5103,
    "chars_sent": 5876,
    "action": "analyzed",
-   "reason": "wilds+5; field_research+8; surprise_box+11",
+   "reason": "field_research+1",
    "error": null,
    "preview": "- 対象のイオンモールの中で『ポケモン GO』を起動すると、ゲーム内で自動付与されます。 - Part1/Part2の2回に分けて開催されます。 - 受取期間：",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 8.0
+   "ai_seconds": 7.7
   },
   {
    "source": "pokemapi",
@@ -421,12 +422,12 @@
    "chars_fetched": 2892,
    "chars_sent": 3621,
    "action": "analyzed",
-   "reason": "time_challenge+1; surprise_box+7",
+   "reason": "time_challenge+1",
    "error": null,
    "preview": "ハットとケープをつけた ピカチュウ new! トップハットをかぶった ズバット new! リボンをつけた ヤバチャ new! - 運が良ければ色違いのポケモンと",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 4.6
+   "ai_seconds": 6.0
   },
   {
    "source": "pokemapi",
@@ -439,12 +440,12 @@
    "chars_fetched": 1397,
    "chars_sent": 2258,
    "action": "analyzed",
-   "reason": "wilds+17; time_challenge+1",
+   "reason": "新情報なし",
    "error": null,
    "preview": "Pokémon Night Out タイムチャレンジ(1/2) 1 /2 | ポケストップ・ジム10個を回す ズリのみ x5 ポケモンを10匹捕まえる キズぐす",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 7.3
+   "ai_seconds": 2.7
   },
   {
    "source": "pokemapi",
@@ -462,7 +463,7 @@
    "preview": "ダイマックス ユクシー ダイマックス初登場! ダイマックス エムリット ダイマックス初登場! ダイマックス アグノム ダイマックス初登場! - 【地域限定】ユク",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 3.8
+   "ai_seconds": 7.6
   },
   {
    "source": "pokemapi",
@@ -475,12 +476,12 @@
    "chars_fetched": 1841,
    "chars_sent": 2484,
    "action": "analyzed",
-   "reason": "time_challenge+2",
+   "reason": "新情報なし",
    "error": null,
    "preview": "メテノ (りゅうせいのすがた) メテノ (あかいろのコア) メテノ (だいだいいろのコア) メテノ (きいろのコア) メテノ (みどりいろのコア) オリオン座流",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 17.6
+   "ai_seconds": 4.8
   },
   {
    "source": "pokemapi",
@@ -498,7 +499,7 @@
    "preview": "- 日本時間だと、2026/11/6(金)13時30分～2026/11/8(日)23時30分まで（目安です） サリーを着た ピカチュウ (スペシャル背景) (確",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 1.6
+   "ai_seconds": 6.0
   },
   {
    "source": "pokemapi",
@@ -511,12 +512,12 @@
    "chars_fetched": 1038,
    "chars_sent": 1695,
    "action": "analyzed",
-   "reason": "time_challenge+4",
+   "reason": "新情報なし",
    "error": null,
    "preview": "メグロコ 色違い確率up 最高CP 592 最低CP 546 - 「メグロコ」が2kmタマゴからたくさんかえりやすくなります。 - 色違いの「メグロコ」がタマゴ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 5.5
+   "ai_seconds": 5.2
   },
   {
    "source": "pokemapi",
@@ -529,12 +530,12 @@
    "chars_fetched": 2811,
    "chars_sent": 3278,
    "action": "analyzed",
-   "reason": "schedule+1; time_challenge+5",
+   "reason": "新情報なし",
    "error": null,
    "preview": "- 対象のadidas店舗を訪れて『Pokémon GO』を開くと、イベントにぴったりな「タイムチャレンジ」が受け取れます。 adidas Pokémon Ca",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 20.1
+   "ai_seconds": 6.0
   },
   {
    "source": "pokemapi",
@@ -552,7 +553,7 @@
    "preview": "アノクサ new! アノホラグサ new! - 進化条件：進化させたいアノクサを相棒にして20km歩く - 「アノクサ」は「GOパス」のタスクを達成すると出会え",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 2.0
+   "ai_seconds": 6.3
   },
   {
    "source": "pokemapi",
@@ -570,7 +571,7 @@
    "preview": "- 日本時間 2026/10/31(土)0時～2026/11/1(日)23時59分まで は、1日あたり獲得できる「GOポイント」の上限がなくなります。 - 「G",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 4.9
+   "ai_seconds": 4.7
   },
   {
    "source": "pokemapi",
@@ -583,12 +584,12 @@
    "chars_fetched": 1554,
    "chars_sent": 2227,
    "action": "analyzed",
-   "reason": "time_challenge+3",
+   "reason": "field_research+5",
    "error": null,
    "preview": "宇宙飛行ピカチュウ new! - 「宇宙飛行ピカチュウ」とは「レイドバトル」や「タイムチャレンジ」で出会えます。 - 運が良ければ色違いの「宇宙飛行ピカチュウ」",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 7.2
+   "ai_seconds": 6.8
   },
   {
    "source": "pokemapi",
@@ -601,12 +602,12 @@
    "chars_fetched": 1114,
    "chars_sent": 1493,
    "action": "analyzed",
-   "reason": "raids+1",
+   "reason": "新情報なし",
    "error": null,
    "preview": "- ポケモンGOとESA（欧州宇宙機関）が提携し、ヨーロッパ全土で宇宙と探査を祝う特別なイベントが開催されます。 - サイエンス・ミュージアム – ロンドン（イ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 5.0
+   "ai_seconds": 5.5
   },
   {
    "source": "pokemapi",
@@ -619,12 +620,12 @@
    "chars_fetched": 2552,
    "chars_sent": 3204,
    "action": "analyzed",
-   "reason": "raids+2",
+   "reason": "新情報なし",
    "error": null,
    "preview": "ゼルネアス ↑ 9/30(水)-10/6(火) (レイドアワー： 9/30(水)) イベルタル ↑ 10/7(水)-10/13(火) (レイドアワー： 10/7",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 6.3
+   "ai_seconds": 5.5
   },
   {
    "source": "pokemapi",
@@ -642,7 +643,7 @@
    "preview": "- 「ゾロア」が野生でいつもより多く出現します。 ゾロア ゾロアーク - 運が良ければ色違いの「ゾロア」や、「スペシャル背景」をともなう「ゾロア」とも出会えるか",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 7.4
+   "ai_seconds": 6.0
   },
   {
    "source": "pokemapi",
@@ -655,12 +656,12 @@
    "chars_fetched": 2931,
    "chars_sent": 3610,
    "action": "analyzed",
-   "reason": "time_challenge+22",
+   "reason": "新情報なし",
    "error": null,
    "preview": "- トレーナーごとに、「選択肢が4個あるバージョン（毎日分岐を選択できるバージョン）」「選択肢が3個あるバージョン（分岐を1回だけ選択できるバージョン）」のいず",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 4.7
+   "ai_seconds": 6.5
   },
   {
    "source": "pokemapi",
@@ -673,12 +674,12 @@
    "chars_fetched": 5462,
    "chars_sent": 6133,
    "action": "analyzed",
-   "reason": "wilds+28; raids+1",
+   "reason": "wilds+9",
    "error": null,
    "preview": "- 「各日10時～18時まで」が中心時間です。 - イベントのゲームプレイ内容は全て、チケットを持つトレーナーのみが楽しむことができます。 ジャケットを身にまと",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 9.0
+   "ai_seconds": 9.4
   },
   {
    "source": "pokemapi",
@@ -691,12 +692,12 @@
    "chars_fetched": 5456,
    "chars_sent": 6120,
    "action": "analyzed",
-   "reason": "wilds+13",
+   "reason": "新情報なし",
    "error": null,
    "preview": "- 「各日10時～18時まで」が中心時間です。 - イベントのゲームプレイ内容は全て、チケットを持つトレーナーのみが楽しむことができます。 ジャケットを身にまと",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 5.1
+   "ai_seconds": 4.6
   },
   {
    "source": "pokemapi",
@@ -709,12 +710,12 @@
    "chars_fetched": 4330,
    "chars_sent": 4886,
    "action": "analyzed",
-   "reason": "wilds+18",
+   "reason": "wilds+11",
    "error": null,
    "preview": "- 「各日10時～18時」が中心時間です。 - 以下の新登場のポケモンたちは、「ワイルドエリア2026：仙台・東北」「ワイルドエリア2026：メキシコ・メキシコ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 7.4
+   "ai_seconds": 9.4
   },
   {
    "source": "pokemapi",
@@ -727,12 +728,12 @@
    "chars_fetched": 4185,
    "chars_sent": 4857,
    "action": "analyzed",
-   "reason": "time_challenge+1",
+   "reason": "新情報なし",
    "error": null,
    "preview": "キョダイマックス エースバーン 色違いの キョダイマックス エースバーン 色違い初登場! リモートレイドの上限が 20回 に増加 ↑ (日本時間 2026/10",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 1.3
+   "ai_seconds": 1.7
   },
   {
    "source": "pokemapi",
@@ -750,7 +751,7 @@
    "preview": "色違いの シルシュルー 色違い初登場! 色違いの タギングル 色違い初登場! 色違いの マグマッグ 色違い確率up GOロケット団の出現率up (ポケストップ・",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 6.5
+   "ai_seconds": 5.5
   },
   {
    "source": "pokemapi",
@@ -763,12 +764,12 @@
    "chars_fetched": 3187,
    "chars_sent": 3860,
    "action": "analyzed",
-   "reason": "time_challenge+6",
+   "reason": "time_challenge+19",
    "error": null,
    "preview": "色違いの カジッチュ 色違い初登場! 色違いの アップリュー (すっぱいりんご×20) 色違い初登場! 色違いの カジッチュ 色違い初登場! 色違いの タルップ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 6.9
+   "ai_seconds": 7.2
   },
   {
    "source": "pokemapi",
@@ -781,12 +782,12 @@
    "chars_fetched": 2546,
    "chars_sent": 3215,
    "action": "analyzed",
-   "reason": "wilds+5; time_challenge+7",
+   "reason": "wilds+2",
    "error": null,
    "preview": "TVアニメコラボイベントボーナスタイムチャレンジ(1/1) 1 /1 | ポケモンを10匹捕まえる モンスターボール x10 ポケモンを20匹捕まえる モンスタ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 5.3
+   "ai_seconds": 5.9
   },
   {
    "source": "pokemapi",
@@ -799,12 +800,12 @@
    "chars_fetched": 1434,
    "chars_sent": 2100,
    "action": "analyzed",
-   "reason": "raids+1",
+   "reason": "新情報なし",
    "error": null,
    "preview": "メガムクホーク new! 色違いも初登場! 色違いの メガムクホーク 色違い初登場! ゲットチャレンジ 対象：ムクホーク 色違い確率up 通常 CP 1614 ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 5.9
+   "ai_seconds": 5.3
   },
   {
    "source": "pokemapi",
@@ -817,12 +818,12 @@
    "chars_fetched": 1432,
    "chars_sent": 2096,
    "action": "analyzed",
-   "reason": "wilds+4; raids+2; eggs+2",
+   "reason": "新情報なし",
    "error": null,
    "preview": "オラチフ new! マフィティフ new! - 「オラチフ」とはタマゴからかえしたり、「フィールドリサーチ」や「GOパス」で出会ったりすることができます。 - ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 5.9
+   "ai_seconds": 5.5
   },
   {
    "source": "pokemapi",
@@ -835,12 +836,12 @@
    "chars_fetched": 2127,
    "chars_sent": 2802,
    "action": "analyzed",
-   "reason": "wilds+1",
+   "reason": "新情報なし",
    "error": null,
    "preview": "- 「フカマル」が野生でいつもより多く出現します。 フカマル ガバイト ガブリアス メガガブリアス - 運が良ければ色違いの「フカマル」や、「スペシャル背景」を",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 4.6
+   "ai_seconds": 5.1
   },
   {
    "source": "pokemapi",
@@ -858,7 +859,7 @@
    "preview": "ホーム 「伝説のポケモンと出会う レジェンドリサーチ in日本橋＆八重洲」連動イベント｜日本時間 2026/9/9(水)～2026/11/29(日)まで ポケマ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 5.8
+   "ai_seconds": 6.0
   },
   {
    "source": "pokemapi",
@@ -871,12 +872,12 @@
    "chars_fetched": 4907,
    "chars_sent": 5569,
    "action": "analyzed",
-   "reason": "time_challenge+3",
+   "reason": "time_challenge+20",
    "error": null,
    "preview": "ボクレー 色違い確率up - 「フィールドリサーチ」、無料の「タイムチャレンジ」、有料の「タイムチャレンジ」で、きりかぶポケモンの「ボクレー」と出会えるチャンス",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 6.2
+   "ai_seconds": 7.6
   },
   {
    "source": "pokemapi",
@@ -889,12 +890,12 @@
    "chars_fetched": 1297,
    "chars_sent": 1940,
    "action": "analyzed",
-   "reason": "raids+1; time_challenge+1",
+   "reason": "time_challenge+1",
    "error": null,
    "preview": "ホーム 「ピカチュウのお出かけin韓国2026」（韓国全域）｜期間：韓国時間 2026/9/24(木)10時～9/26(土)20時まで ポケマピ 8月27日 =",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 6.1
+   "ai_seconds": 4.4
   },
   {
    "source": "pokemapi",
@@ -907,12 +908,12 @@
    "chars_fetched": 1061,
    "chars_sent": 1666,
    "action": "analyzed",
-   "reason": "新情報なし",
+   "reason": "time_challenge+1",
    "error": null,
    "preview": "オレンジ色のハンボクを 身にまとったピカチュウ new! 色違いも初登場! - 「オレンジ色のハンボクを身にまとったピカチュウ」とは、レイドバトル、タイムチャレ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 5.9
+   "ai_seconds": 5.4
   },
   {
    "source": "pokemapi",
@@ -930,7 +931,7 @@
    "preview": "- 日本時間 2026/10/3(土)0時～2026/10/4(日)23時59分まで は、1日あたり獲得できる「GOポイント」の上限がなくなります。 - 「GO",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 5.4
+   "ai_seconds": 5.2
   },
   {
    "source": "pokemapi",
@@ -943,12 +944,12 @@
    "chars_fetched": 3380,
    "chars_sent": 4031,
    "action": "analyzed",
-   "reason": "raids+17",
+   "reason": "raids+11",
    "error": null,
    "preview": "レジロック ↑ 8/26(水)-9/8(火) (レイドアワー： 8/26(水)) レジアイス ↑ 8/26(水)-9/8(火) (レイドアワー： 8/26(水)",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 6.5
+   "ai_seconds": 6.6
   },
   {
    "source": "pokemapi",
@@ -966,7 +967,7 @@
    "preview": "メガムクホーク new! メガシャンデラ new! ダイマックス サイホーン new! ダイマックス ニューラ new! ダイマックス ヤクデ new! ダイマ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 4.8
+   "ai_seconds": 4.9
   },
   {
    "source": "pokemapi",
@@ -979,12 +980,12 @@
    "chars_fetched": 1418,
    "chars_sent": 1955,
    "action": "analyzed",
-   "reason": "time_challenge+5",
+   "reason": "raids+1; time_challenge+3",
    "error": null,
    "preview": "- ポケモン30周年特別企画「ポケモンジェット 緑」の就航を記念して、日本全国の空港でANAとの特別なイベントが実施されます。 - 各空港に新しく設置されるジム",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 7.1
+   "ai_seconds": 6.5
   },
   {
    "source": "gamewith",
@@ -994,7 +995,7 @@
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
-   "chars_fetched": 1675110,
+   "chars_fetched": 1672675,
    "chars_sent": 0,
    "action": null,
    "reason": "記事リンク 1297 件",
@@ -1012,15 +1013,15 @@
    "http_status": 200,
    "article_updated": "2026-10-31T12:31:39+09:00",
    "date_kind": "modified",
-   "chars_fetched": 6024,
-   "chars_sent": 6168,
+   "chars_fetched": 6021,
+   "chars_sent": 6165,
    "action": "analyzed",
    "reason": "対象外の記事（イベント情報なし）",
    "error": null,
-   "preview": "### 【ポケモンGO】ゆふいんさんのGOバトルリーグレポート2026年10月第5週 - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ -",
+   "preview": "### 【ポケモンGO】ゆふいんさんのGOバトルリーグレポート2026年10月第5週 - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 5.7
+   "ai_calls": 2,
+   "ai_seconds": 5.9
   },
   {
    "source": "gamewith",
@@ -1030,15 +1031,15 @@
    "http_status": 200,
    "article_updated": "2026-10-31T03:55:24+09:00",
    "date_kind": "modified",
-   "chars_fetched": 6484,
-   "chars_sent": 6633,
+   "chars_fetched": 6481,
+   "chars_sent": 6630,
    "action": "analyzed",
    "reason": "新情報なし",
    "error": null,
-   "preview": "### 【ポケモンGO】GOパス大きな足跡のリワード内容と挑戦期間 - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロウィ",
+   "preview": "### 【ポケモンGO】GOパス大きな足跡のリワード内容と挑戦期間 - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中のイ",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 4.6
+   "ai_calls": 2,
+   "ai_seconds": 6.4
   },
   {
    "source": "gamewith",
@@ -1048,15 +1049,15 @@
    "http_status": 200,
    "article_updated": "2026-10-31T09:56:20+09:00",
    "date_kind": "modified",
-   "chars_fetched": 8527,
-   "chars_sent": 8675,
+   "chars_fetched": 8524,
+   "chars_sent": 8672,
    "action": "analyzed",
    "reason": "新情報なし",
    "error": null,
-   "preview": "### 【ポケモンGO】大きな足跡イベントの開催期間とボーナス - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロウィンイ",
+   "preview": "### 【ポケモンGO】大きな足跡イベントの開催期間とボーナス - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中のイベン",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 2.3
+   "ai_calls": 2,
+   "ai_seconds": 6.2
   },
   {
    "source": "gamewith",
@@ -1066,14 +1067,14 @@
    "http_status": 200,
    "article_updated": "2026-10-31T13:48:13+09:00",
    "date_kind": "modified",
-   "chars_fetched": 5604,
-   "chars_sent": 5738,
+   "chars_fetched": 5601,
+   "chars_sent": 5735,
    "action": "analyzed",
    "reason": "新情報なし",
    "error": null,
-   "preview": "### 【ポケモンGO】ポケモンナイトアウトTwitch配信タイムチャレンジの入手方法と報酬 - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登",
+   "preview": "### 【ポケモンGO】ポケモンナイトアウトTwitch配信タイムチャレンジの入手方法と報酬 - ポケモンGO最新情報 - 本日10時からハロウィンイベントパー",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
+   "ai_calls": 2,
    "ai_seconds": 6.3
   },
   {
@@ -1084,15 +1085,15 @@
    "http_status": 200,
    "article_updated": "2026-10-29T05:15:19+09:00",
    "date_kind": "modified",
-   "chars_fetched": 5304,
-   "chars_sent": 5456,
+   "chars_fetched": 5301,
+   "chars_sent": 5453,
    "action": "analyzed",
    "reason": "新情報なし",
    "error": null,
-   "preview": "### 【ポケモンGO】死者の日イベント2026(メキシコ)の開催期間とボーナス - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明",
+   "preview": "### 【ポケモンGO】死者の日イベント2026(メキシコ)の開催期間とボーナス - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ ",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 7.3
+   "ai_calls": 2,
+   "ai_seconds": 6.6
   },
   {
    "source": "gamewith",
@@ -1102,15 +1103,15 @@
    "http_status": 200,
    "article_updated": "2026-10-27T18:14:03+09:00",
    "date_kind": "modified",
-   "chars_fetched": 5720,
-   "chars_sent": 5855,
+   "chars_fetched": 5717,
+   "chars_sent": 5852,
    "action": "analyzed",
-   "reason": "time_challenge+1",
+   "reason": "新情報なし",
    "error": null,
-   "preview": "### 【ポケモンGO】死者の日2026特別イベント(メキシコ レフォルマ通り)の開催期間とボーナス - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダ",
+   "preview": "### 【ポケモンGO】死者の日2026特別イベント(メキシコ レフォルマ通り)の開催期間とボーナス - ポケモンGO最新情報 - 本日10時からハロウィンイベ",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 7.2
+   "ai_calls": 2,
+   "ai_seconds": 5.9
   },
   {
    "source": "gamewith",
@@ -1120,15 +1121,15 @@
    "http_status": 200,
    "article_updated": "2026-10-23T16:35:41+09:00",
    "date_kind": "modified",
-   "chars_fetched": 6231,
-   "chars_sent": 6376,
+   "chars_fetched": 6228,
+   "chars_sent": 6373,
    "action": "analyzed",
    "reason": "対象外の記事（イベント情報なし）",
    "error": null,
-   "preview": "### 【ポケモンGO】ゆふいんさんのGOバトルリーグレポート2026年10月第4週 - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ -",
+   "preview": "### 【ポケモンGO】ゆふいんさんのGOバトルリーグレポート2026年10月第4週 - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 7.0
+   "ai_calls": 2,
+   "ai_seconds": 5.7
   },
   {
    "source": "gamewith",
@@ -1138,14 +1139,14 @@
    "http_status": 200,
    "article_updated": "2026-10-31T02:54:15+09:00",
    "date_kind": "modified",
-   "chars_fetched": 9411,
-   "chars_sent": 9558,
+   "chars_fetched": 9408,
+   "chars_sent": 9555,
    "action": "analyzed",
    "reason": "新情報なし",
    "error": null,
-   "preview": "### 【ポケモンGO】コマタナコミュニティデイの開催期間とボーナス - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロウ",
+   "preview": "### 【ポケモンGO】コマタナコミュニティデイの開催期間とボーナス - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中の",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
+   "ai_calls": 2,
    "ai_seconds": 7.0
   },
   {
@@ -1156,15 +1157,15 @@
    "http_status": 200,
    "article_updated": "2026-10-21T09:29:19+09:00",
    "date_kind": "modified",
-   "chars_fetched": 6745,
-   "chars_sent": 6885,
+   "chars_fetched": 6742,
+   "chars_sent": 6882,
    "action": "analyzed",
    "reason": "新情報なし",
    "error": null,
-   "preview": "### 【ポケモンGO】GOパス11月(2026年)のリワード内容と挑戦期間 - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日か",
+   "preview": "### 【ポケモンGO】GOパス11月(2026年)のリワード内容と挑戦期間 - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - ",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 4.6
+   "ai_calls": 2,
+   "ai_seconds": 6.8
   },
   {
    "source": "gamewith",
@@ -1174,15 +1175,15 @@
    "http_status": 200,
    "article_updated": "2026-10-28T17:59:21+09:00",
    "date_kind": "modified",
-   "chars_fetched": 7033,
-   "chars_sent": 7172,
+   "chars_fetched": 7030,
+   "chars_sent": 7169,
    "action": "analyzed",
    "reason": "新情報なし",
    "error": null,
-   "preview": "### 【ポケモンGO】ポケモンナイトアウトの開催期間と内容 - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロウィンイベ",
+   "preview": "### 【ポケモンGO】ポケモンナイトアウトの開催期間と内容 - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中のイベント",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 6.8
+   "ai_calls": 2,
+   "ai_seconds": 6.0
   },
   {
    "source": "gamewith",
@@ -1192,15 +1193,15 @@
    "http_status": 200,
    "article_updated": "2026-10-20T12:55:52+09:00",
    "date_kind": "modified",
-   "chars_fetched": 6867,
-   "chars_sent": 7026,
+   "chars_fetched": 6864,
+   "chars_sent": 7023,
    "action": "analyzed",
    "reason": "対策: シャドウトルネロス(化身)",
    "error": null,
-   "preview": "### 【ポケモンGO】シャドウトルネロス(化身)レイド対策おすすめポケモン - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日か",
+   "preview": "### 【ポケモンGO】シャドウトルネロス(化身)レイド対策おすすめポケモン - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 6.6
+   "ai_seconds": 7.5
   },
   {
    "source": "gamewith",
@@ -1210,15 +1211,15 @@
    "http_status": 200,
    "article_updated": "2026-10-31T08:53:06+09:00",
    "date_kind": "modified",
-   "chars_fetched": 9350,
-   "chars_sent": 9484,
+   "chars_fetched": 9347,
+   "chars_sent": 9481,
    "action": "analyzed",
-   "reason": "新情報なし",
+   "reason": "raids+1",
    "error": null,
-   "preview": "### 【ポケモンGO】2026年11月のイベントスケジュールまとめ - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロウ",
+   "preview": "### 【ポケモンGO】2026年11月のイベントスケジュールまとめ - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中の",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 6.0
+   "ai_calls": 2,
+   "ai_seconds": 6.8
   },
   {
    "source": "gamewith",
@@ -1228,15 +1229,15 @@
    "http_status": 200,
    "article_updated": "2026-10-17T03:13:03+09:00",
    "date_kind": "modified",
-   "chars_fetched": 5117,
-   "chars_sent": 5258,
+   "chars_fetched": 5114,
+   "chars_sent": 5255,
    "action": "analyzed",
    "reason": "新情報なし",
    "error": null,
-   "preview": "### 【ポケモンGO】LAIC2027配信ボーナスタイムチャレンジの入手方法と報酬 - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ -",
+   "preview": "### 【ポケモンGO】LAIC2027配信ボーナスタイムチャレンジの入手方法と報酬 - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 6.5
+   "ai_calls": 2,
+   "ai_seconds": 6.3
   },
   {
    "source": "gamewith",
@@ -1246,15 +1247,15 @@
    "http_status": 200,
    "article_updated": "2026-10-16T14:32:37+09:00",
    "date_kind": "modified",
-   "chars_fetched": 6368,
-   "chars_sent": 6513,
+   "chars_fetched": 6365,
+   "chars_sent": 6510,
    "action": "analyzed",
    "reason": "対象外の記事（イベント情報なし）",
    "error": null,
-   "preview": "### 【ポケモンGO】ゆふいんさんのGOバトルリーグレポート2026年10月第3週 - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ -",
+   "preview": "### 【ポケモンGO】ゆふいんさんのGOバトルリーグレポート2026年10月第3週 - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 5.2
+   "ai_calls": 2,
+   "ai_seconds": 5.9
   },
   {
    "source": "gamewith",
@@ -1264,15 +1265,15 @@
    "http_status": 200,
    "article_updated": "2026-10-31T19:21:06+09:00",
    "date_kind": "modified",
-   "chars_fetched": 10376,
-   "chars_sent": 10547,
+   "chars_fetched": 10373,
+   "chars_sent": 10544,
    "action": "analyzed",
-   "reason": "raids+4",
+   "reason": "新情報なし",
    "error": null,
-   "preview": "### 【ポケモンGO】ワイルドウィーク(2026年)の開催期間とボーナス - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日から",
+   "preview": "### 【ポケモンGO】ワイルドウィーク(2026年)の開催期間とボーナス - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 6.9
+   "ai_calls": 2,
+   "ai_seconds": 5.8
   },
   {
    "source": "gamewith",
@@ -1282,15 +1283,15 @@
    "http_status": 200,
    "article_updated": "2026-10-30T02:33:32+09:00",
    "date_kind": "modified",
-   "chars_fetched": 6957,
-   "chars_sent": 7108,
+   "chars_fetched": 6954,
+   "chars_sent": 7105,
    "action": "analyzed",
    "reason": "新情報なし",
    "error": null,
-   "preview": "### 【ポケモンGO】GOパスワイルドウィーク(2026年)のリワード内容と挑戦期間 - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ ",
+   "preview": "### 【ポケモンGO】GOパスワイルドウィーク(2026年)のリワード内容と挑戦期間 - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 6.7
+   "ai_calls": 2,
+   "ai_seconds": 5.8
   },
   {
    "source": "gamewith",
@@ -1300,15 +1301,15 @@
    "http_status": 200,
    "article_updated": "2026-10-31T16:29:10+09:00",
    "date_kind": "modified",
-   "chars_fetched": 8184,
-   "chars_sent": 8350,
+   "chars_fetched": 8181,
+   "chars_sent": 8347,
    "action": "analyzed",
-   "reason": "time_challenge+1",
+   "reason": "time_challenge+1; 対策: メガシャンデラ",
    "error": null,
-   "preview": "### 【ポケモンGO】シャンデラのスーパーメガレイドデイの開催期間とボーナス - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日",
+   "preview": "### 【ポケモンGO】シャンデラのスーパーメガレイドデイの開催期間とボーナス - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ -",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 1.7
+   "ai_calls": 2,
+   "ai_seconds": 7.1
   },
   {
    "source": "gamewith",
@@ -1318,15 +1319,15 @@
    "http_status": 200,
    "article_updated": "2026-10-31T12:39:06+09:00",
    "date_kind": "modified",
-   "chars_fetched": 10086,
-   "chars_sent": 10245,
+   "chars_fetched": 10083,
+   "chars_sent": 10242,
    "action": "analyzed",
    "reason": "新情報なし",
    "error": null,
-   "preview": "### 【ポケモンGO】メガハロウィンカップSLver.のルールと参加可能ポケモン - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - ",
+   "preview": "### 【ポケモンGO】メガハロウィンカップSLver.のルールと参加可能ポケモン - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 5.3
+   "ai_calls": 2,
+   "ai_seconds": 6.1
   },
   {
    "source": "gamewith",
@@ -1336,15 +1337,15 @@
    "http_status": 200,
    "article_updated": "2026-10-11T12:07:22+09:00",
    "date_kind": "modified",
-   "chars_fetched": 6277,
-   "chars_sent": 6422,
+   "chars_fetched": 6274,
+   "chars_sent": 6419,
    "action": "analyzed",
    "reason": "対象外の記事（イベント情報なし）",
    "error": null,
-   "preview": "### 【ポケモンGO】ゆふいんさんのGOバトルリーグレポート2026年10月第2週 - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ -",
+   "preview": "### 【ポケモンGO】ゆふいんさんのGOバトルリーグレポート2026年10月第2週 - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 6.4
+   "ai_calls": 2,
+   "ai_seconds": 6.2
   },
   {
    "source": "gamewith",
@@ -1354,15 +1355,15 @@
    "http_status": 200,
    "article_updated": "2026-10-12T11:14:33+09:00",
    "date_kind": "modified",
-   "chars_fetched": 5217,
-   "chars_sent": 5373,
+   "chars_fetched": 5214,
+   "chars_sent": 5370,
    "action": "analyzed",
    "reason": "新情報なし",
    "error": null,
-   "preview": "### 【ポケモンGO】わくわくPokémon GO Lab.大調査の開催期間と内容 - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ -",
+   "preview": "### 【ポケモンGO】わくわくPokémon GO Lab.大調査の開催期間と内容 - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 4.6
+   "ai_calls": 2,
+   "ai_seconds": 7.2
   },
   {
    "source": "gamewith",
@@ -1372,15 +1373,15 @@
    "http_status": 200,
    "article_updated": "2026-10-31T19:10:04+09:00",
    "date_kind": "modified",
-   "chars_fetched": 6776,
-   "chars_sent": 6916,
+   "chars_fetched": 6773,
+   "chars_sent": 6913,
    "action": "analyzed",
    "reason": "新情報なし",
    "error": null,
-   "preview": "### 【ポケモンGO】ハロウィン2026パート2の開催期間とボーナス - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロ",
+   "preview": "### 【ポケモンGO】ハロウィン2026パート2の開催期間とボーナス - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 5.5
+   "ai_calls": 2,
+   "ai_seconds": 6.8
   },
   {
    "source": "gamewith",
@@ -1390,15 +1391,15 @@
    "http_status": 200,
    "article_updated": "2026-10-09T07:01:08+09:00",
    "date_kind": "modified",
-   "chars_fetched": 5169,
-   "chars_sent": 5321,
+   "chars_fetched": 5178,
+   "chars_sent": 5330,
    "action": "analyzed",
    "reason": "新情報なし",
    "error": null,
-   "preview": "### 【ポケモンGO】2026FCソウルイベント(韓国)の開催期間とボーナス - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日",
+   "preview": "### 【ポケモンGO】2026FCソウルイベント(韓国)の開催期間とボーナス - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ -",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 5.7
+   "ai_calls": 2,
+   "ai_seconds": 6.8
   },
   {
    "source": "gamewith",
@@ -1408,15 +1409,15 @@
    "http_status": 200,
    "article_updated": "2026-10-31T09:03:16+09:00",
    "date_kind": "modified",
-   "chars_fetched": 5417,
-   "chars_sent": 5578,
+   "chars_fetched": 5426,
+   "chars_sent": 5587,
    "action": "analyzed",
-   "reason": "time_challenge+2",
+   "reason": "新情報なし",
    "error": null,
-   "preview": "### 【ポケモンGO】イオンハロウィンイベントの開催期間とボーナス - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロウ",
+   "preview": "### 【ポケモンGO】イオンハロウィンイベントの開催期間とボーナス - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中の",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 6.4
+   "ai_calls": 2,
+   "ai_seconds": 7.1
   },
   {
    "source": "gamewith",
@@ -1426,15 +1427,15 @@
    "http_status": 200,
    "article_updated": "2026-10-29T22:20:22+09:00",
    "date_kind": "modified",
-   "chars_fetched": 8643,
-   "chars_sent": 8790,
+   "chars_fetched": 8652,
+   "chars_sent": 8799,
    "action": "analyzed",
-   "reason": "surprise_box+4",
+   "reason": "新情報なし",
    "error": null,
-   "preview": "### 【ポケモンGO】GOパスハロウィン2026のリワード内容と挑戦期間 - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日から",
+   "preview": "### 【ポケモンGO】GOパスハロウィン2026のリワード内容と挑戦期間 - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 3.5
+   "ai_calls": 2,
+   "ai_seconds": 7.0
   },
   {
    "source": "gamewith",
@@ -1444,15 +1445,15 @@
    "http_status": 200,
    "article_updated": "2026-10-31T11:21:09+09:00",
    "date_kind": "modified",
-   "chars_fetched": 8327,
-   "chars_sent": 8499,
+   "chars_fetched": 8336,
+   "chars_sent": 8508,
    "action": "analyzed",
-   "reason": "新情報なし",
+   "reason": "time_challenge+1",
    "error": null,
-   "preview": "### 【ポケモンGO】ハロウィン2026パート1の開催期間とボーナス - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロ",
+   "preview": "### 【ポケモンGO】ハロウィン2026パート1の開催期間とボーナス - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 7.3
+   "ai_calls": 2,
+   "ai_seconds": 6.1
   },
   {
    "source": "gamewith",
@@ -1462,15 +1463,15 @@
    "http_status": 200,
    "article_updated": "2026-10-25T17:52:14+09:00",
    "date_kind": "modified",
-   "chars_fetched": 7807,
-   "chars_sent": 7990,
+   "chars_fetched": 7816,
+   "chars_sent": 7999,
    "action": "analyzed",
-   "reason": "time_challenge+1",
+   "reason": "新情報なし; 対策: ダイマックスユクシー、ダイマックスアグノム、ダイマックスエムリット",
    "error": null,
-   "preview": "### 【ポケモンGO】ダイマックスユクシー・エムリット・アグノムのマックスバトルデイの期間とボーナス - ポケモンGO最新情報 - 大きな足跡イベントでムゲン",
+   "preview": "### 【ポケモンGO】ダイマックスユクシー・エムリット・アグノムのマックスバトルデイの期間とボーナス - ポケモンGO最新情報 - 本日10時からハロウィンイ",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 6.6
+   "ai_calls": 2,
+   "ai_seconds": 7.1
   },
   {
    "source": "gamewith",
@@ -1480,15 +1481,15 @@
    "http_status": 200,
    "article_updated": "2026-10-25T12:02:10+09:00",
    "date_kind": "modified",
-   "chars_fetched": 5997,
-   "chars_sent": 6130,
+   "chars_fetched": 6006,
+   "chars_sent": 6139,
    "action": "analyzed",
    "reason": "新情報なし",
    "error": null,
-   "preview": "### 【ポケモンGO】メテノシャワーの開催期間と内容 - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロウィンイベントパ",
+   "preview": "### 【ポケモンGO】メテノシャワーの開催期間と内容 - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中のイベント情報 ",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 5.7
+   "ai_calls": 2,
+   "ai_seconds": 5.5
   },
   {
    "source": "gamewith",
@@ -1498,15 +1499,15 @@
    "http_status": 200,
    "article_updated": "2026-10-28T11:34:23+09:00",
    "date_kind": "modified",
-   "chars_fetched": 7559,
-   "chars_sent": 7703,
+   "chars_fetched": 7568,
+   "chars_sent": 7712,
    "action": "analyzed",
-   "reason": "対策: ダイマックスヤミラミ",
+   "reason": "対策: ヤミラミ",
    "error": null,
-   "preview": "### 【ポケモンGO】ダイマックスヤミラミ対策おすすめポケモン - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロウィン",
+   "preview": "### 【ポケモンGO】ダイマックスヤミラミ対策おすすめポケモン - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中のイベ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 3.9
+   "ai_seconds": 7.2
   },
   {
    "source": "gamewith",
@@ -1516,15 +1517,15 @@
    "http_status": 200,
    "article_updated": "2026-10-01T22:20:33+09:00",
    "date_kind": "modified",
-   "chars_fetched": 4970,
-   "chars_sent": 5141,
-   "action": "analyzed",
-   "reason": "time_challenge+1",
+   "chars_fetched": 4979,
+   "chars_sent": 0,
+   "action": "skipped_budget",
+   "reason": "1回の実行時間の上限のため次回に回しました（未解析のまま・ハッシュ未保存）",
    "error": null,
-   "preview": "### 【ポケモンGO】ポケモンカードゲーム30周年記念イベント(アメリカ)の開催期間と場所 - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登",
-   "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 6.5
+   "preview": "### 【ポケモンGO】ポケモンカードゲーム30周年記念イベント(アメリカ)の開催期間と場所 - ポケモンGO最新情報 - 本日10時からハロウィンイベントパー",
+   "model": null,
+   "ai_calls": null,
+   "ai_seconds": null
   },
   {
    "source": "gamewith",
@@ -1534,12 +1535,12 @@
    "http_status": 200,
    "article_updated": "2026-09-28T00:58:22+09:00",
    "date_kind": "modified",
-   "chars_fetched": 6027,
+   "chars_fetched": 6036,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
    "error": null,
-   "preview": "### 【ポケモンGO】光の祭典(インド)の開催期間とボーナス - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロウィンイ",
+   "preview": "### 【ポケモンGO】光の祭典(インド)の開催期間とボーナス - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中のイベン",
    "model": null,
    "ai_calls": null,
    "ai_seconds": null
@@ -1552,15 +1553,15 @@
    "http_status": 200,
    "article_updated": "2026-10-19T05:51:45+09:00",
    "date_kind": "modified",
-   "chars_fetched": 6567,
-   "chars_sent": 6707,
+   "chars_fetched": 6576,
+   "chars_sent": 6716,
    "action": "analyzed",
    "reason": "新情報なし",
    "error": null,
-   "preview": "### 【ポケモンGO】メグロコふかの日の開催期間とボーナス - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロウィンイベ",
+   "preview": "### 【ポケモンGO】メグロコふかの日の開催期間とボーナス - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中のイベント",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 6.5
+   "ai_calls": 2,
+   "ai_seconds": 5.7
   },
   {
    "source": "gamewith",
@@ -1570,15 +1571,15 @@
    "http_status": 200,
    "article_updated": "2026-10-31T05:55:11+09:00",
    "date_kind": "modified",
-   "chars_fetched": 7139,
-   "chars_sent": 7289,
+   "chars_fetched": 7148,
+   "chars_sent": 7298,
    "action": "analyzed",
    "reason": "新情報なし",
    "error": null,
-   "preview": "### 【ポケモンGO】ADIDAS POKÉMONのタイムチャレンジの入手方法と対象店舗 - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場",
+   "preview": "### 【ポケモンGO】ADIDAS POKÉMONのタイムチャレンジの入手方法と対象店舗 - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 6.6
+   "ai_calls": 2,
+   "ai_seconds": 7.0
   },
   {
    "source": "gamewith",
@@ -1588,15 +1589,15 @@
    "http_status": 200,
    "article_updated": "2026-10-17T23:07:03+09:00",
    "date_kind": "modified",
-   "chars_fetched": 7379,
-   "chars_sent": 7527,
+   "chars_fetched": 7388,
+   "chars_sent": 7536,
    "action": "analyzed",
-   "reason": "新情報なし",
+   "reason": "field_research+3",
    "error": null,
-   "preview": "### 【ポケモンGO】GOパス秋の遠足のリワード内容と挑戦期間 - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロウィン",
+   "preview": "### 【ポケモンGO】GOパス秋の遠足のリワード内容と挑戦期間 - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中のイベ",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 5.3
+   "ai_calls": 2,
+   "ai_seconds": 7.0
   },
   {
    "source": "gamewith",
@@ -1606,12 +1607,12 @@
    "http_status": 200,
    "article_updated": "2026-09-28T05:37:16+09:00",
    "date_kind": "modified",
-   "chars_fetched": 4389,
+   "chars_fetched": 4398,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
    "error": null,
-   "preview": "### 【ポケモンGO】GOツアー2027の開催期間と場所 - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロウィンイベン",
+   "preview": "### 【ポケモンGO】GOツアー2027の開催期間と場所 - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中のイベント情",
    "model": null,
    "ai_calls": null,
    "ai_seconds": null
@@ -1624,15 +1625,15 @@
    "http_status": 200,
    "article_updated": "2026-10-22T03:58:24+09:00",
    "date_kind": "modified",
-   "chars_fetched": 7398,
-   "chars_sent": 7560,
+   "chars_fetched": 7407,
+   "chars_sent": 7569,
    "action": "analyzed",
-   "reason": "time_challenge+4",
+   "reason": "field_research+1",
    "error": null,
-   "preview": "### 【ポケモンGO】秋の遠足相棒といっしょの開催期間とボーナス - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロウィ",
+   "preview": "### 【ポケモンGO】秋の遠足相棒といっしょの開催期間とボーナス - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中のイ",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 5.3
+   "ai_calls": 2,
+   "ai_seconds": 8.5
   },
   {
    "source": "gamewith",
@@ -1642,12 +1643,12 @@
    "http_status": 200,
    "article_updated": "2026-09-28T16:20:32+09:00",
    "date_kind": "modified",
-   "chars_fetched": 7880,
+   "chars_fetched": 7889,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
    "error": null,
-   "preview": "### 【ポケモンGO】選べるタイムチャレンジ：黄昏の旅路の内容とボーナス - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日から",
+   "preview": "### 【ポケモンGO】選べるタイムチャレンジ：黄昏の旅路の内容とボーナス - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開",
    "model": null,
    "ai_calls": null,
    "ai_seconds": null
@@ -1660,15 +1661,15 @@
    "http_status": 200,
    "article_updated": "2026-10-07T19:13:19+09:00",
    "date_kind": "modified",
-   "chars_fetched": 10797,
-   "chars_sent": 10939,
+   "chars_fetched": 10806,
+   "chars_sent": 10948,
    "action": "analyzed",
-   "reason": "未知のイベントID 'ev-auto-go-pass-october-2026' を無視しました",
+   "reason": "新情報なし",
    "error": null,
-   "preview": "### 【ポケモンGO】GOパス10月のリワード内容と挑戦期間 - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロウィンイ",
+   "preview": "### 【ポケモンGO】GOパス10月のリワード内容と挑戦期間 - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中のイベン",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 5.5
+   "ai_calls": 2,
+   "ai_seconds": 6.6
   },
   {
    "source": "gamewith",
@@ -1678,15 +1679,15 @@
    "http_status": 200,
    "article_updated": "2026-10-13T01:47:15+09:00",
    "date_kind": "modified",
-   "chars_fetched": 4961,
-   "chars_sent": 5084,
+   "chars_fetched": 4970,
+   "chars_sent": 5093,
    "action": "analyzed",
    "reason": "新情報なし",
    "error": null,
-   "preview": "### 【ポケモンGO】世界宇宙週間2026イベントの開催期間と内容 - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロウ",
+   "preview": "### 【ポケモンGO】世界宇宙週間2026イベントの開催期間と内容 - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中の",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 7.3
+   "ai_calls": 2,
+   "ai_seconds": 5.1
   },
   {
    "source": "gamewith",
@@ -1696,15 +1697,15 @@
    "http_status": 200,
    "article_updated": "2026-10-05T12:30:08+09:00",
    "date_kind": "modified",
-   "chars_fetched": 6333,
-   "chars_sent": 6500,
+   "chars_fetched": 6342,
+   "chars_sent": 6509,
    "action": "analyzed",
    "reason": "新情報なし",
    "error": null,
-   "preview": "### 【ポケモンGO】欧州宇宙機関(ESA)コラボイベント(欧州)の開催期間とボーナス - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！",
+   "preview": "### 【ポケモンGO】欧州宇宙機関(ESA)コラボイベント(欧州)の開催期間とボーナス - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 4.7
+   "ai_calls": 2,
+   "ai_seconds": 6.3
   },
   {
    "source": "gamewith",
@@ -1714,12 +1715,12 @@
    "http_status": 200,
    "article_updated": "2026-09-22T18:08:47+09:00",
    "date_kind": "modified",
-   "chars_fetched": 6911,
+   "chars_fetched": 6920,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
    "error": null,
-   "preview": "### 【ポケモンGO】シャドウランドロスレイド対策おすすめポケモン - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロウ",
+   "preview": "### 【ポケモンGO】シャドウランドロスレイド対策おすすめポケモン - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中の",
    "model": null,
    "ai_calls": null,
    "ai_seconds": null
@@ -1732,15 +1733,15 @@
    "http_status": 200,
    "article_updated": "2026-10-28T06:35:08+09:00",
    "date_kind": "modified",
-   "chars_fetched": 9191,
-   "chars_sent": 9325,
+   "chars_fetched": 9200,
+   "chars_sent": 9334,
    "action": "analyzed",
-   "reason": "raids+1",
+   "reason": "raids+7",
    "error": null,
-   "preview": "### 【ポケモンGO】2026年10月のイベントスケジュールまとめ - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロウ",
+   "preview": "### 【ポケモンGO】2026年10月のイベントスケジュールまとめ - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中の",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 7.3
+   "ai_calls": 2,
+   "ai_seconds": 5.9
   },
   {
    "source": "gamewith",
@@ -1750,14 +1751,14 @@
    "http_status": 200,
    "article_updated": "2026-10-22T12:00:48+09:00",
    "date_kind": "modified",
-   "chars_fetched": 8794,
-   "chars_sent": 8944,
+   "chars_fetched": 8803,
+   "chars_sent": 8953,
    "action": "analyzed",
-   "reason": "新情報なし",
+   "reason": "field_research+2",
    "error": null,
-   "preview": "### 【ポケモンGO】ゾロアコミュニティデイの開催期間とボーナス - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロウィ",
+   "preview": "### 【ポケモンGO】ゾロアコミュニティデイの開催期間とボーナス - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中のイ",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
+   "ai_calls": 2,
    "ai_seconds": 7.2
   },
   {
@@ -1768,12 +1769,12 @@
    "http_status": 200,
    "article_updated": "2026-09-15T14:10:09+09:00",
    "date_kind": "modified",
-   "chars_fetched": 5581,
+   "chars_fetched": 5590,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
    "error": null,
-   "preview": "### 【ポケモンGO】Patterns of the Wild(インドネシア)の期間とボーナス - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ",
+   "preview": "### 【ポケモンGO】Patterns of the Wild(インドネシア)の期間とボーナス - ポケモンGO最新情報 - 本日10時からハロウィンイベント",
    "model": null,
    "ai_calls": null,
    "ai_seconds": null
@@ -1786,12 +1787,12 @@
    "http_status": 200,
    "article_updated": "2026-09-14T12:28:19+09:00",
    "date_kind": "modified",
-   "chars_fetched": 5128,
+   "chars_fetched": 5132,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
    "error": null,
-   "preview": "### 【ポケモンGO】ドン・キホーテキャンペーンの期間と内容 | 黄昏の旅路シーズン - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ ",
+   "preview": "### 【ポケモンGO】ドン・キホーテキャンペーンの期間と内容 | 黄昏の旅路シーズン - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開",
    "model": null,
    "ai_calls": null,
    "ai_seconds": null
@@ -1804,15 +1805,15 @@
    "http_status": 200,
    "article_updated": "2026-10-06T14:14:21+09:00",
    "date_kind": "modified",
-   "chars_fetched": 7707,
-   "chars_sent": 7874,
+   "chars_fetched": 7711,
+   "chars_sent": 7878,
    "action": "analyzed",
    "reason": "新情報なし",
    "error": null,
-   "preview": "### 【ポケモンGO】ファミリーマートパートナーリサーチ入手方法 | 黄昏の旅路シーズン - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場",
+   "preview": "### 【ポケモンGO】ファミリーマートパートナーリサーチ入手方法 | 黄昏の旅路シーズン - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 5.0
+   "ai_calls": 2,
+   "ai_seconds": 5.7
   },
   {
    "source": "gamewith",
@@ -1822,15 +1823,15 @@
    "http_status": 200,
    "article_updated": "2026-10-31T16:49:33+09:00",
    "date_kind": "modified",
-   "chars_fetched": 11066,
-   "chars_sent": 11232,
+   "chars_fetched": 11070,
+   "chars_sent": 11236,
    "action": "analyzed",
-   "reason": "raids+2",
+   "reason": "新情報なし",
    "error": null,
-   "preview": "### 【ポケモンGO】ワイルドエリア2026グローバルの開催期間とボーナス - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日か",
+   "preview": "### 【ポケモンGO】ワイルドエリア2026グローバルの開催期間とボーナス - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - ",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 10.7
+   "ai_calls": 2,
+   "ai_seconds": 11.4
   },
   {
    "source": "gamewith",
@@ -1840,15 +1841,15 @@
    "http_status": 200,
    "article_updated": "2026-10-06T10:48:17+09:00",
    "date_kind": "modified",
-   "chars_fetched": 6399,
-   "chars_sent": 6579,
+   "chars_fetched": 6403,
+   "chars_sent": 6583,
    "action": "analyzed",
-   "reason": "新情報なし",
+   "reason": "field_research+7; 対策: キョダイマックスエースバーン",
    "error": null,
-   "preview": "### 【ポケモンGO】キョダイマックスエースバーンのマックスバトルデイの期間とボーナス - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！",
+   "preview": "### 【ポケモンGO】キョダイマックスエースバーンのマックスバトルデイの期間とボーナス - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 5.6
+   "ai_calls": 2,
+   "ai_seconds": 7.7
   },
   {
    "source": "gamewith",
@@ -1858,15 +1859,15 @@
    "http_status": 200,
    "article_updated": "2026-10-02T06:18:51+09:00",
    "date_kind": "modified",
-   "chars_fetched": 7608,
-   "chars_sent": 7737,
-   "action": "analyzed",
-   "reason": "新情報なし",
+   "chars_fetched": 7612,
+   "chars_sent": 0,
+   "action": "skipped_budget",
+   "reason": "1回の実行時間の上限のため次回に回しました（未解析のまま・ハッシュ未保存）",
    "error": null,
-   "preview": "### 【ポケモンGO】GOパス収穫祭のリワード内容と挑戦期間 - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロウィンイ",
-   "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 4.6
+   "preview": "### 【ポケモンGO】GOパス収穫祭のリワード内容と挑戦期間 - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中のイベン",
+   "model": null,
+   "ai_calls": null,
+   "ai_seconds": null
   },
   {
    "source": "gamewith",
@@ -1876,15 +1877,15 @@
    "http_status": 200,
    "article_updated": "2026-10-06T10:13:45+09:00",
    "date_kind": "modified",
-   "chars_fetched": 8675,
-   "chars_sent": 8817,
+   "chars_fetched": 8679,
+   "chars_sent": 8821,
    "action": "analyzed",
    "reason": "新情報なし",
    "error": null,
-   "preview": "### 【ポケモンGO】収穫祭占拠イベントの開催期間とボーナス - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロウィンイ",
+   "preview": "### 【ポケモンGO】収穫祭占拠イベントの開催期間とボーナス - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中のイベン",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 6.9
+   "ai_calls": 2,
+   "ai_seconds": 6.7
   },
   {
    "source": "gamewith",
@@ -1894,15 +1895,15 @@
    "http_status": 200,
    "article_updated": "2026-10-06T02:52:33+09:00",
    "date_kind": "modified",
-   "chars_fetched": 7267,
-   "chars_sent": 7394,
+   "chars_fetched": 7271,
+   "chars_sent": 7398,
    "action": "analyzed",
    "reason": "新情報なし",
    "error": null,
-   "preview": "### 【ポケモンGO】収穫祭カジッチュ集めの開催期間とボーナス - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロウィン",
+   "preview": "### 【ポケモンGO】収穫祭カジッチュ集めの開催期間とボーナス - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中のイベ",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 5.2
+   "ai_calls": 2,
+   "ai_seconds": 7.1
   },
   {
    "source": "gamewith",
@@ -1912,12 +1913,12 @@
    "http_status": 200,
    "article_updated": "2026-09-20T09:44:59+09:00",
    "date_kind": "modified",
-   "chars_fetched": 7639,
+   "chars_fetched": 7643,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
    "error": null,
-   "preview": "### 【ポケモンGO】GOパスコラボセレブレーションのリワード内容と挑戦期間 - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日",
+   "preview": "### 【ポケモンGO】GOパスコラボセレブレーションのリワード内容と挑戦期間 - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ -",
    "model": null,
    "ai_calls": null,
    "ai_seconds": null
@@ -1930,12 +1931,12 @@
    "http_status": 200,
    "article_updated": "2026-09-23T10:11:05+09:00",
    "date_kind": "modified",
-   "chars_fetched": 9575,
+   "chars_fetched": 9579,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
    "error": null,
-   "preview": "### 【ポケモンGO】テレビアニメコラボ2026の開催期間とボーナス - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロ",
+   "preview": "### 【ポケモンGO】テレビアニメコラボ2026の開催期間とボーナス - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中",
    "model": null,
    "ai_calls": null,
    "ai_seconds": null
@@ -1948,12 +1949,12 @@
    "http_status": 200,
    "article_updated": "2026-09-20T16:54:22+09:00",
    "date_kind": "modified",
-   "chars_fetched": 7895,
+   "chars_fetched": 7899,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
    "error": null,
-   "preview": "### 【ポケモンGO】ムクホークのスーパーメガレイドデイの開催期間とボーナス - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日",
+   "preview": "### 【ポケモンGO】ムクホークのスーパーメガレイドデイの開催期間とボーナス - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ -",
    "model": null,
    "ai_calls": null,
    "ai_seconds": null
@@ -1966,12 +1967,12 @@
    "http_status": 200,
    "article_updated": "2026-09-11T10:32:07+09:00",
    "date_kind": "modified",
-   "chars_fetched": 7585,
+   "chars_fetched": 7589,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
    "error": null,
-   "preview": "### 【ポケモンGO】GOパスチームメガのリワード内容と挑戦期間 - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロウィ",
+   "preview": "### 【ポケモンGO】GOパスチームメガのリワード内容と挑戦期間 - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中のイ",
    "model": null,
    "ai_calls": null,
    "ai_seconds": null
@@ -1984,12 +1985,12 @@
    "http_status": 200,
    "article_updated": "2026-09-15T18:28:04+09:00",
    "date_kind": "modified",
-   "chars_fetched": 8741,
+   "chars_fetched": 8745,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
    "error": null,
-   "preview": "### 【ポケモンGO】チームメガの開催期間とボーナス - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロウィンイベントパ",
+   "preview": "### 【ポケモンGO】チームメガの開催期間とボーナス - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中のイベント情報 ",
    "model": null,
    "ai_calls": null,
    "ai_seconds": null
@@ -2002,12 +2003,12 @@
    "http_status": 200,
    "article_updated": "2026-09-14T14:14:29+09:00",
    "date_kind": "modified",
-   "chars_fetched": 8859,
+   "chars_fetched": 8863,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
    "error": null,
-   "preview": "### 【ポケモンGO】フカマル復刻コミュニティデイの開催期間とボーナス - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハ",
+   "preview": "### 【ポケモンGO】フカマル復刻コミュニティデイの開催期間とボーナス - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催",
    "model": null,
    "ai_calls": null,
    "ai_seconds": null
@@ -2020,15 +2021,15 @@
    "http_status": 200,
    "article_updated": "2026-10-31T09:51:10+09:00",
    "date_kind": "modified",
-   "chars_fetched": 10262,
-   "chars_sent": 10397,
+   "chars_fetched": 10266,
+   "chars_sent": 10401,
    "action": "analyzed",
-   "reason": "field_research+1",
+   "reason": "新情報なし",
    "error": null,
-   "preview": "### 【ポケモンGO】GOバトルリーグ黄昏の旅路シーズンのスケジュールと調整内容 - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - ",
+   "preview": "### 【ポケモンGO】GOバトルリーグ黄昏の旅路シーズンのスケジュールと調整内容 - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 5.5
+   "ai_calls": 2,
+   "ai_seconds": 6.3
   },
   {
    "source": "gamewith",
@@ -2038,12 +2039,12 @@
    "http_status": 200,
    "article_updated": "2026-09-19T22:38:20+09:00",
    "date_kind": "modified",
-   "chars_fetched": 5813,
+   "chars_fetched": 5817,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
    "error": null,
-   "preview": "### 【ポケモンGO】2026ピカチュウの秋ピクニック(韓国)の開催期間とボーナス - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ -",
+   "preview": "### 【ポケモンGO】2026ピカチュウの秋ピクニック(韓国)の開催期間とボーナス - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催",
    "model": null,
    "ai_calls": null,
    "ai_seconds": null
@@ -2056,12 +2057,12 @@
    "http_status": 200,
    "article_updated": "2026-09-27T20:52:07+09:00",
    "date_kind": "modified",
-   "chars_fetched": 5435,
+   "chars_fetched": 5439,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
    "error": null,
-   "preview": "### 【ポケモンGO】2026ピカチュウの韓国おでかけイベント(韓国)の期間とボーナス - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！",
+   "preview": "### 【ポケモンGO】2026ピカチュウの韓国おでかけイベント(韓国)の期間とボーナス - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2",
    "model": null,
    "ai_calls": null,
    "ai_seconds": null
@@ -2074,12 +2075,12 @@
    "http_status": 200,
    "article_updated": "2026-09-27T11:39:21+09:00",
    "date_kind": "modified",
-   "chars_fetched": 5937,
+   "chars_fetched": 5941,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
    "error": null,
-   "preview": "### 【ポケモンGO】ボクレーマスタリーシリーズの開催期間とボーナス - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロ",
+   "preview": "### 【ポケモンGO】ボクレーマスタリーシリーズの開催期間とボーナス - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中",
    "model": null,
    "ai_calls": null,
    "ai_seconds": null
@@ -2092,15 +2093,15 @@
    "http_status": 200,
    "article_updated": "2026-10-07T10:21:19+09:00",
    "date_kind": "modified",
-   "chars_fetched": 7076,
-   "chars_sent": 7235,
+   "chars_fetched": 7080,
+   "chars_sent": 7239,
    "action": "analyzed",
    "reason": "対策: シャドウボルトロス(化身)",
    "error": null,
-   "preview": "### 【ポケモンGO】シャドウボルトロス(化身)レイド対策おすすめポケモン - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日か",
+   "preview": "### 【ポケモンGO】シャドウボルトロス(化身)レイド対策おすすめポケモン - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 8.3
+   "ai_seconds": 7.1
   },
   {
    "source": "gamewith",
@@ -2110,15 +2111,15 @@
    "http_status": 200,
    "article_updated": "2026-10-02T11:32:30+09:00",
    "date_kind": "modified",
-   "chars_fetched": 10204,
-   "chars_sent": 10336,
-   "action": "analyzed",
-   "reason": "raids+3",
+   "chars_fetched": 10208,
+   "chars_sent": 0,
+   "action": "skipped_budget",
+   "reason": "1回の実行時間の上限のため次回に回しました（未解析のまま・ハッシュ未保存）",
    "error": null,
-   "preview": "### 【ポケモンGO】2026年9月のイベントスケジュールまとめ - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロウィ",
-   "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 7.4
+   "preview": "### 【ポケモンGO】2026年9月のイベントスケジュールまとめ - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中のイ",
+   "model": null,
+   "ai_calls": null,
+   "ai_seconds": null
   },
   {
    "source": "gamewith",
@@ -2128,12 +2129,12 @@
    "http_status": 200,
    "article_updated": "2026-09-09T06:26:10+09:00",
    "date_kind": "modified",
-   "chars_fetched": 10785,
+   "chars_fetched": 10789,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
    "error": null,
-   "preview": "### 【ポケモンGO】GOパス9月のリワード内容と挑戦期間 - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロウィンイベ",
+   "preview": "### 【ポケモンGO】GOパス9月のリワード内容と挑戦期間 - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中のイベント",
    "model": null,
    "ai_calls": null,
    "ai_seconds": null
@@ -2146,12 +2147,12 @@
    "http_status": 200,
    "article_updated": "2026-09-18T12:23:32+09:00",
    "date_kind": "modified",
-   "chars_fetched": 6369,
+   "chars_fetched": 6373,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
    "error": null,
-   "preview": "### 【ポケモンGO】黄昏の旅路シーズンの期間とボーナス - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロウィンイベン",
+   "preview": "### 【ポケモンGO】黄昏の旅路シーズンの期間とボーナス - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中のイベント情",
    "model": null,
    "ai_calls": null,
    "ai_seconds": null
@@ -2164,15 +2165,15 @@
    "http_status": 200,
    "article_updated": "2026-10-01T05:50:11+09:00",
    "date_kind": "modified",
-   "chars_fetched": 6811,
-   "chars_sent": 6951,
-   "action": "analyzed",
-   "reason": "time_challenge+1",
+   "chars_fetched": 6815,
+   "chars_sent": 0,
+   "action": "skipped_budget",
+   "reason": "1回の実行時間の上限のため次回に回しました（未解析のまま・ハッシュ未保存）",
    "error": null,
-   "preview": "### 【ポケモンGO】おつきみダンス(2026年)の開催期間とボーナス - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハ",
-   "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 6.2
+   "preview": "### 【ポケモンGO】おつきみダンス(2026年)の開催期間とボーナス - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催",
+   "model": null,
+   "ai_calls": null,
+   "ai_seconds": null
   },
   {
    "source": "gamewith",
@@ -2182,12 +2183,12 @@
    "http_status": 200,
    "article_updated": "2026-09-07T00:07:00+09:00",
    "date_kind": "modified",
-   "chars_fetched": 4835,
+   "chars_fetched": 4839,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
    "error": null,
-   "preview": "### 【ポケモンGO】10周年セレブレーションの開催期間と内容 - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロウィン",
+   "preview": "### 【ポケモンGO】10周年セレブレーションの開催期間と内容 - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中のイベ",
    "model": null,
    "ai_calls": null,
    "ai_seconds": null
@@ -2200,12 +2201,12 @@
    "http_status": 200,
    "article_updated": "2026-09-07T23:00:40+09:00",
    "date_kind": "modified",
-   "chars_fetched": 23971,
+   "chars_fetched": 23975,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
    "error": null,
-   "preview": "### 【ポケモンGO】GOパスメガフィナーレのリワード内容と挑戦期間 - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロ",
+   "preview": "### 【ポケモンGO】GOパスメガフィナーレのリワード内容と挑戦期間 - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中",
    "model": null,
    "ai_calls": null,
    "ai_seconds": null
@@ -2218,12 +2219,12 @@
    "http_status": 200,
    "article_updated": "2026-09-07T19:53:24+09:00",
    "date_kind": "modified",
-   "chars_fetched": 9663,
+   "chars_fetched": 9667,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
    "error": null,
-   "preview": "### 【ポケモンGO】メガアセンションの開催期間とボーナス - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロウィンイベ",
+   "preview": "### 【ポケモンGO】メガアセンションの開催期間とボーナス - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中のイベント",
    "model": null,
    "ai_calls": null,
    "ai_seconds": null
@@ -2236,12 +2237,12 @@
    "http_status": 200,
    "article_updated": "2026-08-14T15:06:05+09:00",
    "date_kind": "modified",
-   "chars_fetched": 8822,
+   "chars_fetched": 8826,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
    "error": null,
-   "preview": "### 【ポケモンGO】選べるタイムチャレンジ：どく＆くさの内容とボーナス - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日から",
+   "preview": "### 【ポケモンGO】選べるタイムチャレンジ：どく＆くさの内容とボーナス - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開",
    "model": null,
    "ai_calls": null,
    "ai_seconds": null
@@ -2254,12 +2255,12 @@
    "http_status": 200,
    "article_updated": "2026-08-30T12:20:12+09:00",
    "date_kind": "modified",
-   "chars_fetched": 8041,
+   "chars_fetched": 8045,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
    "error": null,
-   "preview": "### 【ポケモンGO】GOパスポケモンXP＆チャンピオンシップス2026のリワード内容と挑戦期間 - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイ",
+   "preview": "### 【ポケモンGO】GOパスポケモンXP＆チャンピオンシップス2026のリワード内容と挑戦期間 - ポケモンGO最新情報 - 本日10時からハロウィンイベン",
    "model": null,
    "ai_calls": null,
    "ai_seconds": null
@@ -2272,12 +2273,12 @@
    "http_status": 200,
    "article_updated": "2026-08-31T05:52:15+09:00",
    "date_kind": "modified",
-   "chars_fetched": 8524,
+   "chars_fetched": 8528,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
    "error": null,
-   "preview": "### 【ポケモンGO】ポケモンXP&チャンピオンシップス2026の期間とボーナス - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - ",
+   "preview": "### 【ポケモンGO】ポケモンXP&チャンピオンシップス2026の期間とボーナス - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！",
    "model": null,
    "ai_calls": null,
    "ai_seconds": null
@@ -2290,12 +2291,12 @@
    "http_status": 200,
    "article_updated": "2026-09-09T01:30:27+09:00",
    "date_kind": "modified",
-   "chars_fetched": 9486,
+   "chars_fetched": 9490,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
    "error": null,
-   "preview": "### 【ポケモンGO】GOフェス2026メガフィナーレの開催期間と内容 - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハ",
+   "preview": "### 【ポケモンGO】GOフェス2026メガフィナーレの開催期間と内容 - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催",
    "model": null,
    "ai_calls": null,
    "ai_seconds": null
@@ -2308,12 +2309,12 @@
    "http_status": 200,
    "article_updated": "2026-08-04T01:29:36+09:00",
    "date_kind": "modified",
-   "chars_fetched": 8602,
+   "chars_fetched": 8606,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
    "error": null,
-   "preview": "### 【ポケモンGO】選べるタイムチャレンジフェアリートレイルの内容とボーナス - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明",
+   "preview": "### 【ポケモンGO】選べるタイムチャレンジフェアリートレイルの内容とボーナス - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ ",
    "model": null,
    "ai_calls": null,
    "ai_seconds": null
@@ -2326,12 +2327,12 @@
    "http_status": 200,
    "article_updated": "2026-09-09T18:37:01+09:00",
    "date_kind": "modified",
-   "chars_fetched": 6911,
+   "chars_fetched": 6915,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
    "error": null,
-   "preview": "### 【ポケモンGO】シャドウギラティナ(アナザー)レイド対策おすすめポケモン - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明",
+   "preview": "### 【ポケモンGO】シャドウギラティナ(アナザー)レイド対策おすすめポケモン - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ ",
    "model": null,
    "ai_calls": null,
    "ai_seconds": null
@@ -2344,12 +2345,12 @@
    "http_status": 200,
    "article_updated": "2026-08-31T05:24:28+09:00",
    "date_kind": "modified",
-   "chars_fetched": 11180,
+   "chars_fetched": 11184,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
    "error": null,
-   "preview": "### 【ポケモンGO】2026年8月のイベントスケジュールまとめ - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロウィ",
+   "preview": "### 【ポケモンGO】2026年8月のイベントスケジュールまとめ - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中のイ",
    "model": null,
    "ai_calls": null,
    "ai_seconds": null
@@ -2362,12 +2363,12 @@
    "http_status": 200,
    "article_updated": "2026-08-07T17:26:07+09:00",
    "date_kind": "modified",
-   "chars_fetched": 10640,
+   "chars_fetched": 10644,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
    "error": null,
-   "preview": "### 【ポケモンGO】GOパス8月のリワード内容と挑戦期間 - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロウィンイベ",
+   "preview": "### 【ポケモンGO】GOパス8月のリワード内容と挑戦期間 - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中のイベント",
    "model": null,
    "ai_calls": null,
    "ai_seconds": null
@@ -2380,12 +2381,12 @@
    "http_status": 200,
    "article_updated": "2026-08-09T14:37:21+09:00",
    "date_kind": "modified",
-   "chars_fetched": 6131,
+   "chars_fetched": 6135,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
    "error": null,
-   "preview": "### 【ポケモンGO】炎と氷ふかの日の開催期間とボーナス - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロウィンイベン",
+   "preview": "### 【ポケモンGO】炎と氷ふかの日の開催期間とボーナス - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中のイベント情",
    "model": null,
    "ai_calls": null,
    "ai_seconds": null
@@ -2398,12 +2399,12 @@
    "http_status": 200,
    "article_updated": "2026-07-19T10:08:11+09:00",
    "date_kind": "modified",
-   "chars_fetched": 5617,
+   "chars_fetched": 5621,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
    "error": null,
-   "preview": "### 【ポケモンGO】National Trustコラボの開催期間と内容 - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日から",
+   "preview": "### 【ポケモンGO】National Trustコラボの開催期間と内容 - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開",
    "model": null,
    "ai_calls": null,
    "ai_seconds": null
@@ -2416,15 +2417,15 @@
    "http_status": 200,
    "article_updated": "2026-10-31T11:17:24+09:00",
    "date_kind": "modified",
-   "chars_fetched": 16198,
-   "chars_sent": 16360,
+   "chars_fetched": 16202,
+   "chars_sent": 16364,
    "action": "analyzed",
    "reason": "新情報なし",
    "error": null,
-   "preview": "### 【ポケモンGO】ワイルドエリア2026仙台の開催期間とボーナス - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロ",
+   "preview": "### 【ポケモンGO】ワイルドエリア2026仙台の開催期間とボーナス - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 8.4
+   "ai_calls": 2,
+   "ai_seconds": 9.6
   },
   {
    "source": "gamewith",
@@ -2434,12 +2435,12 @@
    "http_status": 200,
    "article_updated": "2026-08-19T21:43:12+09:00",
    "date_kind": "modified",
-   "chars_fetched": 7272,
+   "chars_fetched": 7276,
    "chars_sent": 0,
    "action": "skipped_out_of_window",
    "reason": "記事更新日が31日より前",
    "error": null,
-   "preview": "### 【ポケモンGO】マクドナルドコラボイベントの期間と内容 - ポケモンGO最新情報 - 大きな足跡イベントでムゲンダイナ再登場！ - 明日からハロウィンイ",
+   "preview": "### 【ポケモンGO】マクドナルドコラボイベントの期間と内容 - ポケモンGO最新情報 - 本日10時からハロウィンイベントパート2開催！ - 開催中のイベン",
    "model": null,
    "ai_calls": null,
    "ai_seconds": null
@@ -2452,7 +2453,7 @@
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
-   "chars_fetched": 76338,
+   "chars_fetched": 76109,
    "chars_sent": 0,
    "action": null,
    "reason": "記事リンク 133 件",
@@ -2477,8 +2478,8 @@
    "error": null,
    "preview": "### 実装済みマックスバトルボスポケモンまとめ 最終更新日 | 2026年10月31日 星6出現ポケモン追記 目次 - はじめに - 実装済みマックスバトルボ",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 5.8
+   "ai_calls": 2,
+   "ai_seconds": 4.8
   },
   {
    "source": "9db",
@@ -2496,7 +2497,7 @@
    "preview": "### ムゲンダイナ再来 開催日(日本時間) 2026/11/21(土)11:00 〜 14:00 公式発表 目次 - イベントまとめ - 公式発表 - ムゲン",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 6.7
+   "ai_seconds": 6.5
   },
   {
    "source": "9db",
@@ -2506,15 +2507,15 @@
    "http_status": 200,
    "article_updated": "2026-10-30T07:57:58+09:00",
    "date_kind": "modified",
-   "chars_fetched": 1797,
-   "chars_sent": 1854,
+   "chars_fetched": 1740,
+   "chars_sent": 1797,
    "action": "analyzed",
    "reason": "新情報なし",
    "error": null,
    "preview": "先日発生していた問題のお詫びとしてしあわせタマゴがもらえるタイムチャレンジが配布！ 2026年10月30日 07:57 14件 不具合まとめ 不具合のタグ ログ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 5.9
+   "ai_seconds": 6.8
   },
   {
    "source": "9db",
@@ -2527,12 +2528,12 @@
    "chars_fetched": 693,
    "chars_sent": 739,
    "action": "analyzed",
-   "reason": "schedule+1",
+   "reason": "新情報なし",
    "error": null,
    "preview": "### 【メキシコ限定】Día de Muertos en 2026 開催日(日本時間) 2026/10/28(水)1:00 〜 11/6(金)11:00 開催",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 4.9
+   "ai_seconds": 6.8
   },
   {
    "source": "9db",
@@ -2550,7 +2551,7 @@
    "preview": "### GOパス：11月(2026) 開催日(日本時間) 2026/11/3(火)10:00 〜 12/1(火)10:00 公式発表 目次 - GOパス：11月",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 6.4
+   "ai_seconds": 7.2
   },
   {
    "source": "9db",
@@ -2560,15 +2561,15 @@
    "http_status": 200,
    "article_updated": "2026-10-27T13:36:28+09:00",
    "date_kind": "modified",
-   "chars_fetched": 1875,
-   "chars_sent": 1905,
+   "chars_fetched": 1818,
+   "chars_sent": 1848,
    "action": "analyzed",
-   "reason": "新情報なし",
+   "reason": "新情報なし; 対策: ワンリキー",
    "error": null,
    "preview": "マックスマンデー：ワンリキー 2026年10月27日 13:36 2件 マックスマンデー：ワンリキー 開催日(日本時間) 2026/11/2(月)6:00 〜 ",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 4.9
+   "ai_calls": 2,
+   "ai_seconds": 6.8
   },
   {
    "source": "9db",
@@ -2576,7 +2577,7 @@
    "role": "article",
    "status": "ok",
    "http_status": 200,
-   "article_updated": "2026-10-31T21:44:40+09:00",
+   "article_updated": "2026-10-31T23:47:47+09:00",
    "date_kind": "modified",
    "chars_fetched": 1217,
    "chars_sent": 1238,
@@ -2586,7 +2587,7 @@
    "preview": "### 大きな足跡 開催日(日本時間) 2026/11/16(月)10:00 〜 11/23(月)20:00 公式発表 目次 - イベントまとめ - GOパス：",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 5.3
+   "ai_seconds": 6.2
   },
   {
    "source": "9db",
@@ -2599,12 +2600,12 @@
    "chars_fetched": 836,
    "chars_sent": 870,
    "action": "analyzed",
-   "reason": "新情報なし",
+   "reason": "新情報なし; 対策: ギラティナ(アナザー)",
    "error": null,
    "preview": "### レイドアワー：ギラティナ(アナザー) 開催日(日本時間) 2026/11/4(水)18:00 〜 19:00 目次 - 対策ポケモン - レイドバトル日",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 5.4
+   "ai_calls": 2,
+   "ai_seconds": 4.8
   },
   {
    "source": "9db",
@@ -2614,15 +2615,15 @@
    "http_status": 200,
    "article_updated": "2026-10-25T19:17:01+09:00",
    "date_kind": "modified",
-   "chars_fetched": 1846,
-   "chars_sent": 1893,
+   "chars_fetched": 1789,
+   "chars_sent": 1836,
    "action": "analyzed",
    "reason": "新情報なし",
    "error": null,
    "preview": "スポットライトアワー：ヒメグマ(魔女の帽子)(進化時XP2倍) 2026年10月25日 19:17 2件 スポットライトアワー：ヒメグマ(魔女の帽子)(進化時X",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 6.6
+   "ai_calls": 2,
+   "ai_seconds": 5.9
   },
   {
    "source": "9db",
@@ -2635,12 +2636,12 @@
    "chars_fetched": 724,
    "chars_sent": 856,
    "action": "analyzed",
-   "reason": "schedule+1",
+   "reason": "新情報なし",
    "error": null,
    "preview": "### シャンデラの色違い確率調査 / スーパーメガレイドデイ：メガシャンデラ - スーパーメガレイドデイ：メガシャンデラ - 色違い確率調査一覧 調査期間中に",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 2.6
+   "ai_seconds": 4.2
   },
   {
    "source": "9db",
@@ -2652,13 +2653,13 @@
    "date_kind": "modified",
    "chars_fetched": 920,
    "chars_sent": 945,
-   "action": "analyze_failed",
-   "reason": null,
-   "error": "gemini-3.5-flash-lite: article: '' should be non-empty (at time_challenge/12/rewards/0/name) / gemini-3.1-flash-lite: ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually tempo",
+   "action": "analyzed",
+   "reason": "schedule+1; time_challenge+1",
+   "error": null,
    "preview": "### adidasコラボ 開催日(日本時間) 2026/9/25(金) 〜 2027/1/15(金)23:59 公式発表 目次 - イベントまとめ - タイム",
-   "model": null,
-   "ai_calls": 4,
-   "ai_seconds": 154.2
+   "model": "gemini-3.5-flash-lite",
+   "ai_calls": 1,
+   "ai_seconds": 6.4
   },
   {
    "source": "9db",
@@ -2669,14 +2670,14 @@
    "article_updated": "2026-10-03T21:26:04+09:00",
    "date_kind": "modified",
    "chars_fetched": 1226,
-   "chars_sent": 1267,
-   "action": "analyzed",
-   "reason": "新情報なし",
+   "chars_sent": 0,
+   "action": "skipped_budget",
+   "reason": "1回の実行時間の上限のため次回に回しました（未解析のまま・ハッシュ未保存）",
    "error": null,
    "preview": "### 【海外限定】ポケモン30周年記念モール探索イベント 開催日(日本時間) 2026/10/1(木) 〜 2027/3/28(日) 公式発表 目次 - イベ",
-   "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 3.8
+   "model": null,
+   "ai_calls": null,
+   "ai_seconds": null
   },
   {
    "source": "9db",
@@ -2694,7 +2695,7 @@
    "preview": "### GOパス：10月(2026) 開催日(日本時間) 2026/10/6(火)10:00 〜 11/3(火)10:00 公式発表 目次 - GOパス：10月",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 6.1
+   "ai_seconds": 6.7
   },
   {
    "source": "9db",
@@ -2712,7 +2713,7 @@
    "preview": "### 【欧州限定】欧州宇宙機関（ESA）コラボイベント 開催日(日本時間) 2026/10/4(日) 〜 2027/4/30(金) 公式発表 目次 - イベン",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 3.5
+   "ai_seconds": 4.8
   },
   {
    "source": "9db",
@@ -2720,7 +2721,7 @@
    "role": "article",
    "status": "ok",
    "http_status": 200,
-   "article_updated": "2026-10-31T19:43:06+09:00",
+   "article_updated": "2026-11-01T00:00:04+09:00",
    "date_kind": "modified",
    "chars_fetched": 598,
    "chars_sent": 627,
@@ -2730,7 +2731,7 @@
    "preview": "### ハロウィン2026パート2 開催日(日本時間) 2026/11/1(日)10:00 〜 11/5(木)20:00 ボチ色違い ??? % 準備中 公式発",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 1.9
+   "ai_seconds": 5.0
   },
   {
    "source": "9db",
@@ -2740,15 +2741,15 @@
    "http_status": 200,
    "article_updated": "2026-10-31T15:15:23+09:00",
    "date_kind": "modified",
-   "chars_fetched": 2796,
-   "chars_sent": 2825,
-   "action": "analyze_failed",
-   "reason": null,
-   "error": "gemini-3.5-flash-lite: article: '' should be non-empty (at field_research/3/rewards/5/name) / gemini-3.1-flash-lite: ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually tempo",
+   "chars_fetched": 2795,
+   "chars_sent": 2824,
+   "action": "analyzed",
+   "reason": "新情報なし",
+   "error": null,
    "preview": "### ハロウィン2026パート1 開催日(日本時間) 2026/10/27(火)10:00 〜 11/1(日)10:00 ズバット(トップハット)色違い 1.",
-   "model": null,
-   "ai_calls": 4,
-   "ai_seconds": 82.3
+   "model": "gemini-3.5-flash-lite",
+   "ai_calls": 1,
+   "ai_seconds": 6.8
   },
   {
    "source": "9db",
@@ -2758,15 +2759,15 @@
    "http_status": 200,
    "article_updated": "2026-10-30T09:56:09+09:00",
    "date_kind": "modified",
-   "chars_fetched": 1817,
-   "chars_sent": 1856,
+   "chars_fetched": 1760,
+   "chars_sent": 1799,
    "action": "analyzed",
    "reason": "新情報なし",
    "error": null,
    "preview": "スポットライトアワー：ゴース(進化時XP2倍) 2026年10月30日 09:56 5件 スポットライトアワー：ゴース(進化時XP2倍) 開催日(日本時間) 2",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 6.5
+   "ai_calls": 2,
+   "ai_seconds": 6.6
   },
   {
    "source": "9db",
@@ -2779,12 +2780,12 @@
    "chars_fetched": 762,
    "chars_sent": 795,
    "action": "analyzed",
-   "reason": "raids+1",
+   "reason": "新情報なし; 対策: ランドロス(けしん)",
    "error": null,
    "preview": "### 伝説シャドウ：ランドロス(けしん) 開催日(日本時間) 2026/10/7(水)5:00 〜 11/3(火)21:00 目次 - 対策ポケモン - レイ",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 5.5
+   "ai_calls": 2,
+   "ai_seconds": 6.1
   },
   {
    "source": "9db",
@@ -2797,12 +2798,12 @@
    "chars_fetched": 778,
    "chars_sent": 803,
    "action": "analyzed",
-   "reason": "raids+1",
+   "reason": "new_event+1; raids+1; 対策: メガヤミラミ",
    "error": null,
    "preview": "### メガ：メガヤミラミ 開催日(日本時間) 2026/10/28(水)5:00 〜 11/8(日)21:00 目次 - 対策ポケモン - レイドバトル日程 ",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 5.2
+   "ai_calls": 2,
+   "ai_seconds": 6.1
   },
   {
    "source": "9db",
@@ -2819,8 +2820,8 @@
    "error": null,
    "preview": "### レイドアワー：ギラティナ(オリジン) 開催日(日本時間) 2026/10/28(水)18:00 〜 19:00 目次 - 対策ポケモン - レイドバトル",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 6.4
+   "ai_calls": 2,
+   "ai_seconds": 6.1
   },
   {
    "source": "9db",
@@ -2833,12 +2834,12 @@
    "chars_fetched": 807,
    "chars_sent": 837,
    "action": "analyzed",
-   "reason": "新情報なし",
+   "reason": "新情報なし; 対策: ギラティナ(オリジン)",
    "error": null,
    "preview": "### 伝説：ギラティナ(オリジン) 開催日(日本時間) 2026/10/28(水)5:00 〜 11/3(火)21:00 目次 - 対策ポケモン - レイドバ",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 4.5
+   "ai_calls": 2,
+   "ai_seconds": 4.8
   },
   {
    "source": "9db",
@@ -2851,12 +2852,12 @@
    "chars_fetched": 3343,
    "chars_sent": 3376,
    "action": "analyzed",
-   "reason": "新情報なし",
+   "reason": "wilds+1; raids+4",
    "error": null,
    "preview": "### ワイルドエリア2026：仙台・東北 開催日(日本時間) 2026/11/6(金)10:00 〜 11/8(日)18:00 開催場所 仙台市宮城野区 榴岡",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 6.4
+   "ai_seconds": 7.3
   },
   {
    "source": "9db",
@@ -2892,7 +2893,7 @@
    "preview": "### GOバトルリーグ：黄昏の旅路 GOバトルリーグ シーズン別 仕様 | 1 | 2 | 3 | 4 5 | 6 | 7 | 8 | 9 10 | 調整 |",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 5.6
+   "ai_seconds": 6.3
   },
   {
    "source": "9db",
@@ -2903,14 +2904,14 @@
    "article_updated": "2026-10-04T06:50:18+09:00",
    "date_kind": "modified",
    "chars_fetched": 2311,
-   "chars_sent": 2339,
-   "action": "analyzed",
-   "reason": "新情報なし",
+   "chars_sent": 0,
+   "action": "skipped_budget",
+   "reason": "1回の実行時間の上限のため次回に回しました（未解析のまま・ハッシュ未保存）",
    "error": null,
    "preview": "### シーズン24：黄昏の旅路 開催日(日本時間) 2026/9/8(火)10:00 〜 12/1(火)10:00 公式発表 目次 - イベントまとめ - タ",
-   "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 8.3
+   "model": null,
+   "ai_calls": null,
+   "ai_seconds": null
   },
   {
    "source": "9db",
@@ -2936,17 +2937,17 @@
    "role": "article",
    "status": "ok",
    "http_status": 200,
-   "article_updated": "2026-10-31T23:17:55+09:00",
+   "article_updated": "2026-11-01T00:20:23+09:00",
    "date_kind": "modified",
    "chars_fetched": 2304,
    "chars_sent": 2339,
    "action": "analyzed",
-   "reason": "time_challenge+3; surprise_box+1",
+   "reason": "field_research+3; surprise_box+1; 対策: メガシャンデラ",
    "error": null,
-   "preview": "### スーパーメガレイドデイ：メガシャンデラ 開催日(日本時間) 2026/10/31(土)14:00 〜 17:00 シャンデラ色違い 11.94 % 調査",
+   "preview": "### スーパーメガレイドデイ：メガシャンデラ 開催日(日本時間) 2026/10/31(土)14:00 〜 17:00 シャンデラ色違い 11.95 % 調査",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 1,
-   "ai_seconds": 5.1
+   "ai_calls": 7,
+   "ai_seconds": 163.7
   },
   {
    "source": "9db",
@@ -2964,7 +2965,7 @@
    "preview": "### コミュニティデイ：コマタナ 開催日(日本時間) 2026/11/21(土)14:00 〜 17:00 公式発表 目次 - イベントまとめ - 公式発表 ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 6.0
+   "ai_seconds": 5.4
   },
   {
    "source": "official",
@@ -2999,8 +3000,8 @@
    "error": null,
    "preview": "トレーナーの皆さん 「マックスバトル」が盛りだくさんの1週間がやってきます！「ムゲンダイナ」が再来し、「マックス粒子」をたくさん入手できます。さらに、「GOパス",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 4,
-   "ai_seconds": 29.2
+   "ai_calls": 1,
+   "ai_seconds": 5.3
   },
   {
    "source": "official",
@@ -3018,7 +3019,7 @@
    "preview": "トレーナーの皆さん 「Pokémon GO ワイルドエリア：仙台・東北」および「Pokémon GO ワイルドエリア：メキシコシティ」の「イベント GO スタン",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 5.5
+   "ai_seconds": 5.4
   },
   {
    "source": "official",
@@ -3036,7 +3037,7 @@
    "preview": "### 2026年11月の「コミュニティ・デイ」：「コマタナ」 日本時間2026年11月21日14:00から17:00まで 11月の「コミュニティ・デイ」は、は",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 6.8
+   "ai_seconds": 6.7
   },
   {
    "source": "official",
@@ -3054,7 +3055,7 @@
    "preview": "### GOパス：11月 日本時間2026年11月3日10:00から2026年12月1日10:00までの期間で、11月の「GOパス」と「GOパスデラックス」が『",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 5.5
+   "ai_seconds": 5.2
   },
   {
    "source": "official",
@@ -3067,12 +3068,12 @@
    "chars_fetched": 5023,
    "chars_sent": 5082,
    "action": "analyzed",
-   "reason": "raids+2",
+   "reason": "新情報なし",
    "error": null,
    "preview": "### ワイルドウィーク 日本時間2026年11月9日10:00から2026年11月13日20:00まで  ### 初めて「ダイマックス」して登場するポケモン ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 6.1
+   "ai_seconds": 6.5
   },
   {
    "source": "official",
@@ -3085,12 +3086,12 @@
    "chars_fetched": 2991,
    "chars_sent": 3053,
    "action": "analyzed",
-   "reason": "time_challenge+1",
+   "reason": "新情報なし",
    "error": null,
    "preview": "### 「シャンデラ」の「スーパーメガレイド・デイ」 日本時間2026年10月31日14:00から17:00まで  ### 初登場の「メガシンカ」したポケモン ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 5.8
+   "ai_seconds": 6.3
   },
   {
    "source": "official",
@@ -3108,7 +3109,7 @@
    "preview": "### 『Pokémon GO』のゲームプレイのアップデートについて トレーナーの皆さん いつも、仲間と一緒に冒険を続けている世界中のトレーナーの皆さんに、感謝",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 5.0
+   "ai_seconds": 4.4
   },
   {
    "source": "official",
@@ -3121,12 +3122,12 @@
    "chars_fetched": 3285,
    "chars_sent": 3355,
    "action": "analyzed",
-   "reason": "wilds+1; time_challenge+1",
+   "reason": "新情報なし",
    "error": null,
    "preview": "### ハロウィン2026パート2 日本時間2026年11月1日10:00から2026年11月5日20:00まで  ### 登場するポケモン 運が良ければ、色違",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 7.1
+   "ai_seconds": 6.7
   },
   {
    "source": "official",
@@ -3139,12 +3140,12 @@
    "chars_fetched": 1616,
    "chars_sent": 1672,
    "action": "analyzed",
-   "reason": "新情報なし",
+   "reason": "time_challenge+2",
    "error": null,
    "preview": "トレーナーの皆さん 『ポケモン GO』公式パートナーである「イオンモール」で、ハロウィンを楽しめる特別なイベントを開催します！ 2026年10月19日（月）から",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 5.3
+   "ai_seconds": 5.6
   },
   {
    "source": "official",
@@ -3162,7 +3163,7 @@
    "preview": "### ハロウィン2026パート1 日本時間2026年10月27日10:00から2026年11月1日10:00まで  ### 初登場するポケモン イベント中は、",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 7.3
+   "ai_seconds": 6.0
   },
   {
    "source": "official",
@@ -3180,7 +3181,7 @@
    "preview": "### 「ダイマックスユクシー・エムリット・アグノム」マックスバトルデイ 日本時間2026年10月24日14:00から17:00まで  ### 「ダイマックス」",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 4.9
+   "ai_seconds": 6.1
   },
   {
    "source": "official",
@@ -3198,7 +3199,7 @@
    "preview": "### 『Pokémon GO』の「メテノシャワー」  ### 初めて登場するポケモン ながれぼしポケモンの「メテノ」が『Pokémon GO』に初めて登場しま",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 5.2
+   "ai_seconds": 5.0
   },
   {
    "source": "official",
@@ -3216,7 +3217,7 @@
    "preview": "### 「メグロコふかの日」 日本時間2026年10月17日11:00から17:00まで  ### 登場するポケモン 「メグロコ」が2kmタマゴからたくさんかえ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 5.9
+   "ai_seconds": 6.3
   },
   {
    "source": "official",
@@ -3229,12 +3230,12 @@
    "chars_fetched": 1000,
    "chars_sent": 1058,
    "action": "analyzed",
-   "reason": "time_challenge+3",
+   "reason": "新情報なし",
    "error": null,
    "preview": "ポケモンとadidas の期間限定コレクションの発売をお祝い！『Pokémon GO』のトレーナーの皆さんは、対象のadidasの店舗や世界中の対象小売店をぜひ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 6.2
+   "ai_seconds": 5.4
   },
   {
    "source": "official",
@@ -3265,12 +3266,12 @@
    "chars_fetched": 3297,
    "chars_sent": 3345,
    "action": "analyzed",
-   "reason": "field_research+1; time_challenge+1",
+   "reason": "新情報なし",
    "error": null,
    "preview": "### 秋の遠足：相棒といっしょ 日本時間2026年10月13日10:00から2026年10月19日20:00まで  ### 初めて登場するポケモン 運が良けれ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 7.2
+   "ai_seconds": 6.7
   },
   {
    "source": "official",
@@ -3288,7 +3289,7 @@
    "preview": "### GOパス：10月 日本時間2026年10月6日10:00から2026年11月3日10:00までの期間で、10月の「GOパス」と「GOパスデラックス」が『",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 4.9
+   "ai_seconds": 5.1
   },
   {
    "source": "official",
@@ -3301,12 +3302,12 @@
    "chars_fetched": 541,
    "chars_sent": 591,
    "action": "analyzed",
-   "reason": "新情報なし",
+   "reason": "raids+1",
    "error": null,
    "preview": "### 世界宇宙週間2026 日本時間2026年10月4日00:00から2026年10月10日23:59まで  ### 初めて登場するポケモン イベント中は、新",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 7.6
+   "ai_seconds": 5.9
   },
   {
    "source": "official",
@@ -3324,7 +3325,7 @@
    "preview": "### 2026年10月の「コミュニティ・デイ」：「ゾロア」 日本時間2026年10月10日14:00から17:00まで 10月の「コミュニティ・デイ」ではわる",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 4.6
+   "ai_seconds": 6.3
   },
   {
    "source": "official",
@@ -3342,7 +3343,7 @@
    "preview": "### 選べるタイムチャレンジ：黄昏の旅路 2026年9月23日10:00から2026年9月28日20:00まで 『Pokémon GO』でイベントが開催されな",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 5.2
+   "ai_seconds": 5.1
   }
  ]
 }
