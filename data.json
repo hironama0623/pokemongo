@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/10/31 12:38 JST",
+  "updated_at": "2026/10/31 17:50 JST",
   "latest_news": [
     {
       "id": "news-0cdcab26bb",
@@ -1530,6 +1530,120 @@
         "note": "出典: gamewith"
       }
     ],
+    "ev-aeon-halloween": [
+      {
+        "task": "ポケストップ・ジム2個を回す",
+        "rewardDex": 52,
+        "rewardName": "ニャース(アローラ)",
+        "shiny": true,
+        "note": "出典: pokemapi"
+      },
+      {
+        "task": "ポケストップ・ジム2個を回す",
+        "rewardDex": 353,
+        "rewardName": "ヨマワル",
+        "shiny": true,
+        "note": "出典: pokemapi"
+      },
+      {
+        "task": "ポケモンを3匹進化させる",
+        "rewardDex": 574,
+        "rewardName": "ゴチム",
+        "shiny": true,
+        "note": "出典: pokemapi"
+      },
+      {
+        "task": "ポケモンを捕まえるときにきのみ3個を使う",
+        "rewardDex": 25,
+        "rewardName": "1,031 XP",
+        "shiny": false,
+        "note": "出典: pokemapi"
+      },
+      {
+        "task": "1 km歩く",
+        "rewardDex": 708,
+        "rewardName": "ボクレー",
+        "shiny": true,
+        "note": "出典: pokemapi"
+      },
+      {
+        "task": "ポケモンを10匹送る",
+        "rewardDex": 425,
+        "rewardName": "フワンテ",
+        "shiny": true,
+        "note": "出典: pokemapi"
+      },
+      {
+        "task": "カーブボールを3回投げる",
+        "rewardDex": 92,
+        "rewardName": "ゴース",
+        "shiny": true,
+        "note": "出典: pokemapi"
+      },
+      {
+        "task": "レイドバトルで1回勝つ",
+        "rewardDex": 25,
+        "rewardName": "ルアーモジュール",
+        "shiny": false,
+        "note": "出典: pokemapi"
+      },
+      {
+        "task": "レイドバトルで1回勝つ",
+        "rewardDex": 25,
+        "rewardName": "おこう",
+        "shiny": false,
+        "note": "出典: pokemapi"
+      },
+      {
+        "task": "フィールドリサーチタスクを3回完了する",
+        "rewardDex": 677,
+        "rewardName": "ニャスパー",
+        "shiny": true,
+        "note": "出典: pokemapi"
+      },
+      {
+        "task": "ポケモンを捕まえるときにきのみ5個を使う",
+        "rewardDex": 353,
+        "rewardName": "カゲボウズ",
+        "shiny": true,
+        "note": "出典: pokemapi"
+      },
+      {
+        "task": "ほしのすなを25,000手に入れる",
+        "rewardDex": 25,
+        "rewardName": "ほしのすな",
+        "shiny": false,
+        "note": "出典: pokemapi"
+      },
+      {
+        "task": "野生のゴーストタイプポケモン3種類のGOスナップショット写真を撮る",
+        "rewardDex": 608,
+        "rewardName": "ランプラー",
+        "shiny": true,
+        "note": "出典: pokemapi"
+      },
+      {
+        "task": "フィールドリサーチタスクを2回完了する",
+        "rewardDex": 302,
+        "rewardName": "ヤミラミ",
+        "shiny": true,
+        "note": "出典: pokemapi"
+      },
+      {
+        "task": "ゴーストタイプのポケモンを3回強化する",
+        "rewardDex": 562,
+        "rewardName": "デスマス",
+        "shiny": true,
+        "note": "出典: pokemapi"
+      },
+      {
+        "task": "相棒ポケモンのGOスナップショット写真を2日にわたって撮る",
+        "rewardDex": 971,
+        "rewardName": "ボチ",
+        "shiny": true,
+        "note": "出典: pokemapi"
+      }
+    ],
     "ev-halloween-p1": [
       {
         "task": "ゴーストタイプのポケモンを13匹捕まえる",
@@ -1980,6 +2094,18 @@
           "dex": 94,
           "name": "ゲンガー(魔女帽子)",
           "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 25,
+          "name": "ハロウィン 衣装をつけた モクロー",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 25,
+          "name": "飾りをつけた ゲンガー",
+          "shiny": false,
           "note": ""
         }
       ]
@@ -2730,97 +2856,97 @@
           "dex": 81,
           "name": "コイル",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 90,
           "name": "シェルダー",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 95,
           "name": "イワーク",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 137,
           "name": "ポリゴン",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 213,
           "name": "ツボツボ",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 227,
           "name": "エアームド",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 299,
           "name": "ノズパス",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 304,
           "name": "ココドラ",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 374,
           "name": "ダンバル",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 393,
           "name": "ポッチャマ",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 410,
           "name": "タテトプス",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 436,
           "name": "ドーミラー",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 448,
           "name": "ルカリオ",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 529,
           "name": "モグリュー",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 597,
           "name": "テッシード",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 599,
           "name": "ギアル",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 618,
@@ -2832,151 +2958,277 @@
           "dex": 631,
           "name": "アイアント",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 821,
           "name": "ココガラ",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 959,
           "name": "カヌチャン",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 4,
           "name": "ヒトカゲ",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 129,
           "name": "コイキング",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 147,
           "name": "ミニリュウ",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 207,
           "name": "グライガー",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 328,
           "name": "ナックラー",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 333,
           "name": "チルット",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 339,
           "name": "ドジョッチ",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 371,
           "name": "タツベイ",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 443,
           "name": "フカマル",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 602,
           "name": "シビシラス",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 610,
           "name": "キバゴ",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 631,
           "name": "クイタラン",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 633,
           "name": "モノズ",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 690,
           "name": "クズモー",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 696,
           "name": "チゴラス",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 698,
           "name": "アマルス",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 704,
           "name": "ヌメラ",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 714,
           "name": "オンバット",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 776,
           "name": "バクガメス",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 782,
           "name": "ジャラコ",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 850,
           "name": "ヤクデ",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 996,
           "name": "セビエ",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
+        },
+        {
+          "dex": 25,
+          "name": "アローラサンド",
+          "shiny": true,
+          "note": "ハガネのように強固アワー"
+        },
+        {
+          "dex": 25,
+          "name": "アローラディグダ",
+          "shiny": true,
+          "note": "ハガネのように強固アワー"
+        },
+        {
+          "dex": 25,
+          "name": "ガラルマッギョ",
+          "shiny": true,
+          "note": "ハガネのように強固アワー"
+        },
+        {
+          "dex": 25,
+          "name": "アローラナッシー",
+          "shiny": true,
+          "note": "つよいポケモン"
+        },
+        {
+          "dex": 212,
+          "name": "ハッサム",
+          "shiny": true,
+          "note": "つよいポケモン"
+        },
+        {
+          "dex": 330,
+          "name": "フライゴン",
+          "shiny": true,
+          "note": "つよいポケモン"
+        },
+        {
+          "dex": 365,
+          "name": "トドゼルガ",
+          "shiny": true,
+          "note": "つよいポケモン"
+        },
+        {
+          "dex": 376,
+          "name": "メタグロス",
+          "shiny": true,
+          "note": "つよいポケモン"
+        },
+        {
+          "dex": 395,
+          "name": "エンペルト",
+          "shiny": true,
+          "note": "つよいポケモン"
+        },
+        {
+          "dex": 462,
+          "name": "ジバコイル",
+          "shiny": true,
+          "note": "つよいポケモン"
+        },
+        {
+          "dex": 534,
+          "name": "ローブシン",
+          "shiny": true,
+          "note": "つよいポケモン"
+        },
+        {
+          "dex": 612,
+          "name": "オノノクス",
+          "shiny": true,
+          "note": "つよいポケモン"
+        },
+        {
+          "dex": 184,
+          "name": "マリルリ",
+          "shiny": true,
+          "note": "つよいポケモン"
+        },
+        {
+          "dex": 230,
+          "name": "キングドラ",
+          "shiny": true,
+          "note": "つよいポケモン"
+        },
+        {
+          "dex": 306,
+          "name": "ボスゴドラ",
+          "shiny": true,
+          "note": "つよいポケモン"
+        },
+        {
+          "dex": 598,
+          "name": "ナットレイ",
+          "shiny": true,
+          "note": "つよいポケモン"
+        },
+        {
+          "dex": 635,
+          "name": "サザンドラ",
+          "shiny": true,
+          "note": "つよいポケモン"
+        },
+        {
+          "dex": 706,
+          "name": "ヌメルゴン",
+          "shiny": true,
+          "note": "つよいポケモン"
+        },
+        {
+          "dex": 715,
+          "name": "オンバーン",
+          "shiny": true,
+          "note": "つよいポケモン"
+        },
+        {
+          "dex": 959,
+          "name": "デカヌチャン",
+          "shiny": true,
+          "note": "つよいポケモン"
+        },
+        {
+          "dex": 980,
+          "name": "ドオー",
+          "shiny": true,
+          "note": "つよいポケモン"
         }
       ]
     },
@@ -3343,6 +3595,96 @@
           "name": "ニャビー",
           "shiny": true,
           "note": ""
+        }
+      ]
+    },
+    {
+      "id": "ev-aeon-halloween",
+      "title": "イオンモール ハロウィン タイムチャレンジ",
+      "wilds": [
+        {
+          "dex": 37,
+          "name": "ロコン(襟飾り)",
+          "shiny": false,
+          "note": "サプライズボックス"
+        },
+        {
+          "dex": 41,
+          "name": "ズバット(トップハット)",
+          "shiny": false,
+          "note": "サプライズボックス"
+        },
+        {
+          "dex": 94,
+          "name": "ゲンガー(ハロウィン衣装)",
+          "shiny": false,
+          "note": "サプライズボックス"
+        },
+        {
+          "dex": 393,
+          "name": "ポッチャマ(ハロウィンいたずら飾り)",
+          "shiny": false,
+          "note": "サプライズボックス"
+        },
+        {
+          "dex": 426,
+          "name": "フワライド(ハロウィンいたずら飾り)",
+          "shiny": false,
+          "note": "サプライズボックス"
+        },
+        {
+          "dex": 200,
+          "name": "ムウマ",
+          "shiny": false,
+          "note": "サプライズボックス"
+        },
+        {
+          "dex": 353,
+          "name": "ヨマワル",
+          "shiny": false,
+          "note": "サプライズボックス"
+        },
+        {
+          "dex": 710,
+          "name": "バケッチャ(こだましゅ)",
+          "shiny": false,
+          "note": "サプライズボックス"
+        },
+        {
+          "dex": 710,
+          "name": "バケッチャ(ちゅうだましゅ)",
+          "shiny": false,
+          "note": "サプライズボックス"
+        },
+        {
+          "dex": 710,
+          "name": "バケッチャ(おおだましゅ)",
+          "shiny": false,
+          "note": "サプライズボックス"
+        },
+        {
+          "dex": 710,
+          "name": "バケッチャ(ギガだましゅ)",
+          "shiny": false,
+          "note": "サプライズボックス"
+        },
+        {
+          "dex": 714,
+          "name": "オンバット(カチューシャ)",
+          "shiny": false,
+          "note": "サプライズボックス"
+        },
+        {
+          "dex": 25,
+          "name": "ピカチュウ(ハットとケープ)",
+          "shiny": false,
+          "note": "サプライズボックス"
+        },
+        {
+          "dex": 854,
+          "name": "ヤバチャ(リボン)",
+          "shiny": false,
+          "note": "サプライズボックス"
         }
       ]
     },
