@@ -26,7 +26,7 @@
         {
           "site": "9db",
           "url": "https://9db.jp/pokemongo/data/26439",
-          "fetched_at": "2026-10-31T12:38:02.016746+09:00",
+          "fetched_at": "2026-10-31T18:30:40.929123+09:00",
           "article_updated": "2026-10-30T09:56:09+09:00"
         }
       ]
@@ -130,7 +130,7 @@
         {
           "site": "gamewith",
           "url": "https://pokemongo.gamewith.jp/article/show/583244",
-          "fetched_at": "2026-10-31T12:38:02.016746+09:00",
+          "fetched_at": "2026-10-31T18:30:40.929123+09:00",
           "article_updated": "2026-10-31T08:53:06+09:00"
         }
       ]
@@ -957,7 +957,7 @@
         {
           "site": "gamewith",
           "url": "https://pokemongo.gamewith.jp/article/show/574389",
-          "fetched_at": "2026-10-31T12:38:02.016746+09:00",
+          "fetched_at": "2026-10-31T18:30:40.929123+09:00",
           "article_updated": "2026-10-31T09:51:10+09:00"
         },
         {
@@ -1357,7 +1357,7 @@
         {
           "site": "gamewith",
           "url": "https://pokemongo.gamewith.jp/article/show/578629",
-          "fetched_at": "2026-10-31T12:38:02.016746+09:00",
+          "fetched_at": "2026-10-31T18:30:40.929123+09:00",
           "article_updated": "2026-10-31T05:55:11+09:00"
         }
       ]
@@ -1381,8 +1381,8 @@
         {
           "site": "gamewith",
           "url": "https://pokemongo.gamewith.jp/article/show/582188",
-          "fetched_at": "2026-10-31T07:30:18.765651+09:00",
-          "article_updated": "2026-10-31T03:27:32+09:00"
+          "fetched_at": "2026-10-31T18:30:40.929123+09:00",
+          "article_updated": "2026-10-31T12:39:06+09:00"
         },
         {
           "site": "gamewith",
@@ -1423,7 +1423,7 @@
         {
           "site": "gamewith",
           "url": "https://pokemongo.gamewith.jp/article/show/582768",
-          "fetched_at": "2026-10-31T12:38:02.016746+09:00",
+          "fetched_at": "2026-10-31T18:30:40.929123+09:00",
           "article_updated": "2026-10-30T15:53:36+09:00"
         }
       ]
@@ -1519,7 +1519,7 @@
         {
           "site": "gamewith",
           "url": "https://pokemongo.gamewith.jp/article/show/582767",
-          "fetched_at": "2026-10-31T07:30:18.765651+09:00",
+          "fetched_at": "2026-10-31T18:30:40.929123+09:00",
           "article_updated": "2026-10-30T02:33:32+09:00"
         }
       ]
@@ -1552,7 +1552,7 @@
         {
           "site": "gamewith",
           "url": "https://pokemongo.gamewith.jp/article/show/579895",
-          "fetched_at": "2026-10-31T12:38:02.016746+09:00",
+          "fetched_at": "2026-10-31T18:30:40.929123+09:00",
           "article_updated": "2026-10-29T22:20:22+09:00"
         }
       ]
@@ -1880,6 +1880,62 @@
           "url": "https://pokemongo.gamewith.jp/article/show/572658",
           "fetched_at": "2026-10-31T12:38:02.016746+09:00",
           "article_updated": "2026-10-01T05:50:11+09:00"
+        }
+      ]
+    },
+    "ev-auto-go-pass-big-footprints": {
+      "id": "ev-auto-go-pass-big-footprints",
+      "title": "GOパス大きな足跡",
+      "category": "main",
+      "start": "2026-11-16T10:00",
+      "end": "2026-11-23T20:00",
+      "dateText": "2026年11月16日(月)10:00〜11月23日(月)20:00",
+      "summary": "GOポイントを集めてランクを上げ、進行度に応じて報酬が貰える期間限定機能。ムゲンダイナやSP背景付きダイマックスポケモンが入手可能。",
+      "hasPaid": true,
+      "freeFeatures": [
+        "ムゲンダイナ(未捕獲の場合)",
+        "ムゲンダイナのアメ/アメXL",
+        "ダイマックスポケモン(SP背景)",
+        "ステッカー",
+        "ふしぎなアメ",
+        "ほしのすな"
+      ],
+      "paidFeatures": [
+        "追加報酬",
+        "追加ボーナス",
+        "ムゲンダイナのアメ/アメXL(追加)",
+        "ふしぎなアメXL",
+        "ぎんのパイルのみ",
+        "追加デイリータスク"
+      ],
+      "created_at": "2026-10-31T18:30:40.929123+09:00",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/585785",
+          "fetched_at": "2026-10-31T18:30:40.929123+09:00",
+          "article_updated": "2026-10-31T03:55:24+09:00"
+        }
+      ]
+    },
+    "ev-auto-apology-time-challenge-2026": {
+      "id": "ev-auto-apology-time-challenge-2026",
+      "title": "先日発生していた問題のお詫びとしてしあわせタマゴがもらえるタイムチャレンジ",
+      "category": "main",
+      "start": "2026-10-30",
+      "end": "2026-10-30",
+      "dateText": "2026年10月30日",
+      "summary": "先日発生していた問題のお詫びとして、しあわせタマゴがもらえるタイムチャレンジが配布された。",
+      "hasPaid": false,
+      "freeFeatures": [],
+      "paidFeatures": [],
+      "created_at": "2026-10-31T18:30:40.929123+09:00",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26657",
+          "fetched_at": "2026-10-31T18:30:40.929123+09:00",
+          "article_updated": "2026-10-30T07:57:58+09:00"
         }
       ]
     }

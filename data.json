@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/10/31 17:50 JST",
+  "updated_at": "2026/10/31 18:30 JST",
   "latest_news": [
     {
       "id": "news-0cdcab26bb",
@@ -6341,6 +6341,56 @@
         "無料タイムチャレンジ",
         "ポケモン捕獲時XP2倍"
       ],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-go-pass-big-footprints",
+      "month": 11,
+      "title": "GOパス大きな足跡",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 16,
+      "endDay": 23,
+      "hasPaid": true,
+      "dateText": "2026年11月16日(月)10:00〜11月23日(月)20:00",
+      "summary": "GOポイントを集めてランクを上げ、進行度に応じて報酬が貰える期間限定機能。ムゲンダイナやSP背景付きダイマックスポケモンが入手可能。",
+      "freeFeatures": [
+        "ムゲンダイナ(未捕獲の場合)",
+        "ムゲンダイナのアメ/アメXL",
+        "ダイマックスポケモン(SP背景)",
+        "ステッカー",
+        "ふしぎなアメ",
+        "ほしのすな"
+      ],
+      "paidFeatures": [
+        "追加報酬",
+        "追加ボーナス",
+        "ムゲンダイナのアメ/アメXL(追加)",
+        "ふしぎなアメXL",
+        "ぎんのパイルのみ",
+        "追加デイリータスク"
+      ],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-apology-time-challenge-2026",
+      "month": 10,
+      "title": "先日発生していた問題のお詫びとしてしあわせタマゴがもらえるタイムチャレンジ",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 30,
+      "endDay": 30,
+      "hasPaid": false,
+      "dateText": "2026年10月30日",
+      "summary": "先日発生していた問題のお詫びとして、しあわせタマゴがもらえるタイムチャレンジが配布された。",
+      "freeFeatures": [],
       "paidFeatures": [],
       "wilds": [],
       "raids": [],
