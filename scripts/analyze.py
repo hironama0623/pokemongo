@@ -11,6 +11,10 @@ class AnalyzeError(Exception):
     pass
 
 
+class QuotaExhausted(AnalyzeError):
+    """APIの1日あたりの上限に達した。待っても回復しないので、その回の解析を打ち切る。"""
+
+
 PROMPT = """あなたはポケモンGO攻略記事から事実だけを抜き出す抽出器です。以下の【記事本文】だけを根拠にJSONを1つ返してください。
 
 【厳守ルール】
@@ -52,6 +56,7 @@ def build_prompt(article, known_events, year):
 
 _client = None
 _last_call = 0.0
+_dead = set()   # 1日の上限に達したモデル（上限はモデルごとなので、そのモデルだけ以後スキップして次のモデルを使う）
 
 
 def gemini_call(model, prompt):
@@ -109,11 +114,17 @@ def analyze(article, known_events, models, call=gemini_call, year=2026, sleep=ti
     prompt = build_prompt(article, known_events, year)
     errors = []
     for m in models:
+        if m in _dead:
+            continue
         for attempt in range(1, tries + 1):
             try:
                 facts = normalize(parse_json(call(m, prompt)))
             except Exception as e:  # noqa: BLE001
                 msg = f"{type(e).__name__}: {str(e)}"
+                if re.search(r"PerDay|per day|daily", msg, re.I) and "429" in msg:
+                    _dead.add(m)
+                    errors.append(f"{m}: 1日の利用上限に到達")
+                    break
                 if _transient(msg) and attempt < tries:  # 429/503 は待って同じモデルで再試行
                     sleep(_retry_delay(msg, attempt))
                     continue
@@ -124,4 +135,6 @@ def analyze(article, known_events, models, call=gemini_call, year=2026, sleep=ti
                 return facts
             errors.append(f"{m}: {err}")
             break
+    if all(m in _dead for m in models):
+        raise QuotaExhausted(" / ".join(errors) or "全モデルが1日の利用上限に到達")
     raise AnalyzeError(" / ".join(errors))
