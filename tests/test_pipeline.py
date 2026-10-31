@@ -320,7 +320,9 @@ class Pokedex(unittest.TestCase):
 
 class Budget(unittest.TestCase):
     def setUp(self):
+        from scripts import analyze as an
         an._dead.clear()
+
     def test_budget_exceeded_skips_but_saves(self):
         old = config.ANALYZE_BUDGET_SEC
         config.ANALYZE_BUDGET_SEC = -1

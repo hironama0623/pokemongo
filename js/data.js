@@ -148,7 +148,9 @@ function mergeInto(base, add) {
 }
 
 function buildEvents(manual, autoEvents, autoDetails) {
-  const list = (manual || []).map(adaptLegacy);
+  // 手書き(旧)データは、終了日が今日より前のものを表示しない（推測の日付が残りやすいため。自動データは過去分も表示）
+  const today0 = new Date(); today0.setHours(0, 0, 0, 0);
+  const list = (manual || []).map(adaptLegacy).filter(e => e._e >= today0);
   const autos = Object.values(autoEvents || {})
     .map(ev => adaptAuto(ev, (autoDetails || {})[ev.id]))
     .filter(Boolean)
