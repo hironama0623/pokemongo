@@ -1,0 +1,794 @@
+{
+ "_note": "旧index.htmlに手書きで入っていたデータ（出典未確認）。第2段階で4サイト照合データに置き換える。",
+ "schema_version": 1,
+ "events": [
+  {
+   "id": "ev-dmax-sneasel",
+   "month": 10,
+   "title": "ダイマックスニューラ 出現率UP週間",
+   "barClass": "bar-dmax",
+   "category": "dmax",
+   "barIconDex": 215,
+   "startDay": 19,
+   "endDay": 25,
+   "hasPaid": false,
+   "dateText": "10/19(月) 6:00 〜 10/25(日) 21:00 [終了]",
+   "summary": "10月第4週のパワースポットピックアップとして『ダイマックスニューラ』が集中出現。",
+   "freeFeatures": [
+    "毎日の無料マックス粒子（最大800MP＋歩行分）で挑戦可能"
+   ],
+   "paidFeatures": [],
+   "wilds": [],
+   "raids": [
+    {
+     "dex": 215,
+     "name": "ダイマックス ニューラ",
+     "shiny": true,
+     "note": "★1〜 パワースポット",
+     "targetKey": "dmax-sneasel",
+     "isDmax": true
+    }
+   ],
+   "fieldResearches": [],
+   "tasks": []
+  },
+  {
+   "id": "ev-palkia-char",
+   "month": 10,
+   "title": "パルキア / メガリザードンX・Y レイド週間",
+   "barClass": "bar-raid",
+   "category": "raid",
+   "barIconDex": 484,
+   "startDay": 21,
+   "endDay": 27,
+   "hasPaid": false,
+   "dateText": "10/21(水) 6:00 〜 10/27(火) 21:30頃 [現在出現中]",
+   "summary": "★5伝説レイドに『パルキア』、メガレイドに『メガリザードンX』『メガリザードンY』が登場中！さらに★3にAライチュウ・Aキュウコン、★1にキバゴ・ヌメラ・ジャラコ・セビエが登場。",
+   "freeFeatures": [
+    "毎日ジムから無料レイドパス1枚獲得",
+    "★5：パルキア / メガ：メガリザードンX・Y"
+   ],
+   "paidFeatures": [
+    "2戦目以降はプレミアムバトルパスまたはリモートレイドパスが必要"
+   ],
+   "wilds": [],
+   "raids": [
+    {
+     "dex": 484,
+     "name": "パルキア",
+     "shiny": true,
+     "note": "★5 伝説レイド (〜10/27)",
+     "targetKey": "palkia-normal",
+     "isDmax": false
+    },
+    {
+     "dex": 10035,
+     "name": "メガリザードンY / X",
+     "shiny": true,
+     "note": "メガレイド (〜10/27)",
+     "targetKey": "mega-charizard-y",
+     "isDmax": false
+    }
+   ],
+   "fieldResearches": [],
+   "tasks": []
+  },
+  {
+   "id": "ev-dmax-sableye-week",
+   "month": 10,
+   "title": "ダイマックスヤミラミ 登場 ＆ マックスマンデー",
+   "barClass": "bar-dmax",
+   "category": "dmax",
+   "barIconDex": 302,
+   "startDay": 26,
+   "endDay": 31,
+   "hasPaid": false,
+   "dateText": "10/26(月) 6:00 〜 11/1(日) 21:00 [マックスマンデー: 10/26(月) 6:00〜21:00]",
+   "summary": "10/26(月)朝6時より『ダイマックスヤミラミ』がマックスバトルに初登場！初日の10/26(月) 6:00〜21:00は終日『マックスマンデー』として全国のパワースポットに大量出現します。",
+   "freeFeatures": [
+    "無料で毎日集められるマックス粒子（MP）で挑戦可能",
+    "10/26(月) 6:00〜21:00：マックスマンデー終日開催",
+    "色違いのダイマックスヤミラミ出現チャンス✨"
+   ],
+   "paidFeatures": [],
+   "wilds": [],
+   "raids": [
+    {
+     "dex": 302,
+     "name": "ダイマックス ヤミラミ",
+     "shiny": true,
+     "note": "マックスバトル (10/26〜11/1)",
+     "targetKey": "dmax-sableye",
+     "isDmax": true
+    }
+   ],
+   "fieldResearches": [],
+   "tasks": []
+  },
+  {
+   "id": "ev-aeon-halloween",
+   "month": 10,
+   "title": "イオンモール ハロウィン タイムチャレンジ (Part1 & Part2)",
+   "barClass": "bar-collab",
+   "category": "collab",
+   "startDay": 19,
+   "endDay": 31,
+   "hasPaid": false,
+   "dateText": "Part1: 10/19〜10/25 / Part2: 10/26(月)〜11/1(日) [挑戦期限: 11/8 20:00]",
+   "summary": "全国のイオンモールで『Pokémon GO』を起動すると、ハロウィン限定の無料タイムチャレンジを受け取れます！10/26(月)からは『Part2受取期間（10/26〜11/1）』がスタート。",
+   "freeFeatures": [
+    "【完全無料】全国のイオンモール現地でゲームを起動するだけでタイムチャレンジ付与"
+   ],
+   "paidFeatures": [],
+   "wilds": [],
+   "raids": [],
+   "fieldResearches": [],
+   "tasks": [
+    {
+     "task": "イオンモール限定タイムチャレンジ達成 (無料)",
+     "rewardDex": 94,
+     "rewardName": "ハロウィンポケモン遭遇",
+     "shiny": true
+    }
+   ]
+  },
+  {
+   "id": "ev-halloween-p1",
+   "month": 10,
+   "title": "🎃 ハロウィン2026 パート1 ＆ GOパス：ハロウィン2026",
+   "barClass": "bar-main",
+   "category": "main",
+   "startDay": 27,
+   "endDay": 31,
+   "hasPaid": true,
+   "hasFieldResearchPending": true,
+   "dateText": "10/27(火) 10:00 〜 11/1(日) 10:00 [メインイベント]",
+   "summary": "新衣装『ハットとケープをつけたピカチュウ』『トップハットをかぶったズバット』『リボンをつけたヤバチャ』の3種が初登場！全トレーナーへの無料配布タイムチャレンジや、マップ上の『ハロウィンのサプライズボックス』が登場します。",
+   "freeFeatures": [
+    "🎁【全員無料】自動完了するタイムチャレンジ配布（ふしぎなアメ×6 ＆ ハットとケープのピカチュウ確定）",
+    "📦【無料】マップ上に「ハロウィンのサプライズボックス」が出現",
+    "🍬【無料GOパス】Rank10で捕獲アメ2倍 / Rank20で捕獲ほしのすな2倍"
+   ],
+   "paidFeatures": [
+    "💎【GOパスデラックス：1,120円 (+10ランク: 1,400円)】捕獲時アメ3倍・ほしのすな3倍・新作「パティシエ衣装」上下・ふしぎなアメXL"
+   ],
+   "wilds": [
+    {
+     "dex": 41,
+     "name": "ズバット (トップハット)",
+     "shiny": true,
+     "note": "初登場衣装✨・野生"
+    },
+    {
+     "dex": 426,
+     "name": "フワライド (ハロウィン)",
+     "shiny": true,
+     "note": "衣装・野生"
+    },
+    {
+     "dex": 570,
+     "name": "ゾロア",
+     "shiny": true,
+     "note": "相棒変身・野生"
+    },
+    {
+     "dex": 607,
+     "name": "ヒトモシ / ヤミラミ",
+     "shiny": true,
+     "note": "野生出現"
+    },
+    {
+     "dex": 971,
+     "name": "ボチ",
+     "shiny": false,
+     "note": "※色違いは11/1パート2〜"
+    }
+   ],
+   "raids": [
+    {
+     "dex": 25,
+     "name": "ピカチュウ (ハット&ケープ)",
+     "shiny": true,
+     "note": "★1レイド (初登場衣装✨)",
+     "isDmax": false
+    },
+    {
+     "dex": 854,
+     "name": "ヤバチャ (リボン)",
+     "shiny": true,
+     "note": "★1レイド (初登場衣装✨)",
+     "isDmax": false
+    },
+    {
+     "dex": 10007,
+     "name": "ギラティナ (オリジン)",
+     "shiny": true,
+     "note": "★5伝説 (10/28 6:00〜)",
+     "targetKey": "giratina-origin",
+     "isDmax": false
+    },
+    {
+     "dex": 10066,
+     "name": "メガヤミラミ",
+     "shiny": true,
+     "note": "メガレイド (10/28 6:00〜)",
+     "targetKey": "mega-sableye",
+     "isDmax": false
+    }
+   ],
+   "fieldResearches": [
+    {
+     "task": "イベント限定フィールドリサーチ（ポケストップ）",
+     "rewardDex": 25,
+     "rewardName": "ピカチュウ (ハット&ケープ)",
+     "shiny": true,
+     "note": "10/27 10:00以降タスク条件自動反映"
+    },
+    {
+     "task": "イベント限定フィールドリサーチ（ポケストップ）",
+     "rewardDex": 41,
+     "rewardName": "ズバット (トップハット)",
+     "shiny": true,
+     "note": "初登場衣装✨"
+    },
+    {
+     "task": "イベント限定フィールドリサーチ（ポケストップ）",
+     "rewardDex": 854,
+     "rewardName": "ヤバチャ (リボン)",
+     "shiny": true,
+     "note": "初登場衣装✨"
+    },
+    {
+     "task": "イベント限定フィールドリサーチ（ポケストップ）",
+     "rewardDex": 442,
+     "rewardName": "ミカルゲ",
+     "shiny": true,
+     "note": "レアタスク枠"
+    }
+   ],
+   "tasks": [
+    {
+     "task": "🟢【無料配布】自動完了タイムチャレンジ",
+     "rewardDex": 25,
+     "rewardName": "ピカチュウ(ハット&ケープ) ＋ ふしぎなアメ×6",
+     "shiny": true
+    },
+    {
+     "task": "🟢【無料】マップ上の「ハロウィンサプライズボックス」タップ",
+     "rewardDex": 854,
+     "rewardName": "イベントポケモン遭遇 / アメ獲得",
+     "shiny": true
+    },
+    {
+     "task": "💎【有料1,120円】GOパスデラックス：ハロウィン2026",
+     "rewardDex": 94,
+     "rewardName": "アメ3倍・砂3倍 ＆ パティシエ衣装",
+     "shiny": true
+    }
+   ]
+  },
+  {
+   "id": "ev-raid-giratina-o",
+   "month": 10,
+   "title": "ギラティナ(オリジン) ＆ メガヤミラミ レイド",
+   "barClass": "bar-raid",
+   "category": "raid",
+   "barIconDex": 10007,
+   "startDay": 28,
+   "endDay": 31,
+   "hasPaid": false,
+   "dateText": "10/28(水) 6:00 〜 11/3(火・祝) 21:30頃 [レイドアワー: 10/28(水) 18:00〜19:00]",
+   "summary": "10/28(水)朝6時より伝説レイドが『ギラティナ（オリジンフォルム）』に、メガレイドが『メガヤミラミ（〜11/8まで）』に切り替わります！",
+   "freeFeatures": [
+    "1日1枚の無料レイドパスで挑戦可能",
+    "10/28(水) 18:00〜19:00：ギラティナ(オリジン) レイドアワー"
+   ],
+   "paidFeatures": [],
+   "wilds": [],
+   "raids": [
+    {
+     "dex": 10007,
+     "name": "ギラティナ (オリジン)",
+     "shiny": true,
+     "note": "★5 伝説レイド (10/28〜11/3)",
+     "targetKey": "giratina-origin",
+     "isDmax": false
+    },
+    {
+     "dex": 10066,
+     "name": "メガヤミラミ",
+     "shiny": true,
+     "note": "メガレイド (10/28〜11/8)",
+     "targetKey": "mega-sableye",
+     "isDmax": false
+    }
+   ],
+   "fieldResearches": [],
+   "tasks": []
+  },
+  {
+   "id": "ev-supermega-chandelure",
+   "month": 10,
+   "title": "🔥 シャンデラのスーパーメガレイド・デイ",
+   "barClass": "bar-raid",
+   "category": "raid",
+   "barIconDex": 609,
+   "startDay": 31,
+   "endDay": 31,
+   "hasPaid": true,
+   "dateText": "10/31(土) 14:00 〜 17:00 [グローバルチャレンジ: 10/31 9:00〜11/1 12:00]",
+   "summary": "スーパーメガレイドに『メガシャンデラ』が初登場！メガレベル4解放で専用技『あやしいかぜ＋（レイド威力145 / PVP威力50）』を使えるようになります！パーティ内のメガシンカポケモン1匹につきボスのシールドを1枚破壊可能（※ゲンシカイキは破壊不可）。",
+   "freeFeatures": [
+    "🎫【無料】ジムから最大6枚の無料レイドパスを獲得可能！",
+    "✨【無料】色違いシャンデラ確率UP ＆ 捕獲時からメガレベル1解放状態"
+   ],
+   "paidFeatures": [
+    "💎【有料チケット：700円】無料パス追加8枚(合計最大14枚)、ふしぎなアメXL確率UP、+5,000 XP、ほしのすな+5,000"
+   ],
+   "wilds": [],
+   "raids": [
+    {
+     "dex": 609,
+     "name": "メガシャンデラ (初登場)",
+     "shiny": true,
+     "note": "スーパーメガレイド (10/31 14:00〜17:00)",
+     "targetKey": "mega-chandelure",
+     "isDmax": false
+    }
+   ],
+   "fieldResearches": [],
+   "tasks": []
+  },
+  {
+   "id": "ev-shadow-landorus",
+   "month": 10,
+   "title": "シャドウランドロス(化身) ★5シャドウレイド (常設)",
+   "barClass": "bar-shadow-daily",
+   "category": "raid",
+   "barIconDex": 645,
+   "startDay": 7,
+   "endDay": 31,
+   "hasPaid": false,
+   "dateText": "10/7(水) 6:00 〜 11/3(火・祝) 21:30頃 (連日常設中)",
+   "summary": "シャドウ★5レイドに『シャドウランドロス（けしんフォルム）』が連日登場中！こおり2.56倍二重弱点。",
+   "freeFeatures": [
+    "毎日の無料レイドパスで挑戦可能"
+   ],
+   "paidFeatures": [],
+   "wilds": [],
+   "raids": [
+    {
+     "dex": 645,
+     "name": "シャドウランドロス (化身)",
+     "shiny": true,
+     "note": "★5 シャドウレイド (〜11/3)",
+     "targetKey": "shadow-landorus",
+     "isDmax": false
+    }
+   ],
+   "fieldResearches": [],
+   "tasks": []
+  },
+  {
+   "id": "ev-gopass-oct",
+   "month": 10,
+   "title": "🎫 GOパス：10月 (カイオーガ ＆ キラチャーム)",
+   "barClass": "bar-collab",
+   "category": "collab",
+   "barIconDex": 382,
+   "startDay": 6,
+   "endDay": 31,
+   "hasPaid": true,
+   "dateText": "10/6(火) 10:00 〜 11/3(火・祝) 10:00 [10/31〜11/1はPT上限撤廃]",
+   "summary": "10/31(土)〜11/1(日)の2日間は1日のポイント獲得上限(250pt)が完全撤廃されます！",
+   "freeFeatures": [
+    "🟢【無料】ランク100到達で「カイオーガ」確定遭遇✨"
+   ],
+   "paidFeatures": [
+    "💎【有料デラックス：1,120円】ランク100到達で「キラチャーム×1」獲得(期限11/8 23:59)"
+   ],
+   "wilds": [],
+   "raids": [],
+   "fieldResearches": [],
+   "tasks": []
+  },
+  {
+   "id": "ev-halloween-p2",
+   "month": 11,
+   "title": "🎃 ハロウィン2026 パート2 (色違いボチ初登場 ＆ メガヤミラミLv4解放)",
+   "barClass": "bar-main",
+   "category": "main",
+   "startDay": 1,
+   "endDay": 5,
+   "hasPaid": true,
+   "hasFieldResearchPending": true,
+   "dateText": "11/1(日) 10:00 〜 11/5(木) 20:00 [GOパス受取: 11/7 20:00まで]",
+   "summary": "待望の『色違いのボチ✨』が初登場するほか、『メガヤミラミ』のメガレベル4（スーパーマックスレベル）が解放され、専用技『ナイトヘッド＋（レイド威力160 / PVP威力55）』が使用可能になります！",
+   "freeFeatures": [
+    "✨【無料】野生・リサーチ等から『色違いのボチ』が初登場！",
+    "💎【無料】メガヤミラミのスーパーマックスレベル(Lv4)解放＆専用技『ナイトヘッド＋』解禁",
+    "🌿【無料】衣装モクロー、飾りゲンガー、魔女帽子ケロマツ等が野生・リサーチで登場"
+   ],
+   "paidFeatures": [
+    "💎【GOパスデラックス：1,120円（パート1共通）】捕獲アメ3倍・ほしのすな3倍・パティシエ衣装"
+   ],
+   "wilds": [
+    {
+     "dex": 971,
+     "name": "ボチ (色違い初実装✨)",
+     "shiny": true,
+     "note": "パート2目玉✨"
+    },
+    {
+     "dex": 722,
+     "name": "ハロウィン衣装モクロー",
+     "shiny": true,
+     "note": "衣装ポケモン"
+    },
+    {
+     "dex": 94,
+     "name": "飾りをつけたゲンガー",
+     "shiny": true,
+     "note": "衣装ポケモン"
+    },
+    {
+     "dex": 656,
+     "name": "魔女の帽子ケロマツ",
+     "shiny": true,
+     "note": "衣装ポケモン"
+    }
+   ],
+   "raids": [
+    {
+     "dex": 10066,
+     "name": "メガヤミラミ (ナイトヘッド+)",
+     "shiny": true,
+     "note": "メガレイド (〜11/8)",
+     "targetKey": "mega-sableye",
+     "isDmax": false
+    },
+    {
+     "dex": 10007,
+     "name": "ギラティナ (オリジン / 4日〜アナザー)",
+     "shiny": true,
+     "note": "★5伝説",
+     "targetKey": "giratina-origin",
+     "isDmax": false
+    }
+   ],
+   "fieldResearches": [
+    {
+     "task": "パート2限定フィールドリサーチ（ポケストップ）",
+     "rewardDex": 971,
+     "rewardName": "ボチ (色違い初実装✨)",
+     "shiny": true,
+     "note": "11/1 10:00以降タスク条件自動反映"
+    },
+    {
+     "task": "パート2限定フィールドリサーチ（ポケストップ）",
+     "rewardDex": 722,
+     "rewardName": "ハロウィン衣装モクロー",
+     "shiny": true,
+     "note": "衣装枠"
+    },
+    {
+     "task": "パート2限定フィールドリサーチ（ポケストップ）",
+     "rewardDex": 656,
+     "rewardName": "魔女の帽子ケロマツ",
+     "shiny": true,
+     "note": "衣装枠"
+    },
+    {
+     "task": "パート2限定フィールドリサーチ（ポケストップ）",
+     "rewardDex": 442,
+     "rewardName": "ミカルゲ",
+     "shiny": true,
+     "note": "レアタスク枠"
+    }
+   ],
+   "tasks": []
+  },
+  {
+   "id": "ev-dmax-machop-week",
+   "month": 11,
+   "title": "ダイマックスワンリキー 出現率UP ＆ マックスマンデー",
+   "barClass": "bar-dmax",
+   "category": "dmax",
+   "barIconDex": 66,
+   "startDay": 2,
+   "endDay": 8,
+   "hasPaid": false,
+   "dateText": "11/2(月) 6:00 〜 11/8(日) 21:00 [マックスマンデー: 11/2(月) 6:00〜21:00]",
+   "summary": "11月第1週のパワースポットは『ダイマックスワンリキー』が出現率アップ！キョダイジュラルドン＆DMaxディアルガ対策の格闘枠厳選に最適。",
+   "freeFeatures": [
+    "毎日の無料マックス粒子（MP）で挑戦可能",
+    "11/2(月) 6:00〜21:00：ワンリキー マックスマンデー"
+   ],
+   "paidFeatures": [],
+   "wilds": [],
+   "raids": [
+    {
+     "dex": 66,
+     "name": "ダイマックス ワンリキー",
+     "shiny": true,
+     "note": "マックスバトル (11/2〜11/8)",
+     "targetKey": "dmax-machop",
+     "isDmax": true
+    }
+   ],
+   "fieldResearches": [],
+   "tasks": []
+  },
+  {
+   "id": "ev-gopass-nov",
+   "month": 11,
+   "title": "🎫 GOパス：11月 (グラードン ＆ ポケコイン)",
+   "barClass": "bar-collab",
+   "category": "collab",
+   "barIconDex": 383,
+   "startDay": 3,
+   "endDay": 30,
+   "hasPaid": true,
+   "dateText": "11/3(火・祝) 10:00 〜 12/1(火) 10:00 [11/28〜29上限撤廃]",
+   "summary": "11月度の月間GOパス。無料ランク100到達で『グラードン』と確定遭遇できるほか、ポケコイン合計400枚などが報酬に登場！",
+   "freeFeatures": [
+    "🟢【無料】ランク100到達で「グラードン」確定遭遇✨"
+   ],
+   "paidFeatures": [
+    "💎【有料デラックス：1,120円】追加ポケコイン、スーパーふかそうち、アメXL等"
+   ],
+   "wilds": [],
+   "raids": [],
+   "fieldResearches": [],
+   "tasks": []
+  },
+  {
+   "id": "ev-wildweek-2026",
+   "month": 11,
+   "title": "⚡ ワイルドウィーク2026 (剣の王ザシアン / 盾の王ザマゼンタ / 銀の王冠)",
+   "barClass": "bar-raid",
+   "category": "raid",
+   "barIconDex": 10188,
+   "startDay": 9,
+   "endDay": 13,
+   "hasPaid": true,
+   "hasFieldResearchPending": true,
+   "dateText": "11/9(月) 10:00 〜 11/13(金) 20:00 [GOパス：ワイルドウィーク同時開催]",
+   "summary": "★5伝説レイドに『ザシアン（けんのおう）』と『ザマゼンタ（たてのおう）』が降臨し、勝利すると『ソードエナジー』『シールドエナジー』を獲得可能！11/13(金)には★5マックスバトルに『ダイマックスラティオス』が登場！",
+   "freeFeatures": [
+    "🟢【無料GOパス報酬】『ダイマックス メルタン』確定遭遇 ＆ ワイルドエリアTシャツ",
+    "🟢【無料パス範囲】ザシアン(けんのおう)・ザマゼンタ(たてのおう)に挑戦＆エナジー獲得可能"
+   ],
+   "paidFeatures": [
+    "💎【GOパスデラックス：ワイルドウィーク（2,100円）】『👑 ぎんのおうかん ×1個』獲得（期限11/22 23:59）＋ DMaxメルタン追加遭遇"
+   ],
+   "wilds": [],
+   "raids": [
+    {
+     "dex": 10188,
+     "name": "ザシアン (けんのおう)",
+     "shiny": true,
+     "note": "★5伝説 (ソードエナジー獲得)",
+     "targetKey": "zacian-crowned",
+     "isDmax": false
+    },
+    {
+     "dex": 10189,
+     "name": "ザマゼンタ (たてのおう)",
+     "shiny": true,
+     "note": "★5伝説 (シールドエナジー獲得)",
+     "targetKey": "zacian-crowned",
+     "isDmax": false
+    }
+   ],
+   "fieldResearches": [],
+   "tasks": []
+  },
+  {
+   "id": "ev-wildarea-2026",
+   "month": 11,
+   "title": "🌍 GOワイルドエリア2026：グローバル (合体キュレム / キョダイジュラルドン / DMaxディアルガ・パルキア)",
+   "barClass": "bar-collab",
+   "category": "collab",
+   "barIconDex": 10023,
+   "startDay": 14,
+   "endDay": 15,
+   "hasPaid": true,
+   "hasFieldResearchPending": true,
+   "dateText": "11/14(土) 〜 11/15(日) [土曜:Wキュレム&DMaxディアルガ / 日曜:Bキュレム&DMaxパルキア]",
+   "summary": "【土曜(11/14)】★5レイドに『ホワイトキュレム（ブレイズエナジー）』＆『ゼクロム』、マックスバトルに『キョダイマックスジュラルドン(色違い初登場✨)』＆『ダイマックスディアルガ(初登場)』！【日曜(11/15)】★5レイドに『ブラックキュレム（ボルトエナジー）』＆『レシラム』、マックスバトルに『キョダイマックスジュラルドン✨』＆『ダイマックスパルキア(初登場)』！",
+   "freeFeatures": [
+    "🟢【無料参加可】W/Bキュレム合体エナジー獲得、キョダイジュラルドン・DMaxディアルガ(土)・DMaxパルキア(日)への参加、GOパス上限撤廃"
+   ],
+   "paidFeatures": [
+    "💎【グローバル有料チケット】色違い確率大幅UP、無料レイドパス＆MP上限増加、限定スペシャルリサーチ"
+   ],
+   "wilds": [],
+   "raids": [
+    {
+     "dex": 10023,
+     "name": "ホワイトキュレム(土) / ブラックキュレム(日)",
+     "shiny": true,
+     "note": "合体エナジー獲得",
+     "targetKey": "kyurem-fused",
+     "isDmax": false
+    },
+    {
+     "dex": 10225,
+     "name": "キョダイマックス ジュラルドン",
+     "shiny": true,
+     "note": "★6 マックスバトル (色違い初実装✨)",
+     "targetKey": "dmax-gmax-duraludon",
+     "isDmax": true
+    },
+    {
+     "dex": 483,
+     "name": "ダイマックス ディアルガ (土曜限定)",
+     "shiny": true,
+     "note": "★5 マックスバトル初登場！",
+     "targetKey": "dmax-dialga",
+     "isDmax": true
+    },
+    {
+     "dex": 484,
+     "name": "ダイマックス パルキア (日曜限定)",
+     "shiny": true,
+     "note": "★5 マックスバトル初登場！",
+     "targetKey": "dmax-palkia",
+     "isDmax": true
+    }
+   ],
+   "fieldResearches": [],
+   "tasks": []
+  },
+  {
+   "id": "ev-big-footprints",
+   "month": 11,
+   "title": "「大きな足跡」イベント ＆ クレセリア・ダークライ・メガジュペッタ",
+   "barClass": "bar-main",
+   "category": "main",
+   "startDay": 16,
+   "endDay": 24,
+   "hasPaid": false,
+   "hasFieldResearchPending": true,
+   "dateText": "11/16(月) 〜 11/24(火) [レイドアワー: 11/18]",
+   "summary": "★5伝説レイドに『クレセリア』と『ダークライ』がW登場し、メガレイドには『メガジュペッタ』が登場します。",
+   "freeFeatures": [
+    "★5レイド：クレセリア ＆ ダークライ / メガ：メガジュペッタ"
+   ],
+   "paidFeatures": [],
+   "wilds": [],
+   "raids": [
+    {
+     "dex": 491,
+     "name": "ダークライ / クレセリア",
+     "shiny": true,
+     "note": "★5レイド (11/16〜11/24)",
+     "isDmax": false
+    },
+    {
+     "dex": 10056,
+     "name": "メガジュペッタ",
+     "shiny": true,
+     "note": "メガレイド (11/16〜11/24)",
+     "isDmax": false
+    }
+   ],
+   "fieldResearches": [],
+   "tasks": []
+  },
+  {
+   "id": "ev-cd-pawniard",
+   "month": 11,
+   "title": "🌱 コマタナのコミュニティ・デイ (2026年11月)",
+   "barClass": "bar-cd",
+   "category": "cd",
+   "barIconDex": 624,
+   "startDay": 21,
+   "endDay": 21,
+   "hasPaid": true,
+   "hasFieldResearchPending": true,
+   "dateText": "11/21(土) 14:00 〜 17:00",
+   "summary": "2026年11月のコミュニティ・デイは『コマタナ』が大量発生！最終進化系の『ドドゲザン』はレイド・マックスバトル・マスターリーグのすべてでトップクラスに君臨するはがね・あく複合の超強力ポケモンです。",
+   "freeFeatures": [
+    "🟢【無料】野生でコマタナが大量発生＆色違い確率大幅アップ✨、進化で特別技習得"
+   ],
+   "paidFeatures": [
+    "💎【コミュデイ限定スペシャルリサーチチケット（140円〜280円）】"
+   ],
+   "wilds": [
+    {
+     "dex": 624,
+     "name": "コマタナ",
+     "shiny": true,
+     "note": "大量発生✨"
+    },
+    {
+     "dex": 983,
+     "name": "ドドゲザン (進化)",
+     "shiny": true,
+     "note": "鋼・悪トップ"
+    }
+   ],
+   "raids": [],
+   "fieldResearches": [
+    {
+     "task": "コマタナを3匹捕まえる（コミュデイ定番タスク）",
+     "rewardDex": 624,
+     "rewardName": "コマタナ (高個体・色違いチャンス✨)",
+     "shiny": true,
+     "note": "ほしのすな・ハイパーボール等も出現"
+    }
+   ],
+   "tasks": []
+  },
+  {
+   "id": "ev-tusk-wish-deoxys",
+   "month": 11,
+   "title": "「黄昏時の願い」＆ デオキシス全4種・メガメタグロス ＆ 11/28スーパーメガレイドデイ",
+   "barClass": "bar-raid",
+   "category": "raid",
+   "barIconDex": 386,
+   "startDay": 24,
+   "endDay": 30,
+   "hasPaid": true,
+   "hasFieldResearchPending": true,
+   "dateText": "11/24(火)〜12/1(火) / スーパーメガレイドデイ: 11/28(土)",
+   "summary": "★5レイドに『デオキシス（全4フォルム）』、メガレイドに『メガメタグロス』が登場！11/28(土)には『スーパーメガレイド・デイ』が開催されます。",
+   "freeFeatures": [
+    "11/25〜12/1：デオキシス4種 ＆ メガメタグロス / 11/28：スーパーメガレイド無料パス配布"
+   ],
+   "paidFeatures": [
+    "11/28(土) スーパーメガレイド・デイ有料チケット（700円）"
+   ],
+   "wilds": [],
+   "raids": [
+    {
+     "dex": 386,
+     "name": "デオキシス (全4種)",
+     "shiny": true,
+     "note": "★5レイド",
+     "isDmax": false
+    },
+    {
+     "dex": 10076,
+     "name": "メガメタグロス",
+     "shiny": true,
+     "note": "メガレイド",
+     "isDmax": false
+    }
+   ],
+   "fieldResearches": [],
+   "tasks": []
+  },
+  {
+   "id": "ev-dec-new-season",
+   "month": 12,
+   "title": "新シーズン開幕 ＆ ダイマックスフリージオ週間",
+   "barClass": "bar-dmax",
+   "category": "dmax",
+   "barIconDex": 615,
+   "startDay": 1,
+   "endDay": 6,
+   "hasPaid": false,
+   "dateText": "12/1(火) 10:00 新シーズン切り替え / 11/30(月)〜12/6(日) DMaxフリージオ",
+   "summary": "12月1日(火)10:00に新シーズンが開幕！パワースポットには『ダイマックスフリージオ』が出現率アップします。",
+   "freeFeatures": [
+    "12/1(火)10:00〜：新シーズン＆GOパス：12月開幕"
+   ],
+   "paidFeatures": [],
+   "wilds": [],
+   "raids": [
+    {
+     "dex": 615,
+     "name": "ダイマックス フリージオ",
+     "shiny": true,
+     "note": "マックスバトル (11/30〜12/6)",
+     "isDmax": true
+    }
+   ],
+   "fieldResearches": [],
+   "tasks": []
+  }
+ ]
+}

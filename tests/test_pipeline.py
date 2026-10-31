@@ -12,6 +12,7 @@ ROOT = Path(__file__).resolve().parent.parent
 TMP = Path(tempfile.mkdtemp())
 os.environ["POGO_ROOT"] = str(TMP)
 os.environ["REQUEST_INTERVAL"] = "0"
+os.environ["AI_MIN_INTERVAL"] = "0"
 sys.path.insert(0, str(ROOT))
 
 from scripts import config, extract, run as runner  # noqa: E402
@@ -105,7 +106,7 @@ class T(unittest.TestCase):
         self.assertIn(status, ("ok", "partial"))
         d = read("event_details.json")["events"]["ev-halloween-p1"]
         self.assertEqual(len(d["field_research"]), 2)
-        self.assertEqual(d["field_research"][0]["rewards"][0]["dex"], 353)  # 辞書で図鑑番号補完
+        self.assertEqual(d["field_research"][0]["rewards"][0]["dex"], 355)  # 辞書で図鑑番号補完（ヨマワルは355）
         self.assertEqual(d["field_research"][0]["sources"][0]["site"], "9db")
         self.assertEqual({p["name"] for p in d["surprise_box"]["pokemon"]}, {"ズバット(トップハット)"})
         self.assertEqual(d["wilds"][0]["sources"][0]["site"], "official")
@@ -243,6 +244,105 @@ class RenderTest(unittest.TestCase):
             else:
                 os.environ["PLAYWRIGHT_BROWSERS_PATH"] = old
             fetch.close_renderer()
+
+
+class AnalyzeRobust(unittest.TestCase):
+    ART = {"site": "9db", "url": "https://x", "text": "本文", "updated": None}
+
+    def test_retry_on_429_then_ok(self):
+        from scripts import analyze as an
+        n = {"c": 0}
+
+        def llm(m, p):
+            n["c"] += 1
+            if n["c"] < 3:
+                raise RuntimeError("429 RESOURCE_EXHAUSTED retryDelay: 5s")
+            return json.dumps({"relevant": False, "event_id": ""})
+        waits = []
+        r = an.analyze(self.ART, [], ["m1"], call=llm, sleep=waits.append)
+        self.assertFalse(r["relevant"])
+        self.assertEqual(len(waits), 2)
+
+    def test_string_pokemon_normalized(self):
+        from scripts import analyze as an
+        out = json.dumps({"relevant": True, "event_id": "", "surprise_box": {"pokemon": ["リボンをつけた ヤバチャ"]}})
+        r = an.analyze(self.ART, [], ["m1"], call=lambda m, p: out, sleep=lambda s: None)
+        self.assertEqual(r["surprise_box"]["pokemon"][0]["name"], "リボンをつけた ヤバチャ")
+
+
+class Quota(unittest.TestCase):
+    def test_daily_quota_stops_run_but_saves(self):
+        calls = []
+
+        def llm(m, p):
+            calls.append(1)
+            raise RuntimeError("429 RESOURCE_EXHAUSTED GenerateRequestsPerDayPerProjectPerModel-FreeTier")
+        from scripts import analyze as an
+        an._dead.clear()
+        log = RunLog(NOW)
+        status, saved = runner.run(NOW, log, getter=getter, llm=llm, sleep=lambda s: None, render_getter=getter)
+        an._dead.clear()
+        self.assertEqual(len(calls), len(config.GEMINI_MODELS))  # 各モデル1回ずつ試して全滅したら打ち切り
+        self.assertTrue(saved)
+        self.assertEqual(status, "partial")
+
+
+class QuotaPerModel(unittest.TestCase):
+    def test_exhausted_model_skipped_next_model_used(self):
+        from scripts import analyze as an
+        an._dead.clear()
+        used = []
+
+        def llm(m, p):
+            used.append(m)
+            if m == "m1":
+                raise RuntimeError("429 RESOURCE_EXHAUSTED PerDay")
+            return json.dumps({"relevant": False, "event_id": ""})
+        art = {"site": "9db", "url": "https://x", "text": "本文", "updated": None}
+        an.analyze(art, [], ["m1", "m2"], call=llm, sleep=lambda s: None)
+        an.analyze(art, [], ["m1", "m2"], call=llm, sleep=lambda s: None)
+        an._dead.clear()
+        self.assertEqual(used, ["m1", "m2", "m2"])  # 2回目以降は m1 を試さない
+
+
+class Pokedex(unittest.TestCase):
+    def test_contained_species(self):
+        from scripts import pokedex
+        table = {"ヤバチャ": 1, "ヒトモシ": 2, "ヤミラミ": 3, "ゴース": 4, "ゴースト": 5, "ピカチュウ": 6}
+        un = set()
+        m1 = pokedex.fill_dex({"name": "リボンをつけた ヤバチャ", "dex": None}, table, un)
+        m2 = pokedex.fill_dex({"name": "ヒトモシ / ヤミラミ", "dex": None}, table, un)
+        m3 = pokedex.fill_dex({"name": "ゴースト", "dex": None}, table, un)
+        m4 = pokedex.fill_dex({"name": "ハットとケープをつけたピカチュウ", "dex": None}, table, un)
+        self.assertEqual((m1["dex"], m2["dex"], m3["dex"], m4["dex"]), (1, None, 5, 6))
+        self.assertIn("ヒトモシ / ヤミラミ", un)
+
+
+class Budget(unittest.TestCase):
+    def test_budget_exceeded_skips_but_saves(self):
+        old = config.ANALYZE_BUDGET_SEC
+        config.ANALYZE_BUDGET_SEC = -1
+        try:
+            log = RunLog(NOW)
+            status, saved = runner.run(NOW, log, getter=getter, llm=lambda m, p: "{}", sleep=lambda s: None, render_getter=getter)
+        finally:
+            config.ANALYZE_BUDGET_SEC = old
+        self.assertEqual(status, "partial")
+        self.assertTrue(saved)
+        self.assertTrue(any(e["action"] == "skipped_budget" for e in log.entries))
+
+
+class MergeNewEvent(unittest.TestCase):
+    def test_new_event_with_dates_does_not_keyerror(self):
+        from scripts import merge
+        details, events = {"events": {}}, {}
+        facts = {"event_id": "NEW:ghastly-spotlight-hour-20261029",
+                 "event_info": {"title": "ゴースのスポットライトアワー", "category": "spotlight", "start": "2026-10-29T18:00", "end": "2026-10-29T19:00"},
+                 "wilds": [{"name": "ゴース", "dex": None, "shiny": None}]}
+        src = {"site": "pokemapi", "url": "https://x/board/1/", "fetched_at": NOW.isoformat(), "article_updated": None}
+        ch, warns = merge.merge_article(details, events, facts, src, [], NOW)
+        self.assertIn("ev-auto-ghastly-spotlight-hour-20261029", events)
+        self.assertTrue(any(c["kind"] == "new_event" for c in ch))
 
 
 if __name__ == "__main__":

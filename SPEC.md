@@ -21,7 +21,12 @@
 
 ## 3. リポジトリ構成
 ```
-index.html              表示専用（第2段階で薄くする）
+index.html              画面の骨組み（HTML/CSS）のみ。データは持たない
+js/
+  mon.js      ★共通部品：ポケモン名＋イラスト mon() / 名前チップ MON.monChips()。図鑑番号の解決もここ
+  data.js     data/*.json の読み込みと、画面用の形への変換（重複イベントの統合、日付の解釈）
+  render.js   描画（イベント詳細・ガント・ニュース・シーズン・GOパス・今日のイベント）
+  app.js      旧 index.html から引き継いだ画面ロジック（タブ切替・戻る操作・スワイプ・レイド/DMax表示）
 data/
   event_index.json      既知イベントの基準一覧（id/title/start/end）。AIがイベントを紐づける際の候補
   event_details.json    ★自動更新：イベント別の判明情報（FR/サプライズボックス/野生/レイド/タマゴ…）
@@ -29,8 +34,9 @@ data/
   news.json             ★自動更新：ニュース（出典付き、45日保持）
   meta.json             ★実行結果。last_run_status と last_success_at を分けて持つ
   state.json            ★記事ごとの本文ハッシュ（差分スキップ用）
-  pokemon.json          ポケモン名→全国図鑑番号（手で追記してよい）
-data.json               【第2段階で廃止】旧 index.html 向け互換出力（scripts/compat.py が自動生成）
+  pokemon.json          ポケモン名→全国図鑑番号（全1,025種。手で追記してよい）
+  manual/               旧 index.html に手書きで入っていたデータ（出典未確認）。events/raids/dmax/season。第2段階の後半で出典付きデータに置き換えて廃止
+data.json               【廃止予定】旧 index.html 向け互換出力（新画面は読まない。scripts/compat.py が自動生成。次回の整理で削除）
 scripts/
   config.py   取得先・期間・上限（設定はここだけ）
   fetch.py    HTTP取得・記事候補の発見
@@ -80,8 +86,22 @@ logs/       run-YYYYMMDD-HHMM.json / latest.json / latest.md / unresolved_names.
 - `news.json`: `{schema_version, items:[{id,date,date_label,kind,title,details,targetId,sources[]}]}`
 - ポケモン画像は `dex` から。フォルム違い（メガ/キョダイ/リージョン等）の画像ID解決は表示側の `resolveSpecialFormId` を維持。`dex` が null のときはプレースホルダー。
 
-## 8. 第2段階（予定）
-index.html を表示専用に分離：共通部品 `mon()`、`data/*.json` の読み込み、4サイト照合レイド/DMax、GOパス実データ、生息地イラスト化。既存データ（イベント・タマゴ・生息地・GOパス）は実記事と照合しながら `data/` に移す。
+## 8. 画面の仕様（第2段階の前半：実装済み）
+- `index.html` は骨組みのみ。表示するデータは `data/*.json` を `fetch` で読む（`js/data.js`）。読めなかったファイルは画面上部に表示する。
+- **ポケモン名は必ず `mon()` を通す**（イラスト＋名前）。図鑑番号は ①データの `dex` ②名前の完全一致 ③名前に含まれる種名（1種に定まるときだけ）の順で解決。解決できない名前は文字だけ。フォーム違い（メガ・キョダイ・リージョン等）は `resolveSpecialFormId`（app.js）が画像IDに変換。
+- **イベントの統合**：自動取得イベントと旧データは、タイトル（記号・年月表記を除いて比較）が一致・包含し、期間が±3日で重なるものを1つにまとめる。**GOパスは本体イベントと統合しない**。統合で消えたIDはニュースのジャンプ先で読み替える（`EVENT_ALIAS`）。
+- 期間の判定は日本時間（+09:00）で行う。終了日が400日超のものは「長期（終了日未定）」として扱う。
+- 日程変更が検出されたイベント（`event_details.json` の `schedule`）は新日程で表示し「（日程更新）」を付ける。
+- 各カードに出典リンク（サイト名＋記事の更新日）を表示。**出典のない旧データには「旧データ・出典未確認」を表示**。レイド&DMaxタブは旧データのため警告を表示。
+- GOパスタブ：タイトルが「GOパス」で始まるイベントを、開催中／これから開催に分けて表示。ランク別の報酬表は `data/gopass.json`（`{passes:[{title,ranks:[{rank,free,deluxe,sources[]}]}]}`）があるときだけ、**載っているランクだけ**表示する。以前の100ランク表（剰余計算による推測値）は廃止。
+- 文字列は自動データのみ HTML エスケープして表示（AI出力経由のスクリプト混入を防ぐ）。
+
+## 8b. 第2段階の後半（未実装）
+- レイド&DMax：4サイト（ポケマピ/GameWith/9DB/公式）照合の `data/raids.json`・`data/dmax.json`。各サイトの順位を出典付きで保存し、一致度で並べる。出典のないDPS/TDOは出さない。
+- GOパス：ランク別報酬の取得（`data/gopass.json` を自動生成）。
+- バイオーム別の出現ポケモンの自動取得（現在は `data/manual/season.json` の手書き）。
+- `data/manual/` と `data.json`（互換出力）の廃止。
+- 解析に使ったAIモデル名は `logs/` に記録済み。記事ごとの `sources` への記録は未対応。
 
 ## 9. AIに改修を頼むときのコツ
 - 毎回「SPEC.md ＋ 対象1ファイル ＋ やりたいこと1つ」だけ渡す。長い会話を引き継がず、新しい会話で始める。

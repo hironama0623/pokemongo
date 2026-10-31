@@ -1,347 +1,313 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Pokémon GO 総合攻略ハブ (自動更新連動版)</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #f8fafc; color: #0f172a; -webkit-tap-highlight-color: transparent; overscroll-behavior-x: auto; }
-    ::-webkit-scrollbar { height: 6px; width: 6px; }
-    ::-webkit-scrollbar-track { background: #f1f5f9; }
-    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
-    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
-    @keyframes pulseFocus { 0% { box-shadow: 0 0 0 0 rgba(2,132,199,0.7); } 70% { box-shadow: 0 0 0 14px rgba(2,132,199,0); } 100% { box-shadow: 0 0 0 0 rgba(2,132,199,0); } }
-    .pulse-target { animation: pulseFocus 1.2s ease-out 2; }
-    .bar-main { background: linear-gradient(90deg, #e0f2fe, #bae6fd); border: 1px solid #38bdf8; color: #0369a1; }
-    .bar-raid { background: linear-gradient(90deg, #dcfce7, #bbf7d0); border: 1px solid #4ade80; color: #15803d; }
-    .bar-dmax { background: linear-gradient(90deg, #f3e8ff, #e9d5ff); border: 1px solid #c084fc; color: #7e22ce; }
-    .bar-collab { background: linear-gradient(90deg, #ccfbf1, #99f6e4); border: 1px solid #2dd4bf; color: #0f766e; }
-    .bar-cd { background: linear-gradient(90deg, #fef3c7, #fde68a); border: 1px solid #f59e0b; color: #b45309; }
-    .bg-9db-card { background: radial-gradient(circle at center, #2e1065 0%, #170b2c 70%, #0d061a 100%); }
-    .gantt-sticky-label { position: sticky; left: 6px; display: inline-flex; align-items: center; gap: 4px; max-width: calc(100vw - 65px); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  </style>
-</head>
-<body class="min-h-screen flex flex-col">
+ <!DOCTYPE html> <html lang="ja"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> <title>Pokémon GO 総合攻略ハブ</title> <script src="https://cdn.tailwindcss.com"></script> <style> body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif; background-color: #f8fafc; color: #0f172a; -webkit-tap-highlight-color: transparent; overscroll-behavior-x: auto; } ::-webkit-scrollbar { height: 6px; width: 6px; } ::-webkit-scrollbar-track { background: #f1f5f9; } ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; } ::-webkit-scrollbar-thumb:hover { background: #94a3b8; } @keyframes pulseFocus { 0% { box-shadow: 0 0 0 0 rgba(2, 132, 199, 0.7); border-color: #0284c7; } 70% { box-shadow: 0 0 0 14px rgba(2, 132, 199, 0); border-color: #0284c7; } 100% { box-shadow: 0 0 0 0 rgba(2, 132, 199, 0); } } .pulse-target { animation: pulseFocus 1.2s ease-out 2; } .bar-main { background: linear-gradient(90deg, #e0f2fe, #bae6fd); border: 1px solid #38bdf8; color: #0369a1; } .bar-raid { background: linear-gradient(90deg, #dcfce7, #bbf7d0); border: 1px solid #4ade80; color: #15803d; } .bar-dmax { background: linear-gradient(90deg, #f3e8ff, #e9d5ff); border: 1px solid #c084fc; color: #7e22ce; } .bar-collab { background: linear-gradient(90deg, #ccfbf1, #99f6e4); border: 1px solid #2dd4bf; color: #0f766e; } .bar-cd { background: linear-gradient(90deg, #fef3c7, #fde68a); border: 1px solid #f59e0b; color: #b45309; } .bar-gbl { background: linear-gradient(90deg, #ffedd5, #fed7aa); border: 1px solid #fb923c; color: #c2410c; } .bar-shadow-daily { background: linear-gradient(90deg, #fee2e2, #fecaca); border: 1px solid #f87171; color: #991b1b; } .bg-9db-card { background: radial-gradient(circle at center, #2e1065 0%, #170b2c 70%, #0d061a 100%); } #swipeBackIndicator { transition: transform 0.15s ease-out, opacity 0.15s ease-out; } /* ガントチャート横スクロール時のテキスト＆アイコン左端追従用 */ .gantt-sticky-label { position: sticky; left: 6px; display: inline-flex; align-items: center; gap: 4px; max-width: calc(100vw - 65px); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; } </style> </head> <body class="min-h-screen flex flex-col"> <!-- 左端スワイプ時の視覚インジケーター --> <div id="swipeBackIndicator" class="fixed left-0 top-1/2 -translate-y-1/2 z-50 pointer-events-none opacity-0 -translate-x-full bg-sky-600 text-white px-3 py-2 rounded-r-full shadow-lg font-bold text-xs flex items-center gap-1"> <span>←</span> 前の画面へ戻る </div> <!-- フローティング「前の画面に戻る」ボタン --> <button id="floatingBackBtn" onclick="triggerBackNavigation()" class="hidden fixed bottom-5 left-4 z-50 bg-slate-900/90 hover:bg-sky-700 text-white text-xs font-bold px-3.5 py-2.5 rounded-full shadow-xl border border-slate-700 backdrop-blur flex items-center gap-2 transition-all active:scale-95"> <span class="text-sm">←</span> <span id="floatingBackLabel">元のイベントに戻る</span> <span class="text-[10px] text-slate-300 font-normal hidden sm:inline">(スワイプで戻る可)</span> </button> <!-- ヘッダー --> <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-4 py-2.5 shadow-sm"> <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-2"> <div class="flex items-center gap-2"> <span class="text-2xl">⚡</span> <div> <h1 class="text-base sm:text-lg font-black tracking-wide bg-gradient-to-r from-sky-600 via-teal-600 to-amber-600 bg-clip-text text-transparent"> Pokémon GO 総合攻略ハブ </h1> <div class="text-[11px] text-slate-500 flex items-center gap-2"> <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> <span id="autoUpdateTimestamp" class="font-bold text-slate-700">自動更新: 毎日 7時 / 12時 / 18時 / 22時</span> <span class="text-sky-600 font-semibold hidden sm:inline">ポケマピ / GameWith / 9DB / 公式 統合仕様</span> </div> </div> </div> <div class="flex items-center gap-2"> <button id="headerBackBtn" onclick="triggerBackNavigation()" class="hidden text-xs bg-sky-50 text-sky-700 border border-sky-300 hover:bg-sky-100 px-2.5 py-1 rounded-md transition font-bold shadow-sm flex items-center gap-1"> <span>←</span> 戻る </button> <button onclick="restoreAllHiddenEvents()" id="globalRestoreBtn" class="hidden text-xs bg-amber-50 text-amber-700 border border-amber-300 hover:bg-amber-100 px-2.5 py-1 rounded-md transition font-bold shadow-sm"> <span id="globalHiddenCount">0</span>件非表示中 [すべて再表示] </button> </div> </div> </header> <!-- 4大メインナビゲーションタブ (一番左にシーズン24常設を配置) --> <div class="max-w-6xl mx-auto w-full px-4 pt-3 pb-1"> <nav class="grid grid-cols-2 sm:grid-cols-4 gap-1.5 p-1 bg-slate-200/80 rounded-xl border border-slate-300 shadow-inner"> <button id="tabNavSeason" onclick="switchMainTab('season')" class="py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1 text-slate-600 hover:text-slate-900"> <span>🏆</span> シーズン24常設 </button> <button id="tabNavSchedule" onclick="switchMainTab('schedule')" class="py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1 bg-white text-sky-700 shadow-sm"> <span>📅</span> イベント & 日程 </button> <button id="tabNavBattles" onclick="switchMainTab('battles')" class="py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1 text-slate-600 hover:text-slate-900"> <span>⚔️</span> レイド & DMax </button> <button id="tabNavGoPass" onclick="switchMainTab('gopass')" class="py-2 px-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-1 text-slate-600 hover:text-slate-900"> <span>🎫</span> GOパス </button> </nav> </div> <!-- メインコンテンツ領域 --> <main class="max-w-6xl mx-auto w-full px-4 py-3 flex-1 pb-16"> 
 
-  <div id="swipeBackIndicator" class="fixed left-0 top-1/2 -translate-y-1/2 z-50 pointer-events-none opacity-0 -translate-x-full bg-sky-600 text-white px-3 py-2 rounded-r-full shadow-lg font-bold text-xs transition-all flex items-center gap-1">
-    <span>←</span> 戻る
+<!-- ============================================================== -->  
+<!-- タブ 0 (一番左): 🏆 シーズン24「黄昏の旅路」常設ボーナス・タマゴ・野生・GBL詳細 -->  
+<!-- ============================================================== -->  
+<div id="tabContentSeason" class="space-y-4 hidden">  
+  <div class="bg-white border-2 border-orange-200 rounded-xl p-4 shadow-sm space-y-4">  
+    <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-3">  
+      <div>  
+        <span class="text-[11px] bg-orange-100 text-orange-800 border border-orange-300 font-bold px-2.5 py-0.5 rounded-full">シーズン24 常設データ (ポケマピ・9DB・GameWith・公式 準拠)</span>  
+        <h2 class="text-lg sm:text-xl font-black text-slate-900 mt-1">🏆 シーズン24「黄昏の旅路 (Memories in Motion)」完全ガイド</h2>  
+        <p class="text-xs text-slate-500 mt-0.5">開催期間: 2026年9月8日(火) 10:00 〜 2026年12月1日(火) 10:00</p>  
+      </div>  
+    </div>
+
+    <!-- ① シーズン常設ボーナス & 週間定例イベント仕様 -->  
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">  
+      <div class="bg-emerald-50/60 border border-emerald-200 rounded-xl p-3.5 space-y-1.5">  
+        <h3 class="text-xs sm:text-sm font-extrabold text-emerald-800 flex items-center gap-1.5">🎁 シーズン期間中の常設ボーナス（全トレーナー共通）</h3>  
+        <ul class="text-xs text-slate-700 space-y-1.5 list-disc list-inside leading-relaxed">  
+          <li><strong>特別な交換の上限増加：</strong>1日に行える「特別な交換」が <strong>+1回増加（毎日最大2回まで）</strong></li>  
+          <li><strong>交換時のほしのすな軽減：</strong>ポケモン交換時に必要なほしのすなが常時割引</li>  
+          <li><strong>フレンドとのレイド火力増加：</strong>フレンドと一緒にレイドバトルに参加した際のダメージボーナスがアップ</li>  
+          <li><strong>交換時のアメボーナス（GOパスRank1達成後）：</strong>交換時のアメ+1個 ＆ TL31以上は「アメXL」が1個確定ドロップ</li>  
+          <li><strong>ポケストップ7日目連続スピン：</strong>連続7日目のスピンで獲得できるXPが大幅増加＆進化アイテム確定</li>  
+        </ul>  
+      </div>  
+      <div class="bg-sky-50/60 border border-sky-200 rounded-xl p-3.5 space-y-1.5">  
+        <h3 class="text-xs sm:text-sm font-extrabold text-sky-800 flex items-center gap-1.5">⏰ 今シーズンの週間定例イベント・大発見仕様</h3>  
+        <ul class="text-xs text-slate-700 space-y-1.5 list-disc list-inside leading-relaxed">  
+          <li><strong>毎週月曜 6:00〜21:00【マックスマンデー】：</strong>従来の1時間限定から<strong>「月曜終日開催(6:00〜21:00)」</strong>へ大幅拡大！週間ピックアップのダイマックスポケモンがパワースポットに大量出現します。</li>  
+          <li><strong>毎週水曜 18:00〜19:00【レイドアワー】：</strong>現在開催中の★5伝説レイドボスが全国のジムに1時間一斉出現します（11/9月・11/10火はワイルドウィーク特別枠で開催）。</li>  
+          <li><strong>毎週木曜 18:00〜19:00【デイリーディスカバリー】：</strong>週替わりのスポットライト対象ポケモン大量発生＆特別ボーナス（※11/9〜15のワイルドウィーク週は休止）。</li>  
+          <li><strong>フィールドリサーチ7日目【大発見リワード】：</strong>「ふしぎなアメXL」確定チャンスに加え、ガラルバリヤード、ヌメラ、ジャラコ、セビエ、モルペコ、アローラガラガラ等からランダム遭遇。</li>  
+        </ul>  
+      </div>  
+    </div>
+
+    <!-- ② タマゴ孵化ラインナップ詳細 -->  
+    <div class="bg-white border border-slate-200 rounded-xl p-3.5 space-y-2.5">  
+      <div class="flex flex-wrap items-center justify-between gap-2">  
+        <h3 class="text-xs sm:text-sm font-extrabold text-amber-800 flex items-center gap-1.5">🥚 シーズン24 タマゴ孵化ラインナップ（通常タマゴ ＆ 週間いつでも冒険モード報酬）</h3>  
+        <span class="text-[11px] text-slate-500">※イベント開催中はイベント限定タマゴが優先されます</span>  
+      </div>  
+      <div id="seasonEggGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 text-xs"></div>  
+    </div>
+
+    <!-- ③ バイオーム別・野生の常設出現ポケモン -->  
+    <div class="bg-white border border-slate-200 rounded-xl p-3.5 space-y-2.5">  
+      <h3 class="text-xs sm:text-sm font-extrabold text-teal-800 flex items-center gap-1.5">🌿 バイオーム（生息地）＆ 半球別・野生の常設出現ポケモン</h3>  
+      <div id="seasonBiomeGrid" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs"></div>  
+    </div>
+
+    <!-- ④ GOバトルリーグ (GBL) シーズン24 詳細 -->  
+    <div class="bg-orange-50/50 border border-orange-200 rounded-xl p-3.5 space-y-2.5">  
+      <div class="flex flex-wrap items-center justify-between gap-2">  
+        <h3 class="text-xs sm:text-sm font-extrabold text-orange-800 flex items-center gap-1.5">🥊 GOバトルリーグ：黄昏の旅路（2026/9/9 5:00 〜 12/2 6:00）</h3>  
+        <span class="text-[11px] bg-orange-100 text-orange-800 px-2 py-0.5 rounded font-bold border border-orange-300">ML開催週は勝利時ほしのすな4倍</span>  
+      </div>  
+      <p class="text-xs text-slate-700 leading-relaxed">  
+        ランク19到達時に<strong>「すごいわざマシンスペシャル×1」</strong>が即付与され、シーズン終了時にもランク19以上のトレーナーへ<strong>「すごいわざマシンノーマル×1」</strong>が配布されます。また、ランク20到達以降は3勝リワードのポケモン遭遇枠に「その時点で出現している★5伝説レイドボス」が追加されます。  
+      </p>  
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs pt-1">  
+        <div class="bg-white p-2.5 rounded-lg border border-orange-200">  
+          <div class="font-bold text-orange-800">🔵 スーパーリーグ (CP1500以下)</div>  
+          <p class="text-[11px] text-slate-600 mt-1"><strong>環境上位：</strong>ドオー、オーダイル(シャドウ可)、マンドリバル、トリトドン、マリルリ、アローラサンドパン、ワタッコ</p>  
+        </div>  
+        <div class="bg-white p-2.5 rounded-lg border border-orange-200">  
+          <div class="font-bold text-orange-800">🟡 ハイパーリーグ (CP2500以下)</div>  
+          <p class="text-[11px] text-slate-600 mt-1"><strong>環境上位：</strong>ジガルデ(パーフェクト)、ギラティナ(アナザー)、クレセリア、オーダイル、ラウドボーン、コバルオン、ビリジオン</p>  
+        </div>  
+        <div class="bg-white p-2.5 rounded-lg border border-orange-200">  
+          <div class="font-bold text-orange-800">🟣 マスターリーグ (CP無制限)</div>  
+          <p class="text-[11px] text-slate-600 mt-1"><strong>環境上位：</strong>ザシアン(けんのおう)、ブラック/ホワイトキュレム、ネクロズマ(たそがれ/あかつき)、ディアルガ(オリジン)、パルキア(オリジン)、ランドロス(霊獣)</p>  
+        </div>  
+      </div>  
+    </div>  
+  </div>  
+</div>
+
+<!-- ============================================================== -->  
+<!-- タブ 1: イベント ＆ ガントチャート (3ヶ月対応) -->  
+<!-- ============================================================== -->  
+<div id="tabContentSchedule" class="space-y-4">
+
+  <!-- トップ通知エリア -->  
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-3">  
+    <!-- 🚨 本日開催中・終了間近 -->  
+    <div class="bg-white border border-rose-200 rounded-xl p-3.5 shadow-sm">  
+      <div class="flex items-center justify-between mb-2">  
+        <h2 class="text-sm font-extrabold text-rose-600 flex items-center gap-1.5">  
+          <span>🚨</span> 本日開催中・注目のイベント (<span id="todayHeaderDateLabel">読込中</span>)  
+        </h2>  
+        <span class="text-[10px] bg-rose-50 text-rose-600 px-2 py-0.5 rounded-full font-bold border border-rose-200">タップでイベント詳細欄へ</span>  
+      </div>  
+      <ul id="todayEventsList" class="text-xs space-y-2 text-slate-700"></ul>  
+    </div>
+
+    <!-- 📢 直近の公式発表・最新ニュース速報 -->  
+    <div class="bg-white border border-sky-200 rounded-xl p-3.5 shadow-sm flex flex-col justify-between">  
+      <div>  
+        <div class="flex items-center justify-between mb-2">  
+          <h2 class="text-sm font-extrabold text-sky-700 flex items-center gap-1.5">  
+            <span>📢</span> 4サイト統合・最新ニュース速報 (直近発表)  
+          </h2>  
+          <button onclick="resetReadNews()" class="text-[10px] text-slate-500 hover:text-sky-600 underline">  
+            既読リセット  
+          </button>  
+        </div>  
+        <div id="newsItemsContainer" class="space-y-1.5 text-xs max-h-56 overflow-y-auto pr-1"></div>  
+      </div>  
+      <div class="text-[10px] text-slate-400 mt-2 text-right">  
+        タイトルタップで該当イベント詳細欄へスクロール / 「✓」で既読非表示  
+      </div>  
+    </div>  
+  </section>
+
+  <!-- 3ヶ月ガントチャート カレンダー -->  
+  <section class="bg-white border border-slate-200 rounded-xl p-3.5 shadow-sm">  
+    <div class="flex flex-wrap items-center justify-between gap-2 mb-2">  
+      <div class="flex items-center gap-2">  
+        <h2 class="text-sm font-extrabold text-slate-900 flex items-center gap-1.5">  
+          <span>📊</span> イベントスケジュール (ガントチャート・タイムライン)  
+        </h2>  
+        <span class="text-[11px] text-slate-500 hidden sm:inline">| 横スクロール時も文字とアイコンが左端に追従します</span>  
+      </div>
+
+      <!-- 月切り替えボタン [10月] [11月] [12月] -->  
+      <div class="flex items-center gap-1 bg-slate-100 p-1 rounded-lg border border-slate-200">  
+        <button onclick="changeGanttMonth(10)" id="monthBtn10" class="text-xs px-3 py-1 rounded-md font-bold transition bg-sky-600 text-white shadow-sm">10月</button>  
+        <button onclick="changeGanttMonth(11)" id="monthBtn11" class="text-xs px-3 py-1 rounded-md font-bold transition text-slate-600 hover:text-slate-900">11月</button>  
+        <button onclick="changeGanttMonth(12)" id="monthBtn12" class="text-xs px-3 py-1 rounded-md font-bold transition text-slate-600 hover:text-slate-900">12月</button>  
+      </div>  
+    </div>
+
+    <!-- カテゴリ絞り込みフィルターバー (コミュニティ・デイ追加) -->  
+    <div class="flex flex-wrap items-center gap-1.5 pb-2.5 pt-1 border-b border-slate-100">  
+      <span class="text-[11px] text-slate-500 font-bold mr-1">絞り込み:</span>  
+      <button onclick="filterTimelineCategory('all')" id="catBtn-all" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-sky-600 text-white shadow-sm">すべて</button>  
+      <button onclick="filterTimelineCategory('main')" id="catBtn-main" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-100 text-slate-600 hover:bg-slate-200">🎪 メイン・季節イベント</button>  
+      <button onclick="filterTimelineCategory('cd')" id="catBtn-cd" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-100 text-slate-600 hover:bg-slate-200">🌱 コミュニティ・デイ</button>  
+      <button onclick="filterTimelineCategory('raid')" id="catBtn-raid" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-100 text-slate-600 hover:bg-slate-200">⚔️ レイドバトル</button>  
+      <button onclick="filterTimelineCategory('dmax')" id="catBtn-dmax" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-100 text-slate-600 hover:bg-slate-200">⚡ マックスバトル</button>  
+      <button onclick="filterTimelineCategory('collab')" id="catBtn-collab" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold transition bg-slate-100 text-slate-600 hover:bg-slate-200">🤝 大型・コラボ・パス</button>  
+    </div>
+
+    <!-- 横スクロールコンテナ -->  
+    <div class="relative overflow-x-auto rounded-lg border border-slate-200 bg-white pb-2 mt-2" id="ganttScrollWrapper">  
+      <div id="ganttTimelineTable" class="min-w-[960px] select-none">  
+        <div id="ganttHeaderRow" class="grid sticky top-0 z-20 bg-slate-50 border-b border-slate-200 text-center text-xs font-bold text-slate-600"></div>  
+        <div id="ganttTracksContainer" class="relative py-2 space-y-1">  
+          <div id="ganttBgGrid" class="absolute inset-0 grid pointer-events-none"></div>  
+        </div>  
+      </div>  
+    </div>
+
+    <!-- 凡例 -->  
+    <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-slate-500 mt-2 px-1">  
+      <span class="flex items-center gap-1"><span class="w-3 h-2 rounded bg-sky-100 border border-sky-400"></span> メイン・季節イベント</span>  
+      <span class="flex items-center gap-1"><span class="w-3 h-2 rounded bg-amber-100 border border-amber-400"></span> コミュニティ・デイ</span>  
+      <span class="flex items-center gap-1"><span class="w-3 h-2 rounded bg-emerald-100 border border-emerald-400"></span> 伝説・メガ・スーパーメガレイド</span>  
+      <span class="flex items-center gap-1"><span class="w-3 h-2 rounded bg-rose-100 border border-rose-400"></span> ★5シャドウ (連日常設)</span>  
+      <span class="flex items-center gap-1"><span class="w-3 h-2 rounded bg-purple-100 border border-purple-400"></span> マックスバトル・マンデー</span>  
+      <span class="flex items-center gap-1"><span class="w-3 h-2 rounded bg-teal-100 border border-teal-400"></span> ワイルドエリア・コラボ・GOパス</span>  
+    </div>  
+  </section>
+
+  <!-- イベント詳細アコーディオン一覧 -->  
+  <section class="space-y-3">  
+    <div class="flex flex-wrap items-center justify-between gap-2 px-1">  
+      <h2 class="text-sm font-extrabold text-slate-800 flex items-center gap-1.5">  
+        <span>📌</span> イベント詳細・無料/有料区分・出現ポケモン・限定タスク一覧  
+      </h2>  
+      <div class="flex items-center gap-2 text-[11px]">  
+        <span class="bg-emerald-50 text-emerald-700 border border-emerald-300 px-2 py-0.5 rounded font-bold">🟢 無料 (全員共通)</span>  
+        <span class="bg-amber-50 text-amber-800 border border-amber-300 px-2 py-0.5 rounded font-bold">💎 有料チケット・課金</span>  
+      </div>  
+    </div>  
+    <div id="eventsAccordionContainer" class="space-y-2.5"></div>
+
+    <!-- 過去の終了イベント アーカイブ -->  
+    <details class="bg-white border border-slate-200 rounded-xl overflow-hidden mt-4 shadow-sm group">  
+      <summary class="p-3 text-xs font-bold text-slate-600 cursor-pointer hover:bg-slate-50 flex items-center justify-between">  
+        <span class="flex items-center gap-1.5">📂 アーカイブ（2026年10月 終了済みのイベント履歴）</span>  
+        <span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded text-slate-500 group-open:rotate-180 transition-transform">▼</span>  
+      </summary>  
+      <div id="archivedEventsList" class="p-3 pt-0 text-xs text-slate-600 border-t border-slate-100 space-y-2 mt-2"></div>  
+    </details>  
+  </section>
+
+</div>
+
+<!-- ============================================================== -->  
+<!-- タブ 2: レイド & ダイマックス対策 -->  
+<!-- ============================================================== -->  
+<div id="tabContentBattles" class="space-y-4 hidden">
+
+  <div class="flex gap-2 p-1 bg-slate-200/80 rounded-xl border border-slate-300">  
+    <button id="subTabRaids" onclick="switchBattleSub('raids')" class="flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition bg-white text-emerald-700 shadow-sm">  
+      ⚔️ ★5伝説・スーパーメガ・メガ・シャドウレイド  
+    </button>  
+    <button id="subTabDmax" onclick="switchBattleSub('dmax')" class="flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition text-slate-600 hover:text-slate-900">  
+      💥 ダイマックス＆キョダイマックス攻略 (TOP 5)  
+    </button>  
   </div>
-  <button id="floatingBackBtn" onclick="triggerBackNavigation()" class="hidden fixed bottom-5 left-4 z-50 bg-slate-900/90 text-white text-xs font-bold px-3.5 py-2.5 rounded-full shadow-xl flex items-center gap-2">
-    <span>←</span> <span id="floatingBackLabel">戻る</span>
-  </button>
 
-  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-4 py-2.5 shadow-sm">
-    <div class="max-w-6xl mx-auto flex items-center justify-between gap-2">
-      <div class="flex items-center gap-2">
-        <span class="text-2xl">⚡</span>
-        <div>
-          <h1 class="text-base sm:text-lg font-black bg-gradient-to-r from-sky-600 to-amber-600 bg-clip-text text-transparent">Pokémon GO 総合攻略ハブ</h1>
-          <div class="text-[11px] text-slate-500 flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span id="autoUpdateTimestamp" class="font-bold">自動更新: 取得中...</span>
-          </div>
-        </div>
-      </div>
-      <button onclick="restoreAllHiddenEvents()" id="globalRestoreBtn" class="hidden text-[10px] bg-amber-50 text-amber-700 border border-amber-300 px-2 py-1 rounded">全表示</button>
+  <!-- 2-A: 通常・メガ・シャドウレイド -->  
+  <div id="secBattleRaids" class="space-y-4">  
+    <div>  
+      <div class="text-xs font-bold text-emerald-700 mb-2 flex items-center justify-between">  
+        <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> 🔴 現在出現中レイド（今すぐ挑戦可能）:</span>  
+        <span class="text-[11px] text-slate-500">タップで詳細対策切り替え</span>  
+      </div>  
+      <div id="raidBossPickerCurrent" class="grid grid-cols-1 sm:grid-cols-3 gap-2"></div>  
     </div>
-  </header>
 
-  <!-- 5大ナビゲーションタブ -->
-  <div class="max-w-6xl mx-auto w-full px-4 pt-3 pb-1">
-    <nav class="grid grid-cols-5 gap-1 p-1 bg-slate-200/80 rounded-xl border border-slate-300 shadow-inner">
-      <button id="tabNavSeason" onclick="switchMainTab('season')" class="py-2 text-[10px] sm:text-xs font-bold rounded-lg text-slate-600">🏆 シーズン</button>
-      <button id="tabNavSchedule" onclick="switchMainTab('schedule')" class="py-2 text-[10px] sm:text-xs font-bold rounded-lg bg-white text-sky-700 shadow-sm">📅 日程</button>
-      <button id="tabNavBattles" onclick="switchMainTab('battles')" class="py-2 text-[10px] sm:text-xs font-bold rounded-lg text-slate-600">⚔️ バトル</button>
-      <button id="tabNavResearch" onclick="switchMainTab('research')" class="py-2 text-[10px] sm:text-xs font-bold rounded-lg text-slate-600">🔍 リサーチ</button>
-      <button id="tabNavGoPass" onclick="switchMainTab('gopass')" class="py-2 text-[10px] sm:text-xs font-bold rounded-lg text-slate-600">🎫 GOパス</button>
-    </nav>
+    <div>  
+      <div class="text-xs font-bold text-purple-700 mb-2 flex items-center gap-1.5">  
+        <span>🔮 次回予告・今後の注目レイド (10/28〜 / 10/31限定 / 11月):</span>  
+      </div>  
+      <div id="raidBossPickerFuture" class="grid grid-cols-2 sm:grid-cols-4 gap-2"></div>  
+    </div>
+
+    <!-- ボス概要 (弱点削除・タイプ表示化) -->  
+    <div id="raidBossOverview" class="bg-white border border-slate-200 rounded-xl p-4 shadow-sm"></div>
+
+    <!-- ✨ おすすめメガシンカ枠 (火力重視 vs アメXL重視 の2軸・独立セクション) -->  
+    <div id="raidMegaRecommendBox" class="bg-gradient-to-r from-purple-50 via-white to-amber-50 border border-purple-200 rounded-xl p-4 shadow-sm"></div>
+
+    <!-- 対策ランキング（DPS順 ⇔ TDO順 切替 / 初期はメガシャンデラ含め通常ポケモンのみ） -->  
+    <div class="bg-white border border-slate-200 rounded-xl p-4 shadow-sm">  
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-3 mb-3 pb-3 border-b border-slate-100">  
+        <div>  
+          <h3 class="text-sm font-black text-slate-900" id="raidRankingTitle">対策DPSランキング TOP 10 (通常ポケモン限定)</h3>  
+          <p class="text-[11px] text-slate-500">技表記統一: <span class="bg-slate-200 text-slate-700 px-1 rounded font-bold">通常</span>＝通常技 / <span class="bg-sky-100 text-sky-800 px-1 rounded font-bold">SP</span>＝スペシャルアタック (*は特別技)</p>  
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2">  
+          <div class="flex items-center bg-slate-100 p-1 rounded-lg border border-slate-200">  
+            <button id="btnSortDps" onclick="setRaidSortMode('dps')" class="text-xs font-extrabold px-2.5 py-1 rounded-md transition bg-sky-600 text-white shadow-sm flex items-center gap-1">  
+              ⚡ DPS順 <span class="text-[10px] font-normal hidden sm:inline">(討伐速度)</span>  
+            </button>  
+            <button id="btnSortTdo" onclick="setRaidSortMode('tdo')" class="text-xs font-bold px-2.5 py-1 rounded-md transition text-slate-600 hover:text-slate-900 flex items-center gap-1">  
+              🛡️ TDO順 <span class="text-[10px] font-normal hidden sm:inline">(総ダメ・耐久)</span>  
+            </button>  
+          </div>
+
+          <button id="btnToggleMega" onclick="toggleRaidFilter('mega')" class="text-xs font-bold px-2.5 py-1.5 rounded-lg border transition bg-slate-100 text-slate-600 border-slate-200 hover:bg-slate-200">  
+            ✨ メガ含 (OFF)  
+          </button>  
+          <button id="btnToggleShadow" onclick="toggleRaidFilter('shadow')" class="text-xs font-bold px-2.5 py-1.5 rounded-lg border transition bg-slate-100 text-slate-600 border-slate-200 hover:bg-slate-200">  
+            🔥 シャドウ含 (OFF)  
+          </button>  
+        </div>  
+      </div>  
+      <div id="raidRankingList" class="space-y-2"></div>  
+    </div>  
   </div>
 
-  <main class="max-w-6xl mx-auto w-full px-4 py-3 flex-1 pb-16">
-
-    <!-- タブ0: シーズン常設 -->
-    <div id="tabContentSeason" class="space-y-4 hidden">
-      <div class="bg-white border border-orange-200 rounded-xl p-4 shadow-sm space-y-3" id="seasonContainer">
-        <h2 class="text-lg font-black text-slate-900">🏆 シーズン常設ガイド</h2>
-        <div id="seasonContent" class="text-xs text-slate-600">読込中...</div>
-      </div>
+  <!-- 2-B: ダイマックス攻略 (TOP 5 & ディアルガ/パルキア分割) -->  
+  <div id="secBattleDmax" class="space-y-4 hidden">  
+    <div>  
+      <div class="text-xs font-bold text-purple-700 mb-2 flex items-center justify-between">  
+        <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></span> 🔴 現在出現中マックスバトル（今すぐ挑戦可能）:</span>  
+        <span class="text-[11px] text-slate-500">タップで詳細対策切り替え</span>  
+      </div>  
+      <div id="dmaxBossPickerCurrent" class="grid grid-cols-1 sm:grid-cols-3 gap-2"></div>  
     </div>
 
-    <!-- タブ1: イベント日程 -->
-    <div id="tabContentSchedule" class="space-y-4">
-      <section class="grid grid-cols-1 md:grid-cols-2 gap-3">
-        <div class="bg-white border border-rose-200 rounded-xl p-3.5 shadow-sm">
-          <h2 class="text-sm font-extrabold text-rose-600 mb-2">🚨 本日開催中・注目のイベント</h2>
-          <ul id="todayEventsList" class="text-xs space-y-2 text-slate-700"></ul>
-        </div>
-        <div class="bg-white border border-sky-200 rounded-xl p-3.5 shadow-sm">
-          <h2 class="text-sm font-extrabold text-sky-700 mb-2">📢 4サイト統合・最新ニュース速報</h2>
-          <div id="newsItemsContainer" class="space-y-1.5 text-xs max-h-48 overflow-y-auto"></div>
-        </div>
-      </section>
-
-      <section class="bg-white border border-slate-200 rounded-xl p-3.5 shadow-sm">
-        <div class="flex justify-between items-center mb-2">
-          <h2 class="text-sm font-extrabold text-slate-900">📊 ガントチャート</h2>
-          <div id="ganttMonthBtnGroup" class="flex gap-1 bg-slate-100 p-1 rounded-lg"></div>
-        </div>
-        <div class="relative overflow-x-auto rounded-lg border border-slate-200 bg-white" id="ganttScrollWrapper">
-          <div id="ganttTimelineTable" class="min-w-[800px] select-none">
-            <div id="ganttHeaderRow" class="grid sticky top-0 z-20 bg-slate-50 border-b border-slate-200 text-center text-xs font-bold text-slate-600"></div>
-            <div id="ganttTracksContainer" class="relative py-2 space-y-1"><div id="ganttBgGrid" class="absolute inset-0 grid pointer-events-none"></div></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="space-y-3">
-        <h2 class="text-sm font-extrabold text-slate-800">📌 イベント詳細・タスク一覧</h2>
-        <div id="eventsAccordionContainer" class="space-y-2.5"></div>
-        <details class="bg-white border border-slate-200 rounded-xl mt-4"><summary class="p-3 text-xs font-bold text-slate-600 cursor-pointer">📂 終了済みアーカイブ</summary><div id="archivedEventsList" class="p-3 pt-0 text-xs"></div></details>
-      </section>
+    <div>  
+      <div class="text-xs font-bold text-purple-900 mb-2 flex items-center gap-1.5">  
+        <span>🔮 次回予告・今後のマックスバトル (11/2〜ワンリキー / 11/14ディアルガ / 11/15パルキア):</span>  
+      </div>  
+      <div id="dmaxBossPickerFuture" class="grid grid-cols-2 sm:grid-cols-4 gap-2"></div>  
     </div>
 
-    <!-- タブ2: レイド & DMax -->
-    <div id="tabContentBattles" class="space-y-4 hidden">
-      <div class="flex gap-2 p-1 bg-slate-200/80 rounded-xl">
-        <button id="subTabRaids" onclick="switchBattleSub('raids')" class="flex-1 py-2 text-xs font-bold rounded-lg bg-white text-emerald-700 shadow-sm">⚔️ レイド対策</button>
-        <button id="subTabDmax" onclick="switchBattleSub('dmax')" class="flex-1 py-2 text-xs font-bold rounded-lg text-slate-600">💥 DMax対策</button>
-      </div>
-      <div id="secBattleRaids" class="space-y-3">
-        <div id="raidBossPickerCurrent" class="grid grid-cols-1 sm:grid-cols-3 gap-2"></div>
-        <div id="raidBossOverview"></div>
-        <div id="raidMegaRecommendBox"></div>
-        <div class="bg-white border border-slate-200 rounded-xl p-3 shadow-sm">
-          <div class="flex justify-between items-center mb-2 border-b pb-2">
-            <h3 class="text-sm font-black text-slate-900" id="raidRankingTitle">対策ランキング</h3>
-            <div class="flex gap-2">
-              <button id="btnSortDps" onclick="setRaidSortMode('dps')" class="text-[10px] px-2 py-1 rounded bg-sky-600 text-white font-bold">DPS順</button>
-              <button id="btnSortTdo" onclick="setRaidSortMode('tdo')" class="text-[10px] px-2 py-1 rounded bg-slate-100 text-slate-600 font-bold">TDO順</button>
-            </div>
-          </div>
-          <div id="raidRankingList" class="space-y-1.5"></div>
-        </div>
-      </div>
-      <div id="secBattleDmax" class="space-y-3 hidden">
-        <div id="dmaxBossPickerCurrent" class="grid grid-cols-1 sm:grid-cols-3 gap-2"></div>
-        <div id="dmax9dbContainer"></div>
-      </div>
-    </div>
+    <div id="dmax9dbContainer"></div>  
+  </div>
 
-    <!-- タブ3(新): 🔍 リサーチ一覧 -->
-    <div id="tabContentResearch" class="space-y-4 hidden">
-      <div class="bg-white border border-teal-200 rounded-xl p-4 shadow-sm space-y-3">
-        <div class="flex flex-wrap justify-between items-center gap-2 border-b border-slate-100 pb-2">
-          <h2 class="text-base font-black text-slate-900">🔍 フィールドリサーチ全一覧</h2>
-          <input type="text" id="resSearchInput" oninput="renderResearchTab()" placeholder="タスク・報酬で検索..." class="text-xs border rounded-lg px-2 py-1.5 w-48">
-        </div>
-        <div class="flex flex-wrap gap-1.5 pb-2">
-          <button onclick="setResFilter('all')" id="resFilter-all" class="text-[11px] px-3 py-1 rounded-full font-bold bg-teal-600 text-white">すべて</button>
-          <button onclick="setResFilter('event')" id="resFilter-event" class="text-[11px] px-3 py-1 rounded-full font-bold bg-slate-100 text-slate-600">🎃 イベント限定</button>
-          <button onclick="setResFilter('catch')" id="resFilter-catch" class="text-[11px] px-3 py-1 rounded-full font-bold bg-slate-100 text-slate-600">⚾ 捕獲系</button>
-          <button onclick="setResFilter('battle')" id="resFilter-battle" class="text-[11px] px-3 py-1 rounded-full font-bold bg-slate-100 text-slate-600">⚔️ バトル</button>
-          <button onclick="setResFilter('explore')" id="resFilter-explore" class="text-[11px] px-3 py-1 rounded-full font-bold bg-slate-100 text-slate-600">🥚 その他</button>
-        </div>
-        <div id="masterResearchListContainer" class="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs"></div>
-      </div>
-    </div>
+</div>
 
-    <!-- タブ4: GOパス -->
-    <div id="tabContentGoPass" class="space-y-4 hidden">
-      <div id="goPassContainer" class="bg-white border border-amber-200 rounded-xl p-4 shadow-sm">
-        <h2 class="text-base font-black text-slate-900 mb-2">🎫 GOパス情報</h2>
-        <div id="goPassContent" class="text-xs text-slate-600">読込中...</div>
-      </div>
-    </div>
 
-  </main>
+<!-- ============================================================== -->
+<!-- タブ 3: 🎫 GOパス情報（データは data/ から自動表示。ランク表は出典のあるランクのみ） -->
+<!-- ============================================================== -->
+<div id="tabContentGoPass" class="space-y-4 hidden">
 
-  <script>
-    // --- マスターデータ（data.jsonから全自動ロード） ---
-    let MASTER = { events: [], news: [], raids: {}, dmax: {}, researches: [], gopass: {} };
-    let currentMainTab = "schedule";
-    let currentBattleSub = "raids";
-    let activeRaidKey = "";
-    let activeDmaxKey = "";
-    let raidSortMode = "dps";
-    let resFilter = "all";
-    let hiddenEventIds = new Set();
-    const now = new Date();
-    const tMonth = now.getMonth() + 1, tDate = now.getDate(), tYear = now.getFullYear();
-    let currentGanttMonth = tMonth;
+  <div class="flex gap-2 p-1 bg-slate-200/80 rounded-xl border border-slate-300">
+    <button id="goPassSubCurrent" onclick="switchGoPassSub('current')" class="flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition bg-white text-amber-700 shadow-sm">
+      🎃 開催中のGOパス
+    </button>
+    <button id="goPassSubFuture" onclick="switchGoPassSub('future')" class="flex-1 py-2 text-xs sm:text-sm font-bold rounded-lg transition text-slate-600 hover:text-slate-900">
+      🔮 これから開催のGOパス
+    </button>
+  </div>
 
-    // --- ポケモンID逆引きヘルパー ---
-    function resolveSpecialFormId(dex, name) {
-      const id = Number(dex) || 25, n = String(name || "");
-      if (id >= 10000) return id;
-      if (n.includes("キョダイ")) {
-        const m = {"フシギバナ":10195,"リザードン":10196,"カメックス":10197,"カイリキー":10201,"ゲンガー":10202,"オーロンゲ":10222,"ジュラルドン":10225};
-        for(let k in m) if(n.includes(k)) return m[k];
-      }
-      if (n.includes("メガ")||n.includes("ゲンシ")) {
-        const m = {"サーナイト":10051,"ヤミラミ":10066,"バンギラス":10049,"リザードンY":10035,"ゲンガー":10038,"ジュペッタ":10056,"メタグロス":10076,"カイオーガ":10077,"グラードン":10078,"レックウザ":10079,"ルカリオ":10059,"シャンデラ":609};
-        for(let k in m) if(n.includes(k)) return m[k];
-      }
-      if (n.includes("ザシアン")) return 10188;
-      if (n.includes("ザマゼンタ")) return 10189;
-      if (n.includes("オリジン")) { if(n.includes("ギラティナ")) return 10007; if(n.includes("ディアルガ")) return 10245; if(n.includes("パルキア")) return 10246; }
-      if (n.includes("ブラックキュレム")) return 10022; if (n.includes("ホワイトキュレム")) return 10023;
-      if (n.includes("あかつき")) return 10156; if (n.includes("たそがれ")) return 10155;
-      return id;
-    }
-    const getPokeImg = (dex, name) => `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${resolveSpecialFormId(dex, name)}.png`;
+  <div id="secGoPassCurrent" class="space-y-3">
+    <div id="goPassCurrentList" class="space-y-2.5"></div>
+  </div>
+  <div id="secGoPassFuture" class="space-y-3 hidden">
+    <div id="goPassFutureList" class="space-y-2.5"></div>
+  </div>
 
-    // --- タブ切り替え ---
-    function switchMainTab(tab) {
-      currentMainTab = tab;
-      const tMap = { "season": "text-orange-700", "schedule": "text-sky-700", "battles": "text-emerald-700", "research": "text-teal-700", "gopass": "text-amber-700" };
-      Object.keys(tMap).forEach(k => {
-        const active = (k === tab);
-        const btn = document.getElementById("tabNav" + k.charAt(0).toUpperCase() + k.slice(1));
-        if(btn) btn.className = active ? `py-2 text-[10px] sm:text-xs font-bold rounded-lg bg-white ${tMap[k]} shadow-sm` : `py-2 text-[10px] sm:text-xs font-bold rounded-lg text-slate-600 hover:text-slate-900`;
-        const content = document.getElementById("tabContent" + k.charAt(0).toUpperCase() + k.slice(1));
-        if(content) content.classList.toggle("hidden", !active);
-      });
-      if (tab === "battles") renderBattleTab();
-    }
+  <div id="goPassRankArea" class="space-y-3"></div>
+</div>
 
-    // --- データロード ＆ 初期化 ---
-    window.onload = function() {
-      fetch('./data.json?t=' + new Date().getTime()).then(r => r.json()).then(data => {
-        if(data.updated_at) document.getElementById('autoUpdateTimestamp').innerText = '最終更新: ' + data.updated_at;
-        MASTER.events = data.dynamic_events || [];
-        MASTER.news = data.latest_news || [];
-        MASTER.raids = data.dynamic_raids || {};
-        MASTER.dmax = data.dynamic_dmax || {};
-        MASTER.researches = data.all_field_researches || [];
-        MASTER.gopass = data.event_gopass || {};
-
-        // 🔍 第5タブからイベントリサーチを自動連動注入！
-        const byEv = {};
-        MASTER.researches.forEach(r => {
-          if (r.category === "event" && r.event_id) {
-            if(!byEv[r.event_id]) byEv[r.event_id] = [];
-            byEv[r.event_id].push(r);
-          }
-        });
-        MASTER.events.forEach(ev => { if (byEv[ev.id]) ev.fieldResearches = byEv[ev.id]; });
-
-        const rKeys = Object.keys(MASTER.raids), dKeys = Object.keys(MASTER.dmax);
-        if(rKeys.length) activeRaidKey = rKeys[0];
-        if(dKeys.length) activeDmaxKey = dKeys[0];
-
-        renderNews();
-        renderGantt();
-        renderEvents();
-        renderResearchTab();
-      }).catch(e => console.error("Data load error:", e));
-    };
-
-    // --- レンダリング処理 ---
-    function renderNews() {
-      document.getElementById("newsItemsContainer").innerHTML = MASTER.news.map(n => `
-        <div class="bg-slate-50 border p-2 rounded-lg flex justify-between gap-2 cursor-pointer hover:bg-slate-100" onclick="scrollToEv('${n.targetId}')">
-          <div class="text-[11px] font-bold text-sky-700 bg-sky-100 border-sky-200 border px-1.5 py-0.5 rounded flex-shrink-0">[${n.date_label || n.date}]</div>
-          <div class="line-clamp-1 font-bold text-slate-800 flex-1">${n.title}</div>
-        </div>
-      `).join("");
-    }
-
-    function renderGantt() {
-      const mGroup = document.getElementById("ganttMonthBtnGroup");
-      const mList = [tMonth, (tMonth%12)+1, ((tMonth+1)%12)+1];
-      mGroup.innerHTML = mList.map(m => `<button onclick="changeGanttMonth(${m})" class="text-xs px-2 py-1 rounded font-bold ${m===currentGanttMonth ? 'bg-sky-600 text-white':'text-slate-600'}">${m}月</button>`).join("");
-      
-      const headerRow = document.getElementById("ganttHeaderRow");
-      const bgGrid = document.getElementById("ganttBgGrid");
-      const tracksContainer = document.getElementById("ganttTracksContainer");
-      tracksContainer.querySelectorAll(".gantt-event-row").forEach(r => r.remove());
-      headerRow.innerHTML = ""; bgGrid.innerHTML = "";
-
-      const daysInMonth = new Date(tYear, currentGanttMonth, 0).getDate();
-      const sDay = (currentGanttMonth === tMonth) ? tDate : 1;
-      const gTemp = `repeat(${daysInMonth - sDay + 1}, minmax(40px, 1fr))`;
-      headerRow.style.gridTemplateColumns = gTemp; bgGrid.style.gridTemplateColumns = gTemp;
-
-      for (let d = sDay; d <= daysInMonth; d++) {
-        const isToday = (currentGanttMonth === tMonth && d === tDate);
-        headerRow.innerHTML += `<div class="py-1 border-r ${isToday?'bg-sky-50 text-sky-800 border-b-2 border-sky-500 font-black':''}">${currentGanttMonth}/${d}</div>`;
-        bgGrid.innerHTML += `<div class="border-r ${isToday?'bg-sky-50/40':''}"></div>`;
-      }
-
-      MASTER.events.filter(ev => !hiddenEventIds.has(ev.id) && ev.month === currentGanttMonth).forEach(ev => {
-        const evStart = Math.max(ev.startDay, sDay), evEnd = Math.min(ev.endDay, daysInMonth);
-        if (evStart > daysInMonth || evEnd < sDay) return;
-        const row = document.createElement("div");
-        row.className = "gantt-event-row relative h-6 flex items-center";
-        row.style.display = "grid"; row.style.gridTemplateColumns = gTemp;
-        const bar = document.createElement("div");
-        bar.className = `${ev.barClass || 'bg-sky-200 text-sky-800 border-sky-400'} border h-5 rounded px-1.5 text-[10px] font-bold cursor-pointer truncate flex items-center shadow-sm z-10`;
-        bar.style.gridColumn = `${evStart - sDay + 1} / span ${evEnd - evStart + 1}`;
-        bar.innerText = ev.title;
-        bar.onclick = () => scrollToEv(ev.id);
-        row.appendChild(bar);
-        tracksContainer.appendChild(row);
-      });
-    }
-    function changeGanttMonth(m) { currentGanttMonth = m; renderGantt(); }
-
-    function renderEvents() {
-      const container = document.getElementById("eventsAccordionContainer");
-      container.innerHTML = MASTER.events.filter(e => !hiddenEventIds.has(e.id)).map((ev, i) => {
-        const frHtml = (ev.fieldResearches && ev.fieldResearches.length > 0) ? `
-          <div class="bg-teal-50 border border-teal-200 p-2.5 rounded-lg">
-            <div class="text-[11px] font-extrabold text-teal-800 mb-1.5">🔍 イベント限定リサーチ（第5タブ自動同期済）</div>
-            <div class="space-y-1">${ev.fieldResearches.map(fr => `<div class="bg-white p-1.5 border rounded flex justify-between text-[11px]"><span>📋 ${fr.task}</span><strong class="text-amber-800">${fr.rewardName}</strong></div>`).join("")}</div>
-          </div>
-        ` : '';
-        const gmHtml = (ev.specialGimmicks && ev.specialGimmicks.length > 0) ? ev.specialGimmicks.map(gm => `
-          <div class="bg-amber-50 border border-amber-300 p-2.5 rounded-lg mt-2">
-            <div class="text-[11px] font-extrabold text-amber-900">📦 ${gm.gimmick_name}</div>
-            <div class="text-[10px] text-slate-700">${gm.description}</div>
-          </div>
-        `).join("") : '';
-
-        return `
-          <details class="bg-white border rounded-xl overflow-hidden shadow-sm" id="${ev.id}" ${i<3?'open':''}>
-            <summary class="p-3 cursor-pointer hover:bg-slate-50 font-extrabold text-sm flex justify-between">${ev.dateText} | ${ev.title} <span class="text-xs font-normal text-slate-400">▼</span></summary>
-            <div class="p-3 pt-0 border-t space-y-2 text-xs">
-              <div class="bg-slate-50 p-2 rounded border">${ev.summary}</div>
-              ${gmHtml}
-              ${frHtml}
-            </div>
-          </details>
-        `;
-      }).join("");
-    }
-
-    // --- 第5タブ：リサーチ全一覧 ---
-    function setResFilter(c) { resFilter = c; renderResearchTab(); }
-    function renderResearchTab() {
-      const container = document.getElementById("masterResearchListContainer");
-      const q = (document.getElementById("resSearchInput")?.value || "").toLowerCase();
-      const filtered = MASTER.researches.filter(r => {
-        if(resFilter !== "all" && r.category !== resFilter) return false;
-        if(q && !r.task.toLowerCase().includes(q) && !r.rewardName.toLowerCase().includes(q)) return false;
-        return true;
-      });
-      container.innerHTML = filtered.map(r => `
-        <div class="${r.category==='event' ? 'bg-amber-50 border-amber-300':'bg-slate-50 border-slate-200'} border p-2.5 rounded-lg flex flex-col justify-between">
-          <div><div class="text-[10px] font-bold text-slate-500 mb-1">${r.EventName || ''}</div><div class="font-black text-slate-800">📋 ${r.task}</div></div>
-          <div class="mt-1.5 flex items-center gap-1"><img src="${getPokeImg(r.rewardDex, r.rewardName)}" class="w-6 h-6"><strong class="text-amber-800">${r.rewardName} ${r.shiny?'✨':''}</strong></div>
-        </div>
-      `).join("");
-    }
-
-    function scrollToEv(id) {
-      switchMainTab('schedule');
-      const el = document.getElementById(id);
-      if(el) { el.open = true; el.scrollIntoView({behavior:'smooth'}); }
-    }
-    function switchBattleSub(type) {
-      document.getElementById("secBattleRaids").classList.toggle("hidden", type !== 'raids');
-      document.getElementById("secBattleDmax").classList.toggle("hidden", type !== 'dmax');
-    }
-  </script>
+</main>
+<script src="js/mon.js"></script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/render.js"></script>
 </body>
 </html>
