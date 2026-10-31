@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/10/31 18:30 JST",
+  "updated_at": "2026/10/31 22:16 JST",
   "latest_news": [
     {
       "id": "news-0cdcab26bb",
@@ -1176,6 +1176,190 @@
       "title": "【情報追加】おつきみダンス(2026年)：タイムチャレンジが判明・追加（2件）",
       "details": "タイムチャレンジ：月夜の小径→ピッピ(SP背景)・経験値・ほしのすな、昇る満月→ピッピ(SP背景)・経験値・ほしのすな",
       "targetId": "ev-auto-otsukimi-dance-2026"
+    },
+    {
+      "id": "news-db188e1218",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ワイルドエリア2026グローバル：野生が判明・追加（19件）",
+      "details": "野生：シェルデ、アローラナッシー、ハッサム、フライゴン、トドゼルガ、メタグロス ほか13件",
+      "targetId": "ev-auto-wild-area-2026-global"
+    },
+    {
+      "id": "news-cdf1bb5d6f",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ハロウィン2026 パート1：フィールドリサーチが判明・追加（13件）",
+      "details": "フィールドリサーチ：ゴーストタイプのポケモンを13匹捕まえる→460、ゴーストタイプのポケモンを13匹捕まえる→285、ゴーストタイプのポケモンを13匹捕まえる→285、レイドバトルで1回勝つ→285、レイドバトルで1回勝つ→488、レイドバトルで1回勝つ→488 ほか7件",
+      "targetId": "ev-halloween-p1"
+    },
+    {
+      "id": "news-2f9556b9f7",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ハロウィン2026 パート1：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：リワードを受け取る→ふしぎなアメ、リワードを受け取る→ピカチュウ(ハット&ケープ)",
+      "targetId": "ev-halloween-p1"
+    },
+    {
+      "id": "news-4a51ba45b8",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ポケモンGOの2026年11月のスケジュール：レイドが判明・追加（3件）",
+      "details": "レイド：メガヤミラミ、メガジュペッタ、メガメタグロス",
+      "targetId": "ev-auto-2026-nov-schedule"
+    },
+    {
+      "id": "news-2d3a1f642e",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ADIDAS POKÉMON タイムチャレンジ：フィールドリサーチが判明・追加（11件）",
+      "details": "フィールドリサーチ：ポケストップ・ジム10個を回す→ズリのみ、ポケモンを20匹捕まえる→おこう、5km探索する→モンスターボール、タマゴを10個かえす→パイルのみ、ポケモンを50匹捕まえる→いいキズぐすり、20km探索する→スーパーボール ほか5件",
+      "targetId": "ev-auto-adidas-pokemon-time-challenge"
+    },
+    {
+      "id": "news-cd26c04c93",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【日程変更】GOパス大きな足跡",
+      "details": "日程が更新されています：2026-11-16〜2026-11-23 → 2026-11-14〜2026-11-23",
+      "targetId": "ev-auto-go-pass-big-footprints"
+    },
+    {
+      "id": "news-70db7325fc",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】コマタナのコミュニティ・デイ：フィールドリサーチが判明・追加（6件）",
+      "details": "フィールドリサーチ：コマタナを3匹捕まえる→スーパーボール、コマタナを3匹捕まえる→ハイパーボール、コマタナを3匹捕まえる→パイルのみ、コマタナを3匹捕まえる→ほしのすな、チーム参加中ポケモンを5匹捕まえる→コマタナ、ポケモンを50匹捕まえる→コマタナ",
+      "targetId": "ev-cd-pawniard"
+    },
+    {
+      "id": "news-79a66ed187",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ポケモンナイトアウト：レイドが判明・追加（2件）",
+      "details": "レイド：ピカチュウ、ゲンガー",
+      "targetId": "ev-auto-pokemon-night-out"
+    },
+    {
+      "id": "news-e9822c5064",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】死者の日2026特別イベント(メキシコ レフォルマ通り)：レイドが判明・追加（1件）",
+      "details": "レイド：キョダイマックスゲンガー",
+      "targetId": "ev-auto-dia-de-muertos-2026-reforma"
+    },
+    {
+      "id": "news-64dbb83fbd",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ダイマックスワンリキー 出現率UP ＆ マックスマンデー：レイドが判明・追加（1件）",
+      "details": "レイド：ワンリキー",
+      "targetId": "ev-dmax-machop-week"
+    },
+    {
+      "id": "news-ed6a2bb124",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ダイマックスユクシー・エムリット・アグノムのマックスバトルデイ：レイドが判明・追加（3件）",
+      "details": "レイド：ユクシー(ダイマックス)、エムリット(ダイマックス)、アグノム(ダイマックス)",
+      "targetId": "ev-auto-max-battle-day-uxie-mesprit-azelf"
+    },
+    {
+      "id": "news-0b9a2809a9",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ダイマックスユクシー・エムリット・アグノムのマックスバトルデイ：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：リワードを受け取る (クリア済)→ダイキノC、リワードを受け取る (クリア済)→マックス粒子",
+      "targetId": "ev-auto-max-battle-day-uxie-mesprit-azelf"
+    },
+    {
+      "id": "news-633c922721",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【日程変更】メテノシャワー",
+      "details": "日程が更新されています：2026-10-19〜2026-12-16 → 2026-10-19〜2026-10-24",
+      "targetId": "ev-auto-minior-meteor-showers-2026"
+    },
+    {
+      "id": "news-dc4571e4cb",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】メテノシャワー：野生が判明・追加（7件）",
+      "details": "野生：メテノ(緑)、メテノ(赤)、メテノ(橙)、メテノ(黄)、メテノ(水)、メテノ(青) ほか1件",
+      "targetId": "ev-auto-minior-meteor-showers-2026"
+    },
+    {
+      "id": "news-869431c982",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ゾロアコミュニティデイ：フィールドリサーチが判明・追加（6件）",
+      "details": "フィールドリサーチ：ゾロアを3匹捕まえる→スーパーボール、ゾロアを3匹捕まえる→ハイパーボール、ゾロアを3匹捕まえる→パイルのみ、ゾロアを3匹捕まえる→ほしのすな、チーム参加中ポケモンを5匹捕まえる→ゾロア(スペシャル背景付き)、ポケモンを50匹捕まえる→ゾロア(スペシャル背景付き)",
+      "targetId": "ev-auto-zorua-community-day-2026-10"
+    },
+    {
+      "id": "news-3c4ecd10c8",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】世界宇宙週間2026：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：全クリア報酬→経験値、全クリア報酬→ほしのすな",
+      "targetId": "ev-auto-world-space-week-2026"
+    },
+    {
+      "id": "news-d513f734d8",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】わくわくPokémon GO Lab.大調査：フィールドリサーチが判明・追加（4件）",
+      "details": "フィールドリサーチ：Pokémon GO Lab.のポケストップを回す→経験値、相棒の写真を撮る→モンスターボール、ポケモンを5匹捕まえる→ほしのすな、ギフトを3個贈る→経験値",
+      "targetId": "ev-auto-wakuwaku-pokemon-go-lab"
+    },
+    {
+      "id": "news-800f7d84e9",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】わくわくPokémon GO Lab.大調査：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：全クリア報酬→ピカチュウ(ウィロー博士の助手)・ピカチュウのアメ・ほしのすな",
+      "targetId": "ev-auto-wakuwaku-pokemon-go-lab"
+    },
+    {
+      "id": "news-70b51da699",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】2026FCソウルイベント(韓国)：レイドが判明・追加（1件）",
+      "details": "レイド：ヒトカゲ(ロケーション背景)",
+      "targetId": "ev-auto-2026-fc-seoul-event"
+    },
+    {
+      "id": "news-0469767f78",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】キョダイマックスエースバーンのマックスバトルデイ：レイドが判明・追加（1件）",
+      "details": "レイド：キョダイマックスエースバーン(キョダイエースバーン)",
+      "targetId": "ev-auto-gigantamax-cinderace-raid-day"
+    },
+    {
+      "id": "news-4cc167e4b5",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】キョダイマックスエースバーンのマックスバトルデイ：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：リワードを受け取る(クリア済み)→ダイキノコ、リワードを受け取る(クリア済み)→マックス粒子",
+      "targetId": "ev-auto-gigantamax-cinderace-raid-day"
+    },
+    {
+      "id": "news-6d27b541ed",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ポケモンカードゲーム30周年記念イベント(アメリカ)：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：モンスターボール→ポケモン",
+      "targetId": "ev-auto-pokemon-card-30th-anniversary-usa"
+    },
+    {
+      "id": "news-211c997c2c",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】おつきみダンス(2026年)：タイムチャレンジが判明・追加（11件）",
+      "details": "タイムチャレンジ：ポケモンを10匹捕まえる→経験値、ポケモンを20匹捕まえる→ほしのすな、ナイススローを5回投げる→ホルビー、おさんぽおこうを使う→ヒメグマ、ポケモンを2日にわたって捕まえる→エネコ、ポケモンを3日にわたって捕まえる→ルナトーン ほか5件",
+      "targetId": "ev-auto-otsukimi-dance-2026"
     }
   ],
   "field_research_updates": {
@@ -1232,7 +1416,49 @@
         "note": "出典: gamewith"
       },
       {
+        "task": "コマタナを3匹捕まえる",
+        "rewardDex": 25,
+        "rewardName": "スーパーボール",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "コマタナを3匹捕まえる",
+        "rewardDex": 25,
+        "rewardName": "ハイパーボール",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "コマタナを3匹捕まえる",
+        "rewardDex": 25,
+        "rewardName": "パイルのみ",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "コマタナを3匹捕まえる",
+        "rewardDex": 25,
+        "rewardName": "ほしのすな",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
         "task": "チーム参加中ポケモンを5匹捕まえる",
+        "rewardDex": 624,
+        "rewardName": "コマタナ(SP背景)",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "チーム参加中ポケモンを5匹捕まえる",
+        "rewardDex": 624,
+        "rewardName": "コマタナ",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "ポケモンを50匹捕まえる",
         "rewardDex": 624,
         "rewardName": "コマタナ(SP背景)",
         "shiny": true,
@@ -1241,7 +1467,7 @@
       {
         "task": "ポケモンを50匹捕まえる",
         "rewardDex": 624,
-        "rewardName": "コマタナ(SP背景)",
+        "rewardName": "コマタナ",
         "shiny": true,
         "note": "出典: gamewith"
       },
@@ -1329,7 +1555,49 @@
         "note": "出典: gamewith"
       },
       {
+        "task": "ゾロアを3匹捕まえる",
+        "rewardDex": 25,
+        "rewardName": "スーパーボール",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "ゾロアを3匹捕まえる",
+        "rewardDex": 25,
+        "rewardName": "ハイパーボール",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "ゾロアを3匹捕まえる",
+        "rewardDex": 25,
+        "rewardName": "パイルのみ",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "ゾロアを3匹捕まえる",
+        "rewardDex": 25,
+        "rewardName": "ほしのすな",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
         "task": "チーム参加中ポケモンを5匹捕まえる",
+        "rewardDex": 570,
+        "rewardName": "ゾロア(SP背景)",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "チーム参加中ポケモンを5匹捕まえる",
+        "rewardDex": 570,
+        "rewardName": "ゾロア(スペシャル背景付き)",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "ポケモンを50匹捕まえる",
         "rewardDex": 570,
         "rewardName": "ゾロア(SP背景)",
         "shiny": true,
@@ -1338,7 +1606,7 @@
       {
         "task": "ポケモンを50匹捕まえる",
         "rewardDex": 570,
-        "rewardName": "ゾロア(SP背景)",
+        "rewardName": "ゾロア(スペシャル背景付き)",
         "shiny": true,
         "note": "出典: gamewith"
       }
@@ -1530,6 +1798,36 @@
         "note": "出典: gamewith"
       }
     ],
+    "ev-auto-wakuwaku-pokemon-go-lab": [
+      {
+        "task": "Pokémon GO Lab.のポケストップを回す",
+        "rewardDex": 25,
+        "rewardName": "経験値",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "相棒の写真を撮る",
+        "rewardDex": 25,
+        "rewardName": "モンスターボール",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "ポケモンを5匹捕まえる",
+        "rewardDex": 25,
+        "rewardName": "ほしのすな",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "ギフトを3個贈る",
+        "rewardDex": 25,
+        "rewardName": "経験値",
+        "shiny": false,
+        "note": "出典: gamewith"
+      }
+    ],
     "ev-aeon-halloween": [
       {
         "task": "ポケストップ・ジム2個を回す",
@@ -1688,6 +1986,27 @@
         "note": "出典: 9db"
       },
       {
+        "task": "ゴーストタイプのポケモンを13匹捕まえる",
+        "rewardDex": 25,
+        "rewardName": "460",
+        "shiny": true,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ゴーストタイプのポケモンを13匹捕まえる",
+        "rewardDex": 25,
+        "rewardName": "285",
+        "shiny": true,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ゴーストタイプのポケモンを13匹捕まえる",
+        "rewardDex": 25,
+        "rewardName": "285",
+        "shiny": true,
+        "note": "出典: 9db"
+      },
+      {
         "task": "レイドバトルで1回勝つ",
         "rewardDex": 280,
         "rewardName": "ラルトス（285）",
@@ -1730,6 +2049,27 @@
         "note": "出典: 9db"
       },
       {
+        "task": "レイドバトルで1回勝つ",
+        "rewardDex": 25,
+        "rewardName": "285",
+        "shiny": true,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "レイドバトルで1回勝つ",
+        "rewardDex": 25,
+        "rewardName": "488",
+        "shiny": true,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "レイドバトルで1回勝つ",
+        "rewardDex": 25,
+        "rewardName": "488",
+        "shiny": true,
+        "note": "出典: 9db"
+      },
+      {
         "task": "レイドバトルで3回勝つ",
         "rewardDex": 200,
         "rewardName": "ムウマ（402）",
@@ -1740,6 +2080,13 @@
         "task": "レイドバトルで3回勝つ",
         "rewardDex": 25,
         "rewardName": "バトル（402）",
+        "shiny": true,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "レイドバトルで3回勝つ",
+        "rewardDex": 25,
+        "rewardName": "402",
         "shiny": true,
         "note": "出典: 9db"
       },
@@ -1828,10 +2175,131 @@
         "note": "出典: 9db"
       },
       {
+        "task": "ナイススローを6回投げる",
+        "rewardDex": 25,
+        "rewardName": "515",
+        "shiny": true,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ナイススローを6回投げる",
+        "rewardDex": 25,
+        "rewardName": "523",
+        "shiny": true,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ナイススローを6回投げる",
+        "rewardDex": 25,
+        "rewardName": "533",
+        "shiny": true,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ナイススローを6回投げる",
+        "rewardDex": 25,
+        "rewardName": "536",
+        "shiny": true,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ナイススローを6回投げる",
+        "rewardDex": 25,
+        "rewardName": "302",
+        "shiny": true,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ナイススローを6回投げる",
+        "rewardDex": 25,
+        "rewardName": "825",
+        "shiny": true,
+        "note": "出典: 9db"
+      },
+      {
         "task": "イベント限定フィールドリサーチタスク",
         "rewardDex": 25,
         "rewardName": "イベントにぴったりなポケモン",
         "shiny": true,
+        "note": "出典: gamewith"
+      }
+    ],
+    "ev-auto-adidas-pokemon-time-challenge": [
+      {
+        "task": "ポケストップ・ジム10個を回す",
+        "rewardDex": 25,
+        "rewardName": "ズリのみ",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "ポケモンを20匹捕まえる",
+        "rewardDex": 25,
+        "rewardName": "おこう",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "5km探索する",
+        "rewardDex": 25,
+        "rewardName": "モンスターボール",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "タマゴを10個かえす",
+        "rewardDex": 25,
+        "rewardName": "パイルのみ",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "ポケモンを50匹捕まえる",
+        "rewardDex": 25,
+        "rewardName": "いいキズぐすり",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "20km探索する",
+        "rewardDex": 25,
+        "rewardName": "スーパーボール",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "相棒と探索してアメを3個もらう",
+        "rewardDex": 448,
+        "rewardName": "ルカリオのメガエナジー",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "グレートスローを20回投げる",
+        "rewardDex": 448,
+        "rewardName": "ルカリオのメガエナジー",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "ポケストップ・ジム100個を回す",
+        "rewardDex": 448,
+        "rewardName": "ルカリオのメガエナジー",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "ポケモンを捕まえるときにきのみ30個を使う",
+        "rewardDex": 448,
+        "rewardName": "ルカリオのメガエナジー",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "30km探索する",
+        "rewardDex": 448,
+        "rewardName": "ルカリオのメガエナジー",
+        "shiny": false,
         "note": "出典: gamewith"
       }
     ],
@@ -2799,7 +3267,7 @@
           "note": "ドラゴンのごとく大胆アワー"
         },
         {
-          "dex": 25,
+          "dex": 705,
           "name": "ヒスイヌメイル",
           "shiny": false,
           "note": "リアルイベントでのみ登場"
@@ -3969,7 +4437,7 @@
       "title": "ev-auto-minior-meteor-showers-2026",
       "wilds": [
         {
-          "dex": 25,
+          "dex": 774,
           "name": "メテノ(りゅうせいのすがた)",
           "shiny": false,
           "note": "コアの色は7種類。期間中出会いやすくなる"
@@ -4021,6 +4489,48 @@
           "name": "メテノ(むらさきいろのコア)",
           "shiny": true,
           "note": "野生でのみ出現。おこう・ルアーモジュールからは出現しない。"
+        },
+        {
+          "dex": 774,
+          "name": "メテノ(緑)",
+          "shiny": true,
+          "note": "オリオン座流星群"
+        },
+        {
+          "dex": 774,
+          "name": "メテノ(赤)",
+          "shiny": true,
+          "note": "コア"
+        },
+        {
+          "dex": 774,
+          "name": "メテノ(橙)",
+          "shiny": true,
+          "note": "コア"
+        },
+        {
+          "dex": 774,
+          "name": "メテノ(黄)",
+          "shiny": true,
+          "note": "コア"
+        },
+        {
+          "dex": 774,
+          "name": "メテノ(水)",
+          "shiny": true,
+          "note": "コア"
+        },
+        {
+          "dex": 774,
+          "name": "メテノ(青)",
+          "shiny": true,
+          "note": "コア"
+        },
+        {
+          "dex": 774,
+          "name": "メテノ(紫)",
+          "shiny": true,
+          "note": "コア"
         }
       ]
     },
@@ -4143,7 +4653,7 @@
       "title": "ev-auto-spotlight-hour-teddiursa-witch-hat",
       "wilds": [
         {
-          "dex": 25,
+          "dex": 216,
           "name": "ヒメグマ(魔女の帽子)",
           "shiny": true,
           "note": ""
@@ -4759,6 +5269,120 @@
           "name": "セビエ",
           "shiny": true,
           "note": "ドラゴンのごとく大胆アワー"
+        },
+        {
+          "dex": 25,
+          "name": "シェルデ",
+          "shiny": true,
+          "note": "ハガネのように強固アワー"
+        },
+        {
+          "dex": 103,
+          "name": "アローラナッシー",
+          "shiny": true,
+          "note": "つよいポケモン"
+        },
+        {
+          "dex": 212,
+          "name": "ハッサム",
+          "shiny": true,
+          "note": "つよいポケモン"
+        },
+        {
+          "dex": 330,
+          "name": "フライゴン",
+          "shiny": true,
+          "note": "つよいポケモン"
+        },
+        {
+          "dex": 365,
+          "name": "トドゼルガ",
+          "shiny": true,
+          "note": "つよいポケモン"
+        },
+        {
+          "dex": 376,
+          "name": "メタグロス",
+          "shiny": true,
+          "note": "つよいポケモン"
+        },
+        {
+          "dex": 395,
+          "name": "エンペルト",
+          "shiny": true,
+          "note": "つよいポケモン"
+        },
+        {
+          "dex": 462,
+          "name": "ジバコイル",
+          "shiny": true,
+          "note": "つよいポケモン"
+        },
+        {
+          "dex": 534,
+          "name": "ローブシン",
+          "shiny": true,
+          "note": "つよいポケモン"
+        },
+        {
+          "dex": 612,
+          "name": "オノノクス",
+          "shiny": true,
+          "note": "つよいポケモン"
+        },
+        {
+          "dex": 184,
+          "name": "マリルリ",
+          "shiny": true,
+          "note": "つよいポケモン"
+        },
+        {
+          "dex": 230,
+          "name": "キングドラ",
+          "shiny": true,
+          "note": "つよいポケモン"
+        },
+        {
+          "dex": 306,
+          "name": "ボスゴドラ",
+          "shiny": true,
+          "note": "つよいポケモン"
+        },
+        {
+          "dex": 598,
+          "name": "ナットレイ",
+          "shiny": true,
+          "note": "つよいポケモン"
+        },
+        {
+          "dex": 635,
+          "name": "サザンドラ",
+          "shiny": true,
+          "note": "つよいポケモン"
+        },
+        {
+          "dex": 706,
+          "name": "ヌメルゴン",
+          "shiny": true,
+          "note": "つよいポケモン"
+        },
+        {
+          "dex": 715,
+          "name": "オンバーン",
+          "shiny": true,
+          "note": "つよいポケモン"
+        },
+        {
+          "dex": 959,
+          "name": "デカヌチャン",
+          "shiny": true,
+          "note": "つよいポケモン"
+        },
+        {
+          "dex": 980,
+          "name": "ドオー",
+          "shiny": true,
+          "note": "つよいポケモン"
         }
       ]
     },
