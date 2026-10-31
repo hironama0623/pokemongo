@@ -28,6 +28,8 @@ GEMINI_MODELS = [m for m in dict.fromkeys([os.environ.get("GEMINI_MODEL", "gemin
 # max_articles: 1回に見る記事の上限 / min_chars: これ未満は「本文が取れていない疑い」(suspect_empty)
 # link_re: 記事URLの正規表現（group(1)=記事キー）。min_id: これ未満の数値IDは古い記事として無視。
 # 数値IDでないサイト（公式）は一覧の並び順（新しい順）で上位 max_articles 件を見る。
+SITE_PRIORITY = {"official": 0, "pokemapi": 1, "9db": 2, "gamewith": 3}   # 解析の優先順（上限に達したとき後ろは次回へ回る）
+
 SOURCES = {
     "pokemapi": {
         "label": "ポケマピ",

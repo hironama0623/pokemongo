@@ -45,6 +45,27 @@ def _fetch_page(source, url, role, log, getter, min_chars, dump=None):
     return e, {"site": source, "url": url, "text": (header + "\n\n" + text) if header else text, "updated": e["article_updated"], "date": date, "hash": extract.content_hash(text), "header": header}
 
 
+def _dump_research_text(queue):
+    """原因調査用: 「リサーチ」を含む記事について、AIに渡す本文のうちリサーチ周辺の行を logs/debug/research/ に保存する（毎回上書き・最大40件）。"""
+    d = config.LOGS / "debug" / "research"
+    try:
+        d.mkdir(parents=True, exist_ok=True)
+        for old in d.glob("*.txt"):
+            old.unlink()
+        n = 0
+        for a in queue:
+            lines = a["text"].split("\n")
+            idx = [i for i, l in enumerate(lines) if "リサーチ" in l]
+            if not idx or n >= 40:
+                continue
+            keep = sorted({j for i in idx for j in range(max(0, i - 1), min(len(lines), i + 8))})
+            name = f"{a['site']}-{a['url'].rstrip('/').split('/')[-1]}.txt"
+            (d / name).write_text(a["url"] + "\n" + "\n".join(lines[j] for j in keep[:80]), encoding="utf-8")
+            n += 1
+    except OSError:
+        pass
+
+
 def run(now, log, diagnose=False, no_news=False, getter=fetch.get, llm=an.gemini_call, sleep=time.sleep, render_getter=None):
     cutoff = now - dt.timedelta(days=config.WINDOW_DAYS)
     state = store.load("state.json", {"articles": {}})
@@ -107,6 +128,9 @@ def run(now, log, diagnose=False, no_news=False, getter=fetch.get, llm=an.gemini
         log.note("GEMINI_API_KEY が未設定のためAI解析できません。")
         return "failed", False
 
+    # 1回の実行で処理しきれない場合に備え、公式→ポケマピ→9DB→GameWith の順に解析する（特定サイト1つに頼らない）
+    queue.sort(key=lambda a: config.SITE_PRIORITY.get(a["site"], 9))
+    _dump_research_text(queue)
     changes, unresolved, analyzed_ok, problems = [], set(), [], 0
     queue.sort(key=lambda a: a["date"] or now, reverse=True)
     t0, budget_skipped, quota_hit = time.monotonic(), 0, None

@@ -368,12 +368,14 @@
   }
 
   function renderRaidPicker() {
-    const picker = document.getElementById("raidBossPickerFuture");
-    picker.innerHTML = "";
+    const cur = document.getElementById("raidBossPickerCurrent"), fut = document.getElementById("raidBossPickerFuture");
+    cur.innerHTML = ""; fut.innerHTML = "";
     const keys = sortedBosses(RAID_DATA);
     if (!keys.includes(activeRaidKey) && keys.length) activeRaidKey = keys[0];
-    keys.forEach(key => picker.appendChild(bossPickerCard(RAID_DATA[key], key, key === activeRaidKey,
-      "bg-sky-50 border-sky-500 shadow-sm ring-1 ring-sky-500", () => { activeRaidKey = key; renderRaidSection(); }, "w-11 h-11")));
+    keys.forEach(key => {
+      const card = bossPickerCard(RAID_DATA[key], key, key === activeRaidKey, "bg-sky-50 border-sky-500 shadow-sm ring-1 ring-sky-500", () => { activeRaidKey = key; renderRaidSection(); }, "w-11 h-11");
+      (isEventActive(RAID_DATA[key]) ? cur : fut).appendChild(card);
+    });
   }
 
   function renderRaidOverview() {
@@ -430,12 +432,14 @@
   }
 
   function renderDmax9dbPicker() {
-    const picker = document.getElementById("dmaxBossPickerFuture");
-    picker.innerHTML = "";
+    const cur = document.getElementById("dmaxBossPickerCurrent"), fut = document.getElementById("dmaxBossPickerFuture");
+    cur.innerHTML = ""; fut.innerHTML = "";
     const keys = sortedBosses(DMAX_9DB_DATA);
     if (!keys.includes(activeDmax9dbKey) && keys.length) activeDmax9dbKey = keys[0];
-    keys.forEach(key => picker.appendChild(bossPickerCard(DMAX_9DB_DATA[key], key, key === activeDmax9dbKey,
-      "bg-purple-50 border-purple-500 shadow-sm ring-1 ring-purple-500", () => { activeDmax9dbKey = key; renderDmax9dbSection(); }, "w-10 h-10")));
+    keys.forEach(key => {
+      const card = bossPickerCard(DMAX_9DB_DATA[key], key, key === activeDmax9dbKey, "bg-purple-50 border-purple-500 shadow-sm ring-1 ring-purple-500", () => { activeDmax9dbKey = key; renderDmax9dbSection(); }, "w-10 h-10");
+      (isEventActive(DMAX_9DB_DATA[key]) ? cur : fut).appendChild(card);
+    });
   }
 
   function renderDmax9dbCard() {
