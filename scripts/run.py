@@ -119,15 +119,19 @@ def run(now, log, diagnose=False, no_news=False, getter=fetch.get, llm=an.gemini
         art["text"] = art["text"][:config.MAX_AI_CHARS]
         e["chars_sent"] = len(art["text"])
         known = index + [dict(v) for v in events["events"].values()]
+        an.last_info.clear()
         try:
             facts = an.analyze(art, known, config.GEMINI_MODELS, call=llm)
+            e.update(model=an.last_info.get("model"), ai_calls=an.last_info.get("attempts"), ai_seconds=an.last_info.get("seconds"))
         except an.QuotaExhausted as ex:
+            e.update(ai_calls=an.last_info.get("attempts"), ai_seconds=an.last_info.get("seconds"))
             quota_hit = str(ex)
             log.note(f"AIの1日の利用上限に到達: {quota_hit[:200]}。以降の解析を打ち切ります（Geminiの上限は太平洋時間0時=日本時間16時頃にリセット）。")
             e.update(action="skipped_budget", reason="AIの1日の利用上限に達したため次回に回しました")
             budget_skipped += 1
             continue
         except an.AnalyzeError as ex:
+            e.update(ai_calls=an.last_info.get("attempts"), ai_seconds=an.last_info.get("seconds"))
             e.update(action="analyze_failed", error=str(ex)[:400])
             problems += 1
             continue
