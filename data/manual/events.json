@@ -347,9 +347,9 @@
    "category": "raid",
    "barIconDex": 645,
    "startDay": 7,
-   "endDay": 31,
+   "endDay": 3,
    "hasPaid": false,
-   "dateText": "10/7(水) 6:00 〜 11/3(火・祝) 21:30頃 (連日常設中)",
+   "dateText": "10/7 〜 11/3",
    "summary": "シャドウ★5レイドに『シャドウランドロス（けしんフォルム）』が連日登場中！こおり2.56倍二重弱点。",
    "freeFeatures": [
     "毎日の無料レイドパスで挑戦可能"
@@ -367,7 +367,8 @@
     }
    ],
    "fieldResearches": [],
-   "tasks": []
+   "tasks": [],
+   "endMonth": 11
   },
   {
    "id": "ev-gopass-oct",

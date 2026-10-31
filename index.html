@@ -125,12 +125,8 @@
         <span class="text-[11px] text-slate-500 hidden sm:inline">| 横スクロール時も文字とアイコンが左端に追従します</span>  
       </div>
 
-      <!-- 月切り替えボタン [10月] [11月] [12月] -->  
-      <div class="flex items-center gap-1 bg-slate-100 p-1 rounded-lg border border-slate-200">  
-        <button onclick="changeGanttMonth(10)" id="monthBtn10" class="text-xs px-3 py-1 rounded-md font-bold transition bg-sky-600 text-white shadow-sm">10月</button>  
-        <button onclick="changeGanttMonth(11)" id="monthBtn11" class="text-xs px-3 py-1 rounded-md font-bold transition text-slate-600 hover:text-slate-900">11月</button>  
-        <button onclick="changeGanttMonth(12)" id="monthBtn12" class="text-xs px-3 py-1 rounded-md font-bold transition text-slate-600 hover:text-slate-900">12月</button>  
-      </div>  
+      <!-- 表示範囲ボタン（直近10日 / 今月 / 来月 / 再来月）は js/app.js が作る -->
+      <div id="ganttRangeBtns" class="flex items-center gap-1 bg-slate-100 p-1 rounded-lg border border-slate-200"></div>  
     </div>
 
     <!-- カテゴリ絞り込みフィルターバー (コミュニティ・デイ追加) -->  

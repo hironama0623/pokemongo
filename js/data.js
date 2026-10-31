@@ -89,7 +89,8 @@ function adaptLegacy(ev) {
   const Y = 2026;
   return Object.assign({}, ev, {
     _s: new Date(Y, ev.month - 1, ev.startDay, 0, 0, 0),
-    _e: new Date(Y, ev.month - 1, ev.endDay, 23, 59, 59),
+    _e: new Date(Y, (ev.endMonth || ev.month) - 1, ev.endDay, 23, 59, 59),
+    dateText: String(ev.dateText || "").replace(/\s*\[(?:終了|現在出現中|開催中|開催予定)\]/g, ""),
     sources: [], auto: false, eggs: [], surpriseBox: null,
   });
 }
@@ -131,6 +132,10 @@ function adaptAuto(ev, det) {
 // 同じイベントが別名・別記事から登録されていた場合に1つにまとめる
 function mergeInto(base, add) {
   EVENT_ALIAS[add.id] = base.id;
+  // 手書き(旧)データと自動取得データが重なる場合は、日程は自動取得（記事由来）を正とする
+  if (!base.auto && add.auto) {
+    Object.assign(base, { _s: add._s, _e: add._e, _long: add._long, start: add.start, end: add.end, month: add.month, startDay: add.startDay, endDay: add.endDay, dateText: add.dateText });
+  }
   base.sources = mergeSources(base.sources, add.sources);
   base.wilds = uniqBy([...(base.wilds || []), ...(add.wilds || [])], m => normName(m.name));
   base.raids = uniqBy([...(base.raids || []), ...(add.raids || [])], m => normName(m.name));

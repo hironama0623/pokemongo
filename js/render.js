@@ -77,7 +77,7 @@ function buildEventCard(ev, open, idPrefix) {
     <div class="p-3.5 pt-0 border-t border-slate-100 space-y-3 mt-1 text-xs">
       ${ev.summary ? `<div class="text-slate-700 leading-relaxed bg-slate-50 p-2.5 rounded-lg border border-slate-200">${ev.summary}</div>` : ""}
       ${freeVsPaid}${wilds}${eggs}${sb}${raids}${fr}${tasks}
-      <div class="flex flex-wrap items-center gap-1 pt-1 border-t border-slate-100"><span class="text-[10px] text-slate-400">出典:</span>${sourceChips(ev.sources)}</div>
+
     </div>`;
   return details;
 }
@@ -101,7 +101,7 @@ function renderEventAccordions() {
     past.sort((a, b) => b._e - a._e).forEach(ev => {
       const row = document.createElement("div");
       row.className = "flex flex-wrap items-center justify-between gap-1 border-b border-slate-100 pb-1";
-      row.innerHTML = `<span><span class="text-slate-400">${ev.dateText}</span> <strong class="text-slate-700">${ev.title}</strong></span><span>${sourceChips(ev.sources)}</span>`;
+      row.innerHTML = `<span><span class="text-slate-400">${ev.dateText}</span> <strong class="text-slate-700">${ev.title}</strong></span>`;
       archive.appendChild(row);
     });
   }
@@ -146,44 +146,48 @@ function renderNewsSection() {
         ${k ? `<span class="text-[10px] font-bold border px-1 py-0.5 rounded flex-shrink-0 ${k[1]}">${k[0]}</span>` : ""}
         <span class="font-bold text-slate-800 truncate" title="${n.title}">${n.title}</span></div>
       <button onclick="markNewsRead('${esc(n.id)}')" class="text-[11px] text-slate-400 hover:text-emerald-600 font-bold px-1" title="既読にして非表示">✓</button></div>
-      <div id="${detailId}" class="hidden px-2.5 pb-2 text-[11px] text-slate-600 leading-relaxed">${n.details}<div class="mt-1 flex flex-wrap gap-1">${sourceChips(n.sources)}</div></div>`;
+      <div id="${detailId}" class="hidden px-2.5 pb-2 text-[11px] text-slate-600 leading-relaxed">${n.details}</div>`;
     box.appendChild(item);
   });
 }
 
 function renderGanttTimeline() {
+  if (typeof renderGanttButtons === "function") renderGanttButtons();
   const headerRow = document.getElementById("ganttHeaderRow"), bgGrid = document.getElementById("ganttBgGrid"), tracks = document.getElementById("ganttTracksContainer");
   tracks.querySelectorAll(".gantt-event-row").forEach(r => r.remove());
   headerRow.innerHTML = ""; bgGrid.innerHTML = "";
-  const Y = todayYear, M = currentGanttMonth;
-  const daysInMonth = new Date(Y, M, 0).getDate();
-  const startDay = (M === todayMonth) ? todayDate : 1;
-  const totalDays = daysInMonth - startDay + 1;
+  // 表示する日付の範囲（直近10日 or 指定の月の1日〜末日）
+  const rg = ganttRanges().find(x => x.key === currentGanttRange) || ganttRanges()[0];
+  let first;
+  let totalDays;
+  if (rg.key === "recent") { first = new Date(todayYear, todayMonth - 1, todayDate); totalDays = 10; }
+  else { first = new Date(rg.y, rg.m, 1); totalDays = new Date(rg.y, rg.m + 1, 0).getDate(); }
+  const dayAt = i => new Date(first.getFullYear(), first.getMonth(), first.getDate() + i);
   const tpl = `repeat(${totalDays}, minmax(56px, 1fr))`;
   headerRow.style.gridTemplateColumns = tpl; bgGrid.style.gridTemplateColumns = tpl;
-  for (let d = startDay; d <= daysInMonth; d++) {
-    const dow = new Date(Y, M - 1, d).getDay();
-    const isToday = (M === todayMonth && d === todayDate);
+  for (let i = 0; i < totalDays; i++) {
+    const dt = dayAt(i), dow = dt.getDay();
+    const isToday = dt.getFullYear() === todayYear && dt.getMonth() + 1 === todayMonth && dt.getDate() === todayDate;
     const col = dow === 6 ? "text-sky-600" : (dow === 0 ? "text-rose-600" : "text-slate-600");
     const cell = document.createElement("div");
     cell.className = `py-1.5 border-r border-slate-200 ${isToday ? "bg-sky-50 text-sky-800 border-b-2 border-b-sky-500 font-black" : ""}`;
-    cell.innerHTML = `<div class="text-[10px] ${col}">${DOW[dow]}</div><div class="text-[11px] font-bold">${M}/${d}</div>`;
+    cell.innerHTML = `<div class="text-[10px] ${col}">${DOW[dow]}</div><div class="text-[11px] font-bold">${dt.getMonth() + 1}/${dt.getDate()}</div>`;
     headerRow.appendChild(cell);
     const bg = document.createElement("div");
     bg.className = `border-r border-slate-100 ${isToday ? "bg-sky-50/40" : ""}`;
     bgGrid.appendChild(bg);
   }
-  const dispStart = new Date(Y, M - 1, startDay, 0, 0, 0), dispEnd = new Date(Y, M - 1, daysInMonth, 23, 59, 59);
+  const dispStart = dayAt(0), dispEnd = new Date(dayAt(totalDays - 1).getTime() + 864e5 - 1000);
+  const dayIndex = d => Math.min(totalDays - 1, Math.max(0, Math.floor((new Date(d.getFullYear(), d.getMonth(), d.getDate()) - dispStart) / 864e5 + 0.5)));
   ALL_EVENTS.filter(ev => !hiddenEventIds.has(ev.id) && (currentCategoryFilter === "all" || ev.category === currentCategoryFilter) && ev._e >= dispStart && ev._s <= dispEnd)
     .forEach(ev => {
-      const s = ev._s < dispStart ? startDay : ev._s.getDate();
-      const e = ev._e > dispEnd ? daysInMonth : ev._e.getDate();
+      const s = dayIndex(ev._s), e = dayIndex(ev._e);
       const row = document.createElement("div");
       row.className = "gantt-event-row relative h-8 flex items-center";
       row.style.display = "grid"; row.style.gridTemplateColumns = tpl;
       const bar = document.createElement("div");
       bar.className = `${ev.barClass} h-7 rounded-md px-1.5 text-[11px] font-bold flex items-center justify-between cursor-pointer shadow-sm hover:brightness-95 transition z-10`;
-      bar.style.gridColumn = `${s - startDay + 1} / span ${e - s + 1}`;
+      bar.style.gridColumn = `${s + 1} / span ${e - s + 1}`;
       bar.onclick = () => scrollToEventCard(ev.id);
       const icon = eventIconDex(ev);
       bar.innerHTML = `<div class="gantt-sticky-label">${icon ? `<img src="${getPokeImg(icon.dex, icon.name)}" alt="" class="w-5 h-5 object-contain flex-shrink-0 drop-shadow-sm bg-white/70 rounded-full p-0.5">` : ""}<span class="truncate">${ev.title}</span></div>
@@ -216,8 +220,8 @@ function renderGoPassTab() {
     return;
   }
   box.innerHTML = GOPASS.passes.map(p => `<div class="bg-white border border-slate-200 rounded-xl overflow-hidden"><div class="p-2.5 bg-slate-50 border-b border-slate-200 text-xs font-extrabold">${esc(p.title)}</div>
-    <div class="max-h-[480px] overflow-y-auto"><table class="w-full text-xs"><thead class="bg-slate-100 sticky top-0"><tr><th class="p-2 w-14">ランク</th><th class="p-2 text-left">🟢 無料</th><th class="p-2 text-left">💎 デラックス</th><th class="p-2 text-left w-20">出典</th></tr></thead><tbody class="divide-y divide-slate-100">
-    ${(p.ranks || []).map(r => `<tr><td class="p-2 text-center font-black text-slate-600">${esc(r.rank)}</td><td class="p-2">${esc(r.free || "")}</td><td class="p-2 text-amber-900">${esc(r.deluxe || "")}</td><td class="p-2">${sourceChips(r.sources)}</td></tr>`).join("")}</tbody></table></div></div>`).join("");
+    <div class="max-h-[480px] overflow-y-auto"><table class="w-full text-xs"><thead class="bg-slate-100 sticky top-0"><tr><th class="p-2 w-14">ランク</th><th class="p-2 text-left">🟢 無料</th><th class="p-2 text-left">💎 デラックス</th></tr></thead><tbody class="divide-y divide-slate-100">
+    ${(p.ranks || []).map(r => `<tr><td class="p-2 text-center font-black text-slate-600">${esc(r.rank)}</td><td class="p-2">${esc(r.free || "")}</td><td class="p-2 text-amber-900">${esc(r.deluxe || "")}</td></tr>`).join("")}</tbody></table></div></div>`).join("");
 }
 
 function renderStatusBar() {
@@ -250,7 +254,7 @@ window.onload = async function () {
   renderSeason24Tab();
   renderTodaySection();
   renderNewsSection();
-  changeGanttMonth(currentGanttMonth);
+  changeGanttRange(currentGanttRange);
   renderEventAccordions();
   renderGoPassTab();
 };

@@ -89,7 +89,7 @@
 
   let currentMainTab = "schedule";
   let currentBattleSub = "raids";
-  let currentGanttMonth = (todayMonth >= 10 && todayMonth <= 12) ? todayMonth : 10;
+  let currentGanttRange = "recent";   // "recent"=今日から10日間 / "m0".."m2"=今月・来月・再来月
   let currentCategoryFilter = "all";
   let hiddenEventIds = new Set();
   let readNewsIds = new Set();
@@ -274,12 +274,24 @@
     if (detailId) toggleNewsDetail(detailId);
   }
 
-  function changeGanttMonth(m) {
-    currentGanttMonth = m;
-    [10, 11, 12].forEach(num => {
-      const btn = document.getElementById(`monthBtn${num}`);
-      if (btn) btn.className = (num === m) ? "text-xs px-3 py-1 rounded-md font-bold transition bg-sky-600 text-white shadow-sm" : "text-xs px-3 py-1 rounded-md font-bold transition text-slate-600 hover:text-slate-900";
-    });
+  const RANGE_ON = "text-xs px-3 py-1 rounded-md font-bold transition bg-sky-600 text-white shadow-sm";
+  const RANGE_OFF = "text-xs px-3 py-1 rounded-md font-bold transition text-slate-600 hover:text-slate-900";
+  function ganttRanges() {
+    const list = [{ key: "recent", label: "直近10日" }];
+    for (let i = 0; i < 3; i++) {
+      const d = new Date(todayYear, todayMonth - 1 + i, 1);
+      list.push({ key: "m" + i, label: (d.getMonth() + 1) + "月", y: d.getFullYear(), m: d.getMonth() });
+    }
+    return list;
+  }
+  function renderGanttButtons() {
+    const box = document.getElementById("ganttRangeBtns");
+    if (!box) return;
+    box.innerHTML = ganttRanges().map(r => `<button onclick="changeGanttRange('${r.key}')" class="${r.key === currentGanttRange ? RANGE_ON : RANGE_OFF}">${r.label}</button>`).join("");
+  }
+  function changeGanttRange(key) {
+    currentGanttRange = key;
+    renderGanttButtons();
     renderGanttTimeline();
   }
 
