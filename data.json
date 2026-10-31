@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/10/31 22:16 JST",
+  "updated_at": "2026/10/31 22:40 JST",
   "latest_news": [
     {
       "id": "news-0cdcab26bb",
@@ -1360,9 +1360,198 @@
       "title": "【情報追加】おつきみダンス(2026年)：タイムチャレンジが判明・追加（11件）",
       "details": "タイムチャレンジ：ポケモンを10匹捕まえる→経験値、ポケモンを20匹捕まえる→ほしのすな、ナイススローを5回投げる→ホルビー、おさんぽおこうを使う→ヒメグマ、ポケモンを2日にわたって捕まえる→エネコ、ポケモンを3日にわたって捕まえる→ルナトーン ほか5件",
       "targetId": "ev-auto-otsukimi-dance-2026"
+    },
+    {
+      "id": "news-34994348f9",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ワイルドウィーク2026：レイドが判明・追加（2件）",
+      "details": "レイド：ザシアン(王)、ザマゼンタ(王)",
+      "targetId": "ev-wildweek-2026"
+    },
+    {
+      "id": "news-eb6737de1c",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ワイルドウィーク2026：サプライズボックスが判明・追加（2件）",
+      "details": "サプライズボックス：メルタン、コレクレー(とほ)",
+      "targetId": "ev-wildweek-2026"
+    },
+    {
+      "id": "news-5f543dbd20",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ワイルドエリア2026グローバル：レイドが判明・追加（3件）",
+      "details": "レイド：キョダイジュラルドン、ディアルガ(ダイマックス)、パルキア(ダイマックス)",
+      "targetId": "ev-auto-wild-area-2026-global"
+    },
+    {
+      "id": "news-0be4090403",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】シャンデラのスーパーメガレイド・デイ：レイドが判明・追加（1件）",
+      "details": "レイド：シャンデラ",
+      "targetId": "ev-supermega-chandelure"
+    },
+    {
+      "id": "news-c38088a37c",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】シャンデラのスーパーメガレイド・デイ：フィールドリサーチが判明・追加（5件）",
+      "details": "フィールドリサーチ：ポケモンを1匹捕まえる→バンギラス、ポケモンを15回強化する→バンギラスのメガエナジー、こうかばつぐんのスペシャルアタックを3回使ってバトルする→ほしのすな、レイドバトルで1回勝つ→わざマシンスペシャル、ゴーストタイプかほのおタイプのボスポケモンに勝つ→ヨーギラスのアメXL",
+      "targetId": "ev-supermega-chandelure"
+    },
+    {
+      "id": "news-ff31a47158",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ワイルドエリア2026仙台：野生が判明・追加（1件）",
+      "details": "野生：シェルダ",
+      "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-65e74287ec",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ワイルドエリア2026仙台：レイドが判明・追加（3件）",
+      "details": "レイド：ディアルガ(ダイマックス)、パルキア(ダイマックス)、キョダイジュラルドン",
+      "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-f9001ee8d2",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】「大きな足跡」イベント：野生が判明・追加（3件）",
+      "details": "野生：サルノリ、メッソン、ヒバニー",
+      "targetId": "ev-big-footprints"
+    },
+    {
+      "id": "news-bfc13cd9e0",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ポケモンGOの新シーズン「黄昏の旅路」：フィールドリサーチが判明・追加（1件）",
+      "details": "フィールドリサーチ：ポケモンの捕獲→GBLで活躍するポケモン",
+      "targetId": "ev-auto-twilight-journey-season"
+    },
+    {
+      "id": "news-09402c10cc",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ポケモンGOの2026年11月のスケジュール：レイドが判明・追加（6件）",
+      "details": "レイド：ギラティナ(オリジンフォルム)、ギラティナ(アナザーフォルム)、デオキシス(ディフェンスフォルム)、デオキシス(アタックフォルム)、デオキシス(スピードフォルム)、トルネロス(化身フォルム)",
+      "targetId": "ev-auto-2026-nov-schedule"
+    },
+    {
+      "id": "news-0b2136ede7",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】死者の日イベント2026(メキシコ)：タイムチャレンジが判明・追加（3件）",
+      "details": "タイムチャレンジ：無料タイムチャレンジ→ステッカー 死者の日ステッカー(インスティンクト)、無料タイムチャレンジ→ステッカー 死者の日ステッカー(ヴァーラー)、無料タイムチャレンジ→ステッカー 死者の日ステッカー(ミスティック)",
+      "targetId": "ev-auto-dia-de-muertos-2026"
+    },
+    {
+      "id": "news-901cc2ff86",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【日程変更】死者の日2026特別イベント(メキシコ レフォルマ通り)",
+      "details": "日程が更新されています：2026-11-01〜2026-11-06 → 2026-10-31〜2026-11-05",
+      "targetId": "ev-auto-dia-de-muertos-2026-reforma"
+    },
+    {
+      "id": "news-6e8253f8af",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ダイマックスユクシー・エムリット・アグノムのマックスバトルデイ：フィールドリサーチが判明・追加（8件）",
+      "details": "フィールドリサーチ：リワードを受け取る (クリア済)→ダイキノコ・マックス粒子、マックスバトルで勝つ→マックス粒子、マックスバトルで2回勝つ→マックス粒子、マックスバトルで3回勝つ→マックス粒子、マックスバトルで4回勝つ→マックス粒子、マックスバトルで5回勝つ→マックス粒子 ほか2件",
+      "targetId": "ev-auto-max-battle-day-uxie-mesprit-azelf"
+    },
+    {
+      "id": "news-6ead4e9ca5",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】メテノシャワー：フィールドリサーチが判明・追加（2件）",
+      "details": "フィールドリサーチ：報酬を受け取る→ほしのかけら、ほしのかけらを使う→ほしのすな",
+      "targetId": "ev-auto-minior-meteor-showers-2026"
+    },
+    {
+      "id": "news-c03261b9d0",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ゾロアコミュニティデイ：野生が判明・追加（1件）",
+      "details": "野生：ゾロアーク",
+      "targetId": "ev-auto-zorua-community-day-2026-10"
+    },
+    {
+      "id": "news-069d35f33b",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ゾロアコミュニティデイ：フィールドリサーチが判明・追加（2件）",
+      "details": "フィールドリサーチ：チーム参加中ポケモンを5匹捕まえる→ゾロア、ポケモンを50匹捕まえる→ゾロア",
+      "targetId": "ev-auto-zorua-community-day-2026-10"
+    },
+    {
+      "id": "news-1388b5df6c",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】秋の遠足相棒といっしょ：フィールドリサーチが判明・追加（1件）",
+      "details": "フィールドリサーチ：イベントのフィールドリサーチタスクをクリアする→ドードー・ラクライ・アノクサ",
+      "targetId": "ev-auto-autumn-buddy-trek-2026"
+    },
+    {
+      "id": "news-4ef2fe5eb9",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】おつきみダンス(2026年)：野生が判明・追加（1件）",
+      "details": "野生：ルナトーン",
+      "targetId": "ev-auto-otsukimi-dance-2026"
+    },
+    {
+      "id": "news-9b333e25d0",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】おつきみダンス(2026年)：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：ポケモンを10匹捕まえる→経験値×1000XP、ポケモンを20匹捕まえる→ほしのすな×1000",
+      "targetId": "ev-auto-otsukimi-dance-2026"
     }
   ],
   "field_research_updates": {
+    "ev-supermega-chandelure": [
+      {
+        "task": "ポケモンを1匹捕まえる",
+        "rewardDex": 248,
+        "rewardName": "バンギラス",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "ポケモンを15回強化する",
+        "rewardDex": 248,
+        "rewardName": "バンギラスのメガエナジー",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "こうかばつぐんのスペシャルアタックを3回使ってバトルする",
+        "rewardDex": 25,
+        "rewardName": "ほしのすな",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "レイドバトルで1回勝つ",
+        "rewardDex": 25,
+        "rewardName": "わざマシンスペシャル",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "ゴーストタイプかほのおタイプのボスポケモンに勝つ",
+        "rewardDex": 246,
+        "rewardName": "ヨーギラスのアメXL",
+        "shiny": false,
+        "note": "出典: gamewith"
+      }
+    ],
     "ev-big-footprints": [
       {
         "task": "イベント限定フィールドリサーチ",
@@ -1502,6 +1691,71 @@
         "note": "出典: gamewith"
       }
     ],
+    "ev-auto-max-battle-day-uxie-mesprit-azelf": [
+      {
+        "task": "リワードを受け取る (クリア済)",
+        "rewardDex": 25,
+        "rewardName": "ダイキノコ",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "リワードを受け取る (クリア済)",
+        "rewardDex": 25,
+        "rewardName": "マックス粒子",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "マックスバトルで勝つ",
+        "rewardDex": 25,
+        "rewardName": "マックス粒子",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "マックスバトルで2回勝つ",
+        "rewardDex": 25,
+        "rewardName": "マックス粒子",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "マックスバトルで3回勝つ",
+        "rewardDex": 25,
+        "rewardName": "マックス粒子",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "マックスバトルで4回勝つ",
+        "rewardDex": 25,
+        "rewardName": "マックス粒子",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "マックスバトルで5回勝つ",
+        "rewardDex": 25,
+        "rewardName": "マックス粒子",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "マックスバトルで6回勝つ",
+        "rewardDex": 25,
+        "rewardName": "マックス粒子",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "マックスバトルで7回勝つ",
+        "rewardDex": 25,
+        "rewardName": "マックス粒子",
+        "shiny": false,
+        "note": "出典: gamewith"
+      }
+    ],
     "ev-auto-fall-marathon-buddy-trek-2026": [
       {
         "task": "（記載なし）",
@@ -1597,6 +1851,13 @@
         "note": "出典: gamewith"
       },
       {
+        "task": "チーム参加中ポケモンを5匹捕まえる",
+        "rewardDex": 570,
+        "rewardName": "ゾロア",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
         "task": "ポケモンを50匹捕まえる",
         "rewardDex": 570,
         "rewardName": "ゾロア(SP背景)",
@@ -1607,6 +1868,13 @@
         "task": "ポケモンを50匹捕まえる",
         "rewardDex": 570,
         "rewardName": "ゾロア(スペシャル背景付き)",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "ポケモンを50匹捕まえる",
+        "rewardDex": 570,
+        "rewardName": "ゾロア",
         "shiny": true,
         "note": "出典: gamewith"
       }
@@ -1759,6 +2027,13 @@
         "rewardName": "相棒（789）",
         "shiny": true,
         "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンの捕獲",
+        "rewardDex": 25,
+        "rewardName": "GBLで活躍するポケモン",
+        "shiny": false,
+        "note": "出典: gamewith"
       }
     ],
     "ev-auto-autumn-buddy-trek-2026": [
@@ -1794,6 +2069,27 @@
         "task": "イベント限定タスク",
         "rewardDex": 25,
         "rewardName": "ふしぎなアメ",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "イベントのフィールドリサーチタスクをクリアする",
+        "rewardDex": 84,
+        "rewardName": "ドードー",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "イベントのフィールドリサーチタスクをクリアする",
+        "rewardDex": 309,
+        "rewardName": "ラクライ",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "イベントのフィールドリサーチタスクをクリアする",
+        "rewardDex": 946,
+        "rewardName": "アノクサ",
         "shiny": false,
         "note": "出典: gamewith"
       }
@@ -2224,6 +2520,22 @@
         "note": "出典: gamewith"
       }
     ],
+    "ev-auto-minior-meteor-showers-2026": [
+      {
+        "task": "報酬を受け取る",
+        "rewardDex": 25,
+        "rewardName": "ほしのかけら",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "ほしのかけらを使う",
+        "rewardDex": 25,
+        "rewardName": "ほしのすな",
+        "shiny": false,
+        "note": "出典: gamewith"
+      }
+    ],
     "ev-auto-adidas-pokemon-time-challenge": [
       {
         "task": "ポケストップ・ジム10個を回す",
@@ -2314,6 +2626,30 @@
     ]
   },
   "dynamic_events": [
+    {
+      "id": "ev-big-footprints",
+      "title": "「大きな足跡」イベント",
+      "wilds": [
+        {
+          "dex": 810,
+          "name": "サルノリ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 816,
+          "name": "メッソン",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 813,
+          "name": "ヒバニー",
+          "shiny": true,
+          "note": ""
+        }
+      ]
+    },
     {
       "id": "ev-auto-spotlight-gastly",
       "title": "ev-auto-spotlight-gastly",
@@ -2461,6 +2797,18 @@
           "name": "ミミズズ",
           "shiny": true,
           "note": ""
+        },
+        {
+          "dex": 808,
+          "name": "メルタン",
+          "shiny": false,
+          "note": "サプライズボックス"
+        },
+        {
+          "dex": 999,
+          "name": "コレクレー(とほ)",
+          "shiny": false,
+          "note": "サプライズボックス"
         }
       ]
     },
@@ -2977,6 +3325,12 @@
           "name": "ゾロア",
           "shiny": true,
           "note": "相棒ポケモンに化けて出現"
+        },
+        {
+          "dex": 571,
+          "name": "ゾロアーク",
+          "shiny": true,
+          "note": ""
         }
       ]
     },
@@ -3301,6 +3655,12 @@
           "name": "ガラルマッギョ",
           "shiny": true,
           "note": "ハガネのように強固アワー"
+        },
+        {
+          "dex": 25,
+          "name": "シェルダ",
+          "shiny": true,
+          "note": ""
         }
       ]
     },
@@ -4409,25 +4769,25 @@
         {
           "dex": 41,
           "name": "ズバット(トップハット)",
-          "shiny": false,
+          "shiny": true,
           "note": "サプライズボックス"
         },
         {
           "dex": 426,
           "name": "フワライド(ハロウィン)",
-          "shiny": false,
+          "shiny": true,
           "note": "サプライズボックス"
         },
         {
           "dex": 94,
           "name": "ゲンガー(ハロウィン)",
-          "shiny": false,
+          "shiny": true,
           "note": "サプライズボックス"
         },
         {
           "dex": 37,
           "name": "ロコン(ハロウィン)",
-          "shiny": false,
+          "shiny": true,
           "note": "サプライズボックス"
         }
       ]
@@ -5425,6 +5785,12 @@
           "name": "ホルビー",
           "shiny": true,
           "note": "月見タイムに出現"
+        },
+        {
+          "dex": 337,
+          "name": "ルナトーン",
+          "shiny": true,
+          "note": ""
         }
       ]
     },

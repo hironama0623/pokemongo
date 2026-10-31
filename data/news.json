@@ -2441,6 +2441,12 @@
           "url": "https://pokemongo.gamewith.jp/article/show/578855",
           "fetched_at": "2026-10-31T22:16:13.764164+09:00",
           "article_updated": "2026-10-01T22:20:33+09:00"
+        },
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/578855",
+          "fetched_at": "2026-10-31T22:40:12.505618+09:00",
+          "article_updated": "2026-10-01T22:20:33+09:00"
         }
       ]
     },
@@ -2899,6 +2905,329 @@
           "site": "gamewith",
           "url": "https://pokemongo.gamewith.jp/article/show/572658",
           "fetched_at": "2026-10-31T22:16:13.764164+09:00",
+          "article_updated": "2026-10-01T05:50:11+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-34994348f9",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドウィーク2026：レイドが判明・追加（2件）",
+      "details": "レイド：ザシアン(王)、ザマゼンタ(王)",
+      "targetId": "ev-wildweek-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/582768",
+          "fetched_at": "2026-10-31T22:40:12.505618+09:00",
+          "article_updated": "2026-10-31T19:21:06+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-eb6737de1c",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドウィーク2026：サプライズボックスが判明・追加（2件）",
+      "details": "サプライズボックス：メルタン、コレクレー(とほ)",
+      "targetId": "ev-wildweek-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/582768",
+          "fetched_at": "2026-10-31T22:40:12.505618+09:00",
+          "article_updated": "2026-10-31T19:21:06+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-5f543dbd20",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026グローバル：レイドが判明・追加（3件）",
+      "details": "レイド：キョダイジュラルドン、ディアルガ(ダイマックス)、パルキア(ダイマックス)",
+      "targetId": "ev-auto-wild-area-2026-global",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/575992",
+          "fetched_at": "2026-10-31T22:40:12.505618+09:00",
+          "article_updated": "2026-10-31T16:49:33+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-0be4090403",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "kind": "event_update",
+      "title": "【情報追加】シャンデラのスーパーメガレイド・デイ：レイドが判明・追加（1件）",
+      "details": "レイド：シャンデラ",
+      "targetId": "ev-supermega-chandelure",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/582648",
+          "fetched_at": "2026-10-31T22:40:12.505618+09:00",
+          "article_updated": "2026-10-31T16:29:10+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-c38088a37c",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "kind": "event_update",
+      "title": "【情報追加】シャンデラのスーパーメガレイド・デイ：フィールドリサーチが判明・追加（5件）",
+      "details": "フィールドリサーチ：ポケモンを1匹捕まえる→バンギラス、ポケモンを15回強化する→バンギラスのメガエナジー、こうかばつぐんのスペシャルアタックを3回使ってバトルする→ほしのすな、レイドバトルで1回勝つ→わざマシンスペシャル、ゴーストタイプかほのおタイプのボスポケモンに勝つ→ヨーギラスのアメXL",
+      "targetId": "ev-supermega-chandelure",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/582648",
+          "fetched_at": "2026-10-31T22:40:12.505618+09:00",
+          "article_updated": "2026-10-31T16:29:10+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-ff31a47158",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026仙台：野生が判明・追加（1件）",
+      "details": "野生：シェルダ",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/568373",
+          "fetched_at": "2026-10-31T22:40:12.505618+09:00",
+          "article_updated": "2026-10-31T11:17:24+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-65e74287ec",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026仙台：レイドが判明・追加（3件）",
+      "details": "レイド：ディアルガ(ダイマックス)、パルキア(ダイマックス)、キョダイジュラルドン",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/568373",
+          "fetched_at": "2026-10-31T22:40:12.505618+09:00",
+          "article_updated": "2026-10-31T11:17:24+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-f9001ee8d2",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "kind": "event_update",
+      "title": "【情報追加】「大きな足跡」イベント：野生が判明・追加（3件）",
+      "details": "野生：サルノリ、メッソン、ヒバニー",
+      "targetId": "ev-big-footprints",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/585781",
+          "fetched_at": "2026-10-31T22:40:12.505618+09:00",
+          "article_updated": "2026-10-31T09:56:20+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-bfc13cd9e0",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "kind": "event_update",
+      "title": "【情報追加】ポケモンGOの新シーズン「黄昏の旅路」：フィールドリサーチが判明・追加（1件）",
+      "details": "フィールドリサーチ：ポケモンの捕獲→GBLで活躍するポケモン",
+      "targetId": "ev-auto-twilight-journey-season",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/574389",
+          "fetched_at": "2026-10-31T22:40:12.505618+09:00",
+          "article_updated": "2026-10-31T09:51:10+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-09402c10cc",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "kind": "event_update",
+      "title": "【情報追加】ポケモンGOの2026年11月のスケジュール：レイドが判明・追加（6件）",
+      "details": "レイド：ギラティナ(オリジンフォルム)、ギラティナ(アナザーフォルム)、デオキシス(ディフェンスフォルム)、デオキシス(アタックフォルム)、デオキシス(スピードフォルム)、トルネロス(化身フォルム)",
+      "targetId": "ev-auto-2026-nov-schedule",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/583244",
+          "fetched_at": "2026-10-31T22:40:12.505618+09:00",
+          "article_updated": "2026-10-31T08:53:06+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-0b2136ede7",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "kind": "event_update",
+      "title": "【情報追加】死者の日イベント2026(メキシコ)：タイムチャレンジが判明・追加（3件）",
+      "details": "タイムチャレンジ：無料タイムチャレンジ→ステッカー 死者の日ステッカー(インスティンクト)、無料タイムチャレンジ→ステッカー 死者の日ステッカー(ヴァーラー)、無料タイムチャレンジ→ステッカー 死者の日ステッカー(ミスティック)",
+      "targetId": "ev-auto-dia-de-muertos-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/584390",
+          "fetched_at": "2026-10-31T22:40:12.505618+09:00",
+          "article_updated": "2026-10-29T05:15:19+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-901cc2ff86",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "kind": "schedule_changed",
+      "title": "【日程変更】死者の日2026特別イベント(メキシコ レフォルマ通り)",
+      "details": "日程が更新されています：2026-11-01〜2026-11-06 → 2026-10-31〜2026-11-05",
+      "targetId": "ev-auto-dia-de-muertos-2026-reforma",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/584389",
+          "fetched_at": "2026-10-31T22:40:12.505618+09:00",
+          "article_updated": "2026-10-27T18:14:03+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-6e8253f8af",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "kind": "event_update",
+      "title": "【情報追加】ダイマックスユクシー・エムリット・アグノムのマックスバトルデイ：フィールドリサーチが判明・追加（8件）",
+      "details": "フィールドリサーチ：リワードを受け取る (クリア済)→ダイキノコ・マックス粒子、マックスバトルで勝つ→マックス粒子、マックスバトルで2回勝つ→マックス粒子、マックスバトルで3回勝つ→マックス粒子、マックスバトルで4回勝つ→マックス粒子、マックスバトルで5回勝つ→マックス粒子 ほか2件",
+      "targetId": "ev-auto-max-battle-day-uxie-mesprit-azelf",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/579398",
+          "fetched_at": "2026-10-31T22:40:12.505618+09:00",
+          "article_updated": "2026-10-25T17:52:14+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-6ead4e9ca5",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "kind": "event_update",
+      "title": "【情報追加】メテノシャワー：フィールドリサーチが判明・追加（2件）",
+      "details": "フィールドリサーチ：報酬を受け取る→ほしのかけら、ほしのかけらを使う→ほしのすな",
+      "targetId": "ev-auto-minior-meteor-showers-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/579397",
+          "fetched_at": "2026-10-31T22:40:12.505618+09:00",
+          "article_updated": "2026-10-25T12:02:10+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-c03261b9d0",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "kind": "event_update",
+      "title": "【情報追加】ゾロアコミュニティデイ：野生が判明・追加（1件）",
+      "details": "野生：ゾロアーク",
+      "targetId": "ev-auto-zorua-community-day-2026-10",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/577121",
+          "fetched_at": "2026-10-31T22:40:12.505618+09:00",
+          "article_updated": "2026-10-22T12:00:48+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-069d35f33b",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "kind": "event_update",
+      "title": "【情報追加】ゾロアコミュニティデイ：フィールドリサーチが判明・追加（2件）",
+      "details": "フィールドリサーチ：チーム参加中ポケモンを5匹捕まえる→ゾロア、ポケモンを50匹捕まえる→ゾロア",
+      "targetId": "ev-auto-zorua-community-day-2026-10",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/577121",
+          "fetched_at": "2026-10-31T22:40:12.505618+09:00",
+          "article_updated": "2026-10-22T12:00:48+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-1388b5df6c",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "kind": "event_update",
+      "title": "【情報追加】秋の遠足相棒といっしょ：フィールドリサーチが判明・追加（1件）",
+      "details": "フィールドリサーチ：イベントのフィールドリサーチタスクをクリアする→ドードー・ラクライ・アノクサ",
+      "targetId": "ev-auto-autumn-buddy-trek-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/578533",
+          "fetched_at": "2026-10-31T22:40:12.505618+09:00",
+          "article_updated": "2026-10-22T03:58:24+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-4ef2fe5eb9",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "kind": "event_update",
+      "title": "【情報追加】おつきみダンス(2026年)：野生が判明・追加（1件）",
+      "details": "野生：ルナトーン",
+      "targetId": "ev-auto-otsukimi-dance-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/572658",
+          "fetched_at": "2026-10-31T22:40:12.505618+09:00",
+          "article_updated": "2026-10-01T05:50:11+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-9b333e25d0",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "kind": "event_update",
+      "title": "【情報追加】おつきみダンス(2026年)：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：ポケモンを10匹捕まえる→経験値×1000XP、ポケモンを20匹捕まえる→ほしのすな×1000",
+      "targetId": "ev-auto-otsukimi-dance-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/572658",
+          "fetched_at": "2026-10-31T22:40:12.505618+09:00",
           "article_updated": "2026-10-01T05:50:11+09:00"
         }
       ]
