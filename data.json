@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/10/31 08:39 JST",
+  "updated_at": "2026/10/31 12:38 JST",
   "latest_news": [
     {
       "id": "news-0cdcab26bb",
@@ -744,6 +744,438 @@
       "title": "【情報追加】欧州宇宙機関(ESA)コラボイベント(欧州)：タイムチャレンジが判明・追加（1件）",
       "details": "タイムチャレンジ：参加博物館で受け取れる限定タイムチャレンジ→イベントテーマのポケモン・ピカチュウ(宇宙飛行士)",
       "targetId": "ev-auto-esa-collaboration-2026"
+    },
+    {
+      "id": "news-b998b23ced",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】シャンデラのスーパーメガレイド・デイ：タイムチャレンジが判明・追加（5件）",
+      "details": "タイムチャレンジ：ポケモンを1匹捕まえる→バンギラス、ポケモンを15回強化する→x200、こうかばつぐんのスペシャルアタックを3回使ってバトルする→x5000、レイドバトルで1回勝つ→x3、ほのおタイプかゴーストタイプのボスポケモンに勝つ→x10",
+      "targetId": "ev-supermega-chandelure"
+    },
+    {
+      "id": "news-d2a9a897f6",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ハロウィン2026 パート1：野生が判明・追加（13件）",
+      "details": "野生：襟飾りをつけた ロコン、トップハットをかぶった ズバット、ハロウィン衣装 をつけたゲンガー、ハロウィンいたずら飾りを つけたポッチャマ、ハロウィンいたずら飾りを つけたフワライド、カチューシャを つけたオンバット ほか7件",
+      "targetId": "ev-halloween-p1"
+    },
+    {
+      "id": "news-d5c969a36d",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】シャンデラのスーパーメガレイド・デイ：タイムチャレンジが判明・追加（4件）",
+      "details": "タイムチャレンジ：ポケモンを15回強化する→メガエナジー、こうかばつぐんのスペシャルアタックを3回使ってバトルする→ほしのすな、レイドバトルで1回勝つ→わざマシンスペシャル、ゴーストタイプかほのおタイプのボスポケモンに勝つ→アメXL",
+      "targetId": "ev-supermega-chandelure"
+    },
+    {
+      "id": "news-4291ccd2ab",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】イオンハロウィンイベント：タイムチャレンジが判明・追加（16件）",
+      "details": "タイムチャレンジ：ポケストップ・ジム2個を回す→ニャース(アローラ)、ポケモンを3匹進化させる→ゴチム、ポケモンを捕まえるときにきのみ3個を使う→1,031 XP、1 km歩く→ボクレー、ポケモンを10匹送る→フワンテ、カーブボールを3回投げる→ゴース ほか10件",
+      "targetId": "ev-auto-aeon-halloween-2026"
+    },
+    {
+      "id": "news-885978f618",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】イオンハロウィンイベント：サプライズボックスが判明・追加（13件）",
+      "details": "サプライズボックス：襟飾りをつけた ロコン、トップハットをかぶった ズバット、ハロウィン衣装 をつけたゲンガー、ハロウィンいたずら飾りを つけたポッチャマ、ハロウィンいたずら飾りを つけたフワライド、カチューシャを つけたオンバット ほか7件",
+      "targetId": "ev-auto-aeon-halloween-2026"
+    },
+    {
+      "id": "news-fca6baf6f1",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ハロウィン2026 パート1：野生が判明・追加（4件）",
+      "details": "野生：ロコン(襟飾り)、ゲンガー(ハロウィン衣装)、オンバット(カチューシャ)、ヤバチャ(リボン)",
+      "targetId": "ev-halloween-p1"
+    },
+    {
+      "id": "news-8fc62031b4",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ハロウィン2026 パート1：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：ハロウィン2026パート1：自動的に完了する無料タイムチャレンジ→ふしぎなアメ・ピカチュウ(ハットとケープ)",
+      "targetId": "ev-halloween-p1"
+    },
+    {
+      "id": "news-fcf6d8cd8d",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】メテノシャワー：野生が判明・追加（7件）",
+      "details": "野生：メテノ(あかいろのコア)、メテノ(だいだいいろのコア)、メテノ(きいろのコア)、メテノ(みどりいろのコア)、メテノ(みずいろのコア)、メテノ(あおいろのコア) ほか1件",
+      "targetId": "ev-auto-minior-meteor-showers-2026"
+    },
+    {
+      "id": "news-2d992bc6a4",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】メテノシャワー：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：ほしのかけらを使う x5→ほしのすな x77,400、ほしのかけらを使う x1→ほしのすな x1,000,000",
+      "targetId": "ev-auto-minior-meteor-showers-2026"
+    },
+    {
+      "id": "news-4429422264",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【新イベント】ポケモンGOの2026年10月のスケジュール",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-2026-october-schedule"
+    },
+    {
+      "id": "news-cf090bccac",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ポケモンGOの2026年10月のスケジュール：レイドが判明・追加（13件）",
+      "details": "レイド：ゼルネアス、イベルタル、ディアルガ、パルキア、ギラティナ(オリジン)、シャドウ ボルトロス(けしんフォルム) ほか7件",
+      "targetId": "ev-auto-2026-october-schedule"
+    },
+    {
+      "id": "news-66035f970c",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【新イベント】ワイルドエリア2026：メキシコシティ",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-wild-area-2026-mexico"
+    },
+    {
+      "id": "news-87696de0fa",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ワイルドエリア2026：メキシコシティ：野生が判明・追加（47件）",
+      "details": "野生：サンド (アローラ)、ディグダ (アローラ)、コイル、シェルダー、イワーク、ポリゴン ほか41件",
+      "targetId": "ev-auto-wild-area-2026-mexico"
+    },
+    {
+      "id": "news-4de499b531",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ワイルドエリア2026：メキシコシティ：レイドが判明・追加（6件）",
+      "details": "レイド：キョダイマックス ジュラルドン、ダイマックス ディアルガ、ダイマックス パルキア、ジャケットを身にまとった カイリキー、ザシアン (けんのおう)、ザマゼンタ (たてのおう)",
+      "targetId": "ev-auto-wild-area-2026-mexico"
+    },
+    {
+      "id": "news-dd79b1e8a0",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ムクホークのスーパーメガレイド・デイ：レイドが判明・追加（1件）",
+      "details": "レイド：ムクホーク",
+      "targetId": "ev-auto-staraptor-super-mega-raid-day"
+    },
+    {
+      "id": "news-c8c8c928e0",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ムクホークのスーパーメガレイド・デイ：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：スペシャルアタックを3回使う→ほしのすな",
+      "targetId": "ev-auto-staraptor-super-mega-raid-day"
+    },
+    {
+      "id": "news-8eba0c25f4",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ハロウィン2026 パート1：野生が判明・追加（5件）",
+      "details": "野生：ポッチャマ(ハロウィン)、バケッチャ、フワライド(ハロウィン)、ゲンガー(ハロウィン)、ロコン(ハロウィン)",
+      "targetId": "ev-halloween-p1"
+    },
+    {
+      "id": "news-38f64027c8",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ハロウィン2026 パート1：レイドが判明・追加（1件）",
+      "details": "レイド：ピカチュウ(ハット&ケープ)",
+      "targetId": "ev-halloween-p1"
+    },
+    {
+      "id": "news-2344de40be",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ハロウィン2026 パート1：フィールドリサーチが判明・追加（1件）",
+      "details": "フィールドリサーチ：イベント限定フィールドリサーチタスク→イベントにぴったりなポケモン",
+      "targetId": "ev-halloween-p1"
+    },
+    {
+      "id": "news-ec24ecfce9",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ハロウィン2026 パート1：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：無料タイムチャレンジ→ふしぎなアメ・ピカチュウ(ハット&ケープ)",
+      "targetId": "ev-halloween-p1"
+    },
+    {
+      "id": "news-43e834fd4d",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ハロウィン2026 パート1：サプライズボックスが判明・追加（4件）",
+      "details": "サプライズボックス：ズバット(トップハット)、フワライド(ハロウィン)、ゲンガー(ハロウィン)、ロコン(ハロウィン)",
+      "targetId": "ev-halloween-p1"
+    },
+    {
+      "id": "news-896a214c52",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】シャンデラのスーパーメガレイド・デイ：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：ポケモンを15回強化する→バンギラスのメガエナジー、ゴーストタイプかほのおタイプのボスポケモンに勝つ→ヨーギラスのアメXL",
+      "targetId": "ev-supermega-chandelure"
+    },
+    {
+      "id": "news-c282920f5c",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】コマタナのコミュニティ・デイ：フィールドリサーチが判明・追加（1件）",
+      "details": "フィールドリサーチ：614→コマタナ",
+      "targetId": "ev-cd-pawniard"
+    },
+    {
+      "id": "news-23979ff3ec",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】コマタナのコミュニティ・デイ：サプライズボックスが判明・追加（1件）",
+      "details": "サプライズボックス：ハイパーコミュニティデイボックス××1",
+      "targetId": "ev-cd-pawniard"
+    },
+    {
+      "id": "news-957621df90",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】イオンハロウィンイベント：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：対象のイオンモールを訪問（パート1：10/19-10/25、パート2：10/26-11/1）→ピカチュウ(魔女帽子)",
+      "targetId": "ev-auto-aeon-halloween-2026"
+    },
+    {
+      "id": "news-f305c0b525",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ポケモンGOの2026年11月のスケジュール：レイドが判明・追加（1件）",
+      "details": "レイド：トルネロス(化身)",
+      "targetId": "ev-auto-2026-nov-schedule"
+    },
+    {
+      "id": "news-ba79529d09",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ハロウィン2026 パート1：フィールドリサーチが判明・追加（13件）",
+      "details": "フィールドリサーチ：ゴーストタイプのポケモンを13匹捕まえる→捕獲、ゴーストタイプのポケモンを13匹捕まえる→捕獲、ゴーストタイプのポケモンを13匹捕まえる→捕獲、レイドバトルで1回勝つ→バトル、レイドバトルで1回勝つ→バトル、レイドバトルで1回勝つ→バトル ほか7件",
+      "targetId": "ev-halloween-p1"
+    },
+    {
+      "id": "news-d7f373202b",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【新イベント】ワイルドエリア2026グローバル",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-wild-area-2026-global"
+    },
+    {
+      "id": "news-4fa30f43a3",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ワイルドエリア2026グローバル：野生が判明・追加（44件）",
+      "details": "野生：アローラサンド、アローラディグダ、コイル、シェルダー、イワーク、ポリゴン ほか38件",
+      "targetId": "ev-auto-wild-area-2026-global"
+    },
+    {
+      "id": "news-2f4150a499",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ワイルドエリア2026グローバル：レイドが判明・追加（5件）",
+      "details": "レイド：カイリキー(ジャケット)、ゼクロム、キュレム(W)、レシラム、キュレム(B)",
+      "targetId": "ev-auto-wild-area-2026-global"
+    },
+    {
+      "id": "news-cc5cb58333",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ワイルドエリア2026グローバル：タマゴが判明・追加（4件）",
+      "details": "タマゴ：ヒトツキ(10km)、クレッフィ(10km)、ジジーロン(10km)、ジュラルドン(10km)",
+      "targetId": "ev-auto-wild-area-2026-global"
+    },
+    {
+      "id": "news-a47bfaa896",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】死者の日イベント2026(メキシコ)：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：無料タイムチャレンジ→カラカラ(花飾り)(SP背景付き)",
+      "targetId": "ev-auto-dia-de-muertos-2026"
+    },
+    {
+      "id": "news-0379d6b1b3",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ポケモンナイトアウト：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：ポケモンナイトアウト無料タイムチャレンジ→ポケモンナイトアウト野球ジャージ・ストリンダー(ハイ)・ストリンダー(ロー)",
+      "targetId": "ev-auto-pokemon-night-out"
+    },
+    {
+      "id": "news-774f6997cf",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ポケモンGOの2026年10月のスケジュール：レイドが判明・追加（1件）",
+      "details": "レイド：ランドロス(化身)",
+      "targetId": "ev-auto-2026-october-schedule"
+    },
+    {
+      "id": "news-fcfbc8a882",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ダイマックスユクシー・エムリット・アグノムのマックスバトルデイ：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：マックスバトルで7回勝つ→経験値 25000XP",
+      "targetId": "ev-auto-max-battle-day-uxie-mesprit-azelf"
+    },
+    {
+      "id": "news-0fdbc0e3b0",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【新イベント】GOパス秋の遠足：相棒といっしょ",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-go-pass-autumn-trek"
+    },
+    {
+      "id": "news-5af03468fc",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】世界宇宙週間2026：タイムチャレンジが判明・追加（3件）",
+      "details": "タイムチャレンジ：レイドバトルで1回勝つ→経験値、レイドバトルで3回勝つ→経験値、レイドバトルで5回勝つ→経験値",
+      "targetId": "ev-auto-world-space-week-2026"
+    },
+    {
+      "id": "news-279fad63f6",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】2026FCソウルイベント(韓国)：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：対象地域へ行く→リザードン(ロケーション背景)・プレミアムバトルパス・ヒトカゲのアメ・ほしのすな・経験値",
+      "targetId": "ev-auto-2026-fc-seoul-event"
+    },
+    {
+      "id": "news-3fbce1cf24",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】キョダイマックスエースバーンのマックスバトルデイ：タイムチャレンジが判明・追加（7件）",
+      "details": "タイムチャレンジ：マックスバトルで勝つ→マックス粒子、マックスバトルで2回勝つ→マックス粒子、マックスバトルで3回勝つ→マックス粒子、マックスバトルで4回勝つ→マックス粒子、マックスバトルで5回勝つ→マックス粒子、マックスバトルで6回勝つ→マックス粒子 ほか1件",
+      "targetId": "ev-auto-gigantamax-cinderace-raid-day"
+    },
+    {
+      "id": "news-2d1bcd0bf9",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】収穫祭：「カジッチュ」集め：野生が判明・追加（3件）",
+      "details": "野生：カビゴン、キノココ、タマゲタケ",
+      "targetId": "ev-auto-harvest-festival-applin-gathering"
+    },
+    {
+      "id": "news-538dd954a2",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】収穫祭：「カジッチュ」集め：フィールドリサーチが判明・追加（1件）",
+      "details": "フィールドリサーチ：イベント限定フィールドリサーチ→イベントにぴったりなポケモン",
+      "targetId": "ev-auto-harvest-festival-applin-gathering"
+    },
+    {
+      "id": "news-816e75d779",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】収穫祭：「カジッチュ」集め：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：選択式タイムチャレンジ→りんご（すっぱい/あまーい/みついり）",
+      "targetId": "ev-auto-harvest-festival-applin-gathering"
+    },
+    {
+      "id": "news-0ab6253ac5",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】欧州宇宙機関(ESA)コラボイベント(欧州)：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：限定タイムチャレンジ→ポケモンと遭遇・ピカチュウ(宇宙飛行士)・ピカチュウ(宇宙飛行士)(ロケーション背景)",
+      "targetId": "ev-auto-esa-collaboration-2026"
+    },
+    {
+      "id": "news-9f0eaa0dba",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ポケモンGOの新シーズン「黄昏の旅路」：フィールドリサーチが判明・追加（2件）",
+      "details": "フィールドリサーチ：相棒と探索してアメを3個もらう→相棒・相棒、相棒と歩いて2 個アメをもらう→相棒・相棒・相棒・相棒・相棒・相棒",
+      "targetId": "ev-auto-twilight-journey-season"
+    },
+    {
+      "id": "news-f89447ccde",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【新イベント】ポケモン30周年記念モール探索イベント",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-pokemon-30th-anniversary-mall-explorations"
+    },
+    {
+      "id": "news-e867aa2a86",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ポケモン30周年記念モール探索イベント：タイムチャレンジが判明・追加（10件）",
+      "details": "タイムチャレンジ：ポケモンを3匹捕まえる→x5、ポケモンを捕まえるときにきのみを使う→x500、GOスナップショット写真を撮る→x5、ポケストップ・ジム2個を回す→ランダム、x1000→x10、ポケモンを10匹捕まえる→x500 ほか4件",
+      "targetId": "ev-auto-pokemon-30th-anniversary-mall-explorations"
+    },
+    {
+      "id": "news-21d2e97906",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ポケモンGOの2026年9月のスケジュール：レイドが判明・追加（3件）",
+      "details": "レイド：ザシアン(歴戦)、ザマゼンタ(歴戦)、ボルトロス(化身フォルム)",
+      "targetId": "ev-auto-2026-september-schedule"
+    },
+    {
+      "id": "news-a95f13c22f",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【新イベント】GOパス収穫祭",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-go-pass-harvest-festival"
+    },
+    {
+      "id": "news-22e55e5f87",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【新イベント】ポケモンカードゲーム30周年記念イベント(アメリカ)",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-pokemon-card-30th-anniversary-usa"
+    },
+    {
+      "id": "news-3a41a36b2d",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ポケモンカードゲーム30周年記念イベント(アメリカ)：レイドが判明・追加（1件）",
+      "details": "レイド：メガゲンガー",
+      "targetId": "ev-auto-pokemon-card-30th-anniversary-usa"
+    },
+    {
+      "id": "news-788778aca3",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】ポケモンカードゲーム30周年記念イベント(アメリカ)：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：対象小売店でポケモンGOアプリを開く→モンスターボール・ポケモン",
+      "targetId": "ev-auto-pokemon-card-30th-anniversary-usa"
+    },
+    {
+      "id": "news-0286001756",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【新イベント】おつきみダンス(2026年)",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-otsukimi-dance-2026"
+    },
+    {
+      "id": "news-e14480e1eb",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】おつきみダンス(2026年)：野生が判明・追加（6件）",
+      "details": "野生：ピッピ(SP背景)、プリン、ヒメグマ、エネコ、ムンナ、ホルビー",
+      "targetId": "ev-auto-otsukimi-dance-2026"
+    },
+    {
+      "id": "news-a0f53f8624",
+      "date": "2026-10-31",
+      "date_label": "10/31",
+      "title": "【情報追加】おつきみダンス(2026年)：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：月夜の小径→ピッピ(SP背景)・経験値・ほしのすな、昇る満月→ピッピ(SP背景)・経験値・ほしのすな",
+      "targetId": "ev-auto-otsukimi-dance-2026"
     }
   ],
   "field_research_updates": {
@@ -812,6 +1244,13 @@
         "rewardName": "コマタナ(SP背景)",
         "shiny": true,
         "note": "出典: gamewith"
+      },
+      {
+        "task": "614",
+        "rewardDex": 624,
+        "rewardName": "コマタナ",
+        "shiny": true,
+        "note": "出典: 9db"
       }
     ],
     "ev-halloween-p2": [
@@ -927,6 +1366,15 @@
         "note": "出典: gamewith"
       }
     ],
+    "ev-auto-harvest-festival-applin-gathering": [
+      {
+        "task": "イベント限定フィールドリサーチ",
+        "rewardDex": 25,
+        "rewardName": "イベントにぴったりなポケモン",
+        "shiny": true,
+        "note": "出典: gamewith"
+      }
+    ],
     "ev-auto-tv-anime-collaboration-2026": [
       {
         "task": "ポケモンを10匹捕まえる",
@@ -985,6 +1433,64 @@
         "rewardName": "ほしのすな",
         "shiny": false,
         "note": "出典: pokemapi"
+      }
+    ],
+    "ev-auto-twilight-journey-season": [
+      {
+        "task": "相棒と探索してアメを3個もらう",
+        "rewardDex": 25,
+        "rewardName": "相棒（926）",
+        "shiny": true,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "相棒と探索してアメを3個もらう",
+        "rewardDex": 25,
+        "rewardName": "相棒（926）",
+        "shiny": true,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "相棒と歩いて2 個アメをもらう",
+        "rewardDex": 25,
+        "rewardName": "相棒（310）",
+        "shiny": true,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "相棒と歩いて2 個アメをもらう",
+        "rewardDex": 25,
+        "rewardName": "相棒（539）",
+        "shiny": true,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "相棒と歩いて2 個アメをもらう",
+        "rewardDex": 25,
+        "rewardName": "相棒（400）",
+        "shiny": true,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "相棒と歩いて2 個アメをもらう",
+        "rewardDex": 25,
+        "rewardName": "相棒（237）",
+        "shiny": true,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "相棒と歩いて2 個アメをもらう",
+        "rewardDex": 25,
+        "rewardName": "相棒（611）",
+        "shiny": true,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "相棒と歩いて2 個アメをもらう",
+        "rewardDex": 25,
+        "rewardName": "相棒（789）",
+        "shiny": true,
+        "note": "出典: 9db"
       }
     ],
     "ev-auto-autumn-buddy-trek-2026": [
@@ -1047,6 +1553,27 @@
         "note": "出典: 9db"
       },
       {
+        "task": "ゴーストタイプのポケモンを13匹捕まえる",
+        "rewardDex": 25,
+        "rewardName": "捕獲（460）",
+        "shiny": true,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ゴーストタイプのポケモンを13匹捕まえる",
+        "rewardDex": 25,
+        "rewardName": "捕獲（285）",
+        "shiny": true,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ゴーストタイプのポケモンを13匹捕まえる",
+        "rewardDex": 25,
+        "rewardName": "捕獲（285）",
+        "shiny": true,
+        "note": "出典: 9db"
+      },
+      {
         "task": "レイドバトルで1回勝つ",
         "rewardDex": 280,
         "rewardName": "ラルトス（285）",
@@ -1068,9 +1595,37 @@
         "note": "出典: 9db"
       },
       {
+        "task": "レイドバトルで1回勝つ",
+        "rewardDex": 25,
+        "rewardName": "バトル（285）",
+        "shiny": true,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "レイドバトルで1回勝つ",
+        "rewardDex": 25,
+        "rewardName": "バトル（488）",
+        "shiny": true,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "レイドバトルで1回勝つ",
+        "rewardDex": 25,
+        "rewardName": "バトル（488）",
+        "shiny": true,
+        "note": "出典: 9db"
+      },
+      {
         "task": "レイドバトルで3回勝つ",
         "rewardDex": 200,
         "rewardName": "ムウマ（402）",
+        "shiny": true,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "レイドバトルで3回勝つ",
+        "rewardDex": 25,
+        "rewardName": "バトル（402）",
         "shiny": true,
         "note": "出典: 9db"
       },
@@ -1115,6 +1670,55 @@
         "rewardName": "ボクレー（825）",
         "shiny": true,
         "note": "出典: 9db"
+      },
+      {
+        "task": "ナイススローを6回投げる",
+        "rewardDex": 25,
+        "rewardName": "スロー（515）",
+        "shiny": true,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ナイススローを6回投げる",
+        "rewardDex": 25,
+        "rewardName": "スロー（523）",
+        "shiny": true,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ナイススローを6回投げる",
+        "rewardDex": 25,
+        "rewardName": "スロー（533）",
+        "shiny": true,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ナイススローを6回投げる",
+        "rewardDex": 25,
+        "rewardName": "スロー（536）",
+        "shiny": true,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ナイススローを6回投げる",
+        "rewardDex": 25,
+        "rewardName": "スロー（302）",
+        "shiny": true,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ナイススローを6回投げる",
+        "rewardDex": 25,
+        "rewardName": "スロー（825）",
+        "shiny": true,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "イベント限定フィールドリサーチタスク",
+        "rewardDex": 25,
+        "rewardName": "イベントにぴったりなポケモン",
+        "shiny": true,
+        "note": "出典: gamewith"
       }
     ],
     "ev-auto-wild-week-2026": [
@@ -1286,7 +1890,7 @@
           "dex": 971,
           "name": "ボチ",
           "shiny": true,
-          "note": ""
+          "note": "初登場"
         },
         {
           "dex": 302,
@@ -2426,7 +3030,7 @@
           "dex": 840,
           "name": "カジッチュ",
           "shiny": true,
-          "note": ""
+          "note": "レア"
         },
         {
           "dex": 819,
@@ -2445,6 +3049,24 @@
           "name": "ミニーブ",
           "shiny": true,
           "note": "色違い確率up"
+        },
+        {
+          "dex": 143,
+          "name": "カビゴン",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 285,
+          "name": "キノココ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 590,
+          "name": "タマゲタケ",
+          "shiny": true,
+          "note": ""
         }
       ]
     },
@@ -2750,11 +3372,143 @@
           "dex": 426,
           "name": "フワライド(ハロウィンいたずら飾り)",
           "shiny": true,
-          "note": ""
+          "note": "レア"
         },
         {
           "dex": 25,
           "name": "ピカチュウ (ハットとケープ)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 25,
+          "name": "襟飾りをつけた ロコン",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 25,
+          "name": "トップハットをかぶった ズバット",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 25,
+          "name": "ハロウィン衣装 をつけたゲンガー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 25,
+          "name": "ハロウィンいたずら飾りを つけたポッチャマ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 25,
+          "name": "ハロウィンいたずら飾りを つけたフワライド",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 25,
+          "name": "カチューシャを つけたオンバット",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 200,
+          "name": "ムウマ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 710,
+          "name": "バケッチャ (こだましゅ)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 710,
+          "name": "バケッチャ (ちゅうだましゅ)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 710,
+          "name": "バケッチャ (おおだましゅ)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 710,
+          "name": "バケッチャ (ギガだましゅ)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 25,
+          "name": "ハットとケープをつけた ピカチュウ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 25,
+          "name": "リボンをつけた ヤバチャ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 37,
+          "name": "ロコン(襟飾り)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 94,
+          "name": "ゲンガー(ハロウィン衣装)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 714,
+          "name": "オンバット(カチューシャ)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 854,
+          "name": "ヤバチャ(リボン)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 393,
+          "name": "ポッチャマ(ハロウィン)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 710,
+          "name": "バケッチャ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 426,
+          "name": "フワライド(ハロウィン)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 94,
+          "name": "ゲンガー(ハロウィン)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 37,
+          "name": "ロコン(ハロウィン)",
           "shiny": true,
           "note": ""
         },
@@ -2841,6 +3595,30 @@
           "name": "リボンをつけたヤバチャ",
           "shiny": false,
           "note": "サプライズボックス"
+        },
+        {
+          "dex": 41,
+          "name": "ズバット(トップハット)",
+          "shiny": false,
+          "note": "サプライズボックス"
+        },
+        {
+          "dex": 426,
+          "name": "フワライド(ハロウィン)",
+          "shiny": false,
+          "note": "サプライズボックス"
+        },
+        {
+          "dex": 94,
+          "name": "ゲンガー(ハロウィン)",
+          "shiny": false,
+          "note": "サプライズボックス"
+        },
+        {
+          "dex": 37,
+          "name": "ロコン(ハロウィン)",
+          "shiny": false,
+          "note": "サプライズボックス"
         }
       ]
     },
@@ -2859,6 +3637,48 @@
           "name": "メテノ(流星)",
           "shiny": true,
           "note": "17時から21時まで出現率UP"
+        },
+        {
+          "dex": 25,
+          "name": "メテノ(あかいろのコア)",
+          "shiny": true,
+          "note": "野生でのみ出現。おこう・ルアーモジュールからは出現しない。"
+        },
+        {
+          "dex": 25,
+          "name": "メテノ(だいだいいろのコア)",
+          "shiny": true,
+          "note": "野生でのみ出現。おこう・ルアーモジュールからは出現しない。"
+        },
+        {
+          "dex": 25,
+          "name": "メテノ(きいろのコア)",
+          "shiny": true,
+          "note": "野生でのみ出現。おこう・ルアーモジュールからは出現しない。"
+        },
+        {
+          "dex": 25,
+          "name": "メテノ(みどりいろのコア)",
+          "shiny": true,
+          "note": "野生でのみ出現。おこう・ルアーモジュールからは出現しない。"
+        },
+        {
+          "dex": 25,
+          "name": "メテノ(みずいろのコア)",
+          "shiny": true,
+          "note": "野生でのみ出現。おこう・ルアーモジュールからは出現しない。"
+        },
+        {
+          "dex": 25,
+          "name": "メテノ(あおいろのコア)",
+          "shiny": true,
+          "note": "野生でのみ出現。おこう・ルアーモジュールからは出現しない。"
+        },
+        {
+          "dex": 25,
+          "name": "メテノ(むらさきいろのコア)",
+          "shiny": true,
+          "note": "野生でのみ出現。おこう・ルアーモジュールからは出現しない。"
         }
       ]
     },
@@ -2883,6 +3703,84 @@
           "name": "トゲデマル",
           "shiny": true,
           "note": ""
+        }
+      ]
+    },
+    {
+      "id": "ev-auto-aeon-halloween-2026",
+      "title": "ev-auto-aeon-halloween-2026",
+      "wilds": [
+        {
+          "dex": 25,
+          "name": "襟飾りをつけた ロコン",
+          "shiny": false,
+          "note": "サプライズボックス"
+        },
+        {
+          "dex": 25,
+          "name": "トップハットをかぶった ズバット",
+          "shiny": false,
+          "note": "サプライズボックス"
+        },
+        {
+          "dex": 25,
+          "name": "ハロウィン衣装 をつけたゲンガー",
+          "shiny": false,
+          "note": "サプライズボックス"
+        },
+        {
+          "dex": 25,
+          "name": "ハロウィンいたずら飾りを つけたポッチャマ",
+          "shiny": false,
+          "note": "サプライズボックス"
+        },
+        {
+          "dex": 25,
+          "name": "ハロウィンいたずら飾りを つけたフワライド",
+          "shiny": false,
+          "note": "サプライズボックス"
+        },
+        {
+          "dex": 25,
+          "name": "カチューシャを つけたオンバット",
+          "shiny": false,
+          "note": "サプライズボックス"
+        },
+        {
+          "dex": 710,
+          "name": "バケッチャ (こだましゅ)",
+          "shiny": false,
+          "note": "サプライズボックス"
+        },
+        {
+          "dex": 710,
+          "name": "バケッチャ (ちゅうだましゅ)",
+          "shiny": false,
+          "note": "サプライズボックス"
+        },
+        {
+          "dex": 710,
+          "name": "バケッチャ (おおだましゅ)",
+          "shiny": false,
+          "note": "サプライズボックス"
+        },
+        {
+          "dex": 710,
+          "name": "バケッチャ (ギガだましゅ)",
+          "shiny": false,
+          "note": "サプライズボックス"
+        },
+        {
+          "dex": 25,
+          "name": "ハットとケープをつけた ピカチュウ",
+          "shiny": false,
+          "note": "サプライズボックス"
+        },
+        {
+          "dex": 25,
+          "name": "リボンをつけた ヤバチャ",
+          "shiny": false,
+          "note": "サプライズボックス"
         }
       ]
     },
@@ -2961,6 +3859,606 @@
           "name": "サッチムシ",
           "shiny": false,
           "note": ""
+        }
+      ]
+    },
+    {
+      "id": "ev-auto-wild-area-2026-mexico",
+      "title": "ev-auto-wild-area-2026-mexico",
+      "wilds": [
+        {
+          "dex": 27,
+          "name": "サンド (アローラ)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 50,
+          "name": "ディグダ (アローラ)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 81,
+          "name": "コイル",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 90,
+          "name": "シェルダー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 95,
+          "name": "イワーク",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 137,
+          "name": "ポリゴン",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 213,
+          "name": "ツボツボ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 227,
+          "name": "エアームド",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 299,
+          "name": "ノズパス",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 304,
+          "name": "ココドラ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 374,
+          "name": "ダンバル",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 393,
+          "name": "ポッチャマ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 410,
+          "name": "タテトプス",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 436,
+          "name": "ドーミラー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 448,
+          "name": "ルカリオ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 529,
+          "name": "モグリュー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 597,
+          "name": "テッシード",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 599,
+          "name": "ギアル",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 618,
+          "name": "マッギョ (ガラル)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 631,
+          "name": "アイアント",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 25,
+          "name": "ヌメイル (ヒスイ)",
+          "shiny": true,
+          "note": "new!"
+        },
+        {
+          "dex": 821,
+          "name": "ココガラ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 959,
+          "name": "カヌチャン",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 968,
+          "name": "ミミズズ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 4,
+          "name": "ヒトカゲ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 129,
+          "name": "コイキング",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 147,
+          "name": "ミニリュウ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 207,
+          "name": "グライガー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 328,
+          "name": "ナックラー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 333,
+          "name": "チルット",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 339,
+          "name": "ドジョッチ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 371,
+          "name": "タツベイ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 443,
+          "name": "フカマル",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 602,
+          "name": "シビシラス",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 610,
+          "name": "キバゴ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 631,
+          "name": "クイタラン",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 633,
+          "name": "モノズ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 690,
+          "name": "クズモー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 696,
+          "name": "チゴラス",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 698,
+          "name": "アマルス",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 704,
+          "name": "ヌメラ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 714,
+          "name": "オンバット",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 776,
+          "name": "バクガメス",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 782,
+          "name": "ジャラコ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 840,
+          "name": "カジッチュ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 850,
+          "name": "ヤクデ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 996,
+          "name": "セビエ",
+          "shiny": true,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "ev-auto-wild-area-2026-global",
+      "title": "ev-auto-wild-area-2026-global",
+      "wilds": [
+        {
+          "dex": 27,
+          "name": "アローラサンド",
+          "shiny": true,
+          "note": "ハガネのように強固アワー"
+        },
+        {
+          "dex": 50,
+          "name": "アローラディグダ",
+          "shiny": true,
+          "note": "ハガネのように強固アワー"
+        },
+        {
+          "dex": 81,
+          "name": "コイル",
+          "shiny": true,
+          "note": "ハガネのように強固アワー"
+        },
+        {
+          "dex": 90,
+          "name": "シェルダー",
+          "shiny": true,
+          "note": "ハガネのように強固アワー"
+        },
+        {
+          "dex": 95,
+          "name": "イワーク",
+          "shiny": true,
+          "note": "ハガネのように強固アワー"
+        },
+        {
+          "dex": 137,
+          "name": "ポリゴン",
+          "shiny": true,
+          "note": "ハガネのように強固アワー"
+        },
+        {
+          "dex": 213,
+          "name": "ツボツボ",
+          "shiny": true,
+          "note": "ハガネのように強固アワー"
+        },
+        {
+          "dex": 227,
+          "name": "エアームド",
+          "shiny": true,
+          "note": "ハガネのように強固アワー"
+        },
+        {
+          "dex": 299,
+          "name": "ノズパス",
+          "shiny": true,
+          "note": "ハガネのように強固アワー"
+        },
+        {
+          "dex": 304,
+          "name": "ココドラ",
+          "shiny": true,
+          "note": "ハガネのように強固アワー"
+        },
+        {
+          "dex": 374,
+          "name": "ダンバル",
+          "shiny": true,
+          "note": "ハガネのように強固アワー"
+        },
+        {
+          "dex": 393,
+          "name": "ポッチャマ",
+          "shiny": true,
+          "note": "ハガネのように強固アワー"
+        },
+        {
+          "dex": 410,
+          "name": "タテトプス",
+          "shiny": true,
+          "note": "ハガネのように強固アワー"
+        },
+        {
+          "dex": 436,
+          "name": "ドーミラー",
+          "shiny": true,
+          "note": "ハガネのように強固アワー"
+        },
+        {
+          "dex": 448,
+          "name": "ルカリオ",
+          "shiny": true,
+          "note": "ハガネのように強固アワー"
+        },
+        {
+          "dex": 529,
+          "name": "モグリュー",
+          "shiny": true,
+          "note": "ハガネのように強固アワー"
+        },
+        {
+          "dex": 597,
+          "name": "テッシード",
+          "shiny": true,
+          "note": "ハガネのように強固アワー"
+        },
+        {
+          "dex": 599,
+          "name": "ギアル",
+          "shiny": true,
+          "note": "ハガネのように強固アワー"
+        },
+        {
+          "dex": 618,
+          "name": "ガラルマッギョ",
+          "shiny": true,
+          "note": "ハガネのように強固アワー"
+        },
+        {
+          "dex": 631,
+          "name": "アイアント",
+          "shiny": true,
+          "note": "ハガネのように強固アワー"
+        },
+        {
+          "dex": 821,
+          "name": "ココガラ",
+          "shiny": true,
+          "note": "ハガネのように強固アワー"
+        },
+        {
+          "dex": 959,
+          "name": "カヌチャン",
+          "shiny": true,
+          "note": "ハガネのように強固アワー"
+        },
+        {
+          "dex": 4,
+          "name": "ヒトカゲ",
+          "shiny": true,
+          "note": "ドラゴンのごとく大胆アワー"
+        },
+        {
+          "dex": 129,
+          "name": "コイキング",
+          "shiny": true,
+          "note": "ドラゴンのごとく大胆アワー"
+        },
+        {
+          "dex": 147,
+          "name": "ミニリュウ",
+          "shiny": true,
+          "note": "ドラゴンのごとく大胆アワー"
+        },
+        {
+          "dex": 207,
+          "name": "グライガー",
+          "shiny": true,
+          "note": "ドラゴンのごとく大胆アワー"
+        },
+        {
+          "dex": 328,
+          "name": "ナックラー",
+          "shiny": true,
+          "note": "ドラゴンのごとく大胆アワー"
+        },
+        {
+          "dex": 333,
+          "name": "チルット",
+          "shiny": true,
+          "note": "ドラゴンのごとく大胆アワー"
+        },
+        {
+          "dex": 339,
+          "name": "ドジョッチ",
+          "shiny": true,
+          "note": "ドラゴンのごとく大胆アワー"
+        },
+        {
+          "dex": 371,
+          "name": "タツベイ",
+          "shiny": true,
+          "note": "ドラゴンのごとく大胆アワー"
+        },
+        {
+          "dex": 443,
+          "name": "フカマル",
+          "shiny": true,
+          "note": "ドラゴンのごとく大胆アワー"
+        },
+        {
+          "dex": 602,
+          "name": "シビシラス",
+          "shiny": true,
+          "note": "ドラゴンのごとく大胆アワー"
+        },
+        {
+          "dex": 610,
+          "name": "キバゴ",
+          "shiny": true,
+          "note": "ドラゴンのごとく大胆アワー"
+        },
+        {
+          "dex": 631,
+          "name": "クイタラン",
+          "shiny": true,
+          "note": "ドラゴンのごとく大胆アワー"
+        },
+        {
+          "dex": 633,
+          "name": "モノズ",
+          "shiny": true,
+          "note": "ドラゴンのごとく大胆アワー"
+        },
+        {
+          "dex": 690,
+          "name": "クズモー",
+          "shiny": true,
+          "note": "ドラゴンのごとく大胆アワー"
+        },
+        {
+          "dex": 696,
+          "name": "チゴラス",
+          "shiny": true,
+          "note": "ドラゴンのごとく大胆アワー"
+        },
+        {
+          "dex": 698,
+          "name": "アマルス",
+          "shiny": true,
+          "note": "ドラゴンのごとく大胆アワー"
+        },
+        {
+          "dex": 704,
+          "name": "ヌメラ",
+          "shiny": true,
+          "note": "ドラゴンのごとく大胆アワー"
+        },
+        {
+          "dex": 714,
+          "name": "オンバット",
+          "shiny": true,
+          "note": "ドラゴンのごとく大胆アワー"
+        },
+        {
+          "dex": 776,
+          "name": "バクガメス",
+          "shiny": true,
+          "note": "ドラゴンのごとく大胆アワー"
+        },
+        {
+          "dex": 782,
+          "name": "ジャラコ",
+          "shiny": true,
+          "note": "ドラゴンのごとく大胆アワー"
+        },
+        {
+          "dex": 850,
+          "name": "ヤクデ",
+          "shiny": true,
+          "note": "ドラゴンのごとく大胆アワー"
+        },
+        {
+          "dex": 996,
+          "name": "セビエ",
+          "shiny": true,
+          "note": "ドラゴンのごとく大胆アワー"
+        }
+      ]
+    },
+    {
+      "id": "ev-auto-otsukimi-dance-2026",
+      "title": "ev-auto-otsukimi-dance-2026",
+      "wilds": [
+        {
+          "dex": 35,
+          "name": "ピッピ(SP背景)",
+          "shiny": true,
+          "note": "月見タイムに大量発生"
+        },
+        {
+          "dex": 39,
+          "name": "プリン",
+          "shiny": true,
+          "note": "月見タイムに出現"
+        },
+        {
+          "dex": 216,
+          "name": "ヒメグマ",
+          "shiny": true,
+          "note": "月見タイムに出現"
+        },
+        {
+          "dex": 300,
+          "name": "エネコ",
+          "shiny": true,
+          "note": "月見タイムに出現"
+        },
+        {
+          "dex": 517,
+          "name": "ムンナ",
+          "shiny": true,
+          "note": "月見タイムに出現"
+        },
+        {
+          "dex": 659,
+          "name": "ホルビー",
+          "shiny": true,
+          "note": "月見タイムに出現"
         }
       ]
     },
@@ -3833,27 +5331,28 @@
     {
       "id": "ev-auto-go-pass-autumn-trek",
       "month": 10,
-      "title": "GOパス：秋の遠足",
+      "title": "GOパス秋の遠足：相棒といっしょ",
       "barClass": "bar-main",
       "category": "main",
       "startDay": 13,
       "endDay": 19,
       "hasPaid": true,
-      "dateText": "2026年10月13日(火)10:00〜10月19日(月)20:00",
-      "summary": "GOポイントを集めてランクを上げ、進行度に応じて報酬が貰える期間限定のGOパスイベント。有料版のデラックスも登場。",
+      "dateText": "2026年10月13日(火)10:00~10月19日(月)20:00",
+      "summary": "GOポイントを集めてランクを上げ、進行度に応じて報酬が貰える期間限定の機能。有料版のデラックスも登場。",
       "freeFeatures": [
-        "イベントにぴったりなポケモンと遭遇",
+        "ポケモンと遭遇",
         "おこう×1",
         "ふしぎなアメ×3",
         "ハイパーボール",
-        "ランク10：おこうが2時間持続(おさんぽおこうを除く)",
-        "ランク20：相棒探索メガエナジー5倍(ラクライ、ライボルト)"
+        "ランク10ボーナス：おこうが2時間持続(おさんぽおこうを除く)",
+        "ランク20ボーナス：相棒探索メガエナジー5倍(ラクライ、ライボルト)"
       ],
       "paidFeatures": [
-        "イベントにぴったりなポケモンと遭遇",
+        "ポケモンと遭遇",
         "おこう×5",
         "ライボルトのメガエナジー×1000",
-        "ふしぎなアメXL×9"
+        "ふしぎなアメXL×9",
+        "追加デイリータスク"
       ],
       "wilds": [],
       "raids": [],
@@ -4311,6 +5810,194 @@
         "宇宙飛行士ピカチュウの初登場",
         "限定タイムチャレンジ",
         "フィールドリサーチ"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-2026-october-schedule",
+      "month": 10,
+      "title": "ポケモンGOの2026年10月のスケジュール",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 1,
+      "endDay": 31,
+      "hasPaid": false,
+      "dateText": "2026年10月",
+      "summary": "2026年10月のレイドバトル、マックスバトル、スポットライトアワー等のスケジュール。",
+      "freeFeatures": [],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-wild-area-2026-mexico",
+      "month": 11,
+      "title": "ワイルドエリア2026：メキシコシティ",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 6,
+      "endDay": 8,
+      "hasPaid": true,
+      "dateText": "2026/11/6(金)～2026/11/8(日)",
+      "summary": "ワイルドエリア2026のメキシコシティ開催イベント。チケット購入者限定で、キョダイマックスジュラルドンやジャケットを身にまとったカイリキーなどが登場する。",
+      "freeFeatures": [],
+      "paidFeatures": [
+        "イベント限定スペシャルリサーチ",
+        "GOスタンプラリー",
+        "タイムチャレンジ",
+        "ロケーション背景付きポケモン",
+        "GOサファリボール",
+        "特別な交換1日最大6回",
+        "交換に必要なほしのすな1/2",
+        "レイドパス1日最大10枚",
+        "マックス粒子上限増加",
+        "マックスわざ解放コスト軽減",
+        "タマゴふか距離短縮",
+        "ルアーモジュール2時間継続",
+        "おこう2時間持続",
+        "ポケモン捕獲時アメ2倍",
+        "チームコラボ8時間有効"
+      ],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-wild-area-2026-global",
+      "month": 11,
+      "title": "ワイルドエリア2026グローバル",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 14,
+      "endDay": 15,
+      "hasPaid": true,
+      "dateText": "11月14日(土)・15日(日) 各日10:00~18:00",
+      "summary": "全世界で開催されるワイルドエリアイベント。キョダイジュラルドンが初登場し、マックスバトルやレイド、野生ポケモンの変化などが行われる。",
+      "freeFeatures": [
+        "ジム・ポケストップからGOサファリボール獲得",
+        "無料レイドパスが1日最大3個獲得",
+        "マックス粒子収集上限が1600に",
+        "GOスナップショットのサプライズ1日3回発生",
+        "チームコラボ8時間持続",
+        "ルート上でつよいポケモンと出会えるチャンス",
+        "捕獲や進化で特別技習得",
+        "スペシャル背景の可能性(レイド/MAXバトル)"
+      ],
+      "paidFeatures": [
+        "チケット価格1680円(税込)",
+        "色違い遭遇率アップ",
+        "マックス粒子収集上限が3200に",
+        "パワースポット、探索で得るマックス粒子増",
+        "無料レイドパスが1日最大6個獲得",
+        "捕獲時のアメ2倍",
+        "おこうの効果時間2倍",
+        "10kmタマゴの入手率アップ",
+        "GOスナップショットのサプライズ1日6回発生",
+        "ルアーモジュールの効果が2時間継続",
+        "GOサファリボール補給気球登場(1時間ごと)",
+        "特別な交換が1日最大6回可能",
+        "交換に必要なほしのすなが1/2",
+        "限定スペシャルリサーチ",
+        "おこうからアンノーン、ラティアス、ラティオスが出現"
+      ],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-pokemon-30th-anniversary-mall-explorations",
+      "month": 10,
+      "title": "ポケモン30周年記念モール探索イベント",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 1,
+      "endDay": 28,
+      "hasPaid": false,
+      "dateText": "2026/10/1(木) 〜 2027/3/28(日)",
+      "summary": "海外の対象モールで開催されるポケモン30周年記念イベント。ルアー効果が4時間持続するボーナスや、ピカチュウ(パーティーハット)が登場する。",
+      "freeFeatures": [
+        "4時間ルアー効果",
+        "タイムチャレンジ"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-go-pass-harvest-festival",
+      "month": 9,
+      "title": "GOパス収穫祭",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 29,
+      "endDay": 28,
+      "hasPaid": true,
+      "dateText": "2026年9月29日(火)10:00~10月5日(月)20:00",
+      "summary": "GOポイントを集めてランクを上げ、進行度に応じて報酬が貰える期間限定の機能。有料版のデラックスも登場。",
+      "freeFeatures": [
+        "イベントにぴったりなポケモンと遭遇",
+        "すっぱいりんご",
+        "あまーいりんご",
+        "みついりりんご",
+        "ハーブルアーモジュール",
+        "スーパーロケットレーダー"
+      ],
+      "paidFeatures": [
+        "追加報酬（オラチフジャージ等）",
+        "追加ボーナス",
+        "追加デイリータスク"
+      ],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-pokemon-card-30th-anniversary-usa",
+      "month": 9,
+      "title": "ポケモンカードゲーム30周年記念イベント(アメリカ)",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 27,
+      "endDay": 28,
+      "hasPaid": false,
+      "dateText": "2026年9月27日(日)23:00~ 10月21日(水)18:00",
+      "summary": "ポケモンカードゲーム30周年記念コレクションの発売を記念したアメリカ限定イベント。対象小売店でのメガゲンガーレイド、限定タイムチャレンジ、ギフトカード購入による着せ替えアイテム配布が行われる。",
+      "freeFeatures": [
+        "メガゲンガーレイド",
+        "限定タイムチャレンジ"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-otsukimi-dance-2026",
+      "month": 9,
+      "title": "おつきみダンス(2026年)",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 23,
+      "endDay": 28,
+      "hasPaid": false,
+      "dateText": "2026年9月23日(水･祝)10:00〜9月28日(月)23:59",
+      "summary": "日本、韓国、台湾、インドネシア、シンガポール、香港、マレーシアで開催されるイベント。月見タイムの発生や無料タイムチャレンジが登場する。",
+      "freeFeatures": [
+        "月見タイムの発生",
+        "無料タイムチャレンジ",
+        "ポケモン捕獲時XP2倍"
       ],
       "paidFeatures": [],
       "wilds": [],

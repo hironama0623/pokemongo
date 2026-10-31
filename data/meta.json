@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "last_run_at": "2026-10-31T08:39:40.909284+09:00",
+  "last_run_at": "2026-10-31T12:38:02.016746+09:00",
   "last_run_status": "partial",
-  "last_success_at": "2026-10-31T08:39:40.909284+09:00",
+  "last_success_at": "2026-10-31T12:38:02.016746+09:00",
   "counts": {
-    "fetched_ok": 189,
+    "fetched_ok": 185,
     "fetch_failed": 0,
-    "analyzed": 6,
-    "skipped": 178,
-    "failed": 0,
-    "events_auto": 56,
-    "news": 93
+    "analyzed": 68,
+    "skipped": 108,
+    "failed": 4,
+    "events_auto": 63,
+    "news": 147
   },
-  "last_content_change_at": "2026-10-31T08:39:40.909284+09:00"
+  "last_content_change_at": "2026-10-31T12:38:02.016746+09:00"
 }
