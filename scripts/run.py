@@ -50,7 +50,7 @@ def _dump_research_text(queue):
     d = config.LOGS / "debug" / "research"
     try:
         d.mkdir(parents=True, exist_ok=True)
-        for old in d.glob("*.txt"):
+        for old in list(d.glob("*.txt")) + list((d.parent / "counters").glob("*.txt")):
             old.unlink()
         n = 0
         for a in queue:
@@ -62,6 +62,19 @@ def _dump_research_text(queue):
             name = f"{a['site']}-{a['url'].rstrip('/').split('/')[-1]}.txt"
             (d / name).write_text(a["url"] + "\n" + "\n".join(lines[j] for j in keep[:80]), encoding="utf-8")
             n += 1
+    except OSError:
+        pass
+
+
+def _dump_counter_text(art):
+    """原因調査用: 対策抽出を行った記事の本文先頭を logs/debug/counters/ に保存（毎回上書き・最大30件）。"""
+    d = config.LOGS / "debug" / "counters"
+    try:
+        d.mkdir(parents=True, exist_ok=True)
+        if len(list(d.glob("*.txt"))) >= 30:
+            return
+        name = f"{art['site']}-{art['url'].rstrip('/').split('/')[-1]}.txt"
+        (d / name).write_text(art["url"] + "\n" + art["text"][:3000], encoding="utf-8")
     except OSError:
         pass
 
@@ -136,6 +149,31 @@ def run(now, log, diagnose=False, no_news=False, getter=fetch.get, llm=an.gemini
     counters_changed = False
     queue.sort(key=lambda a: a["date"] or now, reverse=True)
     t0, budget_skipped, quota_hit = time.monotonic(), 0, None
+    def extra_counters(art, e):
+        """イベント抽出を行った記事に対策の記述もありそうなら、対策抽出を追加で行う（失敗しても記事の結果は変えない）。"""
+        nonlocal counters, counters_changed, quota_hit
+        if quota_hit or not config.has_counter_section(art):
+            return
+        _dump_counter_text(art)
+        an.last_info.clear()
+        try:
+            cf = an.analyze_counters(art, config.GEMINI_MODELS, call=llm)
+        except an.QuotaExhausted as ex:
+            quota_hit = str(ex)
+            return
+        except an.AnalyzeError as ex:
+            e["reason"] = (e.get("reason") or "") + f"; 対策抽出失敗: {str(ex)[:120]}"
+            return
+        e["ai_calls"] = (e.get("ai_calls") or 0) + (an.last_info.get("attempts") or 0)
+        if not cf.get("bosses"):
+            return
+        trial_c = copy.deepcopy(counters)
+        src2 = {"site": art["site"], "url": art["url"], "fetched_at": now.isoformat(), "article_updated": art["updated"]}
+        touched = ctr.merge_counters(trial_c, cf, src2, names, unresolved, now)
+        if schemas.validate("counters", trial_c) is None and touched:
+            counters, counters_changed = trial_c, True
+            e["reason"] = (e.get("reason") or "") + "; 対策: " + "、".join(touched)[:100]
+
     for art in queue:
         e = art["entry"]
         if quota_hit or time.monotonic() - t0 > config.ANALYZE_BUDGET_SEC:  # 上限前に切り上げて、ここまでの結果を必ず保存する
@@ -186,6 +224,7 @@ def run(now, log, diagnose=False, no_news=False, getter=fetch.get, llm=an.gemini
             continue
         if not facts["relevant"]:
             e.update(action="analyzed", reason="対象外の記事（イベント情報なし）")
+            extra_counters(art, e)
             analyzed_ok.append(art)
             continue
         for sec in ("wilds", "raids", "eggs"):
@@ -213,6 +252,7 @@ def run(now, log, diagnose=False, no_news=False, getter=fetch.get, llm=an.gemini
         changes += ch
         analyzed_ok.append(art)
         e.update(action="analyzed", reason="; ".join(warns + [f"{c['section']}+{len(c['added'])}" for c in ch]) or "新情報なし")
+        extra_counters(art, e)
 
     titles = {x["id"]: x["title"] for x in index}
     titles.update({k: v["title"] for k, v in events["events"].items()})

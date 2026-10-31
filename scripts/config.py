@@ -30,7 +30,7 @@ GEMINI_MODELS = [m for m in dict.fromkeys([os.environ.get("GEMINI_MODEL", "gemin
 # link_re: 記事URLの正規表現（group(1)=記事キー）。min_id: これ未満の数値IDは古い記事として無視。
 # 数値IDでないサイト（公式）は一覧の並び順（新しい順）で上位 max_articles 件を見る。
 # 解析の中身（プロンプト・抽出方法）を変えたら上げる。全記事が一度だけ解析し直される
-ANALYSIS_VERSION = "3"
+ANALYSIS_VERSION = "4"
 
 SITE_PRIORITY = {"official": 0, "pokemapi": 1, "9db": 2, "gamewith": 3}   # 解析の優先順（上限に達したとき後ろは次回へ回る）
 
@@ -76,3 +76,12 @@ def is_counter_article(article):
     head = (article.get("header") or "") or article.get("text", "")[:300]
     head = head[:300]
     return bool(_COUNTER_A.search(head) and _COUNTER_B.search(head))
+
+
+_COUNTER_WORDS = re.compile(r"対策|おすすめ|DPS|TDO|アタッカー|弱点|カウンター")
+
+
+def has_counter_section(article):
+    """イベント記事・ボス紹介記事の中に、対策ポケモン（おすすめ/アタッカー/DPS等）の記述がありそうか。ありそうなら対策抽出も追加で行う。"""
+    text = article.get("text", "")
+    return bool(_COUNTER_B.search(text)) and len(_COUNTER_WORDS.findall(text)) >= 3

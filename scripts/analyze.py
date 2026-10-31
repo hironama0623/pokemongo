@@ -108,7 +108,11 @@ def normalize(facts):
         return facts
 
     def fix(lst):
-        return [{"name": x.strip()} if isinstance(x, str) and x.strip() else x for x in lst] if isinstance(lst, list) else lst
+        if not isinstance(lst, list):
+            return lst
+        lst = [{"name": x.strip()} if isinstance(x, str) and x.strip() else x for x in lst]
+        # 名前が空の項目（画像だけの報酬欄などでAIが空文字を返すことがある）は捨てる。残すと検証で記事ごと失敗する
+        return [x for x in lst if not (isinstance(x, dict) and not str(x.get("name") or "").strip()) and x != ""]
     for k in ("wilds", "raids", "eggs"):
         if k in facts:
             facts[k] = fix(facts[k])

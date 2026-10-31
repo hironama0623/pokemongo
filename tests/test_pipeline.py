@@ -393,3 +393,18 @@ class CountersTest(unittest.TestCase):
         src2 = {"site": "9db", "url": "https://y/2", "fetched_at": "t", "article_updated": "2026-10-31"}
         ctr.merge_counters(store_, facts, src2, {}, set(), dt.datetime(2026, 10, 31))
         self.assertEqual(sorted(store_["bosses"]["dmax:ヤミラミ"]["by_site"]), ["9db", "gamewith"])
+
+
+class ExtraCountersTest(unittest.TestCase):
+    def test_has_counter_section(self):
+        a = {"text": "ギラティナ レイド おすすめアタッカー DPS TDO 対策"}
+        self.assertTrue(config.has_counter_section(a))
+        self.assertFalse(config.has_counter_section({"text": "ハロウィンイベント 開催。レイドも登場。おすすめ"}))
+
+    def test_empty_names_dropped(self):
+        from scripts import analyze as an
+        f = {"field_research": [{"task": "ナイススローを6回", "rewards": [{"name": ""}, {"name": "ボチ"}, ""]}],
+             "wilds": [{"name": ""}, {"name": "ズバット"}]}
+        out = an.normalize(f)
+        self.assertEqual(out["field_research"][0]["rewards"], [{"name": "ボチ"}])
+        self.assertEqual(out["wilds"], [{"name": "ズバット"}])
