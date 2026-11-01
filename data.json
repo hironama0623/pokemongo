@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/11/01 18:37 JST",
+  "updated_at": "2026/11/01 19:19 JST",
   "latest_news": [
     {
       "id": "news-f9091af845",
@@ -648,6 +648,62 @@
       "title": "【情報追加】ワイルドウィーク2026：レイドが判明・追加（6件）",
       "details": "レイド：ラルトス、ワンリキー、レジスチル、レジドラゴ、ラティアス、ラティオス",
       "targetId": "ev-wildweek-2026"
+    },
+    {
+      "id": "news-4e42ebf2fb",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "title": "【情報追加】2026年11月のイベントスケジュールまとめ：野生が判明・追加（5件）",
+      "details": "野生：ヒメグマ(魔女帽子)、サルノリ、メッソン、ヒバニー、オンバット",
+      "targetId": "ev-auto-november-2026-schedule"
+    },
+    {
+      "id": "news-a2499965a3",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "title": "【情報追加】2026年11月のイベントスケジュールまとめ：レイドが判明・追加（5件）",
+      "details": "レイド：ギラティナ(O)、ギラティナ(A)、デオキシス(D)、デオキシス(A)、デオキシス(S)",
+      "targetId": "ev-auto-november-2026-schedule"
+    },
+    {
+      "id": "news-adc4f8b88b",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "title": "【情報追加】GOバトルリーグ：黄昏の旅路：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：100バトルと50勝→ほしのすな・ふしぎなアメXL・わざマシンノーマル・わざマシンスペシャル・すごいわざマシンノーマル・すごいわざマシンスペシャル",
+      "targetId": "ev-auto-gbl-twilight-journey"
+    },
+    {
+      "id": "news-246a5a9b27",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "title": "【情報追加】ワイルドエリア2026仙台：野生が判明・追加（1件）",
+      "details": "野生：シェルター",
+      "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-e2b1018761",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "title": "【情報追加】ワイルドエリア2026グローバル：野生が判明・追加（1件）",
+      "details": "野生：シェルスター",
+      "targetId": "ev-auto-wild-area-2026-global"
+    },
+    {
+      "id": "news-445d0578d5",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "title": "【情報追加】ポケモンナイトアウトTwitch配信タイムチャレンジ：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：ポケストップを10個回す→ズριのみ",
+      "targetId": "ev-auto-pokemon-night-out-twitch-drops"
+    },
+    {
+      "id": "news-23bb69c11b",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "title": "【情報追加】ポケモンカードゲーム30周年記念イベント(アメリカ)：レイドが判明・追加（1件）",
+      "details": "レイド：ゲンガー(メガ)",
+      "targetId": "ev-auto-pokemon-card-30th-anniversary-usa"
     },
     {
       "id": "news-0cdcab26bb",
@@ -5511,6 +5567,12 @@
           "name": "ジュラルドン",
           "shiny": true,
           "note": ""
+        },
+        {
+          "dex": 90,
+          "name": "シェルター",
+          "shiny": true,
+          "note": ""
         }
       ]
     },
@@ -6368,7 +6430,7 @@
           "dex": 227,
           "name": "エアームド",
           "shiny": true,
-          "note": ""
+          "note": "レア"
         }
       ]
     },
@@ -8391,6 +8453,12 @@
           "name": "ファイヤー(ガラル)",
           "shiny": true,
           "note": ""
+        },
+        {
+          "dex": 25,
+          "name": "シェルスター",
+          "shiny": true,
+          "note": ""
         }
       ]
     },
@@ -8439,6 +8507,42 @@
           "name": "ルナトーン",
           "shiny": true,
           "note": ""
+        }
+      ]
+    },
+    {
+      "id": "ev-auto-november-2026-schedule",
+      "title": "ev-auto-november-2026-schedule",
+      "wilds": [
+        {
+          "dex": 216,
+          "name": "ヒメグマ(魔女帽子)",
+          "shiny": true,
+          "note": "スポットライトアワー"
+        },
+        {
+          "dex": 810,
+          "name": "サルノリ",
+          "shiny": true,
+          "note": "スポットライトアワー"
+        },
+        {
+          "dex": 816,
+          "name": "メッソン",
+          "shiny": true,
+          "note": "スポットライトアワー"
+        },
+        {
+          "dex": 813,
+          "name": "ヒバニー",
+          "shiny": true,
+          "note": "スポットライトアワー"
+        },
+        {
+          "dex": 714,
+          "name": "オンバット",
+          "shiny": true,
+          "note": "スポットライトアワー"
         }
       ]
     },

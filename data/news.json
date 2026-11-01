@@ -1379,6 +1379,125 @@
       ]
     },
     {
+      "id": "news-4e42ebf2fb",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "kind": "event_update",
+      "title": "【情報追加】2026年11月のイベントスケジュールまとめ：野生が判明・追加（5件）",
+      "details": "野生：ヒメグマ(魔女帽子)、サルノリ、メッソン、ヒバニー、オンバット",
+      "targetId": "ev-auto-november-2026-schedule",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/583244",
+          "fetched_at": "2026-11-01T19:19:21.804661+09:00",
+          "article_updated": "2026-11-01T12:33:20+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-a2499965a3",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "kind": "event_update",
+      "title": "【情報追加】2026年11月のイベントスケジュールまとめ：レイドが判明・追加（5件）",
+      "details": "レイド：ギラティナ(O)、ギラティナ(A)、デオキシス(D)、デオキシス(A)、デオキシス(S)",
+      "targetId": "ev-auto-november-2026-schedule",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/583244",
+          "fetched_at": "2026-11-01T19:19:21.804661+09:00",
+          "article_updated": "2026-11-01T12:33:20+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-adc4f8b88b",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "kind": "event_update",
+      "title": "【情報追加】GOバトルリーグ：黄昏の旅路：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：100バトルと50勝→ほしのすな・ふしぎなアメXL・わざマシンノーマル・わざマシンスペシャル・すごいわざマシンノーマル・すごいわざマシンスペシャル",
+      "targetId": "ev-auto-gbl-twilight-journey",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/574389",
+          "fetched_at": "2026-11-01T19:19:21.804661+09:00",
+          "article_updated": "2026-11-01T08:07:36+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-246a5a9b27",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026仙台：野生が判明・追加（1件）",
+      "details": "野生：シェルター",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/568373",
+          "fetched_at": "2026-11-01T19:19:21.804661+09:00",
+          "article_updated": "2026-11-01T04:58:12+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-e2b1018761",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026グローバル：野生が判明・追加（1件）",
+      "details": "野生：シェルスター",
+      "targetId": "ev-auto-wild-area-2026-global",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/575992",
+          "fetched_at": "2026-11-01T19:19:21.804661+09:00",
+          "article_updated": "2026-11-01T01:33:44+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-445d0578d5",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "kind": "event_update",
+      "title": "【情報追加】ポケモンナイトアウトTwitch配信タイムチャレンジ：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：ポケストップを10個回す→ズριのみ",
+      "targetId": "ev-auto-pokemon-night-out-twitch-drops",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/585702",
+          "fetched_at": "2026-11-01T19:19:21.804661+09:00",
+          "article_updated": "2026-10-31T13:48:13+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-23bb69c11b",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "kind": "event_update",
+      "title": "【情報追加】ポケモンカードゲーム30周年記念イベント(アメリカ)：レイドが判明・追加（1件）",
+      "details": "レイド：ゲンガー(メガ)",
+      "targetId": "ev-auto-pokemon-card-30th-anniversary-usa",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/578855",
+          "fetched_at": "2026-11-01T19:19:21.804661+09:00",
+          "article_updated": "2026-10-01T22:20:33+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-0cdcab26bb",
       "date": "2026-10-31",
       "date_label": "10/31",
