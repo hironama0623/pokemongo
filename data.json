@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/11/01 12:43 JST",
+  "updated_at": "2026/11/01 15:16 JST",
   "latest_news": [
     {
       "id": "news-f9091af845",
@@ -616,6 +616,30 @@
       "title": "【情報追加】シャンデラのスーパーメガレイド・デイ：レイドが判明・追加（1件）",
       "details": "レイド：メガシャンデラ",
       "targetId": "ev-supermega-chandelure"
+    },
+    {
+      "id": "news-608d8c942a",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "title": "【日程変更】メガ：メガヤミラミ",
+      "details": "日程が更新されています：2026-10-28〜2026-11-08 → 2026-10-28〜2026-11-04",
+      "targetId": "ev-auto-mega-sableye-2026-10"
+    },
+    {
+      "id": "news-135e924dcf",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "title": "【情報追加】イオンハロウィンイベント：レイドが判明・追加（1件）",
+      "details": "レイド：シャンデラ",
+      "targetId": "ev-auto-aeon-halloween-2026"
+    },
+    {
+      "id": "news-8b98ce9e12",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "title": "【情報追加】イオンハロウィンイベント：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：対象のイオンモールを訪れる（パート1：10月19日〜10月25日、パート2：10月26日〜11月1日）→ピカチュウ(魔女帽子)",
+      "targetId": "ev-auto-aeon-halloween-2026"
     },
     {
       "id": "news-0cdcab26bb",

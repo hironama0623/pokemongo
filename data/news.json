@@ -1311,6 +1311,57 @@
       ]
     },
     {
+      "id": "news-608d8c942a",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "kind": "schedule_changed",
+      "title": "【日程変更】メガ：メガヤミラミ",
+      "details": "日程が更新されています：2026-10-28〜2026-11-08 → 2026-10-28〜2026-11-04",
+      "targetId": "ev-auto-mega-sableye-2026-10",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/586133",
+          "fetched_at": "2026-11-01T15:16:58.242731+09:00",
+          "article_updated": "2026-10-31T12:31:39+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-135e924dcf",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "kind": "event_update",
+      "title": "【情報追加】イオンハロウィンイベント：レイドが判明・追加（1件）",
+      "details": "レイド：シャンデラ",
+      "targetId": "ev-auto-aeon-halloween-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/579901",
+          "fetched_at": "2026-11-01T15:16:58.242731+09:00",
+          "article_updated": "2026-10-31T09:03:16+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-8b98ce9e12",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "kind": "event_update",
+      "title": "【情報追加】イオンハロウィンイベント：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：対象のイオンモールを訪れる（パート1：10月19日〜10月25日、パート2：10月26日〜11月1日）→ピカチュウ(魔女帽子)",
+      "targetId": "ev-auto-aeon-halloween-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/579901",
+          "fetched_at": "2026-11-01T15:16:58.242731+09:00",
+          "article_updated": "2026-10-31T09:03:16+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-0cdcab26bb",
       "date": "2026-10-31",
       "date_label": "10/31",
@@ -4029,6 +4080,12 @@
           "site": "pokemapi",
           "url": "https://pokemongo-get.com/board/10790/",
           "fetched_at": "2026-11-01T12:43:27.147538+09:00",
+          "article_updated": null
+        },
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10790/",
+          "fetched_at": "2026-11-01T15:16:58.242731+09:00",
           "article_updated": null
         }
       ]
