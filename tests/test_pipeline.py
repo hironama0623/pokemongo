@@ -385,13 +385,13 @@ class CountersTest(unittest.TestCase):
         self.assertEqual([c["name"] for c in facts["bosses"][0]["counters"]], ["ザシアン(けんのおう)", "ハピナス"])
         store_ = {"schema_version": 1, "bosses": {}}
         src = {"site": "gamewith", "url": "https://x/1", "fetched_at": "t", "article_updated": "2026-10-30"}
-        ctr.merge_counters(store_, facts, src, {"ハピナス": 242, "ザシアン": 888}, set(), dt.datetime(2026, 10, 31))
+        ctr.merge_counters(store_, facts, src, {"ハピナス": 242, "ザシアン": 888, "ヤミラミ": 302}, set(), dt.datetime(2026, 10, 31))
         from scripts import schemas
         self.assertIsNone(schemas.validate("counters", store_))
         self.assertIn("dmax:ヤミラミ", store_["bosses"])
         # 別サイトの同じボスは同じ項目にサイト別で入る
         src2 = {"site": "9db", "url": "https://y/2", "fetched_at": "t", "article_updated": "2026-10-31"}
-        ctr.merge_counters(store_, facts, src2, {"ハピナス": 242, "ザシアン": 888}, set(), dt.datetime(2026, 10, 31))
+        ctr.merge_counters(store_, facts, src2, {"ハピナス": 242, "ザシアン": 888, "ヤミラミ": 302}, set(), dt.datetime(2026, 10, 31))
         self.assertEqual(sorted(store_["bosses"]["dmax:ヤミラミ"]["by_site"]), ["9db", "gamewith"])
 
 
@@ -413,7 +413,7 @@ class ExtraCountersTest(unittest.TestCase):
 class CounterSanitize(unittest.TestCase):
     def test_sanitize_and_list_unwrap(self):
         from scripts import analyze as an, counters as ctr, schemas
-        names = {"ハピナス": 242, "ギラティナ": 487, "ザシアン": 888}
+        names = {"ハピナス": 242, "ギラティナ": 487, "ザシアン": 888, "ヤミラミ": 302}
         mk = lambda n: {"name": n, "rank": 1, "role": "attacker", "tag": "normal"}
         store_ = {"schema_version": 1, "bosses": {
             "raid:ギラティナ(アナザー)": {"name": "ギラティナ(アナザー)", "kind": "raid", "types": [], "by_site": {"9db": {"url": "u", "counters": [mk("1 34(1498) ドラゴンテール ダイマックスほう *"), mk("ねんりき")]}}},
@@ -428,3 +428,26 @@ class CounterSanitize(unittest.TestCase):
         self.assertEqual(out["bosses"][0]["types"], [])
         self.assertIsNone(schemas.validate("counter_article", out))
         self.assertEqual(an.normalize([{"relevant": False, "event_id": ""}])["relevant"], False)
+
+
+class NineDbNamesTest(unittest.TestCase):
+    JS = "var pokemon_list = JSON.parse('{\"p81\":{\"no\":1,\"name\":\"フシギダネ\"},\"p20340\":{\"no\":645,\"name\":\"ランドロス\",\"other\":\"けしん\"}}');"
+
+    def test_parse(self):
+        from scripts import extract
+        d = extract.parse_pokemon_list(self.JS)
+        self.assertEqual(d["81"], "フシギダネ")
+        self.assertEqual(d["20340"], "ランドロス（けしん）")
+
+    def test_resolve(self):
+        from scripts import extract
+        extract._POKE_LIST_CACHE.clear()
+        html = ('<script src="https://cdn08.net/pokemongo/data/4629?ver=1"></script>'
+                '<table><tr><td><span class="wiki_poke">20340</span></td><td>DPS 20.1</td></tr></table>')
+        out, n = extract.resolve_wiki_poke(html, lambda u: (self.JS, 200, None))
+        self.assertEqual(n, 1)
+        self.assertIn("ランドロス（けしん）", out)
+        # 取得失敗時は元のまま
+        extract._POKE_LIST_CACHE.clear()
+        out2, n2 = extract.resolve_wiki_poke(html, lambda u: (None, 500, "x"))
+        self.assertEqual((out2, n2), (html, 0))

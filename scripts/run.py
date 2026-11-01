@@ -26,6 +26,9 @@ def _fetch_page(source, url, role, log, getter, min_chars, dump=None):
     if html is None:
         e.update(status="http_error" if status else "fetch_error", error=err, action="fetch_failed")
         return e, None
+    if source == "9db":
+        html, n_named = extract.resolve_wiki_poke(html, getter)   # 数字IDで入っているポケモン名を図鑑データで名前に直す
+        e["names_resolved"] = n_named
     text, soup, raw = extract.html_to_text(html)
     date, kind = extract.extract_date(soup, raw)
     e.update(chars_fetched=len(text), article_updated=date.isoformat() if date else None, date_kind=kind, status="ok")
@@ -42,7 +45,11 @@ def _fetch_page(source, url, role, log, getter, min_chars, dump=None):
     elif date is None:
         e["status"] = "date_unknown"
     header = extract.page_header(soup)
-    return e, {"site": source, "url": url, "text": (header + "\n\n" + text) if header else text, "updated": e["article_updated"], "date": date, "hash": extract.content_hash(text), "header": header}
+    snip = None
+    if source == "9db" and "DPS" in html:   # 原因調査用: 9DBの表でポケモン名が画像のため、表のHTML構造（imgのalt/title/ファイル名）を保存して確認する
+        i = html.find("DPS")
+        snip = html[max(0, i - 1500): i + 3500]
+    return e, {"snip": snip, "site": source, "url": url, "text": (header + "\n\n" + text) if header else text, "updated": e["article_updated"], "date": date, "hash": extract.content_hash(text), "header": header}
 
 
 def _dump_research_text(queue):
@@ -50,7 +57,7 @@ def _dump_research_text(queue):
     d = config.LOGS / "debug" / "research"
     try:
         d.mkdir(parents=True, exist_ok=True)
-        for old in list(d.glob("*.txt")) + list((d.parent / "counters").glob("*.txt")):
+        for old in list(d.glob("*.txt")) + list((d.parent / "counters").glob("*.*")):
             old.unlink()
         n = 0
         for a in queue:
@@ -75,6 +82,8 @@ def _dump_counter_text(art):
             return
         name = f"{art['site']}-{art['url'].rstrip('/').split('/')[-1]}.txt"
         (d / name).write_text(art["url"] + "\n" + art["text"][:3000], encoding="utf-8")
+        if art.get("snip"):
+            (d / (name[:-4] + ".html")).write_text(art["snip"], encoding="utf-8")
     except OSError:
         pass
 

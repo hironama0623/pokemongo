@@ -155,3 +155,8 @@ logs/       run-YYYYMMDD-HHMM.json / latest.json / latest.md / unresolved_names.
 ## 2026-11-01 その3（Actionsのpush衝突対策）
 - 手動実行が定期実行の完了待ち中に、先に定期実行が push して rebase が衝突し失敗した。
 - checkout を最新(ref指定)にし、push前に先行コミットがあれば「今回の出力を最新の上に重ねて作り直す」方式に変更（最大3回）。
+
+## 2026-11-01 その4（9DBのポケモン名）
+- 9DBの表のポケモン名は `<span class="wiki_poke">図鑑ID</span>` で、ページ内スクリプトが `pokemon_list['p'+ID].name` で名前に置換している（HTML原文で確認）。
+- 取得時に、ページが読み込む `.../pokemongo/data/<n>` のスクリプトから ID→名前 の対応表を取得し、IDを名前に置換してから本文化（`extract.resolve_wiki_poke`）。取得に失敗したら従来どおり（置換なし）。
+- 推測や画像URLからの対応付けは行わない。対応表はサイト自身のデータ。

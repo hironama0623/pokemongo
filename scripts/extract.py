@@ -162,3 +162,61 @@ def page_header(soup):
     if d and d.get("content"):
         parts.append("概要: " + re.sub(r"\s+", " ", d["content"]).strip()[:600])
     return "\n".join(parts)
+
+
+# ---- 9DB: ポケモン名は <span class="wiki_poke">ID</span> で入り、ページ内スクリプトが図鑑データ(pokemon_list)で名前に置換する ----
+_POKE_LIST_CACHE = {}
+_POKE_SRC = re.compile(r"""src=["']((?:https?:)?//[^"']*/pokemongo/data/\d+[^"']*)["']""")
+
+
+def parse_pokemon_list(js):
+    """`var pokemon_list = JSON.parse('{...}')` から {ID文字列: 名前} を作る。読めなければ {}。"""
+    import json
+    m = re.search(r"pokemon_list\s*=\s*JSON\.parse\(\s*'(.*)'\s*\)", js, re.S)
+    if not m:
+        return {}
+    lit = m.group(1)
+    data = None
+    for cand in (lit, re.sub(r"\\(\\|')", r"\1", lit)):   # そのまま / JS文字列のエスケープ(\\ と \')を戻して
+        try:
+            data = json.loads(cand)
+            break
+        except ValueError:
+            continue
+    if not isinstance(data, dict):
+        return {}
+    out = {}
+    for k, v in data.items():
+        if isinstance(v, dict) and v.get("name"):
+            nm = str(v["name"])
+            other = str(v.get("other") or "").strip()
+            out[k[1:] if k.startswith("p") else k] = f"{nm}（{other}）" if other and other not in nm else nm
+    return out
+
+
+def resolve_wiki_poke(html, getter):
+    """9DBの wiki_poke(数字ID) を名前に置換したHTMLを返す。対応表を取れない場合は元のHTMLのまま。"""
+    if "wiki_poke" not in html:
+        return html, 0
+    m = _POKE_SRC.search(html)
+    if not m:
+        return html, 0
+    url = m.group(1)
+    if url.startswith("//"):
+        url = "https:" + url
+    names = _POKE_LIST_CACHE.get(url)
+    if names is None:
+        js, _status, _err = getter(url)
+        names = parse_pokemon_list(js) if js else {}
+        if names:
+            _POKE_LIST_CACHE[url] = names
+    if not names:
+        return html, 0
+    soup = BeautifulSoup(html, "html.parser")
+    n = 0
+    for el in soup.select(".wiki_poke"):
+        key = el.get_text(strip=True)
+        if key in names:
+            el.string = names[key]
+            n += 1
+    return (str(soup) if n else html), n
