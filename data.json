@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/11/01 07:28 JST",
+  "updated_at": "2026/11/01 10:38 JST",
   "latest_news": [
     {
       "id": "news-f9091af845",
@@ -448,6 +448,142 @@
       "title": "【情報追加】ポケモンカードゲーム30周年記念イベント(アメリカ)：タイムチャレンジが判明・追加（1件）",
       "details": "タイムチャレンジ：対象小売店に行きポケモンGOアプリを開く→モンスターボール・ポケモン",
       "targetId": "ev-auto-pokemon-card-30th-anniversary-usa"
+    },
+    {
+      "id": "news-63cc75c259",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "title": "【情報追加】ハロウィン2026 パート2：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：リワードを受け取る→ヤバチャ(リボン)",
+      "targetId": "ev-halloween-p2"
+    },
+    {
+      "id": "news-daba893dda",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "title": "【日程変更】ポケモンGOの2026年11月のスケジュール",
+      "details": "日程が更新されています：2026-11-01〜2026-11-30 → 2026-11-02〜2026-11-08",
+      "targetId": "ev-auto-2026-nov-schedule"
+    },
+    {
+      "id": "news-75b974f617",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "title": "【情報追加】ハロウィン2026 パート2：野生が判明・追加（5件）",
+      "details": "野生：カゲボウズ、バケッチャ(こだましゅ)、バケッチャ(ちゅうだましゅ)、バケッチャ(おおだましゅ)、バケッチャ(ギガだましゅ)",
+      "targetId": "ev-halloween-p2"
+    },
+    {
+      "id": "news-1cab022b6a",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "title": "【情報追加】ハロウィン2026 パート2：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：自動的に完了する無料タイムチャレンジ→ヤバチャ(リボン)",
+      "targetId": "ev-halloween-p2"
+    },
+    {
+      "id": "news-bf86cf81ef",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "title": "【新イベント】イオンモールハロウィンイベント2026",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-aeon-halloween-2026"
+    },
+    {
+      "id": "news-7422689fb6",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "title": "【情報追加】イオンモールハロウィンイベント2026：タイムチャレンジが判明・追加（3件）",
+      "details": "タイムチャレンジ：1 km歩く→ムウマ、ほしのすなを25,000手に入れる→ほしのすな、レイドバトルで1回勝つ→おこう",
+      "targetId": "ev-auto-aeon-halloween-2026"
+    },
+    {
+      "id": "news-9ed51d778c",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "title": "【情報追加】ワイルドエリア2026：メキシコシティ：レイドが判明・追加（3件）",
+      "details": "レイド：ジャケットを身にまとった カイリキー、ザシアン (けんのおう)、ザマゼンタ (たてのおう)",
+      "targetId": "ev-auto-wild-area-2026-mexico"
+    },
+    {
+      "id": "news-2550a53d73",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "title": "【情報追加】ワイルドエリア2026仙台：野生が判明・追加（14件）",
+      "details": "野生：ナッシー(アローラ)、トドゼルガ、メタグロス、ジバコイル、ナットレイ、オノノクス ほか8件",
+      "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-9a48ec3999",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "title": "【日程変更】ハロウィン2026 パート2",
+      "details": "日程が更新されています：2026-11-01〜2026-11-05 → 2026-11-01〜2026-11-06",
+      "targetId": "ev-halloween-p2"
+    },
+    {
+      "id": "news-9343df0f29",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "title": "【情報追加】ハロウィン2026 パート2：野生が判明・追加（1件）",
+      "details": "野生：ケロマツ(ハロウィン)",
+      "targetId": "ev-halloween-p2"
+    },
+    {
+      "id": "news-90aa2041a6",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "title": "【情報追加】イオンモールハロウィンイベント2026：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：対象のイオンモールを訪れる（パート1：10月19日〜10月25日）→ピカチュウ(魔女帽子)、対象のイオンモールを訪れる（パート2：10月26日〜11月1日）→ピカチュウ(魔女帽子)",
+      "targetId": "ev-auto-aeon-halloween-2026"
+    },
+    {
+      "id": "news-98e1301872",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "title": "【新イベント】2026年11月のイベントスケジュールまとめ",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-november-2026-schedule"
+    },
+    {
+      "id": "news-0b7d8bffbc",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "title": "【情報追加】2026年11月のイベントスケジュールまとめ：レイドが判明・追加（12件）",
+      "details": "レイド：ギラティナ(オリジン)、ギラティナ(アナザー)、クレセリア、ダークライ、デオキシス、デオキシス(ディフェンス) ほか6件",
+      "targetId": "ev-auto-november-2026-schedule"
+    },
+    {
+      "id": "news-7d4fcc2628",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "title": "【情報追加】GOパス大きな足跡：サプライズボックスが判明・追加（4件）",
+      "details": "サプライズボックス：ハイパーボール××10、げんきのかたまり××5、プレミアムバトルパス××1、まんたんのくすり××5",
+      "targetId": "ev-auto-go-pass-big-footprints"
+    },
+    {
+      "id": "news-076215ec6e",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "title": "【情報追加】死者の日イベント2026(メキシコ)：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：無料タイムチャレンジ→カラカラ(SP背景花飾り)",
+      "targetId": "ev-auto-dia-de-muertos-2026"
+    },
+    {
+      "id": "news-dece447783",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "title": "【情報追加】ポケモンナイトアウト：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：Twitch配信を30分以上試聴する→ポケモンナイトアウト野球ジャージ、現地会場で受け取る→ポケモンナイトアウト野球ジャージ・ストリンダー(ハイ)・ストリンダー(ロー)",
+      "targetId": "ev-auto-pokemon-night-out"
+    },
+    {
+      "id": "news-7259047d80",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "title": "【情報追加】ダイマックスユクシー・エムリット・アグノムのマックスバトルデイ：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：リワードを受け取る→ダイキノコ、リワードを受け取る→マックス粒子",
+      "targetId": "ev-auto-max-battle-day-uxie-mesprit-azelf"
     },
     {
       "id": "news-0cdcab26bb",
@@ -4332,6 +4468,42 @@
           "name": "ヤバチャ(リボン)",
           "shiny": false,
           "note": ""
+        },
+        {
+          "dex": 353,
+          "name": "カゲボウズ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 710,
+          "name": "バケッチャ(こだましゅ)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 710,
+          "name": "バケッチャ(ちゅうだましゅ)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 710,
+          "name": "バケッチャ(おおだましゅ)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 710,
+          "name": "バケッチャ(ギガだましゅ)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 656,
+          "name": "ケロマツ(ハロウィン)",
+          "shiny": true,
+          "note": ""
         }
       ]
     },
@@ -5182,6 +5354,90 @@
         {
           "dex": 90,
           "name": "シェルルダー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 103,
+          "name": "ナッシー(アローラ)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 365,
+          "name": "トドゼルガ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 376,
+          "name": "メタグロス",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 462,
+          "name": "ジバコイル",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 598,
+          "name": "ナットレイ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 612,
+          "name": "オノノクス",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 706,
+          "name": "ヌメルゴン",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 715,
+          "name": "オンバーン",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 959,
+          "name": "デカヌチャン",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 980,
+          "name": "ドオー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 679,
+          "name": "ヒトツキ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 707,
+          "name": "クレッフィ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 780,
+          "name": "ジジーロン",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 884,
+          "name": "ジュラルドン",
           "shiny": true,
           "note": ""
         }
@@ -6914,37 +7170,37 @@
       "title": "ev-auto-aeon-halloween-2026",
       "wilds": [
         {
-          "dex": 25,
+          "dex": 37,
           "name": "襟飾りをつけた ロコン",
           "shiny": false,
           "note": "サプライズボックス"
         },
         {
-          "dex": 25,
+          "dex": 41,
           "name": "トップハットをかぶった ズバット",
           "shiny": false,
           "note": "サプライズボックス"
         },
         {
-          "dex": 25,
+          "dex": 94,
           "name": "ハロウィン衣装 をつけたゲンガー",
           "shiny": false,
           "note": "サプライズボックス"
         },
         {
-          "dex": 25,
+          "dex": 393,
           "name": "ハロウィンいたずら飾りを つけたポッチャマ",
           "shiny": false,
           "note": "サプライズボックス"
         },
         {
-          "dex": 25,
+          "dex": 426,
           "name": "ハロウィンいたずら飾りを つけたフワライド",
           "shiny": false,
           "note": "サプライズボックス"
         },
         {
-          "dex": 25,
+          "dex": 714,
           "name": "カチューシャを つけたオンバット",
           "shiny": false,
           "note": "サプライズボックス"
@@ -6980,7 +7236,7 @@
           "note": "サプライズボックス"
         },
         {
-          "dex": 25,
+          "dex": 854,
           "name": "リボンをつけた ヤバチャ",
           "shiny": false,
           "note": "サプライズボックス"
@@ -9290,19 +9546,19 @@
     {
       "id": "ev-auto-aeon-halloween-2026",
       "month": 10,
-      "title": "イオンハロウィンイベント",
+      "title": "イオンモールハロウィンイベント2026",
       "barClass": "bar-main",
       "category": "main",
       "startDay": 19,
       "endDay": 28,
       "hasPaid": false,
-      "dateText": "2026年10月19日(月)~11月1日(日)",
-      "summary": "全国の対象イオンモールで開催されるイベント。ルアーモジュールの効果時間延長や、特別なタイムチャレンジ、抽選キャンペーンなどが実施される。",
+      "dateText": "Part1:2026/10/19～10/25, Part2:2026/10/26～11/1",
+      "summary": "対象のイオンモールでポケモンGOを起動するとタイムチャレンジが受け取れるイベント",
       "freeFeatures": [
-        "ルアーモジュールの効果時間が2時間に延長",
-        "特別なタイムチャレンジの配布",
-        "ゲーム内道具セット抽選キャンペーン",
-        "ハロウィンピカチュウサンバイザーの配布（先着）"
+        "タイムチャレンジ",
+        "ルアーモジュールのボーナス",
+        "抽選で道具セットプレゼント",
+        "ピカチュウサンバイザー配布"
       ],
       "paidFeatures": [],
       "wilds": [],
@@ -9766,6 +10022,24 @@
       "paidFeatures": [
         "GOパス9月"
       ],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-november-2026-schedule",
+      "month": 11,
+      "title": "2026年11月のイベントスケジュールまとめ",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 1,
+      "endDay": 30,
+      "hasPaid": false,
+      "dateText": "2026年11月",
+      "summary": "2026年11月の伝説レイド、マックスバトル、スポットライトアワー、デイリーディスカバリー等の予定まとめ。",
+      "freeFeatures": [],
+      "paidFeatures": [],
       "wilds": [],
       "raids": [],
       "fieldResearches": [],
