@@ -1277,6 +1277,40 @@
       ]
     },
     {
+      "id": "news-e2946b6407",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "kind": "event_update",
+      "title": "【情報追加】2026年11月のイベントスケジュールまとめ：レイドが判明・追加（9件）",
+      "details": "レイド：ギラティナ(オリジンフォルム)、ギラティナ(アナザーフォルム)、デオキシス(ディフェンスフォルム)、デオキシス(アタックフォルム)、デオキシス(スピードフォルム)、トルネロス(化身フォルム) ほか3件",
+      "targetId": "ev-auto-november-2026-schedule",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/583244",
+          "fetched_at": "2026-11-01T12:43:27.147538+09:00",
+          "article_updated": "2026-11-01T12:33:20+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-7483c47c57",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "kind": "event_update",
+      "title": "【情報追加】シャンデラのスーパーメガレイド・デイ：レイドが判明・追加（1件）",
+      "details": "レイド：メガシャンデラ",
+      "targetId": "ev-supermega-chandelure",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/582648",
+          "fetched_at": "2026-11-01T12:43:27.147538+09:00",
+          "article_updated": "2026-11-01T10:36:42+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-0cdcab26bb",
       "date": "2026-10-31",
       "date_label": "10/31",
@@ -3989,6 +4023,12 @@
           "site": "pokemapi",
           "url": "https://pokemongo-get.com/board/10790/",
           "fetched_at": "2026-11-01T11:32:30.183283+09:00",
+          "article_updated": null
+        },
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10790/",
+          "fetched_at": "2026-11-01T12:43:27.147538+09:00",
           "article_updated": null
         }
       ]
