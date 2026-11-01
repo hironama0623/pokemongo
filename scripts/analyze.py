@@ -102,8 +102,19 @@ def _is_placeholder_task(t):
     return bool(_PLACEHOLDER.search(task) or _PLACEHOLDER.search(names) or not task)
 
 
+def _unwrap(facts):
+    """軽量モデルがオブジェクトを配列で包んで返すことがある（[{...}]）。中身を取り出す。"""
+    if isinstance(facts, list):
+        for x in facts:
+            if isinstance(x, dict) and ("relevant" in x or "bosses" in x or "event_id" in x):
+                return x
+        return facts[0] if facts and isinstance(facts[0], dict) else facts
+    return facts
+
+
 def normalize(facts):
     """AIの軽微な形のズレを直す（文字列だけで返されたポケモン名を {"name":..} にする等）。値は変えない。"""
+    facts = _unwrap(facts)
     if not isinstance(facts, dict):
         return facts
 
@@ -198,6 +209,7 @@ COUNTER_PROMPT = """あなたはポケモンGO攻略記事から事実だけを�
 
 def normalize_counters(facts):
     """AIの軽微なズレを直し、中身の無いものを捨てる（数字だけの名前、空の対策、重複）。"""
+    facts = _unwrap(facts)
     if not isinstance(facts, dict):
         return facts
     out = []
@@ -234,6 +246,8 @@ def normalize_counters(facts):
             seen.add(k)
             cs.append(c)
         b["counters"] = cs
+        if not isinstance(b.get("types"), list):
+            b["types"] = []
         if cs and str(b.get("name") or "").strip():
             out.append(b)
     facts["bosses"] = out

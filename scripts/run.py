@@ -86,6 +86,10 @@ def run(now, log, diagnose=False, no_news=False, getter=fetch.get, llm=an.gemini
     events = store.load("events.json", {"schema_version": 1, "events": {}})
     news = store.load("news.json", {"schema_version": 1, "items": []})
     counters = store.load("counters.json", {"schema_version": 1, "bosses": {}})
+    names0 = store.load("pokemon.json", {"names": {}})["names"]
+    removed0 = ctr.sanitize(counters, names0)
+    if removed0:
+        log.note(f"保存済みの対策データから、ポケモン名として成り立たない項目 {removed0} 件を取り除きました（表が画像のためAIが技名・数値を拾ったもの）")
     meta = store.load("meta.json", {"schema_version": 1})
     index = store.load("event_index.json", {"events": []})["events"]
     names = store.load("pokemon.json", {"names": {}})["names"]

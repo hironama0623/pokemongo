@@ -385,13 +385,13 @@ class CountersTest(unittest.TestCase):
         self.assertEqual([c["name"] for c in facts["bosses"][0]["counters"]], ["ザシアン(けんのおう)", "ハピナス"])
         store_ = {"schema_version": 1, "bosses": {}}
         src = {"site": "gamewith", "url": "https://x/1", "fetched_at": "t", "article_updated": "2026-10-30"}
-        ctr.merge_counters(store_, facts, src, {"ハピナス": 242}, set(), dt.datetime(2026, 10, 31))
+        ctr.merge_counters(store_, facts, src, {"ハピナス": 242, "ザシアン": 888}, set(), dt.datetime(2026, 10, 31))
         from scripts import schemas
         self.assertIsNone(schemas.validate("counters", store_))
         self.assertIn("dmax:ヤミラミ", store_["bosses"])
         # 別サイトの同じボスは同じ項目にサイト別で入る
         src2 = {"site": "9db", "url": "https://y/2", "fetched_at": "t", "article_updated": "2026-10-31"}
-        ctr.merge_counters(store_, facts, src2, {}, set(), dt.datetime(2026, 10, 31))
+        ctr.merge_counters(store_, facts, src2, {"ハピナス": 242, "ザシアン": 888}, set(), dt.datetime(2026, 10, 31))
         self.assertEqual(sorted(store_["bosses"]["dmax:ヤミラミ"]["by_site"]), ["9db", "gamewith"])
 
 
@@ -408,3 +408,23 @@ class ExtraCountersTest(unittest.TestCase):
         out = an.normalize(f)
         self.assertEqual(out["field_research"][0]["rewards"], [{"name": "ボチ"}])
         self.assertEqual(out["wilds"], [{"name": "ズバット"}])
+
+
+class CounterSanitize(unittest.TestCase):
+    def test_sanitize_and_list_unwrap(self):
+        from scripts import analyze as an, counters as ctr, schemas
+        names = {"ハピナス": 242, "ギラティナ": 487, "ザシアン": 888}
+        mk = lambda n: {"name": n, "rank": 1, "role": "attacker", "tag": "normal"}
+        store_ = {"schema_version": 1, "bosses": {
+            "raid:ギラティナ(アナザー)": {"name": "ギラティナ(アナザー)", "kind": "raid", "types": [], "by_site": {"9db": {"url": "u", "counters": [mk("1 34(1498) ドラゴンテール ダイマックスほう *"), mk("ねんりき")]}}},
+            "dmax:ヤミラミ": {"name": "ヤミラミ", "kind": "dmax", "types": [], "by_site": {"gamewith": {"url": "u", "counters": [mk("ハピナス"), mk("ザシアン(けんのおう)"), mk("通 常")]}}}}}
+        n = ctr.sanitize(store_, names)
+        self.assertEqual(n, 3)
+        self.assertEqual(list(store_["bosses"]), ["dmax:ヤミラミ"])
+        self.assertEqual([c["name"] for c in store_["bosses"]["dmax:ヤミラミ"]["by_site"]["gamewith"]["counters"]], ["ハピナス", "ザシアン(けんのおう)"])
+        self.assertIsNone(schemas.validate("counters", store_))
+        # 配列で包まれた出力・types が null
+        out = an.normalize_counters([{"relevant": True, "bosses": [{"name": "A", "kind": "raid", "types": None, "counters": [{"name": "ハピナス"}]}]}])
+        self.assertEqual(out["bosses"][0]["types"], [])
+        self.assertIsNone(schemas.validate("counter_article", out))
+        self.assertEqual(an.normalize([{"relevant": False, "event_id": ""}])["relevant"], False)

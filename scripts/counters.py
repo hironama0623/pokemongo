@@ -3,6 +3,8 @@ import re
 
 from . import pokedex
 
+_BAD_NAME = re.compile(r"[0-9*＊]|^通\s*常|シ\s*ャ\s*ド\s*ウ")
+
 _PAREN = str.maketrans({"（": "(", "）": ")"})
 
 
@@ -13,11 +15,47 @@ def boss_key(name, kind):
     return f"{kind}:{'g' if gmax else ''}{n}"
 
 
+def valid_counter(c, names):
+    """表の中身が画像で、AIが技名・順位・数値を名前として拾ったものを捨てる。名前が実在のポケモン（図鑑にある種）に解決できるものだけ残す。"""
+    n = str(c.get("name") or "")
+    if not n or len(n) > 24 or (_BAD_NAME.search(n) and not re.fullmatch(r"ポリゴン2", n.split("(")[0])):
+        return False
+    d = pokedex.base_name(n)
+    return bool(names.get(d) or names.get(n) or pokedex.contained_species(n, names))
+
+
+def sanitize(store, names):
+    """保存済みの対策データから、無効な項目（ポケモン名として成り立たないもの）を取り除く。空になったサイト/ボスは消す。戻り値: 取り除いた件数。"""
+    removed = 0
+    for key in list(store["bosses"]):
+        b = store["bosses"][key]
+        for site in list(b["by_site"]):
+            cs = b["by_site"][site]["counters"]
+            good = [c for c in cs if valid_counter(c, names)]
+            removed += len(cs) - len(good)
+            if good:
+                b["by_site"][site]["counters"] = good
+            else:
+                del b["by_site"][site]
+        if not b["by_site"]:
+            del store["bosses"][key]
+    return removed
+
+
 def merge_counters(store, facts, src, names, unresolved, now):
     """facts（normalize済み）を store["bosses"] に入れる。同じサイト・同じボスは、より新しい記事で置き換える。戻り値: 更新したボス名のリスト。"""
     touched = []
     for b in facts.get("bosses", []):
         key = boss_key(b["name"], b["kind"])
+        b["counters"] = [c for c in b["counters"] if valid_counter(c, names)]
+        if not b["counters"]:
+            # このサイトのこのボスは取り直した結果が無効だった。以前の無効な保存分があれば消す
+            old_entry = store["bosses"].get(key)
+            if old_entry and src["site"] in old_entry["by_site"]:
+                del old_entry["by_site"][src["site"]]
+                if not old_entry["by_site"]:
+                    del store["bosses"][key]
+            continue
         for c in b["counters"]:
             pokedex.fill_dex(c, names, unresolved)
         entry = store["bosses"].setdefault(key, {"name": b["name"], "kind": b["kind"], "tier": b.get("tier"), "types": b.get("types") or [], "by_site": {}})
