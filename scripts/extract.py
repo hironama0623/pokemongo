@@ -166,6 +166,7 @@ def page_header(soup):
 
 # ---- 9DB: ポケモン名は <span class="wiki_poke">ID</span> で入り、ページ内スクリプトが図鑑データ(pokemon_list)で名前に置換する ----
 _POKE_LIST_CACHE = {}
+_POKE_LINK = re.compile(r"""(?:^|[\"'/])data/(\d+)(?:[\"']|$)""")
 _POKE_SRC = re.compile(r"""src=["']((?:https?:)?//[^"']*/pokemongo/data/\d+[^"']*)["']""")
 
 
@@ -196,7 +197,7 @@ def parse_pokemon_list(js):
 
 def resolve_wiki_poke(html, getter):
     """9DBの wiki_poke(数字ID) を名前に置換したHTMLを返す。対応表を取れない場合は元のHTMLのまま。"""
-    if "wiki_poke" not in html:
+    if "wiki_poke" not in html and not _POKE_LINK.search(html):
         return html, 0
     m = _POKE_SRC.search(html)
     if not m:
@@ -218,5 +219,13 @@ def resolve_wiki_poke(html, getter):
         key = el.get_text(strip=True)
         if key in names:
             el.string = names[key]
+            n += 1
+    # 表のポケモン名が「<a href="data/ID"><img></a>」だけ（文字なし）のセルも、同じ対応表の名前で補う
+    for a in soup.find_all("a", href=_POKE_LINK):
+        if a.get_text(strip=True) or not a.find("img"):
+            continue
+        key = _POKE_LINK.search(a["href"]).group(1)
+        if key in names:
+            a.append(" " + names[key] + " ")
             n += 1
     return (str(soup) if n else html), n

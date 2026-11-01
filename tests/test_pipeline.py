@@ -451,3 +451,14 @@ class NineDbNamesTest(unittest.TestCase):
         extract._POKE_LIST_CACHE.clear()
         out2, n2 = extract.resolve_wiki_poke(html, lambda u: (None, 500, "x"))
         self.assertEqual((out2, n2), (html, 0))
+
+    def test_resolve_link_cells(self):
+        from scripts import extract
+        extract._POKE_LIST_CACHE.clear()
+        html = ('<script src="https://cdn08.net/pokemongo/data/4629?ver=1"></script>'
+                '<table><tr><td><a href="data/20340"><img src="x.png"></a></td><td>24(494)</td></tr>'
+                '<tr><td><a href="data/99999"><img src="y.png"></a></td></tr></table>')
+        out, n = extract.resolve_wiki_poke(html, lambda u: (self.JS, 200, None))
+        self.assertEqual(n, 1)
+        text = extract.html_to_text(out)[0]
+        self.assertIn("ランドロス（けしん）", text)
