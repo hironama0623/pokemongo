@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/11/01 10:38 JST",
+  "updated_at": "2026/11/01 11:32 JST",
   "latest_news": [
     {
       "id": "news-f9091af845",
@@ -584,6 +584,22 @@
       "title": "【情報追加】ダイマックスユクシー・エムリット・アグノムのマックスバトルデイ：タイムチャレンジが判明・追加（2件）",
       "details": "タイムチャレンジ：リワードを受け取る→ダイキノコ、リワードを受け取る→マックス粒子",
       "targetId": "ev-auto-max-battle-day-uxie-mesprit-azelf"
+    },
+    {
+      "id": "news-c0d6b3b297",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "title": "【情報追加】ハロウィン2026 パート2：フィールドリサーチが判明・追加（1件）",
+      "details": "フィールドリサーチ：リワードを受け取る→ヤバチャ(リボン)",
+      "targetId": "ev-halloween-p2"
+    },
+    {
+      "id": "news-860b4c3132",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "title": "【情報追加】ポケモンナイトアウト：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：TwitchDrops（指定配信者の配信を30分以上視聴）→ポケモンナイトアウト野球ジャージ",
+      "targetId": "ev-auto-pokemon-night-out"
     },
     {
       "id": "news-0cdcab26bb",
@@ -2889,6 +2905,13 @@
         "rewardName": "ボチ（435）",
         "shiny": true,
         "note": "出典: 9db"
+      },
+      {
+        "task": "リワードを受け取る",
+        "rewardDex": 854,
+        "rewardName": "ヤバチャ(リボン)",
+        "shiny": true,
+        "note": "出典: gamewith"
       }
     ],
     "ev-auto-max-battle-day-uxie-mesprit-azelf": [
@@ -9546,19 +9569,19 @@
     {
       "id": "ev-auto-aeon-halloween-2026",
       "month": 10,
-      "title": "イオンモールハロウィンイベント2026",
+      "title": "イオンハロウィンイベント",
       "barClass": "bar-main",
       "category": "main",
       "startDay": 19,
       "endDay": 28,
       "hasPaid": false,
-      "dateText": "Part1:2026/10/19～10/25, Part2:2026/10/26～11/1",
-      "summary": "対象のイオンモールでポケモンGOを起動するとタイムチャレンジが受け取れるイベント",
+      "dateText": "2026年10月19日(月)〜11月1日(日)",
+      "summary": "全国の対象イオンモールで開催されるイベント。ルアーモジュールの効果時間延長や、特別なタイムチャレンジ、抽選キャンペーンなどが実施される。",
       "freeFeatures": [
-        "タイムチャレンジ",
-        "ルアーモジュールのボーナス",
-        "抽選で道具セットプレゼント",
-        "ピカチュウサンバイザー配布"
+        "ルアーモジュールの効果時間が2時間に延長",
+        "特別なタイムチャレンジの配布",
+        "ゲーム内道具セット抽選キャンペーン",
+        "ハロウィンピカチュウサンバイザーの配布（先着）"
       ],
       "paidFeatures": [],
       "wilds": [],
