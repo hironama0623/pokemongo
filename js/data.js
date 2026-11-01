@@ -331,7 +331,9 @@ function buildBattleData(autoBosses) {
   // ★1・★3 のレイドは LOW_RAIDS（出現するかどうかだけ）にまとめる
   const exists = (data, r, ev) => Object.values(data).some(e => {
     const n = normName(e.name), base = bossBase(r.name);
-    return base && n.includes(base) && sameGroup(bossClass(e.name), bossClass(r.name)) && (!bossForm(r.name) || n.includes(bossForm(r.name))) && e._e >= ev._s - 864e5;
+    // 「オリジン / 4日〜アナザー」のようにフォルムを並べた表記は、そのうち1つでも既存カードにあれば重複とみなす
+    const forms = (String(r.name).match(/[(（](.*?)[)）]/) || ["", ""])[1].split(/[\/／]/).map(x => canonForm(base, x.replace(/\s*\d+日〜|\d+\/\d+〜/g, ""))).filter(Boolean);
+    return base && n.includes(base) && sameGroup(bossClass(e.name), bossClass(r.name)) && (!forms.length || forms.some(f => n.includes(f))) && e._e >= ev._s - 864e5;
   });
   const lowSeen = new Set();
   ALL_EVENTS.forEach(ev => {

@@ -251,13 +251,6 @@ function renderStatusBar() {
   const wrap = document.createElement("div");
   wrap.id = "dataNotes"; wrap.className = "space-y-2 mb-3"; wrap.innerHTML = notes;
   if (notes) main.insertBefore(wrap, main.firstChild);
-  const battles = document.getElementById("tabContentBattles");
-  if (battles) {
-    const n = document.createElement("div");
-    n.className = "text-[11px] bg-amber-50 border border-amber-300 text-amber-900 rounded-lg p-2";
-    n.innerHTML = "ℹ 「◯/◯サイト」の表示があるカードは、各サイトの対策記事から自動取得・統合したデータです（DPS/TDOは載せているサイトの数字をそのまま表示）。「旧データ（出典未確認）」と書かれたカードは、自動データに置き換わるまで暫定表示です。";
-    battles.insertBefore(n, battles.firstChild);
-  }
 }
 
 window.onload = async function () {

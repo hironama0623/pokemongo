@@ -534,11 +534,23 @@
    ],
    "endMonth": 11
   },
+  "giratina-another": {
+    "month": 11,
+    "startDay": 4,
+    "endDay": 5,
+    "name": "ギラティナ (アナザーフォルム)",
+    "status": "11/4〜11/5 (ハロウィン2026 パート2の記載より)",
+    "tier": "★5 伝説レイド",
+    "dex": null,
+    "types": ["ゴースト", "ドラゴン"],
+    "shiny": true,
+    "counters": []
+  },
   "giratina-origin": {
    "month": 10,
    "startDay": 28,
    "endDay": 3,
-   "name": "ギラティナ (オリジン) / (11/4〜アナザー)",
+   "name": "ギラティナ (オリジン)",
    "status": "10/28(水) 6:00 〜 11/3(火) [レイドアワー: 10/28 18:00〜19:00]",
    "tier": "★5 伝説レイド",
    "dex": 10007,
