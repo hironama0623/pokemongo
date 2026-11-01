@@ -1362,6 +1362,23 @@
       ]
     },
     {
+      "id": "news-e2c88606a9",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドウィーク2026：レイドが判明・追加（6件）",
+      "details": "レイド：ラルトス、ワンリキー、レジスチル、レジドラゴ、ラティアス、ラティオス",
+      "targetId": "ev-wildweek-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/582768",
+          "fetched_at": "2026-11-01T18:37:15.028616+09:00",
+          "article_updated": "2026-11-01T18:40:18+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-0cdcab26bb",
       "date": "2026-10-31",
       "date_label": "10/31",
