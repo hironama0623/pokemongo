@@ -1804,6 +1804,40 @@
       ]
     },
     {
+      "id": "news-a3cdd4696f",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "kind": "event_update",
+      "title": "【情報追加】ハロウィン2026 パート1：サプライズボックスが判明・追加（2件）",
+      "details": "サプライズボックス：ズバット アメ××6、ヤバチャ アメ××6",
+      "targetId": "ev-halloween-p1",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/579894",
+          "fetched_at": "2026-11-01T22:41:44.687960+09:00",
+          "article_updated": "2026-11-01T16:18:38+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-ad754743ad",
+      "date": "2026-11-01",
+      "date_label": "11/1",
+      "kind": "event_update",
+      "title": "【情報追加】2026年9月のイベントスケジュールまとめ：レイドが判明・追加（7件）",
+      "details": "レイド：ボルトロス(化身)、メガギャラドス、メガスピアー、メガヘルガー、メガフシギバナ、メガカラマネロ ほか1件",
+      "targetId": "ev-auto-september-2026-schedule",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/573668",
+          "fetched_at": "2026-11-01T22:41:44.687960+09:00",
+          "article_updated": "2026-10-02T11:32:30+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-0cdcab26bb",
       "date": "2026-10-31",
       "date_label": "10/31",

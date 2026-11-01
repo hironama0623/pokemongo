@@ -13,7 +13,7 @@
         "gamewith": {
           "url": "https://pokemongo.gamewith.jp/article/show/578874",
           "article_updated": "2026-10-28T11:34:23+09:00",
-          "fetched_at": "2026-11-01T20:05:13.845517+09:00",
+          "fetched_at": "2026-11-01T22:41:44.687960+09:00",
           "counters": [
             {
               "name": "ハピナス",
@@ -29,7 +29,7 @@
             },
             {
               "name": "サーナイト",
-              "rank": 2,
+              "rank": 3,
               "role": "attacker",
               "tag": "normal",
               "fast": "あまえる",
@@ -41,7 +41,7 @@
             },
             {
               "name": "ブリムオン",
-              "rank": 3,
+              "rank": 4,
               "role": "attacker",
               "tag": "normal",
               "fast": "あまえる",
@@ -53,7 +53,7 @@
             },
             {
               "name": "ムゲンダイナ",
-              "rank": 4,
+              "rank": 5,
               "role": "attacker",
               "tag": "normal",
               "fast": "ドラゴンテール",
@@ -65,7 +65,7 @@
             },
             {
               "name": "キョダイインテレオン",
-              "rank": 5,
+              "rank": 6,
               "role": "attacker",
               "tag": "dmax",
               "fast": "みずでっぽう",
@@ -77,7 +77,7 @@
             },
             {
               "name": "キョダイゲンガー",
-              "rank": 6,
+              "rank": 7,
               "role": "attacker",
               "tag": "dmax",
               "fast": "シャドークロー",
@@ -89,7 +89,7 @@
             },
             {
               "name": "ザマゼンタ(王)",
-              "rank": 7,
+              "rank": 8,
               "role": "attacker",
               "tag": "normal",
               "fast": "メタルクロー",
@@ -101,7 +101,7 @@
             },
             {
               "name": "ザシアン(王)",
-              "rank": 8,
+              "rank": 9,
               "role": "attacker",
               "tag": "normal",
               "fast": "メタルクロー",
@@ -113,7 +113,7 @@
             },
             {
               "name": "ラッキー",
-              "rank": 9,
+              "rank": 10,
               "role": "attacker",
               "tag": "normal",
               "fast": "はたく",
@@ -122,23 +122,11 @@
               "tdo": null,
               "note": "",
               "dex": 113
-            },
-            {
-              "name": "キョダイカビゴン",
-              "rank": 10,
-              "role": "attacker",
-              "tag": "dmax",
-              "fast": "したでなめる",
-              "charged": "げきりん",
-              "dps": null,
-              "tdo": null,
-              "note": "",
-              "dex": 143
             }
           ]
         }
       },
-      "updated_at": "2026-11-01T20:05:13.845517+09:00"
+      "updated_at": "2026-11-01T22:41:44.687960+09:00"
     },
     "raid:シャドウトルネロス(化身)": {
       "name": "シャドウトルネロス(化身)",
@@ -151,7 +139,7 @@
         "gamewith": {
           "url": "https://pokemongo.gamewith.jp/article/show/583310",
           "article_updated": "2026-10-20T12:55:52+09:00",
-          "fetched_at": "2026-11-01T20:05:13.845517+09:00",
+          "fetched_at": "2026-11-01T22:41:44.687960+09:00",
           "counters": [
             {
               "name": "キュレム(W)",
@@ -276,7 +264,7 @@
           ]
         }
       },
-      "updated_at": "2026-11-01T20:05:13.845517+09:00"
+      "updated_at": "2026-11-01T22:41:44.687960+09:00"
     },
     "raid:シャドウボルトロス(化身)": {
       "name": "シャドウボルトロス(化身)",
@@ -290,7 +278,7 @@
         "gamewith": {
           "url": "https://pokemongo.gamewith.jp/article/show/573673",
           "article_updated": "2026-10-07T10:21:19+09:00",
-          "fetched_at": "2026-11-01T20:05:13.845517+09:00",
+          "fetched_at": "2026-11-01T22:41:44.687960+09:00",
           "counters": [
             {
               "name": "キュレム(W)",
@@ -415,7 +403,7 @@
           ]
         }
       },
-      "updated_at": "2026-11-01T20:05:13.845517+09:00"
+      "updated_at": "2026-11-01T22:41:44.687960+09:00"
     },
     "raid:メガシャンデラ": {
       "name": "メガシャンデラ",
@@ -429,7 +417,7 @@
         "gamewith": {
           "url": "https://pokemongo.gamewith.jp/article/show/582648",
           "article_updated": "2026-11-01T20:07:26+09:00",
-          "fetched_at": "2026-11-01T20:05:13.845517+09:00",
+          "fetched_at": "2026-11-01T22:41:44.687960+09:00",
           "counters": [
             {
               "name": "ネクロズマ(暁)",
@@ -490,54 +478,6 @@
               "tdo": null,
               "note": "",
               "dex": 818
-            },
-            {
-              "name": "メガゲッコウガ",
-              "rank": 6,
-              "role": "attacker",
-              "tag": "mega",
-              "fast": null,
-              "charged": null,
-              "dps": null,
-              "tdo": null,
-              "note": "",
-              "dex": 658
-            },
-            {
-              "name": "メガヘルガー",
-              "rank": 7,
-              "role": "attacker",
-              "tag": "mega",
-              "fast": null,
-              "charged": null,
-              "dps": null,
-              "tdo": null,
-              "note": "",
-              "dex": 229
-            },
-            {
-              "name": "メガスターミー",
-              "rank": 8,
-              "role": "attacker",
-              "tag": "mega",
-              "fast": null,
-              "charged": null,
-              "dps": null,
-              "tdo": null,
-              "note": "",
-              "dex": 121
-            },
-            {
-              "name": "メガミュウツーY",
-              "rank": 9,
-              "role": "attacker",
-              "tag": "mega",
-              "fast": null,
-              "charged": null,
-              "dps": null,
-              "tdo": null,
-              "note": "",
-              "dex": 150
             }
           ]
         },
@@ -657,7 +597,7 @@
           ]
         }
       },
-      "updated_at": "2026-11-01T20:05:13.845517+09:00"
+      "updated_at": "2026-11-01T22:41:44.687960+09:00"
     },
     "raid:パルキア": {
       "name": "パルキア",
@@ -1200,7 +1140,7 @@
         "gamewith": {
           "url": "https://pokemongo.gamewith.jp/article/show/579398",
           "article_updated": "2026-10-25T17:52:14+09:00",
-          "fetched_at": "2026-11-01T20:05:13.845517+09:00",
+          "fetched_at": "2026-11-01T22:41:44.687960+09:00",
           "counters": [
             {
               "name": "ハピナス",
@@ -1229,7 +1169,7 @@
           ]
         }
       },
-      "updated_at": "2026-11-01T20:05:13.845517+09:00"
+      "updated_at": "2026-11-01T22:41:44.687960+09:00"
     },
     "dmax:アグノム": {
       "name": "ダイマックスアグノム",
@@ -1240,7 +1180,7 @@
         "gamewith": {
           "url": "https://pokemongo.gamewith.jp/article/show/579398",
           "article_updated": "2026-10-25T17:52:14+09:00",
-          "fetched_at": "2026-11-01T20:05:13.845517+09:00",
+          "fetched_at": "2026-11-01T22:41:44.687960+09:00",
           "counters": [
             {
               "name": "ハピナス",
@@ -1269,7 +1209,7 @@
           ]
         }
       },
-      "updated_at": "2026-11-01T20:05:13.845517+09:00"
+      "updated_at": "2026-11-01T22:41:44.687960+09:00"
     },
     "dmax:エムリット": {
       "name": "ダイマックスエムリット",
@@ -1280,7 +1220,7 @@
         "gamewith": {
           "url": "https://pokemongo.gamewith.jp/article/show/579398",
           "article_updated": "2026-10-25T17:52:14+09:00",
-          "fetched_at": "2026-11-01T20:05:13.845517+09:00",
+          "fetched_at": "2026-11-01T22:41:44.687960+09:00",
           "counters": [
             {
               "name": "レジスチル",
@@ -1309,7 +1249,7 @@
           ]
         }
       },
-      "updated_at": "2026-11-01T20:05:13.845517+09:00"
+      "updated_at": "2026-11-01T22:41:44.687960+09:00"
     },
     "dmax:gエースバーン": {
       "name": "キョダイマックスエースバーン",
@@ -1322,7 +1262,7 @@
         "gamewith": {
           "url": "https://pokemongo.gamewith.jp/article/show/575833",
           "article_updated": "2026-10-06T10:48:17+09:00",
-          "fetched_at": "2026-11-01T20:05:13.845517+09:00",
+          "fetched_at": "2026-11-01T22:41:44.687960+09:00",
           "counters": [
             {
               "name": "ラティアス",
@@ -1363,7 +1303,7 @@
           ]
         }
       },
-      "updated_at": "2026-11-01T20:05:13.845517+09:00"
+      "updated_at": "2026-11-01T22:41:44.687960+09:00"
     },
     "raid:あくタイプ": {
       "name": "あくタイプ",
