@@ -4,6 +4,7 @@
  * どれかが読めなくても画面は動く（読めなかったファイル名は DATA_ERRORS に残し、画面上部に表示する）。 */
 let ALL_EVENTS = [], RAID_DATA = {}, DMAX_9DB_DATA = {}, SEASON_EGGS = [], SEASON_BIOMES = [], NEWS_ITEMS = [];
 let GOPASS = null, META = null;
+const LOW_RAIDS = [];   // ★1・★3 のレイド（出現するかどうかだけ表示）
 const DATA_ERRORS = [];
 const EVENT_ALIAS = {};   // 統合で消えたイベントID -> 残ったイベントID（ニュースのジャンプ先に使う）
 const SITE_LABEL = { pokemapi: "ポケマピ", gamewith: "GameWith", "9db": "9DB", official: "公式" };
@@ -46,7 +47,7 @@ function fmtRange(ev) {
 // 比較用に、記号・絵文字・「2026年」「11月」などの年月表記を除いた形にする（表記ゆれで別イベント扱いになるのを防ぐ）
 const normTitle = t => String(t || "").replace(/[\p{Extended_Pictographic}\uFE0F]/gu, "")
   .replace(/[0-9０-９]+\s*(?:年|月|日)?/g, "").replace(/[\s\u3000・、。：:()（）「」『』【】～〜~!！?？&＆\-ー]/g, "").toLowerCase();
-const normName = n => String(n || "").replace(/[\s\u3000]/g, "");
+const normName = n => String(n || "").replace(/[\s\u3000]/g, "").replace(/化身/g, "けしん").replace(/霊獣/g, "れいじゅう");   // 表記ゆれ(化身=けしん, 霊獣=れいじゅう)を揃える
 const isPassTitle = t => /^(?:[\p{Extended_Pictographic}\uFE0F\s]*)GOパス/u.test(String(t || ""));
 function sameTitle(a, b) {
   if (isPassTitle(a) !== isPassTitle(b)) return false;   // GOパスは本体イベントとは別のものとして扱う
@@ -205,6 +206,7 @@ function buildNews(items) {
 // ---- レイド/マックスバトルの対策：自動取得（data/counters.json）を、旧データと突き合わせて画面用に統合する ----
 const bossClass = n => /^(スーパーメガ|メガ)/.test(n) ? "mega" : /^シャドウ/.test(n) ? "shadow" : /^キョダイ/.test(n) ? "gmax" : /^ダイマックス/.test(n) ? "dmax" : "normal";
 const bossBase = n => normName(n).replace(/^(スーパーメガ|キョダイマックス|ダイマックス|キョダイ|メガ|シャドウ|ゲンシ)/, "").replace(/[(（].*?[)）]/g, "").replace(/[XYＸＹ]$/, "");
+const sameGroup = (a, b) => a === b || (a === "normal" && b === "shadow") || (a === "shadow" && b === "normal");
 const bossForm = n => { const m = /[(（](.*?)[)）]/.exec(String(n)); return m ? normName(m[1]) : ""; };
 const cname = n => normName(n).replace(/\*/g, "");
 
@@ -215,7 +217,7 @@ function consensus(auto, role) {
   const sites = Object.keys(auto.by_site), map = new Map();
   sites.forEach(s => {
     // 表が画像のサイトで、AIが技名・順位・数値を名前として拾った項目（数字や * を含む等）は使わない
-    const list = (auto.by_site[s].counters || []).filter(c => (c.role || "attacker") === role && c.name && !/[0-9*＊]/.test(c.name.replace(/^ポリゴン2$/, "")) && !/^通\s*常|シ\s*ャ\s*ド\s*ウ/.test(c.name) && c.name.length <= 24).sort((a, b) => (a.rank || 99) - (b.rank || 99));
+    const list = (auto.by_site[s].counters || []).filter(c => ((/タンク|耐久役|受け役/.test(c.note || "") ? "tank" : (c.role || "attacker")) === role) && c.name && !/[0-9*＊]/.test(c.name.replace(/^ポリゴン2$/, "")) && !/^通\s*常|シ\s*ャ\s*ド\s*ウ/.test(c.name) && c.name.length <= 24).sort((a, b) => (a.rank || 99) - (b.rank || 99));
     list.forEach((c, i) => {
       const k = cname(c.name);
       const m = map.get(k) || { name: c.name, dex: c.dex || null, tag: c.tag || "normal", sites: [], pts: 0, fast: "", charge: "", dps: null, tdo: null };
@@ -256,28 +258,47 @@ function applyAuto(entry, auto) {
   return entry;
 }
 
+// レイドの格：★5以上・メガ・スーパーメガ・シャドウ・伝説 は対策ランキング対象。★1・★3 は「出現するか」だけ表示する
+const isLowTier = r => /★\s*[1-3]/.test(String(r.note || "")) && !/メガ|シャドウ|伝説|★\s*[4-9]/.test(String(r.note || "") + String(r.name || ""));
+
 function buildBattleData(autoBosses) {
-  const bosses = Object.entries(autoBosses).map(([k, v]) => Object.assign({ key: k }, v)).filter(b => b.by_site && Object.keys(b.by_site).length);
+  const bosses = Object.entries(autoBosses).map(([k, v]) => Object.assign({ key: k }, v))
+    .filter(b => b.by_site && Object.keys(b.by_site).length && !/タイプ$/.test(b.name));
   const used = new Set();
-  const matches = (auto, name, kind) => {
-    if (auto.kind !== kind) return false;
+  // 区分が違っても拾う（9DBの「伝説シャドウ：ランドロス」が「ランドロス」になる等）ため、まず区分一致、無ければ「区分なし(normal)↔シャドウ」を許す
+  const matchLevel = (auto, name, kind) => {
+    if (auto.kind !== kind) return 0;
     const n = normName(name), base = bossBase(auto.name);
-    if (!base || !n.includes(base)) return false;
-    const ac = bossClass(auto.name), mc = bossClass(name);
-    if (kind === "raid" ? ac !== mc : (ac === "gmax") !== (mc === "gmax")) return false;
+    if (!base || !n.includes(base)) return 0;
     const f = bossForm(auto.name);
-    return !f || n.includes(f);
+    if (f && !n.includes(f)) return 0;
+    const ac = bossClass(auto.name), mc = bossClass(name);
+    if (kind === "dmax") return (ac === "gmax") === (mc === "gmax") ? 2 : 0;
+    if (ac === mc) return 2;
+    return ((ac === "normal" && mc === "shadow") || (ac === "shadow" && mc === "normal")) ? 1 : 0;   // 通常/シャドウで対策は変わらないので同じボス扱い（フォルム違いは別）
+  };
+  const mergeAutos = list => {
+    const out = Object.assign({}, list[0], { by_site: {} });
+    list.forEach(a => Object.keys(a.by_site).forEach(s => { if (!out.by_site[s]) out.by_site[s] = a.by_site[s]; }));
+    return out;
   };
   [[RAID_DATA, "raid"], [DMAX_9DB_DATA, "dmax"]].forEach(([data, kind]) => {
     Object.values(data).forEach(e => { e.isDmax = kind === "dmax"; });
     Object.keys(data).forEach(k => {
-      // 旧データ1件につき、自動データ1件。フォルム違いが複数当てはまるときは、名前の中で先に出てくるフォルムを優先
+      // 旧データ1件につき、自動データ（同じボスの複数サイト分）をまとめて当てる。フォルム違いが複数あるときは名前の中で先に出るものだけ
       const pos = b => { const f = bossForm(b.name), i = f ? normName(data[k].name).indexOf(f) : 999; return i < 0 ? 999 : i; };
-      const cands = bosses.filter(b => !used.has(b.key) && matches(b, data[k].name, kind)).sort((x, y) => pos(x) - pos(y));
-      if (cands.length) { used.add(cands[0].key); applyAuto(data[k], cands[0]); }
+      let cands = bosses.filter(b => !used.has(b.key) && matchLevel(b, data[k].name, kind) === 2);
+      if (!cands.length) cands = bosses.filter(b => !used.has(b.key) && matchLevel(b, data[k].name, kind) === 1);
+      if (!cands.length) return;
+      cands.sort((x, y) => pos(x) - pos(y));
+      const bestPos = pos(cands[0]);
+      cands = cands.filter(c => pos(c) === bestPos || !bossForm(c.name));
+      cands.forEach(c => used.add(c.key));
+      applyAuto(data[k], mergeAutos(cands));
     });
   });
-  // 旧データに無いボス：開催期間は、同じボスが載っているイベントから取る（期間が分からないボスは出さない）
+  const periodOf = ev => `${ev._s.getMonth() + 1}/${ev._s.getDate()}〜${ev._e.getMonth() + 1}/${ev._e.getDate()}`;
+  // 旧データに無い自動データのボス：開催期間は、同じボスが載っているイベントから取る（期間が分からないボスは出さない）
   bosses.filter(b => !used.has(b.key)).forEach(b => {
     const kind = b.kind, base = bossBase(b.name), f = bossForm(b.name), bc = bossClass(b.name);
     let best = null;
@@ -292,14 +313,43 @@ function buildBattleData(autoBosses) {
       });
     });
     if (!best) return;
-    const { ev, r } = best, p = `${ev._s.getMonth() + 1}/${ev._s.getDate()}〜${ev._e.getMonth() + 1}/${ev._e.getDate()}`;
+    const { ev, r } = best, p = periodOf(ev);
     const entry = {
-      name: b.name, tier: b.tier || r.note || (kind === "dmax" ? "マックスバトル" : "レイド"), dex: r.dex || MON.dexOf(b.name, null) || MON.dexOf(base, null),
+      name: (kind === "raid" && /シャドウ/.test(b.tier || "") && !/^シャドウ/.test(b.name)) ? "シャドウ" + b.name : b.name,   // シャドウか通常かは名前に必ず出す
+      tier: b.tier || r.note || (kind === "dmax" ? "マックスバトル" : "レイド"), dex: r.dex || MON.dexOf(b.name, null) || MON.dexOf(base, null),
       types: b.types || [], shiny: !!r.shiny, _s: ev._s, _e: ev._e, periodText: p, status: p, dateInfo: p, isDmax: kind === "dmax",
     };
     applyAuto(entry, b);
     (kind === "dmax" ? DMAX_9DB_DATA : RAID_DATA)[b.key] = entry;
   });
+  // 対策データがまだ無くても、イベントに載っている★5以上・メガ・スーパーメガ・シャドウのレイド（とマックスバトル）はカードとして出す。
+  // ★1・★3 のレイドは LOW_RAIDS（出現するかどうかだけ）にまとめる
+  const exists = (data, r, ev) => Object.values(data).some(e => {
+    const n = normName(e.name), base = bossBase(r.name);
+    return base && n.includes(base) && sameGroup(bossClass(e.name), bossClass(r.name)) && (!bossForm(r.name) || n.includes(bossForm(r.name))) && e._e >= ev._s - 864e5;
+  });
+  const lowSeen = new Set();
+  ALL_EVENTS.forEach(ev => {
+    if (ev._e < Date.now() || ev._long) return;
+    (ev.raids || []).forEach(r => {
+      if (!r.name) return;
+      const rc = bossClass(r.name), isD = ev.category === "dmax" || rc === "dmax" || rc === "gmax";
+      if (!isD && isLowTier(r)) {
+        const k = normName(r.name) + "|" + (r.note || "");
+        if (!lowSeen.has(k)) { lowSeen.add(k); LOW_RAIDS.push({ name: r.name, dex: r.dex, note: r.note || "", shiny: r.shiny, period: periodOf(ev), _s: ev._s, _e: ev._e, event: ev.title }); }
+        return;
+      }
+      const data = isD ? DMAX_9DB_DATA : RAID_DATA;
+      if (exists(data, r, ev)) return;
+      const p = periodOf(ev);
+      data[`ev:${ev.id}:${normName(r.name)}`] = {
+        name: r.name, tier: (r.note || "").replace(/\s*\(.*$/, "") || (isD ? "マックスバトル" : "レイド"), dex: r.dex || MON.dexOf(r.name, null) || MON.dexOf(bossBase(r.name), null),
+        types: [], shiny: r.shiny !== false, _s: ev._s, _e: ev._e, periodText: p, status: p, dateInfo: p, isDmax: isD, pending: true,
+        counters: [], attackers: [], tanks: [], moves: [], routine: [], tankNote: "",
+      };
+    });
+  });
+  LOW_RAIDS.sort((a, b) => a._e - b._e);
 }
 
 async function loadAll() {
