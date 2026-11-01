@@ -207,8 +207,12 @@ function buildNews(items) {
 const bossClass = n => /^(スーパーメガ|メガ)/.test(n) ? "mega" : /^シャドウ/.test(n) ? "shadow" : /^キョダイ/.test(n) ? "gmax" : /^ダイマックス/.test(n) ? "dmax" : "normal";
 const bossBase = n => normName(n).replace(/^(スーパーメガ|キョダイマックス|ダイマックス|キョダイ|メガ|シャドウ|ゲンシ)/, "").replace(/[(（].*?[)）]/g, "").replace(/[XYＸＹ]$/, "");
 const sameGroup = (a, b) => a === b || (a === "normal" && b === "shadow") || (a === "shadow" && b === "normal");
-const bossForm = n => { const m = /[(（](.*?)[)）]/.exec(String(n)); return m ? normName(m[1]) : ""; };
-const cname = n => normName(n).replace(/\*/g, "");
+const FORM_LETTER = { "ギラティナ": { O: "オリジン", A: "アナザー" }, "デオキシス": { N: "ノーマル", A: "アタック", D: "ディフェンス", S: "スピード" } };
+// フォルム名の表記ゆれ(オリジン/オリジンフォルム/O、アタック/アタックフォルム/A…)を1つに揃える
+const canonForm = (base, f) => { f = normName(f).replace(/(?:フォルム|のすがた|すがた)$/, ""); const t = FORM_LETTER[base]; return (t && t[f.toUpperCase()]) || f; };
+const bossForm = n => { const m = /[(（](.*?)[)）]/.exec(String(n)); return m ? canonForm(bossBase(n), m[1]) : ""; };
+const cleanCounterName = n => String(n || "").replace(/[（(]([^）)]*)[）)]/g, (all, inner) => /合体|交換不可|ライト|リワード|サカキ使用|ロケット団/.test(inner) ? "" : all).trim();   // 条件の注記は名前から外す
+const cname = n => normName(cleanCounterName(n)).replace(/\*/g, "");
 
 // サイトごとの対策リストを1つのランキングにする。
 // ・載っているサイト数が多いポケモンほど上（サイト間の整合性）、同数ならサイト内の順位の良さで並べる
@@ -220,7 +224,7 @@ function consensus(auto, role) {
     const list = (auto.by_site[s].counters || []).filter(c => ((/タンク|耐久役|受け役/.test(c.note || "") ? "tank" : (c.role || "attacker")) === role) && c.name && !/[0-9*＊]/.test(c.name.replace(/^ポリゴン2$/, "")) && !/^通\s*常|シ\s*ャ\s*ド\s*ウ/.test(c.name) && c.name.length <= 24).sort((a, b) => (a.rank || 99) - (b.rank || 99));
     list.forEach((c, i) => {
       const k = cname(c.name);
-      const m = map.get(k) || { name: c.name, dex: c.dex || null, tag: c.tag || "normal", sites: [], pts: 0, fast: "", charge: "", dps: null, tdo: null };
+      const m = map.get(k) || { name: cleanCounterName(c.name), dex: c.dex || null, tag: c.tag || "normal", sites: [], pts: 0, fast: "", charge: "", dps: null, tdo: null };
       m.sites.push(s);
       m.pts += (list.length - i) / list.length;
       if (!m.fast && c.fast) m.fast = c.fast;
@@ -287,7 +291,8 @@ function buildBattleData(autoBosses) {
     Object.keys(data).forEach(k => {
       // 旧データ1件につき、自動データ（同じボスの複数サイト分）をまとめて当てる。フォルム違いが複数あるときは名前の中で先に出るものだけ
       const pos = b => { const f = bossForm(b.name), i = f ? normName(data[k].name).indexOf(f) : 999; return i < 0 ? 999 : i; };
-      let cands = bosses.filter(b => !used.has(b.key) && matchLevel(b, data[k].name, kind) === 2);
+      // 区分が同じもの＋（フォルム名が明記された）通常/シャドウ違いも同じボスとして集める。フォルムが書かれていない違いだけの場合は、同じ区分が無いときだけ
+      let cands = bosses.filter(b => !used.has(b.key) && (matchLevel(b, data[k].name, kind) === 2 || (matchLevel(b, data[k].name, kind) === 1 && bossForm(b.name))));
       if (!cands.length) cands = bosses.filter(b => !used.has(b.key) && matchLevel(b, data[k].name, kind) === 1);
       if (!cands.length) return;
       cands.sort((x, y) => pos(x) - pos(y));
@@ -331,7 +336,8 @@ function buildBattleData(autoBosses) {
   const lowSeen = new Set();
   ALL_EVENTS.forEach(ev => {
     if (ev._e < Date.now() || ev._long) return;
-    (ev.raids || []).forEach(r => {
+    // フォルム指定のある表記を先に処理（「デオキシス」だけの表記は、フォルム別カードがあれば作らない）。同じフォルムの表記ゆれは長い名前を優先
+    (ev.raids || []).slice().sort((x, y) => (bossForm(y.name) ? 1 : 0) - (bossForm(x.name) ? 1 : 0) || String(y.name).length - String(x.name).length).forEach(r => {
       if (!r.name) return;
       const rc = bossClass(r.name), isD = ev.category === "dmax" || rc === "dmax" || rc === "gmax";
       if (!isD && isLowTier(r)) {
