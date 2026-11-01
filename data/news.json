@@ -2,6 +2,142 @@
   "schema_version": 1,
   "items": [
     {
+      "id": "news-2be65065e8",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：野生が判明・追加（7件）",
+      "details": "野生：アローラナッシー、アンノーン(A)、アンノーン(D)、アンノーン(E)、アンノーン(I)、アンノーン(N) ほか1件",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/568373",
+          "fetched_at": "2026-11-02T07:28:11.944527+09:00",
+          "article_updated": "2026-11-02T07:24:12+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-aa1fd346a1",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "kind": "event_update",
+      "title": "【情報追加】ハロウィン2026 パート2：野生が判明・追加（1件）",
+      "details": "野生：モクロー(御三家)",
+      "targetId": "ev-halloween-p2",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26443",
+          "fetched_at": "2026-11-02T07:28:11.944527+09:00",
+          "article_updated": "2026-11-01T23:11:47+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-0c804f4551",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "kind": "event_update",
+      "title": "【情報追加】イオンハロウィンイベント：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：特別なタイムチャレンジパート1（対象のイオンモールを訪れると受取可能）→ピカチュウ(魔女帽子)、特別なタイムチャレンジパート2（対象のイオンモールを訪れると受取可能）→ピカチュウ(魔女帽子)",
+      "targetId": "ev-auto-aeon-halloween-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/579901",
+          "fetched_at": "2026-11-02T07:28:11.944527+09:00",
+          "article_updated": "2026-11-01T22:12:11+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-dea280584f",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "kind": "event_update",
+      "title": "【情報追加】死者の日イベント2026(メキシコ)：タイムチャレンジが判明・追加（6件）",
+      "details": "タイムチャレンジ：ポケモンを1匹捕まえる→x5、ポケモンを2日にわたって捕まえる→x20、ポケモンを3日にわたって捕まえる→x5、ポケモンを4日にわたって捕まえる→x1、ポケモンを5日にわたって捕まえる→x5、カラカラ(花飾り)→カラカラ(花飾り)・x2026・x2026",
+      "targetId": "ev-auto-dia-de-muertos-2026",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26644",
+          "fetched_at": "2026-11-02T07:28:11.944527+09:00",
+          "article_updated": "2026-11-01T15:01:56+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-06bddff139",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "kind": "event_update",
+      "title": "【情報追加】2026年11月のイベントスケジュールまとめ：レイドが判明・追加（1件）",
+      "details": "レイド：トルネロス(化身フォルム)",
+      "targetId": "ev-auto-november-2026-schedule",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/583244",
+          "fetched_at": "2026-11-02T07:28:11.944527+09:00",
+          "article_updated": "2026-11-01T12:33:20+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-596ba86873",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "kind": "event_update",
+      "title": "【情報追加】秋の遠足相棒といっしょ：野生が判明・追加（7件）",
+      "details": "野生：ガラルポニータ、ハネッコ、イシズマイ、アノクサ、ヒスイガーディ、ツチニン ほか1件",
+      "targetId": "ev-auto-autumn-buddy-trek-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/578533",
+          "fetched_at": "2026-11-02T07:28:11.944527+09:00",
+          "article_updated": "2026-10-22T03:58:24+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-10ce1918c9",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "kind": "event_update",
+      "title": "【情報追加】メグロコふかの日：フィールドリサーチが判明・追加（4件）",
+      "details": "フィールドリサーチ：タマゴを1個かえす→ふかそうち、1km探索する→ほしのかけら、ほしのすなを2,000手に入れる→スーパーふかそうち、ほしのすなを4,000手に入れる→経験値",
+      "targetId": "ev-auto-sandile-hatch-day",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/578666",
+          "fetched_at": "2026-11-02T07:28:11.944527+09:00",
+          "article_updated": "2026-10-19T05:51:45+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-7016e986de",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "kind": "event_update",
+      "title": "【情報追加】ファミリーマートパートナーリサーチ(黄昏の旅路シーズン)：タイムチャレンジが判明・追加（48件）",
+      "details": "タイムチャレンジ：ポケモンを60匹捕まえる→ユキハミ、ポケモンを60匹捕まえる→セビエ、ポケモンを60匹捕まえる→クチート、カーブボールのグレートスローを15回投げる→ユキハミ、カーブボールのグレートスローを15回投げる→セビエ、カーブボールのグレートスローを15回投げる→クチート ほか42件",
+      "targetId": "ev-auto-familymart-partner-research-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/576632",
+          "fetched_at": "2026-11-02T07:28:11.944527+09:00",
+          "article_updated": "2026-10-06T14:14:21+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-f9091af845",
       "date": "2026-11-01",
       "date_label": "11/1",
@@ -1799,6 +1935,12 @@
           "site": "gamewith",
           "url": "https://pokemongo.gamewith.jp/article/show/573668",
           "fetched_at": "2026-11-01T20:05:13.845517+09:00",
+          "article_updated": "2026-10-02T11:32:30+09:00"
+        },
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/573668",
+          "fetched_at": "2026-11-02T07:28:11.944527+09:00",
           "article_updated": "2026-10-02T11:32:30+09:00"
         }
       ]

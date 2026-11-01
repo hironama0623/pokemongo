@@ -1,6 +1,70 @@
 {
-  "updated_at": "2026/11/01 22:41 JST",
+  "updated_at": "2026/11/02 07:28 JST",
   "latest_news": [
+    {
+      "id": "news-2be65065e8",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：野生が判明・追加（7件）",
+      "details": "野生：アローラナッシー、アンノーン(A)、アンノーン(D)、アンノーン(E)、アンノーン(I)、アンノーン(N) ほか1件",
+      "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-aa1fd346a1",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "title": "【情報追加】ハロウィン2026 パート2：野生が判明・追加（1件）",
+      "details": "野生：モクロー(御三家)",
+      "targetId": "ev-halloween-p2"
+    },
+    {
+      "id": "news-0c804f4551",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "title": "【情報追加】イオンハロウィンイベント：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：特別なタイムチャレンジパート1（対象のイオンモールを訪れると受取可能）→ピカチュウ(魔女帽子)、特別なタイムチャレンジパート2（対象のイオンモールを訪れると受取可能）→ピカチュウ(魔女帽子)",
+      "targetId": "ev-auto-aeon-halloween-2026"
+    },
+    {
+      "id": "news-dea280584f",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "title": "【情報追加】死者の日イベント2026(メキシコ)：タイムチャレンジが判明・追加（6件）",
+      "details": "タイムチャレンジ：ポケモンを1匹捕まえる→x5、ポケモンを2日にわたって捕まえる→x20、ポケモンを3日にわたって捕まえる→x5、ポケモンを4日にわたって捕まえる→x1、ポケモンを5日にわたって捕まえる→x5、カラカラ(花飾り)→カラカラ(花飾り)・x2026・x2026",
+      "targetId": "ev-auto-dia-de-muertos-2026"
+    },
+    {
+      "id": "news-06bddff139",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "title": "【情報追加】2026年11月のイベントスケジュールまとめ：レイドが判明・追加（1件）",
+      "details": "レイド：トルネロス(化身フォルム)",
+      "targetId": "ev-auto-november-2026-schedule"
+    },
+    {
+      "id": "news-596ba86873",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "title": "【情報追加】秋の遠足相棒といっしょ：野生が判明・追加（7件）",
+      "details": "野生：ガラルポニータ、ハネッコ、イシズマイ、アノクサ、ヒスイガーディ、ツチニン ほか1件",
+      "targetId": "ev-auto-autumn-buddy-trek-2026"
+    },
+    {
+      "id": "news-10ce1918c9",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "title": "【情報追加】メグロコふかの日：フィールドリサーチが判明・追加（4件）",
+      "details": "フィールドリサーチ：タマゴを1個かえす→ふかそうち、1km探索する→ほしのかけら、ほしのすなを2,000手に入れる→スーパーふかそうち、ほしのすなを4,000手に入れる→経験値",
+      "targetId": "ev-auto-sandile-hatch-day"
+    },
+    {
+      "id": "news-7016e986de",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "title": "【情報追加】ファミリーマートパートナーリサーチ(黄昏の旅路シーズン)：タイムチャレンジが判明・追加（48件）",
+      "details": "タイムチャレンジ：ポケモンを60匹捕まえる→ユキハミ、ポケモンを60匹捕まえる→セビエ、ポケモンを60匹捕まえる→クチート、カーブボールのグレートスローを15回投げる→ユキハミ、カーブボールのグレートスローを15回投げる→セビエ、カーブボールのグレートスローを15回投げる→クチート ほか42件",
+      "targetId": "ev-auto-familymart-partner-research-2026"
+    },
     {
       "id": "news-f9091af845",
       "date": "2026-11-01",
@@ -3313,6 +3377,36 @@
         "note": "出典: gamewith"
       }
     ],
+    "ev-auto-sandile-hatch-day": [
+      {
+        "task": "タマゴを1個かえす",
+        "rewardDex": 25,
+        "rewardName": "ふかそうち",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "1km探索する",
+        "rewardDex": 25,
+        "rewardName": "ほしのかけら",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "ほしのすなを2,000手に入れる",
+        "rewardDex": 25,
+        "rewardName": "スーパーふかそうち",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "ほしのすなを4,000手に入れる",
+        "rewardDex": 25,
+        "rewardName": "経験値",
+        "shiny": false,
+        "note": "出典: gamewith"
+      }
+    ],
     "ev-auto-fall-marathon-buddy-trek-2026": [
       {
         "task": "（記載なし）",
@@ -6139,6 +6233,12 @@
           "name": "ゲンガー(ライト)",
           "shiny": true,
           "note": ""
+        },
+        {
+          "dex": 722,
+          "name": "モクロー(御三家)",
+          "shiny": true,
+          "note": ""
         }
       ]
     },
@@ -7087,6 +7187,48 @@
           "name": "カイリキー",
           "shiny": false,
           "note": "つよいポケモン"
+        },
+        {
+          "dex": 103,
+          "name": "アローラナッシー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 201,
+          "name": "アンノーン(A)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 201,
+          "name": "アンノーン(D)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 201,
+          "name": "アンノーン(E)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 201,
+          "name": "アンノーン(I)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 201,
+          "name": "アンノーン(N)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 201,
+          "name": "アンノーン(S)",
+          "shiny": true,
+          "note": ""
         }
       ]
     },
@@ -7945,6 +8087,48 @@
           "name": "エアームド",
           "shiny": true,
           "note": "レア"
+        },
+        {
+          "dex": 77,
+          "name": "ガラルポニータ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 187,
+          "name": "ハネッコ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 557,
+          "name": "イシズマイ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 946,
+          "name": "アノクサ",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 58,
+          "name": "ヒスイガーディ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 290,
+          "name": "ツチニン",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 694,
+          "name": "エリキテル",
+          "shiny": true,
+          "note": ""
         }
       ]
     },
