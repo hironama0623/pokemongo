@@ -138,6 +138,91 @@
       ]
     },
     {
+      "id": "news-f34ad7f0ca",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "kind": "event_update",
+      "title": "【情報追加】死者の日イベント2026(メキシコ)：野生が判明・追加（12件）",
+      "details": "野生：ガラガラ(花飾り)、ヨマワル(花飾り)、サマヨール(花飾り)、ヨノワール(花飾り)、ヨマワル、キマワリ ほか6件",
+      "targetId": "ev-auto-dia-de-muertos-2026",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10768/",
+          "fetched_at": "2026-11-02T12:48:02.377681+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-7fe5289d37",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "kind": "event_update",
+      "title": "【情報追加】死者の日イベント2026(メキシコ)：レイドが判明・追加（1件）",
+      "details": "レイド：ゲンガー(キョダイマックス)",
+      "targetId": "ev-auto-dia-de-muertos-2026",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10768/",
+          "fetched_at": "2026-11-02T12:48:02.377681+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-aa11b89dd8",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "kind": "event_update",
+      "title": "【情報追加】GOワイルドエリア2026：グローバル：レイドが判明・追加（3件）",
+      "details": "レイド：キョダイジュラルドン、ディアルガ、パルキア",
+      "targetId": "ev-wildarea-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/575992",
+          "fetched_at": "2026-11-02T12:48:02.377681+09:00",
+          "article_updated": "2026-11-02T12:21:16+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-2f3a536c14",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "kind": "event_update",
+      "title": "【情報追加】GOパスワイルドウィーク(2026年)：サプライズボックスが判明・追加（2件）",
+      "details": "サプライズボックス：GOパスデラックス：ワイルドウィーク××1、GOパスデラックス：ワイルドウィーク+10ランク××1",
+      "targetId": "ev-auto-go-pass-wild-week-2026",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26590",
+          "fetched_at": "2026-11-02T12:48:02.377681+09:00",
+          "article_updated": "2026-11-02T05:58:42+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-b4175cd646",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "kind": "event_update",
+      "title": "【情報追加】ダイマックスユクシー・エムリット・アグノムのマックスバトルデイ：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：リワードを受け取る→ダイキnoコ",
+      "targetId": "ev-auto-max-battle-day-uxie-mesprit-azelf",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/579398",
+          "fetched_at": "2026-11-02T12:48:02.377681+09:00",
+          "article_updated": "2026-10-25T17:52:14+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-f9091af845",
       "date": "2026-11-01",
       "date_label": "11/1",
