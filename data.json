@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/11/02 12:48 JST",
+  "updated_at": "2026/11/02 18:54 JST",
   "latest_news": [
     {
       "id": "news-2be65065e8",
@@ -104,6 +104,38 @@
       "title": "【情報追加】ダイマックスユクシー・エムリット・アグノムのマックスバトルデイ：タイムチャレンジが判明・追加（1件）",
       "details": "タイムチャレンジ：リワードを受け取る→ダイキnoコ",
       "targetId": "ev-auto-max-battle-day-uxie-mesprit-azelf"
+    },
+    {
+      "id": "news-6de77e913c",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "title": "【新イベント】今週のイベントスケジュールまとめ｜期間：2026/11/2(月)～2026/11/8(日)",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-weekly-schedule-2026-11-02"
+    },
+    {
+      "id": "news-8fbbcbffac",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "title": "【情報追加】ワイルドエリア2026：メキシコシティ：レイドが判明・追加（5件）",
+      "details": "レイド：カイリキー(ジャケット)、ディアルガ(ダイマックス)、パルキア(ダイマックス)、ザシアン(けんのおう)、ザマゼンタ(たてのおう)",
+      "targetId": "ev-auto-wild-area-2026-mexico"
+    },
+    {
+      "id": "news-cd2b646043",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：野生が判明・追加（3件）",
+      "details": "野生：フリーザー(ガラル)、サンダー(ガラル)、ファイヤー(ガラル)",
+      "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-e8f0522f36",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：レイドが判明・追加（4件）",
+      "details": "レイド：カイリキー(ジャケット)、ジュラルドン(キョダイマックス)、ザシアン(けんのおう)、ザマゼンタ(たてのおう)",
+      "targetId": "ev-auto-wild-area-2026-sendai"
     },
     {
       "id": "news-f9091af845",
@@ -7016,7 +7048,7 @@
           "dex": 68,
           "name": "カイリキー(ジャケット)",
           "shiny": false,
-          "note": ""
+          "note": "つよいポケモン, 初登場"
         },
         {
           "dex": 27,
@@ -7112,13 +7144,13 @@
           "dex": 380,
           "name": "ラティアス",
           "shiny": false,
-          "note": ""
+          "note": "つよいポケモン"
         },
         {
           "dex": 381,
           "name": "ラティオス",
           "shiny": false,
-          "note": ""
+          "note": "つよいポケモン"
         },
         {
           "dex": 68,
@@ -7196,25 +7228,25 @@
           "dex": 679,
           "name": "ヒトツキ",
           "shiny": true,
-          "note": ""
+          "note": "つよいポケモン"
         },
         {
           "dex": 707,
           "name": "クレッフィ",
           "shiny": true,
-          "note": ""
+          "note": "つよいポケモン"
         },
         {
           "dex": 780,
           "name": "ジジーロン",
           "shiny": true,
-          "note": ""
+          "note": "つよいポケモン"
         },
         {
           "dex": 884,
           "name": "ジュラルドン",
           "shiny": true,
-          "note": ""
+          "note": "つよいポケモン"
         },
         {
           "dex": 90,
@@ -7238,37 +7270,55 @@
           "dex": 201,
           "name": "アンノーン(A)",
           "shiny": true,
-          "note": ""
+          "note": "おこう限定"
         },
         {
           "dex": 201,
           "name": "アンノーン(D)",
           "shiny": true,
-          "note": ""
+          "note": "おこう限定"
         },
         {
           "dex": 201,
           "name": "アンノーン(E)",
           "shiny": true,
-          "note": ""
+          "note": "おこう限定"
         },
         {
           "dex": 201,
           "name": "アンノーン(I)",
           "shiny": true,
-          "note": ""
+          "note": "おこう限定"
         },
         {
           "dex": 201,
           "name": "アンノーン(N)",
           "shiny": true,
-          "note": ""
+          "note": "おこう限定"
         },
         {
           "dex": 201,
           "name": "アンノーン(S)",
           "shiny": true,
-          "note": ""
+          "note": "おこう限定"
+        },
+        {
+          "dex": 144,
+          "name": "フリーザー(ガラル)",
+          "shiny": false,
+          "note": "おさんぽおこうでまれに出現"
+        },
+        {
+          "dex": 145,
+          "name": "サンダー(ガラル)",
+          "shiny": false,
+          "note": "おさんぽおこうでまれに出現"
+        },
+        {
+          "dex": 146,
+          "name": "ファイヤー(ガラル)",
+          "shiny": false,
+          "note": "おさんぽおこうでまれに出現"
         }
       ]
     },
@@ -9560,7 +9610,7 @@
           "dex": 103,
           "name": "ナッシー(アローラ)",
           "shiny": false,
-          "note": ""
+          "note": "つよいポケモン"
         },
         {
           "dex": 184,
@@ -9596,13 +9646,13 @@
           "dex": 365,
           "name": "トドゼルガ",
           "shiny": false,
-          "note": ""
+          "note": "つよいポケモン"
         },
         {
           "dex": 376,
           "name": "メタグロス",
           "shiny": false,
-          "note": ""
+          "note": "つよいポケモン"
         },
         {
           "dex": 395,
@@ -9620,7 +9670,7 @@
           "dex": 462,
           "name": "ジバコイル",
           "shiny": false,
-          "note": ""
+          "note": "つよいポケモン"
         },
         {
           "dex": 534,
@@ -9632,13 +9682,13 @@
           "dex": 598,
           "name": "ナットレイ",
           "shiny": false,
-          "note": ""
+          "note": "つよいポケモン"
         },
         {
           "dex": 612,
           "name": "オノノクス",
           "shiny": false,
-          "note": ""
+          "note": "つよいポケモン"
         },
         {
           "dex": 635,
@@ -9656,13 +9706,13 @@
           "dex": 706,
           "name": "ヌメルゴン",
           "shiny": false,
-          "note": ""
+          "note": "つよいポケモン"
         },
         {
           "dex": 715,
           "name": "オンバーン",
           "shiny": false,
-          "note": ""
+          "note": "つよいポケモン"
         },
         {
           "dex": 784,
@@ -9674,37 +9724,37 @@
           "dex": 959,
           "name": "デカヌチャン",
           "shiny": false,
-          "note": ""
+          "note": "つよいポケモン"
         },
         {
           "dex": 980,
           "name": "ドオー",
           "shiny": false,
-          "note": ""
+          "note": "つよいポケモン"
         },
         {
           "dex": 679,
           "name": "ヒトツキ",
           "shiny": false,
-          "note": ""
+          "note": "つよいポケモン"
         },
         {
           "dex": 707,
           "name": "クレッフィ",
           "shiny": false,
-          "note": ""
+          "note": "つよいポケモン"
         },
         {
           "dex": 780,
           "name": "ジジーロン",
           "shiny": false,
-          "note": ""
+          "note": "つよいポケモン"
         },
         {
           "dex": 884,
           "name": "ジュラルドン",
           "shiny": false,
-          "note": ""
+          "note": "つよいポケモン"
         },
         {
           "dex": 380,
@@ -9722,55 +9772,55 @@
           "dex": 201,
           "name": "アンノーン(A)",
           "shiny": false,
-          "note": ""
+          "note": "おこう"
         },
         {
           "dex": 201,
           "name": "アンノーン(D)",
           "shiny": false,
-          "note": ""
+          "note": "おこう"
         },
         {
           "dex": 201,
           "name": "アンノーン(E)",
           "shiny": false,
-          "note": ""
+          "note": "おこう"
         },
         {
           "dex": 201,
           "name": "アンノーン(I)",
           "shiny": false,
-          "note": ""
+          "note": "おこう"
         },
         {
           "dex": 201,
           "name": "アンノーン(N)",
           "shiny": false,
-          "note": ""
+          "note": "おこう"
         },
         {
           "dex": 201,
           "name": "アンノーン(S)",
           "shiny": false,
-          "note": ""
+          "note": "おこう"
         },
         {
           "dex": 144,
           "name": "フリーザー(ガラル)",
           "shiny": false,
-          "note": ""
+          "note": "おさんぽおこう"
         },
         {
           "dex": 145,
           "name": "サンダー(ガラル)",
           "shiny": false,
-          "note": ""
+          "note": "おさんぽおこう"
         },
         {
           "dex": 146,
           "name": "ファイヤー(ガラル)",
           "shiny": false,
-          "note": ""
+          "note": "おさんぽおこう"
         }
       ]
     },
@@ -12015,6 +12065,24 @@
       "hasPaid": false,
       "dateText": "2026年11月",
       "summary": "2026年11月の伝説レイド、マックスバトル、スポットライトアワー、デイリーディスカバリー等の予定まとめ。",
+      "freeFeatures": [],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-weekly-schedule-2026-11-02",
+      "month": 11,
+      "title": "今週のイベントスケジュールまとめ｜期間：2026/11/2(月)～2026/11/8(日)",
+      "barClass": "bar-collab",
+      "category": "collab",
+      "startDay": 2,
+      "endDay": 8,
+      "hasPaid": false,
+      "dateText": "2026/11/2(月)～2026/11/8(日)",
+      "summary": "2026年11月2日〜11月8日のイベントスケジュールまとめ。ギラティナ（アナザー）レイド、メガヤミラミ、シャドウトルネロス、ダイマックスワンリキー、ワイルドエリア仙台・メキシコシティ、光のフェスティバル（インド限定）などが開催されます。",
       "freeFeatures": [],
       "paidFeatures": [],
       "wilds": [],

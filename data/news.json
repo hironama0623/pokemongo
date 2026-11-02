@@ -223,6 +223,74 @@
       ]
     },
     {
+      "id": "news-6de77e913c",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "kind": "new_event",
+      "title": "【新イベント】今週のイベントスケジュールまとめ｜期間：2026/11/2(月)～2026/11/8(日)",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-weekly-schedule-2026-11-02",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10789/",
+          "fetched_at": "2026-11-02T18:54:19.628500+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-8fbbcbffac",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：メキシコシティ：レイドが判明・追加（5件）",
+      "details": "レイド：カイリキー(ジャケット)、ディアルガ(ダイマックス)、パルキア(ダイマックス)、ザシアン(けんのおう)、ザマゼンタ(たてのおう)",
+      "targetId": "ev-auto-wild-area-2026-mexico",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10566/",
+          "fetched_at": "2026-11-02T18:54:19.628500+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-cd2b646043",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：野生が判明・追加（3件）",
+      "details": "野生：フリーザー(ガラル)、サンダー(ガラル)、ファイヤー(ガラル)",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10565/",
+          "fetched_at": "2026-11-02T18:54:19.628500+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-e8f0522f36",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：レイドが判明・追加（4件）",
+      "details": "レイド：カイリキー(ジャケット)、ジュラルドン(キョダイマックス)、ザシアン(けんのおう)、ザマゼンタ(たてのおう)",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10565/",
+          "fetched_at": "2026-11-02T18:54:19.628500+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
       "id": "news-f9091af845",
       "date": "2026-11-01",
       "date_label": "11/1",
