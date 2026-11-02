@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/11/02 18:54 JST",
+  "updated_at": "2026/11/02 23:05 JST",
   "latest_news": [
     {
       "id": "news-2be65065e8",
@@ -136,6 +136,62 @@
       "title": "【情報追加】ワイルドエリア2026：仙台・東北：レイドが判明・追加（4件）",
       "details": "レイド：カイリキー(ジャケット)、ジュラルドン(キョダイマックス)、ザシアン(けんのおう)、ザマゼンタ(たてのおう)",
       "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-bc893c3074",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "title": "【情報追加】ハロウィン2026 パート2：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：リワードを受け取る→ヤバチャ(しんさく)(リボン)",
+      "targetId": "ev-halloween-p2"
+    },
+    {
+      "id": "news-9f7abfd2d3",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "title": "【情報追加】キョダイマックスエースバーンのマックスバトルデイ：レイドが判明・追加（1件）",
+      "details": "レイド：エースバーン(キョダイマックス)",
+      "targetId": "ev-auto-gigantamax-cinderace-raid-day"
+    },
+    {
+      "id": "news-0b92f950fd",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "title": "【情報追加】GOワイルドエリア2026：グローバル：レイドが判明・追加（4件）",
+      "details": "レイド：ディアルガ(ダイマックス)、パルキア(ダイマックス)、キュレム(ホワイト)、キュレム(ブラック)",
+      "targetId": "ev-wildarea-2026"
+    },
+    {
+      "id": "news-143f72658b",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "title": "【情報追加】2026年11月のイベントスケジュールまとめ：レイドが判明・追加（1件）",
+      "details": "レイド：トルネロス(化身)",
+      "targetId": "ev-auto-november-2026-schedule"
+    },
+    {
+      "id": "news-6c887ac68c",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "title": "【情報追加】ダイマックスユクシー・エムリット・アグノムのマックスバトルデイ：レイドが判明・追加（3件）",
+      "details": "レイド：ユクシー、エムリット、アグノム",
+      "targetId": "ev-auto-max-battle-day-uxie-mesprit-azelf"
+    },
+    {
+      "id": "news-cd2479df0e",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "title": "【情報追加】ゾロアコミュニティデイ：サプライズボックスが判明・追加（1件）",
+      "details": "サプライズボックス：ゾロア",
+      "targetId": "ev-auto-zorua-community-day-2026-10"
+    },
+    {
+      "id": "news-ad5576f71e",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "title": "【情報追加】LAIC2027配信ボーナスタイムチャレンジ：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：Twitchのライブ配信30分以上視聴→ダイケンキ(ハイドロカノン)・ミジュマル・ミジュマルのアメXL・わざマシンスペシャル・わざマシンノーマル、Twitchのライブ配信45分以上視聴→すごいわざマシンスペシャル・ふしぎなアメXL・わざマシンスペシャル・わざマシンノーマル",
+      "targetId": "ev-auto-laic-2027-twitch-drops"
     },
     {
       "id": "news-f9091af845",
@@ -6430,19 +6486,19 @@
           "dex": 201,
           "name": "アンノーン(P)",
           "shiny": true,
-          "note": ""
+          "note": "レア"
         },
         {
           "dex": 201,
           "name": "アンノーン(N)",
           "shiny": true,
-          "note": ""
+          "note": "レア"
         },
         {
           "dex": 201,
           "name": "アンノーン(O)",
           "shiny": true,
-          "note": ""
+          "note": "レア"
         },
         {
           "dex": 105,
@@ -6743,6 +6799,12 @@
           "name": "ゾロアーク",
           "shiny": true,
           "note": ""
+        },
+        {
+          "dex": 570,
+          "name": "ゾロア",
+          "shiny": true,
+          "note": "サプライズボックス／最大5回まで映り込み"
         }
       ]
     },

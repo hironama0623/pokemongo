@@ -291,6 +291,125 @@
       ]
     },
     {
+      "id": "news-bc893c3074",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "kind": "event_update",
+      "title": "【情報追加】ハロウィン2026 パート2：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：リワードを受け取る→ヤバチャ(しんさく)(リボン)",
+      "targetId": "ev-halloween-p2",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26443",
+          "fetched_at": "2026-11-02T23:05:26.089149+09:00",
+          "article_updated": "2026-11-02T23:04:47+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-9f7abfd2d3",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "kind": "event_update",
+      "title": "【情報追加】キョダイマックスエースバーンのマックスバトルデイ：レイドが判明・追加（1件）",
+      "details": "レイド：エースバーン(キョダイマックス)",
+      "targetId": "ev-auto-gigantamax-cinderace-raid-day",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/575833",
+          "fetched_at": "2026-11-02T23:05:26.089149+09:00",
+          "article_updated": "2026-11-02T17:37:25+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-0b92f950fd",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "kind": "event_update",
+      "title": "【情報追加】GOワイルドエリア2026：グローバル：レイドが判明・追加（4件）",
+      "details": "レイド：ディアルガ(ダイマックス)、パルキア(ダイマックス)、キュレム(ホワイト)、キュレム(ブラック)",
+      "targetId": "ev-wildarea-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/575992",
+          "fetched_at": "2026-11-02T23:05:26.089149+09:00",
+          "article_updated": "2026-11-02T12:21:16+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-143f72658b",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "kind": "event_update",
+      "title": "【情報追加】2026年11月のイベントスケジュールまとめ：レイドが判明・追加（1件）",
+      "details": "レイド：トルネロス(化身)",
+      "targetId": "ev-auto-november-2026-schedule",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/583244",
+          "fetched_at": "2026-11-02T23:05:26.089149+09:00",
+          "article_updated": "2026-11-02T11:39:07+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-6c887ac68c",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "kind": "event_update",
+      "title": "【情報追加】ダイマックスユクシー・エムリット・アグノムのマックスバトルデイ：レイドが判明・追加（3件）",
+      "details": "レイド：ユクシー、エムリット、アグノム",
+      "targetId": "ev-auto-max-battle-day-uxie-mesprit-azelf",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/579398",
+          "fetched_at": "2026-11-02T23:05:26.089149+09:00",
+          "article_updated": "2026-10-25T17:52:14+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-cd2479df0e",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "kind": "event_update",
+      "title": "【情報追加】ゾロアコミュニティデイ：サプライズボックスが判明・追加（1件）",
+      "details": "サプライズボックス：ゾロア",
+      "targetId": "ev-auto-zorua-community-day-2026-10",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/577121",
+          "fetched_at": "2026-11-02T23:05:26.089149+09:00",
+          "article_updated": "2026-10-22T12:00:48+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-ad5576f71e",
+      "date": "2026-11-02",
+      "date_label": "11/2",
+      "kind": "event_update",
+      "title": "【情報追加】LAIC2027配信ボーナスタイムチャレンジ：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：Twitchのライブ配信30分以上視聴→ダイケンキ(ハイドロカノン)・ミジュマル・ミジュマルのアメXL・わざマシンスペシャル・わざマシンノーマル、Twitchのライブ配信45分以上視聴→すごいわざマシンスペシャル・ふしぎなアメXL・わざマシンスペシャル・わざマシンノーマル",
+      "targetId": "ev-auto-laic-2027-twitch-drops",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/583039",
+          "fetched_at": "2026-11-02T23:05:26.089149+09:00",
+          "article_updated": "2026-10-17T03:13:03+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-f9091af845",
       "date": "2026-11-01",
       "date_label": "11/1",
