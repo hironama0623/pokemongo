@@ -100,12 +100,19 @@ COUNTERS = {
                            "properties": {"url": _STR, "article_updated": _NSTR, "fetched_at": _NSTR,
                                           "counters": {"type": "array", "minItems": 1, "items": _COUNTER}}}}}}}},
 }
+_DT = {"type": "string", "pattern": r"^20\d\d-\d\d-\d\dT\d\d:\d\d$"}
+_SCHED_ITEM = {"type": "object", "required": ["name", "start", "end"],
+               "properties": {"name": _STR, "tier": _NSTR, "start": _DT, "end": _DT, "event": _NSTR}}
+SCHEDULE_ARTICLE = {"type": "object", "required": ["items"], "properties": {"items": {"type": "array", "items": _SCHED_ITEM}}}
+RAID_SCHEDULE = {"type": "object", "required": ["schema_version", "items"],
+                 "properties": {"schema_version": {"const": 1}, "url": _NSTR, "updated_at": _NSTR, "article_updated": _NSTR,
+                                "items": {"type": "array", "minItems": 1, "items": _SCHED_ITEM}}}
 META = {"type": "object", "required": ["schema_version", "last_run_at", "last_run_status"],
         "properties": {"schema_version": {"const": 1}, "last_run_at": _STR,
                        "last_run_status": {"enum": ["ok", "partial", "failed"]},
                        "last_success_at": _NSTR, "last_content_change_at": _NSTR, "counts": {"type": "object"}}}
 
-SCHEMAS = {"counter_article": COUNTER_ARTICLE, "counters": COUNTERS, "article": ARTICLE, "details": DETAILS, "events": EVENTS, "news": NEWS, "meta": META}
+SCHEMAS = {"schedule_article": SCHEDULE_ARTICLE, "raid_schedule": RAID_SCHEDULE, "counter_article": COUNTER_ARTICLE, "counters": COUNTERS, "article": ARTICLE, "details": DETAILS, "events": EVENTS, "news": NEWS, "meta": META}
 
 
 def validate(kind, obj):

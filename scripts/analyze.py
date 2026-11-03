@@ -260,3 +260,52 @@ def normalize_counters(facts):
 def analyze_counters(article, models, call=gemini_call, sleep=time.sleep, tries=3):
     prompt = COUNTER_PROMPT.format(site=article["site"], url=article["url"], updated=article.get("updated") or "不明", body=article["text"])
     return _ask(prompt, "counter_article", normalize_counters, models, call, sleep, tries)
+
+
+# ---- レイド日程表（9DBのレイドボス一覧）。期間はここを正とする ----
+SCHEDULE_PROMPT = """あなたはポケモンGOのレイド日程表から事実だけを抜き出す抽出器です。以下の【記事本文】は、レイドボスの出現期間ごとの一覧です。本文だけを根拠にJSONを1つ返してください。
+
+【厳守ルール】
+1. 本文に書かれた期間と出現ボスだけを書く。記憶・推測は混ぜない。
+2. 期間のブロック（例「11/4(水)5:00～11/5(木)20:00」）ごとに、★5・★6・メガ（メガ★4など）のボスを1件ずつ出す。★1・★3のボスは出さない。「伝説・メガレイドの予定」のような予定欄は、開始日と終了日の両方が書かれているものだけ出す（片方しか無いものは出さない）。
+3. start/end は日本時間で "YYYY-MM-DDTHH:MM"。年は {year} 年。時刻が書かれていない日付だけの場合は start は "T00:00"、end は "T23:59"。同じボスが複数の期間にあれば、期間ごとに1件ずつ出す。
+4. name は本文の表記のまま。シャドウ（[シャドウ]の印・「伝説シャドウ」）のボスは名前の頭に「シャドウ」を付ける（例「シャドウトルネロス(けしん)」）。メガのボスは「メガ」を付ける（例「メガヤミラミ」）。フォルムは括弧で（例「ギラティナ(アナザー)」）。tier は「★5」「★6」「メガ★4」「メガ」のうち本文に近いもの。event は期間ブロックの見出し（無ければ null）。
+5. 出現するボスが読み取れない場合は items を空にする。
+
+【出力JSONの形】
+{{"items": [{{"name": "", "tier": "★5", "start": "2026-11-04T05:00", "end": "2026-11-05T20:00", "event": ""}}]}}
+
+【記事】サイト={site} URL={url} 記事更新日={updated}
+【記事本文】
+{body}
+"""
+
+
+def normalize_schedule(facts):
+    """日程表の軽微なズレを直す。終了が開始より前のもの、名前が空のもの、重複は捨てる。"""
+    facts = _unwrap(facts)
+    if not isinstance(facts, dict):
+        return facts
+    seen, out = set(), []
+    for it in facts.get("items") or []:
+        if not isinstance(it, dict):
+            continue
+        name = re.sub(r"[\s\u3000]+", "", str(it.get("name") or ""))
+        st, en = str(it.get("start") or ""), str(it.get("end") or "")
+        if len(st) == 10:
+            st += "T00:00"
+        if len(en) == 10:
+            en += "T23:59"
+        if not name or not re.fullmatch(r"20\d\d-\d\d-\d\dT\d\d:\d\d", st) or not re.fullmatch(r"20\d\d-\d\d-\d\dT\d\d:\d\d", en) or en <= st:
+            continue
+        k = (name, st, en)
+        if k in seen:
+            continue
+        seen.add(k)
+        out.append({"name": name, "tier": str(it.get("tier") or "") or None, "start": st, "end": en, "event": it.get("event") or None})
+    return {"items": out}
+
+
+def analyze_schedule(article, models, year=2026, call=gemini_call, sleep=time.sleep, tries=3):
+    prompt = SCHEDULE_PROMPT.format(year=year, site=article["site"], url=article["url"], updated=article.get("updated") or "不明", body=article["text"])
+    return _ask(prompt, "schedule_article", normalize_schedule, models, call, sleep, tries)

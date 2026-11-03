@@ -50,7 +50,9 @@ def _fetch_page(source, url, role, log, getter, min_chars, dump=None):
         i = html.find("DPS")
         snip = html[max(0, i - 1500): i + 3500]
     art = {"snip": snip, "site": source, "url": url, "text": (header + "\n\n" + text) if header else text, "updated": e["article_updated"], "date": date, "hash": extract.content_hash(text), "header": header}
-    if config.is_counter_article(art) or config.has_counter_section(art):   # 対策の抽出指示を変えたときは、対策ページだけ再解析する
+    if config.is_schedule_article(art):
+        art["hash"] += "|s" + config.SCHEDULE_VERSION
+    elif config.is_counter_article(art) or config.has_counter_section(art):   # 対策の抽出指示を変えたときは、対策ページだけ再解析する
         art["hash"] += "|c" + config.COUNTER_VERSION
     return e, art
 
@@ -98,6 +100,7 @@ def run(now, log, diagnose=False, no_news=False, getter=fetch.get, llm=an.gemini
     events = store.load("events.json", {"schema_version": 1, "events": {}})
     news = store.load("news.json", {"schema_version": 1, "items": []})
     counters = store.load("counters.json", {"schema_version": 1, "bosses": {}})
+    raid_schedule, schedule_changed = store.load("raid_schedule.json", None), False
     names0 = store.load("pokemon.json", {"names": {}})["names"]
     removed0 = ctr.sanitize(counters, names0) + ctr.drop_stale_duplicates(counters)
     if removed0:
@@ -200,9 +203,14 @@ def run(now, log, diagnose=False, no_news=False, getter=fetch.get, llm=an.gemini
         e["chars_sent"] = len(art["text"])
         known = index + [dict(v) for v in events["events"].values()]
         an.last_info.clear()
-        is_counter = config.is_counter_article(art)   # レイド/マックスバトルの対策記事は、イベント抽出ではなく対策の抽出を行う
+        is_schedule = config.is_schedule_article(art)
+        is_counter = config.is_counter_article(art) and not is_schedule   # レイド/マックスバトルの対策記事は、イベント抽出ではなく対策の抽出を行う
         try:
-            if is_counter:
+            if is_schedule:
+                _dump_counter_text(art)
+                facts = an.analyze_schedule(art, config.GEMINI_MODELS, year=now.year, call=llm)
+                _dump_counter_text(art, facts)
+            elif is_counter:
                 _dump_counter_text(art)   # 解析に失敗しても本文は残す
                 facts = an.analyze_counters(art, config.GEMINI_MODELS, call=llm)
                 _dump_counter_text(art, facts)
@@ -220,6 +228,20 @@ def run(now, log, diagnose=False, no_news=False, getter=fetch.get, llm=an.gemini
             e.update(ai_calls=an.last_info.get("attempts"), ai_seconds=an.last_info.get("seconds"))
             e.update(action="analyze_failed", error=str(ex)[:400])
             problems += 1
+            continue
+        if is_schedule:
+            if not facts.get("items"):
+                e.update(action="analyzed", reason="日程表だがボスと期間を読み取れず（前回の日程を残す）")
+                continue   # ハッシュを保存しない＝次回また解析する
+            sched = {"schema_version": 1, "url": art["url"], "updated_at": now.isoformat(), "article_updated": art["updated"], "items": facts["items"]}
+            err = schemas.validate("raid_schedule", sched)
+            if err:
+                e.update(action="validation_failed", error=err)
+                problems += 1
+                continue
+            raid_schedule, schedule_changed = sched, True
+            analyzed_ok.append(art)
+            e.update(action="analyzed", reason=f"レイド日程 {len(facts['items'])} 件")
             continue
         if is_counter:
             if not facts.get("bosses"):
@@ -285,13 +307,15 @@ def run(now, log, diagnose=False, no_news=False, getter=fetch.get, llm=an.gemini
     status = "ok" if problems == 0 and not budget_skipped and not any(e["status"] in bad for e in log.entries) else "partial"
     meta.update({"schema_version": 1, "last_run_at": now.isoformat(), "last_run_status": status, "last_success_at": now.isoformat(),
                  "counts": {**log.summary(), "events_auto": len(events["events"]), "news": len(news["items"])}})
-    if changes or counters_changed:
+    if changes or counters_changed or schedule_changed:
         meta["last_content_change_at"] = now.isoformat()
     for kind, obj in (("details", details), ("events", events), ("news", news), ("meta", meta), ("counters", counters)):
         err = schemas.validate(kind, obj)
         if err:
             log.note(f"保存前検証NG: {err}。data/ は更新しません。")
             return "failed", False
+    if schedule_changed:
+        store.save("raid_schedule.json", raid_schedule)
     for name, obj in (("event_details.json", details), ("events.json", events), ("news.json", news), ("counters.json", counters), ("state.json", state), ("meta.json", meta)):
         store.save(name, obj)
     try:  # 旧 index.html 向け互換出力（第2段階で削除）。失敗しても本処理は成功扱い、ただしログに残す

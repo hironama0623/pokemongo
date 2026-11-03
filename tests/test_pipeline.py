@@ -482,3 +482,19 @@ class StaleDuplicateDropped(unittest.TestCase):
         st = {"bosses": {"raid:ランドロス(けしん)": mk("ランドロス(けしん)", "2026-11-01"), "raid:シャドウランドロス(けしん)": mk("シャドウランドロス(けしん)", "2026-11-03")}}
         self.assertEqual(ctr.drop_stale_duplicates(st), 1)
         self.assertEqual(list(st["bosses"]), ["raid:シャドウランドロス(けしん)"])
+
+
+class ScheduleNormalize(unittest.TestCase):
+    def test_normalize_and_validate(self):
+        from scripts import analyze as an, schemas
+        f = an.normalize_schedule({"items": [
+            {"name": "シャドウ トルネロス(けしん)", "tier": "★5", "start": "2026-11-04", "end": "2026-12-01", "event": None},
+            {"name": "ギラティナ(アナザー)", "start": "2026-11-04T05:00", "end": "2026-11-05T20:00"},
+            {"name": "ギラティナ(アナザー)", "start": "2026-11-04T05:00", "end": "2026-11-05T20:00"},   # 重複
+            {"name": "", "start": "2026-11-04T05:00", "end": "2026-11-05T20:00"},                      # 名前なし
+            {"name": "逆転", "start": "2026-11-05T05:00", "end": "2026-11-04T20:00"},                    # 終了が先
+        ]})
+        self.assertEqual(len(f["items"]), 2)
+        self.assertEqual(f["items"][0]["name"], "シャドウトルネロス(けしん)")
+        self.assertEqual((f["items"][0]["start"], f["items"][0]["end"]), ("2026-11-04T00:00", "2026-12-01T23:59"))
+        self.assertIsNone(schemas.validate("schedule_article", f))

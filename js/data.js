@@ -265,6 +265,38 @@ function applyAuto(entry, auto) {
 // レイドの格：★5以上・メガ・スーパーメガ・シャドウ・伝説 は対策ランキング対象。★1・★3 は「出現するか」だけ表示する
 const isLowTier = r => /★\s*[1-3]/.test(String(r.note || "")) && !/メガ|シャドウ|伝説|★\s*[4-9]/.test(String(r.note || "") + String(r.name || ""));
 
+// レイド日程表（9DBのレイドボス一覧から自動取得した data/raid_schedule.json）。ボスの開催期間はここを正とする
+let RAID_SCHEDULE = [];
+// カードを区別するキー。フォルムは、日程表にそのフォルムが載っているときだけ区別に使う（「ナイトヘッド+」のような技の注記は区別しない）
+const schedKey = n => {
+  const f = bossForm(n), has = f && RAID_SCHEDULE.some(it => bossBase(it.name) === bossBase(n) && bossForm(it.name) === f);
+  return `${bossBase(n)}|${has ? f : ""}|${bossClass(n) === "mega" ? "mega" : bossClass(n) === "shadow" ? "shadow" : "x"}`;
+};
+function schedRangesFor(name) {
+  const base = bossBase(name), f = bossForm(name), c = bossClass(name);
+  return RAID_SCHEDULE.filter(it => {
+    if (bossBase(it.name) !== base) return false;
+    const itf = bossForm(it.name);
+    if (f && itf && f !== itf) return false;   // 両方にフォルムが書かれていて違うなら別のボス
+    const ic = bossClass(it.name);
+    return (ic === "mega") === (c === "mega") && (ic === "shadow") === (c === "shadow");
+  });
+}
+// 日程表に載っているボスのカードは、期間を日程表の値に置き換える（複数の期間はそのまま並べる）。
+// 同じボス・区分のカードが複数ある場合（メガヤミラミの別イベント分など）は、どれがどの期間か決められないので触らない
+function applySchedule(data) {
+  if (!RAID_SCHEDULE.length) return;
+  const keys = Object.values(data).reduce((m, e) => { const k = schedKey(e.name); m[k] = (m[k] || 0) + 1; return m; }, {});
+  const now = Date.now(), fmt = d => `${d.getMonth() + 1}/${d.getDate()}`;
+  Object.values(data).forEach(e => {
+    if (e.isDmax || keys[schedKey(e.name)] > 1) return;
+    const rs = schedRangesFor(e.name).map(it => ({ s: new Date(it.start), e: new Date(it.end) })).filter(r => r.e >= now).sort((a, b) => a.s - b.s);
+    if (!rs.length) return;   // 日程表に今後の期間が無い場合は、既存の期間を残す
+    const text = rs.map(r => `${fmt(r.s)}〜${fmt(r.e)}`).filter((t, i, a) => a.indexOf(t) === i).join("・");
+    e._s = rs[0].s; e._e = rs[rs.length - 1].e; e.periodText = e.status = e.dateInfo = text;
+  });
+}
+
 function buildBattleData(autoBosses) {
   const bosses = Object.entries(autoBosses).map(([k, v]) => Object.assign({ key: k }, v))
     .filter(b => b.by_site && Object.keys(b.by_site).length && !/タイプ$/.test(b.name));
@@ -365,11 +397,12 @@ function buildBattleData(autoBosses) {
       };
     });
   });
+  applySchedule(RAID_DATA);
   LOW_RAIDS.sort((a, b) => a._e - b._e);
 }
 
 async function loadAll() {
-  const [mEv, mRaid, mDmax, mSeason, aEv, aDet, aNews, poke, meta, gopass, aCounters] = await Promise.all([
+  const [mEv, mRaid, mDmax, mSeason, aEv, aDet, aNews, poke, meta, gopass, aCounters, aSched] = await Promise.all([
     loadJSON("data/manual/events.json", { events: [] }),
     loadJSON("data/manual/raids.json", { raids: {} }),
     loadJSON("data/manual/dmax.json", { dmax: {} }),
@@ -381,7 +414,10 @@ async function loadAll() {
     loadJSON("data/meta.json", null),
     loadJSON("data/gopass.json", null),
     loadJSON("data/counters.json", { bosses: {} }),
+    loadJSON("data/raid_schedule.json", null),
   ]);
+  if (!aSched) { const i = DATA_ERRORS.indexOf("data/raid_schedule.json"); if (i >= 0) DATA_ERRORS.splice(i, 1); }   // まだ無い間はエラー扱いにしない
+  RAID_SCHEDULE = (aSched && aSched.items) || [];
   // gopass.json は任意（まだ無い場合は 404 になるので、エラー表示の対象にしない）
   if (!gopass) { const i = DATA_ERRORS.indexOf("data/gopass.json"); if (i >= 0) DATA_ERRORS.splice(i, 1); }
   RAID_DATA = mRaid.raids || {};
