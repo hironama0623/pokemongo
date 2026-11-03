@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/11/03 12:43 JST",
+  "updated_at": "2026/11/03 18:23 JST",
   "latest_news": [
     {
       "id": "news-1872118fe7",
@@ -264,6 +264,38 @@
       "title": "【情報追加】秋の遠足相棒といっしょ：フィールドリサーチが判明・追加（1件）",
       "details": "フィールドリサーチ：秋の遠足イベント期間中はイベント限定のフィールドリサーチタスクも登場。→ドードー・ラクライ・アノクサ・ライボルトのメガエナジー・ふしぎなアメ",
       "targetId": "ev-auto-autumn-buddy-trek-2026"
+    },
+    {
+      "id": "news-64a75a04f2",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【情報追加】レイドアワー：ギラティナ(アナザー)：レイドが判明・追加（1件）",
+      "details": "レイド：ギラティナ(アナザー)",
+      "targetId": "ev-auto-raid-hour-giratina-altered-2026-11-04"
+    },
+    {
+      "id": "news-4cec9c751c",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【情報追加】GOパス大きな足跡：野生が判明・追加（3件）",
+      "details": "野生：サルノリ、メッソン、ヒバニー",
+      "targetId": "ev-auto-go-pass-big-footprints"
+    },
+    {
+      "id": "news-48b46ffa07",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【情報追加】LAIC2027配信ボーナスタイムチャレンジ：フィールドリサーチが判明・追加（1件）",
+      "details": "フィールドリサーチ：Twitchのライブ配信30分以上視聴→ダイケンキ・ミジュマル",
+      "targetId": "ev-auto-laic-2027-twitch-drops"
+    },
+    {
+      "id": "news-f1107ff7f3",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【新イベント】GOパス10月",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-go-pass-10"
     },
     {
       "id": "news-2be65065e8",
@@ -5669,6 +5701,22 @@
         "note": "出典: gamewith"
       }
     ],
+    "ev-auto-laic-2027-twitch-drops": [
+      {
+        "task": "Twitchのライブ配信30分以上視聴",
+        "rewardDex": 503,
+        "rewardName": "ダイケンキ",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "Twitchのライブ配信30分以上視聴",
+        "rewardDex": 501,
+        "rewardName": "ミジュマル",
+        "shiny": false,
+        "note": "出典: gamewith"
+      }
+    ],
     "ev-auto-wakuwaku-pokemon-go-lab": [
       {
         "task": "Pokémon GO Lab.のポケストップを回す",
@@ -10907,6 +10955,30 @@
       ]
     },
     {
+      "id": "ev-auto-go-pass-big-footprints",
+      "title": "ev-auto-go-pass-big-footprints",
+      "wilds": [
+        {
+          "dex": 810,
+          "name": "サルノリ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 816,
+          "name": "メッソン",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 813,
+          "name": "ヒバニー",
+          "shiny": true,
+          "note": ""
+        }
+      ]
+    },
+    {
       "id": "ev-auto-november-2026-schedule",
       "title": "ev-auto-november-2026-schedule",
       "wilds": [
@@ -12746,6 +12818,34 @@
         "ジュラルドン パンツ",
         "スペシャルリサーチ（はがね/ドラゴン分岐）",
         "トレーナーポーズ"
+      ],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-go-pass-10",
+      "month": 10,
+      "title": "GOパス10月",
+      "barClass": "bar-collab",
+      "category": "collab",
+      "startDay": 6,
+      "endDay": 28,
+      "hasPaid": true,
+      "dateText": "2026年10月6日(火)10:00〜2026-11-03T10:00",
+      "summary": "ポケモンGOのGOパス10月のリワード内容と挑戦期間",
+      "freeFeatures": [
+        "カイオーガとの出会い",
+        "しあわせタマゴ",
+        "プレミアムバトルパス",
+        "ふしぎなアメXL"
+      ],
+      "paidFeatures": [
+        "キラチャーム",
+        "スーパーふかそうち",
+        "追加のパスタスク",
+        "カイオーガのアメXL"
       ],
       "wilds": [],
       "raids": [],
