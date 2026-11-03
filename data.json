@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/11/03 22:18 JST",
+  "updated_at": "2026/11/03 22:49 JST",
   "latest_news": [
     {
       "id": "news-1872118fe7",
@@ -1096,6 +1096,134 @@
       "title": "【日程変更】「黄昏時の願い」＆ スーパーメガレイドデイ",
       "details": "日程が更新されています：2026-11-24〜2026-12-01 → 2026-10-21〜2026-10-28",
       "targetId": "ev-tusk-wish-deoxys"
+    },
+    {
+      "id": "news-5db1c5a93a",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【情報追加】ダイマックスワンリキー 出現率UP ＆ マックスマンデー：レイドが判明・追加（1件）",
+      "details": "レイド：ダイマックスワンリキー",
+      "targetId": "ev-dmax-machop-week"
+    },
+    {
+      "id": "news-a8796f2a05",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【情報追加】ハロウィン2026 パート2：野生が判明・追加（1件）",
+      "details": "野生：モクロー",
+      "targetId": "ev-halloween-p2"
+    },
+    {
+      "id": "news-a55838493f",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【新イベント】GOパス11月(2026年)",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-go-pass-nov-2026"
+    },
+    {
+      "id": "news-b43af319ab",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【新イベント】GOパスハロウィン2026",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-go-pass-halloween-2026"
+    },
+    {
+      "id": "news-042c95f35f",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【情報追加】2026年11月のイベントスケジュール：レイドが判明・追加（9件）",
+      "details": "レイド：ギラティナ(オリジン)、ギラティナ(アナザー)、デオキシス(ディフェンス)、デオキシス(アタック)、デオキシス(スピード)、トルネロス(化身) ほか3件",
+      "targetId": "ev-auto-2026-11-events-schedule"
+    },
+    {
+      "id": "news-931992117a",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【新イベント】ADIDAS POKÉMONのタイムチャレンジ",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-adidas-pokemon-challenge"
+    },
+    {
+      "id": "news-f75ea257b4",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【情報追加】ADIDAS POKÉMONのタイムチャレンジ：タイムチャレンジが判明・追加（11件）",
+      "details": "タイムチャレンジ：ポケストップ・ジム10個を回す→ズリのみ、ポケモンを20匹捕まえる→おこう、5km探索する→モンスターボール、タマゴを10個かえす→パイルのみ、ポケモンを50匹捕まえる→いいキズぐすり、20km探索する→スーパーボール ほか5件",
+      "targetId": "ev-auto-adidas-pokemon-challenge"
+    },
+    {
+      "id": "news-0cf500691e",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【日程変更】スーパーメガレイドデイ：メガシャンデラ",
+      "details": "日程が更新されています：2026-10-31〜2026-11-01 → 2026-10-31〜2026-10-31",
+      "targetId": "ev-auto-super-mega-raid-day-chandelure"
+    },
+    {
+      "id": "news-2eb440562d",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【情報追加】スーパーメガレイドデイ：メガシャンデラ：レイドが判明・追加（1件）",
+      "details": "レイド：メガシャンデラ",
+      "targetId": "ev-auto-super-mega-raid-day-chandelure"
+    },
+    {
+      "id": "news-c7ff913c4c",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【情報追加】スーパーメガレイドデイ：メガシャンデラ：タイムチャレンジが判明・追加（5件）",
+      "details": "タイムチャレンジ：ポケモンを1匹捕まえる→バンギラス、ポケモンを15回強化する→バンギラスのメガエナジー、こうかばつぐんのスペシャルアタックを3回使ってバトルする→ほしのすな、レイドバトルで1回勝つ→わざマシンスペシャル、ゴーストタイプかほのおタイプのボスポケモンに勝つ→ヨーギラスのアメXL",
+      "targetId": "ev-auto-super-mega-raid-day-chandelure"
+    },
+    {
+      "id": "news-7d4fcc2628",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【情報追加】GOパス大きな足跡：サプライズボックスが判明・追加（4件）",
+      "details": "サプライズボックス：ハイパーボール××10、げんきのかたまり××5、プレミアムバトルパス××1、まんたんのくすり××5",
+      "targetId": "ev-auto-go-pass-big-footprints"
+    },
+    {
+      "id": "news-5e1f361a1b",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【情報追加】「ダイマックスユクシー・エムリット・アグノム」マックスバトルデイ：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：リワードを受け取る→ダイキノコ、リワードを受け取る→マックス粒子",
+      "targetId": "ev-auto-dynamax-uxie-mesprit-azelf-max-battle-day-2026"
+    },
+    {
+      "id": "news-67119981d0",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【情報追加】LAIC2027配信ボーナスタイムチャレンジ：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：Twitchのライブ配信を30分以上視聴する→ダイケンキ",
+      "targetId": "ev-auto-laic-2027-twitch-drops"
+    },
+    {
+      "id": "news-feef923733",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【新イベント】シーズン24：黄昏の旅路",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-season-24-twilight-trail"
+    },
+    {
+      "id": "news-e01bc16064",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【情報追加】シーズン24：黄昏の旅路：タマゴが判明・追加（43件）",
+      "details": "タマゴ：ピチュー(2km)、トゲピー(2km)、エレキッド(2km)、ブビィ(2km)、ルリリ(2km)、ズピカ(2km) ほか37件",
+      "targetId": "ev-auto-season-24-twilight-trail"
+    },
+    {
+      "id": "news-79bcda521c",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【情報追加】シーズン24：黄昏の旅路：フィールドリサーチが判明・追加（34件）",
+      "details": "フィールドリサーチ：相棒と探索してアメを3個もらう→マッギョ(ガラル)、相棒と歩いて2 個アメをもらう→プリン・ミミロル・ニャルマー・ホルビー・シシコ・デデンネ、2km 探索する→ガーディ・ポニータ(ガラル)・ポニータ・ヤドン(ガラル)・ヤドン・ラプラス・デルビル・ラクライ・ホエルコ・ハーデリア、タマゴを1個かえす→ガラガラ(アローラ)・ヨルノズク・リリーラ・アノプス・ミツハニー・タブンネ・クマシュン・ヌイコグマ・コソクムシ・パピモッチ、タマゴを2個かえす→ニューラ・クチート・ヒンバス、ポケストップ5個を回す→サンド(アローラ)・サンド・ノコッチ・ニューラ・ジグザグマ(ガラル)・ジグザグマ・ユキワラシ・ビッパ・ヒポポタス・ヤブクロン・コアルヒー・シズクモ・ホシガリス・サッチムシ・サシカマス・タマンチュラ・コジオ ほか28件",
+      "targetId": "ev-auto-season-24-twilight-trail"
     }
   ],
   "field_research_updates": {
@@ -1336,6 +1464,1268 @@
         "rewardName": "ふしぎなアメ",
         "shiny": false,
         "note": "出典: gamewith"
+      }
+    ],
+    "ev-auto-season-24-twilight-trail": [
+      {
+        "task": "相棒と探索してアメを3個もらう",
+        "rewardDex": 618,
+        "rewardName": "マッギョ(ガラル)（926）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "相棒と歩いて2 個アメをもらう",
+        "rewardDex": 39,
+        "rewardName": "プリン（310）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "相棒と歩いて2 個アメをもらう",
+        "rewardDex": 427,
+        "rewardName": "ミミロル（539）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "相棒と歩いて2 個アメをもらう",
+        "rewardDex": 431,
+        "rewardName": "ニャルマー（400）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "相棒と歩いて2 個アメをもらう",
+        "rewardDex": 659,
+        "rewardName": "ホルビー（237）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "相棒と歩いて2 個アメをもらう",
+        "rewardDex": 667,
+        "rewardName": "シシコ（611）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "相棒と歩いて2 個アメをもらう",
+        "rewardDex": 702,
+        "rewardName": "デデンネ（789）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "2km 探索する",
+        "rewardDex": 58,
+        "rewardName": "ガーディ（533）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "2km 探索する",
+        "rewardDex": 77,
+        "rewardName": "ポニータ(ガラル)（727）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "2km 探索する",
+        "rewardDex": 77,
+        "rewardName": "ポニータ（727）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "2km 探索する",
+        "rewardDex": 79,
+        "rewardName": "ヤドン(ガラル)（525）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "2km 探索する",
+        "rewardDex": 79,
+        "rewardName": "ヤドン（525）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "2km 探索する",
+        "rewardDex": 131,
+        "rewardName": "ラプラス（1131）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "2km 探索する",
+        "rewardDex": 228,
+        "rewardName": "デルビル（529）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "2km 探索する",
+        "rewardDex": 309,
+        "rewardName": "ラクライ（413）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "2km 探索する",
+        "rewardDex": 320,
+        "rewardName": "ホエルコ（629）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "2km 探索する",
+        "rewardDex": 507,
+        "rewardName": "ハーデリア（678）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "タマゴを1個かえす",
+        "rewardDex": 105,
+        "rewardName": "ガラガラ(アローラ)（786）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "タマゴを1個かえす",
+        "rewardDex": 164,
+        "rewardName": "ヨルノズク（867）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "タマゴを1個かえす",
+        "rewardDex": 345,
+        "rewardName": "リリーラ（553）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "タマゴを1個かえす",
+        "rewardDex": 347,
+        "rewardName": "アノプス（655）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "タマゴを1個かえす",
+        "rewardDex": 415,
+        "rewardName": "ミツハニー（212）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "タマゴを1個かえす",
+        "rewardDex": 531,
+        "rewardName": "タブンネ（721）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "タマゴを1個かえす",
+        "rewardDex": 613,
+        "rewardName": "クマシュン（458）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "タマゴを1個かえす",
+        "rewardDex": 759,
+        "rewardName": "ヌイコグマ（579）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "タマゴを1個かえす",
+        "rewardDex": 767,
+        "rewardName": "コソクムシ（215）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "タマゴを1個かえす",
+        "rewardDex": 926,
+        "rewardName": "パピモッチ（422）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "タマゴを2個かえす",
+        "rewardDex": 215,
+        "rewardName": "ニューラ（879）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "タマゴを2個かえす",
+        "rewardDex": 303,
+        "rewardName": "クチート（700）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "タマゴを2個かえす",
+        "rewardDex": 349,
+        "rewardName": "ヒンバス（117）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケストップ5個を回す",
+        "rewardDex": 27,
+        "rewardName": "サンド(アローラ)（554）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケストップ5個を回す",
+        "rewardDex": 27,
+        "rewardName": "サンド（540）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケストップ5個を回す",
+        "rewardDex": 206,
+        "rewardName": "ノコッチ（724）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケストップ5個を回す",
+        "rewardDex": 215,
+        "rewardName": "ニューラ（879）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケストップ5個を回す",
+        "rewardDex": 263,
+        "rewardName": "ジグザグマ(ガラル)（218）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケストップ5個を回す",
+        "rewardDex": 263,
+        "rewardName": "ジグザグマ（218）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケストップ5個を回す",
+        "rewardDex": 361,
+        "rewardName": "ユキワラシ（380）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケストップ5個を回す",
+        "rewardDex": 399,
+        "rewardName": "ビッパ（309）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケストップ5個を回す",
+        "rewardDex": 449,
+        "rewardName": "ヒポポタス（582）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケストップ5個を回す",
+        "rewardDex": 568,
+        "rewardName": "ヤブクロン（428）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケストップ5個を回す",
+        "rewardDex": 580,
+        "rewardName": "コアルヒー（367）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケストップ5個を回す",
+        "rewardDex": 751,
+        "rewardName": "シズクモ（306）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケストップ5個を回す",
+        "rewardDex": 819,
+        "rewardName": "ホシガリス（404）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケストップ5個を回す",
+        "rewardDex": 824,
+        "rewardName": "サッチムシ（153）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケストップ5個を回す",
+        "rewardDex": 846,
+        "rewardName": "サシカマス（387）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケストップ5個を回す",
+        "rewardDex": 917,
+        "rewardName": "タマンチュラ（244）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケストップ5個を回す",
+        "rewardDex": 932,
+        "rewardName": "コジオ（414）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケストップ・ジム3個を回す",
+        "rewardDex": 84,
+        "rewardName": "ドードー（514）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケストップ・ジム3個を回す",
+        "rewardDex": 280,
+        "rewardName": "ラルトス（231）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケストップ・ジム3個を回す",
+        "rewardDex": 223,
+        "rewardName": "テッポウオ（391）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケストップ・ジム3個を回す",
+        "rewardDex": 304,
+        "rewardName": "ココドラ（560）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "あくタイプのポケモンを10匹捕まえる",
+        "rewardDex": 198,
+        "rewardName": "ヤミカラス（669）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "あくタイプのポケモンを10匹捕まえる",
+        "rewardDex": 215,
+        "rewardName": "ニューラ（879）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "あくタイプのポケモンを10匹捕まえる",
+        "rewardDex": 261,
+        "rewardName": "ポチエナ（290）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "あくタイプのポケモンを10匹捕まえる",
+        "rewardDex": 509,
+        "rewardName": "チョロネコ（330）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "あくタイプのポケモンを10匹捕まえる",
+        "rewardDex": 686,
+        "rewardName": "マーイーカ（397）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "あくタイプのポケモンを10匹捕まえる",
+        "rewardDex": 827,
+        "rewardName": "クスネ（306）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "くさタイプのポケモンを10匹捕まえる",
+        "rewardDex": 191,
+        "rewardName": "ヒマナッツ（169）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "くさタイプのポケモンを10匹捕まえる",
+        "rewardDex": 273,
+        "rewardName": "タネボー（256）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "くさタイプのポケモンを10匹捕まえる",
+        "rewardDex": 285,
+        "rewardName": "キノココ（347）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "くさタイプのポケモンを10匹捕まえる",
+        "rewardDex": 548,
+        "rewardName": "チュリネ（441）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "くさタイプのポケモンを10匹捕まえる",
+        "rewardDex": 672,
+        "rewardName": "メェークル（536）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "くさタイプのポケモンを10匹捕まえる",
+        "rewardDex": 928,
+        "rewardName": "ミニーブ（366）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "みずタイプのポケモンを10匹捕まえる",
+        "rewardDex": 260,
+        "rewardName": "ラグラージ（1274）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ゴーストタイプのポケモンを10匹捕まえる",
+        "rewardDex": 92,
+        "rewardName": "ゴース（527）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ゴーストタイプのポケモンを10匹捕まえる",
+        "rewardDex": 353,
+        "rewardName": "カゲボウズ（436）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ゴーストタイプのポケモンを10匹捕まえる",
+        "rewardDex": 355,
+        "rewardName": "ヨマワル（302）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ゴーストタイプのポケモンを10匹捕まえる",
+        "rewardDex": 425,
+        "rewardName": "フワンテ（513）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ゴーストタイプのポケモンを10匹捕まえる",
+        "rewardDex": 562,
+        "rewardName": "デスマス（420）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ゴーストタイプのポケモンを10匹捕まえる",
+        "rewardDex": 622,
+        "rewardName": "ゴビット（509）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ドラゴンタイプのポケモンを1匹捕まえる",
+        "rewardDex": 147,
+        "rewardName": "ミニリュウ（430）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ドラゴンタイプのポケモンを1匹捕まえる",
+        "rewardDex": 371,
+        "rewardName": "タツベイ（495）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ドラゴンタイプのポケモンを1匹捕まえる",
+        "rewardDex": 610,
+        "rewardName": "キバゴ（586）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを7匹捕まえる",
+        "rewardDex": 129,
+        "rewardName": "コイキング（117）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを7匹捕まえる",
+        "rewardDex": 759,
+        "rewardName": "ヌイコグマ（579）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを7匹捕まえる",
+        "rewardDex": 767,
+        "rewardName": "コソクムシ（215）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを7種類捕まえる",
+        "rewardDex": 54,
+        "rewardName": "コダック（474）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを7種類捕まえる",
+        "rewardDex": 119,
+        "rewardName": "アズマオウ（926）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを7種類捕まえる",
+        "rewardDex": 183,
+        "rewardName": "マリル（197）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを7種類捕まえる",
+        "rewardDex": 216,
+        "rewardName": "ヒメグマ（569）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを7種類捕まえる",
+        "rewardDex": 271,
+        "rewardName": "ハスブレロ（513）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを7種類捕まえる",
+        "rewardDex": 434,
+        "rewardName": "スカンプー（493）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを7種類捕まえる",
+        "rewardDex": 510,
+        "rewardName": "レパルダス（791）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを7種類捕まえる",
+        "rewardDex": 554,
+        "rewardName": "ダルマッカ（618）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを7種類捕まえる",
+        "rewardDex": 692,
+        "rewardName": "ウデッポウ（466）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを7種類捕まえる",
+        "rewardDex": 702,
+        "rewardName": "デデンネ（789）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを7種類捕まえる",
+        "rewardDex": 742,
+        "rewardName": "アブリー（380）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを7種類捕まえる",
+        "rewardDex": 928,
+        "rewardName": "ミニーブ（366）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "天候ブーストを受けているポケモンを5匹捕まえる",
+        "rewardDex": 37,
+        "rewardName": "ロコン（378）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "天候ブーストを受けているポケモンを5匹捕まえる",
+        "rewardDex": 60,
+        "rewardName": "ニョロモ（355）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "天候ブーストを受けているポケモンを5匹捕まえる",
+        "rewardDex": 278,
+        "rewardName": "キャモメ（328）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "天候ブーストを受けているポケモンを5匹捕まえる",
+        "rewardDex": 449,
+        "rewardName": "ヒポポタス（582）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "天候ブーストを受けているポケモンを5匹捕まえる",
+        "rewardDex": 459,
+        "rewardName": "ユキカブリ（497）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "天候ブーストを受けているポケモンを5匹捕まえる",
+        "rewardDex": 524,
+        "rewardName": "ダンゴロ（516）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "天候ブーストを受けているポケモンを5匹捕まえる",
+        "rewardDex": 582,
+        "rewardName": "バニプッチ（443）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを1匹進化させる",
+        "rewardDex": 117,
+        "rewardName": "シードラ（897）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを1匹進化させる",
+        "rewardDex": 217,
+        "rewardName": "リングマ（1262）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを1匹進化させる",
+        "rewardDex": 219,
+        "rewardName": "マグカルゴ（729）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを1匹進化させる",
+        "rewardDex": 326,
+        "rewardName": "ブーピッグ（1015）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを1匹進化させる",
+        "rewardDex": 544,
+        "rewardName": "ホイーガ（490）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを1匹進化させる",
+        "rewardDex": 603,
+        "rewardName": "シビビール（735）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを1匹進化させる",
+        "rewardDex": 660,
+        "rewardName": "ホルード（646）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを1匹進化させる",
+        "rewardDex": 133,
+        "rewardName": "イーブイ（459）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを3回強化する",
+        "rewardDex": 1,
+        "rewardName": "フシギダネ（477）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを3回強化する",
+        "rewardDex": 4,
+        "rewardName": "ヒトカゲ（420）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを3回強化する",
+        "rewardDex": 7,
+        "rewardName": "ゼニガメ（405）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを5回強化する",
+        "rewardDex": 495,
+        "rewardName": "ツタージャ（364）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを5回強化する",
+        "rewardDex": 498,
+        "rewardName": "ポカブ（464）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを5回強化する",
+        "rewardDex": 501,
+        "rewardName": "ミジュマル（448）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを5回強化する",
+        "rewardDex": 3,
+        "rewardName": "フシギバナ（1166）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを7回強化する",
+        "rewardDex": 722,
+        "rewardName": "モクロー（453）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを7回強化する",
+        "rewardDex": 725,
+        "rewardName": "ニャビー（443）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを7回強化する",
+        "rewardDex": 728,
+        "rewardName": "アシマリ（483）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "野生のポケモンのGOスナップショット写真を撮る",
+        "rewardDex": 328,
+        "rewardName": "ナックラー（546）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "野生のポケモンのGOスナップショット写真を撮る",
+        "rewardDex": 453,
+        "rewardName": "グレッグル（408）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "野生のポケモンのGOスナップショット写真を撮る",
+        "rewardDex": 546,
+        "rewardName": "モンメン（300）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "GOロケット団したっぱとのバトルで1回勝つ",
+        "rewardDex": 24,
+        "rewardName": "アーボック（823）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "GOロケット団したっぱとのバトルで1回勝つ",
+        "rewardDex": 52,
+        "rewardName": "ニャース（320）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "GOロケット団したっぱとのバトルで1回勝つ",
+        "rewardDex": 110,
+        "rewardName": "マタドガス（982）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ステッカー付きのギフトを3個贈る",
+        "rewardDex": 35,
+        "rewardName": "ピッピ（495）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ステッカー付きのギフトを3個贈る",
+        "rewardDex": 39,
+        "rewardName": "プリン（310）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ステッカー付きのギフトを3個贈る",
+        "rewardDex": 133,
+        "rewardName": "イーブイ（459）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ステッカー付きのギフトを3個贈る",
+        "rewardDex": 176,
+        "rewardName": "トゲチック（732）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを交換する",
+        "rewardDex": 61,
+        "rewardName": "ニョロゾ（608）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを交換する",
+        "rewardDex": 64,
+        "rewardName": "ユンゲラー（882）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを交換する",
+        "rewardDex": 67,
+        "rewardName": "ゴーリキー（870）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを交換する",
+        "rewardDex": 93,
+        "rewardName": "ゴースト（841）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "レイドバトルで1回勝つ",
+        "rewardDex": 131,
+        "rewardName": "ラプラス（1131）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "レイドバトルで1回勝つ",
+        "rewardDex": 134,
+        "rewardName": "シャワーズ（1335）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "レイドバトルで1回勝つ",
+        "rewardDex": 135,
+        "rewardName": "サンダース（1238）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "レイドバトルで1回勝つ",
+        "rewardDex": 136,
+        "rewardName": "ブースター（1298）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "レイドバトルで1回勝つ",
+        "rewardDex": 143,
+        "rewardName": "カビゴン（1382）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "レイドバトルで1回勝つ",
+        "rewardDex": 221,
+        "rewardName": "イノムー（1005）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "レイドバトルで1回勝つ",
+        "rewardDex": 364,
+        "rewardName": "トドグラー（735）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "レイドバトルで1回勝つ",
+        "rewardDex": 375,
+        "rewardName": "メタング（738）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "レイドバトルで1回勝つ",
+        "rewardDex": 404,
+        "rewardName": "ルクシオ（636）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "レイドバトルで1回勝つ",
+        "rewardDex": 444,
+        "rewardName": "ガバイト（803）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "レイドバトルで1回勝つ",
+        "rewardDex": 608,
+        "rewardName": "ランプラー（732）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "レイドバトルで1回勝つ",
+        "rewardDex": 662,
+        "rewardName": "ヒノヤコマ（629）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "レイドバトルで5回勝つ",
+        "rewardDex": 103,
+        "rewardName": "ナッシー(アローラ)（1292）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "レイドバトルで5回勝つ",
+        "rewardDex": 105,
+        "rewardName": "ガラガラ(アローラ)（786）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "レイドバトルで5回勝つ",
+        "rewardDex": 142,
+        "rewardName": "プテラ（1193）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "レベル3以上のレイドバトルで1回勝つ",
+        "rewardDex": 564,
+        "rewardName": "プロトーガ（638）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "レベル3以上のレイドバトルで1回勝つ",
+        "rewardDex": 566,
+        "rewardName": "アーケン（789）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "エクセレントスローを2回投げる",
+        "rewardDex": 147,
+        "rewardName": "ミニリュウ（430）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "エクセレントスローを3回連続で投げる",
+        "rewardDex": 246,
+        "rewardName": "ヨーギラス（445）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "エクセレントスローを3回連続で投げる",
+        "rewardDex": 374,
+        "rewardName": "ダンバル（418）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "エクセレントスローを3回連続で投げる",
+        "rewardDex": 443,
+        "rewardName": "フカマル（477）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "カーブボールのグレートスローを5回連続で投げる",
+        "rewardDex": 327,
+        "rewardName": "パッチール4（523）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "カーブボールのグレートスローを5回連続で投げる",
+        "rewardDex": 327,
+        "rewardName": "パッチール5（523）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "カーブボールを10回投げる",
+        "rewardDex": 74,
+        "rewardName": "イシツブテ(アローラ)（554）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "カーブボールを10回投げる",
+        "rewardDex": 125,
+        "rewardName": "エレブー（1000）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "カーブボールを10回投げる",
+        "rewardDex": 296,
+        "rewardName": "マクノシタ（350）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "カーブボールを10回投げる",
+        "rewardDex": 333,
+        "rewardName": "チルット（353）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "カーブボールを10回投げる",
+        "rewardDex": 343,
+        "rewardName": "ヤジロン（337）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "カーブボールを10回投げる",
+        "rewardDex": 356,
+        "rewardName": "サマヨール（682）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "カーブボールを10回投げる",
+        "rewardDex": 397,
+        "rewardName": "ムクバード（556）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "カーブボールを10回投げる",
+        "rewardDex": 587,
+        "rewardName": "エモンガ（700）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "カーブボールを10回投げる",
+        "rewardDex": 597,
+        "rewardName": "テッシード（403）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "カーブボールを10回投げる",
+        "rewardDex": 915,
+        "rewardName": "グルトン（314）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "グレートスローを3回投げる",
+        "rewardDex": 138,
+        "rewardName": "オムナイト（662）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "グレートスローを3回投げる",
+        "rewardDex": 140,
+        "rewardName": "カブト（587）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "グレートスローを3回投げる",
+        "rewardDex": 366,
+        "rewardName": "パールル（544）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "グレートスローを3回投げる",
+        "rewardDex": 605,
+        "rewardName": "リグレー（593）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "グレートスローを3回投げる",
+        "rewardDex": 688,
+        "rewardName": "カメテテ（405）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "グレートスローを3回連続で投げる",
+        "rewardDex": 345,
+        "rewardName": "リリーラ（553）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "グレートスローを3回連続で投げる",
+        "rewardDex": 347,
+        "rewardName": "アノプス（655）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ナイススローを10回投げる",
+        "rewardDex": 126,
+        "rewardName": "ブーバー（1026）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ナイススローを10回投げる",
+        "rewardDex": 129,
+        "rewardName": "コイキング（117）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ナイススローを10回投げる",
+        "rewardDex": 191,
+        "rewardName": "ヒマナッツ（169）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ナイススローを10回投げる",
+        "rewardDex": 274,
+        "rewardName": "コノハナ（526）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ナイススローを10回投げる",
+        "rewardDex": 524,
+        "rewardName": "ダンゴロ（516）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ナイススローを10回投げる",
+        "rewardDex": 618,
+        "rewardName": "マッギョ(ガラル)（926）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ナイススローを10回投げる",
+        "rewardDex": 618,
+        "rewardName": "マッギョ（926）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ナイススローを10回投げる",
+        "rewardDex": 732,
+        "rewardName": "ケララッパ（633）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ナイススローを10回投げる",
+        "rewardDex": 747,
+        "rewardName": "ヒドイデ（416）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ナイススローを10回投げる",
+        "rewardDex": 919,
+        "rewardName": "マメバッタ（253）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ナイススローを5回投げる",
+        "rewardDex": 50,
+        "rewardName": "ディグダ(アローラ)（292）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ナイススローを5回投げる",
+        "rewardDex": 50,
+        "rewardName": "ディグダ（289）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ナイススローを5回投げる",
+        "rewardDex": 185,
+        "rewardName": "ウソッキー（920）",
+        "shiny": false,
+        "note": "出典: 9db"
       }
     ]
   },
@@ -1996,6 +3386,12 @@
           "dex": 94,
           "name": "ゲンガー(魔女帽子)",
           "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 722,
+          "name": "モクロー",
+          "shiny": false,
           "note": ""
         },
         {
@@ -3898,6 +5294,102 @@
         "Twitch配信視聴によるタイムチャレンジ入手",
         "Twitch配信視聴による追加リワード"
       ],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-go-pass-nov-2026",
+      "month": 11,
+      "title": "GOパス11月(2026年)",
+      "barClass": "bar-collab",
+      "category": "collab",
+      "startDay": 3,
+      "endDay": 28,
+      "hasPaid": true,
+      "dateText": "2026年11月3日(火)10:00〜2026年12月1日(火)10:00",
+      "summary": "GOポイントを集めてランクを上げ、進行度に応じて報酬が貰える期間限定機能。有料の「GOパスデラックス」も販売。",
+      "freeFeatures": [
+        "グラードンとの出会い",
+        "ポケコイン",
+        "しあわせタマゴ",
+        "ふしぎなアメXL",
+        "ほしのすな"
+      ],
+      "paidFeatures": [
+        "追加のポケコイン",
+        "スーパーふかそうち",
+        "追加のポケモン遭遇",
+        "追加のパスタスク"
+      ],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-go-pass-halloween-2026",
+      "month": 10,
+      "title": "GOパスハロウィン2026",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 27,
+      "endDay": 28,
+      "hasPaid": true,
+      "dateText": "2026年10月27日(火)10:00~11月5日(木)20:00",
+      "summary": "GOポイントを集めてランクを上げ、進行度に応じて報酬が貰える期間限定機能。有料版のデラックスも登場。",
+      "freeFeatures": [
+        "ポケモンと遭遇",
+        "イベントにぴったりなポケモンのアメ",
+        "ふしぎなアメ×10",
+        "ハイパーボール",
+        "ランク10ボーナス：ポケモン捕獲時アメ2倍",
+        "ランク20ボーナス：ポケモン捕獲時すな2倍"
+      ],
+      "paidFeatures": [
+        "着せ替えアイテム（パティシエ トップス、パティシエ パンツ）",
+        "ふしぎなアメXL×10",
+        "プレミアムバトルパス",
+        "ランク10ボーナス：ポケモン捕獲時アメ3倍",
+        "ランク20ボーナス：ポケモン捕獲時すな3倍"
+      ],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-adidas-pokemon-challenge",
+      "month": 9,
+      "title": "ADIDAS POKÉMONのタイムチャレンジ",
+      "barClass": "bar-collab",
+      "category": "collab",
+      "startDay": 25,
+      "endDay": 28,
+      "hasPaid": false,
+      "dateText": "2026年9月25日(金)~2027年2月13日(土)20:00",
+      "summary": "対象のadidas店舗を訪れることで入手できるタイムチャレンジ。着せ替えアイテムやルカリオ、ルカリオのメガエナジーが入手可能。",
+      "freeFeatures": [],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-season-24-twilight-trail",
+      "month": 9,
+      "title": "シーズン24：黄昏の旅路",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 8,
+      "endDay": 28,
+      "hasPaid": false,
+      "dateText": "2026/9/8(火)10:00 〜 12/1(火)10:00",
+      "summary": "シーズン24：黄昏の旅路",
+      "freeFeatures": [],
       "paidFeatures": [],
       "wilds": [],
       "raids": [],
