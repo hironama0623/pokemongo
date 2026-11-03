@@ -699,6 +699,40 @@
       ]
     },
     {
+      "id": "news-4657e2a86a",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "kind": "event_update",
+      "title": "【情報追加】GOパスハロウィン2026：サプライズボックスが判明・追加（1件）",
+      "details": "サプライズボックス：GOポイント××1000",
+      "targetId": "ev-auto-go-pass-halloween-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/579895",
+          "fetched_at": "2026-11-03T20:07:07.757033+09:00",
+          "article_updated": "2026-11-03T17:08:10+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-a3c8422d63",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "kind": "event_update",
+      "title": "【情報追加】GOパス大きな足跡：サプライズボックスが判明・追加（2件）",
+      "details": "サプライズボックス：GOパス、GOパスデラックス",
+      "targetId": "ev-auto-go-pass-big-footprints",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/585785",
+          "fetched_at": "2026-11-03T20:07:07.757033+09:00",
+          "article_updated": "2026-11-01T21:49:18+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-2be65065e8",
       "date": "2026-11-02",
       "date_label": "11/2",
