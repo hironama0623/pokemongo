@@ -410,6 +410,159 @@
       ]
     },
     {
+      "id": "news-eb54d53a11",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "kind": "new_event",
+      "title": "【新イベント】「ワイルドエリア2026」の追加最新情報",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-wild-area-2026-update",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10796/",
+          "fetched_at": "2026-11-03T12:43:50.629278+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-e65677d1d7",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "kind": "schedule_changed",
+      "title": "【日程変更】GOパスハロウィン2026",
+      "details": "日程が更新されています：2026-10-27〜2026-11-05 → 2026-10-27〜2026-11-01",
+      "targetId": "ev-auto-go-pass-halloween-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/579894",
+          "fetched_at": "2026-11-03T12:43:50.629278+09:00",
+          "article_updated": "2026-11-02T04:10:33+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-427fd9c6aa",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "kind": "event_update",
+      "title": "【情報追加】GOパスハロウィン2026：野生が判明・追加（9件）",
+      "details": "野生：ズバット(トップハット)、ポッチャマ(ハロウィン)、オンバット(カチューシャ)、バケッチャ、ヨマワル、ムウマ ほか3件",
+      "targetId": "ev-auto-go-pass-halloween-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/579894",
+          "fetched_at": "2026-11-03T12:43:50.629278+09:00",
+          "article_updated": "2026-11-02T04:10:33+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-d73799643f",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "kind": "event_update",
+      "title": "【情報追加】GOパスハロウィン2026：レイドが判明・追加（2件）",
+      "details": "レイド：ピカチュウ(ハット&ケープ)、ヤバチャ(リボン)",
+      "targetId": "ev-auto-go-pass-halloween-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/579894",
+          "fetched_at": "2026-11-03T12:43:50.629278+09:00",
+          "article_updated": "2026-11-02T04:10:33+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-6ea5702454",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "kind": "event_update",
+      "title": "【情報追加】GOパスハロウィン2026：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：リワードを受け取る→ふしぎなアメ・ピカチュウ(ハット&ケープ)",
+      "targetId": "ev-auto-go-pass-halloween-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/579894",
+          "fetched_at": "2026-11-03T12:43:50.629278+09:00",
+          "article_updated": "2026-11-02T04:10:33+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-c859fe8b22",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "kind": "event_update",
+      "title": "【情報追加】GOパスハロウィン2026：サプライズボックスが判明・追加（8件）",
+      "details": "サプライズボックス：ズバット(トップハット)、フワライド(ハロウィン)、ゲンガー(ハロウィン)、ロコン(ハロウィン)、ピカチュウのアメ××6、ズバットのアメ××6 ほか2件",
+      "targetId": "ev-auto-go-pass-halloween-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/579894",
+          "fetched_at": "2026-11-03T12:43:50.629278+09:00",
+          "article_updated": "2026-11-02T04:10:33+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-b8e59a97be",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "kind": "event_update",
+      "title": "【情報追加】イオンモール ハロウィン タイムチャレンジ：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：タイムチャレンジパート1→ピカチュウ(魔女帽子)、タイムチャレンジパート2→ピカチュウ(魔女帽子)",
+      "targetId": "ev-aeon-halloween",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/579901",
+          "fetched_at": "2026-11-03T12:43:50.629278+09:00",
+          "article_updated": "2026-11-01T22:12:11+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-3addacd25a",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "kind": "event_update",
+      "title": "【情報追加】ポケモンナイトアウト：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：ポケモンナイトアウトの無料タイムチャレンジ→ポケモンナイトアウト野球ジャージ・ストリンダー(ハイ)・ストリンダー(ロー)",
+      "targetId": "ev-auto-pokemon-night-out",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/583322",
+          "fetched_at": "2026-11-03T12:43:50.629278+09:00",
+          "article_updated": "2026-10-28T17:59:21+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-3464f788be",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "kind": "event_update",
+      "title": "【情報追加】秋の遠足相棒といっしょ：フィールドリサーチが判明・追加（1件）",
+      "details": "フィールドリサーチ：秋の遠足イベント期間中はイベント限定のフィールドリサーチタスクも登場。→ドードー・ラクライ・アノクサ・ライボルトのメガエナジー・ふしぎなアメ",
+      "targetId": "ev-auto-autumn-buddy-trek-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/578533",
+          "fetched_at": "2026-11-03T12:43:50.629278+09:00",
+          "article_updated": "2026-10-22T03:58:24+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-2be65065e8",
       "date": "2026-11-02",
       "date_label": "11/2",

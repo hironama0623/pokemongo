@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/11/03 11:36 JST",
+  "updated_at": "2026/11/03 12:43 JST",
   "latest_news": [
     {
       "id": "news-1872118fe7",
@@ -192,6 +192,78 @@
       "title": "【情報追加】ダイマックスユクシー・エムリット・アグノムのマックスバトルデイ：タイムチャレンジが判明・追加（1件）",
       "details": "タイムチャレンジ：リワードを受け取る→ダイキnoshi",
       "targetId": "ev-auto-max-battle-day-uxie-mesprit-azelf"
+    },
+    {
+      "id": "news-eb54d53a11",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【新イベント】「ワイルドエリア2026」の追加最新情報",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-wild-area-2026-update"
+    },
+    {
+      "id": "news-e65677d1d7",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【日程変更】GOパスハロウィン2026",
+      "details": "日程が更新されています：2026-10-27〜2026-11-05 → 2026-10-27〜2026-11-01",
+      "targetId": "ev-auto-go-pass-halloween-2026"
+    },
+    {
+      "id": "news-427fd9c6aa",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【情報追加】GOパスハロウィン2026：野生が判明・追加（9件）",
+      "details": "野生：ズバット(トップハット)、ポッチャマ(ハロウィン)、オンバット(カチューシャ)、バケッチャ、ヨマワル、ムウマ ほか3件",
+      "targetId": "ev-auto-go-pass-halloween-2026"
+    },
+    {
+      "id": "news-d73799643f",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【情報追加】GOパスハロウィン2026：レイドが判明・追加（2件）",
+      "details": "レイド：ピカチュウ(ハット&ケープ)、ヤバチャ(リボン)",
+      "targetId": "ev-auto-go-pass-halloween-2026"
+    },
+    {
+      "id": "news-6ea5702454",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【情報追加】GOパスハロウィン2026：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：リワードを受け取る→ふしぎなアメ・ピカチュウ(ハット&ケープ)",
+      "targetId": "ev-auto-go-pass-halloween-2026"
+    },
+    {
+      "id": "news-c859fe8b22",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【情報追加】GOパスハロウィン2026：サプライズボックスが判明・追加（8件）",
+      "details": "サプライズボックス：ズバット(トップハット)、フワライド(ハロウィン)、ゲンガー(ハロウィン)、ロコン(ハロウィン)、ピカチュウのアメ××6、ズバットのアメ××6 ほか2件",
+      "targetId": "ev-auto-go-pass-halloween-2026"
+    },
+    {
+      "id": "news-b8e59a97be",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【情報追加】イオンモール ハロウィン タイムチャレンジ：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：タイムチャレンジパート1→ピカチュウ(魔女帽子)、タイムチャレンジパート2→ピカチュウ(魔女帽子)",
+      "targetId": "ev-aeon-halloween"
+    },
+    {
+      "id": "news-3addacd25a",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【情報追加】ポケモンナイトアウト：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：ポケモンナイトアウトの無料タイムチャレンジ→ポケモンナイトアウト野球ジャージ・ストリンダー(ハイ)・ストリンダー(ロー)",
+      "targetId": "ev-auto-pokemon-night-out"
+    },
+    {
+      "id": "news-3464f788be",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【情報追加】秋の遠足相棒といっしょ：フィールドリサーチが判明・追加（1件）",
+      "details": "フィールドリサーチ：秋の遠足イベント期間中はイベント限定のフィールドリサーチタスクも登場。→ドードー・ラクライ・アノクサ・ライボルトのメガエナジー・ふしぎなアメ",
+      "targetId": "ev-auto-autumn-buddy-trek-2026"
     },
     {
       "id": "news-2be65065e8",
@@ -5537,6 +5609,41 @@
         "rewardName": "ふしぎなアメ",
         "shiny": false,
         "note": "出典: gamewith"
+      },
+      {
+        "task": "秋の遠足イベント期間中はイベント限定のフィールドリサーチタスクも登場。",
+        "rewardDex": 84,
+        "rewardName": "ドードー",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "秋の遠足イベント期間中はイベント限定のフィールドリサーチタスクも登場。",
+        "rewardDex": 309,
+        "rewardName": "ラクライ",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "秋の遠足イベント期間中はイベント限定のフィールドリサーチタスクも登場。",
+        "rewardDex": 946,
+        "rewardName": "アノクサ",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "秋の遠足イベント期間中はイベント限定のフィールドリサーチタスクも登場。",
+        "rewardDex": 310,
+        "rewardName": "ライボルトのメガエナジー",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "秋の遠足イベント期間中はイベント限定のフィールドリサーチタスクも登場。",
+        "rewardDex": 25,
+        "rewardName": "ふしぎなアメ",
+        "shiny": false,
+        "note": "出典: gamewith"
       }
     ],
     "ev-auto-go-pass-autumn-trek": [
@@ -9504,6 +9611,90 @@
       ]
     },
     {
+      "id": "ev-auto-go-pass-halloween-2026",
+      "title": "ev-auto-go-pass-halloween-2026",
+      "wilds": [
+        {
+          "dex": 41,
+          "name": "ズバット(トップハット)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 393,
+          "name": "ポッチャマ(ハロウィン)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 714,
+          "name": "オンバット(カチューシャ)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 710,
+          "name": "バケッチャ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 355,
+          "name": "ヨマワル",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 200,
+          "name": "ムウマ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 426,
+          "name": "フワライド(ハロウィン)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 94,
+          "name": "ゲンガー(ハロウィン)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 37,
+          "name": "ロコン(ハロウィン)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 41,
+          "name": "ズバット(トップハット)",
+          "shiny": false,
+          "note": "サプライズボックス"
+        },
+        {
+          "dex": 426,
+          "name": "フワライド(ハロウィン)",
+          "shiny": false,
+          "note": "サプライズボックス"
+        },
+        {
+          "dex": 94,
+          "name": "ゲンガー(ハロウィン)",
+          "shiny": false,
+          "note": "サプライズボックス"
+        },
+        {
+          "dex": 37,
+          "name": "ロコン(ハロウィン)",
+          "shiny": false,
+          "note": "サプライズボックス"
+        }
+      ]
+    },
+    {
       "id": "ev-auto-dia-de-muertos-2026",
       "title": "ev-auto-dia-de-muertos-2026",
       "wilds": [
@@ -12532,6 +12723,30 @@
       "summary": "2026年11月2日〜11月8日のイベントスケジュールまとめ。ギラティナ（アナザー）レイド、メガヤミラミ、シャドウトルネロス、ダイマックスワンリキー、ワイルドエリア仙台・メキシコシティ、光のフェスティバル（インド限定）などが開催されます。",
       "freeFeatures": [],
       "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-wild-area-2026-update",
+      "month": 11,
+      "title": "「ワイルドエリア2026」の追加最新情報",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 6,
+      "endDay": 15,
+      "hasPaid": true,
+      "dateText": "2026年11月6日〜11月15日",
+      "summary": "「Pokémon GO ワイルドエリア2026」に関するロケーション背景、マックスバトルのプライベートロビー機能、グローバルイベントのスペシャルリサーチ分岐、着せ替えアイテム等の最新情報まとめ。",
+      "freeFeatures": [
+        "GO ワイルドエリア 2026 Tシャツ（紫）"
+      ],
+      "paidFeatures": [
+        "ジュラルドン パンツ",
+        "スペシャルリサーチ（はがね/ドラゴン分岐）",
+        "トレーナーポーズ"
+      ],
       "wilds": [],
       "raids": [],
       "fieldResearches": [],
