@@ -3,7 +3,7 @@ import re
 
 from . import pokedex
 
-_BAD_NAME = re.compile(r"[0-9*＊]|^通\s*常|シ\s*ャ\s*ド\s*ウ")
+_BAD_NAME = re.compile(r"[0-9*＊]|^(?:通\s*常|シ\s*ャ\s*ド\s*ウ|メ\s*ガ)$")   # 見出し語そのものだけを弾く（シャドウバンギラス等は残す）
 
 _PAREN = str.maketrans({"（": "(", "）": ")"})
 
@@ -24,11 +24,20 @@ def valid_counter(c, names):
     return bool(names.get(d) or names.get(n) or pokedex.contained_species(n, names))
 
 
+def valid_boss(name, names):
+    """ボス名が実在のポケモンに解決できること（「あくタイプ」のような分類名を除く）。"""
+    return valid_counter({"name": name}, names) and not str(name).endswith("タイプ")
+
+
 def sanitize(store, names):
     """保存済みの対策データから、無効な項目（ポケモン名として成り立たないもの）を取り除く。空になったサイト/ボスは消す。戻り値: 取り除いた件数。"""
     removed = 0
     for key in list(store["bosses"]):
         b = store["bosses"][key]
+        if not valid_boss(b["name"], names):
+            removed += sum(len(s["counters"]) for s in b["by_site"].values())
+            del store["bosses"][key]
+            continue
         for site in list(b["by_site"]):
             cs = b["by_site"][site]["counters"]
             good = [c for c in cs if valid_counter(c, names)]
@@ -46,6 +55,8 @@ def merge_counters(store, facts, src, names, unresolved, now):
     """facts（normalize済み）を store["bosses"] に入れる。同じサイト・同じボスは、より新しい記事で置き換える。戻り値: 更新したボス名のリスト。"""
     touched = []
     for b in facts.get("bosses", []):
+        if not valid_boss(b["name"], names):
+            continue
         key = boss_key(b["name"], b["kind"])
         b["counters"] = [c for c in b["counters"] if valid_counter(c, names)]
         if not b["counters"]:

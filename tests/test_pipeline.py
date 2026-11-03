@@ -349,6 +349,17 @@ class MergeNewEvent(unittest.TestCase):
         self.assertTrue(any(c["kind"] == "new_event" for c in ch))
 
 
+
+class ShadowNameKept(unittest.TestCase):
+    def test_shadow_prefixed_names_are_valid(self):
+        from scripts import counters as ctr
+        names = {"バンギラス": 248, "メタグロス": 376}
+        self.assertTrue(ctr.valid_counter({"name": "シャドウバンギラス"}, names))
+        self.assertTrue(ctr.valid_counter({"name": "メガメタグロス"}, names))
+        self.assertFalse(ctr.valid_counter({"name": "シャ ド ウ"}, names))
+        self.assertFalse(ctr.valid_counter({"name": "通 常"}, names))
+        self.assertFalse(ctr.valid_counter({"name": "メ ガ"}, names))
+
 if __name__ == "__main__":
     unittest.main()
 
