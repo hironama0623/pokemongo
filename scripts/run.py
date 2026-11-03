@@ -60,7 +60,7 @@ def _dump_research_text(queue):
     d = config.LOGS / "debug" / "research"
     try:
         d.mkdir(parents=True, exist_ok=True)
-        for old in list(d.glob("*.txt")) + list((d.parent / "counters").glob("*.*")):
+        for old in list(d.glob("*.txt")):
             old.unlink()
         n = 0
         for a in queue:
@@ -81,8 +81,6 @@ def _dump_counter_text(art, facts=None):
     d = config.LOGS / "debug" / "counters"
     try:
         d.mkdir(parents=True, exist_ok=True)
-        if len(list(d.glob("*.txt"))) >= 60:
-            return
         name = f"{art['site']}-{art['url'].rstrip('/').split('/')[-1]}.txt"
         (d / name).write_text(art["url"] + "\n" + art["text"][:3000], encoding="utf-8")
         if facts is not None:   # AIが返した対策（検証前）。本文との差で、抜けが取り込み側かAI出力側かが分かる
@@ -205,6 +203,7 @@ def run(now, log, diagnose=False, no_news=False, getter=fetch.get, llm=an.gemini
         is_counter = config.is_counter_article(art)   # レイド/マックスバトルの対策記事は、イベント抽出ではなく対策の抽出を行う
         try:
             if is_counter:
+                _dump_counter_text(art)   # 解析に失敗しても本文は残す
                 facts = an.analyze_counters(art, config.GEMINI_MODELS, call=llm)
                 _dump_counter_text(art, facts)
             else:
