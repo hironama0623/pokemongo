@@ -631,6 +631,74 @@
       ]
     },
     {
+      "id": "news-e2db930445",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "kind": "event_update",
+      "title": "【情報追加】今週のイベントスケジュールまとめ｜期間：2026/11/2(月)～2026/11/8(日)：レイドが判明・追加（2件）",
+      "details": "レイド：シャドウ ランドロス (けしんフォルム)、シャドウ トルネロス (けしんフォルム)",
+      "targetId": "ev-auto-weekly-schedule-2026-11-02",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10789/",
+          "fetched_at": "2026-11-03T19:18:58.085080+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-509674661e",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "kind": "schedule_changed",
+      "title": "【日程変更】GOパス10月",
+      "details": "日程が更新されています：2026-10-06〜2026-11-03 → 2026-11-03〜2026-12-01",
+      "targetId": "ev-auto-go-pass-10",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/583362",
+          "fetched_at": "2026-11-03T19:18:58.085080+09:00",
+          "article_updated": "2026-11-03T14:36:51+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-853629fcda",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "kind": "event_update",
+      "title": "【情報追加】ADIDAS POKÉMON タイムチャレンジ：タイムチャレンジが判明・追加（5件）",
+      "details": "タイムチャレンジ：相棒と探索してアメを3個もらう→ルカリオ、グレートスローを20回投げる→ルカリオ、ポケストップ・ジム100個を回す→ルカリオ、ポケモンを捕まえるときにきのみ30個を使う→ルカリオ、30km探索する→ルカリオ",
+      "targetId": "ev-auto-adidas-pokemon-time-challenge",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/578629",
+          "fetched_at": "2026-11-03T19:18:58.085080+09:00",
+          "article_updated": "2026-11-03T09:43:13+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-9e300c2436",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "kind": "event_update",
+      "title": "【情報追加】イオンハロウィンイベント：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：特別なタイムチャレンジパート1（受取期間:2026-10-19~10-25）→ピカチュウ(魔女帽子)、特別なタイムチャレンジパート2（受取期間:2026-10-26~11-01）→ピカチュウ(魔女帽子)",
+      "targetId": "ev-auto-aeon-halloween-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/579901",
+          "fetched_at": "2026-11-03T19:18:58.085080+09:00",
+          "article_updated": "2026-11-01T22:12:11+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-2be65065e8",
       "date": "2026-11-02",
       "date_label": "11/2",
