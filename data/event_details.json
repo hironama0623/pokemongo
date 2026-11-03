@@ -1,4 +1,414 @@
 {
- "schema_version": 1,
- "events": {}
+  "schema_version": 1,
+  "events": {
+    "ev-big-footprints": {
+      "schedule": {
+        "start": "2026-11-16T10:00",
+        "end": "2026-11-23T20:00",
+        "sources": [
+          {
+            "site": "official",
+            "url": "https://pokemongo.com/ja/news/dynamax-trails-eternamax-eternatus-2026",
+            "fetched_at": "2026-11-03T23:28:12.159782+09:00",
+            "article_updated": null
+          }
+        ]
+      },
+      "updated_at": "2026-11-03T23:28:12.159782+09:00"
+    },
+    "ev-cd-pawniard": {
+      "wilds": [
+        {
+          "name": "コマタナ",
+          "dex": 624,
+          "shiny": true,
+          "note": "",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "official",
+              "url": "https://pokemongo.com/ja/news/communityday-november-2026-pawniard",
+              "fetched_at": "2026-11-03T23:28:12.159782+09:00",
+              "article_updated": null
+            }
+          ]
+        }
+      ],
+      "field_research": [
+        {
+          "task": "コマタナをつかまえる",
+          "rewards": [
+            {
+              "name": "ほしのすな",
+              "dex": null,
+              "cp": "",
+              "shiny": false
+            },
+            {
+              "name": "ハイパーボール",
+              "dex": null,
+              "cp": "",
+              "shiny": false
+            },
+            {
+              "name": "コマタナ",
+              "dex": 624,
+              "cp": "",
+              "shiny": true
+            }
+          ],
+          "sources": [
+            {
+              "site": "official",
+              "url": "https://pokemongo.com/ja/news/communityday-november-2026-pawniard",
+              "fetched_at": "2026-11-03T23:28:12.159782+09:00",
+              "article_updated": null
+            }
+          ]
+        }
+      ],
+      "updated_at": "2026-11-03T23:28:12.159782+09:00"
+    },
+    "ev-gopass-nov": {},
+    "ev-wildweek-2026": {
+      "wilds": [
+        {
+          "name": "コイル",
+          "dex": 81,
+          "shiny": true,
+          "note": "",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "official",
+              "url": "https://pokemongo.com/ja/news/into-the-wild-2026",
+              "fetched_at": "2026-11-03T23:28:12.159782+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "オンバット",
+          "dex": 714,
+          "shiny": true,
+          "note": "",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "official",
+              "url": "https://pokemongo.com/ja/news/into-the-wild-2026",
+              "fetched_at": "2026-11-03T23:28:12.159782+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "トゲデマル",
+          "dex": 777,
+          "shiny": true,
+          "note": "",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "official",
+              "url": "https://pokemongo.com/ja/news/into-the-wild-2026",
+              "fetched_at": "2026-11-03T23:28:12.159782+09:00",
+              "article_updated": null
+            }
+          ]
+        }
+      ],
+      "raids": [
+        {
+          "name": "クリムガン",
+          "dex": 621,
+          "shiny": true,
+          "tier": "★3",
+          "sources": [
+            {
+              "site": "official",
+              "url": "https://pokemongo.com/ja/news/into-the-wild-2026",
+              "fetched_at": "2026-11-03T23:28:12.159782+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "ミミズズ",
+          "dex": 968,
+          "shiny": true,
+          "tier": "★3",
+          "sources": [
+            {
+              "site": "official",
+              "url": "https://pokemongo.com/ja/news/into-the-wild-2026",
+              "fetched_at": "2026-11-03T23:28:12.159782+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "ザシアン（けんのおう）",
+          "dex": 888,
+          "shiny": true,
+          "tier": "伝説",
+          "sources": [
+            {
+              "site": "official",
+              "url": "https://pokemongo.com/ja/news/into-the-wild-2026",
+              "fetched_at": "2026-11-03T23:28:12.159782+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "ザマゼンタ（たてのおう）",
+          "dex": 889,
+          "shiny": true,
+          "tier": "伝説",
+          "sources": [
+            {
+              "site": "official",
+              "url": "https://pokemongo.com/ja/news/into-the-wild-2026",
+              "fetched_at": "2026-11-03T23:28:12.159782+09:00",
+              "article_updated": null
+            }
+          ]
+        }
+      ],
+      "updated_at": "2026-11-03T23:28:12.159782+09:00"
+    },
+    "ev-supermega-chandelure": {
+      "raids": [
+        {
+          "name": "メガシャンデラ",
+          "dex": 609,
+          "shiny": true,
+          "tier": "★1",
+          "sources": [
+            {
+              "site": "official",
+              "url": "https://pokemongo.com/ja/news/chandelure-super-mega-raid-day-2026",
+              "fetched_at": "2026-11-03T23:28:12.159782+09:00",
+              "article_updated": null
+            }
+          ]
+        }
+      ],
+      "time_challenge": [
+        {
+          "task": "イベント期間中のタスク",
+          "rewards": [
+            {
+              "name": "プレミアムバトルパス"
+            },
+            {
+              "name": "バンギラス",
+              "dex": 248
+            }
+          ],
+          "sources": [
+            {
+              "site": "official",
+              "url": "https://pokemongo.com/ja/news/chandelure-super-mega-raid-day-2026",
+              "fetched_at": "2026-11-03T23:28:12.159782+09:00",
+              "article_updated": null
+            }
+          ]
+        }
+      ],
+      "updated_at": "2026-11-03T23:28:12.159782+09:00"
+    },
+    "ev-halloween-p2": {
+      "wilds": [
+        {
+          "name": "ヒトモシ",
+          "dex": 607,
+          "shiny": true,
+          "note": "",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "official",
+              "url": "https://pokemongo.com/ja/news/halloween-part-2-2026",
+              "fetched_at": "2026-11-03T23:28:12.159782+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "モクロー(ハロウィン衣装)",
+          "dex": 722,
+          "shiny": true,
+          "note": "",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "official",
+              "url": "https://pokemongo.com/ja/news/halloween-part-2-2026",
+              "fetched_at": "2026-11-03T23:28:12.159782+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "ボチ",
+          "dex": 971,
+          "shiny": true,
+          "note": "",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "official",
+              "url": "https://pokemongo.com/ja/news/halloween-part-2-2026",
+              "fetched_at": "2026-11-03T23:28:12.159782+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "ゲンガー(飾りつき)",
+          "dex": 94,
+          "shiny": true,
+          "note": "",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "official",
+              "url": "https://pokemongo.com/ja/news/halloween-part-2-2026",
+              "fetched_at": "2026-11-03T23:28:12.159782+09:00",
+              "article_updated": null
+            }
+          ]
+        }
+      ],
+      "raids": [
+        {
+          "name": "ピカチュウ(ハットとケープをつけた)",
+          "dex": 25,
+          "shiny": true,
+          "tier": "★1",
+          "sources": [
+            {
+              "site": "official",
+              "url": "https://pokemongo.com/ja/news/halloween-part-2-2026",
+              "fetched_at": "2026-11-03T23:28:12.159782+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "ヤバチャ(リボンをつけた)",
+          "dex": 854,
+          "shiny": true,
+          "tier": "★1",
+          "sources": [
+            {
+              "site": "official",
+              "url": "https://pokemongo.com/ja/news/halloween-part-2-2026",
+              "fetched_at": "2026-11-03T23:28:12.159782+09:00",
+              "article_updated": null
+            }
+          ]
+        }
+      ],
+      "time_challenge": [
+        {
+          "task": "すべてのトレーナーのリサーチタスクが自動的に完了します",
+          "rewards": [
+            {
+              "name": "ふしぎなアメ"
+            },
+            {
+              "name": "ヤバチャ(リボンをつけた)",
+              "dex": 854
+            }
+          ],
+          "sources": [
+            {
+              "site": "official",
+              "url": "https://pokemongo.com/ja/news/halloween-part-2-2026",
+              "fetched_at": "2026-11-03T23:28:12.159782+09:00",
+              "article_updated": null
+            }
+          ]
+        }
+      ],
+      "updated_at": "2026-11-03T23:28:12.159782+09:00"
+    },
+    "ev-aeon-halloween": {
+      "raids": [
+        {
+          "name": "メガシャンデラ",
+          "dex": 609,
+          "shiny": null,
+          "tier": "★5",
+          "sources": [
+            {
+              "site": "official",
+              "url": "https://pokemongo.com/ja/news/202610aeonmall-halloween",
+              "fetched_at": "2026-11-03T23:28:12.159782+09:00",
+              "article_updated": null
+            }
+          ]
+        }
+      ],
+      "time_challenge": [
+        {
+          "task": "タイムチャレンジ パート1（対象イオンモールで受け取り）",
+          "rewards": [
+            {
+              "name": "ピカチュウ(魔女の帽子)",
+              "dex": 25
+            }
+          ],
+          "sources": [
+            {
+              "site": "official",
+              "url": "https://pokemongo.com/ja/news/202610aeonmall-halloween",
+              "fetched_at": "2026-11-03T23:28:12.159782+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "task": "タイムチャレンジ パート2（対象イオンモールで受け取り）",
+          "rewards": [
+            {
+              "name": "ピカチュウ(魔女の帽子)",
+              "dex": 25
+            }
+          ],
+          "sources": [
+            {
+              "site": "official",
+              "url": "https://pokemongo.com/ja/news/202610aeonmall-halloween",
+              "fetched_at": "2026-11-03T23:28:12.159782+09:00",
+              "article_updated": null
+            }
+          ]
+        }
+      ],
+      "updated_at": "2026-11-03T23:28:12.159782+09:00"
+    },
+    "ev-auto-giratina-alter-raid-hour": {
+      "raids": [
+        {
+          "name": "ギラティナ(アナザー)",
+          "dex": 487,
+          "shiny": true,
+          "tier": "★5",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10797/",
+              "fetched_at": "2026-11-03T23:28:12.159782+09:00",
+              "article_updated": null
+            }
+          ]
+        }
+      ],
+      "updated_at": "2026-11-03T23:28:12.159782+09:00"
+    }
+  }
 }

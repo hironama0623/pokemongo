@@ -1,4 +1,26 @@
 {
- "schema_version": 1,
- "events": {}
+  "schema_version": 1,
+  "events": {
+    "ev-auto-giratina-alter-raid-hour": {
+      "id": "ev-auto-giratina-alter-raid-hour",
+      "title": "ギラティナ（アナザー）のレイドアワー",
+      "category": "raid",
+      "start": "2026-11-04T18:00",
+      "end": "2026-11-04T19:00",
+      "dateText": "2026/11/4(水)18時～19時",
+      "summary": "ギラティナ（アナザー）のレイドアワーが開催されます。",
+      "hasPaid": false,
+      "freeFeatures": [],
+      "paidFeatures": [],
+      "created_at": "2026-11-03T23:28:12.159782+09:00",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10797/",
+          "fetched_at": "2026-11-03T23:28:12.159782+09:00",
+          "article_updated": null
+        }
+      ]
+    }
+  }
 }
