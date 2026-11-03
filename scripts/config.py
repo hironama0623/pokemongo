@@ -31,7 +31,7 @@ GEMINI_MODELS = [m for m in dict.fromkeys([os.environ.get("GEMINI_MODEL", "gemin
 # 数値IDでないサイト（公式）は一覧の並び順（新しい順）で上位 max_articles 件を見る。
 # 解析の中身（プロンプト・抽出方法）を変えたら上げる。全記事が一度だけ解析し直される
 ANALYSIS_VERSION = "4"
-COUNTER_VERSION = "3"   # 対策抽出の指示を変えたら上げる（対策ページだけ再解析する）
+COUNTER_VERSION = "4"   # 対策抽出の指示を変えたら上げる（対策ページだけ再解析する）
 
 SITE_PRIORITY = {"official": 0, "pokemapi": 1, "9db": 2, "gamewith": 3}   # 解析の優先順（上限に達したとき後ろは次回へ回る）
 

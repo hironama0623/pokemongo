@@ -76,15 +76,17 @@ def _dump_research_text(queue):
         pass
 
 
-def _dump_counter_text(art):
+def _dump_counter_text(art, facts=None):
     """原因調査用: 対策抽出を行った記事の本文先頭を logs/debug/counters/ に保存（毎回上書き・最大30件）。"""
     d = config.LOGS / "debug" / "counters"
     try:
         d.mkdir(parents=True, exist_ok=True)
-        if len(list(d.glob("*.txt"))) >= 30:
+        if len(list(d.glob("*.txt"))) >= 60:
             return
         name = f"{art['site']}-{art['url'].rstrip('/').split('/')[-1]}.txt"
         (d / name).write_text(art["url"] + "\n" + art["text"][:3000], encoding="utf-8")
+        if facts is not None:   # AIが返した対策（検証前）。本文との差で、抜けが取り込み側かAI出力側かが分かる
+            (d / (name[:-4] + ".ai.json")).write_text(json.dumps(facts, ensure_ascii=False, indent=1), encoding="utf-8")
         if art.get("snip"):
             (d / (name[:-4] + ".html")).write_text(art["snip"], encoding="utf-8")
     except OSError:
@@ -99,7 +101,7 @@ def run(now, log, diagnose=False, no_news=False, getter=fetch.get, llm=an.gemini
     news = store.load("news.json", {"schema_version": 1, "items": []})
     counters = store.load("counters.json", {"schema_version": 1, "bosses": {}})
     names0 = store.load("pokemon.json", {"names": {}})["names"]
-    removed0 = ctr.sanitize(counters, names0)
+    removed0 = ctr.sanitize(counters, names0) + ctr.drop_stale_duplicates(counters)
     if removed0:
         log.note(f"保存済みの対策データから、ポケモン名として成り立たない項目 {removed0} 件を取り除きました（表が画像のためAIが技名・数値を拾ったもの）")
     meta = store.load("meta.json", {"schema_version": 1})
@@ -204,6 +206,7 @@ def run(now, log, diagnose=False, no_news=False, getter=fetch.get, llm=an.gemini
         try:
             if is_counter:
                 facts = an.analyze_counters(art, config.GEMINI_MODELS, call=llm)
+                _dump_counter_text(art, facts)
             else:
                 facts = an.analyze(art, known, config.GEMINI_MODELS, call=llm)
             e.update(model=an.last_info.get("model"), ai_calls=an.last_info.get("attempts"), ai_seconds=an.last_info.get("seconds"))

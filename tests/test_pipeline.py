@@ -473,3 +473,12 @@ class NineDbNamesTest(unittest.TestCase):
         self.assertEqual(n, 1)
         text = extract.html_to_text(out)[0]
         self.assertIn("ランドロス（けしん）", text)
+
+
+class StaleDuplicateDropped(unittest.TestCase):
+    def test_same_url_under_old_key_is_removed(self):
+        from scripts import counters as ctr
+        mk = lambda n, f: {"name": n, "kind": "raid", "tier": None, "types": [], "by_site": {"9db": {"url": "u1", "article_updated": None, "fetched_at": f, "counters": []}}}
+        st = {"bosses": {"raid:ランドロス(けしん)": mk("ランドロス(けしん)", "2026-11-01"), "raid:シャドウランドロス(けしん)": mk("シャドウランドロス(けしん)", "2026-11-03")}}
+        self.assertEqual(ctr.drop_stale_duplicates(st), 1)
+        self.assertEqual(list(st["bosses"]), ["raid:シャドウランドロス(けしん)"])

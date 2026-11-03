@@ -51,6 +51,27 @@ def sanitize(store, names):
     return removed
 
 
+def drop_stale_duplicates(store):
+    """同じサイト・同じ記事URLの結果が複数のボス名で残っているとき、取得が新しいほうだけ残す（再解析でボス名の読みが変わった時の取り残し対策）。戻り値: 消した件数。"""
+    best = {}
+    for key, b in store["bosses"].items():
+        for site, s in b["by_site"].items():
+            k = (site, s.get("url"))
+            if k not in best or (s.get("fetched_at") or "") > (best[k][1] or ""):
+                best[k] = (key, s.get("fetched_at"))
+    removed = 0
+    for key in list(store["bosses"]):
+        b = store["bosses"][key]
+        for site in list(b["by_site"]):
+            s = b["by_site"][site]
+            if best[(site, s.get("url"))][0] != key:
+                del b["by_site"][site]
+                removed += 1
+        if not b["by_site"]:
+            del store["bosses"][key]
+    return removed
+
+
 def merge_counters(store, facts, src, names, unresolved, now):
     """facts（normalize済み）を store["bosses"] に入れる。同じサイト・同じボスは、より新しい記事で置き換える。戻り値: 更新したボス名のリスト。"""
     touched = []
@@ -81,4 +102,5 @@ def merge_counters(store, facts, src, names, unresolved, now):
                                          "fetched_at": src.get("fetched_at"), "counters": b["counters"]}
         entry["updated_at"] = now.isoformat()
         touched.append(b["name"])
+    drop_stale_duplicates(store)
     return touched
