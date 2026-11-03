@@ -409,47 +409,45 @@
   function renderRaidRanking() {
     const list = document.getElementById("raidRankingList");
     const title = document.getElementById("raidRankingTitle");
+    const tg = document.getElementById("raidRankToggles"); if (tg) tg.classList.add("hidden");   // 通常/シャドウ/メガをグループで並べるので、切替ボタンは使わない
     list.innerHTML = "";
     const b = RAID_DATA[activeRaidKey];
     if (!b) return;
-    let filtered = (b.counters || []).filter(c => {
-      if (c.tag === "mega" && !filterMega) return false;
-      if (c.tag === "shadow" && !filterShadow) return false;
-      return true;
-    });
-    const anyNum = filtered.some(c => c.dps != null || c.tdo != null);   // DPS/TDO は載せているサイトの数字だけ。無ければサイトの順位を統合した順
-    const isDpsMode = anyNum && (raidSortMode === "dps");
-    const val = (c, k) => (c[k] == null ? -1 : c[k]);
-    if (anyNum) filtered.sort((x, y) => isDpsMode ? (val(y, "dps") - val(x, "dps") || val(y, "tdo") - val(x, "tdo") || (x.ord || 0) - (y.ord || 0)) : (val(y, "tdo") - val(x, "tdo") || val(y, "dps") - val(x, "dps") || (x.ord || 0) - (y.ord || 0)));
-    else if (filtered.some(c => c.ord != null)) filtered.sort((x, y) => (x.ord || 0) - (y.ord || 0));
-    const top10 = filtered.slice(0, 10);
-    const maxVal = (top10.length > 0 ? (isDpsMode ? top10[0].dps : top10[0].tdo) : 1) || 1;
-    const conditions = [];
-    if (filterMega) conditions.push("メガ含");
-    if (filterShadow) conditions.push("シャドウ含");
-    if (!filterMega && !filterShadow) conditions.push("通常ポケモン限定");
-    title.textContent = `${!anyNum ? "🏅 おすすめ対策ランキング (サイトの順位を統合)" : isDpsMode ? "⚡ 対策DPSランキング (討伐速度重視)" : "🛡️ 対策TDOランキング (総ダメ・耐久重視)"} TOP 10 (${conditions.join(" / ")})`;
-    if (!top10.length) {
+    const all = b.counters || [];
+    if (!all.length) {
+      title.textContent = "🏅 対策ポケモン";
       list.innerHTML = `<div class="text-xs text-slate-500 bg-slate-50 border border-dashed border-slate-300 rounded-lg p-3">${b.pending ? "このレイドの対策データはまだ取得できていません（参照サイトに記事が出たら自動で反映されます）。" : "表示できる対策データがありません。"}</div>`;
       return;
     }
-    top10.forEach((c, index) => {
-      const tagBadge = c.tag === "mega" ? `<span class="text-[10px] bg-purple-100 text-purple-700 font-bold px-1.5 py-0.5 rounded border border-purple-300">メガ/ゲンシ</span>` : (c.tag === "shadow" ? `<span class="text-[10px] bg-rose-100 text-rose-700 font-bold px-1.5 py-0.5 rounded border border-rose-300">シャドウ</span>` : `<span class="text-[10px] bg-slate-200 text-slate-600 px-1.5 py-0.5 rounded font-bold">通常</span>`);
-      const rankColor = index === 0 ? "text-amber-500 text-base font-black" : (index <= 2 ? "text-slate-700 text-sm font-black" : "text-slate-400");
-      const currentVal = isDpsMode ? c.dps : c.tdo;
-      const barWidthPct = anyNum ? Math.max(20, Math.round(((currentVal == null ? 0 : currentVal) / maxVal) * 100)) : Math.max(20, 100 - index * 8);
-      const row = document.createElement("div");
-      row.className = "bg-slate-50 border border-slate-200 hover:bg-slate-100 p-2.5 rounded-lg flex items-center justify-between gap-3 transition shadow-sm";
-      row.innerHTML = ` <div class="flex items-center gap-3 overflow-hidden flex-1"> <span class="w-6 text-center font-bold ${rankColor} flex-shrink-0">#${index + 1}</span> <img src="${getPokeImg(c.dex, c.name)}" class="w-11 h-11 object-contain flex-shrink-0"> <div class="overflow-hidden flex-1"> <div class="text-xs font-bold text-slate-900 flex items-center gap-1.5"> <span class="truncate">${c.name}</span> ${tagBadge} </div> <div class="text-[11px] text-slate-700 flex flex-wrap items-center gap-2 mt-1"> <span><span class="bg-slate-200 text-slate-700 px-1.5 py-0.2 rounded text-[10px] font-bold mr-1">通常</span>${c.fast || "-"}</span> <span><span class="bg-sky-100 text-sky-800 px-1.5 py-0.2 rounded text-[10px] font-bold mr-1">SP</span><strong class="text-sky-700">${c.charge || "-"}</strong></span> </div> <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden mt-1.5"> <div class="${isDpsMode ? 'bg-sky-500' : 'bg-emerald-500'} h-full rounded-full" style="width: ${barWidthPct}%"></div> </div> </div> </div> <div class="text-right flex-shrink-0 min-w-[76px]"> ${!anyNum ? (c.siteBadge || "") : (isDpsMode ? `<div class="text-sm font-black text-sky-700 font-mono">${c.dps == null ? "-" : Number(c.dps).toFixed(1)} <span class="text-[10px]">DPS</span></div><div class="text-[10px] text-slate-500 font-mono">TDO: <strong>${c.tdo == null ? "-" : c.tdo}</strong></div>` : `<div class="text-sm font-black text-emerald-700 font-mono">${c.tdo == null ? "-" : c.tdo} <span class="text-[10px]">TDO</span></div><div class="text-[10px] text-slate-500 font-mono">DPS: <strong>${c.dps == null ? "-" : Number(c.dps).toFixed(1)}</strong></div>`)} </div> `;
-      list.appendChild(row);
+    const anyNum = all.some(c => c.dps != null || c.tdo != null);
+    title.textContent = anyNum ? "🏅 対策ポケモン DPS(TDO)" : "🏅 対策ポケモン (サイトの順位を統合)";
+    const groups = [
+      { tag: "normal", label: "通常", n: 8, head: "bg-sky-700", ring: "border-sky-200" },
+      { tag: "shadow", label: "シャドウ", n: 4, head: "bg-purple-700", ring: "border-purple-200" },
+      { tag: "mega", label: "メガ", n: 4, head: "bg-rose-700", ring: "border-rose-200" },
+    ];
+    const val = (c, k) => (c[k] == null ? -1 : c[k]);
+    groups.forEach(g => {
+      let items = all.filter(c => (c.tag || "normal") === g.tag);
+      if (!items.length) return;
+      items = items.slice().sort((x, y) => (anyNum ? (val(y, "dps") - val(x, "dps") || val(y, "tdo") - val(x, "tdo")) : 0) || (x.ord || 0) - (y.ord || 0)).slice(0, g.n);
+      const wrap = document.createElement("div");
+      wrap.className = "mb-3";
+      wrap.innerHTML = `<div class="${g.head} text-white text-xs font-black px-2 py-1 rounded-t-lg">${g.label}</div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 border ${g.ring} border-t-0 rounded-b-lg p-2 bg-slate-50">${items.map((c, i) => `
+          <div class="bg-white border border-slate-200 rounded-lg p-2 flex flex-col items-center text-center relative">
+            <span class="absolute top-1 left-1 text-[10px] font-black bg-slate-800 text-white w-5 h-5 rounded flex items-center justify-center">${i + 1}</span>
+            <img src="${getPokeImg(c.dex, c.name)}" class="w-14 h-14 object-contain">
+            <div class="text-xs font-extrabold text-slate-900 leading-tight">${esc(c.name)}</div>${c.siteBadge || ""}
+            ${c.dps != null || c.tdo != null ? `<div class="text-[13px] font-black text-rose-700 mt-1">${c.dps != null ? c.dps : "-"}<span class="text-[11px] text-slate-500 font-bold">(${c.tdo != null ? c.tdo : "-"})</span></div>` : ""}
+            <div class="text-[10px] text-slate-700 leading-snug mt-0.5">${esc(c.fast || "")}${c.fast && c.charge ? "<br>" : ""}${esc(c.charge || "")}</div>
+          </div>`).join("")}</div>`;
+      list.appendChild(wrap);
     });
-    if (top10.length < 10) {
-      const total = (b.counters || []).length, hidden = total - filtered.length;
-      const n = document.createElement("div");
-      n.className = "text-[11px] text-slate-500 bg-slate-50 border border-dashed border-slate-300 rounded-lg p-2";
-      n.textContent = `参照サイトから取得できた対策は${top10.length}体です（10体に満たない分は、載せているサイトが少ないためです）${hidden > 0 ? `。メガ/シャドウを含めると${hidden}体増えます` : ""}。`;
-      list.appendChild(n);
-    }
+    const n = document.createElement("div");
+    n.className = "text-[10px] text-slate-400";
+    n.textContent = anyNum ? "DPS(TDO)は、数値を載せているサイトの値をそのまま表示しています。" : "数値は取得できていないため、サイトの順位を統合して表示しています。";
+    list.appendChild(n);
   }
 
   function renderDmax9dbSection() {

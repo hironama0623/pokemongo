@@ -40,7 +40,7 @@ SOURCES = {
         "indexes": ["https://pokemongo-get.com/pokego02416/", "https://pokemongo-get.com/"],
         "hubs": ["https://pokemongo-get.com/research_fi/"],
         "link_re": r"^https://pokemongo-get\.com/board/(\d+)/?$",
-        "min_id": 10450, "max_articles": 60, "min_chars": 300,
+        "min_id": 10450, "max_articles": 30, "min_chars": 300,
         "render": True,   # 記事本文が Vue(JS)描画のためヘッドレスブラウザで取得
     },
     "gamewith": {
@@ -48,14 +48,15 @@ SOURCES = {
         "indexes": ["https://pokemongo.gamewith.jp/"],
         "hubs": [],
         "link_re": r"^https://pokemongo\.gamewith\.jp/article/show/(\d+)$",
-        "min_id": 565000, "max_articles": 80, "min_chars": 500,
+        "min_id": 565000, "max_articles": 40, "min_chars": 500,
     },
     "9db": {
         "label": "9DB",
-        "indexes": ["https://9db.jp/pokemongo/"],
-        "hubs": [],
+        # トップに載らないボス個別ページ（予定のメガメタグロス等）へは、イベント一覧(4351)からたどる。レイドボス一覧(2308)は日程表として直接読む
+        "indexes": ["https://9db.jp/pokemongo/", "https://9db.jp/pokemongo/data/4351"],
+        "hubs": ["https://9db.jp/pokemongo/data/2308"],
         "link_re": r"^https://9db\.jp/pokemongo/data/(\d+)$",
-        "min_id": 26100, "max_articles": 60, "min_chars": 150,
+        "min_id": 26100, "max_articles": 80, "min_chars": 150,
     },
     "official": {
         "label": "公式",

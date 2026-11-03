@@ -221,7 +221,7 @@ function consensus(auto, role) {
   const sites = Object.keys(auto.by_site), map = new Map();
   sites.forEach(s => {
     // 表が画像のサイトで、AIが技名・順位・数値を名前として拾った項目（数字や * を含む等）は使わない
-    const list = (auto.by_site[s].counters || []).filter(c => ((/タンク|耐久役|受け役/.test(c.note || "") ? "tank" : (c.role || "attacker")) === role) && c.name && !/[0-9*＊]/.test(c.name.replace(/^ポリゴン2$/, "")) && !/^通\s*常|シ\s*ャ\s*ド\s*ウ/.test(c.name) && c.name.length <= 24).sort((a, b) => (a.rank || 99) - (b.rank || 99));
+    const list = (auto.by_site[s].counters || []).filter(c => ((/タンク|耐久役|受け役/.test(c.note || "") ? "tank" : (c.role || "attacker")) === role) && c.name && !/[0-9*＊]/.test(c.name.replace(/^ポリゴン2$/, "")) && !/^(?:通\s*常|シ\s*ャ\s*ド\s*ウ|メ\s*ガ)$/.test(c.name) && c.name.length <= 24).sort((a, b) => (a.rank || 99) - (b.rank || 99));
     list.forEach((c, i) => {
       const k = cname(c.name);
       const m = map.get(k) || { name: cleanCounterName(c.name), dex: c.dex || null, tag: c.tag || "normal", sites: [], pts: 0, fast: "", charge: "", dps: null, tdo: null };
