@@ -49,7 +49,10 @@ def _fetch_page(source, url, role, log, getter, min_chars, dump=None):
     if source == "9db" and "DPS" in html:   # 原因調査用: 9DBの表でポケモン名が画像のため、表のHTML構造（imgのalt/title/ファイル名）を保存して確認する
         i = html.find("DPS")
         snip = html[max(0, i - 1500): i + 3500]
-    return e, {"snip": snip, "site": source, "url": url, "text": (header + "\n\n" + text) if header else text, "updated": e["article_updated"], "date": date, "hash": extract.content_hash(text), "header": header}
+    art = {"snip": snip, "site": source, "url": url, "text": (header + "\n\n" + text) if header else text, "updated": e["article_updated"], "date": date, "hash": extract.content_hash(text), "header": header}
+    if config.is_counter_article(art) or config.has_counter_section(art):   # 対策の抽出指示を変えたときは、対策ページだけ再解析する
+        art["hash"] += "|c" + config.COUNTER_VERSION
+    return e, art
 
 
 def _dump_research_text(queue):
