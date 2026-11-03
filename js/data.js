@@ -336,11 +336,19 @@ function buildBattleData(autoBosses) {
     return base && n.includes(base) && sameGroup(bossClass(e.name), bossClass(r.name)) && (!forms.length || forms.some(f => n.includes(f))) && e._e >= ev._s - 864e5;
   });
   const lowSeen = new Set();
+  // 「◯月のスケジュール」のような月間まとめのイベントは、期間が月全体になってしまうので、ボスの出現期間には使わない。
+  // 同じボスが期間の短い別のイベントにも載っていれば、そちらの期間を使う
+  const spanDays = ev => (ev._e - ev._s) / 864e5;
+  const bossId = r => `${bossBase(r.name)}|${bossForm(r.name)}|${bossClass(r.name) === "mega" ? "mega" : "x"}`;
+  const minSpan = new Map();
+  ALL_EVENTS.forEach(ev => (ev.raids || []).forEach(r => { if (!r.name) return; const k = bossId(r); minSpan.set(k, Math.min(minSpan.get(k) ?? 1e9, spanDays(ev))); }));
+  const isMonthly = ev => /スケジュール|まとめ|カレンダー/.test(String(ev.title || ""));
   ALL_EVENTS.forEach(ev => {
     if (ev._e < Date.now() || ev._long) return;
     // フォルム指定のある表記を先に処理（「デオキシス」だけの表記は、フォルム別カードがあれば作らない）。同じフォルムの表記ゆれは長い名前を優先
     (ev.raids || []).slice().sort((x, y) => (bossForm(y.name) ? 1 : 0) - (bossForm(x.name) ? 1 : 0) || String(y.name).length - String(x.name).length).forEach(r => {
       if (!r.name) return;
+      if (isMonthly(ev) || spanDays(ev) > (minSpan.get(bossId(r)) ?? 0) + 3) return;   // 月間まとめ・期間の長いイベントでは作らない（短いイベントのカードが優先）
       const rc = bossClass(r.name), isD = ev.category === "dmax" || rc === "dmax" || rc === "gmax";
       if (!isD && isLowTier(r)) {
         const k = normName(r.name) + "|" + (r.note || "");
