@@ -219,3 +219,7 @@ logs/       run-YYYYMMDD-HHMM.json / latest.json / latest.md / unresolved_names.
 ## 2026-11-03 その7（調査ログが次の実行で消える）
 - logs/debug/counters/ を毎回の開始時に全消去していたため、解析しなかった実行でログが消えた。対策側は消さず、同名ファイルだけ上書きする（件数上限も撤廃。対策記事は数十件）。
 - 対策記事は解析前に本文を保存（失敗しても残る）。`COUNTER_VERSION="5"`。
+
+## 2026-11-04（配布zipからデータを外す）
+- 配布zip（c17〜c19）に data/ と logs/ の空の雛形が入っていて、リポジトリへ上書きしたことで events.json などの蓄積データが空に戻った（meta の events_auto=1）。
+- 以後の配布zipは、コード（scripts/ js/ tests/ index.html SPEC.md など）のみ。data/ と logs/ は含めない。
