@@ -21,7 +21,7 @@
           {
             "site": "gamewith",
             "url": "https://pokemongo.gamewith.jp/article/show/585781",
-            "fetched_at": "2026-11-04T00:16:52.471144+09:00",
+            "fetched_at": "2026-11-04T07:34:54.372378+09:00",
             "article_updated": "2026-11-03T22:57:09+09:00"
           }
         ]
@@ -547,6 +547,12 @@
               "url": "https://pokemongo-get.com/board/10711/",
               "fetched_at": "2026-11-04T00:16:52.471144+09:00",
               "article_updated": null
+            },
+            {
+              "site": "gamewith",
+              "url": "https://pokemongo.gamewith.jp/article/show/580744",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-04T03:23:31+09:00"
             }
           ]
         },
@@ -611,8 +617,14 @@
             {
               "site": "9db",
               "url": "https://9db.jp/pokemongo/data/26443",
-              "fetched_at": "2026-11-04T00:16:52.471144+09:00",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
               "article_updated": "2026-11-03T22:37:36+09:00"
+            },
+            {
+              "site": "gamewith",
+              "url": "https://pokemongo.gamewith.jp/article/show/580744",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-04T03:23:31+09:00"
             }
           ]
         },
@@ -703,6 +715,12 @@
               "url": "https://pokemongo-get.com/board/10711/",
               "fetched_at": "2026-11-04T00:16:52.471144+09:00",
               "article_updated": null
+            },
+            {
+              "site": "gamewith",
+              "url": "https://pokemongo.gamewith.jp/article/show/580744",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-04T03:23:31+09:00"
             }
           ]
         },
@@ -868,6 +886,12 @@
               "url": "https://pokemongo-get.com/board/10711/",
               "fetched_at": "2026-11-04T00:16:52.471144+09:00",
               "article_updated": null
+            },
+            {
+              "site": "gamewith",
+              "url": "https://pokemongo.gamewith.jp/article/show/580744",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-04T03:23:31+09:00"
             }
           ]
         },
@@ -947,7 +971,7 @@
             {
               "site": "9db",
               "url": "https://9db.jp/pokemongo/data/26443",
-              "fetched_at": "2026-11-04T00:16:52.471144+09:00",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
               "article_updated": "2026-11-03T22:37:36+09:00"
             }
           ]
@@ -962,7 +986,7 @@
             {
               "site": "9db",
               "url": "https://9db.jp/pokemongo/data/26443",
-              "fetched_at": "2026-11-04T00:16:52.471144+09:00",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
               "article_updated": "2026-11-03T22:37:36+09:00"
             }
           ]
@@ -977,8 +1001,53 @@
             {
               "site": "9db",
               "url": "https://9db.jp/pokemongo/data/26443",
-              "fetched_at": "2026-11-04T00:16:52.471144+09:00",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
               "article_updated": "2026-11-03T22:37:36+09:00"
+            }
+          ]
+        },
+        {
+          "name": "ケロマツ(ハロウィン)",
+          "dex": 656,
+          "shiny": true,
+          "note": "",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "gamewith",
+              "url": "https://pokemongo.gamewith.jp/article/show/580744",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-04T03:23:31+09:00"
+            }
+          ]
+        },
+        {
+          "name": "モクロー(ハロウィン)",
+          "dex": 722,
+          "shiny": true,
+          "note": "",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "gamewith",
+              "url": "https://pokemongo.gamewith.jp/article/show/580744",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-04T03:23:31+09:00"
+            }
+          ]
+        },
+        {
+          "name": "ゲンガー(魔女帽子)",
+          "dex": 94,
+          "shiny": true,
+          "note": "",
+          "rarity": "レア",
+          "sources": [
+            {
+              "site": "gamewith",
+              "url": "https://pokemongo.gamewith.jp/article/show/580744",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-04T03:23:31+09:00"
             }
           ]
         }
@@ -1035,7 +1104,7 @@
             {
               "site": "9db",
               "url": "https://9db.jp/pokemongo/data/26443",
-              "fetched_at": "2026-11-04T00:16:52.471144+09:00",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
               "article_updated": "2026-11-03T22:37:36+09:00"
             }
           ]
@@ -1049,8 +1118,36 @@
             {
               "site": "9db",
               "url": "https://9db.jp/pokemongo/data/26443",
-              "fetched_at": "2026-11-04T00:16:52.471144+09:00",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
               "article_updated": "2026-11-03T22:37:36+09:00"
+            }
+          ]
+        },
+        {
+          "name": "ピカチュウ(ハット&ケープ)",
+          "dex": 25,
+          "shiny": true,
+          "tier": "★1",
+          "sources": [
+            {
+              "site": "gamewith",
+              "url": "https://pokemongo.gamewith.jp/article/show/580744",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-04T03:23:31+09:00"
+            }
+          ]
+        },
+        {
+          "name": "ヤバチャ(リボン)",
+          "dex": 854,
+          "shiny": true,
+          "tier": "★1",
+          "sources": [
+            {
+              "site": "gamewith",
+              "url": "https://pokemongo.gamewith.jp/article/show/580744",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-04T03:23:31+09:00"
             }
           ]
         }
@@ -1093,6 +1190,12 @@
               "url": "https://pokemongo-get.com/board/10788/",
               "fetched_at": "2026-11-04T00:16:52.471144+09:00",
               "article_updated": null
+            },
+            {
+              "site": "gamewith",
+              "url": "https://pokemongo.gamewith.jp/article/show/580744",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-04T03:23:31+09:00"
             }
           ]
         },
@@ -1112,9 +1215,47 @@
               "article_updated": null
             }
           ]
+        },
+        {
+          "task": "全クリア報酬",
+          "rewards": [
+            {
+              "name": "ヤバチャ(リボン)",
+              "dex": 854
+            }
+          ],
+          "sources": [
+            {
+              "site": "gamewith",
+              "url": "https://pokemongo.gamewith.jp/article/show/580744",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-04T03:23:31+09:00"
+            }
+          ]
+        },
+        {
+          "task": "ハロウィン 詳細",
+          "rewards": [
+            {
+              "name": "ヤバチャ(しんさく)(リボン)",
+              "dex": 854
+            },
+            {
+              "name": "ヤバチャ(リボン)",
+              "dex": 854
+            }
+          ],
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26443",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T22:37:36+09:00"
+            }
+          ]
         }
       ],
-      "updated_at": "2026-11-04T00:16:52.471144+09:00",
+      "updated_at": "2026-11-04T07:34:54.372378+09:00",
       "field_research": [
         {
           "task": "ゴーストタイプのポケモンを13匹捕まえる",
@@ -1142,7 +1283,7 @@
             {
               "site": "9db",
               "url": "https://9db.jp/pokemongo/data/26443",
-              "fetched_at": "2026-11-04T00:16:52.471144+09:00",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
               "article_updated": "2026-11-03T22:37:36+09:00"
             }
           ]
@@ -1167,7 +1308,7 @@
             {
               "site": "9db",
               "url": "https://9db.jp/pokemongo/data/26443",
-              "fetched_at": "2026-11-04T00:16:52.471144+09:00",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
               "article_updated": "2026-11-03T22:37:36+09:00"
             }
           ]
@@ -1186,7 +1327,7 @@
             {
               "site": "9db",
               "url": "https://9db.jp/pokemongo/data/26443",
-              "fetched_at": "2026-11-04T00:16:52.471144+09:00",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
               "article_updated": "2026-11-03T22:37:36+09:00"
             }
           ]
@@ -1217,7 +1358,7 @@
             {
               "site": "9db",
               "url": "https://9db.jp/pokemongo/data/26443",
-              "fetched_at": "2026-11-04T00:16:52.471144+09:00",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
               "article_updated": "2026-11-03T22:37:36+09:00"
             }
           ]
@@ -1321,6 +1462,12 @@
             "url": "https://pokemongo-get.com/board/10791/",
             "fetched_at": "2026-11-04T00:16:52.471144+09:00",
             "article_updated": null
+          },
+          {
+            "site": "9db",
+            "url": "https://9db.jp/pokemongo/data/26626",
+            "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+            "article_updated": "2026-11-03T20:14:27+09:00"
           }
         ]
       },
@@ -1343,6 +1490,12 @@
               "url": "https://pokemongo-get.com/board/10791/",
               "fetched_at": "2026-11-04T00:16:52.471144+09:00",
               "article_updated": null
+            },
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26626",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:14:27+09:00"
             }
           ]
         },
@@ -1385,6 +1538,12 @@
               "url": "https://pokemongo-get.com/board/10791/",
               "fetched_at": "2026-11-04T00:16:52.471144+09:00",
               "article_updated": null
+            },
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26626",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:14:27+09:00"
             }
           ]
         },
@@ -1406,6 +1565,12 @@
               "url": "https://pokemongo-get.com/board/10791/",
               "fetched_at": "2026-11-04T00:16:52.471144+09:00",
               "article_updated": null
+            },
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26626",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:14:27+09:00"
             }
           ]
         },
@@ -1543,6 +1708,21 @@
               "article_updated": null
             }
           ]
+        },
+        {
+          "name": "ヒトデマン（ライト）",
+          "dex": 120,
+          "shiny": true,
+          "note": "",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26626",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:14:27+09:00"
+            }
+          ]
         }
       ],
       "raids": [
@@ -1713,6 +1893,104 @@
               "article_updated": null
             }
           ]
+        },
+        {
+          "name": "ピカチュウ",
+          "dex": 25,
+          "shiny": true,
+          "tier": "★1",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26626",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:14:27+09:00"
+            }
+          ]
+        },
+        {
+          "name": "エーフィ",
+          "dex": 196,
+          "shiny": true,
+          "tier": "★3",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26626",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:14:27+09:00"
+            }
+          ]
+        },
+        {
+          "name": "ブラッキー",
+          "dex": 197,
+          "shiny": true,
+          "tier": "★3",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26626",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:14:27+09:00"
+            }
+          ]
+        },
+        {
+          "name": "メガスピアー",
+          "dex": 15,
+          "shiny": true,
+          "tier": "★4",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26626",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:14:27+09:00"
+            }
+          ]
+        },
+        {
+          "name": "メガヘルガー",
+          "dex": 229,
+          "shiny": true,
+          "tier": "★4",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26626",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:14:27+09:00"
+            }
+          ]
+        },
+        {
+          "name": "メガヤミラミ",
+          "dex": 302,
+          "shiny": true,
+          "tier": "★4",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26626",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:14:27+09:00"
+            }
+          ]
+        },
+        {
+          "name": "メガライボルト",
+          "dex": 310,
+          "shiny": true,
+          "tier": "★4",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26626",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:14:27+09:00"
+            }
+          ]
         }
       ],
       "field_research": [
@@ -1796,9 +2074,70 @@
               "article_updated": null
             }
           ]
+        },
+        {
+          "task": "11/24(火) 10:00 ～ 11/26(木) 10:00",
+          "rewards": [
+            {
+              "name": "ヒトデマン（ライト）",
+              "dex": 120,
+              "shiny": true
+            },
+            {
+              "name": "リグレー",
+              "dex": 605,
+              "shiny": true
+            }
+          ],
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26626",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:14:27+09:00"
+            }
+          ]
+        },
+        {
+          "task": "11/26(木) 10:00 ～ 11/30(月) 20:00",
+          "rewards": [
+            {
+              "name": "カジッチュ",
+              "dex": 840,
+              "shiny": true
+            },
+            {
+              "name": "オラチフ",
+              "dex": 942,
+              "shiny": true
+            },
+            {
+              "name": "ゲンガー（ライト）",
+              "dex": 94,
+              "shiny": true
+            },
+            {
+              "name": "フワライド（ライト）",
+              "dex": 426,
+              "shiny": true
+            },
+            {
+              "name": "アノクサ",
+              "dex": 946,
+              "shiny": true
+            }
+          ],
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26626",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:14:27+09:00"
+            }
+          ]
         }
       ],
-      "updated_at": "2026-11-04T00:16:52.471144+09:00"
+      "updated_at": "2026-11-04T07:34:54.372378+09:00"
     },
     "ev-auto-go-wild-area-stamp-rally": {
       "updated_at": "2026-11-04T00:16:52.471144+09:00"
@@ -1823,6 +2162,12 @@
               "url": "https://pokemongo-get.com/board/10689/",
               "fetched_at": "2026-11-04T00:16:52.471144+09:00",
               "article_updated": null
+            },
+            {
+              "site": "gamewith",
+              "url": "https://pokemongo.gamewith.jp/article/show/579894",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-02T04:10:33+09:00"
             }
           ]
         },
@@ -1844,6 +2189,12 @@
               "url": "https://pokemongo-get.com/board/10689/",
               "fetched_at": "2026-11-04T00:16:52.471144+09:00",
               "article_updated": null
+            },
+            {
+              "site": "gamewith",
+              "url": "https://pokemongo.gamewith.jp/article/show/579894",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-02T04:10:33+09:00"
             }
           ]
         },
@@ -1931,6 +2282,12 @@
               "url": "https://pokemongo-get.com/board/10689/",
               "fetched_at": "2026-11-04T00:16:52.471144+09:00",
               "article_updated": null
+            },
+            {
+              "site": "gamewith",
+              "url": "https://pokemongo.gamewith.jp/article/show/579894",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-02T04:10:33+09:00"
             }
           ]
         },
@@ -1946,6 +2303,12 @@
               "url": "https://pokemongo-get.com/board/10689/",
               "fetched_at": "2026-11-04T00:16:52.471144+09:00",
               "article_updated": null
+            },
+            {
+              "site": "gamewith",
+              "url": "https://pokemongo.gamewith.jp/article/show/579894",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-02T04:10:33+09:00"
             }
           ]
         },
@@ -2038,6 +2401,81 @@
               "article_updated": null
             }
           ]
+        },
+        {
+          "name": "ポッチャマ(ハロウィン)",
+          "dex": 393,
+          "shiny": true,
+          "note": "",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "gamewith",
+              "url": "https://pokemongo.gamewith.jp/article/show/579894",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-02T04:10:33+09:00"
+            }
+          ]
+        },
+        {
+          "name": "バケッチャ",
+          "dex": 710,
+          "shiny": true,
+          "note": "",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "gamewith",
+              "url": "https://pokemongo.gamewith.jp/article/show/579894",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-02T04:10:33+09:00"
+            }
+          ]
+        },
+        {
+          "name": "フワライド(ハロウィン)",
+          "dex": 426,
+          "shiny": true,
+          "note": "",
+          "rarity": "レア",
+          "sources": [
+            {
+              "site": "gamewith",
+              "url": "https://pokemongo.gamewith.jp/article/show/579894",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-02T04:10:33+09:00"
+            }
+          ]
+        },
+        {
+          "name": "ゲンガー(ハロウィン)",
+          "dex": 94,
+          "shiny": true,
+          "note": "",
+          "rarity": "レア",
+          "sources": [
+            {
+              "site": "gamewith",
+              "url": "https://pokemongo.gamewith.jp/article/show/579894",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-02T04:10:33+09:00"
+            }
+          ]
+        },
+        {
+          "name": "ロコン(ハロウィン)",
+          "dex": 37,
+          "shiny": true,
+          "note": "",
+          "rarity": "レア",
+          "sources": [
+            {
+              "site": "gamewith",
+              "url": "https://pokemongo.gamewith.jp/article/show/579894",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-02T04:10:33+09:00"
+            }
+          ]
         }
       ],
       "raids": [
@@ -2066,6 +2504,26 @@
               "url": "https://pokemongo.com/ja/news/halloween-part-1-2026",
               "fetched_at": "2026-11-04T00:16:52.471144+09:00",
               "article_updated": null
+            },
+            {
+              "site": "gamewith",
+              "url": "https://pokemongo.gamewith.jp/article/show/579894",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-02T04:10:33+09:00"
+            }
+          ]
+        },
+        {
+          "name": "ピカチュウ(ハット&ケープ)",
+          "dex": 25,
+          "shiny": true,
+          "tier": "★1",
+          "sources": [
+            {
+              "site": "gamewith",
+              "url": "https://pokemongo.gamewith.jp/article/show/579894",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-02T04:10:33+09:00"
             }
           ]
         }
@@ -2094,6 +2552,26 @@
               "url": "https://pokemongo-get.com/board/10689/",
               "fetched_at": "2026-11-04T00:16:52.471144+09:00",
               "article_updated": null
+            }
+          ]
+        },
+        {
+          "task": "リワードを受け取る",
+          "rewards": [
+            {
+              "name": "ふしぎなアメ"
+            },
+            {
+              "name": "ピカチュウ(ハット&ケープ)",
+              "dex": 25
+            }
+          ],
+          "sources": [
+            {
+              "site": "gamewith",
+              "url": "https://pokemongo.gamewith.jp/article/show/579894",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-02T04:10:33+09:00"
             }
           ]
         }
@@ -2325,6 +2803,12 @@
                 "url": "https://pokemongo-get.com/board/10689/",
                 "fetched_at": "2026-11-04T00:16:52.471144+09:00",
                 "article_updated": null
+              },
+              {
+                "site": "gamewith",
+                "url": "https://pokemongo.gamewith.jp/article/show/579894",
+                "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+                "article_updated": "2026-11-02T04:10:33+09:00"
               }
             ]
           },
@@ -2399,6 +2883,42 @@
                 "article_updated": null
               }
             ]
+          },
+          {
+            "name": "フワライド(ハロウィン)",
+            "dex": 426,
+            "sources": [
+              {
+                "site": "gamewith",
+                "url": "https://pokemongo.gamewith.jp/article/show/579894",
+                "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+                "article_updated": "2026-11-02T04:10:33+09:00"
+              }
+            ]
+          },
+          {
+            "name": "ゲンガー(ハロウィン)",
+            "dex": 94,
+            "sources": [
+              {
+                "site": "gamewith",
+                "url": "https://pokemongo.gamewith.jp/article/show/579894",
+                "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+                "article_updated": "2026-11-02T04:10:33+09:00"
+              }
+            ]
+          },
+          {
+            "name": "ロコン(ハロウィン)",
+            "dex": 37,
+            "sources": [
+              {
+                "site": "gamewith",
+                "url": "https://pokemongo.gamewith.jp/article/show/579894",
+                "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+                "article_updated": "2026-11-02T04:10:33+09:00"
+              }
+            ]
           }
         ],
         "items": [
@@ -2423,6 +2943,12 @@
                 "url": "https://pokemongo-get.com/board/10689/",
                 "fetched_at": "2026-11-04T00:16:52.471144+09:00",
                 "article_updated": null
+              },
+              {
+                "site": "gamewith",
+                "url": "https://pokemongo.gamewith.jp/article/show/579894",
+                "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+                "article_updated": "2026-11-02T04:10:33+09:00"
               }
             ]
           },
@@ -2441,6 +2967,12 @@
                 "url": "https://pokemongo-get.com/board/10689/",
                 "fetched_at": "2026-11-04T00:16:52.471144+09:00",
                 "article_updated": null
+              },
+              {
+                "site": "gamewith",
+                "url": "https://pokemongo.gamewith.jp/article/show/579894",
+                "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+                "article_updated": "2026-11-02T04:10:33+09:00"
               }
             ]
           },
@@ -2459,6 +2991,12 @@
                 "url": "https://pokemongo-get.com/board/10689/",
                 "fetched_at": "2026-11-04T00:16:52.471144+09:00",
                 "article_updated": null
+              },
+              {
+                "site": "gamewith",
+                "url": "https://pokemongo.gamewith.jp/article/show/579894",
+                "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+                "article_updated": "2026-11-02T04:10:33+09:00"
               }
             ]
           },
@@ -2477,12 +3015,18 @@
                 "url": "https://pokemongo-get.com/board/10689/",
                 "fetched_at": "2026-11-04T00:16:52.471144+09:00",
                 "article_updated": null
+              },
+              {
+                "site": "gamewith",
+                "url": "https://pokemongo.gamewith.jp/article/show/579894",
+                "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+                "article_updated": "2026-11-02T04:10:33+09:00"
               }
             ]
           }
         ]
       },
-      "updated_at": "2026-11-04T00:16:52.471144+09:00"
+      "updated_at": "2026-11-04T07:34:54.372378+09:00"
     },
     "ev-auto-dynamax-uxie-mesprit-azelf-max-battle-day-2026": {
       "raids": [
@@ -2551,9 +3095,150 @@
               "article_updated": null
             }
           ]
+        },
+        {
+          "task": "マックスバトルで勝つ",
+          "rewards": [
+            {
+              "name": "マックス粒子"
+            }
+          ],
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10678/",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "task": "マックスバトルで2回勝つ",
+          "rewards": [
+            {
+              "name": "マックス粒子"
+            }
+          ],
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10678/",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "task": "マックスバトルで3回勝つ",
+          "rewards": [
+            {
+              "name": "マックス粒子"
+            }
+          ],
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10678/",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "task": "マックスバトルで4回勝つ",
+          "rewards": [
+            {
+              "name": "マックス粒子"
+            }
+          ],
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10678/",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "task": "マックスバトルで5回勝つ",
+          "rewards": [
+            {
+              "name": "マックス粒子"
+            }
+          ],
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10678/",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "task": "マックスバトルで6回勝つ",
+          "rewards": [
+            {
+              "name": "マックス粒子"
+            }
+          ],
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10678/",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "task": "マックスバトルで7回勝つ",
+          "rewards": [
+            {
+              "name": "マックス粒子"
+            }
+          ],
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10678/",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": null
+            }
+          ]
         }
       ],
-      "updated_at": "2026-11-04T00:16:52.471144+09:00"
+      "updated_at": "2026-11-04T07:34:54.372378+09:00",
+      "surprise_box": {
+        "pokemon": [],
+        "items": [
+          {
+            "name": "ダイキノコ",
+            "qty": "×1",
+            "sources": [
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10678/",
+                "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+                "article_updated": null
+              }
+            ]
+          },
+          {
+            "name": "マックス粒子",
+            "qty": "×800",
+            "sources": [
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10678/",
+                "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+                "article_updated": null
+              }
+            ]
+          }
+        ]
+      }
     },
     "ev-auto-minior-meteor-showers-2026": {
       "wilds": [
@@ -2569,11 +3254,51 @@
               "url": "https://pokemongo.com/ja/news/minior-meteor-showers-2026",
               "fetched_at": "2026-11-04T00:16:52.471144+09:00",
               "article_updated": null
+            },
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10677/",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": null
             }
           ]
         }
       ],
-      "updated_at": "2026-11-04T00:16:52.471144+09:00"
+      "updated_at": "2026-11-04T07:34:54.372378+09:00",
+      "time_challenge": [
+        {
+          "task": "リワードを受け取る",
+          "rewards": [
+            {
+              "name": "ほしのかけら"
+            }
+          ],
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10677/",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "task": "ほしのかけらを使う",
+          "rewards": [
+            {
+              "name": "ほしのすな"
+            }
+          ],
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10677/",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": null
+            }
+          ]
+        }
+      ]
     },
     "ev-auto-sandile-hatch-day-2026": {
       "eggs": [
@@ -2836,7 +3561,19 @@
           ]
         }
       ],
-      "updated_at": "2026-11-04T00:16:52.471144+09:00"
+      "updated_at": "2026-11-04T07:34:54.372378+09:00",
+      "schedule": {
+        "start": "2026-11-02T06:00",
+        "end": "2026-11-02T21:00",
+        "sources": [
+          {
+            "site": "pokemapi",
+            "url": "https://pokemongo-get.com/board/10790/",
+            "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+            "article_updated": null
+          }
+        ]
+      }
     },
     "ev-auto-dia-de-muertos-2026": {
       "raids": [
@@ -4224,7 +4961,7 @@
         {
           "name": "ギラティナ(アナザー)",
           "dex": 487,
-          "shiny": null,
+          "shiny": true,
           "tier": "★5",
           "sources": [
             {
@@ -4232,11 +4969,1360 @@
               "url": "https://9db.jp/pokemongo/data/26614",
               "fetched_at": "2026-11-04T00:16:52.471144+09:00",
               "article_updated": "2026-11-04T00:05:28+09:00"
+            },
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10799/",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "メガヤミラミ",
+          "dex": 302,
+          "shiny": true,
+          "tier": "★4",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10799/",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "デスカーン",
+          "dex": 563,
+          "shiny": true,
+          "tier": "★3",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10799/",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "オーロット",
+          "dex": 709,
+          "shiny": true,
+          "tier": "★3",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10799/",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "ダダリン",
+          "dex": 781,
+          "shiny": true,
+          "tier": "★3",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10799/",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "ハットとケープをつけたピカチュウ",
+          "dex": 25,
+          "shiny": true,
+          "tier": "★1",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10799/",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "リボンをつけたヤバチャ",
+          "dex": 854,
+          "shiny": true,
+          "tier": "★1",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10799/",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": null
             }
           ]
         }
       ],
-      "updated_at": "2026-11-04T00:16:52.471144+09:00"
+      "updated_at": "2026-11-04T07:34:54.372378+09:00",
+      "schedule": {
+        "start": "2026-11-04T06:00",
+        "end": "2026-11-05T20:00",
+        "sources": [
+          {
+            "site": "pokemapi",
+            "url": "https://pokemongo-get.com/board/10799/",
+            "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+            "article_updated": null
+          }
+        ]
+      }
+    },
+    "ev-auto-shadow-tornadus-incarnate-raid": {
+      "raids": [
+        {
+          "name": "シャドウトルネロス（けしんフォルム）",
+          "dex": 641,
+          "shiny": true,
+          "tier": "★5",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10800/",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "シャドウニョロゾ",
+          "dex": 61,
+          "shiny": false,
+          "tier": "★3",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10800/",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "シャドウイノムー",
+          "dex": 221,
+          "shiny": false,
+          "tier": "★3",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10800/",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "シャドウポッタイシ",
+          "dex": 394,
+          "shiny": false,
+          "tier": "★3",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10800/",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "シャドウヨーギラス",
+          "dex": 246,
+          "shiny": false,
+          "tier": "★1",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10800/",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "シャドウミズゴロウ",
+          "dex": 258,
+          "shiny": false,
+          "tier": "★1",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10800/",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "シャドウマクノシタ",
+          "dex": 296,
+          "shiny": false,
+          "tier": "★1",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10800/",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "シャドウズガイドス",
+          "dex": 408,
+          "shiny": false,
+          "tier": "★1",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10800/",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": null
+            }
+          ]
+        }
+      ],
+      "updated_at": "2026-11-04T07:34:54.372378+09:00"
+    },
+    "ev-palkia-char": {
+      "raids": [
+        {
+          "name": "パルキア",
+          "dex": 484,
+          "shiny": null,
+          "tier": "★5",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10754/",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "メガリザードンX",
+          "dex": 6,
+          "shiny": null,
+          "tier": "★4",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10754/",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "メガリザードンY",
+          "dex": 6,
+          "shiny": null,
+          "tier": "★4",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10754/",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "アローラライチュウ",
+          "dex": 26,
+          "shiny": null,
+          "tier": "★3",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10754/",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "アローラキュウコン",
+          "dex": 38,
+          "shiny": null,
+          "tier": "★3",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10754/",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "アローラベトベトン",
+          "dex": 89,
+          "shiny": null,
+          "tier": "★3",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10754/",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "キバゴ",
+          "dex": 610,
+          "shiny": null,
+          "tier": "★1",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10754/",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "ヌメラ",
+          "dex": 704,
+          "shiny": null,
+          "tier": "★1",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10754/",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "ジャラコ",
+          "dex": 782,
+          "shiny": null,
+          "tier": "★1",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10754/",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "セビエ",
+          "dex": 996,
+          "shiny": null,
+          "tier": "★1",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10754/",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": null
+            }
+          ]
+        }
+      ],
+      "updated_at": "2026-11-04T07:34:54.372378+09:00"
+    },
+    "ev-auto-go-pass-wild-week-2026": {
+      "surprise_box": {
+        "pokemon": [],
+        "items": [
+          {
+            "name": "GOパスデラックス：ワイルドウィーク",
+            "qty": "×1",
+            "sources": [
+              {
+                "site": "9db",
+                "url": "https://9db.jp/pokemongo/data/26590",
+                "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+                "article_updated": "2026-11-04T06:21:17+09:00"
+              }
+            ]
+          },
+          {
+            "name": "GOパスデラックス：ワイルドウィーク+10ランク",
+            "qty": "×1",
+            "sources": [
+              {
+                "site": "9db",
+                "url": "https://9db.jp/pokemongo/data/26590",
+                "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+                "article_updated": "2026-11-04T06:21:17+09:00"
+              }
+            ]
+          }
+        ]
+      },
+      "updated_at": "2026-11-04T07:34:54.372378+09:00"
+    },
+    "ev-auto-gbl-twilight-journey": {
+      "time_challenge": [
+        {
+          "task": "100バトルと50勝",
+          "rewards": [
+            {
+              "name": "ほしのすな"
+            },
+            {
+              "name": "ふしぎなアメXL"
+            },
+            {
+              "name": "すごいわざマシン ノーマル"
+            },
+            {
+              "name": "すごいわざマシン スペシャル"
+            }
+          ],
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26213",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-04T05:00:04+09:00"
+            }
+          ]
+        }
+      ],
+      "updated_at": "2026-11-04T07:34:54.372378+09:00"
+    },
+    "ev-auto-wild-area-2026-sendai": {
+      "wilds": [
+        {
+          "name": "サンド(アローラ)",
+          "dex": 27,
+          "shiny": null,
+          "note": "ライト",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "ディグダ(アローラ)",
+          "dex": 50,
+          "shiny": null,
+          "note": "ライト",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "コイル",
+          "dex": 81,
+          "shiny": true,
+          "note": "ライト,色シャドウ,色したっぱ",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "シェルダー",
+          "dex": 90,
+          "shiny": null,
+          "note": "ライト",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "イワーク",
+          "dex": 95,
+          "shiny": null,
+          "note": "ライト",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "ポリゴン",
+          "dex": 137,
+          "shiny": null,
+          "note": "ライト",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "ツボツボ",
+          "dex": 213,
+          "shiny": null,
+          "note": "ライト",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "エアームド",
+          "dex": 227,
+          "shiny": null,
+          "note": "ライト",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "ノズパス",
+          "dex": 299,
+          "shiny": null,
+          "note": "ライト",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "ココドラ",
+          "dex": 304,
+          "shiny": null,
+          "note": "ライト",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "ダンバル",
+          "dex": 374,
+          "shiny": true,
+          "note": "ライト,色シャドウ",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "ポッチャマ",
+          "dex": 393,
+          "shiny": null,
+          "note": "ライト,御三家",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "タテトプス",
+          "dex": 410,
+          "shiny": null,
+          "note": "ライト",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "ドーミラー",
+          "dex": 436,
+          "shiny": null,
+          "note": "",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "ルカリオ",
+          "dex": 448,
+          "shiny": null,
+          "note": "",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "モグリュー",
+          "dex": 529,
+          "shiny": null,
+          "note": "ライト",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "テッシード",
+          "dex": 597,
+          "shiny": null,
+          "note": "ライト",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "ギアル",
+          "dex": 599,
+          "shiny": null,
+          "note": "",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "マッギョ(ガラル)",
+          "dex": 618,
+          "shiny": null,
+          "note": "",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "アイアント",
+          "dex": 632,
+          "shiny": null,
+          "note": "",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "ヌメイル(ヒスイ)",
+          "dex": 705,
+          "shiny": null,
+          "note": "",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "ココガラ",
+          "dex": 821,
+          "shiny": null,
+          "note": "ライト",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "カヌチャン",
+          "dex": 957,
+          "shiny": null,
+          "note": "",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "ミミズズ",
+          "dex": 968,
+          "shiny": null,
+          "note": "",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "ヒトカゲ",
+          "dex": 4,
+          "shiny": true,
+          "note": "ライト,色シャドウ,色したっぱ,御三家",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "コイキング",
+          "dex": 129,
+          "shiny": true,
+          "note": "ライト,色シャドウ",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "ミニリュウ",
+          "dex": 147,
+          "shiny": true,
+          "note": "ライト,色シャドウ",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "グライガー",
+          "dex": 207,
+          "shiny": true,
+          "note": "ライト,色シャドウ",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "ナックラー",
+          "dex": 328,
+          "shiny": true,
+          "note": "ライト,色シャドウ",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "チルット",
+          "dex": 333,
+          "shiny": null,
+          "note": "ライト",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "ドジョッチ",
+          "dex": 339,
+          "shiny": null,
+          "note": "ライト",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "タツベイ",
+          "dex": 371,
+          "shiny": true,
+          "note": "ライト,色シャドウ",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "フカマル",
+          "dex": 443,
+          "shiny": true,
+          "note": "ライト,色シャドウ",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "シビシラス",
+          "dex": 602,
+          "shiny": null,
+          "note": "",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "キバゴ",
+          "dex": 610,
+          "shiny": null,
+          "note": "ライト",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "クイタラン",
+          "dex": 631,
+          "shiny": null,
+          "note": "",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "モノズ",
+          "dex": 633,
+          "shiny": null,
+          "note": "ライト",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "クズモー",
+          "dex": 690,
+          "shiny": null,
+          "note": "",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "チゴラス",
+          "dex": 696,
+          "shiny": null,
+          "note": "ライト",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "アマルス",
+          "dex": 698,
+          "shiny": null,
+          "note": "ライト",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "ヌメラ",
+          "dex": 704,
+          "shiny": null,
+          "note": "",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "オンバット",
+          "dex": 714,
+          "shiny": null,
+          "note": "ライト",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "バクガメス",
+          "dex": 776,
+          "shiny": null,
+          "note": "",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "ジャラコ",
+          "dex": 782,
+          "shiny": null,
+          "note": "",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "カジッチュ",
+          "dex": 840,
+          "shiny": null,
+          "note": "",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "ヤクデ",
+          "dex": 850,
+          "shiny": null,
+          "note": "",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "セビエ",
+          "dex": 996,
+          "shiny": null,
+          "note": "",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        }
+      ],
+      "raids": [
+        {
+          "name": "カイリキー",
+          "dex": 68,
+          "shiny": true,
+          "tier": "★3",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "ザシアン(けんのおう)",
+          "dex": 888,
+          "shiny": null,
+          "tier": "★5",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "ザマゼンタ(たてのおう)",
+          "dex": 889,
+          "shiny": null,
+          "tier": "★5",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        }
+      ],
+      "eggs": [
+        {
+          "name": "ヒトツキ",
+          "dex": 679,
+          "distance": "10km",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "クレッフィ",
+          "dex": 707,
+          "distance": "10km",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "ジジーロン",
+          "dex": 780,
+          "distance": "10km",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        },
+        {
+          "name": "ジュラルドン",
+          "dex": 884,
+          "distance": "10km",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26352",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T20:28:47+09:00"
+            }
+          ]
+        }
+      ],
+      "updated_at": "2026-11-04T07:34:54.372378+09:00"
+    },
+    "ev-auto-spotlight-hour-teddiursa-witch-hat-2026-11-05": {
+      "wilds": [
+        {
+          "name": "ヒメグマ(魔女の帽子)",
+          "dex": 216,
+          "shiny": true,
+          "note": "",
+          "rarity": "通常",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26620",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-03T19:10:02+09:00"
+            }
+          ]
+        }
+      ],
+      "updated_at": "2026-11-04T07:34:54.372378+09:00"
+    },
+    "ev-auto-go-pass-halloween-2026": {
+      "updated_at": "2026-11-04T07:34:54.372378+09:00"
+    },
+    "ev-auto-dia-de-muertos-2026-reforma": {
+      "raids": [
+        {
+          "name": "キョダイゲンガー",
+          "dex": 94,
+          "shiny": true,
+          "tier": "★6",
+          "sources": [
+            {
+              "site": "gamewith",
+              "url": "https://pokemongo.gamewith.jp/article/show/584389",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-02T07:51:25+09:00"
+            }
+          ]
+        }
+      ],
+      "time_challenge": [
+        {
+          "task": "イベント限定タイムチャレンジ",
+          "rewards": [
+            {
+              "name": "カラカラ(花飾り)",
+              "dex": 104
+            },
+            {
+              "name": "ヨマワル(花飾り)",
+              "dex": 355
+            },
+            {
+              "name": "キマワリ",
+              "dex": 192
+            },
+            {
+              "name": "フワンテ",
+              "dex": 425
+            },
+            {
+              "name": "ヒトモシ",
+              "dex": 607
+            },
+            {
+              "name": "フラベベ",
+              "dex": 669
+            },
+            {
+              "name": "ボクレー",
+              "dex": 708
+            },
+            {
+              "name": "ホゲータ",
+              "dex": 909
+            },
+            {
+              "name": "パピモッチ",
+              "dex": 926
+            }
+          ],
+          "sources": [
+            {
+              "site": "gamewith",
+              "url": "https://pokemongo.gamewith.jp/article/show/584389",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-02T07:51:25+09:00"
+            }
+          ]
+        }
+      ],
+      "updated_at": "2026-11-04T07:34:54.372378+09:00"
+    },
+    "ev-raid-giratina-o": {
+      "raids": [
+        {
+          "name": "メガヤミラミ",
+          "dex": 302,
+          "shiny": true,
+          "tier": "メガ",
+          "sources": [
+            {
+              "site": "9db",
+              "url": "https://9db.jp/pokemongo/data/26429",
+              "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+              "article_updated": "2026-11-02T06:00:00+09:00"
+            }
+          ]
+        }
+      ],
+      "updated_at": "2026-11-04T07:34:54.372378+09:00"
+    },
+    "ev-auto-go-pass-big-footprints": {
+      "updated_at": "2026-11-04T07:34:54.372378+09:00"
     }
   }
 }

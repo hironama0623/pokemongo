@@ -1158,6 +1158,618 @@
       ]
     },
     {
+      "id": "news-2986a50c2f",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "new_event",
+      "title": "【新イベント】シャドウトルネロス（けしんフォルム）登場に伴うシャドウレイドボス変更",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-shadow-tornadus-incarnate-raid",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10800/",
+          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-b356bd2d6a",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "event_update",
+      "title": "【情報追加】シャドウトルネロス（けしんフォルム）登場に伴うシャドウレイドボス変更：レイドが判明・追加（8件）",
+      "details": "レイド：シャドウトルネロス（けしんフォルム）、シャドウニョロゾ、シャドウイノムー、シャドウポッタイシ、シャドウヨーギラス、シャドウミズゴロウ ほか2件",
+      "targetId": "ev-auto-shadow-tornadus-incarnate-raid",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10800/",
+          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-4cfdd39fcd",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "schedule_changed",
+      "title": "【日程変更】伝説：ギラティナ(アナザー)",
+      "details": "日程が更新されています：2026-11-04〜2026-11-08 → 2026-11-04〜2026-11-05",
+      "targetId": "ev-auto-giratina-another-raid-2026-11",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10799/",
+          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-0431c5eabf",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "event_update",
+      "title": "【情報追加】伝説：ギラティナ(アナザー)：レイドが判明・追加（6件）",
+      "details": "レイド：メガヤミラミ、デスカーン、オーロット、ダダリン、ハットとケープをつけたピカチュウ、リボンをつけたヤバチャ",
+      "targetId": "ev-auto-giratina-another-raid-2026-11",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10799/",
+          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-89d9f81e4d",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "schedule_changed",
+      "title": "【日程変更】ダイマックスワンリキー 出現率UP ＆ マックスマンデー",
+      "details": "日程が更新されています：2026-11-02〜2026-11-08 → 2026-11-02〜2026-11-02",
+      "targetId": "ev-dmax-machop-week",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10790/",
+          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-911412c49d",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "event_update",
+      "title": "【情報追加】パルキア / メガリザードンX・Y レイド週間：レイドが判明・追加（10件）",
+      "details": "レイド：パルキア、メガリザードンX、メガリザードンY、アローラライチュウ、アローラキュウコン、アローラベトベトン ほか4件",
+      "targetId": "ev-palkia-char",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10754/",
+          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-fd6b763680",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "event_update",
+      "title": "【情報追加】「ユクシー」「エムリット」「アグノム」がダイマックスして登場！ — Pokémon GO：タイムチャレンジが判明・追加（7件）",
+      "details": "タイムチャレンジ：マックスバトルで勝つ→マックス粒子、マックスバトルで2回勝つ→マックス粒子、マックスバトルで3回勝つ→マックス粒子、マックスバトルで4回勝つ→マックス粒子、マックスバトルで5回勝つ→マックス粒子、マックスバトルで6回勝つ→マックス粒子 ほか1件",
+      "targetId": "ev-auto-dynamax-uxie-mesprit-azelf-max-battle-day-2026",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10678/",
+          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-6373c8e94b",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "event_update",
+      "title": "【情報追加】「ユクシー」「エムリット」「アグノム」がダイマックスして登場！ — Pokémon GO：サプライズボックスが判明・追加（2件）",
+      "details": "サプライズボックス：ダイキノコ××1、マックス粒子××800",
+      "targetId": "ev-auto-dynamax-uxie-mesprit-azelf-max-battle-day-2026",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10678/",
+          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-e506de509f",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "event_update",
+      "title": "【情報追加】流星群がみられる時期に星空の下を探索すると、「メテノ」と出会えるかも！：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：リワードを受け取る→ほしのかけら、ほしのかけらを使う→ほしのすな",
+      "targetId": "ev-auto-minior-meteor-showers-2026",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10677/",
+          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-b3bb780549",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "new_event",
+      "title": "【新イベント】GOパス：ワイルドウィーク2026",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-go-pass-wild-week-2026",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26590",
+          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "article_updated": "2026-11-04T06:21:17+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-2f3a536c14",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "event_update",
+      "title": "【情報追加】GOパス：ワイルドウィーク2026：サプライズボックスが判明・追加（2件）",
+      "details": "サプライズボックス：GOパスデラックス：ワイルドウィーク××1、GOパスデラックス：ワイルドウィーク+10ランク××1",
+      "targetId": "ev-auto-go-pass-wild-week-2026",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26590",
+          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "article_updated": "2026-11-04T06:21:17+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-1e06ace78c",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "new_event",
+      "title": "【新イベント】GOバトルリーグ：黄昏の旅路",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-gbl-twilight-journey",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26213",
+          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "article_updated": "2026-11-04T05:00:04+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-f77910c105",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "event_update",
+      "title": "【情報追加】GOバトルリーグ：黄昏の旅路：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：100バトルと50勝→ほしのすな・ふしぎなアメXL・すごいわざマシン ノーマル・すごいわざマシン スペシャル",
+      "targetId": "ev-auto-gbl-twilight-journey",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26213",
+          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "article_updated": "2026-11-04T05:00:04+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-a69c1cd7dd",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "event_update",
+      "title": "【情報追加】ハロウィン2026 パート2：野生が判明・追加（3件）",
+      "details": "野生：ケロマツ(ハロウィン)、モクロー(ハロウィン)、ゲンガー(魔女帽子)",
+      "targetId": "ev-halloween-p2",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/580744",
+          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "article_updated": "2026-11-04T03:23:31+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-da9c6d5aca",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "event_update",
+      "title": "【情報追加】ハロウィン2026 パート2：レイドが判明・追加（2件）",
+      "details": "レイド：ピカチュウ(ハット&ケープ)、ヤバチャ(リボン)",
+      "targetId": "ev-halloween-p2",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/580744",
+          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "article_updated": "2026-11-04T03:23:31+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-a5fddc2424",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "event_update",
+      "title": "【情報追加】ハロウィン2026 パート2：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：全クリア報酬→ヤバチャ(リボン)",
+      "targetId": "ev-halloween-p2",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/580744",
+          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "article_updated": "2026-11-04T03:23:31+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-8727ee38ff",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "event_update",
+      "title": "【情報追加】ハロウィン2026 パート2：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：ハロウィン 詳細→ヤバチャ(しんさく)(リボン)・ヤバチャ(リボン)",
+      "targetId": "ev-halloween-p2",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26443",
+          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "article_updated": "2026-11-03T22:37:36+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-89c0395cea",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "new_event",
+      "title": "【新イベント】ワイルドエリア2026：仙台・東北",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26352",
+          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "article_updated": "2026-11-03T20:28:47+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-2a3cf84a7e",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：野生が判明・追加（47件）",
+      "details": "野生：サンド(アローラ)、ディグダ(アローラ)、コイル、シェルダー、イワーク、ポリゴン ほか41件",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26352",
+          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "article_updated": "2026-11-03T20:28:47+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-0c6dd0d4ea",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：レイドが判明・追加（3件）",
+      "details": "レイド：カイリキー、ザシアン(けんのおう)、ザマゼンタ(たてのおう)",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26352",
+          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "article_updated": "2026-11-03T20:28:47+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-41ef98bcb3",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：タマゴが判明・追加（4件）",
+      "details": "タマゴ：ヒトツキ(10km)、クレッフィ(10km)、ジジーロン(10km)、ジュラルドン(10km)",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26352",
+          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "article_updated": "2026-11-03T20:28:47+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-42381d3a86",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "event_update",
+      "title": "【情報追加】「黄昏時の願い」＆ スーパーメガレイドデイ：野生が判明・追加（1件）",
+      "details": "野生：ヒトデマン（ライト）",
+      "targetId": "ev-tusk-wish-deoxys",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26626",
+          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "article_updated": "2026-11-03T20:14:27+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-37ef337f5a",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "event_update",
+      "title": "【情報追加】「黄昏時の願い」＆ スーパーメガレイドデイ：レイドが判明・追加（7件）",
+      "details": "レイド：ピカチュウ、エーフィ、ブラッキー、メガスピアー、メガヘルガー、メガヤミラミ ほか1件",
+      "targetId": "ev-tusk-wish-deoxys",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26626",
+          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "article_updated": "2026-11-03T20:14:27+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-7fffa83e1f",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "event_update",
+      "title": "【情報追加】「黄昏時の願い」＆ スーパーメガレイドデイ：フィールドリサーチが判明・追加（2件）",
+      "details": "フィールドリサーチ：11/24(火) 10:00 ～ 11/26(木) 10:00→ヒトデマン（ライト）・リグレー、11/26(木) 10:00 ～ 11/30(月) 20:00→カジッチュ・オラチフ・ゲンガー（ライト）・フワライド（ライト）・アノクサ",
+      "targetId": "ev-tusk-wish-deoxys",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26626",
+          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "article_updated": "2026-11-03T20:14:27+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-240b6bbd9f",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "new_event",
+      "title": "【新イベント】スポットライトアワー：ヒメグマ(魔女の帽子)(進化時XP2倍)",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-spotlight-hour-teddiursa-witch-hat-2026-11-05",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26620",
+          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "article_updated": "2026-11-03T19:10:02+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-901c8f08c5",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "event_update",
+      "title": "【情報追加】スポットライトアワー：ヒメグマ(魔女の帽子)(進化時XP2倍)：野生が判明・追加（1件）",
+      "details": "野生：ヒメグマ(魔女の帽子)",
+      "targetId": "ev-auto-spotlight-hour-teddiursa-witch-hat-2026-11-05",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26620",
+          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "article_updated": "2026-11-03T19:10:02+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-b43af319ab",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "new_event",
+      "title": "【新イベント】GOパスハロウィン2026",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-go-pass-halloween-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/579895",
+          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "article_updated": "2026-11-03T17:08:10+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-dd0adb1931",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "new_event",
+      "title": "【新イベント】死者の日2026特別イベント(メキシコ レフォルマ通り)",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-dia-de-muertos-2026-reforma",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/584389",
+          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "article_updated": "2026-11-02T07:51:25+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-1ed7ca41f4",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "event_update",
+      "title": "【情報追加】死者の日2026特別イベント(メキシコ レフォルマ通り)：レイドが判明・追加（1件）",
+      "details": "レイド：キョダイゲンガー",
+      "targetId": "ev-auto-dia-de-muertos-2026-reforma",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/584389",
+          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "article_updated": "2026-11-02T07:51:25+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-f5f6abfc66",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "event_update",
+      "title": "【情報追加】死者の日2026特別イベント(メキシコ レフォルマ通り)：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：イベント限定タイムチャレンジ→カラカラ(花飾り)・ヨマワル(花飾り)・キマワリ・フワンテ・ヒトモシ・フラベベ・ボクレー・ホゲータ・パピモッチ",
+      "targetId": "ev-auto-dia-de-muertos-2026-reforma",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/584389",
+          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "article_updated": "2026-11-02T07:51:25+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-c4c1aea35b",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "event_update",
+      "title": "【情報追加】ギラティナ(オリジン) ＆ メガヤミラミ レイド：レイドが判明・追加（1件）",
+      "details": "レイド：メガヤミラミ",
+      "targetId": "ev-raid-giratina-o",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26429",
+          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "article_updated": "2026-11-02T06:00:00+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-8eba0c25f4",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "event_update",
+      "title": "【情報追加】ハロウィン2026 パート1：野生が判明・追加（5件）",
+      "details": "野生：ポッチャマ(ハロウィン)、バケッチャ、フワライド(ハロウィン)、ゲンガー(ハロウィン)、ロコン(ハロウィン)",
+      "targetId": "ev-halloween-p1",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/579894",
+          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "article_updated": "2026-11-02T04:10:33+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-38f64027c8",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "event_update",
+      "title": "【情報追加】ハロウィン2026 パート1：レイドが判明・追加（1件）",
+      "details": "レイド：ピカチュウ(ハット&ケープ)",
+      "targetId": "ev-halloween-p1",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/579894",
+          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "article_updated": "2026-11-02T04:10:33+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-a62bb22ca7",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "event_update",
+      "title": "【情報追加】ハロウィン2026 パート1：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：リワードを受け取る→ふしぎなアメ・ピカチュウ(ハット&ケープ)",
+      "targetId": "ev-halloween-p1",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/579894",
+          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "article_updated": "2026-11-02T04:10:33+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-8e111687cc",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "event_update",
+      "title": "【情報追加】ハロウィン2026 パート1：サプライズボックスが判明・追加（3件）",
+      "details": "サプライズボックス：フワライド(ハロウィン)、ゲンガー(ハロウィン)、ロコン(ハロウィン)",
+      "targetId": "ev-halloween-p1",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/579894",
+          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "article_updated": "2026-11-02T04:10:33+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-155bac4cea",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "new_event",
+      "title": "【新イベント】GOパス：大きな足跡",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-go-pass-big-footprints",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/585785",
+          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "article_updated": "2026-11-01T21:49:18+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-741d8e2fcd",
       "date": "2026-11-03",
       "date_label": "11/3",
