@@ -733,6 +733,57 @@
       ]
     },
     {
+      "id": "news-361e3bc94c",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "kind": "new_event",
+      "title": "【新イベント】GOパス11月",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-go-pass-november-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/583362",
+          "fetched_at": "2026-11-03T21:12:10.722593+09:00",
+          "article_updated": "2026-11-03T20:40:15+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-8bef784424",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "kind": "event_update",
+      "title": "【情報追加】「黄昏時の願い」＆ スーパーメガレイドデイ：フィールドリサーチが判明・追加（3件）",
+      "details": "フィールドリサーチ：黄昏時の願いイベント期間中はイベント限定のフィールドリサーチタスクが登場→メガエナジー・ヒトデマン・リグレー、期間中にフィールドリサーチを達成すると黄昏の旅路シーズンに登場したポケモンと出会える (11/24 10:00〜11/26 10:00)→カジッチュ・オラチフ、期間中にフィールドリサーチを達成すると黄昏の旅路シーズンに登場したポケモンと出会える (11/26 10:00〜11/30 20:00)→ゲンガー(魔女帽子)・フワライド(ハロウィン)・アノクサ",
+      "targetId": "ev-tusk-wish-deoxys",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/586413",
+          "fetched_at": "2026-11-03T21:12:10.722593+09:00",
+          "article_updated": "2026-11-03T12:10:26+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-9924459c5c",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "kind": "event_update",
+      "title": "【情報追加】わくわくPokémon GO Lab.大調査：タイムチャレンジが判明・追加（6件）",
+      "details": "タイムチャレンジ：Pokémon GO Lab.のポケストップを回す→経験値×1000XP、相棒の写真を撮る→モンスターボール ×10、ポケモンを5匹捕まえる→ほしのすな ×1000、ギフトを3個贈る→経験値×1000XP、全クリア報酬→ピカチュウのアメ 26個、全クリア報酬→ほしのすな 2026個",
+      "targetId": "ev-auto-wakuwaku-pokemon-go-lab",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/580836",
+          "fetched_at": "2026-11-03T21:12:10.722593+09:00",
+          "article_updated": "2026-10-12T11:14:33+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-2be65065e8",
       "date": "2026-11-02",
       "date_label": "11/2",

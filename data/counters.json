@@ -151,7 +151,7 @@
         "gamewith": {
           "url": "https://pokemongo.gamewith.jp/article/show/583310",
           "article_updated": "2026-10-20T12:55:52+09:00",
-          "fetched_at": "2026-11-03T20:07:07.757033+09:00",
+          "fetched_at": "2026-11-03T21:12:10.722593+09:00",
           "counters": [
             {
               "name": "キュレム(W)",
@@ -332,11 +332,47 @@
               "tdo": null,
               "note": "",
               "dex": 462
+            },
+            {
+              "name": "メガライチュウY",
+              "rank": 1,
+              "role": "attacker",
+              "tag": "mega",
+              "fast": "でんきショック",
+              "charged": "でんじほう+",
+              "dps": null,
+              "tdo": null,
+              "note": "",
+              "dex": 26
+            },
+            {
+              "name": "メガライボルト",
+              "rank": 2,
+              "role": "attacker",
+              "tag": "mega",
+              "fast": "かみなりのキバ",
+              "charged": "ほうでん+",
+              "dps": null,
+              "tdo": null,
+              "note": "",
+              "dex": 310
+            },
+            {
+              "name": "メガライチュウX",
+              "rank": 3,
+              "role": "attacker",
+              "tag": "mega",
+              "fast": "でんきショック",
+              "charged": "ボルテッカー+",
+              "dps": null,
+              "tdo": null,
+              "note": "",
+              "dex": 26
             }
           ]
         }
       },
-      "updated_at": "2026-11-03T20:07:07.757033+09:00"
+      "updated_at": "2026-11-03T21:12:10.722593+09:00"
     },
     "raid:シャドウボルトロス(化身)": {
       "name": "シャドウボルトロス(化身)",
@@ -489,7 +525,7 @@
         "gamewith": {
           "url": "https://pokemongo.gamewith.jp/article/show/582648",
           "article_updated": "2026-11-02T13:29:08+09:00",
-          "fetched_at": "2026-11-03T20:07:07.757033+09:00",
+          "fetched_at": "2026-11-03T21:12:10.722593+09:00",
           "counters": [
             {
               "name": "ネクロズマ(暁)",
@@ -717,7 +753,7 @@
           ]
         }
       },
-      "updated_at": "2026-11-03T20:07:07.757033+09:00"
+      "updated_at": "2026-11-03T21:12:10.722593+09:00"
     },
     "raid:パルキア": {
       "name": "パルキア",
@@ -1284,7 +1320,7 @@
         "gamewith": {
           "url": "https://pokemongo.gamewith.jp/article/show/579398",
           "article_updated": "2026-10-25T17:52:14+09:00",
-          "fetched_at": "2026-11-03T20:07:07.757033+09:00",
+          "fetched_at": "2026-11-03T21:12:10.722593+09:00",
           "counters": [
             {
               "name": "ハピナス",
@@ -1313,7 +1349,7 @@
           ]
         }
       },
-      "updated_at": "2026-11-03T20:07:07.757033+09:00"
+      "updated_at": "2026-11-03T21:12:10.722593+09:00"
     },
     "dmax:アグノム": {
       "name": "ダイマックスアグノム",
@@ -1324,7 +1360,7 @@
         "gamewith": {
           "url": "https://pokemongo.gamewith.jp/article/show/579398",
           "article_updated": "2026-10-25T17:52:14+09:00",
-          "fetched_at": "2026-11-03T20:07:07.757033+09:00",
+          "fetched_at": "2026-11-03T21:12:10.722593+09:00",
           "counters": [
             {
               "name": "ハピナス",
@@ -1353,7 +1389,7 @@
           ]
         }
       },
-      "updated_at": "2026-11-03T20:07:07.757033+09:00"
+      "updated_at": "2026-11-03T21:12:10.722593+09:00"
     },
     "dmax:エムリット": {
       "name": "ダイマックスエムリット",
@@ -1364,7 +1400,7 @@
         "gamewith": {
           "url": "https://pokemongo.gamewith.jp/article/show/579398",
           "article_updated": "2026-10-25T17:52:14+09:00",
-          "fetched_at": "2026-11-03T20:07:07.757033+09:00",
+          "fetched_at": "2026-11-03T21:12:10.722593+09:00",
           "counters": [
             {
               "name": "レジスチル",
@@ -1393,7 +1429,7 @@
           ]
         }
       },
-      "updated_at": "2026-11-03T20:07:07.757033+09:00"
+      "updated_at": "2026-11-03T21:12:10.722593+09:00"
     },
     "dmax:gエースバーン": {
       "name": "キョダイマックスエースバーン",
