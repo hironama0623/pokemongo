@@ -240,6 +240,91 @@
       ]
     },
     {
+      "id": "news-a3ad075c3b",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "kind": "schedule_changed",
+      "title": "【日程変更】火曜日：おひろめデイ",
+      "details": "日程が更新されています：2026-10-27〜2026-10-27 → 2026-11-03〜2026-11-03",
+      "targetId": "ev-auto-tuesday-showcase-day",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10793/",
+          "fetched_at": "2026-11-03T11:00:32.601574+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-4cfe889705",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "kind": "event_update",
+      "title": "【情報追加】ダイマックスワンリキー 出現率UP ＆ マックスマンデー：レイドが判明・追加（1件）",
+      "details": "レイド：ワンリキー(ダイマックス)",
+      "targetId": "ev-dmax-machop-week",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10790/",
+          "fetched_at": "2026-11-03T11:00:32.601574+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-1917e460f7",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "kind": "schedule_changed",
+      "title": "【日程変更】GOパス大きな足跡",
+      "details": "日程が更新されています：2026-11-16〜2026-11-23 → 2026-11-03〜2026-12-01",
+      "targetId": "ev-auto-go-pass-big-footprints",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/583362",
+          "fetched_at": "2026-11-03T11:00:32.601574+09:00",
+          "article_updated": "2026-11-03T09:38:34+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-31df338513",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "kind": "event_update",
+      "title": "【情報追加】「黄昏時の願い」＆ スーパーメガレイドデイ：フィールドリサーチが判明・追加（2件）",
+      "details": "フィールドリサーチ：イベント限定のフィールドリサーチタスク→メガエナジー・ヒトデマン・リグレー、フィールドリサーチを達成すると黄昏の旅路シーズンに登場したポケモンと出会える→カジッチュ・オラチフ・ゲンガー(魔女帽子)・フワライド(ハロウィン)・アノクサ",
+      "targetId": "ev-tusk-wish-deoxys",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/586413",
+          "fetched_at": "2026-11-03T11:00:32.601574+09:00",
+          "article_updated": "2026-11-03T09:00:35+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-9ad9b9082e",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "kind": "event_update",
+      "title": "【情報追加】シャンデラのスーパーメガレイド・デイ：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：全クリア報酬→プレミアムバトルパス",
+      "targetId": "ev-supermega-chandelure",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/582648",
+          "fetched_at": "2026-11-03T11:00:32.601574+09:00",
+          "article_updated": "2026-11-02T13:29:08+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-2be65065e8",
       "date": "2026-11-02",
       "date_label": "11/2",

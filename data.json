@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/11/03 07:34 JST",
+  "updated_at": "2026/11/03 11:00 JST",
   "latest_news": [
     {
       "id": "news-1872118fe7",
@@ -112,6 +112,46 @@
       "title": "【情報追加】イオンモール ハロウィン タイムチャレンジ：タイムチャレンジが判明・追加（2件）",
       "details": "タイムチャレンジ：特別なタイムチャレンジパート1→ピカチュウ(魔女帽子)、特別なタイムチャレンジパート2→ピカチュウ(魔女帽子)",
       "targetId": "ev-aeon-halloween"
+    },
+    {
+      "id": "news-a3ad075c3b",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【日程変更】火曜日：おひろめデイ",
+      "details": "日程が更新されています：2026-10-27〜2026-10-27 → 2026-11-03〜2026-11-03",
+      "targetId": "ev-auto-tuesday-showcase-day"
+    },
+    {
+      "id": "news-4cfe889705",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【情報追加】ダイマックスワンリキー 出現率UP ＆ マックスマンデー：レイドが判明・追加（1件）",
+      "details": "レイド：ワンリキー(ダイマックス)",
+      "targetId": "ev-dmax-machop-week"
+    },
+    {
+      "id": "news-1917e460f7",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【日程変更】GOパス大きな足跡",
+      "details": "日程が更新されています：2026-11-16〜2026-11-23 → 2026-11-03〜2026-12-01",
+      "targetId": "ev-auto-go-pass-big-footprints"
+    },
+    {
+      "id": "news-31df338513",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【情報追加】「黄昏時の願い」＆ スーパーメガレイドデイ：フィールドリサーチが判明・追加（2件）",
+      "details": "フィールドリサーチ：イベント限定のフィールドリサーチタスク→メガエナジー・ヒトデマン・リグレー、フィールドリサーチを達成すると黄昏の旅路シーズンに登場したポケモンと出会える→カジッチュ・オラチフ・ゲンガー(魔女帽子)・フワライド(ハロウィン)・アノクサ",
+      "targetId": "ev-tusk-wish-deoxys"
+    },
+    {
+      "id": "news-9ad9b9082e",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【情報追加】シャンデラのスーパーメガレイド・デイ：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：全クリア報酬→プレミアムバトルパス",
+      "targetId": "ev-supermega-chandelure"
     },
     {
       "id": "news-2be65065e8",
@@ -6072,6 +6112,64 @@
         "rewardDex": 25,
         "rewardName": "イベントにぴったりなポケモン",
         "shiny": true,
+        "note": "出典: gamewith"
+      }
+    ],
+    "ev-tusk-wish-deoxys": [
+      {
+        "task": "イベント限定のフィールドリサーチタスク",
+        "rewardDex": 25,
+        "rewardName": "メガエナジー",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "イベント限定のフィールドリサーチタスク",
+        "rewardDex": 120,
+        "rewardName": "ヒトデマン",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "イベント限定のフィールドリサーチタスク",
+        "rewardDex": 605,
+        "rewardName": "リグレー",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "フィールドリサーチを達成すると黄昏の旅路シーズンに登場したポケモンと出会える",
+        "rewardDex": 840,
+        "rewardName": "カジッチュ",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "フィールドリサーチを達成すると黄昏の旅路シーズンに登場したポケモンと出会える",
+        "rewardDex": 942,
+        "rewardName": "オラチフ",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "フィールドリサーチを達成すると黄昏の旅路シーズンに登場したポケモンと出会える",
+        "rewardDex": 94,
+        "rewardName": "ゲンガー(魔女帽子)",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "フィールドリサーチを達成すると黄昏の旅路シーズンに登場したポケモンと出会える",
+        "rewardDex": 426,
+        "rewardName": "フワライド(ハロウィン)",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "フィールドリサーチを達成すると黄昏の旅路シーズンに登場したポケモンと出会える",
+        "rewardDex": 946,
+        "rewardName": "アノクサ",
+        "shiny": false,
         "note": "出典: gamewith"
       }
     ]
