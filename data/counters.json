@@ -1312,9 +1312,9 @@
       "types": [],
       "by_site": {
         "9db": {
-          "url": "https://9db.jp/pokemongo/data/26622",
-          "article_updated": "2026-10-20T05:53:16+09:00",
-          "fetched_at": "2026-11-03T22:18:01.270718+09:00",
+          "url": "https://9db.jp/pokemongo/data/26614",
+          "article_updated": "2026-11-04T00:05:28+09:00",
+          "fetched_at": "2026-11-04T00:16:52.471144+09:00",
           "counters": [
             {
               "name": "ムゲンダイナ（交換不可）",
@@ -1499,7 +1499,7 @@
           ]
         }
       },
-      "updated_at": "2026-11-03T22:18:01.270718+09:00"
+      "updated_at": "2026-11-04T00:16:52.471144+09:00"
     },
     "raid:シャドウランドロス(けしん)": {
       "name": "シャドウランドロス(けしん)",
@@ -1831,9 +1831,184 @@
               "dex": 462
             }
           ]
+        },
+        "9db": {
+          "url": "https://9db.jp/pokemongo/data/26619",
+          "article_updated": "2026-11-04T00:09:12+09:00",
+          "fetched_at": "2026-11-04T00:16:52.471144+09:00",
+          "counters": [
+            {
+              "name": "ホワイトキュレム（合体,交換不可）",
+              "rank": 1,
+              "role": "attacker",
+              "tag": "normal",
+              "fast": "こおりのキバ",
+              "charged": "コールドフレア",
+              "dps": 23,
+              "tdo": 487,
+              "note": "",
+              "dex": 646
+            },
+            {
+              "name": "ブラックキュレム（合体,交換不可）",
+              "rank": 2,
+              "role": "attacker",
+              "tag": "normal",
+              "fast": "ドラゴンテール",
+              "charged": "フリーズボルト",
+              "dps": 22,
+              "tdo": 465,
+              "note": "",
+              "dex": 646
+            },
+            {
+              "name": "デンジュモク（リワード,UB）",
+              "rank": 3,
+              "role": "attacker",
+              "tag": "normal",
+              "fast": "でんきショック",
+              "charged": "ほうでん",
+              "dps": 20,
+              "tdo": 310,
+              "note": "",
+              "dex": 796
+            },
+            {
+              "name": "ゼラオラ（リワード,交換不可）",
+              "rank": 4,
+              "role": "attacker",
+              "tag": "normal",
+              "fast": "ボルトチェンジ",
+              "charged": "プラズマフィスト",
+              "dps": 20,
+              "tdo": 401,
+              "note": "",
+              "dex": 807
+            },
+            {
+              "name": "ザマゼンタ(たてのおう)",
+              "rank": 5,
+              "role": "attacker",
+              "tag": "normal",
+              "fast": "こおりのキバ",
+              "charged": "きょじゅうだん",
+              "dps": 19,
+              "tdo": 608,
+              "note": "",
+              "dex": 889
+            },
+            {
+              "name": "ムゲンダイナ（交換不可）",
+              "rank": 6,
+              "role": "attacker",
+              "tag": "normal",
+              "fast": "どくづき",
+              "charged": "ダイマックスほう",
+              "dps": 19,
+              "tdo": 516,
+              "note": "",
+              "dex": 890
+            },
+            {
+              "name": "ボルトロス(れいじゅう)",
+              "rank": 7,
+              "role": "attacker",
+              "tag": "normal",
+              "fast": "ボルトチェンジ",
+              "charged": "かみなりあらし",
+              "dps": 19,
+              "tdo": 344,
+              "note": "",
+              "dex": 642
+            },
+            {
+              "name": "ゼクロム（ライト,サカキ使用）",
+              "rank": 8,
+              "role": "attacker",
+              "tag": "normal",
+              "fast": "チャージビーム",
+              "charged": "クロスサンダー",
+              "dps": 18,
+              "tdo": 431,
+              "note": "",
+              "dex": 644
+            },
+            {
+              "name": "ジバコイル（ライト,色シャドウ）",
+              "rank": 2,
+              "role": "attacker",
+              "tag": "shadow",
+              "fast": "ボルトチェンジ",
+              "charged": "ワイルドボルト",
+              "dps": 20,
+              "tdo": 416,
+              "note": "",
+              "dex": 462
+            },
+            {
+              "name": "ガチゴラス（ライト）",
+              "rank": 4,
+              "role": "attacker",
+              "tag": "shadow",
+              "fast": "いわおとし",
+              "charged": "メテオビーム",
+              "dps": 19,
+              "tdo": 339,
+              "note": "",
+              "dex": 697
+            },
+            {
+              "name": "メガミュウツーY",
+              "rank": 1,
+              "role": "attacker",
+              "tag": "mega",
+              "fast": "サイコカッター",
+              "charged": "れいとうビーム",
+              "dps": 21,
+              "tdo": 413,
+              "note": "",
+              "dex": 150
+            },
+            {
+              "name": "メガミュウツーX",
+              "rank": 2,
+              "role": "attacker",
+              "tag": "mega",
+              "fast": "ねんりき",
+              "charged": "れいとうビーム",
+              "dps": 20,
+              "tdo": 365,
+              "note": "",
+              "dex": 150
+            },
+            {
+              "name": "メガディアンシー（交換不可）",
+              "rank": 3,
+              "role": "attacker",
+              "tag": "mega",
+              "fast": "いわおとし",
+              "charged": "いわなだれ",
+              "dps": 19,
+              "tdo": 391,
+              "note": "",
+              "dex": 719
+            },
+            {
+              "name": "メガライボルト（交換不可）",
+              "rank": 4,
+              "role": "attacker",
+              "tag": "mega",
+              "fast": "かみなりのキバ",
+              "charged": "ほうでん+",
+              "dps": 19,
+              "tdo": 331,
+              "note": "",
+              "dex": 310
+            }
+          ]
         }
       },
-      "updated_at": "2026-11-03T22:49:42.354237+09:00"
+      "updated_at": "2026-11-04T00:16:52.471144+09:00"
     }
   }
 }
