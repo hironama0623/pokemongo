@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/11/03 11:00 JST",
+  "updated_at": "2026/11/03 11:36 JST",
   "latest_news": [
     {
       "id": "news-1872118fe7",
@@ -152,6 +152,46 @@
       "title": "【情報追加】シャンデラのスーパーメガレイド・デイ：タイムチャレンジが判明・追加（1件）",
       "details": "タイムチャレンジ：全クリア報酬→プレミアムバトルパス",
       "targetId": "ev-supermega-chandelure"
+    },
+    {
+      "id": "news-f90c069fb5",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【情報追加】今週のイベントスケジュールまとめ｜期間：2026/11/2(月)～2026/11/8(日)：野生が判明・追加（2件）",
+      "details": "野生：魔女の帽子をかぶった ヒメグマ、オンバット",
+      "targetId": "ev-auto-weekly-schedule-2026-11-02"
+    },
+    {
+      "id": "news-fc2f6fd3a0",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【情報追加】今週のイベントスケジュールまとめ｜期間：2026/11/2(月)～2026/11/8(日)：レイドが判明・追加（5件）",
+      "details": "レイド：ギラティナ (オリジン)、ギラティナ (アナザー)、メガヤミラミ、シャドウ ランドロス (けしんフォルム)、シャドウ トルネロス (けしんフォルム)",
+      "targetId": "ev-auto-weekly-schedule-2026-11-02"
+    },
+    {
+      "id": "news-fdac6c24fc",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【情報追加】シャンデラのスーパーメガレイド・デイ：サプライズボックスが判明・追加（2件）",
+      "details": "サプライズボックス：イベントチケット××1、プレミアムバトルパス××1",
+      "targetId": "ev-supermega-chandelure"
+    },
+    {
+      "id": "news-9f8efc50e1",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【情報追加】シャンデラのスーパーメガレイド・デイ：サプライズボックスが判明・追加（1件）",
+      "details": "サプライズボックス：レイドパス×x1",
+      "targetId": "ev-supermega-chandelure"
+    },
+    {
+      "id": "news-831f4e2b33",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "title": "【情報追加】ダイマックスユクシー・エムリット・アグノムのマックスバトルデイ：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：リワードを受け取る→ダイキnoshi",
+      "targetId": "ev-auto-max-battle-day-uxie-mesprit-azelf"
     },
     {
       "id": "news-2be65065e8",
@@ -10708,6 +10748,24 @@
           "name": "オンバット",
           "shiny": true,
           "note": "スポットライトアワー"
+        }
+      ]
+    },
+    {
+      "id": "ev-auto-weekly-schedule-2026-11-02",
+      "title": "ev-auto-weekly-schedule-2026-11-02",
+      "wilds": [
+        {
+          "dex": 216,
+          "name": "魔女の帽子をかぶった ヒメグマ",
+          "shiny": true,
+          "note": "進化時XPが2倍"
+        },
+        {
+          "dex": 714,
+          "name": "オンバット",
+          "shiny": true,
+          "note": "捕獲時アメが2倍"
         }
       ]
     },

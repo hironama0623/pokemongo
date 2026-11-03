@@ -325,6 +325,91 @@
       ]
     },
     {
+      "id": "news-f90c069fb5",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "kind": "event_update",
+      "title": "【情報追加】今週のイベントスケジュールまとめ｜期間：2026/11/2(月)～2026/11/8(日)：野生が判明・追加（2件）",
+      "details": "野生：魔女の帽子をかぶった ヒメグマ、オンバット",
+      "targetId": "ev-auto-weekly-schedule-2026-11-02",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10789/",
+          "fetched_at": "2026-11-03T11:36:03.227992+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-fc2f6fd3a0",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "kind": "event_update",
+      "title": "【情報追加】今週のイベントスケジュールまとめ｜期間：2026/11/2(月)～2026/11/8(日)：レイドが判明・追加（5件）",
+      "details": "レイド：ギラティナ (オリジン)、ギラティナ (アナザー)、メガヤミラミ、シャドウ ランドロス (けしんフォルム)、シャドウ トルネロス (けしんフォルム)",
+      "targetId": "ev-auto-weekly-schedule-2026-11-02",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10789/",
+          "fetched_at": "2026-11-03T11:36:03.227992+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-fdac6c24fc",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "kind": "event_update",
+      "title": "【情報追加】シャンデラのスーパーメガレイド・デイ：サプライズボックスが判明・追加（2件）",
+      "details": "サプライズボックス：イベントチケット××1、プレミアムバトルパス××1",
+      "targetId": "ev-supermega-chandelure",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10784/",
+          "fetched_at": "2026-11-03T11:36:03.227992+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-9f8efc50e1",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "kind": "event_update",
+      "title": "【情報追加】シャンデラのスーパーメガレイド・デイ：サプライズボックスが判明・追加（1件）",
+      "details": "サプライズボックス：レイドパス×x1",
+      "targetId": "ev-supermega-chandelure",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26153",
+          "fetched_at": "2026-11-03T11:36:03.227992+09:00",
+          "article_updated": "2026-11-01T23:35:05+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-831f4e2b33",
+      "date": "2026-11-03",
+      "date_label": "11/3",
+      "kind": "event_update",
+      "title": "【情報追加】ダイマックスユクシー・エムリット・アグノムのマックスバトルデイ：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：リワードを受け取る→ダイキnoshi",
+      "targetId": "ev-auto-max-battle-day-uxie-mesprit-azelf",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/579398",
+          "fetched_at": "2026-11-03T11:36:03.227992+09:00",
+          "article_updated": "2026-10-25T17:52:14+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-2be65065e8",
       "date": "2026-11-02",
       "date_label": "11/2",
@@ -6954,6 +7039,12 @@
           "site": "9db",
           "url": "https://9db.jp/pokemongo/data/26434",
           "fetched_at": "2026-10-31T23:26:31.550925+09:00",
+          "article_updated": "2026-10-13T14:45:06+09:00"
+        },
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26434",
+          "fetched_at": "2026-11-03T11:36:03.227992+09:00",
           "article_updated": "2026-10-13T14:45:06+09:00"
         }
       ]
