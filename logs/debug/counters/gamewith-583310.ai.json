@@ -2,7 +2,7 @@
  "relevant": true,
  "bosses": [
   {
-   "name": "シャドウトルネロス(けしん)",
+   "name": "シャドウトルネロス(化身)",
    "kind": "raid",
    "tier": "★5",
    "types": [
@@ -18,106 +18,7 @@
      "charged": "コールドフレア",
      "dps": 38.48,
      "tdo": null,
-     "note": ""
-    },
-    {
-     "name": "キュレム(B)",
-     "rank": 2,
-     "role": "attacker",
-     "tag": "normal",
-     "fast": "ドラゴンテール",
-     "charged": "フリーズボルト",
-     "dps": 37.97,
-     "tdo": null,
-     "note": ""
-    },
-    {
-     "name": "レジエレキ",
-     "rank": 3,
-     "role": "attacker",
-     "tag": "normal",
-     "fast": "ロックオン",
-     "charged": "サンダープリズン",
-     "dps": 27.66,
-     "tdo": null,
-     "note": ""
-    },
-    {
-     "name": "ゼラオラ",
-     "rank": 4,
-     "role": "attacker",
-     "tag": "normal",
-     "fast": "スパーク",
-     "charged": "プラズマフィスト",
-     "dps": 37.99,
-     "tdo": null,
-     "note": ""
-    },
-    {
-     "name": "ボルトロス(霊獣)",
-     "rank": 5,
-     "role": "attacker",
-     "tag": "normal",
-     "fast": "ボルトチェンジ",
-     "charged": "かみなりあらし",
-     "dps": 38.55,
-     "tdo": null,
-     "note": ""
-    },
-    {
-     "name": "デンジュモク",
-     "rank": 6,
-     "role": "attacker",
-     "tag": "normal",
-     "fast": "スパーク",
-     "charged": "ほうでん",
-     "dps": 36.51,
-     "tdo": null,
-     "note": ""
-    },
-    {
-     "name": "ゼクロム",
-     "rank": 7,
-     "role": "attacker",
-     "tag": "normal",
-     "fast": "チャージビーム",
-     "charged": "クロスサンダー",
-     "dps": 35.56,
-     "tdo": null,
-     "note": ""
-    },
-    {
-     "name": "ザマゼンタ(王)",
-     "rank": 8,
-     "role": "attacker",
-     "tag": "normal",
-     "fast": "こおりのキバ",
-     "charged": "きょじゅうだん",
-     "dps": 29.41,
-     "tdo": null,
-     "note": ""
-    },
-    {
-     "name": "ラムパルド",
-     "rank": 9,
-     "role": "attacker",
-     "tag": "normal",
-     "fast": "うちおとす",
-     "charged": "いわなだれ",
-     "dps": 31.66,
-     "tdo": null,
-     "note": ""
-    },
-    {
-     "name": "キラフロル",
-     "rank": 10,
-     "role": "attacker",
-     "tag": "normal",
-     "fast": "うちおとす",
-     "charged": "メテオビーム",
-     "dps": 30.97,
-     "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "シャドウゼクロム",
@@ -128,7 +29,29 @@
      "charged": "クロスサンダー",
      "dps": 42.49,
      "tdo": null,
-     "note": ""
+     "note": null
+    },
+    {
+     "name": "キュレム(B)",
+     "rank": 3,
+     "role": "attacker",
+     "tag": "normal",
+     "fast": "ドラゴンテール",
+     "charged": "フリーズボルト",
+     "dps": 37.97,
+     "tdo": null,
+     "note": null
+    },
+    {
+     "name": "レジエレキ",
+     "rank": 4,
+     "role": "attacker",
+     "tag": "normal",
+     "fast": "ロックオン",
+     "charged": "サンダープリズン",
+     "dps": 27.66,
+     "tdo": null,
+     "note": null
     },
     {
      "name": "シャドウライコウ",
@@ -139,7 +62,18 @@
      "charged": "ワイルドボルト",
      "dps": 35.9,
      "tdo": null,
-     "note": ""
+     "note": null
+    },
+    {
+     "name": "ゼラオラ",
+     "rank": 6,
+     "role": "attacker",
+     "tag": "normal",
+     "fast": "スパーク",
+     "charged": "プラズマフィスト",
+     "dps": 37.99,
+     "tdo": null,
+     "note": null
     },
     {
      "name": "シャドウラムパルド",
@@ -150,7 +84,7 @@
      "charged": "いわなだれ",
      "dps": 37.83,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "シャドウドサイドン",
@@ -161,7 +95,18 @@
      "charged": "がんせきほう",
      "dps": 33.95,
      "tdo": null,
-     "note": ""
+     "note": null
+    },
+    {
+     "name": "ボルトロス(霊獣)",
+     "rank": 9,
+     "role": "attacker",
+     "tag": "normal",
+     "fast": "ボルトチェンジ",
+     "charged": "かみなりあらし",
+     "dps": 38.55,
+     "tdo": null,
+     "note": null
     },
     {
      "name": "シャドウジバコイル",
@@ -172,7 +117,7 @@
      "charged": "ワイルドボルト",
      "dps": 33.86,
      "tdo": null,
-     "note": ""
+     "note": null
     }
    ]
   }
