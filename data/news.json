@@ -2,6 +2,210 @@
   "schema_version": 1,
   "items": [
     {
+      "id": "news-6ddbf8c3c7",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "kind": "schedule_changed",
+      "title": "【日程変更】adidasコラボ",
+      "details": "日程が更新されています：2026-09-25〜2027-01-15 → 2026-09-25〜2027-02-13",
+      "targetId": "ev-auto-adidas-collab-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/578629",
+          "fetched_at": "2026-11-05T07:41:27.522126+09:00",
+          "article_updated": "2026-11-05T02:47:29+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-c45d6efdec",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "kind": "event_update",
+      "title": "【情報追加】adidasコラボ：タイムチャレンジが判明・追加（11件）",
+      "details": "タイムチャレンジ：ポケストップ・ジム10個を回す→ズリのみ、ポケモンを20匹捕まえる→おこう、5km探索する→モンスターボール、タマゴを10個かえす→パイルのみ、ポケモンを50匹捕まえる→いいキズぐすり、20km探索する→スーパーボール ほか5件",
+      "targetId": "ev-auto-adidas-collab-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/578629",
+          "fetched_at": "2026-11-05T07:41:27.522126+09:00",
+          "article_updated": "2026-11-05T02:47:29+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-3be6388974",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドウィーク2026：レイドが判明・追加（3件）",
+      "details": "レイド：レジスチル、ラティアス、ラティオス",
+      "targetId": "ev-wildweek-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/582768",
+          "fetched_at": "2026-11-05T07:41:27.522126+09:00",
+          "article_updated": "2026-11-04T23:02:24+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-7990d1ec25",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "kind": "event_update",
+      "title": "【情報追加】ポケモンGOの2026年11月のスケジュール：レイドが判明・追加（6件）",
+      "details": "レイド：ギラティナ(O)、ギラティナ(A)、デオキシス(D)、デオキシス(A)、デオキシス(S)、トルネロス(化身フォルム)",
+      "targetId": "ev-auto-2026-nov-schedule",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/583244",
+          "fetched_at": "2026-11-05T07:41:27.522126+09:00",
+          "article_updated": "2026-11-04T18:21:12+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-c39b2751a3",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "kind": "event_update",
+      "title": "【情報追加】「黄昏時の願い」＆ スーパーメガレイドデイ：フィールドリサーチが判明・追加（2件）",
+      "details": "フィールドリサーチ：期間中にフィールドリサーチを達成する (11/24 10:00~11/26 10:00)→カジッチュ・オラチフ、期間中にフィールドリサーチを達成する (11/26 10:00~11/30 20:00)→ゲンガー(魔女帽子)・フワライド(ハロウィン)・アノクサ",
+      "targetId": "ev-tusk-wish-deoxys",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/586413",
+          "fetched_at": "2026-11-05T07:41:27.522126+09:00",
+          "article_updated": "2026-11-04T10:50:31+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-3e83a17f95",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "kind": "event_update",
+      "title": "【情報追加】ハロウィン2026 パート2：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：リワードを受け取る→ふしigなアメ、リワードを受け取る→ふしぎなアメ ×1",
+      "targetId": "ev-halloween-p2",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/580744",
+          "fetched_at": "2026-11-05T07:41:27.522126+09:00",
+          "article_updated": "2026-11-04T03:23:31+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-f9001ee8d2",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "kind": "event_update",
+      "title": "【情報追加】「大きな足跡」イベント：野生が判明・追加（3件）",
+      "details": "野生：サルノリ、メッソン、ヒバニー",
+      "targetId": "ev-big-footprints",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/585781",
+          "fetched_at": "2026-11-05T07:41:27.522126+09:00",
+          "article_updated": "2026-11-03T22:57:09+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-4b20580af9",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "kind": "event_update",
+      "title": "【情報追加】スーパーメガレイドデイ：メガシャンデラ：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：ポケモンを15回強化する→メガエナジー バンギラスのメガエナジー",
+      "targetId": "ev-auto-super-mega-raid-day-chandelure",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/582648",
+          "fetched_at": "2026-11-05T07:41:27.522126+09:00",
+          "article_updated": "2026-11-02T13:29:08+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-756bb8a107",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "kind": "event_update",
+      "title": "【情報追加】イオンハロウィンイベント：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：タイムチャレンジパート1（受取期間: 2026年10月19日~10月25日）→ピカチュウ(魔女帽子)、タイムチャレンジパート2（受取期間: 2026年10月26日~11月1日）→ピカチュウ(魔女帽子)",
+      "targetId": "ev-auto-aeon-halloween-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/579901",
+          "fetched_at": "2026-11-05T07:41:27.522126+09:00",
+          "article_updated": "2026-11-01T22:12:11+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-6c887ac68c",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "kind": "event_update",
+      "title": "【情報追加】ダイマックスユクシー・エムリット・アグノムのマックスバトルデイ：レイドが判明・追加（3件）",
+      "details": "レイド：ユクシー、エムリット、アグノム",
+      "targetId": "ev-auto-max-battle-day-uxie-mesprit-azelf",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/579398",
+          "fetched_at": "2026-11-05T07:41:27.522126+09:00",
+          "article_updated": "2026-10-25T17:52:14+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-d513f734d8",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "kind": "event_update",
+      "title": "【情報追加】わくわく！Pokémon GO Lab.大調査：フィールドリサーチが判明・追加（4件）",
+      "details": "フィールドリサーチ：Pokémon GO Lab.のポケストップを回す→経験値、相棒の写真を撮る→モンスターボール、ポケモンを5匹捕まえる→ほしのすな、ギフトを3個贈る→経験値",
+      "targetId": "ev-auto-wakuwaku-pokemon-go-lab",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/580836",
+          "fetched_at": "2026-11-05T07:41:27.522126+09:00",
+          "article_updated": "2026-10-12T11:14:33+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-0c12b6b345",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "kind": "event_update",
+      "title": "【情報追加】わくわく！Pokémon GO Lab.大調査：タイムチャレンジが判明・追加（4件）",
+      "details": "タイムチャレンジ：Pokémon GO Lab.のポケストップを回す→経験値×1000XP、相棒の写真を撮る→モンスターボール ×10、ポケモンを5匹捕まえる→ほしのすな ×1000、ギフトを3個贈る→経験値×1000XP",
+      "targetId": "ev-auto-wakuwaku-pokemon-go-lab",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/580836",
+          "fetched_at": "2026-11-05T07:41:27.522126+09:00",
+          "article_updated": "2026-10-12T11:14:33+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-1872118fe7",
       "date": "2026-11-04",
       "date_label": "11/4",

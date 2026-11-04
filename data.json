@@ -1,6 +1,102 @@
 {
-  "updated_at": "2026/11/04 23:04 JST",
+  "updated_at": "2026/11/05 07:41 JST",
   "latest_news": [
+    {
+      "id": "news-6ddbf8c3c7",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "title": "【日程変更】adidasコラボ",
+      "details": "日程が更新されています：2026-09-25〜2027-01-15 → 2026-09-25〜2027-02-13",
+      "targetId": "ev-auto-adidas-collab-2026"
+    },
+    {
+      "id": "news-c45d6efdec",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "title": "【情報追加】adidasコラボ：タイムチャレンジが判明・追加（11件）",
+      "details": "タイムチャレンジ：ポケストップ・ジム10個を回す→ズリのみ、ポケモンを20匹捕まえる→おこう、5km探索する→モンスターボール、タマゴを10個かえす→パイルのみ、ポケモンを50匹捕まえる→いいキズぐすり、20km探索する→スーパーボール ほか5件",
+      "targetId": "ev-auto-adidas-collab-2026"
+    },
+    {
+      "id": "news-3be6388974",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "title": "【情報追加】ワイルドウィーク2026：レイドが判明・追加（3件）",
+      "details": "レイド：レジスチル、ラティアス、ラティオス",
+      "targetId": "ev-wildweek-2026"
+    },
+    {
+      "id": "news-7990d1ec25",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "title": "【情報追加】ポケモンGOの2026年11月のスケジュール：レイドが判明・追加（6件）",
+      "details": "レイド：ギラティナ(O)、ギラティナ(A)、デオキシス(D)、デオキシス(A)、デオキシス(S)、トルネロス(化身フォルム)",
+      "targetId": "ev-auto-2026-nov-schedule"
+    },
+    {
+      "id": "news-c39b2751a3",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "title": "【情報追加】「黄昏時の願い」＆ スーパーメガレイドデイ：フィールドリサーチが判明・追加（2件）",
+      "details": "フィールドリサーチ：期間中にフィールドリサーチを達成する (11/24 10:00~11/26 10:00)→カジッチュ・オラチフ、期間中にフィールドリサーチを達成する (11/26 10:00~11/30 20:00)→ゲンガー(魔女帽子)・フワライド(ハロウィン)・アノクサ",
+      "targetId": "ev-tusk-wish-deoxys"
+    },
+    {
+      "id": "news-3e83a17f95",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "title": "【情報追加】ハロウィン2026 パート2：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：リワードを受け取る→ふしigなアメ、リワードを受け取る→ふしぎなアメ ×1",
+      "targetId": "ev-halloween-p2"
+    },
+    {
+      "id": "news-f9001ee8d2",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "title": "【情報追加】「大きな足跡」イベント：野生が判明・追加（3件）",
+      "details": "野生：サルノリ、メッソン、ヒバニー",
+      "targetId": "ev-big-footprints"
+    },
+    {
+      "id": "news-4b20580af9",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "title": "【情報追加】スーパーメガレイドデイ：メガシャンデラ：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：ポケモンを15回強化する→メガエナジー バンギラスのメガエナジー",
+      "targetId": "ev-auto-super-mega-raid-day-chandelure"
+    },
+    {
+      "id": "news-756bb8a107",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "title": "【情報追加】イオンハロウィンイベント：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：タイムチャレンジパート1（受取期間: 2026年10月19日~10月25日）→ピカチュウ(魔女帽子)、タイムチャレンジパート2（受取期間: 2026年10月26日~11月1日）→ピカチュウ(魔女帽子)",
+      "targetId": "ev-auto-aeon-halloween-2026"
+    },
+    {
+      "id": "news-6c887ac68c",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "title": "【情報追加】ダイマックスユクシー・エムリット・アグノムのマックスバトルデイ：レイドが判明・追加（3件）",
+      "details": "レイド：ユクシー、エムリット、アグノム",
+      "targetId": "ev-auto-max-battle-day-uxie-mesprit-azelf"
+    },
+    {
+      "id": "news-d513f734d8",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "title": "【情報追加】わくわく！Pokémon GO Lab.大調査：フィールドリサーチが判明・追加（4件）",
+      "details": "フィールドリサーチ：Pokémon GO Lab.のポケストップを回す→経験値、相棒の写真を撮る→モンスターボール、ポケモンを5匹捕まえる→ほしのすな、ギフトを3個贈る→経験値",
+      "targetId": "ev-auto-wakuwaku-pokemon-go-lab"
+    },
+    {
+      "id": "news-0c12b6b345",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "title": "【情報追加】わくわく！Pokémon GO Lab.大調査：タイムチャレンジが判明・追加（4件）",
+      "details": "タイムチャレンジ：Pokémon GO Lab.のポケストップを回す→経験値×1000XP、相棒の写真を撮る→モンスターボール ×10、ポケモンを5匹捕まえる→ほしのすな ×1000、ギフトを3個贈る→経験値×1000XP",
+      "targetId": "ev-auto-wakuwaku-pokemon-go-lab"
+    },
     {
       "id": "news-1872118fe7",
       "date": "2026-11-04",
@@ -1932,6 +2028,41 @@
         "rewardName": "アノクサ",
         "shiny": false,
         "note": "出典: gamewith"
+      },
+      {
+        "task": "期間中にフィールドリサーチを達成する (11/24 10:00~11/26 10:00)",
+        "rewardDex": 840,
+        "rewardName": "カジッチュ",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "期間中にフィールドリサーチを達成する (11/24 10:00~11/26 10:00)",
+        "rewardDex": 942,
+        "rewardName": "オラチフ",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "期間中にフィールドリサーチを達成する (11/26 10:00~11/30 20:00)",
+        "rewardDex": 94,
+        "rewardName": "ゲンガー(魔女帽子)",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "期間中にフィールドリサーチを達成する (11/26 10:00~11/30 20:00)",
+        "rewardDex": 426,
+        "rewardName": "フワライド(ハロウィン)",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "期間中にフィールドリサーチを達成する (11/26 10:00~11/30 20:00)",
+        "rewardDex": 946,
+        "rewardName": "アノクサ",
+        "shiny": false,
+        "note": "出典: gamewith"
       }
     ],
     "ev-auto-fall-marathon-buddy-trek-2026": [
@@ -1978,6 +2109,36 @@
         "note": "出典: gamewith"
       }
     ],
+    "ev-auto-wakuwaku-pokemon-go-lab": [
+      {
+        "task": "Pokémon GO Lab.のポケストップを回す",
+        "rewardDex": 25,
+        "rewardName": "経験値",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "相棒の写真を撮る",
+        "rewardDex": 25,
+        "rewardName": "モンスターボール",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "ポケモンを5匹捕まえる",
+        "rewardDex": 25,
+        "rewardName": "ほしのすな",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "ギフトを3個贈る",
+        "rewardDex": 25,
+        "rewardName": "経験値",
+        "shiny": false,
+        "note": "出典: gamewith"
+      }
+    ],
     "ev-auto-autumn-excursion-2026": [
       {
         "task": "イベント限定のフィールドリサーチタスク",
@@ -2003,6 +2164,30 @@
     ]
   },
   "dynamic_events": [
+    {
+      "id": "ev-big-footprints",
+      "title": "「大きな足跡」イベント",
+      "wilds": [
+        {
+          "dex": 810,
+          "name": "サルノリ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 816,
+          "name": "メッソン",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 813,
+          "name": "ヒバニー",
+          "shiny": true,
+          "note": ""
+        }
+      ]
+    },
     {
       "id": "ev-cd-pawniard",
       "title": "コマタナのコミュニティ・デイ",
