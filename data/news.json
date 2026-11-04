@@ -3040,6 +3040,40 @@
       ]
     },
     {
+      "id": "news-cf2ebb3116",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "event_update",
+      "title": "【情報追加】ポケモンGOの2026年11月のスケジュール：レイドが判明・追加（9件）",
+      "details": "レイド：ギラティナ(オリジンフォルム)、ギラティナ(アナザーフォルム)、デオキシス(ディフェンスフォルム)、デオキシス(アタックフォルム)、デオキシス(スピードフォルム)、トルネロス(化身フォルム) ほか3件",
+      "targetId": "ev-auto-2026-nov-schedule",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/583244",
+          "fetched_at": "2026-11-04T18:53:39.980834+09:00",
+          "article_updated": "2026-11-04T18:21:12+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-eb6737de1c",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドウィーク2026：サプライズボックスが判明・追加（2件）",
+      "details": "サプライズボックス：コレクレー(とほ)、メルタン",
+      "targetId": "ev-wildweek-2026",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26589",
+          "fetched_at": "2026-11-04T18:53:39.980834+09:00",
+          "article_updated": "2026-11-04T17:24:10+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-741d8e2fcd",
       "date": "2026-11-03",
       "date_label": "11/3",

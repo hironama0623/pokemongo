@@ -1834,7 +1834,7 @@
         "gamewith": {
           "url": "https://pokemongo.gamewith.jp/article/show/583310",
           "article_updated": "2026-11-04T11:01:19+09:00",
-          "fetched_at": "2026-11-04T12:43:57.449796+09:00",
+          "fetched_at": "2026-11-04T18:53:39.980834+09:00",
           "counters": [
             {
               "name": "キュレム(W)",
@@ -1845,8 +1845,104 @@
               "charged": "コールドフレア",
               "dps": 38.48,
               "tdo": null,
-              "note": null,
+              "note": "",
               "dex": 646
+            },
+            {
+              "name": "キュレム(B)",
+              "rank": 2,
+              "role": "attacker",
+              "tag": "normal",
+              "fast": "ドラゴンテール",
+              "charged": "フリーズボルト",
+              "dps": 37.97,
+              "tdo": null,
+              "note": "",
+              "dex": 646
+            },
+            {
+              "name": "レジエレキ",
+              "rank": 3,
+              "role": "attacker",
+              "tag": "normal",
+              "fast": "ロックオン",
+              "charged": "サンダープリズン",
+              "dps": 27.66,
+              "tdo": null,
+              "note": "",
+              "dex": 894
+            },
+            {
+              "name": "ゼラオラ",
+              "rank": 4,
+              "role": "attacker",
+              "tag": "normal",
+              "fast": "スパーク",
+              "charged": "プラズマフィスト",
+              "dps": 37.99,
+              "tdo": null,
+              "note": "",
+              "dex": 807
+            },
+            {
+              "name": "ボルトロス(霊獣)",
+              "rank": 5,
+              "role": "attacker",
+              "tag": "normal",
+              "fast": "ボルトチェンジ",
+              "charged": "かみなりあらし",
+              "dps": 38.55,
+              "tdo": null,
+              "note": "",
+              "dex": 642
+            },
+            {
+              "name": "デンジュモク",
+              "rank": 6,
+              "role": "attacker",
+              "tag": "normal",
+              "fast": "スパーク",
+              "charged": "ほうでん",
+              "dps": 36.51,
+              "tdo": null,
+              "note": "",
+              "dex": 796
+            },
+            {
+              "name": "ゼクロム",
+              "rank": 7,
+              "role": "attacker",
+              "tag": "normal",
+              "fast": "チャージビーム",
+              "charged": "クロスサンダー",
+              "dps": 35.56,
+              "tdo": null,
+              "note": "",
+              "dex": 644
+            },
+            {
+              "name": "ザマゼンタ(王)",
+              "rank": 8,
+              "role": "attacker",
+              "tag": "normal",
+              "fast": "こおりのキバ",
+              "charged": "きょじゅうだん",
+              "dps": 29.41,
+              "tdo": null,
+              "note": "",
+              "dex": 889
+            },
+            {
+              "name": "キラフロル",
+              "rank": 10,
+              "role": "attacker",
+              "tag": "normal",
+              "fast": "うちおとす",
+              "charged": "メテオビーム",
+              "dps": 30.97,
+              "tdo": null,
+              "note": "",
+              "dex": 970
             },
             {
               "name": "シャドウゼクロム",
@@ -1857,32 +1953,8 @@
               "charged": "クロスサンダー",
               "dps": 42.49,
               "tdo": null,
-              "note": null,
+              "note": "",
               "dex": 644
-            },
-            {
-              "name": "キュレム(B)",
-              "rank": 3,
-              "role": "attacker",
-              "tag": "normal",
-              "fast": "ドラゴンテール",
-              "charged": "フリーズボルト",
-              "dps": 37.97,
-              "tdo": null,
-              "note": null,
-              "dex": 646
-            },
-            {
-              "name": "レジエレキ",
-              "rank": 4,
-              "role": "attacker",
-              "tag": "normal",
-              "fast": "ロックオン",
-              "charged": "サンダープリズン",
-              "dps": 27.66,
-              "tdo": null,
-              "note": null,
-              "dex": 894
             },
             {
               "name": "シャドウライコウ",
@@ -1893,32 +1965,8 @@
               "charged": "ワイルドボルト",
               "dps": 35.9,
               "tdo": null,
-              "note": null,
+              "note": "",
               "dex": 243
-            },
-            {
-              "name": "ゼラオラ",
-              "rank": 6,
-              "role": "attacker",
-              "tag": "normal",
-              "fast": "スパーク",
-              "charged": "プラズマフィスト",
-              "dps": 37.99,
-              "tdo": null,
-              "note": null,
-              "dex": 807
-            },
-            {
-              "name": "シャドウラムパルド",
-              "rank": 7,
-              "role": "attacker",
-              "tag": "shadow",
-              "fast": "うちおとす",
-              "charged": "いわなだれ",
-              "dps": 37.83,
-              "tdo": null,
-              "note": null,
-              "dex": 409
             },
             {
               "name": "シャドウドサイドン",
@@ -1929,20 +1977,8 @@
               "charged": "がんせきほう",
               "dps": 33.95,
               "tdo": null,
-              "note": null,
+              "note": "",
               "dex": 464
-            },
-            {
-              "name": "ボルトロス(霊獣)",
-              "rank": 9,
-              "role": "attacker",
-              "tag": "normal",
-              "fast": "ボルトチェンジ",
-              "charged": "かみなりあらし",
-              "dps": 38.55,
-              "tdo": null,
-              "note": null,
-              "dex": 642
             },
             {
               "name": "シャドウジバコイル",
@@ -1953,13 +1989,13 @@
               "charged": "ワイルドボルト",
               "dps": 33.86,
               "tdo": null,
-              "note": null,
+              "note": "",
               "dex": 462
             }
           ]
         }
       },
-      "updated_at": "2026-11-04T12:43:57.449796+09:00"
+      "updated_at": "2026-11-04T18:53:39.980834+09:00"
     },
     "raid:シャドウランドロス": {
       "name": "シャドウランドロス",
