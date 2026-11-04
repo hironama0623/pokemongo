@@ -157,31 +157,38 @@
           "url": "https://pokemongo.com/ja/news/sandile-hatch-day-2026",
           "fetched_at": "2026-11-04T00:16:52.471144+09:00",
           "article_updated": null
+        },
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/578666",
+          "fetched_at": "2026-11-04T08:41:45.372749+09:00",
+          "article_updated": "2026-10-19T05:51:45+09:00"
         }
       ]
     },
     "ev-auto-adidas-pokemon-2026": {
       "id": "ev-auto-adidas-pokemon-2026",
-      "title": "「ADIDAS | POKÉMON」コレクションの着せ替えアイテムが『Pokémon GO』に登場！",
+      "title": "ADIDAS POKÉMONのタイムチャレンジ",
       "category": "collab",
       "start": "2026-09-25",
-      "end": "2027-01-15",
-      "dateText": "2026年9月25日から2027年1月15日まで",
-      "summary": "対象のadidas店舗や小売店を訪れることでタイムチャレンジに挑戦でき、着せ替えアイテムやルカリオ、メガエナジーなどを獲得できるコラボイベント。",
+      "end": "2027-02-13T20:00",
+      "dateText": "2026年9月25日(金)〜2027年2月13日(土)20:00",
+      "summary": "「ADIDAS｜POKÉMON」コレクション発売を記念したタイムチャレンジ。対象のadidas店舗を訪れることで入手可能。",
       "hasPaid": false,
       "freeFeatures": [
-        "タイムチャレンジ（adidas店舗にて配布）",
-        "着せ替えアイテム「adidas Pokémon Jacket」「adidas Pokémon Cap」",
-        "着せ替えアイテム「adidas Pokémon Megaride Shoes」（プロモーションコード入力）"
+        "タイムチャレンジ",
+        "着せ替えアイテム（adidas Pokémon Cap, adidas Pokémon Jacket）",
+        "ルカリオとの遭遇",
+        "ルカリオのメガエナジー"
       ],
       "paidFeatures": [],
-      "created_at": "2026-11-04T00:16:52.471144+09:00",
+      "created_at": "2026-11-04T08:41:45.372749+09:00",
       "sources": [
         {
-          "site": "official",
-          "url": "https://pokemongo.com/ja/news/pokemon-x-adidas-2026",
-          "fetched_at": "2026-11-04T00:16:52.471144+09:00",
-          "article_updated": null
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/578629",
+          "fetched_at": "2026-11-04T08:41:45.372749+09:00",
+          "article_updated": "2026-11-03T09:43:13+09:00"
         }
       ]
     },
@@ -301,7 +308,7 @@
         {
           "site": "pokemapi",
           "url": "https://pokemongo-get.com/board/10793/",
-          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "fetched_at": "2026-11-04T08:41:45.372749+09:00",
           "article_updated": null
         }
       ]
@@ -330,6 +337,18 @@
           "url": "https://pokemongo-get.com/board/10768/",
           "fetched_at": "2026-11-04T00:16:52.471144+09:00",
           "article_updated": null
+        },
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26644",
+          "fetched_at": "2026-11-04T08:41:45.372749+09:00",
+          "article_updated": "2026-11-01T15:01:56+09:00"
+        },
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/584390",
+          "fetched_at": "2026-11-04T08:41:45.372749+09:00",
+          "article_updated": "2026-10-29T05:15:19+09:00"
         }
       ]
     },
@@ -374,6 +393,18 @@
           "url": "https://pokemongo-get.com/board/10748/",
           "fetched_at": "2026-11-04T00:16:52.471144+09:00",
           "article_updated": null
+        },
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/583244",
+          "fetched_at": "2026-11-04T08:41:45.372749+09:00",
+          "article_updated": "2026-11-03T13:22:19+09:00"
+        },
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/586133",
+          "fetched_at": "2026-11-04T08:41:45.372749+09:00",
+          "article_updated": "2026-10-31T12:31:39+09:00"
         }
       ]
     },
@@ -404,51 +435,53 @@
     },
     "ev-auto-aeon-halloween-2026": {
       "id": "ev-auto-aeon-halloween-2026",
-      "title": "イオンモールハロウィンイベント2026タイムチャレンジ",
+      "title": "イオンハロウィンイベント",
       "category": "main",
       "start": "2026-10-19T00:00",
       "end": "2026-11-01T23:59",
-      "dateText": "Part1:2026/10/19～10/25, Part2:2026/10/26～11/1",
-      "summary": "対象のイオンモールでポケモンGOを起動すると受け取れるタイムチャレンジ。Part1とPart2に分かれて開催される。",
+      "dateText": "2026年10月19日(月)から11月1日(日)まで",
+      "summary": "全国の対象イオンモールで開催されるイベント。特別なタイムチャレンジの配布、ルアーモジュールの効果時間延長、ゲーム内道具セットが当たる抽選キャンペーンなどが実施される。",
       "hasPaid": false,
       "freeFeatures": [
-        "タイムチャレンジ",
-        "ルアーモジュールのボーナス",
-        "抽選で道具セットプレゼント",
-        "ピカチュウサンバイザー配布"
+        "特別なタイムチャレンジ",
+        "ルアーモジュールの効果時間が2時間に延長",
+        "ゲーム内道具セット抽選キャンペーン",
+        "ハロウィンピカチュウサンバイザーの配布（先着）"
       ],
       "paidFeatures": [],
-      "created_at": "2026-11-04T00:16:52.471144+09:00",
+      "created_at": "2026-11-04T08:41:45.372749+09:00",
       "sources": [
         {
-          "site": "pokemapi",
-          "url": "https://pokemongo-get.com/board/10692/",
-          "fetched_at": "2026-11-04T00:16:52.471144+09:00",
-          "article_updated": null
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/579901",
+          "fetched_at": "2026-11-04T08:41:45.372749+09:00",
+          "article_updated": "2026-11-01T22:12:11+09:00"
         }
       ]
     },
     "ev-auto-pokemon-night-out": {
       "id": "ev-auto-pokemon-night-out",
-      "title": "Pokémon Night Out",
+      "title": "ポケモンナイトアウト",
       "category": "main",
-      "start": "2026-10-28T00:00",
-      "end": "2026-11-02T16:58",
-      "dateText": "2026/11/2(月)16:58まで",
-      "summary": "Twitchライブ配信視聴による限定タイムチャレンジ配布およびイベントボーナス",
+      "start": "2026-10-24",
+      "end": "2026-11-10",
+      "dateText": "10月24日(土)〜11月10日(火)",
+      "summary": "ロサンゼルスとロンドンで開催される現地イベント。ロケーション背景付きのピカチュウやゲンガーのレイド、限定着せ替えアイテムが入手可能なタイムチャレンジなどが登場する。",
       "hasPaid": false,
       "freeFeatures": [
-        "ルアーモジュール（おうごんルアーを除く）の効果が1時間持続",
-        "限定タイムチャレンジ"
+        "現地会場でのルアーモジュール効果時間1時間",
+        "野生ポケモンの出現率アップ",
+        "ロケーション背景付きピカチュウ・ゲンガーのレイド",
+        "無料タイムチャレンジ"
       ],
       "paidFeatures": [],
-      "created_at": "2026-11-04T00:16:52.471144+09:00",
+      "created_at": "2026-11-04T08:41:45.372749+09:00",
       "sources": [
         {
-          "site": "pokemapi",
-          "url": "https://pokemongo-get.com/board/10680/",
-          "fetched_at": "2026-11-04T00:16:52.471144+09:00",
-          "article_updated": null
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/583322",
+          "fetched_at": "2026-11-04T08:41:45.372749+09:00",
+          "article_updated": "2026-10-28T17:59:21+09:00"
         }
       ]
     },
@@ -551,6 +584,12 @@
           "url": "https://9db.jp/pokemongo/data/26590",
           "fetched_at": "2026-11-04T07:34:54.372378+09:00",
           "article_updated": "2026-11-04T06:21:17+09:00"
+        },
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/582767",
+          "fetched_at": "2026-11-04T08:41:45.372749+09:00",
+          "article_updated": "2026-10-30T02:33:32+09:00"
         }
       ]
     },
@@ -660,7 +699,7 @@
         {
           "site": "gamewith",
           "url": "https://pokemongo.gamewith.jp/article/show/579895",
-          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "fetched_at": "2026-11-04T08:41:45.372749+09:00",
           "article_updated": "2026-11-03T17:08:10+09:00"
         }
       ]
@@ -688,7 +727,7 @@
         {
           "site": "gamewith",
           "url": "https://pokemongo.gamewith.jp/article/show/584389",
-          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "fetched_at": "2026-11-04T08:41:45.372749+09:00",
           "article_updated": "2026-11-02T07:51:25+09:00"
         }
       ]
@@ -722,8 +761,330 @@
         {
           "site": "gamewith",
           "url": "https://pokemongo.gamewith.jp/article/show/585785",
-          "fetched_at": "2026-11-04T07:34:54.372378+09:00",
+          "fetched_at": "2026-11-04T08:41:45.372749+09:00",
           "article_updated": "2026-11-01T21:49:18+09:00"
+        }
+      ]
+    },
+    "ev-auto-wild-week-2026": {
+      "id": "ev-auto-wild-week-2026",
+      "title": "ワイルドウィーク(2026年)",
+      "category": "main",
+      "start": "2026-11-09T10:00",
+      "end": "2026-11-13T20:00",
+      "dateText": "2026年11月9日(月)10:00~13日(金)20:00",
+      "summary": "はがねとドラゴンタイプやダイマックスをメインとしたイベント。ダイマックスレジドラゴ、ダイマックスメルタンや新たなSP背景が登場する。",
+      "hasPaid": true,
+      "freeFeatures": [
+        "リモートレイド上限引き上げ(30回)",
+        "ふしぎなはこから色違いメルタン出現",
+        "ふしぎなはこ使用間隔短縮",
+        "だいじなたからばこから色違いコレクレー出現",
+        "特定のポケモンが特別技を習得",
+        "伝説(★5)レイドバトルや★5マックスバトルで新しいスペシャル背景",
+        "マックスバトルが毎日変化",
+        "レイドボスが変化",
+        "野生ポケモンが変化",
+        "イベントフィールドリサーチ",
+        "グローバルチャレンジ",
+        "ステッカー登場",
+        "新アバター登場"
+      ],
+      "paidFeatures": [
+        "GOパスワイルドウィーク(ダイマックスメルタン、ぎんのおうかん、ジュラルドンパンツ等)"
+      ],
+      "created_at": "2026-11-04T08:41:45.372749+09:00",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/582768",
+          "fetched_at": "2026-11-04T08:41:45.372749+09:00",
+          "article_updated": "2026-11-03T16:10:08+09:00"
+        }
+      ]
+    },
+    "ev-auto-super-mega-raid-day-chandelure": {
+      "id": "ev-auto-super-mega-raid-day-chandelure",
+      "title": "スーパーメガレイドデイ：メガシャンデラ",
+      "category": "raid",
+      "start": "2026-10-31T14:00",
+      "end": "2026-11-01T20:00",
+      "dateText": "2026年10月31日(土)14:00～11月1日(日)20:00",
+      "summary": "シャンデラの色違い確率調査",
+      "hasPaid": false,
+      "freeFeatures": [],
+      "paidFeatures": [],
+      "created_at": "2026-11-04T08:41:45.372749+09:00",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26596",
+          "fetched_at": "2026-11-04T08:41:45.372749+09:00",
+          "article_updated": "2026-11-01T20:00:18+09:00"
+        }
+      ]
+    },
+    "ev-auto-adidas-collab-2026": {
+      "id": "ev-auto-adidas-collab-2026",
+      "title": "adidasコラボ",
+      "category": "collab",
+      "start": "2026-09-25",
+      "end": "2027-01-15T23:59",
+      "dateText": "2026/9/25(金) 〜 2027/1/15(金)23:59",
+      "summary": "adidas × Pokemon コラボイベント。対象店舗でのタイムチャレンジやアバターアイテムの配布が行われる。",
+      "hasPaid": false,
+      "freeFeatures": [
+        "タイムチャレンジ",
+        "アバターアイテム"
+      ],
+      "paidFeatures": [],
+      "created_at": "2026-11-04T08:41:45.372749+09:00",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26491",
+          "fetched_at": "2026-11-04T08:41:45.372749+09:00",
+          "article_updated": "2026-10-31T20:51:12+09:00"
+        }
+      ]
+    },
+    "ev-auto-pokemon-night-out-twitch-challenge": {
+      "id": "ev-auto-pokemon-night-out-twitch-challenge",
+      "title": "ポケモンナイトアウトTwitch配信タイムチャレンジ",
+      "category": "collab",
+      "start": "2026-10-25T11:30",
+      "end": "2026-11-02T16:58",
+      "dateText": "2026-10-25〜2026-11-02",
+      "summary": "Twitchの公式配信や指定配信者の配信を30分以上視聴することで、タイムチャレンジの引き換えコードが入手できるイベント。",
+      "hasPaid": false,
+      "freeFeatures": [
+        "タイムチャレンジ",
+        "着せ替えアイテム（ポケモンナイトアウト野球ジャージ）"
+      ],
+      "paidFeatures": [],
+      "created_at": "2026-11-04T08:41:45.372749+09:00",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/585702",
+          "fetched_at": "2026-11-04T08:41:45.372749+09:00",
+          "article_updated": "2026-10-31T13:48:13+09:00"
+        }
+      ]
+    },
+    "ev-auto-max-battle-day-uxie-mesprit-azelf": {
+      "id": "ev-auto-max-battle-day-uxie-mesprit-azelf",
+      "title": "ダイマックスユクシー・エムリット・アグノムのマックスバトルデイ",
+      "category": "dmax",
+      "start": "2026-10-24T14:00",
+      "end": "2026-10-24T17:00",
+      "dateText": "2026年10月24日",
+      "summary": "ダイマックスユクシー・エムリット・アグノムが初登場するマックスバトルデイ。日本ではダイマックスユクシーが登場。",
+      "hasPaid": true,
+      "freeFeatures": [
+        "マックス粒子を受け取れる探索距離1/4",
+        "探索で受け取れるマックス粒子2倍",
+        "リモートレイド参加上限が1日20回に引き上げ",
+        "マックス粒子所持上限が1,600に増加",
+        "すべてのパワースポットでダイマックスポケモン登場",
+        "パワースポットの更新間隔短縮",
+        "追加のパワースポット出現",
+        "パワースポットで得られるマックス粒子量8倍",
+        "特別な交換が1日最大3回まで可能"
+      ],
+      "paidFeatures": [
+        "限定タイムチャレンジ",
+        "マックスバトルで獲得できるXP2倍"
+      ],
+      "created_at": "2026-11-04T08:41:45.372749+09:00",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/579398",
+          "fetched_at": "2026-11-04T08:41:45.372749+09:00",
+          "article_updated": "2026-10-25T17:52:14+09:00"
+        }
+      ]
+    },
+    "ev-auto-meteor-shower-2026": {
+      "id": "ev-auto-meteor-shower-2026",
+      "title": "メテノシャワー",
+      "category": "main",
+      "start": "2026-10-19T17:00",
+      "end": "2026-12-16T23:59",
+      "dateText": "流星群がみられる期間に開催",
+      "summary": "流星群がみられる期間に開催されるイベント。期間中、特定の色のコアのメテノが出現し、17時から21時の間はメテノ(流星)と出会いやすくなり、捕獲時のほしのすなが増加する。",
+      "hasPaid": false,
+      "freeFeatures": [
+        "メテノ(流星)と出会いやすくなる",
+        "メテノ(流星)捕獲時のほしのすな増加",
+        "ゲーム内に流れ星が流れる",
+        "無料タイムチャレンジ"
+      ],
+      "paidFeatures": [],
+      "created_at": "2026-11-04T08:41:45.372749+09:00",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/579397",
+          "fetched_at": "2026-11-04T08:41:45.372749+09:00",
+          "article_updated": "2026-10-25T12:02:10+09:00"
+        }
+      ]
+    },
+    "ev-auto-esa-collab-2026": {
+      "id": "ev-auto-esa-collab-2026",
+      "title": "【欧州限定】欧州宇宙機関（ESA）コラボイベント",
+      "category": "collab",
+      "start": "2026-10-04",
+      "end": "2027-04-30",
+      "dateText": "2026/10/4(日) 〜 2027/4/30(金)",
+      "summary": "欧州宇宙機関（ESA）とのコラボイベント。欧州の博物館やESA施設が対象。",
+      "hasPaid": false,
+      "freeFeatures": [],
+      "paidFeatures": [],
+      "created_at": "2026-11-04T08:41:45.372749+09:00",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26466",
+          "fetched_at": "2026-11-04T08:41:45.372749+09:00",
+          "article_updated": "2026-10-24T17:37:39+09:00"
+        },
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/577905",
+          "fetched_at": "2026-11-04T08:41:45.372749+09:00",
+          "article_updated": "2026-10-05T12:30:08+09:00"
+        }
+      ]
+    },
+    "ev-auto-go-pass-autumn-excursion": {
+      "id": "ev-auto-go-pass-autumn-excursion",
+      "title": "GOパス秋の遠足：相棒といっしょ",
+      "category": "main",
+      "start": "2026-10-13T10:00",
+      "end": "2026-10-19T20:00",
+      "dateText": "2026年10月13日(火)10:00~10月19日(月)20:00",
+      "summary": "GOポイントを集めてランクを上げ、進行度に応じて報酬が貰える期間限定のGOパスイベント。有料版のデラックスも登場。",
+      "hasPaid": true,
+      "freeFeatures": [
+        "おこうが2時間持続(おさんぽおこうを除く)",
+        "相棒探索メガエナジー5倍(ラクライ、ライボルト)"
+      ],
+      "paidFeatures": [
+        "追加報酬(ライボルトのメガエナジー、ふしぎなアメXL)",
+        "追加デイリータスク"
+      ],
+      "created_at": "2026-11-04T08:41:45.372749+09:00",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/578536",
+          "fetched_at": "2026-11-04T08:41:45.372749+09:00",
+          "article_updated": "2026-10-17T23:07:03+09:00"
+        }
+      ]
+    },
+    "ev-auto-laic2027-twitch-drops": {
+      "id": "ev-auto-laic2027-twitch-drops",
+      "title": "LAIC2027配信ボーナスタイムチャレンジ",
+      "category": "collab",
+      "start": "2026-11-20T21:30",
+      "end": "2026-12-05T05:00",
+      "dateText": "2026年11月20日〜12月5日",
+      "summary": "LAIC2027大会のTwitch配信を視聴することで、タイムチャレンジや追加リワードが入手できるイベント。",
+      "hasPaid": false,
+      "freeFeatures": [
+        "Twitch配信視聴によるタイムチャレンジ",
+        "Twitch配信視聴による追加リワード"
+      ],
+      "paidFeatures": [],
+      "created_at": "2026-11-04T08:41:45.372749+09:00",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/583039",
+          "fetched_at": "2026-11-04T08:41:45.372749+09:00",
+          "article_updated": "2026-10-17T03:13:03+09:00"
+        }
+      ]
+    },
+    "ev-auto-world-space-week-2026": {
+      "id": "ev-auto-world-space-week-2026",
+      "title": "世界宇宙週間2026",
+      "category": "main",
+      "start": "2026-10-04T00:00",
+      "end": "2026-10-10T23:59",
+      "dateText": "2026年10月4日(日)0:00~10月10日(土)23:59",
+      "summary": "世界宇宙週間2026イベント。宇宙飛行士ピカチュウが初登場。",
+      "hasPaid": false,
+      "freeFeatures": [
+        "宇宙飛行士ピカチュウが星1レイドとタイムチャレンジから初登場"
+      ],
+      "paidFeatures": [],
+      "created_at": "2026-11-04T08:41:45.372749+09:00",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/578085",
+          "fetched_at": "2026-11-04T08:41:45.372749+09:00",
+          "article_updated": "2026-10-13T01:47:15+09:00"
+        }
+      ]
+    },
+    "ev-auto-wakuwaku-pokemon-go-lab": {
+      "id": "ev-auto-wakuwaku-pokemon-go-lab",
+      "title": "わくわく！Pokémon GO Lab.大調査",
+      "category": "main",
+      "start": "2026-10-07",
+      "end": "2040-12-31T23:59",
+      "dateText": "2026年10月7日(水)~2040年12月31日(月)23:59",
+      "summary": "ポケモンセンターメガトウキョーのPokémon GO Lab.で開催されるイベント。ウィロー博士の助手ピカチュウのレイドバトルやタイムチャレンジ、スナップショットでの出会いなどが楽しめる。",
+      "hasPaid": false,
+      "freeFeatures": [
+        "ウィロー博士の助手ピカチュウのレイドバトル(1日1回)",
+        "限定タイムチャレンジ",
+        "GOスナップショットサプライズ"
+      ],
+      "paidFeatures": [],
+      "created_at": "2026-11-04T08:41:45.372749+09:00",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/580836",
+          "fetched_at": "2026-11-04T08:41:45.372749+09:00",
+          "article_updated": "2026-10-12T11:14:33+09:00"
+        }
+      ]
+    },
+    "ev-auto-2026-fc-seoul": {
+      "id": "ev-auto-2026-fc-seoul",
+      "title": "2026FCソウルイベント(韓国)",
+      "category": "main",
+      "start": "2026-10-24T09:00",
+      "end": "2026-10-24T20:00",
+      "dateText": "2026年10月24日(土)9:00~20:00",
+      "summary": "韓国のソウルワールドカップ競技場一帯で開催されるイベント。ロケーション背景付きのポケモンと出会えるレイドやタイムチャレンジが登場する。",
+      "hasPaid": false,
+      "freeFeatures": [
+        "対象ポケモンの色違い率UP",
+        "ルアーモジュールが2時間持続",
+        "ナイススロー以上でアメ増加",
+        "野生ポケモン変化",
+        "レイドボス変化",
+        "無料タイムチャレンジ",
+        "マップ上で紙吹雪エフェクト",
+        "ポケモンGOブース登場"
+      ],
+      "paidFeatures": [],
+      "created_at": "2026-11-04T08:41:45.372749+09:00",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/580639",
+          "fetched_at": "2026-11-04T08:41:45.372749+09:00",
+          "article_updated": "2026-10-09T07:01:08+09:00"
         }
       ]
     }

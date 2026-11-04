@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/11/04 07:34 JST",
+  "updated_at": "2026/11/04 08:41 JST",
   "latest_news": [
     {
       "id": "news-1872118fe7",
@@ -834,6 +834,454 @@
       "targetId": "ev-auto-go-pass-big-footprints"
     },
     {
+      "id": "news-af1202fab2",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【新イベント】ワイルドウィーク(2026年)",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-wild-week-2026"
+    },
+    {
+      "id": "news-8b51034f1c",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】ワイルドウィーク(2026年)：野生が判明・追加（3件）",
+      "details": "野生：コイル、オンバット、トゲデマル",
+      "targetId": "ev-auto-wild-week-2026"
+    },
+    {
+      "id": "news-c1175e9715",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】ワイルドウィーク(2026年)：レイドが判明・追加（4件）",
+      "details": "レイド：クリムガン、ミミズズ、ザシアン(王)、ザマゼンタ(王)",
+      "targetId": "ev-auto-wild-week-2026"
+    },
+    {
+      "id": "news-db0faced29",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】ポケモンGOの2026年11月のスケジュール：レイドが判明・追加（3件）",
+      "details": "レイド：デオキシス、トルネロス(けしん)、メガヤミラミ",
+      "targetId": "ev-auto-2026-nov-schedule"
+    },
+    {
+      "id": "news-1ec66506ec",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】「黄昏時の願い」＆ スーパーメガレイドデイ：フィールドリサーチが判明・追加（1件）",
+      "details": "フィールドリサーチ：イベント限定フィールドリサーチタスク→ヒトデマン・リグレー",
+      "targetId": "ev-tusk-wish-deoxys"
+    },
+    {
+      "id": "news-55147f2c78",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【新イベント】ADIDAS POKÉMONのタイムチャレンジ",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-adidas-pokemon-2026"
+    },
+    {
+      "id": "news-9ff188e8e6",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】ADIDAS POKÉMONのタイムチャレンジ：タイムチャレンジが判明・追加（11件）",
+      "details": "タイムチャレンジ：ポケストップ・ジム10個を回す→ズリのみ、ポケモンを20匹捕まえる→おこう、5km探索する→モンスターボール、タマゴを10個かえす→パイルのみ、ポケモンを50匹捕まえる→いいキズぐすり、20km探索する→スーパーボール ほか5件",
+      "targetId": "ev-auto-adidas-pokemon-2026"
+    },
+    {
+      "id": "news-896a214c52",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】シャンデラのスーパーメガレイド・デイ：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：ポケモンを15回強化する→バンギラスのメガエナジー、ゴーストタイプかほのおタイプのボスポケモンに勝つ→ヨーギラスのアメXL",
+      "targetId": "ev-supermega-chandelure"
+    },
+    {
+      "id": "news-90ad9c6806",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【新イベント】イオンハロウィンイベント",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-aeon-halloween-2026"
+    },
+    {
+      "id": "news-8b98ce9e12",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】イオンハロウィンイベント：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：対象のイオンモールを訪れる（パート1：10月19日〜10月25日、パート2：10月26日〜11月1日）→ピカチュウ(魔女帽子)",
+      "targetId": "ev-auto-aeon-halloween-2026"
+    },
+    {
+      "id": "news-7d4fcc2628",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】GOパス：大きな足跡：サプライズボックスが判明・追加（4件）",
+      "details": "サプライズボックス：ハイパーボール××10、げんきのかたまり××5、プレミアムバトルパス××1、まんたんのくすり××5",
+      "targetId": "ev-auto-go-pass-big-footprints"
+    },
+    {
+      "id": "news-bc3685a62e",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【新イベント】スーパーメガレイドデイ：メガシャンデラ",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-super-mega-raid-day-chandelure"
+    },
+    {
+      "id": "news-c01fc74cc7",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】スーパーメガレイドデイ：メガシャンデラ：レイドが判明・追加（1件）",
+      "details": "レイド：シャンデラ",
+      "targetId": "ev-auto-super-mega-raid-day-chandelure"
+    },
+    {
+      "id": "news-9611e0c459",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【日程変更】Día de Muertos 2026（死者の日2026）",
+      "details": "日程が更新されています：2026-10-27〜2026-11-05 → 2026-10-28〜2026-11-06",
+      "targetId": "ev-auto-dia-de-muertos-2026"
+    },
+    {
+      "id": "news-e0aa3b13fe",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】Día de Muertos 2026（死者の日2026）：タイムチャレンジが判明・追加（5件）",
+      "details": "タイムチャレンジ：ポケモンを1匹捕まえる→x5、ポケモンを2日にわたって捕まえる→x20、ポケモンを3日にわたって捕まえる→x5、ポケモンを4日にわたって捕まえる→x1、ポケモンを5日にわたって捕まえる→x5・カラカラ(花飾り)・x2026・x2026",
+      "targetId": "ev-auto-dia-de-muertos-2026"
+    },
+    {
+      "id": "news-77c0e93869",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【新イベント】adidasコラボ",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-adidas-collab-2026"
+    },
+    {
+      "id": "news-74fd953200",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】adidasコラボ：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：ポケストップ・ジム10個を回す→adidas Pokémon Cap、タマゴを10個かえす→adidas Pokémon Jacket",
+      "targetId": "ev-auto-adidas-collab-2026"
+    },
+    {
+      "id": "news-83ff933798",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【新イベント】ポケモンナイトアウトTwitch配信タイムチャレンジ",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-pokemon-night-out-twitch-challenge"
+    },
+    {
+      "id": "news-d768b97983",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】ポケモンナイトアウトTwitch配信タイムチャレンジ：タイムチャレンジが判明・追加（6件）",
+      "details": "タイムチャレンジ：ポケストップを10個回す→ズリのみ、ポケモンを10匹捕まえる→キズぐすり、ポケモンを捕まえるときにきのみ5個を使う→モンスターボール、1km探索する→パイルのみ、ポケモンを15匹捕まえる→げんきのかけら、ポケストップ・ジム20個を回す→おこう",
+      "targetId": "ev-auto-pokemon-night-out-twitch-challenge"
+    },
+    {
+      "id": "news-19863195b6",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】コマタナのコミュニティ・デイ：フィールドリサーチが判明・追加（3件）",
+      "details": "フィールドリサーチ：コマタナを3匹捕まえる→コマタナ、チーム参加中ポケモンを5匹捕まえる→コマタナ(SP背景)、ポケモンを50匹捕まえる→コマタナ(SP背景)",
+      "targetId": "ev-cd-pawniard"
+    },
+    {
+      "id": "news-02268f167b",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】コマタナのコミュニティ・デイ：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：コミュニティアンバサダーが主催するミートアップにチェックイン→コマタナ(SP背景)",
+      "targetId": "ev-cd-pawniard"
+    },
+    {
+      "id": "news-5604aa2dd8",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】Día de Muertos 2026（死者の日2026）：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：無料タイムチャレンジ→カラカラ(花飾り)",
+      "targetId": "ev-auto-dia-de-muertos-2026"
+    },
+    {
+      "id": "news-13eaa8deeb",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【新イベント】ポケモンナイトアウト",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-pokemon-night-out"
+    },
+    {
+      "id": "news-7a994b523d",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】ポケモンナイトアウト：野生が判明・追加（1件）",
+      "details": "野生：アローラガラガラ",
+      "targetId": "ev-auto-pokemon-night-out"
+    },
+    {
+      "id": "news-18ace2388b",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】ポケモンナイトアウト：レイドが判明・追加（2件）",
+      "details": "レイド：ピカチュウ(ロケーション背景付き)、ゲンガー(ロケーション背景付き)",
+      "targetId": "ev-auto-pokemon-night-out"
+    },
+    {
+      "id": "news-bbf49199c5",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】ポケモンナイトアウト：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：TwitchDrops（指定配信者の配信を30分以上視聴）→ポケモンナイトアウト野球ジャージ、現地会場での無料タイムチャレンジ→ポケモンナイトアウト野球ジャージ・ストリンダー(ハイ)・ストリンダー(ロー)",
+      "targetId": "ev-auto-pokemon-night-out"
+    },
+    {
+      "id": "news-59bf57ae0d",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【新イベント】ダイマックスユクシー・エムリット・アグノムのマックスバトルデイ",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-max-battle-day-uxie-mesprit-azelf"
+    },
+    {
+      "id": "news-9de4db95df",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】ダイマックスユクシー・エムリット・アグノムのマックスバトルデイ：レイドが判明・追加（3件）",
+      "details": "レイド：ダイマックスユクシー、ダイマックスエムリット、ダイマックスアグノム",
+      "targetId": "ev-auto-max-battle-day-uxie-mesprit-azelf"
+    },
+    {
+      "id": "news-9985eed086",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】ダイマックスユクシー・エムリット・アグノムのマックスバトルデイ：タイムチャレンジが判明・追加（9件）",
+      "details": "タイムチャレンジ：リワードを受け取る→ダイキノコ、リワードを受け取る→マックス粒子、マックスバトルで勝つ→マックス粒子、マックスバトルで2回勝つ→マックス粒子、マックスバトルで3回勝つ→マックス粒子、マックスバトルで4回勝つ→マックス粒子 ほか3件",
+      "targetId": "ev-auto-max-battle-day-uxie-mesprit-azelf"
+    },
+    {
+      "id": "news-4fabaac296",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【新イベント】メテノシャワー",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-meteor-shower-2026"
+    },
+    {
+      "id": "news-ea38fd73d2",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】メテノシャワー：野生が判明・追加（1件）",
+      "details": "野生：メテノ(流星)",
+      "targetId": "ev-auto-meteor-shower-2026"
+    },
+    {
+      "id": "news-18534e1031",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】メテノシャワー：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：報酬を受け取る→ほしのかけら、ほしのかけらを使う→ほしのすな",
+      "targetId": "ev-auto-meteor-shower-2026"
+    },
+    {
+      "id": "news-7d3244898b",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【新イベント】【欧州限定】欧州宇宙機関（ESA）コラボイベント",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-esa-collab-2026"
+    },
+    {
+      "id": "news-a38e511696",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】【欧州限定】欧州宇宙機関（ESA）コラボイベント：野生が判明・追加（8件）",
+      "details": "野生：ピカチュウ、ピッピ、コイル、スターミー、ルナトーン、ソルロック ほか2件",
+      "targetId": "ev-auto-esa-collab-2026"
+    },
+    {
+      "id": "news-8305b265ea",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】【欧州限定】欧州宇宙機関（ESA）コラボイベント：レイドが判明・追加（1件）",
+      "details": "レイド：ピカチュウ",
+      "targetId": "ev-auto-esa-collab-2026"
+    },
+    {
+      "id": "news-97f52c3dea",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】秋の遠足：相棒といっしょ：野生が判明・追加（2件）",
+      "details": "野生：オドシシ、サボネア",
+      "targetId": "ev-auto-fall-marathon-buddy-trek-2026"
+    },
+    {
+      "id": "news-27efe0ad73",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】秋の遠足：相棒といっしょ：フィールドリサーチが判明・追加（1件）",
+      "details": "フィールドリサーチ：イベント限定フィールドリサーチタスク→ドードー・ラクライ・アノクサ",
+      "targetId": "ev-auto-fall-marathon-buddy-trek-2026"
+    },
+    {
+      "id": "news-e8dab47c0a",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】秋の遠足：相棒といっしょ：タイムチャレンジが判明・追加（5件）",
+      "details": "タイムチャレンジ：5km探索する→経験値×4200XP、10km探索する→経験値×4200XP、21km探索する→経験値×4200XP、42km探索する→経験値×4200XP、全クリア報酬→ピカチュウ(マラソンバイザー)",
+      "targetId": "ev-auto-fall-marathon-buddy-trek-2026"
+    },
+    {
+      "id": "news-d6771b7b21",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】メグロコふかの日：タイムチャレンジが判明・追加（4件）",
+      "details": "タイムチャレンジ：タマゴを1個かえす→ふかそうち、1km探索する→ほしのかけら、ほしのすなを2,000手に入れる→スーパーふかそうち、ほしのすなを4,000手に入れる→経験値",
+      "targetId": "ev-auto-sandile-hatch-day-2026"
+    },
+    {
+      "id": "news-ec9ff0062b",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】メグロコふかの日：サプライズボックスが判明・追加（3件）",
+      "details": "サプライズボックス：スーパーふかそうち××5、ふかそうち××5、しあわせタマゴ××2",
+      "targetId": "ev-auto-sandile-hatch-day-2026"
+    },
+    {
+      "id": "news-c6009d7011",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【新イベント】GOパス秋の遠足：相棒といっしょ",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-go-pass-autumn-excursion"
+    },
+    {
+      "id": "news-02ced6d4d4",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【新イベント】LAIC2027配信ボーナスタイムチャレンジ",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-laic2027-twitch-drops"
+    },
+    {
+      "id": "news-586841e0ae",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】LAIC2027配信ボーナスタイムチャレンジ：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：Twitchのライブ配信を30分以上視聴する→ダイケンキ・ミジュマル・ミジュマルのアメXL・わざマシンスペシャル・わざマシンノーマル",
+      "targetId": "ev-auto-laic2027-twitch-drops"
+    },
+    {
+      "id": "news-f0277f5986",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【日程変更】「黄昏時の願い」＆ スーパーメガレイドデイ",
+      "details": "日程が更新されています：2026-11-24〜2026-12-01 → 2026-10-21〜2026-10-28",
+      "targetId": "ev-tusk-wish-deoxys"
+    },
+    {
+      "id": "news-668ac48c65",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【新イベント】世界宇宙週間2026",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-world-space-week-2026"
+    },
+    {
+      "id": "news-634c235d4c",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】世界宇宙週間2026：レイドが判明・追加（1件）",
+      "details": "レイド：ピカチュウ(宇宙飛行士)",
+      "targetId": "ev-auto-world-space-week-2026"
+    },
+    {
+      "id": "news-55440cb7ab",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】世界宇宙週間2026：タイムチャレンジが判明・追加（5件）",
+      "details": "タイムチャレンジ：レイドバトルで1回勝つ→経験値、レイドバトルで2回勝つ→ほしのすな、レイドバトルで3回勝つ→経験値、レイドバトルで4回勝つ→ほしのすな、レイドバトルで5回勝つ→経験値",
+      "targetId": "ev-auto-world-space-week-2026"
+    },
+    {
+      "id": "news-dcd8cbb811",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【新イベント】わくわく！Pokémon GO Lab.大調査",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-wakuwaku-pokemon-go-lab"
+    },
+    {
+      "id": "news-7d1dc24170",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】わくわく！Pokémon GO Lab.大調査：レイドが判明・追加（1件）",
+      "details": "レイド：ピカチュウ(ウィロー博士の助手)",
+      "targetId": "ev-auto-wakuwaku-pokemon-go-lab"
+    },
+    {
+      "id": "news-61c366f5c9",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】わくわく！Pokémon GO Lab.大調査：タイムチャレンジが判明・追加（4件）",
+      "details": "タイムチャレンジ：Pokémon GO Lab.のポケストップを回す→経験値、相棒の写真を撮る→モンスターボール、ポケモンを5匹捕まえる→ほしのすな、ギフトを3個贈る→経験値",
+      "targetId": "ev-auto-wakuwaku-pokemon-go-lab"
+    },
+    {
+      "id": "news-205357e4a2",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【新イベント】2026FCソウルイベント(韓国)",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-2026-fc-seoul"
+    },
+    {
+      "id": "news-541e19bf7d",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】2026FCソウルイベント(韓国)：野生が判明・追加（6件）",
+      "details": "野生：ガーディ、ブースター、アチャモ、デルビル、シシコ、ニャビー",
+      "targetId": "ev-auto-2026-fc-seoul"
+    },
+    {
+      "id": "news-e8d30d0693",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】2026FCソウルイベント(韓国)：レイドが判明・追加（1件）",
+      "details": "レイド：ヒトカゲ",
+      "targetId": "ev-auto-2026-fc-seoul"
+    },
+    {
+      "id": "news-ce52c5873a",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】2026FCソウルイベント(韓国)：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：イベント期間中に対象地域へ行く→リザードン(ロケーション背景)・プレミアムバトルパス・ヒトカゲのアメ・ほしのすな・経験値",
+      "targetId": "ev-auto-2026-fc-seoul"
+    },
+    {
+      "id": "news-59488e4ccb",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】【欧州限定】欧州宇宙機関（ESA）コラボイベント：レイドが判明・追加（1件）",
+      "details": "レイド：ピカチュウ(宇宙飛行士)",
+      "targetId": "ev-auto-esa-collab-2026"
+    },
+    {
+      "id": "news-b665952648",
+      "date": "2026-11-04",
+      "date_label": "11/4",
+      "title": "【情報追加】【欧州限定】欧州宇宙機関（ESA）コラボイベント：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：参加博物館で受け取れる限定タイムチャレンジ→ポケモンと遭遇・ピカチュウ(宇宙飛行士)",
+      "targetId": "ev-auto-esa-collab-2026"
+    },
+    {
       "id": "news-741d8e2fcd",
       "date": "2026-11-03",
       "date_label": "11/3",
@@ -968,6 +1416,27 @@
         "rewardName": "コマタナ",
         "shiny": true,
         "note": "出典: official"
+      },
+      {
+        "task": "コマタナを3匹捕まえる",
+        "rewardDex": 624,
+        "rewardName": "コマタナ",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "チーム参加中ポケモンを5匹捕まえる",
+        "rewardDex": 624,
+        "rewardName": "コマタナ(SP背景)",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "ポケモンを50匹捕まえる",
+        "rewardDex": 624,
+        "rewardName": "コマタナ(SP背景)",
+        "shiny": true,
+        "note": "出典: gamewith"
       }
     ],
     "ev-halloween-p2": [
@@ -1133,6 +1602,20 @@
         "rewardName": "アノクサ",
         "shiny": true,
         "note": "出典: 9db"
+      },
+      {
+        "task": "イベント限定フィールドリサーチタスク",
+        "rewardDex": 120,
+        "rewardName": "ヒトデマン",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "イベント限定フィールドリサーチタスク",
+        "rewardDex": 605,
+        "rewardName": "リグレー",
+        "shiny": true,
+        "note": "出典: gamewith"
       }
     ],
     "ev-auto-fall-marathon-buddy-trek-2026": [
@@ -1156,6 +1639,27 @@
         "rewardName": "アノクサ",
         "shiny": false,
         "note": "出典: official"
+      },
+      {
+        "task": "イベント限定フィールドリサーチタスク",
+        "rewardDex": 84,
+        "rewardName": "ドードー",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "イベント限定フィールドリサーチタスク",
+        "rewardDex": 309,
+        "rewardName": "ラクライ",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "イベント限定フィールドリサーチタスク",
+        "rewardDex": 946,
+        "rewardName": "アノクサ",
+        "shiny": false,
+        "note": "出典: gamewith"
       }
     ]
   },
@@ -1738,7 +2242,7 @@
           "dex": 309,
           "name": "ラクライ",
           "shiny": true,
-          "note": ""
+          "note": "色違い確率アップ"
         },
         {
           "dex": 522,
@@ -1751,6 +2255,18 @@
           "name": "エアームド",
           "shiny": true,
           "note": "運が良ければ出会える"
+        },
+        {
+          "dex": 234,
+          "name": "オドシシ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 331,
+          "name": "サボネア",
+          "shiny": true,
+          "note": ""
         }
       ]
     },
@@ -1971,6 +2487,12 @@
         {
           "dex": 201,
           "name": "アンノーン(O)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 105,
+          "name": "アローラガラガラ",
           "shiny": true,
           "note": ""
         }
@@ -2277,6 +2799,138 @@
       ]
     },
     {
+      "id": "ev-auto-wild-week-2026",
+      "title": "ev-auto-wild-week-2026",
+      "wilds": [
+        {
+          "dex": 81,
+          "name": "コイル",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 714,
+          "name": "オンバット",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 777,
+          "name": "トゲデマル",
+          "shiny": true,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "ev-auto-meteor-shower-2026",
+      "title": "ev-auto-meteor-shower-2026",
+      "wilds": [
+        {
+          "dex": 774,
+          "name": "メテノ(流星)",
+          "shiny": true,
+          "note": "17時から21時まで出会いやすくなる"
+        }
+      ]
+    },
+    {
+      "id": "ev-auto-esa-collab-2026",
+      "title": "ev-auto-esa-collab-2026",
+      "wilds": [
+        {
+          "dex": 25,
+          "name": "ピカチュウ",
+          "shiny": true,
+          "note": "10/4〜10/10"
+        },
+        {
+          "dex": 35,
+          "name": "ピッピ",
+          "shiny": true,
+          "note": "10/4〜10/10"
+        },
+        {
+          "dex": 81,
+          "name": "コイル",
+          "shiny": true,
+          "note": "10/4〜10/10"
+        },
+        {
+          "dex": 121,
+          "name": "スターミー",
+          "shiny": true,
+          "note": "10/4〜10/10"
+        },
+        {
+          "dex": 337,
+          "name": "ルナトーン",
+          "shiny": true,
+          "note": "10/4〜10/10"
+        },
+        {
+          "dex": 338,
+          "name": "ソルロック",
+          "shiny": true,
+          "note": "10/4〜10/10"
+        },
+        {
+          "dex": 605,
+          "name": "リグレー",
+          "shiny": true,
+          "note": "10/4〜10/10"
+        },
+        {
+          "dex": 824,
+          "name": "サッチムシ",
+          "shiny": true,
+          "note": "10/4〜10/10"
+        }
+      ]
+    },
+    {
+      "id": "ev-auto-2026-fc-seoul",
+      "title": "ev-auto-2026-fc-seoul",
+      "wilds": [
+        {
+          "dex": 58,
+          "name": "ガーディ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 136,
+          "name": "ブースター",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 255,
+          "name": "アチャモ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 228,
+          "name": "デルビル",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 667,
+          "name": "シシコ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 725,
+          "name": "ニャビー",
+          "shiny": true,
+          "note": ""
+        }
+      ]
+    },
+    {
       "id": "ev-auto-giratina-alter-raid-hour",
       "month": 11,
       "title": "ギラティナ（アナザー）のレイドアワー",
@@ -2399,18 +3053,19 @@
     {
       "id": "ev-auto-adidas-pokemon-2026",
       "month": 9,
-      "title": "「ADIDAS | POKÉMON」コレクションの着せ替えアイテムが『Pokémon GO』に登場！",
+      "title": "ADIDAS POKÉMONのタイムチャレンジ",
       "barClass": "bar-collab",
       "category": "collab",
       "startDay": 25,
       "endDay": 28,
       "hasPaid": false,
-      "dateText": "2026年9月25日から2027年1月15日まで",
-      "summary": "対象のadidas店舗や小売店を訪れることでタイムチャレンジに挑戦でき、着せ替えアイテムやルカリオ、メガエナジーなどを獲得できるコラボイベント。",
+      "dateText": "2026年9月25日(金)〜2027年2月13日(土)20:00",
+      "summary": "「ADIDAS｜POKÉMON」コレクション発売を記念したタイムチャレンジ。対象のadidas店舗を訪れることで入手可能。",
       "freeFeatures": [
-        "タイムチャレンジ（adidas店舗にて配布）",
-        "着せ替えアイテム「adidas Pokémon Jacket」「adidas Pokémon Cap」",
-        "着せ替えアイテム「adidas Pokémon Megaride Shoes」（プロモーションコード入力）"
+        "タイムチャレンジ",
+        "着せ替えアイテム（adidas Pokémon Cap, adidas Pokémon Jacket）",
+        "ルカリオとの遭遇",
+        "ルカリオのメガエナジー"
       ],
       "paidFeatures": [],
       "wilds": [],
@@ -2611,19 +3266,19 @@
     {
       "id": "ev-auto-aeon-halloween-2026",
       "month": 10,
-      "title": "イオンモールハロウィンイベント2026タイムチャレンジ",
+      "title": "イオンハロウィンイベント",
       "barClass": "bar-main",
       "category": "main",
       "startDay": 19,
       "endDay": 28,
       "hasPaid": false,
-      "dateText": "Part1:2026/10/19～10/25, Part2:2026/10/26～11/1",
-      "summary": "対象のイオンモールでポケモンGOを起動すると受け取れるタイムチャレンジ。Part1とPart2に分かれて開催される。",
+      "dateText": "2026年10月19日(月)から11月1日(日)まで",
+      "summary": "全国の対象イオンモールで開催されるイベント。特別なタイムチャレンジの配布、ルアーモジュールの効果時間延長、ゲーム内道具セットが当たる抽選キャンペーンなどが実施される。",
       "freeFeatures": [
-        "タイムチャレンジ",
-        "ルアーモジュールのボーナス",
-        "抽選で道具セットプレゼント",
-        "ピカチュウサンバイザー配布"
+        "特別なタイムチャレンジ",
+        "ルアーモジュールの効果時間が2時間に延長",
+        "ゲーム内道具セット抽選キャンペーン",
+        "ハロウィンピカチュウサンバイザーの配布（先着）"
       ],
       "paidFeatures": [],
       "wilds": [],
@@ -2634,17 +3289,19 @@
     {
       "id": "ev-auto-pokemon-night-out",
       "month": 10,
-      "title": "Pokémon Night Out",
+      "title": "ポケモンナイトアウト",
       "barClass": "bar-main",
       "category": "main",
-      "startDay": 28,
+      "startDay": 24,
       "endDay": 28,
       "hasPaid": false,
-      "dateText": "2026/11/2(月)16:58まで",
-      "summary": "Twitchライブ配信視聴による限定タイムチャレンジ配布およびイベントボーナス",
+      "dateText": "10月24日(土)〜11月10日(火)",
+      "summary": "ロサンゼルスとロンドンで開催される現地イベント。ロケーション背景付きのピカチュウやゲンガーのレイド、限定着せ替えアイテムが入手可能なタイムチャレンジなどが登場する。",
       "freeFeatures": [
-        "ルアーモジュール（おうごんルアーを除く）の効果が1時間持続",
-        "限定タイムチャレンジ"
+        "現地会場でのルアーモジュール効果時間1時間",
+        "野生ポケモンの出現率アップ",
+        "ロケーション背景付きピカチュウ・ゲンガーのレイド",
+        "無料タイムチャレンジ"
       ],
       "paidFeatures": [],
       "wilds": [],
@@ -2886,6 +3543,286 @@
         "ふしぎなアメXL",
         "ぎんのパイルのみ"
       ],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-wild-week-2026",
+      "month": 11,
+      "title": "ワイルドウィーク(2026年)",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 9,
+      "endDay": 13,
+      "hasPaid": true,
+      "dateText": "2026年11月9日(月)10:00~13日(金)20:00",
+      "summary": "はがねとドラゴンタイプやダイマックスをメインとしたイベント。ダイマックスレジドラゴ、ダイマックスメルタンや新たなSP背景が登場する。",
+      "freeFeatures": [
+        "リモートレイド上限引き上げ(30回)",
+        "ふしぎなはこから色違いメルタン出現",
+        "ふしぎなはこ使用間隔短縮",
+        "だいじなたからばこから色違いコレクレー出現",
+        "特定のポケモンが特別技を習得",
+        "伝説(★5)レイドバトルや★5マックスバトルで新しいスペシャル背景",
+        "マックスバトルが毎日変化",
+        "レイドボスが変化",
+        "野生ポケモンが変化",
+        "イベントフィールドリサーチ",
+        "グローバルチャレンジ",
+        "ステッカー登場",
+        "新アバター登場"
+      ],
+      "paidFeatures": [
+        "GOパスワイルドウィーク(ダイマックスメルタン、ぎんのおうかん、ジュラルドンパンツ等)"
+      ],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-super-mega-raid-day-chandelure",
+      "month": 10,
+      "title": "スーパーメガレイドデイ：メガシャンデラ",
+      "barClass": "bar-raid",
+      "category": "raid",
+      "startDay": 31,
+      "endDay": 28,
+      "hasPaid": false,
+      "dateText": "2026年10月31日(土)14:00～11月1日(日)20:00",
+      "summary": "シャンデラの色違い確率調査",
+      "freeFeatures": [],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-adidas-collab-2026",
+      "month": 9,
+      "title": "adidasコラボ",
+      "barClass": "bar-collab",
+      "category": "collab",
+      "startDay": 25,
+      "endDay": 28,
+      "hasPaid": false,
+      "dateText": "2026/9/25(金) 〜 2027/1/15(金)23:59",
+      "summary": "adidas × Pokemon コラボイベント。対象店舗でのタイムチャレンジやアバターアイテムの配布が行われる。",
+      "freeFeatures": [
+        "タイムチャレンジ",
+        "アバターアイテム"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-pokemon-night-out-twitch-challenge",
+      "month": 10,
+      "title": "ポケモンナイトアウトTwitch配信タイムチャレンジ",
+      "barClass": "bar-collab",
+      "category": "collab",
+      "startDay": 25,
+      "endDay": 28,
+      "hasPaid": false,
+      "dateText": "2026-10-25〜2026-11-02",
+      "summary": "Twitchの公式配信や指定配信者の配信を30分以上視聴することで、タイムチャレンジの引き換えコードが入手できるイベント。",
+      "freeFeatures": [
+        "タイムチャレンジ",
+        "着せ替えアイテム（ポケモンナイトアウト野球ジャージ）"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-max-battle-day-uxie-mesprit-azelf",
+      "month": 10,
+      "title": "ダイマックスユクシー・エムリット・アグノムのマックスバトルデイ",
+      "barClass": "bar-dmax",
+      "category": "dmax",
+      "startDay": 24,
+      "endDay": 24,
+      "hasPaid": true,
+      "dateText": "2026年10月24日",
+      "summary": "ダイマックスユクシー・エムリット・アグノムが初登場するマックスバトルデイ。日本ではダイマックスユクシーが登場。",
+      "freeFeatures": [
+        "マックス粒子を受け取れる探索距離1/4",
+        "探索で受け取れるマックス粒子2倍",
+        "リモートレイド参加上限が1日20回に引き上げ",
+        "マックス粒子所持上限が1,600に増加",
+        "すべてのパワースポットでダイマックスポケモン登場",
+        "パワースポットの更新間隔短縮",
+        "追加のパワースポット出現",
+        "パワースポットで得られるマックス粒子量8倍",
+        "特別な交換が1日最大3回まで可能"
+      ],
+      "paidFeatures": [
+        "限定タイムチャレンジ",
+        "マックスバトルで獲得できるXP2倍"
+      ],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-meteor-shower-2026",
+      "month": 10,
+      "title": "メテノシャワー",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 19,
+      "endDay": 28,
+      "hasPaid": false,
+      "dateText": "流星群がみられる期間に開催",
+      "summary": "流星群がみられる期間に開催されるイベント。期間中、特定の色のコアのメテノが出現し、17時から21時の間はメテノ(流星)と出会いやすくなり、捕獲時のほしのすなが増加する。",
+      "freeFeatures": [
+        "メテノ(流星)と出会いやすくなる",
+        "メテノ(流星)捕獲時のほしのすな増加",
+        "ゲーム内に流れ星が流れる",
+        "無料タイムチャレンジ"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-esa-collab-2026",
+      "month": 10,
+      "title": "【欧州限定】欧州宇宙機関（ESA）コラボイベント",
+      "barClass": "bar-collab",
+      "category": "collab",
+      "startDay": 4,
+      "endDay": 28,
+      "hasPaid": false,
+      "dateText": "2026/10/4(日) 〜 2027/4/30(金)",
+      "summary": "欧州宇宙機関（ESA）とのコラボイベント。欧州の博物館やESA施設が対象。",
+      "freeFeatures": [],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-go-pass-autumn-excursion",
+      "month": 10,
+      "title": "GOパス秋の遠足：相棒といっしょ",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 13,
+      "endDay": 19,
+      "hasPaid": true,
+      "dateText": "2026年10月13日(火)10:00~10月19日(月)20:00",
+      "summary": "GOポイントを集めてランクを上げ、進行度に応じて報酬が貰える期間限定のGOパスイベント。有料版のデラックスも登場。",
+      "freeFeatures": [
+        "おこうが2時間持続(おさんぽおこうを除く)",
+        "相棒探索メガエナジー5倍(ラクライ、ライボルト)"
+      ],
+      "paidFeatures": [
+        "追加報酬(ライボルトのメガエナジー、ふしぎなアメXL)",
+        "追加デイリータスク"
+      ],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-laic2027-twitch-drops",
+      "month": 11,
+      "title": "LAIC2027配信ボーナスタイムチャレンジ",
+      "barClass": "bar-collab",
+      "category": "collab",
+      "startDay": 20,
+      "endDay": 28,
+      "hasPaid": false,
+      "dateText": "2026年11月20日〜12月5日",
+      "summary": "LAIC2027大会のTwitch配信を視聴することで、タイムチャレンジや追加リワードが入手できるイベント。",
+      "freeFeatures": [
+        "Twitch配信視聴によるタイムチャレンジ",
+        "Twitch配信視聴による追加リワード"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-world-space-week-2026",
+      "month": 10,
+      "title": "世界宇宙週間2026",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 4,
+      "endDay": 10,
+      "hasPaid": false,
+      "dateText": "2026年10月4日(日)0:00~10月10日(土)23:59",
+      "summary": "世界宇宙週間2026イベント。宇宙飛行士ピカチュウが初登場。",
+      "freeFeatures": [
+        "宇宙飛行士ピカチュウが星1レイドとタイムチャレンジから初登場"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-wakuwaku-pokemon-go-lab",
+      "month": 10,
+      "title": "わくわく！Pokémon GO Lab.大調査",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 7,
+      "endDay": 28,
+      "hasPaid": false,
+      "dateText": "2026年10月7日(水)~2040年12月31日(月)23:59",
+      "summary": "ポケモンセンターメガトウキョーのPokémon GO Lab.で開催されるイベント。ウィロー博士の助手ピカチュウのレイドバトルやタイムチャレンジ、スナップショットでの出会いなどが楽しめる。",
+      "freeFeatures": [
+        "ウィロー博士の助手ピカチュウのレイドバトル(1日1回)",
+        "限定タイムチャレンジ",
+        "GOスナップショットサプライズ"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-2026-fc-seoul",
+      "month": 10,
+      "title": "2026FCソウルイベント(韓国)",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 24,
+      "endDay": 24,
+      "hasPaid": false,
+      "dateText": "2026年10月24日(土)9:00~20:00",
+      "summary": "韓国のソウルワールドカップ競技場一帯で開催されるイベント。ロケーション背景付きのポケモンと出会えるレイドやタイムチャレンジが登場する。",
+      "freeFeatures": [
+        "対象ポケモンの色違い率UP",
+        "ルアーモジュールが2時間持続",
+        "ナイススロー以上でアメ増加",
+        "野生ポケモン変化",
+        "レイドボス変化",
+        "無料タイムチャレンジ",
+        "マップ上で紙吹雪エフェクト",
+        "ポケモンGOブース登場"
+      ],
+      "paidFeatures": [],
       "wilds": [],
       "raids": [],
       "fieldResearches": [],
