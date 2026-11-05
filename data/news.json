@@ -206,6 +206,193 @@
       ]
     },
     {
+      "id": "news-30ffe57ce1",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "kind": "new_event",
+      "title": "【新イベント】光のフェスティバル（インド限定）",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-festival-of-lights-india-2026",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10640/",
+          "fetched_at": "2026-11-05T12:50:31.582816+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-f40eae3dd1",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "kind": "event_update",
+      "title": "【情報追加】光のフェスティバル（インド限定）：野生が判明・追加（10件）",
+      "details": "野生：ヒトカゲ、サリーを着た ピカチュウ、クルタを身にまとった ピカチュウ、チョンチー、メリープ、バクーダ ほか4件",
+      "targetId": "ev-auto-festival-of-lights-india-2026",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10640/",
+          "fetched_at": "2026-11-05T12:50:31.582816+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-04c2905f7d",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "kind": "event_update",
+      "title": "【情報追加】メグロコふかの日：タイムチャレンジが判明・追加（4件）",
+      "details": "タイムチャレンジ：タマゴを1個かえす→2,026 XP、1km 探索する→スーパーふかそうち、1km 探索する→ほしのすな、1km 探索する→5,000 XP",
+      "targetId": "ev-auto-sandile-hatch-day-2026",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10637/",
+          "fetched_at": "2026-11-05T12:50:31.582816+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-830035a82b",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "kind": "event_update",
+      "title": "【情報追加】GOワイルドエリア2026：グローバル：野生が判明・追加（18件）",
+      "details": "野生：ナッシー(アローラ)、ハッサム、フライゴン、トドゼルガ、メタグロス、エンペルト ほか12件",
+      "targetId": "ev-wildarea-2026",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26354",
+          "fetched_at": "2026-11-05T12:50:31.582816+09:00",
+          "article_updated": "2026-11-05T07:54:02+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-19e8eb9c78",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "kind": "event_update",
+      "title": "【情報追加】GOワイルドエリア2026：グローバル：レイドが判明・追加（2件）",
+      "details": "レイド：ラティアス、ラティオス",
+      "targetId": "ev-wildarea-2026",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26354",
+          "fetched_at": "2026-11-05T12:50:31.582816+09:00",
+          "article_updated": "2026-11-05T07:54:02+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-bb0268b38e",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドウィーク(2026年)：レイドが判明・追加（4件）",
+      "details": "レイド：レジスチル、ラティアス、ラティオス、レジドラゴ",
+      "targetId": "ev-auto-wild-week-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/582768",
+          "fetched_at": "2026-11-05T12:50:31.582816+09:00",
+          "article_updated": "2026-11-04T23:02:24+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-e9822c5064",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "kind": "event_update",
+      "title": "【情報追加】死者の日2026特別イベント(メキシコ レフォルマ通り)：レイドが判明・追加（1件）",
+      "details": "レイド：キョダイマックスゲンガー",
+      "targetId": "ev-auto-dia-de-muertos-2026-reforma",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/584389",
+          "fetched_at": "2026-11-05T12:50:31.582816+09:00",
+          "article_updated": "2026-11-02T07:51:25+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-9592447575",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "kind": "event_update",
+      "title": "【情報追加】死者の日2026特別イベント(メキシコ レフォルマ通り)：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：イベント限定タイムチャレンジ→ほしのすな、イベント限定タイムチャレンジ→モンスターボール",
+      "targetId": "ev-auto-dia-de-muertos-2026-reforma",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/584389",
+          "fetched_at": "2026-11-05T12:50:31.582816+09:00",
+          "article_updated": "2026-11-02T07:51:25+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-fd2ed1e2e8",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "kind": "event_update",
+      "title": "【情報追加】イオンハロウィンイベント：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：特別なタイムチャレンジパート1（対象のイオンモールを訪れる）→ピカチュウ(魔女帽子)、特別なタイムチャレンジパート2（対象のイオンモールを訪れる）→ピカチュウ(魔女帽子)",
+      "targetId": "ev-auto-aeon-halloween-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/579901",
+          "fetched_at": "2026-11-05T12:50:31.582816+09:00",
+          "article_updated": "2026-11-01T22:12:11+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-b018b84851",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "kind": "event_update",
+      "title": "【情報追加】ポケモンナイトアウトTwitch配信タイムチャレンジ：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：ポケストップを10個回す→ズriのみ、ポケストップを10個回す→ズriのみ",
+      "targetId": "ev-auto-pokemon-night-out-twitch-challenge",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/585702",
+          "fetched_at": "2026-11-05T12:50:31.582816+09:00",
+          "article_updated": "2026-10-31T13:48:13+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-5e600ed91e",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "kind": "event_update",
+      "title": "【情報追加】秋の遠足相棒といっしょ：フィールドリサーチが判明・追加（1件）",
+      "details": "フィールドリサーチ：タスクをクリアする→ドードー・ラクライ・アノクサ・ライボルトのメガエナジー・ふしぎなアメ",
+      "targetId": "ev-auto-autumn-excursion-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/578533",
+          "fetched_at": "2026-11-05T12:50:31.582816+09:00",
+          "article_updated": "2026-10-22T03:58:24+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-1872118fe7",
       "date": "2026-11-04",
       "date_label": "11/4",

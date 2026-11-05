@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/11/05 07:41 JST",
+  "updated_at": "2026/11/05 12:50 JST",
   "latest_news": [
     {
       "id": "news-6ddbf8c3c7",
@@ -96,6 +96,94 @@
       "title": "【情報追加】わくわく！Pokémon GO Lab.大調査：タイムチャレンジが判明・追加（4件）",
       "details": "タイムチャレンジ：Pokémon GO Lab.のポケストップを回す→経験値×1000XP、相棒の写真を撮る→モンスターボール ×10、ポケモンを5匹捕まえる→ほしのすな ×1000、ギフトを3個贈る→経験値×1000XP",
       "targetId": "ev-auto-wakuwaku-pokemon-go-lab"
+    },
+    {
+      "id": "news-30ffe57ce1",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "title": "【新イベント】光のフェスティバル（インド限定）",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-festival-of-lights-india-2026"
+    },
+    {
+      "id": "news-f40eae3dd1",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "title": "【情報追加】光のフェスティバル（インド限定）：野生が判明・追加（10件）",
+      "details": "野生：ヒトカゲ、サリーを着た ピカチュウ、クルタを身にまとった ピカチュウ、チョンチー、メリープ、バクーダ ほか4件",
+      "targetId": "ev-auto-festival-of-lights-india-2026"
+    },
+    {
+      "id": "news-04c2905f7d",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "title": "【情報追加】メグロコふかの日：タイムチャレンジが判明・追加（4件）",
+      "details": "タイムチャレンジ：タマゴを1個かえす→2,026 XP、1km 探索する→スーパーふかそうち、1km 探索する→ほしのすな、1km 探索する→5,000 XP",
+      "targetId": "ev-auto-sandile-hatch-day-2026"
+    },
+    {
+      "id": "news-830035a82b",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "title": "【情報追加】GOワイルドエリア2026：グローバル：野生が判明・追加（18件）",
+      "details": "野生：ナッシー(アローラ)、ハッサム、フライゴン、トドゼルガ、メタグロス、エンペルト ほか12件",
+      "targetId": "ev-wildarea-2026"
+    },
+    {
+      "id": "news-19e8eb9c78",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "title": "【情報追加】GOワイルドエリア2026：グローバル：レイドが判明・追加（2件）",
+      "details": "レイド：ラティアス、ラティオス",
+      "targetId": "ev-wildarea-2026"
+    },
+    {
+      "id": "news-bb0268b38e",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "title": "【情報追加】ワイルドウィーク(2026年)：レイドが判明・追加（4件）",
+      "details": "レイド：レジスチル、ラティアス、ラティオス、レジドラゴ",
+      "targetId": "ev-auto-wild-week-2026"
+    },
+    {
+      "id": "news-e9822c5064",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "title": "【情報追加】死者の日2026特別イベント(メキシコ レフォルマ通り)：レイドが判明・追加（1件）",
+      "details": "レイド：キョダイマックスゲンガー",
+      "targetId": "ev-auto-dia-de-muertos-2026-reforma"
+    },
+    {
+      "id": "news-9592447575",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "title": "【情報追加】死者の日2026特別イベント(メキシコ レフォルマ通り)：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：イベント限定タイムチャレンジ→ほしのすな、イベント限定タイムチャレンジ→モンスターボール",
+      "targetId": "ev-auto-dia-de-muertos-2026-reforma"
+    },
+    {
+      "id": "news-fd2ed1e2e8",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "title": "【情報追加】イオンハロウィンイベント：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：特別なタイムチャレンジパート1（対象のイオンモールを訪れる）→ピカチュウ(魔女帽子)、特別なタイムチャレンジパート2（対象のイオンモールを訪れる）→ピカチュウ(魔女帽子)",
+      "targetId": "ev-auto-aeon-halloween-2026"
+    },
+    {
+      "id": "news-b018b84851",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "title": "【情報追加】ポケモンナイトアウトTwitch配信タイムチャレンジ：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：ポケストップを10個回す→ズriのみ、ポケストップを10個回す→ズriのみ",
+      "targetId": "ev-auto-pokemon-night-out-twitch-challenge"
+    },
+    {
+      "id": "news-5e600ed91e",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "title": "【情報追加】秋の遠足相棒といっしょ：フィールドリサーチが判明・追加（1件）",
+      "details": "フィールドリサーチ：タスクをクリアする→ドードー・ラクライ・アノクサ・ライボルトのメガエナジー・ふしぎなアメ",
+      "targetId": "ev-auto-autumn-excursion-2026"
     },
     {
       "id": "news-1872118fe7",
@@ -2160,6 +2248,41 @@
         "rewardName": "アノクサ",
         "shiny": false,
         "note": "出典: gamewith"
+      },
+      {
+        "task": "タスクをクリアする",
+        "rewardDex": 84,
+        "rewardName": "ドードー",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "タスクをクリアする",
+        "rewardDex": 309,
+        "rewardName": "ラクライ",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "タスクをクリアする",
+        "rewardDex": 946,
+        "rewardName": "アノクサ",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "タスクをクリアする",
+        "rewardDex": 310,
+        "rewardName": "ライボルトのメガエナジー",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "タスクをクリアする",
+        "rewardDex": 25,
+        "rewardName": "ふしぎなアメ",
+        "shiny": false,
+        "note": "出典: gamewith"
       }
     ]
   },
@@ -2399,265 +2522,373 @@
         {
           "dex": 27,
           "name": "サンド(アローラ)",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 50,
           "name": "ディグダ(アローラ)",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 81,
           "name": "コイル",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 90,
           "name": "シェルダー",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 95,
           "name": "イワーク",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 137,
           "name": "ポリゴン",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 213,
           "name": "ツボツボ",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 227,
           "name": "エアームド",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 299,
           "name": "ノズパス",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 304,
           "name": "ココドラ",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 374,
           "name": "ダンバル",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 393,
           "name": "ポッチャマ",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 410,
           "name": "タテトプス",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 436,
           "name": "ドーミラー",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 448,
           "name": "ルカリオ",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 529,
           "name": "モグリュー",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 597,
           "name": "テッシード",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 599,
           "name": "ギアル",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 618,
           "name": "マッギョ(ガラル)",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 632,
           "name": "アイアント",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 821,
           "name": "ココガラ",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 957,
           "name": "カヌチャン",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 4,
           "name": "ヒトカゲ",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 129,
           "name": "コイキング",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 147,
           "name": "ミニリュウ",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 207,
           "name": "グライガー",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 328,
           "name": "ナックラー",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 333,
           "name": "チルット",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 339,
           "name": "ドジョッチ",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 371,
           "name": "タツベイ",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 443,
           "name": "フカマル",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 602,
           "name": "シビシラス",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 610,
           "name": "キバゴ",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 631,
           "name": "クイタラン",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 633,
           "name": "モノズ",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 690,
           "name": "クズモー",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 696,
           "name": "チゴラス",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 698,
           "name": "アマルス",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 704,
           "name": "ヌメラ",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 714,
           "name": "オンバット",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 776,
           "name": "バクガメス",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 782,
           "name": "ジャラコ",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 850,
           "name": "ヤクデ",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
           "dex": 996,
           "name": "セビエ",
-          "shiny": false,
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 103,
+          "name": "ナッシー(アローラ)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 212,
+          "name": "ハッサム",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 330,
+          "name": "フライゴン",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 365,
+          "name": "トドゼルガ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 376,
+          "name": "メタグロス",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 395,
+          "name": "エンペルト",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 462,
+          "name": "ジバコイル",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 534,
+          "name": "ローブシン",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 612,
+          "name": "オノノクス",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 184,
+          "name": "マリルリ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 230,
+          "name": "キングドラ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 306,
+          "name": "ボスゴドラ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 598,
+          "name": "ナットレイ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 635,
+          "name": "サザンドラ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 706,
+          "name": "ヌメルゴン",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 715,
+          "name": "オンバーン",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 959,
+          "name": "デカヌチャン",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 980,
+          "name": "ドオー",
+          "shiny": true,
           "note": ""
         }
       ]
@@ -2963,7 +3194,7 @@
         {
           "dex": 41,
           "name": "ズバット(トップハット)",
-          "shiny": false,
+          "shiny": true,
           "note": "サプライズボックス"
         },
         {
@@ -3005,19 +3236,19 @@
         {
           "dex": 426,
           "name": "フワライド(ハロウィン)",
-          "shiny": false,
+          "shiny": true,
           "note": "サプライズボックス"
         },
         {
           "dex": 94,
           "name": "ゲンガー(ハロウィン)",
-          "shiny": false,
+          "shiny": true,
           "note": "サプライズボックス"
         },
         {
           "dex": 37,
           "name": "ロコン(ハロウィン)",
-          "shiny": false,
+          "shiny": true,
           "note": "サプライズボックス"
         }
       ]
@@ -3791,6 +4022,72 @@
         {
           "dex": 227,
           "name": "エアームド",
+          "shiny": true,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "ev-auto-festival-of-lights-india-2026",
+      "title": "ev-auto-festival-of-lights-india-2026",
+      "wilds": [
+        {
+          "dex": 4,
+          "name": "ヒトカゲ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 25,
+          "name": "サリーを着た ピカチュウ",
+          "shiny": true,
+          "note": "スペシャル背景"
+        },
+        {
+          "dex": 25,
+          "name": "クルタを身にまとった ピカチュウ",
+          "shiny": true,
+          "note": "スペシャル背景"
+        },
+        {
+          "dex": 170,
+          "name": "チョンチー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 179,
+          "name": "メリープ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 323,
+          "name": "バクーダ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 607,
+          "name": "ヒトモシ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 608,
+          "name": "ランプラー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 755,
+          "name": "ネマシュ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 938,
+          "name": "ズピカ",
           "shiny": true,
           "note": ""
         }
@@ -4712,6 +5009,24 @@
       "paidFeatures": [
         "イベントGOパス"
       ],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-festival-of-lights-india-2026",
+      "month": 11,
+      "title": "光のフェスティバル（インド限定）",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 6,
+      "endDay": 8,
+      "hasPaid": false,
+      "dateText": "現地時間 2026/11/6(金)10時～2026/11/8(日)20時",
+      "summary": "",
+      "freeFeatures": [],
+      "paidFeatures": [],
       "wilds": [],
       "raids": [],
       "fieldResearches": [],
