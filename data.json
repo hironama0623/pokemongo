@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/11/05 12:50 JST",
+  "updated_at": "2026/11/05 18:53 JST",
   "latest_news": [
     {
       "id": "news-6ddbf8c3c7",
@@ -184,6 +184,14 @@
       "title": "【情報追加】秋の遠足相棒といっしょ：フィールドリサーチが判明・追加（1件）",
       "details": "フィールドリサーチ：タスクをクリアする→ドードー・ラクライ・アノクサ・ライボルトのメガエナジー・ふしぎなアメ",
       "targetId": "ev-auto-autumn-excursion-2026"
+    },
+    {
+      "id": "news-1f7d63d1a4",
+      "date": "2026-11-05",
+      "date_label": "11/5",
+      "title": "【情報追加】ワイルドウィーク2026：レイドが判明・追加（3件）",
+      "details": "レイド：ラルトス、ワンリキー、レジドラゴ",
+      "targetId": "ev-wildweek-2026"
     },
     {
       "id": "news-1872118fe7",
@@ -2348,13 +2356,13 @@
         {
           "dex": 999,
           "name": "コレクレー(とほ)",
-          "shiny": false,
+          "shiny": true,
           "note": "サプライズボックス"
         },
         {
           "dex": 808,
           "name": "メルタン",
-          "shiny": false,
+          "shiny": true,
           "note": "サプライズボックス"
         }
       ]
