@@ -1786,7 +1786,7 @@
         "gamewith": {
           "url": "https://pokemongo.gamewith.jp/article/show/583310",
           "article_updated": "2026-11-04T11:01:19+09:00",
-          "fetched_at": "2026-11-05T12:50:31.582816+09:00",
+          "fetched_at": "2026-11-05T23:14:05.269525+09:00",
           "counters": [
             {
               "name": "キュレム(W)",
@@ -1971,7 +1971,7 @@
           ]
         }
       },
-      "updated_at": "2026-11-05T12:50:31.582816+09:00"
+      "updated_at": "2026-11-05T23:14:05.269525+09:00"
     },
     "raid:シャドウランドロス": {
       "name": "シャドウランドロス",
@@ -1985,7 +1985,7 @@
         "gamewith": {
           "url": "https://pokemongo.gamewith.jp/article/show/577781",
           "article_updated": "2026-11-04T10:37:28+09:00",
-          "fetched_at": "2026-11-05T12:50:31.582816+09:00",
+          "fetched_at": "2026-11-05T23:14:05.269525+09:00",
           "counters": [
             {
               "name": "キュレム(W)",
@@ -2146,7 +2146,123 @@
           ]
         }
       },
-      "updated_at": "2026-11-05T12:50:31.582816+09:00"
+      "updated_at": "2026-11-05T23:14:05.269525+09:00"
+    },
+    "dmax:gジュラルドン": {
+      "name": "キョダイマックスジュラルドン",
+      "kind": "dmax",
+      "tier": null,
+      "types": [],
+      "by_site": {
+        "9db": {
+          "url": "https://9db.jp/pokemongo/data/26687",
+          "article_updated": "2026-11-05T23:00:43+09:00",
+          "fetched_at": "2026-11-05T23:14:05.269525+09:00",
+          "counters": [
+            {
+              "name": "ザマゼンタ",
+              "rank": 1,
+              "role": "attacker",
+              "tag": "normal",
+              "fast": "メタルクロー",
+              "charged": "きょじゅうだん インファイト",
+              "dps": null,
+              "tdo": null,
+              "note": "",
+              "dex": 889
+            },
+            {
+              "name": "カイリキー",
+              "rank": 3,
+              "role": "attacker",
+              "tag": "normal",
+              "fast": "からてチョップ",
+              "charged": "ばくれつパンチ クロスチョップ",
+              "dps": null,
+              "tdo": null,
+              "note": "",
+              "dex": 68
+            }
+          ]
+        }
+      },
+      "updated_at": "2026-11-05T23:14:05.269525+09:00"
+    },
+    "dmax:ディアルガ": {
+      "name": "ダイマックスディアルガ",
+      "kind": "dmax",
+      "tier": null,
+      "types": [],
+      "by_site": {
+        "9db": {
+          "url": "https://9db.jp/pokemongo/data/26469",
+          "article_updated": "2026-11-05T20:27:13+09:00",
+          "fetched_at": "2026-11-05T23:14:05.269525+09:00",
+          "counters": [
+            {
+              "name": "ザマゼンタ",
+              "rank": 1,
+              "role": "attacker",
+              "tag": "normal",
+              "fast": "メタルクロー",
+              "charged": "きょじゅうだん インファイト",
+              "dps": null,
+              "tdo": null,
+              "note": null,
+              "dex": 889
+            },
+            {
+              "name": "カイリキー",
+              "rank": 2,
+              "role": "attacker",
+              "tag": "normal",
+              "fast": "からてチョップ",
+              "charged": "ばくれつパンチ クロスチョップ",
+              "dps": null,
+              "tdo": null,
+              "note": null,
+              "dex": 68
+            },
+            {
+              "name": "ドリュウズ",
+              "rank": 1,
+              "role": "attacker",
+              "tag": "normal",
+              "fast": "マッドショット",
+              "charged": "じしん",
+              "dps": null,
+              "tdo": null,
+              "note": null,
+              "dex": 530
+            },
+            {
+              "name": "ザシアン",
+              "rank": 2,
+              "role": "attacker",
+              "tag": "normal",
+              "fast": "メタルクロー",
+              "charged": "きょじゅうざん じゃれつく",
+              "dps": null,
+              "tdo": null,
+              "note": null,
+              "dex": 888
+            },
+            {
+              "name": "フライゴン",
+              "rank": 1,
+              "role": "attacker",
+              "tag": "normal",
+              "fast": "すなかけ",
+              "charged": "じしん",
+              "dps": null,
+              "tdo": null,
+              "note": null,
+              "dex": 330
+            }
+          ]
+        }
+      },
+      "updated_at": "2026-11-05T23:14:05.269525+09:00"
     }
   }
 }

@@ -1,0 +1,35 @@
+{
+ "relevant": true,
+ "bosses": [
+  {
+   "name": "キョダイマックスジュラルドン",
+   "kind": "dmax",
+   "tier": null,
+   "types": [],
+   "counters": [
+    {
+     "name": "ザマゼンタ",
+     "rank": 1,
+     "role": "attacker",
+     "tag": "normal",
+     "fast": "メタルクロー",
+     "charged": "きょじゅうだん インファイト",
+     "dps": null,
+     "tdo": null,
+     "note": ""
+    },
+    {
+     "name": "カイリキー",
+     "rank": 3,
+     "role": "attacker",
+     "tag": "normal",
+     "fast": "からてチョップ",
+     "charged": "ばくれつパンチ クロスチョップ",
+     "dps": null,
+     "tdo": null,
+     "note": ""
+    }
+   ]
+  }
+ ]
+}
