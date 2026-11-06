@@ -4,10 +4,8 @@
   {
    "name": "シャドウトルネロス(化身)",
    "kind": "raid",
-   "tier": "★5",
-   "types": [
-    "ひこう"
-   ],
+   "tier": null,
+   "types": [],
    "counters": [
     {
      "name": "キュレム(W)",
@@ -98,7 +96,7 @@
      "note": ""
     },
     {
-     "name": "ラムパルド",
+     "name": "ランプパルド",
      "rank": 9,
      "role": "attacker",
      "tag": "normal",
@@ -142,7 +140,7 @@
      "note": ""
     },
     {
-     "name": "シャドウラムパルド",
+     "name": "シャドウランプパルド",
      "rank": 7,
      "role": "attacker",
      "tag": "shadow",
