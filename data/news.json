@@ -852,6 +852,176 @@
       ]
     },
     {
+      "id": "news-8b5d60334c",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：タイムチャレンジが判明・追加（5件）",
+      "details": "タイムチャレンジ：違うドラゴンタイプテーマのポケストップ2個を回す→キングドラ、違うドラゴンタイプテーマのポケストップ4個を回す→ナッシー(アローラ)、違うドラゴンタイプテーマのポケストップ6個を回す→フライゴン、違うドラゴンタイプテーマのポケストップ8個を回す→サザンドラ、違うドラゴンタイプテーマのポケストップ10個を回す→ヌメルゴン・ジャラランガ",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26352",
+          "fetched_at": "2026-11-06T23:04:56.475478+09:00",
+          "article_updated": "2026-11-06T21:37:26+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-6c47e11aad",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "schedule_changed",
+      "title": "【日程変更】ハロウィン2026 パート1",
+      "details": "日程が更新されています：2026-10-27〜2026-11-01 → 2026-10-27〜2026-11-06",
+      "targetId": "ev-halloween-p1",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26647",
+          "fetched_at": "2026-11-06T23:04:56.475478+09:00",
+          "article_updated": "2026-11-06T20:54:18+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-9a48ec3999",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "schedule_changed",
+      "title": "【日程変更】ハロウィン2026 パート2",
+      "details": "日程が更新されています：2026-11-01〜2026-11-05 → 2026-11-01〜2026-11-06",
+      "targetId": "ev-halloween-p2",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26648",
+          "fetched_at": "2026-11-06T23:04:56.475478+09:00",
+          "article_updated": "2026-11-06T20:00:37+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-70bd65636c",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：フィールドリサーチが判明・追加（10件）",
+      "details": "フィールドリサーチ：はがねタイプテーマのポケストップを回す→経験値、はがねタイプテーマのポケストップ2個を回す→ジバコイル(ロケーション背景)、はがねタイプテーマのポケストップ3個を回す→ほしのすな、はがねタイプテーマのポケストップ4個を回す→ハッサム(ロケーション背景)、はがねタイプテーマのポケストップ5個を回す→ポフィン、はがねタイプテーマのポケストップ6個を回す→エンペルト(ロケーション背景) ほか4件",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/587003",
+          "fetched_at": "2026-11-06T23:04:56.475478+09:00",
+          "article_updated": "2026-11-06T13:19:41+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-2874a0fb7d",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：フィールドリサーチが判明・追加（6件）",
+      "details": "フィールドリサーチ：ドラゴンタイプテーマの ポケストップを回す→経験値、ドラゴンタイプテーマの ポケストップ2個を回す→キングドラ、ドラゴンタイプテーマの ポケストップ4個を回す→アローラナッシー、ドラゴンタイプテーマの ポケストップ6個を回す→フライゴン、ドラゴンタイプテーマの ポケストップ8個を回す→サザンドラ、ドラゴンタイプテーマの ポケストップ10個を回す→ヌメルゴン",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/586995",
+          "fetched_at": "2026-11-06T23:04:56.475478+09:00",
+          "article_updated": "2026-11-06T12:59:11+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-55bb476cea",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドウィーク(2026年)：レイドが判明・追加（2件）",
+      "details": "レイド：ラルトス、ワンリキー",
+      "targetId": "ev-auto-wild-week-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/582768",
+          "fetched_at": "2026-11-06T23:04:56.475478+09:00",
+          "article_updated": "2026-11-06T07:50:13+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-79a66ed187",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】ポケモンナイトアウト：レイドが判明・追加（2件）",
+      "details": "レイド：ピカチュウ、ゲンガー",
+      "targetId": "ev-auto-pokemon-night-out",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/583322",
+          "fetched_at": "2026-11-06T23:04:56.475478+09:00",
+          "article_updated": "2026-10-28T17:59:21+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-907c7a6ccf",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】ポケモンナイトアウト：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：配信を30分以上試聴する(TwitchDrops)→ポケモンナイトアウト野球ジャージ、現地会場の無料タイムチャレンジ→ポケモンナイトアウト野球ジャージ・ストリンダー(ハイ)・ストリンダー(ロー)",
+      "targetId": "ev-auto-pokemon-night-out",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/583322",
+          "fetched_at": "2026-11-06T23:04:56.475478+09:00",
+          "article_updated": "2026-10-28T17:59:21+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-136b807120",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】「ユクシー」「エムリット」「アグノム」がダイマックスして登場！ — Pokémon GO：レイドが判明・追加（3件）",
+      "details": "レイド：ユクシー(ダイマックス)、エムリット(ダイマックス)、アグノム(ダイマックス)",
+      "targetId": "ev-auto-dynamax-uxie-mesprit-azelf-max-battle-day-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/579398",
+          "fetched_at": "2026-11-06T23:04:56.475478+09:00",
+          "article_updated": "2026-10-25T17:52:14+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-3e39182e70",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】「ユクシー」「エムリット」「アグノム」がダイマックスして登場！ — Pokémon GO：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：リワードを受け取る (クリア済)→ダイキノコ",
+      "targetId": "ev-auto-dynamax-uxie-mesprit-azelf-max-battle-day-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/579398",
+          "fetched_at": "2026-11-06T23:04:56.475478+09:00",
+          "article_updated": "2026-10-25T17:52:14+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-6ddbf8c3c7",
       "date": "2026-11-05",
       "date_label": "11/5",
