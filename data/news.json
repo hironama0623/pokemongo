@@ -2,6 +2,176 @@
   "schema_version": 1,
   "items": [
     {
+      "id": "news-27e2e8643b",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "kind": "new_event",
+      "title": "【新イベント】PokéXciting!：シンガポール",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-pokexciting-singapore",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26171",
+          "fetched_at": "2026-11-07T07:34:02.672297+09:00",
+          "article_updated": "2026-11-07T07:13:12+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-a02ed608b3",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "kind": "event_update",
+      "title": "【情報追加】PokéXciting!：シンガポール：野生が判明・追加（25件）",
+      "details": "野生：フシギダネ、ヒトカゲ、ゼニガメ、ラッタ、プリン、ニャース ほか19件",
+      "targetId": "ev-auto-pokexciting-singapore",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26171",
+          "fetched_at": "2026-11-07T07:34:02.672297+09:00",
+          "article_updated": "2026-11-07T07:13:12+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-3ebcfd4065",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：タイムチャレンジが判明・追加（5件）",
+      "details": "タイムチャレンジ：違うはがねタイプテーマのポケストップ2個を回す→ジバコイル、違うはがねタイプテーマのポケストップ4個を回す→ハッサム、違うはがねタイプテーマのポケストップ6個を回す→エンペルト、違うはがねタイプテーマのポケストップ8個を回す→デカヌチャン、違うはがねタイプテーマのポケストップ10個を回す→メタグロス",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26352",
+          "fetched_at": "2026-11-07T07:34:02.672297+09:00",
+          "article_updated": "2026-11-07T06:28:36+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-2d12835a48",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "kind": "event_update",
+      "title": "【情報追加】GOワイルドエリア2026：グローバル：野生が判明・追加（3件）",
+      "details": "野生：アンノーン、ラティアス、ラティオス",
+      "targetId": "ev-wildarea-2026",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26354",
+          "fetched_at": "2026-11-07T07:34:02.672297+09:00",
+          "article_updated": "2026-11-06T22:23:43+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-f1e9c82f49",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：フィールドリサーチが判明・追加（6件）",
+      "details": "フィールドリサーチ：はがねタイプテーマのポケストップを回す→経験、はがねタイプテーマのポケストップ2個を回す→ジバコイル、はがねタイプテーマのポケストップ4個を回す→ハッサム、はがねタイプテーマのポケストップ6個を回す→エンペルト、はがねタイプテーマのポケストップ8個を回す→メタグロス、はがねタイプテーマのポケストップ9個を回す→デカヌチャン",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/587003",
+          "fetched_at": "2026-11-07T07:34:02.672297+09:00",
+          "article_updated": "2026-11-06T13:19:41+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-f09fa30837",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：タイムチャレンジが判明・追加（10件）",
+      "details": "タイムチャレンジ：ドラゴンタイプテーマの ポケストップを回す→経験値、ドラゴンタイプテーマの ポケストップ2個を回す→キングドラ(ロケーション背景)、ドラゴンタイプテーマの ポケストップ3個を回す→ほしのすな、ドラゴンタイプテーマの ポケストップ4個を回す→アローラナッシー(ロケーション背景)、ドラゴンタイプテーマの ポケストップ6個を回す→フライゴン(ロケーション背景)、ドラゴンタイプテーマの ポケストップ7個を回す→きんのズリのみ ほか4件",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/586995",
+          "fetched_at": "2026-11-07T07:34:02.672297+09:00",
+          "article_updated": "2026-11-06T12:59:11+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-70949d9349",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：フィールドリサーチが判明・追加（15件）",
+      "details": "フィールドリサーチ：おこうを使う→経験値、ポケモンを30匹捕まえる→ルカリオ、フィールドリサーチタスクを5回完了する→バクガメス、1km探索する→ヒスイヌメイル、はがねタイプのポケモンを15回強化する→ジュラルドンのアメ、はがねタイプのポケモンを10匹捕まえる→ハイパーボール ほか9件",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/586992",
+          "fetched_at": "2026-11-07T07:34:02.672297+09:00",
+          "article_updated": "2026-11-06T11:51:14+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-5a605fea6f",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "kind": "event_update",
+      "title": "【情報追加】GOワイルドエリア：キョダイマックスカイリキータイムチャレンジ：フィールドリサーチが判明・追加（5件）",
+      "details": "フィールドリサーチ：5km探索する→キョダイマックスカイリキー、2日にわたってポケモンを捕まえる→ワンリキーのアメ×110、3日にわたってポケモンを捕まえる→マックス粒子×600、4日にわたってポケモンを捕まえる→ワンリキーのアメXL×45、5日にわたってポケモンを捕まえる→マックス粒子×800",
+      "targetId": "ev-auto-wild-area-2026-free-time-challenge",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/586873",
+          "fetched_at": "2026-11-07T07:34:02.672297+09:00",
+          "article_updated": "2026-11-06T10:11:28+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-c51472a993",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "kind": "event_update",
+      "title": "【情報追加】「黄昏時の願い」＆ スーパーメガレイドデイ：フィールドリサーチが判明・追加（2件）",
+      "details": "フィールドリサーチ：黄昏の旅路シーズンに登場したポケモンと出会える(11月24日(火)10:00~11月26日(木)10:00)→カジッチュ・オラチフ、黄昏の旅路シーズンに登場したポケモンと出会える(11月26日(木)10:00~11月30日(月)20:00)→ゲンガー(魔女帽子)・フワライド(ハロウィン)・アノクサ",
+      "targetId": "ev-tusk-wish-deoxys",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/586413",
+          "fetched_at": "2026-11-07T07:34:02.672297+09:00",
+          "article_updated": "2026-11-05T13:34:20+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-68b9051260",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "kind": "event_update",
+      "title": "【情報追加】ハロウィン2026 パート1：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：全クリア報酬→ピカチュウ(ハット&ケープ)",
+      "targetId": "ev-halloween-p1",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/579894",
+          "fetched_at": "2026-11-07T07:34:02.672297+09:00",
+          "article_updated": "2026-11-02T04:10:33+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-99e5eb21e6",
       "date": "2026-11-06",
       "date_label": "11/6",
