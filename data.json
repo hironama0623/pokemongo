@@ -1,6 +1,286 @@
 {
-  "updated_at": "2026/11/05 23:14 JST",
+  "updated_at": "2026/11/06 12:46 JST",
   "latest_news": [
+    {
+      "id": "news-99e5eb21e6",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：タイムチャレンジが判明・追加（11件）",
+      "details": "タイムチャレンジ：ドラゴンタイプテーマのポケストップを回す→経験値×5000XP、ドラゴンタイプテーマのポケストップ2個を回す→キングドラ、ドラゴンタイプテーマのポケストップ3個を回す→ほしのすな×5000、ドラゴンタイプテーマのポケストップ4個を回す→アローラナッシー、ドラゴンタイプテーマのポケストップ5個を回す→ポフィン×1、ドラゴンタイプテーマのポケストップ6個を回す→フライゴン ほか5件",
+      "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-a1a5b92955",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "title": "【新イベント】「ピクシー」の「スーパーメガレイド・デイ」",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-clefable-super-mega-raid-day-2026"
+    },
+    {
+      "id": "news-c6133f8157",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "title": "【情報追加】「ピクシー」の「スーパーメガレイド・デイ」：レイドが判明・追加（1件）",
+      "details": "レイド：ピクシー",
+      "targetId": "ev-auto-clefable-super-mega-raid-day-2026"
+    },
+    {
+      "id": "news-b5ff99c61c",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "title": "【情報追加】「ピクシー」の「スーパーメガレイド・デイ」：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：リサーチタスク→プレミアムバトルパス・メタグロス",
+      "targetId": "ev-auto-clefable-super-mega-raid-day-2026"
+    },
+    {
+      "id": "news-557a09aaca",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：レイドが判明・追加（4件）",
+      "details": "レイド：ジャケットを身にまとったカイリキー、ダイマックスディアルガ、ダイマックスパルキア、キョダイマックスジュラルドン",
+      "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-e61ba97c37",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：フィールドリサーチが判明・追加（10件）",
+      "details": "フィールドリサーチ：ドラゴンタイプテーマのポケストップを回す→XP、ドラゴンタイプテーマのポケストップ2個を回す→ロケーション背景キングドラ、ドラゴンタイプテーマのポケストップ3個を回す→ほしのすな、ドラゴンタイプテーマのポケストップ4個を回す→ロケーション背景ナッシー(アローラ)、ドラゴンタイプテーマのポケストップ5個を回す→ポフィン、ドラゴンタイプテーマのポケストップ6個を回す→ロケーション背景フライゴン ほか4件",
+      "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-1965796d1b",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：野生が判明・追加（22件）",
+      "details": "野生：アンノーン(A)、アンノーン(D)、アンノーン(E)、アンノーン(I)、アンノーン(N)、アンノーン(S) ほか16件",
+      "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-756baab0c3",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：レイドが判明・追加（29件）",
+      "details": "レイド：キョダイマックス ジュラルドン、ザシアン (けんのおう)、ザマゼンタ (たてのおう)、カイリキー (ジャケットを身にまとった)、ナッシー(アローラ)、ラプラス ほか23件",
+      "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-132362b777",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：フィールドリサーチが判明・追加（3件）",
+      "details": "フィールドリサーチ：おこうを使う→XP、ポケストップ・ジム5個を回す→ポフィン、野生のポケモン3種類のGOスナップショット写真を撮る→おこう",
+      "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-52e4dd3435",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：野生が判明・追加（15件）",
+      "details": "野生：カイリキー(ジャケット)、ナッシー(アローラ)、トドゼルガ、メタグロス、ジバコイル、ナットレイ ほか9件",
+      "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-9168e5c591",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：レイドが判明・追加（4件）",
+      "details": "レイド：カイリキー(ジャケット)、ジュラルドン(キョダイマックス)、ディアルガ(ダイマックス)、パルキア(ダイマックス)",
+      "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-0b36302a01",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：野生が判明・追加（1件）",
+      "details": "野生：ジャケットを身にまとった カイリキー",
+      "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-ce1dfb9f4d",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：タイムチャレンジが判明・追加（5件）",
+      "details": "タイムチャレンジ：5km 探索する→カイリキー(キョダイ)、ポケモンを2日にわたって捕まえる→アメ、ポケモンを3日にわたって捕まえる→マックス粒子、ポケモンを4日にわたって捕まえる→アメXL、ポケモンを5日にわたって捕まえる→マックス粒子",
+      "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-3f0a3055e5",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "title": "【情報追加】GOパス：ワイルドウィーク2026：レイドが判明・追加（9件）",
+      "details": "レイド：ギラティナ(アナザー)、メガヤミラミ、デスカーン、オーロット、ダダリン、ヨマワル ほか3件",
+      "targetId": "ev-auto-go-pass-wild-week-2026"
+    },
+    {
+      "id": "news-3d43e5f053",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：レイドが判明・追加（1件）",
+      "details": "レイド：ジャケットを身にまとったカイリキー",
+      "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-aa5a02d6e8",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：レイドが判明・追加（5件）",
+      "details": "レイド：ジャケットを身にまとった カイリキー、ヌメイル(ヒスイ)、ヌメルゴン(ヒスイ)、ザシアン(けんのおう)、ザマゼンタ(たてのおう)",
+      "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-6b5856d062",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：野生が判明・追加（1件）",
+      "details": "野生：カイリキー(ジャケットを身にまとった)",
+      "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-9405f936c2",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：レイドが判明・追加（5件）",
+      "details": "レイド：ザシアン(けんのおう)、ザマゼンタ(たてのおう)、カイリキー(ジャケットを身にまとった)、ディアルガ(ダイマックス)、パルキア(ダイマックス)",
+      "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-ecd93d56e4",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "title": "【情報追加】光のフェスティバル（インド限定）：レイドが判明・追加（1件）",
+      "details": "レイド：ピカチュウ",
+      "targetId": "ev-auto-festival-of-lights-india-2026"
+    },
+    {
+      "id": "news-884b57abbd",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "title": "【情報追加】光のフェスティバル（インド限定）：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：サリーかクルタを選択してどちらか1匹がゲットできる→ピカチュウ",
+      "targetId": "ev-auto-festival-of-lights-india-2026"
+    },
+    {
+      "id": "news-3be2aedab1",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：野生が判明・追加（3件）",
+      "details": "野生：アローラサンド、アローラディグダ、ガラルマッギョ",
+      "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-f19e7e7403",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：タイムチャレンジが判明・追加（17件）",
+      "details": "タイムチャレンジ：おこうを使う→経験値、ポケストップ・ジム5個を回す→ポフィン、野生のポケモン3種類のGOスナップショット写真を撮る→おこう、ポケモンを30匹捕まえる→ルカリオ、フィールドリサーチタスクを5回完了する→バクガメス、1km探索する→ヒスイヌメイル ほか11件",
+      "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-eeea900226",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "title": "【日程変更】GOパス：ワイルドウィーク2026",
+      "details": "日程が更新されています：2026-11-09〜2026-11-15 → 2026-11-06〜2026-11-15",
+      "targetId": "ev-auto-go-pass-wild-week-2026"
+    },
+    {
+      "id": "news-7357a46800",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "title": "【情報追加】GOパス：ワイルドウィーク2026：タイムチャレンジが判明・追加（6件）",
+      "details": "タイムチャレンジ：5km探索する→キョダイマックスカイリキー、2日にわたってポケモンを捕まえる→ワンリキーのアメ・ワンリキーのアメ、3日にわたってポケモンを捕まえる→マックス粒子、4日にわたってポケモンを捕まえる→ワンリキーのアメXL、5日にわたってポケモンを捕まえる→マックス粒子、全クリア報酬→ほしのすな・ハイパーボール",
+      "targetId": "ev-auto-go-pass-wild-week-2026"
+    },
+    {
+      "id": "news-b70640e71c",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "title": "【日程変更】ワイルドエリア2026：仙台・東北",
+      "details": "日程が更新されています：2026-11-06〜2026-11-08 → 2026-11-06〜2026-11-09",
+      "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-365b753ab5",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "title": "【新イベント】ワイルドエリア2026：メキシコシティ",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-wild-area-2026-mexico-city"
+    },
+    {
+      "id": "news-4bb5916c35",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "title": "【情報追加】ワイルドエリア2026：メキシコシティ：野生が判明・追加（70件）",
+      "details": "野生：サンド(アローラ)、ディグダ(アローラ)、コイル、シェルダー、イワーク、ポリゴン ほか64件",
+      "targetId": "ev-auto-wild-area-2026-mexico-city"
+    },
+    {
+      "id": "news-0d6cb66c51",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "title": "【情報追加】ワイルドエリア2026：メキシコシティ：レイドが判明・追加（3件）",
+      "details": "レイド：カイリキー、ザシアン(けんのおう)、ザマゼンタ(たてのおう)",
+      "targetId": "ev-auto-wild-area-2026-mexico-city"
+    },
+    {
+      "id": "news-669ba9ba07",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "title": "【情報追加】ワイルドエリア2026：メキシコシティ：タマゴが判明・追加（4件）",
+      "details": "タマゴ：ヒトツキ(10km)、クレッフィ(10km)、ジジーロン(10km)、ジュラルドン(10km)",
+      "targetId": "ev-auto-wild-area-2026-mexico-city"
+    },
+    {
+      "id": "news-f305c0b525",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "title": "【情報追加】ポケモンGOの2026年11月のスケジュール：レイドが判明・追加（1件）",
+      "details": "レイド：トルネロス(化身)",
+      "targetId": "ev-auto-2026-nov-schedule"
+    },
+    {
+      "id": "news-b9201539da",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "title": "【情報追加】「ピクシー」の「スーパーメガレイド・デイ」：レイドが判明・追加（1件）",
+      "details": "レイド：メガピクシー",
+      "targetId": "ev-auto-clefable-super-mega-raid-day-2026"
+    },
+    {
+      "id": "news-4cec9c751c",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "title": "【情報追加】GOパス：大きな足跡：野生が判明・追加（3件）",
+      "details": "野生：サルノリ、メッソン、ヒバニー",
+      "targetId": "ev-auto-go-pass-big-footprints"
+    },
+    {
+      "id": "news-10523db9e0",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "title": "【情報追加】adidasコラボ：タイムチャレンジが判明・追加（5件）",
+      "details": "タイムチャレンジ：相棒と探索してアメを3個もらう→ルカリオのメガエナジー、グレートスローを20回投げる→ルカリオのメガエナジー、ポケストップ・ジム100個を回す→ルカリオのメガエナジー、ポケモンを捕まえるときにきのみ30個を使う→ルカリオのメガエナジー、30km探索する→ルカリオのメガエナジー",
+      "targetId": "ev-auto-adidas-collab-2026"
+    },
+    {
+      "id": "news-93354c3f98",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "title": "【情報追加】スーパーメガレイドデイ：メガシャンデラ：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：ポケモンを15回強化する→メガエナジー(バンギラス)",
+      "targetId": "ev-auto-super-mega-raid-day-chandelure"
+    },
+    {
+      "id": "news-b3af9003c4",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "title": "【情報追加】コマタナのコミュニティ・デイ：フィールドリサーチが判明・追加（2件）",
+      "details": "フィールドリサーチ：チーム参加中ポケモンを5匹捕まえる→コマタナ、ポケモンを50匹捕まえる→コマタナ",
+      "targetId": "ev-cd-pawniard"
+    },
     {
       "id": "news-6ddbf8c3c7",
       "date": "2026-11-05",
@@ -1892,9 +2172,23 @@
         "note": "出典: gamewith"
       },
       {
+        "task": "チーム参加中ポケモンを5匹捕まえる",
+        "rewardDex": 624,
+        "rewardName": "コマタナ",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
         "task": "ポケモンを50匹捕まえる",
         "rewardDex": 624,
         "rewardName": "コマタナ(SP背景)",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "ポケモンを50匹捕まえる",
+        "rewardDex": 624,
+        "rewardName": "コマタナ",
         "shiny": true,
         "note": "出典: gamewith"
       }
@@ -2211,6 +2505,99 @@
         "rewardName": "アノクサ",
         "shiny": false,
         "note": "出典: gamewith"
+      }
+    ],
+    "ev-auto-wild-area-2026-sendai": [
+      {
+        "task": "ドラゴンタイプテーマのポケストップを回す",
+        "rewardDex": 25,
+        "rewardName": "XP",
+        "shiny": false,
+        "note": "出典: pokemapi"
+      },
+      {
+        "task": "ドラゴンタイプテーマのポケストップ2個を回す",
+        "rewardDex": 230,
+        "rewardName": "ロケーション背景キングドラ",
+        "shiny": false,
+        "note": "出典: pokemapi"
+      },
+      {
+        "task": "ドラゴンタイプテーマのポケストップ3個を回す",
+        "rewardDex": 25,
+        "rewardName": "ほしのすな",
+        "shiny": false,
+        "note": "出典: pokemapi"
+      },
+      {
+        "task": "ドラゴンタイプテーマのポケストップ4個を回す",
+        "rewardDex": 103,
+        "rewardName": "ロケーション背景ナッシー(アローラ)",
+        "shiny": false,
+        "note": "出典: pokemapi"
+      },
+      {
+        "task": "ドラゴンタイプテーマのポケストップ5個を回す",
+        "rewardDex": 25,
+        "rewardName": "ポフィン",
+        "shiny": false,
+        "note": "出典: pokemapi"
+      },
+      {
+        "task": "ドラゴンタイプテーマのポケストップ6個を回す",
+        "rewardDex": 330,
+        "rewardName": "ロケーション背景フライゴン",
+        "shiny": false,
+        "note": "出典: pokemapi"
+      },
+      {
+        "task": "ドラゴンタイプテーマのポケストップ7個を回す",
+        "rewardDex": 25,
+        "rewardName": "きんのズリのみ",
+        "shiny": false,
+        "note": "出典: pokemapi"
+      },
+      {
+        "task": "ドラゴンタイプテーマのポケストップ8個を回す",
+        "rewardDex": 635,
+        "rewardName": "ロケーション背景サザンドラ",
+        "shiny": false,
+        "note": "出典: pokemapi"
+      },
+      {
+        "task": "ドラゴンタイプテーマのポケストップ9個を回す",
+        "rewardDex": 25,
+        "rewardName": "ぎんのパイルのみ",
+        "shiny": false,
+        "note": "出典: pokemapi"
+      },
+      {
+        "task": "ドラゴンタイプテーマのポケストップ10個を回す",
+        "rewardDex": 706,
+        "rewardName": "ロケーション背景ヌメルゴン",
+        "shiny": false,
+        "note": "出典: pokemapi"
+      },
+      {
+        "task": "おこうを使う",
+        "rewardDex": 25,
+        "rewardName": "XP",
+        "shiny": false,
+        "note": "出典: pokemapi"
+      },
+      {
+        "task": "ポケストップ・ジム5個を回す",
+        "rewardDex": 25,
+        "rewardName": "ポフィン",
+        "shiny": false,
+        "note": "出典: pokemapi"
+      },
+      {
+        "task": "野生のポケモン3種類のGOスナップショット写真を撮る",
+        "rewardDex": 25,
+        "rewardName": "おこう",
+        "shiny": false,
+        "note": "出典: pokemapi"
       }
     ],
     "ev-auto-wakuwaku-pokemon-go-lab": [
@@ -2539,265 +2926,265 @@
           "dex": 27,
           "name": "サンド(アローラ)",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 50,
           "name": "ディグダ(アローラ)",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 81,
           "name": "コイル",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 90,
           "name": "シェルダー",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 95,
           "name": "イワーク",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 137,
           "name": "ポリゴン",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 213,
           "name": "ツボツボ",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 227,
           "name": "エアームド",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 299,
           "name": "ノズパス",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 304,
           "name": "ココドラ",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 374,
           "name": "ダンバル",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 393,
           "name": "ポッチャマ",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 410,
           "name": "タテトプス",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 436,
           "name": "ドーミラー",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 448,
           "name": "ルカリオ",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 529,
           "name": "モグリュー",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 597,
           "name": "テッシード",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 599,
           "name": "ギアル",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 618,
           "name": "マッギョ(ガラル)",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 632,
           "name": "アイアント",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 821,
           "name": "ココガラ",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 957,
           "name": "カヌチャン",
           "shiny": true,
-          "note": ""
+          "note": "ハガネのように強固アワー"
         },
         {
           "dex": 4,
           "name": "ヒトカゲ",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 129,
           "name": "コイキング",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 147,
           "name": "ミニリュウ",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 207,
           "name": "グライガー",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 328,
           "name": "ナックラー",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 333,
           "name": "チルット",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 339,
           "name": "ドジョッチ",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 371,
           "name": "タツベイ",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 443,
           "name": "フカマル",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 602,
           "name": "シビシラス",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 610,
           "name": "キバゴ",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 631,
           "name": "クイタラン",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 633,
           "name": "モノズ",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 690,
           "name": "クズモー",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 696,
           "name": "チゴラス",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 698,
           "name": "アマルス",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 704,
           "name": "ヌメラ",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 714,
           "name": "オンバット",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 776,
           "name": "バクガメス",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 782,
           "name": "ジャラコ",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 850,
           "name": "ヤクデ",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 996,
           "name": "セビエ",
           "shiny": true,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 103,
@@ -3697,7 +4084,7 @@
           "dex": 705,
           "name": "ヌメイル(ヒスイ)",
           "shiny": false,
-          "note": ""
+          "note": "new!"
         },
         {
           "dex": 821,
@@ -3835,7 +4222,7 @@
           "dex": 782,
           "name": "ジャラコ",
           "shiny": false,
-          "note": ""
+          "note": "ドラゴンのごとく大胆アワー"
         },
         {
           "dex": 840,
@@ -3854,6 +4241,258 @@
           "name": "セビエ",
           "shiny": false,
           "note": ""
+        },
+        {
+          "dex": 201,
+          "name": "アンノーン(A)",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 201,
+          "name": "アンノーン(D)",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 201,
+          "name": "アンノーン(E)",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 201,
+          "name": "アンノーン(I)",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 201,
+          "name": "アンノーン(N)",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 201,
+          "name": "アンノーン(S)",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 131,
+          "name": "ラプラス",
+          "shiny": false,
+          "note": "レア"
+        },
+        {
+          "dex": 184,
+          "name": "マリルリ",
+          "shiny": false,
+          "note": "レア"
+        },
+        {
+          "dex": 212,
+          "name": "ハッサム",
+          "shiny": false,
+          "note": "レア"
+        },
+        {
+          "dex": 230,
+          "name": "キングドラ",
+          "shiny": false,
+          "note": "レア"
+        },
+        {
+          "dex": 306,
+          "name": "ボスゴドラ",
+          "shiny": false,
+          "note": "レア"
+        },
+        {
+          "dex": 330,
+          "name": "フライゴン",
+          "shiny": false,
+          "note": "レア"
+        },
+        {
+          "dex": 395,
+          "name": "エンペルト",
+          "shiny": false,
+          "note": "レア"
+        },
+        {
+          "dex": 411,
+          "name": "トリデプス",
+          "shiny": false,
+          "note": "レア"
+        },
+        {
+          "dex": 534,
+          "name": "ローブシン",
+          "shiny": false,
+          "note": "レア"
+        },
+        {
+          "dex": 635,
+          "name": "サザンドラ",
+          "shiny": false,
+          "note": "レア"
+        },
+        {
+          "dex": 784,
+          "name": "ジャラランガ",
+          "shiny": false,
+          "note": "レア"
+        },
+        {
+          "dex": 380,
+          "name": "ラティアス",
+          "shiny": false,
+          "note": "レア"
+        },
+        {
+          "dex": 381,
+          "name": "ラティオス",
+          "shiny": false,
+          "note": "レア"
+        },
+        {
+          "dex": 144,
+          "name": "フリーザー(ガラル)",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 145,
+          "name": "サンダー(ガラル)",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 146,
+          "name": "ファイヤー(ガラル)",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 68,
+          "name": "カイリキー(ジャケット)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 103,
+          "name": "ナッシー(アローラ)",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 365,
+          "name": "トドゼルガ",
+          "shiny": false,
+          "note": "レア"
+        },
+        {
+          "dex": 376,
+          "name": "メタグロス",
+          "shiny": false,
+          "note": "レア"
+        },
+        {
+          "dex": 462,
+          "name": "ジバコイル",
+          "shiny": false,
+          "note": "レア"
+        },
+        {
+          "dex": 598,
+          "name": "ナットレイ",
+          "shiny": false,
+          "note": "レア"
+        },
+        {
+          "dex": 612,
+          "name": "オノノクス",
+          "shiny": false,
+          "note": "レア"
+        },
+        {
+          "dex": 706,
+          "name": "ヌメルゴン",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 715,
+          "name": "オンバーン",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 959,
+          "name": "デカヌチャン",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 980,
+          "name": "ドオー",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 679,
+          "name": "ヒトツキ",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 707,
+          "name": "クレッフィ",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 884,
+          "name": "ジュラルドン",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 780,
+          "name": "ジジーロン",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 68,
+          "name": "ジャケットを身にまとった カイリキー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 68,
+          "name": "カイリキー(ジャケットを身にまとった)",
+          "shiny": true,
+          "note": "new! 色違いも初登場!"
+        },
+        {
+          "dex": 27,
+          "name": "アローラサンド",
+          "shiny": false,
+          "note": "ハガネのように強固アワー"
+        },
+        {
+          "dex": 50,
+          "name": "アローラディグダ",
+          "shiny": false,
+          "note": "ハガネのように強固アワー"
+        },
+        {
+          "dex": 618,
+          "name": "ガラルマッギョ",
+          "shiny": false,
+          "note": "ハガネのように強固アワー"
         }
       ]
     },
@@ -3864,6 +4503,30 @@
         {
           "dex": 216,
           "name": "ヒメグマ(魔女の帽子)",
+          "shiny": true,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "ev-auto-go-pass-big-footprints",
+      "title": "ev-auto-go-pass-big-footprints",
+      "wilds": [
+        {
+          "dex": 810,
+          "name": "サルノリ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 816,
+          "name": "メッソン",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 813,
+          "name": "ヒバニー",
           "shiny": true,
           "note": ""
         }
@@ -4116,6 +4779,432 @@
         {
           "dex": 938,
           "name": "ズピカ",
+          "shiny": true,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "ev-auto-wild-area-2026-mexico-city",
+      "title": "ev-auto-wild-area-2026-mexico-city",
+      "wilds": [
+        {
+          "dex": 27,
+          "name": "サンド(アローラ)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 50,
+          "name": "ディグダ(アローラ)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 81,
+          "name": "コイル",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 90,
+          "name": "シェルダー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 95,
+          "name": "イワーク",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 137,
+          "name": "ポリゴン",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 213,
+          "name": "ツボツボ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 227,
+          "name": "エアームド",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 299,
+          "name": "ノズパス",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 304,
+          "name": "ココドラ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 374,
+          "name": "ダンバル",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 393,
+          "name": "ポッチャマ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 410,
+          "name": "タテトプス",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 436,
+          "name": "ドーミラー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 448,
+          "name": "ルカリオ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 529,
+          "name": "モグリュー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 597,
+          "name": "テッシード",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 599,
+          "name": "ギアル",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 618,
+          "name": "マッギョ(ガラル)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 632,
+          "name": "アイアント",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 705,
+          "name": "ヌメイル(ヒスイ)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 821,
+          "name": "ココガラ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 957,
+          "name": "カヌチャン",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 968,
+          "name": "ミミズズ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 4,
+          "name": "ヒトカゲ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 129,
+          "name": "コイキング",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 147,
+          "name": "ミニリュウ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 207,
+          "name": "グライガー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 328,
+          "name": "ナックラー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 333,
+          "name": "チルット",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 339,
+          "name": "ドジョッチ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 371,
+          "name": "タツベイ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 443,
+          "name": "フカマル",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 602,
+          "name": "シビシラス",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 610,
+          "name": "キバゴ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 631,
+          "name": "クイタラン",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 633,
+          "name": "モノズ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 690,
+          "name": "クズモー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 696,
+          "name": "チゴラス",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 698,
+          "name": "アマルス",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 704,
+          "name": "ヌメラ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 714,
+          "name": "オンバット",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 776,
+          "name": "バクガメス",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 782,
+          "name": "ジャラコ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 840,
+          "name": "カジッチュ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 850,
+          "name": "ヤクデ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 996,
+          "name": "セビエ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 68,
+          "name": "カイリキー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 68,
+          "name": "ジャケットを身にまとったカイリキー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 103,
+          "name": "ナッシー(アローラ)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 184,
+          "name": "マリルリ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 212,
+          "name": "ハッサム",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 230,
+          "name": "キングドラ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 306,
+          "name": "ボスゴドラ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 330,
+          "name": "フライゴン",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 365,
+          "name": "トドゼルガ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 376,
+          "name": "メタグロス",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 395,
+          "name": "エンペルト",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 411,
+          "name": "トリデプス",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 462,
+          "name": "ジバコイル",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 534,
+          "name": "ローブシン",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 598,
+          "name": "ナットレイ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 612,
+          "name": "オノノクス",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 635,
+          "name": "サザンドラ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 701,
+          "name": "ルチャブル",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 706,
+          "name": "ヌメルゴン",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 715,
+          "name": "オンバーン",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 784,
+          "name": "ジャラランガ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 959,
+          "name": "デカヌチャン",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 980,
+          "name": "ドオー",
           "shiny": true,
           "note": ""
         }
@@ -5052,6 +6141,53 @@
       "endDay": 8,
       "hasPaid": false,
       "dateText": "現地時間 2026/11/6(金)10時～2026/11/8(日)20時",
+      "summary": "",
+      "freeFeatures": [],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-clefable-super-mega-raid-day-2026",
+      "month": 11,
+      "title": "「ピクシー」の「スーパーメガレイド・デイ」",
+      "barClass": "bar-raid",
+      "category": "raid",
+      "startDay": 28,
+      "endDay": 28,
+      "hasPaid": true,
+      "dateText": "2026年11月28日14:00から17:00まで",
+      "summary": "「ピクシー」の「スーパーメガレイド・デイ」開催。メガピクシーが初登場し、「スーパーマックス」のメガレベルが解放される。",
+      "freeFeatures": [
+        "リモートレイドパスの上限が20回に増加（2026年11月28日10:00から2026-11-29日13:00）",
+        "ジムのフォトディスクを回すことで、無料の「レイドパス」が最大6個もらえる",
+        "スーパーメガレイドでつかまえた「ピクシー」は、「メガレベル」が1段階解放されている",
+        "スーパーメガレイドで色違いの「ピクシー」に出会いやすくなる",
+        "タイムチャレンジの完了でプレミアムバトルパスとメタグロスに出会える"
+      ],
+      "paidFeatures": [
+        "ジムのフォトディスクを回すことで、「レイドパス」が最大14個もらえる",
+        "レイドバトルで「ふしぎなアメXL」がもらえる確率が上昇",
+        "スーパーメガレイドで5,000 XPを追加で獲得",
+        "スーパーメガレイドで「ほしのすな」5,000個を追加で獲得"
+      ],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-wild-area-2026-mexico-city",
+      "month": 11,
+      "title": "ワイルドエリア2026：メキシコシティ",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 6,
+      "endDay": 8,
+      "hasPaid": true,
+      "dateText": "2026/11/6(金)10:00 〜 11/8(日)18:00",
       "summary": "",
       "freeFeatures": [],
       "paidFeatures": [],

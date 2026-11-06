@@ -2,6 +2,601 @@
   "schema_version": 1,
   "items": [
     {
+      "id": "news-99e5eb21e6",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：タイムチャレンジが判明・追加（11件）",
+      "details": "タイムチャレンジ：ドラゴンタイプテーマのポケストップを回す→経験値×5000XP、ドラゴンタイプテーマのポケストップ2個を回す→キングドラ、ドラゴンタイプテーマのポケストップ3個を回す→ほしのすな×5000、ドラゴンタイプテーマのポケストップ4個を回す→アローラナッシー、ドラゴンタイプテーマのポケストップ5個を回す→ポフィン×1、ドラゴンタイプテーマのポケストップ6個を回す→フライゴン ほか5件",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/586995",
+          "fetched_at": "2026-11-06T12:46:20.236820+09:00",
+          "article_updated": "2026-11-06T12:50:53+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-a1a5b92955",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "new_event",
+      "title": "【新イベント】「ピクシー」の「スーパーメガレイド・デイ」",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-clefable-super-mega-raid-day-2026",
+      "sources": [
+        {
+          "site": "official",
+          "url": "https://pokemongo.com/ja/news/clefable-super-mega-raid-day-2026",
+          "fetched_at": "2026-11-06T12:46:20.236820+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-c6133f8157",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】「ピクシー」の「スーパーメガレイド・デイ」：レイドが判明・追加（1件）",
+      "details": "レイド：ピクシー",
+      "targetId": "ev-auto-clefable-super-mega-raid-day-2026",
+      "sources": [
+        {
+          "site": "official",
+          "url": "https://pokemongo.com/ja/news/clefable-super-mega-raid-day-2026",
+          "fetched_at": "2026-11-06T12:46:20.236820+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-b5ff99c61c",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】「ピクシー」の「スーパーメガレイド・デイ」：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：リサーチタスク→プレミアムバトルパス・メタグロス",
+      "targetId": "ev-auto-clefable-super-mega-raid-day-2026",
+      "sources": [
+        {
+          "site": "official",
+          "url": "https://pokemongo.com/ja/news/clefable-super-mega-raid-day-2026",
+          "fetched_at": "2026-11-06T12:46:20.236820+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-557a09aaca",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：レイドが判明・追加（4件）",
+      "details": "レイド：ジャケットを身にまとったカイリキー、ダイマックスディアルガ、ダイマックスパルキア、キョダイマックスジュラルドン",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10814/",
+          "fetched_at": "2026-11-06T12:46:20.236820+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-e61ba97c37",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：フィールドリサーチが判明・追加（10件）",
+      "details": "フィールドリサーチ：ドラゴンタイプテーマのポケストップを回す→XP、ドラゴンタイプテーマのポケストップ2個を回す→ロケーション背景キングドラ、ドラゴンタイプテーマのポケストップ3個を回す→ほしのすな、ドラゴンタイプテーマのポケストップ4個を回す→ロケーション背景ナッシー(アローラ)、ドラゴンタイプテーマのポケストップ5個を回す→ポフィン、ドラゴンタイプテーマのポケストップ6個を回す→ロケーション背景フライゴン ほか4件",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10814/",
+          "fetched_at": "2026-11-06T12:46:20.236820+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-1965796d1b",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：野生が判明・追加（22件）",
+      "details": "野生：アンノーン(A)、アンノーン(D)、アンノーン(E)、アンノーン(I)、アンノーン(N)、アンノーン(S) ほか16件",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10811/",
+          "fetched_at": "2026-11-06T12:46:20.236820+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-756baab0c3",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：レイドが判明・追加（29件）",
+      "details": "レイド：キョダイマックス ジュラルドン、ザシアン (けんのおう)、ザマゼンタ (たてのおう)、カイリキー (ジャケットを身にまとった)、ナッシー(アローラ)、ラプラス ほか23件",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10811/",
+          "fetched_at": "2026-11-06T12:46:20.236820+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-132362b777",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：フィールドリサーチが判明・追加（3件）",
+      "details": "フィールドリサーチ：おこうを使う→XP、ポケストップ・ジム5個を回す→ポフィン、野生のポケモン3種類のGOスナップショット写真を撮る→おこう",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10811/",
+          "fetched_at": "2026-11-06T12:46:20.236820+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-52e4dd3435",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：野生が判明・追加（15件）",
+      "details": "野生：カイリキー(ジャケット)、ナッシー(アローラ)、トドゼルガ、メタグロス、ジバコイル、ナットレイ ほか9件",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10810/",
+          "fetched_at": "2026-11-06T12:46:20.236820+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-9168e5c591",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：レイドが判明・追加（4件）",
+      "details": "レイド：カイリキー(ジャケット)、ジュラルドン(キョダイマックス)、ディアルガ(ダイマックス)、パルキア(ダイマックス)",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10810/",
+          "fetched_at": "2026-11-06T12:46:20.236820+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-0b36302a01",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：野生が判明・追加（1件）",
+      "details": "野生：ジャケットを身にまとった カイリキー",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10809/",
+          "fetched_at": "2026-11-06T12:46:20.236820+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-ce1dfb9f4d",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：タイムチャレンジが判明・追加（5件）",
+      "details": "タイムチャレンジ：5km 探索する→カイリキー(キョダイ)、ポケモンを2日にわたって捕まえる→アメ、ポケモンを3日にわたって捕まえる→マックス粒子、ポケモンを4日にわたって捕まえる→アメXL、ポケモンを5日にわたって捕まえる→マックス粒子",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10809/",
+          "fetched_at": "2026-11-06T12:46:20.236820+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-3f0a3055e5",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】GOパス：ワイルドウィーク2026：レイドが判明・追加（9件）",
+      "details": "レイド：ギラティナ(アナザー)、メガヤミラミ、デスカーン、オーロット、ダダリン、ヨマワル ほか3件",
+      "targetId": "ev-auto-go-pass-wild-week-2026",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10808/",
+          "fetched_at": "2026-11-06T12:46:20.236820+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-3d43e5f053",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：レイドが判明・追加（1件）",
+      "details": "レイド：ジャケットを身にまとったカイリキー",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10806/",
+          "fetched_at": "2026-11-06T12:46:20.236820+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-aa5a02d6e8",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：レイドが判明・追加（5件）",
+      "details": "レイド：ジャケットを身にまとった カイリキー、ヌメイル(ヒスイ)、ヌメルゴン(ヒスイ)、ザシアン(けんのおう)、ザマゼンタ(たてのおう)",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10805/",
+          "fetched_at": "2026-11-06T12:46:20.236820+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-6b5856d062",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：野生が判明・追加（1件）",
+      "details": "野生：カイリキー(ジャケットを身にまとった)",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10803/",
+          "fetched_at": "2026-11-06T12:46:20.236820+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-9405f936c2",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：レイドが判明・追加（5件）",
+      "details": "レイド：ザシアン(けんのおう)、ザマゼンタ(たてのおう)、カイリキー(ジャケットを身にまとった)、ディアルガ(ダイマックス)、パルキア(ダイマックス)",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10803/",
+          "fetched_at": "2026-11-06T12:46:20.236820+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-ecd93d56e4",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】光のフェスティバル（インド限定）：レイドが判明・追加（1件）",
+      "details": "レイド：ピカチュウ",
+      "targetId": "ev-auto-festival-of-lights-india-2026",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26494",
+          "fetched_at": "2026-11-06T12:46:20.236820+09:00",
+          "article_updated": "2026-11-06T12:33:14+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-884b57abbd",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】光のフェスティバル（インド限定）：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：サリーかクルタを選択してどちらか1匹がゲットできる→ピカチュウ",
+      "targetId": "ev-auto-festival-of-lights-india-2026",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26494",
+          "fetched_at": "2026-11-06T12:46:20.236820+09:00",
+          "article_updated": "2026-11-06T12:33:14+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-3be2aedab1",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：野生が判明・追加（3件）",
+      "details": "野生：アローラサンド、アローラディグダ、ガラルマッギョ",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/586993",
+          "fetched_at": "2026-11-06T12:46:20.236820+09:00",
+          "article_updated": "2026-11-06T12:01:30+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-f19e7e7403",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：タイムチャレンジが判明・追加（17件）",
+      "details": "タイムチャレンジ：おこうを使う→経験値、ポケストップ・ジム5個を回す→ポフィン、野生のポケモン3種類のGOスナップショット写真を撮る→おこう、ポケモンを30匹捕まえる→ルカリオ、フィールドリサーチタスクを5回完了する→バクガメス、1km探索する→ヒスイヌメイル ほか11件",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/586992",
+          "fetched_at": "2026-11-06T12:46:20.236820+09:00",
+          "article_updated": "2026-11-06T11:51:14+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-eeea900226",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "schedule_changed",
+      "title": "【日程変更】GOパス：ワイルドウィーク2026",
+      "details": "日程が更新されています：2026-11-09〜2026-11-15 → 2026-11-06〜2026-11-15",
+      "targetId": "ev-auto-go-pass-wild-week-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/586873",
+          "fetched_at": "2026-11-06T12:46:20.236820+09:00",
+          "article_updated": "2026-11-06T10:11:28+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-7357a46800",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】GOパス：ワイルドウィーク2026：タイムチャレンジが判明・追加（6件）",
+      "details": "タイムチャレンジ：5km探索する→キョダイマックスカイリキー、2日にわたってポケモンを捕まえる→ワンリキーのアメ・ワンリキーのアメ、3日にわたってポケモンを捕まえる→マックス粒子、4日にわたってポケモンを捕まえる→ワンリキーのアメXL、5日にわたってポケモンを捕まえる→マックス粒子、全クリア報酬→ほしのすな・ハイパーボール",
+      "targetId": "ev-auto-go-pass-wild-week-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/586873",
+          "fetched_at": "2026-11-06T12:46:20.236820+09:00",
+          "article_updated": "2026-11-06T10:11:28+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-b70640e71c",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "schedule_changed",
+      "title": "【日程変更】ワイルドエリア2026：仙台・東北",
+      "details": "日程が更新されています：2026-11-06〜2026-11-08 → 2026-11-06〜2026-11-09",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26689",
+          "fetched_at": "2026-11-06T12:46:20.236820+09:00",
+          "article_updated": "2026-11-06T10:08:47+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-365b753ab5",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "new_event",
+      "title": "【新イベント】ワイルドエリア2026：メキシコシティ",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-wild-area-2026-mexico-city",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26353",
+          "fetched_at": "2026-11-06T12:46:20.236820+09:00",
+          "article_updated": "2026-11-06T10:00:11+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-4bb5916c35",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：メキシコシティ：野生が判明・追加（70件）",
+      "details": "野生：サンド(アローラ)、ディグダ(アローラ)、コイル、シェルダー、イワーク、ポリゴン ほか64件",
+      "targetId": "ev-auto-wild-area-2026-mexico-city",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26353",
+          "fetched_at": "2026-11-06T12:46:20.236820+09:00",
+          "article_updated": "2026-11-06T10:00:11+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-0d6cb66c51",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：メキシコシティ：レイドが判明・追加（3件）",
+      "details": "レイド：カイリキー、ザシアン(けんのおう)、ザマゼンタ(たてのおう)",
+      "targetId": "ev-auto-wild-area-2026-mexico-city",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26353",
+          "fetched_at": "2026-11-06T12:46:20.236820+09:00",
+          "article_updated": "2026-11-06T10:00:11+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-669ba9ba07",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：メキシコシティ：タマゴが判明・追加（4件）",
+      "details": "タマゴ：ヒトツキ(10km)、クレッフィ(10km)、ジジーロン(10km)、ジュラルドン(10km)",
+      "targetId": "ev-auto-wild-area-2026-mexico-city",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26353",
+          "fetched_at": "2026-11-06T12:46:20.236820+09:00",
+          "article_updated": "2026-11-06T10:00:11+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-f305c0b525",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】ポケモンGOの2026年11月のスケジュール：レイドが判明・追加（1件）",
+      "details": "レイド：トルネロス(化身)",
+      "targetId": "ev-auto-2026-nov-schedule",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/583244",
+          "fetched_at": "2026-11-06T12:46:20.236820+09:00",
+          "article_updated": "2026-11-06T08:48:51+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-b9201539da",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】「ピクシー」の「スーパーメガレイド・デイ」：レイドが判明・追加（1件）",
+      "details": "レイド：メガピクシー",
+      "targetId": "ev-auto-clefable-super-mega-raid-day-2026",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26152",
+          "fetched_at": "2026-11-06T12:46:20.236820+09:00",
+          "article_updated": "2026-11-06T08:48:00+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-4cec9c751c",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】GOパス：大きな足跡：野生が判明・追加（3件）",
+      "details": "野生：サルノリ、メッソン、ヒバニー",
+      "targetId": "ev-auto-go-pass-big-footprints",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/585781",
+          "fetched_at": "2026-11-06T12:46:20.236820+09:00",
+          "article_updated": "2026-11-05T11:43:37+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-10523db9e0",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】adidasコラボ：タイムチャレンジが判明・追加（5件）",
+      "details": "タイムチャレンジ：相棒と探索してアメを3個もらう→ルカリオのメガエナジー、グレートスローを20回投げる→ルカリオのメガエナジー、ポケストップ・ジム100個を回す→ルカリオのメガエナジー、ポケモンを捕まえるときにきのみ30個を使う→ルカリオのメガエナジー、30km探索する→ルカリオのメガエナジー",
+      "targetId": "ev-auto-adidas-collab-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/578629",
+          "fetched_at": "2026-11-06T12:46:20.236820+09:00",
+          "article_updated": "2026-11-05T02:47:29+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-93354c3f98",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】スーパーメガレイドデイ：メガシャンデラ：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：ポケモンを15回強化する→メガエナジー(バンギラス)",
+      "targetId": "ev-auto-super-mega-raid-day-chandelure",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/582648",
+          "fetched_at": "2026-11-06T12:46:20.236820+09:00",
+          "article_updated": "2026-11-02T13:29:08+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-b3af9003c4",
+      "date": "2026-11-06",
+      "date_label": "11/6",
+      "kind": "event_update",
+      "title": "【情報追加】コマタナのコミュニティ・デイ：フィールドリサーチが判明・追加（2件）",
+      "details": "フィールドリサーチ：チーム参加中ポケモンを5匹捕まえる→コマタナ、ポケモンを50匹捕まえる→コマタナ",
+      "targetId": "ev-cd-pawniard",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/583519",
+          "fetched_at": "2026-11-06T12:46:20.236820+09:00",
+          "article_updated": "2026-10-31T02:54:15+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-6ddbf8c3c7",
       "date": "2026-11-05",
       "date_label": "11/5",
@@ -14,6 +609,12 @@
           "site": "gamewith",
           "url": "https://pokemongo.gamewith.jp/article/show/578629",
           "fetched_at": "2026-11-05T07:41:27.522126+09:00",
+          "article_updated": "2026-11-05T02:47:29+09:00"
+        },
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/578629",
+          "fetched_at": "2026-11-06T12:46:20.236820+09:00",
           "article_updated": "2026-11-05T02:47:29+09:00"
         }
       ]
