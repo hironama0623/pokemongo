@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/11/07 22:44 JST",
+  "updated_at": "2026/11/07 23:02 JST",
   "latest_news": [
     {
       "id": "news-27e2e8643b",
@@ -384,6 +384,22 @@
       "title": "【情報追加】わくわく！Pokémon GO Lab.大調査：タイムチャレンジが判明・追加（1件）",
       "details": "タイムチャレンジ：全クリア報酬→ピカチュウ(ウィロー博士の助手)・ピカチュウのアメ 26個・ほしのすな 2026個",
       "targetId": "ev-auto-wakuwaku-pokemon-go-lab"
+    },
+    {
+      "id": "news-259dbb62e7",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "title": "【情報追加】GOワイルドエリア：キョダイマックスカイリキータイムチャレンジ：タイムチャレンジが判明・追加（3件）",
+      "details": "タイムチャレンジ：5km探索する→キョダイカイリキー、全クリア報酬→ほしのすな×30000、全クリア報酬→ハイパーボール×10",
+      "targetId": "ev-auto-wild-area-2026-free-time-challenge"
+    },
+    {
+      "id": "news-3a82d65f31",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "title": "【新イベント】キョダイマックスジュラルドンのマックスバトル",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-gigantamax-duraludon-sendai"
     },
     {
       "id": "news-99e5eb21e6",
@@ -7654,6 +7670,24 @@
       "hasPaid": false,
       "dateText": "2026年11月6日(金) 〜 11月10日(火)",
       "summary": "2026GOチャンピオンシップLA大乱闘",
+      "freeFeatures": [],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-gigantamax-duraludon-sendai",
+      "month": 11,
+      "title": "キョダイマックスジュラルドンのマックスバトル",
+      "barClass": "bar-dmax",
+      "category": "dmax",
+      "startDay": 7,
+      "endDay": 7,
+      "hasPaid": false,
+      "dateText": "2026年11月7日",
+      "summary": "キョダイマックスジュラルドンのマックスバトルが早朝から開始！仙台にて出現中！",
       "freeFeatures": [],
       "paidFeatures": [],
       "wilds": [],

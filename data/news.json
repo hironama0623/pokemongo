@@ -818,6 +818,40 @@
       ]
     },
     {
+      "id": "news-259dbb62e7",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "kind": "event_update",
+      "title": "【情報追加】GOワイルドエリア：キョダイマックスカイリキータイムチャレンジ：タイムチャレンジが判明・追加（3件）",
+      "details": "タイムチャレンジ：5km探索する→キョダイカイリキー、全クリア報酬→ほしのすな×30000、全クリア報酬→ハイパーボール×10",
+      "targetId": "ev-auto-wild-area-2026-free-time-challenge",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/586873",
+          "fetched_at": "2026-11-07T23:02:30.303476+09:00",
+          "article_updated": "2026-11-07T22:47:18+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-3a82d65f31",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "kind": "new_event",
+      "title": "【新イベント】キョダイマックスジュラルドンのマックスバトル",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-gigantamax-duraludon-sendai",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26695",
+          "fetched_at": "2026-11-07T23:02:30.303476+09:00",
+          "article_updated": "2026-11-07T19:07:20+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-99e5eb21e6",
       "date": "2026-11-06",
       "date_label": "11/6",

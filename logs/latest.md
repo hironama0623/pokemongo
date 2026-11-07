@@ -1,42 +1,27 @@
-# 取得ログ 2026-11-07T22:44:19.262158+09:00  (partial)
+# 取得ログ 2026-11-07T23:02:30.303476+09:00  (ok)
 
-取得成功 127 / 取得失敗 0 / AI解析 42 / スキップ 78 / 解析失敗 1
+取得成功 127 / 取得失敗 0 / AI解析 40 / スキップ 81 / 解析失敗 0
 
-- NOTE: 状態別の取得 2734_id_11998_lv_5_o_1_pl_40: 0/search  normal=NG shadow=NG mega=NG _err_normal:TimeoutError: Locator.click: Timeout 4000ms exceeded.
-Call log:
-  - waiting for locator("[data-probe-state=\"2\"]" _err_shadow:TimeoutError: Locator.click: Timeout 4000ms exceeded.
-Call log:
-  - waiting for locator("[data-probe-state=\"0\"]" _err_mega:TimeoutError: Locator.click: Timeout 4000ms exceeded.
-Call log:
-  - waiting for locator("[data-probe-state=\"1\"]"
-- NOTE: 調査取得 https://9db.jp/pokemongo/data/2734?id=11998&lv=5&o=1&pl=40: html 493193字 / 本文 4400字 / DPS=True TDO=False
-- NOTE: 状態別の取得 2734_id_9699_lv_4m_o_1_pl_40: 0/search  normal=NG shadow=NG mega=NG _err_normal:TimeoutError: Locator.click: Timeout 4000ms exceeded.
-Call log:
-  - waiting for locator("[data-probe-state=\"2\"]" _err_shadow:TimeoutError: Locator.click: Timeout 4000ms exceeded.
-Call log:
-  - waiting for locator("[data-probe-state=\"0\"]" _err_mega:TimeoutError: Locator.click: Timeout 4000ms exceeded.
-Call log:
-  - waiting for locator("[data-probe-state=\"1\"]"
-- NOTE: 調査取得 https://9db.jp/pokemongo/data/2734?id=9699&lv=4m&o=1&pl=40: html 493880字 / 本文 4453字 / DPS=True TDO=False
-- NOTE: 状態別の取得 2734_id_1384_lv_3_o_1_pl_40_boss_shadow_1: 0/search  normal=NG shadow=NG mega=NG _err_normal:TimeoutError: Locator.click: Timeout 4000ms exceeded.
-Call log:
-  - waiting for locator("[data-probe-state=\"2\"]" _err_shadow:TimeoutError: Locator.click: Timeout 4000ms exceeded.
-Call log:
-  - waiting for locator("[data-probe-state=\"0\"]" _err_mega:TimeoutError: Locator.click: Timeout 4000ms exceeded.
-Call log:
-  - waiting for locator("[data-probe-state=\"1\"]"
-- NOTE: 調査取得 https://9db.jp/pokemongo/data/2734?id=1384&lv=3&o=1&pl=40&boss_shadow=1: html 481978字 / 本文 3469字 / DPS=True TDO=False
+- NOTE: 状態別の取得 2734_id_11998_lv_5_o_1_pl_40: 3/5/search  normal=NG shadow=NG mega=NG _err_normal:TimeoutError: Locator.click: Timeout 4000ms exceeded.
+Call l _err_shadow:TimeoutError: Locator.click: Timeout 4000ms exceeded.
+Call l _err_mega:TimeoutError: Locator.click: Timeout 4000ms exceeded.
+Call l
+- NOTE: 調査取得 https://9db.jp/pokemongo/data/2734?id=11998&lv=5&o=1&pl=40: html 616213字 / 本文 4659字 / DPS=True TDO=False
+- NOTE: 状態別の取得 2734_id_9699_lv_4m_o_1_pl_40: 3/5/search  normal=ok shadow=ok mega=ok 
+- NOTE: 調査取得 https://9db.jp/pokemongo/data/2734?id=9699&lv=4m&o=1&pl=40: html 493983字 / 本文 4453字 / DPS=True TDO=False
+- NOTE: 状態別の取得 2734_id_1384_lv_3_o_1_pl_40_boss_shadow_1: 3/5/search  normal=ok shadow=ok mega=ok 
+- NOTE: 調査取得 https://9db.jp/pokemongo/data/2734?id=1384&lv=3&o=1&pl=40&boss_shadow=1: html 482451字 / 本文 3469字 / DPS=True TDO=False
 - NOTE: pokemapi: 候補60件のうち上限30件のみ取得（超過分は古い順）
 - NOTE: gamewith: 候補109件のうち上限40件のみ取得（超過分は古い順）
 - NOTE: official: 候補30件のうち上限20件のみ取得（超過分は古い順）
-- NOTE: 図鑑番号を解決できなかった名前: ['おこう', 'きんのズリのみ', 'ぎんのパイルのみ', 'げんきのかけら', 'ふしぎなアメ', 'ほしのかけら', 'ほしのすな', 'ほしのすな 2026個', 'ほしのすな ×1000', 'わざマシンスペシャル', 'キズぐすり', 'スーパーボール', 'ズリのみ', 'ダイキノコ', 'ハイパーボール', 'パイルのみ', 'プレミアムバトルパス', 'ポケモンと遭遇', 'ポフィン', 'マックス粒子', 'メガエナジー', 'モンスターボール', 'モンスターボール ×10', '経験値', '経験値×1000XP'] → data/pokemon.json に追記してください
+- NOTE: 図鑑番号を解決できなかった名前: ['おこう', 'きんのズリのみ', 'ぎんのパイルのみ', 'げんきのかけら', 'ふしぎなアメ', 'ほしのかけら', 'ほしのすな', 'ほしのすな×30000', 'わざマシンスペシャル', 'キズぐすり', 'スーパーボール', 'ズリのみ', 'ダイキノコ', 'ハイパーボール', 'ハイパーボール×10', 'パイルのみ', 'プレミアムバトルパス', 'ポケモンと遭遇', 'ポフィン', 'マックス粒子', 'マックス粒子×600', 'マックス粒子×800', 'モンスターボール', '経験値'] → data/pokemon.json に追記してください
 
 | サイト | 種別 | URL | 状態 | HTTP | 記事更新日 | 取得文字数 | AI送信文字数 | 処理 | 理由/エラー | 冒頭80字 | モデル | AI呼出回数 | AI秒 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| pokemapi | index | https://pokemongo-get.com/pokego02416/ | ok | 200 |  | 322209 | 0 |  | 記事リンク 70 件 |  |  |  |  |
-| pokemapi | index | https://pokemongo-get.com/ | ok | 200 |  | 206009 | 0 |  | 記事リンク 39 件 |  |  |  |  |
+| pokemapi | index | https://pokemongo-get.com/pokego02416/ | ok | 200 |  | 322254 | 0 |  | 記事リンク 70 件 |  |  |  |  |
+| pokemapi | index | https://pokemongo-get.com/ | ok | 200 |  | 206053 | 0 |  | 記事リンク 39 件 |  |  |  |  |
 | pokemapi | hub | https://pokemongo-get.com/research_fi/ | date_unknown | 200 |  | 6024 | 0 | skipped_unchanged | 本文ハッシュが前回と同じ | ポケモン / アイテム / すべて / 大発見 イベント バトル 捕獲 スローボーナス 進化・強化 相棒・フレンド タマゴ ARマッピング スポンサー ポケスト |  |  |  |
-| pokemapi | article | https://pokemongo-get.com/board/10818/ | ok | 200 | 2026-11-06T00:00:00+09:00 | 2936 | 3608 | analyzed | 対象外の記事（イベント情報なし） | ホーム GOバトルリーグの公式既知の不具合ページが更新されています｜更新日：日本時間 2026/11/7(土) ポケマピ 12時間前 日本時間 2026/11/ | gemini-3.5-flash-lite | 1 | 4.3 |
+| pokemapi | article | https://pokemongo-get.com/board/10818/ | ok | 200 | 2026-11-06T00:00:00+09:00 | 2936 | 0 | skipped_unchanged | 本文ハッシュが前回と同じ | ホーム GOバトルリーグの公式既知の不具合ページが更新されています｜更新日：日本時間 2026/11/7(土) ポケマピ 12時間前 日本時間 2026/11/ |  |  |  |
 | pokemapi | article | https://pokemongo-get.com/board/10816/ | date_unknown | 200 |  | 727 | 0 | skipped_unchanged | 本文ハッシュが前回と同じ | - 日本時間だと、2026/11/6(金)13時30分～2026/11/8(日)23時30分まで（目安です） サリーを着た ピカチュウ (スペシャル背景) (確 |  |  |  |
 | pokemapi | article | https://pokemongo-get.com/board/10814/ | date_unknown | 200 |  | 6061 | 0 | skipped_unchanged | 本文ハッシュが前回と同じ | ワイルド＆ドラゴンスピン(1/1) 1 /1 / ドラゴンタイプテーマのポケストップを回す 5,000 XP#5,000 XP 5,000 XP ドラゴンタイプ |  |  |  |
 | pokemapi | article | https://pokemongo-get.com/board/10811/ | date_unknown | 200 |  | 6492 | 0 | skipped_unchanged | 本文ハッシュが前回と同じ | GOワイルドエリア：仙台・東北の謎(1/6) 1 /6 / おこうを使う 2,000 XP x2,000 ポケストップ・ジム5個を回す ポフィン x1 野生のポ |  |  |  |
@@ -66,55 +51,55 @@ Call log:
 | pokemapi | article | https://pokemongo-get.com/board/10692/ | date_unknown | 200 |  | 5440 | 0 | skipped_unchanged | 本文ハッシュが前回と同じ | - 対象のイオンモールの中で『ポケモン GO』を起動すると、ゲーム内で自動付与されます。 - Part1/Part2の2回に分けて開催されます。 - 受取期間： |  |  |  |
 | pokemapi | article | https://pokemongo-get.com/board/10689/ | date_unknown | 200 |  | 2892 | 0 | skipped_unchanged | 本文ハッシュが前回と同じ | ハットとケープをつけた ピカチュウ new! トップハットをかぶった ズバット new! リボンをつけた ヤバチャ new! - 運が良ければ色違いのポケモンと |  |  |  |
 | pokemapi | article | https://pokemongo-get.com/board/10680/ | date_unknown | 200 |  | 1397 | 0 | skipped_unchanged | 本文ハッシュが前回と同じ | Pokémon Night Out タイムチャレンジ(1/2) 1 /2 / ポケストップ・ジム10個を回す ズリのみ x5 ポケモンを10匹捕まえる キズぐす |  |  |  |
-| gamewith | index | https://pokemongo.gamewith.jp/ | ok | 200 |  | 1681820 | 0 |  | 記事リンク 1314 件 |  |  |  |  |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/587136 | ok | 200 | 2026-11-07T15:29:04+09:00 | 5125 | 5291 | analyzed | 新情報なし | ### 【ポケモンGO】ワイルドエリア仙台Wayfarerタイムチャレンジの入手方法と報酬 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - | gemini-3.5-flash-lite | 1 | 5.7 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/587053 | ok | 200 | 2026-11-06T16:28:16+09:00 | 6394 | 6538 | analyzed | 対象外の記事（イベント情報なし） | ### 【ポケモンGO】ゆふいんさんのGOバトルリーグレポート2026年11月第1週 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイ | gemini-3.5-flash-lite | 2 | 4.9 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/587003 | ok | 200 | 2026-11-07T20:59:22+09:00 | 5716 | 5873 | analyzed | time_challenge+1 | ### 【ポケモンGO】ワイルドエリア仙台ワイルド＆はがねスピンの内容と報酬 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリ | gemini-3.5-flash-lite | 2 | 7.1 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/586995 | ok | 200 | 2026-11-07T13:37:15+09:00 | 5740 | 5900 | analyzed | 新情報なし | ### 【ポケモンGO】ワイルドエリア仙台ワイルド＆ドラゴンスピンの内容と報酬 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエ | gemini-3.5-flash-lite | 2 | 6.9 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/586993 | ok | 200 | 2026-11-07T18:35:21+09:00 | 5180 | 5318 | analyzed | 新情報なし | ### 【ポケモンGO】GOワイルドエリア仙台・東北のコレクションチャレンジの内容と報酬 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ -  | gemini-3.5-flash-lite | 1 | 3.1 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/586992 | ok | 200 | 2026-11-07T08:17:35+09:00 | 6582 | 6742 | analyzed | time_challenge+1 | ### 【ポケモンGO】ワイルドエリア仙台・東北の謎のスペシャルリサーチ内容と報酬 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイル | gemini-3.5-flash-lite | 1 | 12.4 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/586873 | ok | 200 | 2026-11-07T22:47:18+09:00 | 4648 | 4812 | analyzed | field_research+2 | ### 【ポケモンGO】ワイルドエリア2026の無料タイムチャレンジの内容と報酬 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルド | gemini-3.5-flash-lite | 4 | 38.6 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/586872 | ok | 200 | 2026-11-07T13:11:13+09:00 | 7768 | 7931 | analyzed | 新情報なし; 対策: メガピクシー | ### 【ポケモンGO】ピクシーのスーパーメガレイドデイの開催期間とボーナス - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリ | gemini-3.5-flash-lite | 2 | 6.8 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/586416 | ok | 200 | 2026-11-04T13:42:23+09:00 | 6533 | 6671 | analyzed | 新情報なし | ### 【ポケモンGO】GOパス黄昏時の願いのリワード内容と挑戦期間 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリア仙台開 | gemini-3.5-flash-lite | 1 | 5.5 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/586413 | ok | 200 | 2026-11-05T13:34:20+09:00 | 7916 | 8075 | analyzed | 新情報なし | ### 【ポケモンGO】黄昏時の願いイベントの開催期間とボーナス - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリア仙台開催中 | gemini-3.5-flash-lite | 2 | 7.3 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/586133 | ok | 200 | 2026-10-31T12:31:39+09:00 | 6089 | 6233 | analyzed | 対象外の記事（イベント情報なし） | ### 【ポケモンGO】ゆふいんさんのGOバトルリーグレポート2026年10月第5週 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイ | gemini-3.5-flash-lite | 2 | 6.1 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/585785 | ok | 200 | 2026-11-01T21:49:18+09:00 | 6549 | 6698 | analyzed | 新情報なし | ### 【ポケモンGO】GOパス大きな足跡のリワード内容と挑戦期間 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリア仙台開催 | gemini-3.5-flash-lite | 2 | 22.9 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/585781 | ok | 200 | 2026-11-07T19:34:08+09:00 | 8592 | 8740 | analyzed | 新情報なし | ### 【ポケモンGO】大きな足跡イベントの開催期間とボーナス - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリア仙台開催中！ | gemini-3.5-flash-lite | 2 | 4.2 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/585702 | ok | 200 | 2026-10-31T13:48:13+09:00 | 5669 | 5803 | analyzed | 新情報なし | ### 【ポケモンGO】ポケモンナイトアウトTwitch配信タイムチャレンジの入手方法と報酬 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ  | gemini-3.5-flash-lite | 2 | 6.0 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/585630 | ok | 200 | 2026-11-07T07:47:27+09:00 | 7843 | 8000 | analyzed | 対策: キョダイマックスジュラルドン | ### 【ポケモンGO】キョダイマックスジュラルドンのおすすめ対策ポケモン - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリア | gemini-3.5-flash-lite | 1 | 1.6 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/584390 | ok | 200 | 2026-10-29T05:15:19+09:00 | 5369 | 5521 | analyzed | 新情報なし | ### 【ポケモンGO】死者の日イベント2026(メキシコ)の開催期間とボーナス - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルド | gemini-3.5-flash-lite | 1 | 8.2 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/584389 | ok | 200 | 2026-11-02T07:51:25+09:00 | 5797 | 5932 | analyzed | 新情報なし | ### 【ポケモンGO】死者の日2026特別イベント(メキシコ レフォルマ通り)の開催期間とボーナス - 開催中のイベント情報 - キョダイカイリキーの無料タイ | gemini-3.5-flash-lite | 1 | 6.5 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/583884 | ok | 200 | 2026-10-23T16:35:41+09:00 | 6296 | 6441 | analyzed | 対象外の記事（イベント情報なし） | ### 【ポケモンGO】ゆふいんさんのGOバトルリーグレポート2026年10月第4週 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイ | gemini-3.5-flash-lite | 2 | 8.9 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/583519 | ok | 200 | 2026-10-31T02:54:15+09:00 | 9476 | 9623 | analyzed | 新情報なし | ### 【ポケモンGO】コマタナコミュニティデイの開催期間とボーナス - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリア仙台開 | gemini-3.5-flash-lite | 2 | 7.1 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/583362 | ok | 200 | 2026-11-04T13:15:34+09:00 | 10387 | 10527 | analyzed | 新情報なし | ### 【ポケモンGO】GOパス11月(2026年)のリワード内容と挑戦期間 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリ | gemini-3.5-flash-lite | 1 | 6.0 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/583322 | ok | 200 | 2026-10-28T17:59:21+09:00 | 7098 | 7237 | analyzed | 新情報なし | ### 【ポケモンGO】ポケモンナイトアウトの開催期間と内容 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリア仙台開催中！  | gemini-3.5-flash-lite | 2 | 6.1 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/583310 | ok | 200 | 2026-11-04T11:01:19+09:00 | 6952 | 7111 | analyzed | 対策: シャドウトルネロス(化身) | ### 【ポケモンGO】シャドウトルネロス(化身)レイド対策おすすめポケモン - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリ | gemini-3.5-flash-lite | 1 | 9.2 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/583244 | ok | 200 | 2026-11-07T09:49:10+09:00 | 9655 | 9789 | analyzed | 新情報なし | ### 【ポケモンGO】2026年11月のイベントスケジュールまとめ - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリア仙台開 | gemini-3.5-flash-lite | 2 | 7.3 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/583039 | ok | 200 | 2026-10-17T03:13:03+09:00 | 5182 | 5323 | analyzed | 新情報なし | ### 【ポケモンGO】LAIC2027配信ボーナスタイムチャレンジの入手方法と報酬 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイ | gemini-3.5-flash-lite | 2 | 7.6 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/583028 | ok | 200 | 2026-10-16T14:32:37+09:00 | 6433 | 6578 | analyzed | 対象外の記事（イベント情報なし） | ### 【ポケモンGO】ゆふいんさんのGOバトルリーグレポート2026年10月第3週 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイ | gemini-3.5-flash-lite | 2 | 6.3 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/582768 | ok | 200 | 2026-11-07T14:40:12+09:00 | 10781 | 10952 | analyzed | 新情報なし | ### 【ポケモンGO】ワイルドウィーク(2026年)の開催期間とボーナス - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリア | gemini-3.5-flash-lite | 2 | 7.1 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/582767 | ok | 200 | 2026-11-07T21:10:15+09:00 | 7022 | 7173 | analyzed | 新情報なし | ### 【ポケモンGO】GOパスワイルドウィーク(2026年)のリワード内容と挑戦期間 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワ | gemini-3.5-flash-lite | 2 | 5.6 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/582648 | ok | 200 | 2026-11-02T13:29:08+09:00 | 8413 | 8579 | analyzed | 新情報なし; 対策: メガシャンデラ | ### 【ポケモンGO】シャンデラのスーパーメガレイドデイの開催期間とボーナス - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエ | gemini-3.5-flash-lite | 2 | 3.4 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/580836 | ok | 200 | 2026-10-12T11:14:33+09:00 | 5282 | 5438 | analyzed | time_challenge+1 | ### 【ポケモンGO】わくわくPokémon GO Lab.大調査の開催期間と内容 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイ | gemini-3.5-flash-lite | 1 | 7.5 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/580744 | ok | 200 | 2026-11-06T07:43:06+09:00 | 7252 | 7392 | analyzed | 新情報なし | ### 【ポケモンGO】ハロウィン2026パート2の開催期間とボーナス - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリア仙台 | gemini-3.5-flash-lite | 2 | 7.9 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/580639 | ok | 200 | 2026-10-09T07:01:08+09:00 | 5246 | 5398 | analyzed | 新情報なし | ### 【ポケモンGO】2026FCソウルイベント(韓国)の開催期間とボーナス - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエ | gemini-3.5-flash-lite | 1 | 4.8 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/579901 | ok | 200 | 2026-11-01T22:12:11+09:00 | 5494 | 5655 | analyzed | time_challenge+2 | ### 【ポケモンGO】イオンハロウィンイベントの開催期間とボーナス - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリア仙台開 | gemini-3.5-flash-lite | 1 | 6.5 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/579895 | ok | 200 | 2026-11-05T11:23:31+09:00 | 8714 | 8861 | analyzed | 新情報なし | ### 【ポケモンGO】GOパスハロウィン2026のリワード内容と挑戦期間 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリア | gemini-3.5-flash-lite | 1 | 1.4 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/579894 | ok | 200 | 2026-11-02T04:10:33+09:00 | 8404 | 8576 | analyzed | 新情報なし | ### 【ポケモンGO】ハロウィン2026パート1の開催期間とボーナス - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリア仙台 | gemini-3.5-flash-lite | 2 | 5.6 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/579398 | ok | 200 | 2026-10-25T17:52:14+09:00 | 7884 | 8067 | analyzed | 新情報なし; 対策: ダイマックスユクシー、ダイマックスアグノム、ダイマックスエムリット | ### 【ポケモンGO】ダイマックスユクシー・エムリット・アグノムのマックスバトルデイの期間とボーナス - 開催中のイベント情報 - キョダイカイリキーの無料タ | gemini-3.5-flash-lite | 2 | 9.1 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/579397 | ok | 200 | 2026-10-25T12:02:10+09:00 | 6074 | 6207 | analyzed | 新情報なし | ### 【ポケモンGO】メテノシャワーの開催期間と内容 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリア仙台開催中！ - S | gemini-3.5-flash-lite | 1 | 5.6 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/579273 | ok | 200 | 2026-11-07T21:56:12+09:00 | 7308 | 7456 | analyzed | 対策: ダイマックスディアルガ | ### 【ポケモンGO】ダイマックスディアルガ対策おすすめポケモン - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリア仙台開催 | gemini-3.5-flash-lite | 1 | 1.6 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/579272 | ok | 200 | 2026-11-07T00:17:23+09:00 | 7430 | 7574 | analyzed | 対策: ダイマックスパルキア | ### 【ポケモンGO】ダイマックスパルキア対策おすすめポケモン - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリア仙台開催中 | gemini-3.5-flash-lite | 1 | 5.5 |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/578855 | ok | 200 | 2026-10-01T22:20:33+09:00 | 5047 | 0 | skipped_out_of_window | 記事更新日が31日より前 | ### 【ポケモンGO】ポケモンカードゲーム30周年記念イベント(アメリカ)の開催期間と場所 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ  |  |  |  |
-| gamewith | article | https://pokemongo.gamewith.jp/article/show/578749 | ok | 200 | 2026-11-07T01:02:18+09:00 | 6067 | 6204 | analyzed | 新情報なし | ### 【ポケモンGO】光の祭典(インド)の開催期間とボーナス - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリア仙台開催中！ | gemini-3.5-flash-lite | 1 | 6.8 |
-| 9db | index | https://9db.jp/pokemongo/ | ok | 200 |  | 77402 | 0 |  | 記事リンク 133 件 |  |  |  |  |
-| 9db | index | https://9db.jp/pokemongo/data/4351 | ok | 200 |  | 77554 | 0 |  | 記事リンク 11 件 |  |  |  |  |
+| gamewith | index | https://pokemongo.gamewith.jp/ | ok | 200 |  | 1681829 | 0 |  | 記事リンク 1314 件 |  |  |  |  |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/587136 | ok | 200 | 2026-11-07T15:29:04+09:00 | 5134 | 5300 | analyzed | 新情報なし | ### 【ポケモンGO】ワイルドエリア仙台Wayfarerタイムチャレンジの入手方法と報酬 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - | gemini-3.5-flash-lite | 1 | 4.2 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/587053 | ok | 200 | 2026-11-06T16:28:16+09:00 | 6403 | 6547 | analyzed | 対象外の記事（イベント情報なし） | ### 【ポケモンGO】ゆふいんさんのGOバトルリーグレポート2026年11月第1週 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイ | gemini-3.5-flash-lite | 2 | 5.5 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/587003 | ok | 200 | 2026-11-07T20:59:22+09:00 | 5725 | 5882 | analyzed | 新情報なし | ### 【ポケモンGO】ワイルドエリア仙台ワイルド＆はがねスピンの内容と報酬 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリ | gemini-3.5-flash-lite | 2 | 8.2 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/586995 | ok | 200 | 2026-11-07T13:37:15+09:00 | 5749 | 5909 | analyzed | 新情報なし | ### 【ポケモンGO】ワイルドエリア仙台ワイルド＆ドラゴンスピンの内容と報酬 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエ | gemini-3.5-flash-lite | 2 | 7.2 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/586993 | ok | 200 | 2026-11-07T18:35:21+09:00 | 5189 | 5327 | analyzed | 新情報なし | ### 【ポケモンGO】GOワイルドエリア仙台・東北のコレクションチャレンジの内容と報酬 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ -  | gemini-3.5-flash-lite | 2 | 22.2 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/586992 | ok | 200 | 2026-11-07T08:17:35+09:00 | 6591 | 6751 | analyzed | 新情報なし | ### 【ポケモンGO】ワイルドエリア仙台・東北の謎のスペシャルリサーチ内容と報酬 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイル | gemini-3.5-flash-lite | 1 | 8.6 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/586873 | ok | 200 | 2026-11-07T22:47:18+09:00 | 4657 | 4821 | analyzed | time_challenge+3 | ### 【ポケモンGO】ワイルドエリア2026の無料タイムチャレンジの内容と報酬 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルド | gemini-3.6-flash | 5 | 255.2 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/586872 | ok | 200 | 2026-11-07T13:11:13+09:00 | 7777 | 7940 | analyzed | 新情報なし; 対策: メガピクシー | ### 【ポケモンGO】ピクシーのスーパーメガレイドデイの開催期間とボーナス - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリ | gemini-3.5-flash-lite | 3 | 22.8 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/586416 | ok | 200 | 2026-11-04T13:42:23+09:00 | 6542 | 6680 | analyzed | 新情報なし | ### 【ポケモンGO】GOパス黄昏時の願いのリワード内容と挑戦期間 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリア仙台開 | gemini-3.5-flash-lite | 1 | 6.3 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/586413 | ok | 200 | 2026-11-05T13:34:20+09:00 | 7925 | 8084 | analyzed | 新情報なし | ### 【ポケモンGO】黄昏時の願いイベントの開催期間とボーナス - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリア仙台開催中 | gemini-3.5-flash-lite | 2 | 6.7 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/586133 | ok | 200 | 2026-10-31T12:31:39+09:00 | 6098 | 6242 | analyzed | 対象外の記事（イベント情報なし） | ### 【ポケモンGO】ゆふいんさんのGOバトルリーグレポート2026年10月第5週 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイ | gemini-3.5-flash-lite | 2 | 6.1 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/585785 | ok | 200 | 2026-11-01T21:49:18+09:00 | 6558 | 6707 | analyzed | 新情報なし | ### 【ポケモンGO】GOパス大きな足跡のリワード内容と挑戦期間 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリア仙台開催 | gemini-3.5-flash-lite | 1 | 6.4 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/585781 | ok | 200 | 2026-11-07T19:34:08+09:00 | 8601 | 8749 | analyzed | 新情報なし | ### 【ポケモンGO】大きな足跡イベントの開催期間とボーナス - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリア仙台開催中！ | gemini-3.5-flash-lite | 2 | 9.2 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/585702 | ok | 200 | 2026-10-31T13:48:13+09:00 | 5678 | 5812 | analyzed | 新情報なし | ### 【ポケモンGO】ポケモンナイトアウトTwitch配信タイムチャレンジの入手方法と報酬 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ  | gemini-3.5-flash-lite | 2 | 5.9 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/585630 | ok | 200 | 2026-11-07T07:47:27+09:00 | 7852 | 8009 | analyzed | 対策: キョダイマックスジュラルドン | ### 【ポケモンGO】キョダイマックスジュラルドンのおすすめ対策ポケモン - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリア | gemini-3.5-flash-lite | 1 | 3.7 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/584390 | ok | 200 | 2026-10-29T05:15:19+09:00 | 5378 | 5530 | analyzed | 新情報なし | ### 【ポケモンGO】死者の日イベント2026(メキシコ)の開催期間とボーナス - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルド | gemini-3.5-flash-lite | 1 | 6.6 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/584389 | ok | 200 | 2026-11-02T07:51:25+09:00 | 5806 | 5941 | analyzed | 新情報なし | ### 【ポケモンGO】死者の日2026特別イベント(メキシコ レフォルマ通り)の開催期間とボーナス - 開催中のイベント情報 - キョダイカイリキーの無料タイ | gemini-3.5-flash-lite | 1 | 5.7 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/583884 | ok | 200 | 2026-10-23T16:35:41+09:00 | 6305 | 6450 | analyzed | 対象外の記事（イベント情報なし） | ### 【ポケモンGO】ゆふいんさんのGOバトルリーグレポート2026年10月第4週 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイ | gemini-3.5-flash-lite | 2 | 3.5 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/583519 | ok | 200 | 2026-10-31T02:54:15+09:00 | 9485 | 9632 | analyzed | 新情報なし | ### 【ポケモンGO】コマタナコミュニティデイの開催期間とボーナス - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリア仙台開 | gemini-3.5-flash-lite | 2 | 7.0 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/583362 | ok | 200 | 2026-11-04T13:15:34+09:00 | 10396 | 10536 | analyzed | 新情報なし | ### 【ポケモンGO】GOパス11月(2026年)のリワード内容と挑戦期間 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリ | gemini-3.5-flash-lite | 1 | 6.7 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/583322 | ok | 200 | 2026-10-28T17:59:21+09:00 | 7107 | 7246 | analyzed | 新情報なし | ### 【ポケモンGO】ポケモンナイトアウトの開催期間と内容 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリア仙台開催中！  | gemini-3.5-flash-lite | 2 | 6.7 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/583310 | ok | 200 | 2026-11-04T11:01:19+09:00 | 6961 | 7120 | analyzed | 対策: シャドウトルネロス(化身) | ### 【ポケモンGO】シャドウトルネロス(化身)レイド対策おすすめポケモン - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリ | gemini-3.5-flash-lite | 1 | 6.4 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/583244 | ok | 200 | 2026-11-07T09:49:10+09:00 | 9664 | 9798 | analyzed | 対象外の記事（イベント情報なし） | ### 【ポケモンGO】2026年11月のイベントスケジュールまとめ - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリア仙台開 | gemini-3.5-flash-lite | 2 | 5.4 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/583039 | ok | 200 | 2026-10-17T03:13:03+09:00 | 5191 | 5332 | analyzed | 新情報なし | ### 【ポケモンGO】LAIC2027配信ボーナスタイムチャレンジの入手方法と報酬 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイ | gemini-3.5-flash-lite | 2 | 7.3 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/583028 | ok | 200 | 2026-10-16T14:32:37+09:00 | 6442 | 6587 | analyzed | 対象外の記事（イベント情報なし） | ### 【ポケモンGO】ゆふいんさんのGOバトルリーグレポート2026年10月第3週 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイ | gemini-3.5-flash-lite | 2 | 12.8 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/582768 | ok | 200 | 2026-11-07T14:40:12+09:00 | 10790 | 10961 | analyzed | 新情報なし | ### 【ポケモンGO】ワイルドウィーク(2026年)の開催期間とボーナス - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリア | gemini-3.5-flash-lite | 2 | 6.3 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/582767 | ok | 200 | 2026-11-07T21:10:15+09:00 | 7031 | 7182 | analyzed | 新情報なし | ### 【ポケモンGO】GOパスワイルドウィーク(2026年)のリワード内容と挑戦期間 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワ | gemini-3.5-flash-lite | 2 | 5.8 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/582648 | ok | 200 | 2026-11-02T13:29:08+09:00 | 8422 | 8588 | analyzed | 新情報なし; 対策: メガシャンデラ | ### 【ポケモンGO】シャンデラのスーパーメガレイドデイの開催期間とボーナス - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエ | gemini-3.5-flash-lite | 2 | 4.2 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/580836 | ok | 200 | 2026-10-12T11:14:33+09:00 | 5291 | 5447 | analyzed | 新情報なし | ### 【ポケモンGO】わくわくPokémon GO Lab.大調査の開催期間と内容 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイ | gemini-3.5-flash-lite | 1 | 6.9 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/580744 | ok | 200 | 2026-11-06T07:43:06+09:00 | 7261 | 7401 | analyzed | 新情報なし | ### 【ポケモンGO】ハロウィン2026パート2の開催期間とボーナス - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリア仙台 | gemini-3.5-flash-lite | 2 | 7.2 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/580639 | ok | 200 | 2026-10-09T07:01:08+09:00 | 5255 | 5407 | analyzed | 新情報なし | ### 【ポケモンGO】2026FCソウルイベント(韓国)の開催期間とボーナス - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエ | gemini-3.5-flash-lite | 3 | 58.6 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/579901 | ok | 200 | 2026-11-01T22:12:11+09:00 | 5503 | 5664 | analyzed | 新情報なし | ### 【ポケモンGO】イオンハロウィンイベントの開催期間とボーナス - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリア仙台開 | gemini-3.5-flash-lite | 1 | 6.4 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/579895 | ok | 200 | 2026-11-05T11:23:31+09:00 | 8723 | 8870 | analyzed | 新情報なし | ### 【ポケモンGO】GOパスハロウィン2026のリワード内容と挑戦期間 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリア | gemini-3.5-flash-lite | 1 | 5.5 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/579894 | ok | 200 | 2026-11-02T04:10:33+09:00 | 8413 | 8585 | analyzed | 新情報なし | ### 【ポケモンGO】ハロウィン2026パート1の開催期間とボーナス - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリア仙台 | gemini-3.5-flash-lite | 2 | 6.7 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/579398 | ok | 200 | 2026-10-25T17:52:14+09:00 | 7893 | 8076 | analyzed | 新情報なし; 対策: ダイマックスユクシー、ダイマックスアグノム、ダイマックスエムリット | ### 【ポケモンGO】ダイマックスユクシー・エムリット・アグノムのマックスバトルデイの期間とボーナス - 開催中のイベント情報 - キョダイカイリキーの無料タ | gemini-3.5-flash-lite | 2 | 9.0 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/579397 | ok | 200 | 2026-10-25T12:02:10+09:00 | 6083 | 6216 | analyzed | 新情報なし | ### 【ポケモンGO】メテノシャワーの開催期間と内容 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリア仙台開催中！ - S | gemini-3.5-flash-lite | 1 | 5.5 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/579273 | ok | 200 | 2026-11-07T21:56:12+09:00 | 7317 | 7465 | analyzed | 対策: ダイマックスディアルガ | ### 【ポケモンGO】ダイマックスディアルガ対策おすすめポケモン - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリア仙台開催 | gemini-3.5-flash-lite | 3 | 13.7 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/579272 | ok | 200 | 2026-11-07T00:17:23+09:00 | 7439 | 7583 | analyzed | 対策: ダイマックスパルキア | ### 【ポケモンGO】ダイマックスパルキア対策おすすめポケモン - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリア仙台開催中 | gemini-3.5-flash-lite | 1 | 5.8 |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/578855 | ok | 200 | 2026-10-01T22:20:33+09:00 | 5056 | 0 | skipped_out_of_window | 記事更新日が31日より前 | ### 【ポケモンGO】ポケモンカードゲーム30周年記念イベント(アメリカ)の開催期間と場所 - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ  |  |  |  |
+| gamewith | article | https://pokemongo.gamewith.jp/article/show/578749 | ok | 200 | 2026-11-07T01:02:18+09:00 | 6076 | 6213 | analyzed | 新情報なし | ### 【ポケモンGO】光の祭典(インド)の開催期間とボーナス - 開催中のイベント情報 - キョダイカイリキーの無料タイチャレ - ワイルドエリア仙台開催中！ | gemini-3.5-flash-lite | 1 | 6.0 |
+| 9db | index | https://9db.jp/pokemongo/ | ok | 200 |  | 76982 | 0 |  | 記事リンク 133 件 |  |  |  |  |
+| 9db | index | https://9db.jp/pokemongo/data/4351 | ok | 200 |  | 77668 | 0 |  | 記事リンク 11 件 |  |  |  |  |
 | 9db | hub | https://9db.jp/pokemongo/data/2308 | ok | 200 | 2026-11-05T22:30:56+09:00 | 2914 | 0 | skipped_unchanged | 本文ハッシュが前回と同じ | ### レイドボスの開催日程（最新版） infographicモード 開催中 ワイルドエリア2026：仙台・東北 / 伝説：ギラティナ(アナザー) 出現期間 / |  |  |  |
-| 9db | article | https://9db.jp/pokemongo/data/26695 | ok | 200 | 2026-11-07T19:07:20+09:00 | 1670 | 1716 | analyze_failed | gemini-3.5-flash-lite: article: '' does not match '^20\\d\\d-\\d\\d-\\d\\d(T\\d\\d:\\d\\d)?$' (at event_info/end) / gemini-3.1-flash-lite: article: None is not of type 'string' (at event_info/end) | キョダイマックスジュラルドンのマックスバトルが早朝から開始！ 2026年11月7日 19:07 9件 キョダイマックスジュラルドンが仙台にて出現中！ レイド自動 |  | 2 | 15.6 |
+| 9db | article | https://9db.jp/pokemongo/data/26695 | ok | 200 | 2026-11-07T19:07:20+09:00 | 1678 | 1724 | analyzed | new_event+1 | キョダイマックスジュラルドンのマックスバトルが早朝から開始！ 2026年11月7日 19:07 9件 キョダイマックスジュラルドンが仙台にて出現中！ レイド自動 | gemini-3.5-flash-lite | 3 | 56.3 |
 | 9db | article | https://9db.jp/pokemongo/data/26689 | ok | 200 | 2026-11-06T10:08:47+09:00 | 764 | 0 | skipped_unchanged | 本文ハッシュが前回と同じ | ### キョダイマックスジュラルドンの色違い確率調査 / ワイルドエリア2026：仙台・東北 - ワイルドエリア2026：仙台・東北 - 色違い確率調査一覧 調 |  |  |  |
 | 9db | article | https://9db.jp/pokemongo/data/26688 | ok | 200 | 2026-11-06T10:02:19+09:00 | 739 | 0 | skipped_unchanged | 本文ハッシュが前回と同じ | ### ヌメイル(ヒスイ)の色違い確率調査 / ワイルドエリア2026：仙台・東北 - ワイルドエリア2026：仙台・東北 - 色違い確率調査一覧 調査期間中に |  |  |  |
 | 9db | article | https://9db.jp/pokemongo/data/26687 | ok | 200 | 2026-11-07T19:47:00+09:00 | 2025 | 0 | skipped_unchanged | 本文ハッシュが前回と同じ | ### 【キョダイマックスバトル】キョダイマックスジュラルドン対策 目次 - イベントまとめ - 対策パーティまとめ - キョダイマックスジュラルドン対策 -  |  |  |  |
-| 9db | article | https://9db.jp/pokemongo/data/26664 | ok | 200 | 2026-11-06T00:16:47+09:00 | 3681 | 3717 | analyzed | new_event+1 | ### 2026GOチャンピオンシップLA大乱闘 ルール 設定 みんポケ大乱闘一覧 / 使用率ランキング 2026GOチャンピオンシップLA大乱闘 2026年1 | gemini-3.5-flash-lite | 1 | 7.6 |
+| 9db | article | https://9db.jp/pokemongo/data/26664 | ok | 200 | 2026-11-06T00:16:47+09:00 | 3681 | 0 | skipped_unchanged | 本文ハッシュが前回と同じ | ### 2026GOチャンピオンシップLA大乱闘 ルール 設定 みんポケ大乱闘一覧 / 使用率ランキング 2026GOチャンピオンシップLA大乱闘 2026年1 |  |  |  |
 | 9db | article | https://9db.jp/pokemongo/data/26648 | ok | 200 | 2026-11-06T20:00:37+09:00 | 633 | 0 | skipped_unchanged | 本文ハッシュが前回と同じ | ### ボチの色違い確率調査 / ハロウィン2026パート2 - ハロウィン2026パート2 - 色違い確率調査一覧 ボチの色違い確率調査 調査期間 調査終了  |  |  |  |
 | 9db | article | https://9db.jp/pokemongo/data/26647 | ok | 200 | 2026-11-06T20:54:18+09:00 | 698 | 0 | skipped_unchanged | 本文ハッシュが前回と同じ | ### ピカチュウ (ハットとケーブ)の色違い確率調査 / ハロウィン2026パート1 - ハロウィン2026パート1 - 色違い確率調査一覧 ピカチュウ (ハ |  |  |  |
 | 9db | article | https://9db.jp/pokemongo/data/26638 | ok | 200 | 2026-11-04T09:05:51+09:00 | 2944 | 0 | skipped_unchanged | 本文ハッシュが前回と同じ | ### GOパス：11月(2026) 開催日(日本時間) 2026/11/3(火)10:00 〜 12/1(火)10:00 公式発表 目次 - GOパス：11月 |  |  |  |
@@ -132,7 +117,7 @@ Call log:
 | 9db | article | https://9db.jp/pokemongo/data/26429 | ok | 200 | 2026-11-07T08:01:33+09:00 | 1008 | 0 | skipped_unchanged | 本文ハッシュが前回と同じ | ### メガ：メガヤミラミ 開催日(日本時間) 2026/10/28(水)5:00 〜 11/8(日)21:00 目次 - 対策ポケモン - レイドバトル日程  |  |  |  |
 | 9db | article | https://9db.jp/pokemongo/data/26354 | ok | 200 | 2026-11-07T19:33:50+09:00 | 5482 | 0 | skipped_unchanged | 本文ハッシュが前回と同じ | ### ワイルドエリア2026：グローバル 開催日(日本時間) 2026/11/14(土)10:00 〜 11/15(日)18:00 一部チケットが必要なイベン |  |  |  |
 | 9db | article | https://9db.jp/pokemongo/data/26353 | ok | 200 | 2026-11-06T21:25:06+09:00 | 5577 | 0 | skipped_unchanged | 本文ハッシュが前回と同じ | ### ワイルドエリア2026：メキシコシティ 開催日(日本時間) 2026/11/6(金)10:00 〜 11/8(日)18:00 本イベントはチケットが必要 |  |  |  |
-| 9db | article | https://9db.jp/pokemongo/data/26352 | ok | 200 | 2026-11-07T22:44:15+09:00 | 7924 | 7957 | analyzed | 新情報なし | ### ワイルドエリア2026：仙台・東北 開催日(日本時間) 2026/11/6(金)10:00 〜 11/8(日)18:00 開催場所 仙台市宮城野区 榴岡 | gemini-3.5-flash-lite | 1 | 9.6 |
+| 9db | article | https://9db.jp/pokemongo/data/26352 | ok | 200 | 2026-11-07T22:44:15+09:00 | 7924 | 0 | skipped_unchanged | 本文ハッシュが前回と同じ | ### ワイルドエリア2026：仙台・東北 開催日(日本時間) 2026/11/6(金)10:00 〜 11/8(日)18:00 開催場所 仙台市宮城野区 榴岡 |  |  |  |
 | 9db | article | https://9db.jp/pokemongo/data/26249 | ok | 200 | 2026-09-11T20:26:47+09:00 | 384 | 0 | skipped_out_of_window | 記事更新日が31日より前 | ### 「伝説のポケモンと出会う レジェンドリサーチ in日本橋＆八重洲」連動イベント 開催日(日本時間) 2026/9/9(水) 〜 11/29(日) 開催場 |  |  |  |
 | 9db | article | https://9db.jp/pokemongo/data/26213 | ok | 200 | 2026-11-04T05:00:04+09:00 | 6602 | 0 | skipped_unchanged | 本文ハッシュが前回と同じ | ### GOバトルリーグ：黄昏の旅路 GOバトルリーグ シーズン別 仕様 / 1 / 2 / 3 / 4 5 / 6 / 7 / 8 / 9 10 / 調整 / |  |  |  |
 | 9db | article | https://9db.jp/pokemongo/data/26209 | ok | 200 | 2026-10-04T06:50:18+09:00 | 5382 | 0 | skipped_out_of_window | 記事更新日が31日より前 | ### シーズン24：黄昏の旅路 開催日(日本時間) 2026/9/8(火)10:00 〜 12/1(火)10:00 公式発表 目次 - イベントまとめ - タ |  |  |  |
