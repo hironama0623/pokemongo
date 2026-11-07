@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/11/08 00:31 JST",
+  "updated_at": "2026/11/08 01:00 JST",
   "latest_news": [
     {
       "id": "news-393b1d0a2d",
@@ -63,6 +63,86 @@
       "date_label": "11/8",
       "title": "【情報追加】2026FCソウルイベント(韓国)：タイムチャレンジが判明・追加（1件）",
       "details": "タイムチャレンジ：対象地域へ行く→リザードン(ロケーション背景)・プレミアムバトルパス・ヒトカゲのアメ・ほしのすな",
+      "targetId": "ev-auto-2026-fc-seoul"
+    },
+    {
+      "id": "news-a4267f211e",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "title": "【新イベント】ワイルドエリア仙台Wayfarerタイムチャレンジ",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-wayfarer-sendai-2026"
+    },
+    {
+      "id": "news-a2d52c3294",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "title": "【情報追加】ワイルドエリア仙台Wayfarerタイムチャレンジ：タイムチャレンジが判明・追加（6件）",
+      "details": "タイムチャレンジ：レベル35に到達する→ダダリン、違うポケストップ・ジム36個を回す→経験値、ポケストップを編集する→ほしのすな、ポケストップを申請する→ほしのすな、15km探索する→ポケモンと遭遇、トレーナー1人とフレンドになる→ヌイコグマ",
+      "targetId": "ev-auto-wayfarer-sendai-2026"
+    },
+    {
+      "id": "news-9c7afdfde7",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：全タスク達成→ジャラランガ",
+      "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-d87a9871a1",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "title": "【情報追加】「ピクシー」の「スーパーメガレイド・デイ」：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：イベント期間中のタスク→メタグロス・プレミアムバトルパス",
+      "targetId": "ev-auto-clefable-super-mega-raid-day-2026"
+    },
+    {
+      "id": "news-65db42fd0b",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "title": "【情報追加】光の祭典(インド)：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：インド現地で無料の分岐型タイムチャレンジ→経験値・ほしのすな・ステッカー・ピカチュウ(フェスティバルオブライト2025)・ピカチュウ(フェスティバルオブライト2024)",
+      "targetId": "ev-auto-festival-of-lights-india-2026"
+    },
+    {
+      "id": "news-f4ed0d317c",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "title": "【情報追加】「黄昏時の願い」＆ スーパーメガレイドデイ：フィールドリサーチが判明・追加（1件）",
+      "details": "フィールドリサーチ：イベント限定フィールドリサーチ→ヒトデマン・リグレー",
+      "targetId": "ev-tusk-wish-deoxys"
+    },
+    {
+      "id": "news-00f40fdc2d",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "title": "【情報追加】イオンハロウィンイベント：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：対象のイオンモールを訪れる（パート1：10/19-10/25、パート2：10/26-11/1）→ピカチュウ(魔女帽子)",
+      "targetId": "ev-auto-aeon-halloween-2026"
+    },
+    {
+      "id": "news-4082a8840d",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "title": "【日程変更】ギラティナ(オリジン) ＆ メガヤミラミ レイド",
+      "details": "日程が更新されています：2026-10-28〜2026-11-03 → 2026-10-28〜2026-11-04",
+      "targetId": "ev-raid-giratina-o"
+    },
+    {
+      "id": "news-80ddf67d7b",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "title": "【情報追加】メテノシャワー：野生が判明・追加（1件）",
+      "details": "野生：メテノ(りゅうせいのすがた)",
+      "targetId": "ev-auto-meteor-shower-2026"
+    },
+    {
+      "id": "news-c51ebb2625",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "title": "【情報追加】2026FCソウルイベント(韓国)：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：対象地域へ行く→XP",
       "targetId": "ev-auto-2026-fc-seoul"
     },
     {
@@ -3329,6 +3409,20 @@
         "rewardName": "リグレー",
         "shiny": true,
         "note": "出典: gamewith"
+      },
+      {
+        "task": "イベント限定フィールドリサーチ",
+        "rewardDex": 120,
+        "rewardName": "ヒトデマン",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "イベント限定フィールドリサーチ",
+        "rewardDex": 605,
+        "rewardName": "リグレー",
+        "shiny": true,
+        "note": "出典: gamewith"
       }
     ],
     "ev-auto-fall-marathon-buddy-trek-2026": [
@@ -5939,6 +6033,12 @@
           "name": "メテノ(緑)",
           "shiny": true,
           "note": "オリオン座流星群期間中に出現"
+        },
+        {
+          "dex": 774,
+          "name": "メテノ(りゅうせいのすがた)",
+          "shiny": true,
+          "note": "17時から21時に出現率アップ"
         }
       ]
     },
@@ -7836,6 +7936,24 @@
       "hasPaid": false,
       "dateText": "2026年11月7日",
       "summary": "キョダイマックスジュラルドンのマックスバトルが早朝から開始！仙台にて出現中！",
+      "freeFeatures": [],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-wayfarer-sendai-2026",
+      "month": 11,
+      "title": "ワイルドエリア仙台Wayfarerタイムチャレンジ",
+      "barClass": "bar-collab",
+      "category": "collab",
+      "startDay": 6,
+      "endDay": 8,
+      "hasPaid": false,
+      "dateText": "2026年11月6日(金)〜8日(日) 各日10:00~18:00",
+      "summary": "ワイルドエリア仙台のイベント会場でWayfarerブースを訪れると入手できるタイムチャレンジ。",
       "freeFeatures": [],
       "paidFeatures": [],
       "wilds": [],

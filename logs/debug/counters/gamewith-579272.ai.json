@@ -4,129 +4,129 @@
   {
    "name": "ダイマックスパルキア",
    "kind": "dmax",
-   "tier": "星5",
+   "tier": "★5",
    "types": [],
    "counters": [
     {
      "name": "ハピナス",
      "rank": 1,
      "role": "tank",
-     "tag": "dmax",
+     "tag": "normal",
      "fast": "はたく",
      "charged": null,
      "dps": null,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "ムゲンダイナ",
-     "rank": 3,
+     "rank": 2,
      "role": "attacker",
-     "tag": "dmax",
+     "tag": "normal",
      "fast": "ドラゴンテール",
      "charged": null,
      "dps": null,
      "tdo": null,
-     "note": ""
+     "note": null
+    },
+    {
+     "name": "パルキア",
+     "rank": 3,
+     "role": "tank",
+     "tag": "normal",
+     "fast": null,
+     "charged": null,
+     "dps": null,
+     "tdo": null,
+     "note": "タンク役として最適"
     },
     {
      "name": "ラティオス",
-     "rank": 2,
+     "rank": 4,
      "role": "attacker",
-     "tag": "dmax",
+     "tag": "normal",
      "fast": "りゅうのいぶき",
      "charged": null,
      "dps": null,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "サザンドラ",
-     "rank": 3,
+     "rank": 5,
      "role": "attacker",
-     "tag": "dmax",
+     "tag": "normal",
      "fast": "りゅうのいぶき",
      "charged": null,
      "dps": null,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "ジュラルドン",
-     "rank": 4,
+     "rank": 6,
      "role": "attacker",
-     "tag": "dmax",
+     "tag": "normal",
      "fast": "ドラゴンテール",
      "charged": null,
      "dps": null,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "サーナイト",
-     "rank": 5,
+     "rank": 7,
      "role": "attacker",
-     "tag": "dmax",
+     "tag": "normal",
      "fast": "あまえる",
      "charged": null,
      "dps": null,
      "tdo": null,
-     "note": ""
-    },
-    {
-     "name": "ハピナス",
-     "rank": 6,
-     "role": "attacker",
-     "tag": "dmax",
-     "fast": "はたく",
-     "charged": null,
-     "dps": null,
-     "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "スイクン",
-     "rank": 7,
+     "rank": 8,
      "role": "attacker",
-     "tag": "dmax",
+     "tag": "normal",
      "fast": "みずでっぽう",
      "charged": null,
      "dps": null,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "ルギア",
-     "rank": 8,
+     "rank": 9,
      "role": "attacker",
-     "tag": "dmax",
+     "tag": "normal",
      "fast": "じんつうりき",
      "charged": null,
      "dps": null,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "ミロカロス",
-     "rank": 9,
+     "rank": 10,
      "role": "attacker",
-     "tag": "dmax",
+     "tag": "normal",
      "fast": "たきのぼり",
      "charged": null,
      "dps": null,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "ラティアス",
-     "rank": 10,
+     "rank": 11,
      "role": "attacker",
-     "tag": "dmax",
+     "tag": "normal",
      "fast": "りゅうのいぶき",
      "charged": null,
      "dps": null,
      "tdo": null,
-     "note": ""
+     "note": null
     }
    ]
   }
