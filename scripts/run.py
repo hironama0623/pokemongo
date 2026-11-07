@@ -149,11 +149,23 @@ def _tool_counters(now, log, state, counters, names, unresolved, getter, states_
             if page2:
                 links = tool2734.harvest_links(page2)
                 page = page2
-        id_names = extract.poke_id_names(page, getter)
+        id_names, how = extract.poke_id_names(page, getter), "日程ページ(静的)"
+        scripts_seen = []
+        if not id_names and getter is fetch.get:   # 図鑑データを読み込むスクリプトが静的HTMLに無いときは、描画後のHTML・別の9DB記事でも探す
+            for label, u in (("日程ページ(描画後)", config.SCHEDULE_URL), ("9DB対策記事(描画後)", "https://9db.jp/pokemongo/data/26434")):
+                h2, _s3, _e3 = fetch.get_rendered(u)
+                if h2:
+                    scripts_seen += [f"{label}: " + x for x in re.findall(r"<script[^>]*src=[\"']([^\"']+)", h2)[:40]]
+                    id_names = extract.poke_id_names(h2, getter)
+                    if id_names:
+                        how = label
+                        break
         d = config.LOGS / "debug"
         d.mkdir(parents=True, exist_ok=True)
         (d / "tool2734_links.txt").write_text("\n".join(f"{l['id']}\t{l['lv']}\t{id_names.get(l['id'], '?')}\t{'shadow' if l['boss_shadow'] else ''}\t{l['url']}" for l in links) or "(リンクなし)", encoding="utf-8")
-        log.note(f"対策ツール: 日程ページのリンク {len(links)} 件 / ポケモン名の対応表 {len(id_names)} 件")
+        log.note(f"対策ツール: 日程ページのリンク {len(links)} 件 / ポケモン名の対応表 {len(id_names)} 件（取得元: {how if id_names else 'なし'}）")
+        if not id_names:
+            (d / "tool2734_scripts.txt").write_text("\n".join(scripts_seen) or "(スクリプトなし)", encoding="utf-8")
         if not links or not id_names:
             return counters, False
         done = state.setdefault("tool2734", {})
