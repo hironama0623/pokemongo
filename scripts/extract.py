@@ -195,6 +195,23 @@ def parse_pokemon_list(js):
     return out
 
 
+def poke_id_names(html, getter):
+    """9DBページ（図鑑データのスクリプトを読み込んでいるもの）から {ID文字列: 名前} を得る。取れなければ {}。"""
+    m = _POKE_SRC.search(html or "")
+    if not m:
+        return {}
+    url = m.group(1)
+    if url.startswith("//"):
+        url = "https:" + url
+    names = _POKE_LIST_CACHE.get(url)
+    if names is None:
+        js, _status, _err = getter(url)
+        names = parse_pokemon_list(js) if js else {}
+        if names:
+            _POKE_LIST_CACHE[url] = names
+    return names or {}
+
+
 def resolve_wiki_poke(html, getter):
     """9DBの wiki_poke(数字ID) を名前に置換したHTMLを返す。対応表を取れない場合は元のHTMLのまま。"""
     if "wiki_poke" not in html and not _POKE_LINK.search(html):

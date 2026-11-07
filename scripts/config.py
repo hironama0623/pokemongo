@@ -95,9 +95,10 @@ def is_schedule_article(article):
     return article.get("url") == SCHEDULE_URL
 
 
-# 調査用: 9DBの「対策ポケモン」検索ツール(2734)は、結果表がJavaScript描画の可能性がある。描画後の中身を logs/debug/probe/ に保存して確認する（確認できたら空にする）
-PROBE_URLS = [
-    "https://9db.jp/pokemongo/data/2734?id=11998&lv=5&o=1&pl=40",
-    "https://9db.jp/pokemongo/data/2734?id=9699&lv=4m&o=1&pl=40",
-    "https://9db.jp/pokemongo/data/2734?id=1384&lv=3&o=1&pl=40&boss_shadow=1",
-]
+# 9DBの「対策ポケモン」検索ツール(2734)から、日程ページ(2308)のボスの対策を取る（描画が必要なので時間がかかる。1回の実行で件数と秒数に上限）
+TOOL_ENABLED = os.environ.get("TOOL_ENABLED", "1") == "1"
+TOOL_MAX_PER_RUN = int(os.environ.get("TOOL_MAX_PER_RUN", "6"))
+TOOL_BUDGET_SEC = int(os.environ.get("TOOL_BUDGET_SEC", "420"))
+TOOL_MIN_HOURS = int(os.environ.get("TOOL_MIN_HOURS", "20"))   # 同じボスの再取得間隔
+# 調査用URL（空なら調査しない）
+PROBE_URLS = []

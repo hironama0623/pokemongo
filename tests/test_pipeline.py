@@ -360,6 +360,49 @@ class ShadowNameKept(unittest.TestCase):
         self.assertFalse(ctr.valid_counter({"name": "通 常"}, names))
         self.assertFalse(ctr.valid_counter({"name": "メ ガ"}, names))
 
+class Tool2734(unittest.TestCase):
+    ROW = ('<tr role="row"><td class="wiki_pos_rel"><span class="wiki_rank">{r}</span><a href="data/{i}">undefined</a>{sh}</td>'
+           '<td class="wiki_left fs10"><a class="view_breakpoint_modal" data-shadow="{s}" href="#">{f}</a><br/>'
+           '<a class="view_breakpoint_modal" data-shadow="{s}" href="#">{c}</a>*</td>'
+           '<td><span class="fs14">{t}</span>秒</td><td><span class="fs14">{n}</span>匹</td><td><span class="fs14">3.9</span>回</td><td class="fs14 wiki_bold">{d}</td></tr>')
+    NAMES = {"10572": "ゾロアーク（ヒスイのすがた）", "7365": "ヒヒダルマ", "7374": "ケッキング", "11998": "ザマゼンタ（たてのおう）"}
+
+    def rows(self, spec):
+        return "<table>" + "".join(self.ROW.format(**x) for x in spec) + "</table>"
+
+    def test_links(self):
+        from scripts import tool2734 as t
+        html = '<a href="/pokemongo/data/2734?id=11998&amp;lv=5&amp;o=1&amp;pl=40">a</a><a href="data/2734?id=11998&lv=5">b</a><a href="2734?id=1384&lv=4m&boss_shadow=1">c</a>'
+        ls = t.harvest_links(html)
+        self.assertEqual([(l["id"], l["lv"], l["boss_shadow"]) for l in ls], [("11998", "5", False), ("1384", "4m", True)])
+        self.assertEqual(t.tier_of("4m"), "メガ")
+
+    def test_parse_combine_merge(self):
+        from scripts import tool2734 as t, counters as ctr, schemas
+        normal = self.rows([dict(r=1, i=10572, sh="", s=0, f="やきつくす", c="ビックリヘッド", t=220, n=8.2, d=22.7),
+                            dict(r=2, i=7374, sh="", s=0, f="けたぐり", c="しんぴのつるぎ", t=226, n=8.9, d=22.1)])
+        shadow = self.rows([dict(r=1, i=10572, sh="", s=0, f="やきつくす", c="ビックリヘッド", t=220, n=8.2, d=22.7),
+                            dict(r=2, i=7365, sh='<div class="pgo_shadow"> </div>', s=1, f="ほのおのキバ", c="クロスフレイム", t=224, n=9.6, d=22.4)])
+        rn, bad = t.parse_rows(normal, self.NAMES)
+        self.assertEqual((len(rn), bad), (2, set()))
+        rs, _ = t.parse_rows(shadow, self.NAMES)
+        self.assertEqual(rs[1]["name"], "シャドウヒヒダルマ")
+        self.assertEqual(rs[1]["tag"], "shadow")
+        boss = t.build_boss({"id": "11998", "lv": "5", "boss_shadow": False}, self.NAMES, {"normal": rn, "shadow": rs})
+        self.assertEqual([c["name"] for c in boss["counters"]], ["ゾロアーク（ヒスイのすがた）", "シャドウヒヒダルマ", "ケッキング"])   # 重複は1つ、DPS順
+        self.assertEqual(boss["tier"], "★5")
+        store = {"schema_version": 1, "bosses": {}}
+        names = {"ゾロアーク": 1, "ヒヒダルマ": 2, "ケッキング": 3, "ザマゼンタ": 4}
+        touched = ctr.merge_counters(store, {"bosses": [boss]}, {"site": t.SITE, "url": "u", "fetched_at": "x", "article_updated": None}, names, set(), NOW)
+        self.assertTrue(touched)
+        self.assertIsNone(schemas.validate("counters", store))
+
+    def test_unresolved_id_skipped(self):
+        from scripts import tool2734 as t
+        rows, bad = t.parse_rows(self.rows([dict(r=1, i=999, sh="", s=0, f="a", c="b", t=1, n=1, d=5)]), self.NAMES)
+        self.assertEqual((rows, bad), ([], {"999"}))
+
+
 if __name__ == "__main__":
     unittest.main()
 

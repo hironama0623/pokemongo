@@ -7,7 +7,7 @@ let GOPASS = null, META = null;
 const LOW_RAIDS = [];   // ★1・★3 のレイド（出現するかどうかだけ表示）
 const DATA_ERRORS = [];
 const EVENT_ALIAS = {};   // 統合で消えたイベントID -> 残ったイベントID（ニュースのジャンプ先に使う）
-const SITE_LABEL = { pokemapi: "ポケマピ", gamewith: "GameWith", "9db": "9DB", official: "公式" };
+const SITE_LABEL = { pokemapi: "ポケマピ", gamewith: "GameWith", "9db": "9DB", "9db-tool": "9DB対策ツール", official: "公式" };
 const DOW = ["日", "月", "火", "水", "木", "金", "土"];
 
 async function loadJSON(path, fallback) {

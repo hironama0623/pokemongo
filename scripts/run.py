@@ -16,7 +16,7 @@ import sys
 import time
 
 from . import analyze as an
-from . import compat, config, counters as ctr, extract, fetch, merge, pokedex, schemas, store
+from . import compat, config, counters as ctr, extract, fetch, merge, pokedex, schemas, store, tool2734
 from .logger import RunLog
 
 
@@ -132,6 +132,66 @@ def _probe(urls, log, render_getter=None):
             log.note(f"調査取得 {u}: html {len(html)}字 / 本文 {len(text)}字 / DPS={'DPS' in text} TDO={'TDO' in text}")
         except Exception as ex:  # noqa: BLE001
             log.note(f"調査取得で例外 {u}: {type(ex).__name__}: {str(ex)[:120]}")
+
+
+def _tool_counters(now, log, state, counters, names, unresolved, getter, states_getter):
+    """9DBの対策検索ツール(2734)から、日程ページ(2308)に載っているボスの対策を取る。1回の実行では時間と件数に上限を置き、古いものから順に更新する。
+    戻り値: (counters, 更新したか)。失敗しても本処理は止めない。"""
+    changed = False
+    try:
+        page, _st, err = getter(config.SCHEDULE_URL)
+        if not page:
+            log.note(f"対策ツール: 日程ページを取得できません: {err}")
+            return counters, False
+        links = tool2734.harvest_links(page)
+        if not links and getter is fetch.get:   # 静的HTMLにリンクが無いときは描画後のHTMLでも探す
+            page2, _s2, _e2 = fetch.get_rendered(config.SCHEDULE_URL)
+            if page2:
+                links = tool2734.harvest_links(page2)
+                page = page2
+        id_names = extract.poke_id_names(page, getter)
+        d = config.LOGS / "debug"
+        d.mkdir(parents=True, exist_ok=True)
+        (d / "tool2734_links.txt").write_text("\n".join(f"{l['id']}\t{l['lv']}\t{id_names.get(l['id'], '?')}\t{'shadow' if l['boss_shadow'] else ''}\t{l['url']}" for l in links) or "(リンクなし)", encoding="utf-8")
+        log.note(f"対策ツール: 日程ページのリンク {len(links)} 件 / ポケモン名の対応表 {len(id_names)} 件")
+        if not links or not id_names:
+            return counters, False
+        done = state.setdefault("tool2734", {})
+        todo = sorted((l for l in links if (done.get(l["url"]) or "") < (now - dt.timedelta(hours=config.TOOL_MIN_HOURS)).isoformat()), key=lambda l: done.get(l["url"]) or "")
+        t0, n_ok, n_ng = time.monotonic(), 0, 0
+        for l in todo[:config.TOOL_MAX_PER_RUN]:
+            if time.monotonic() - t0 > config.TOOL_BUDGET_SEC:
+                break
+            res, e2 = states_getter(l["url"])
+            by_state, bad_all = {}, set()
+            for st in ("normal", "shadow", "mega"):
+                if res.get(st):
+                    rows, bad = tool2734.parse_rows(res[st], id_names)
+                    by_state[st] = rows
+                    bad_all |= bad
+            boss = tool2734.build_boss(l, id_names, by_state)
+            if bad_all:
+                log.note(f"対策ツール: {l['id']} 名前を解決できないID {sorted(bad_all)[:8]}")
+            if not boss:
+                n_ng += 1
+                log.note(f"対策ツール: {l['id']} lv{l['lv']} 取得できず {e2 or ''} {[k for k in res if k.startswith('_err')]}")
+                done[l["url"]] = now.isoformat()   # 取れないページを毎回やり直さない（次は TOOL_MIN_HOURS 後）
+                continue
+            trial = copy.deepcopy(counters)
+            src = {"site": tool2734.SITE, "url": l["url"], "fetched_at": now.isoformat(), "article_updated": None}
+            touched = ctr.merge_counters(trial, {"bosses": [boss]}, src, names, unresolved, now)
+            if schemas.validate("counters", trial) is None and touched:
+                counters, changed = trial, True
+                n_ok += 1
+                done[l["url"]] = now.isoformat()
+                log.note(f"対策ツール: {boss['name']}（{boss['tier']}）{len(boss['counters'])}件 " + "/".join(f"{k}{len(v)}" for k, v in by_state.items()))
+            else:
+                n_ng += 1
+                log.note(f"対策ツール: {boss['name']} は検証に通らず保存しませんでした")
+        log.note(f"対策ツール: 取得 {n_ok} 件 / 失敗 {n_ng} 件 / 未処理 {max(0, len(todo) - n_ok - n_ng)} 件（次回以降に回します）")
+    except Exception as ex:  # noqa: BLE001
+        log.note(f"対策ツールの取得で例外: {type(ex).__name__}: {str(ex)[:150]}")
+    return counters, changed
 
 
 def run(now, log, diagnose=False, no_news=False, getter=fetch.get, llm=an.gemini_call, sleep=time.sleep, render_getter=None):
@@ -336,6 +396,10 @@ def run(now, log, diagnose=False, no_news=False, getter=fetch.get, llm=an.gemini
         analyzed_ok.append(art)
         e.update(action="analyzed", reason="; ".join(warns + [f"{c['section']}+{len(c['added'])}" for c in ch]) or "新情報なし")
         extra_counters(art, e)
+
+    if config.TOOL_ENABLED and getter is fetch.get:
+        counters, ch_t = _tool_counters(now, log, state, counters, names, unresolved, getter, fetch.render_states)
+        counters_changed = counters_changed or ch_t
 
     titles = {x["id"]: x["title"] for x in index}
     titles.update({k: v["title"] for k, v in events["events"].items()})

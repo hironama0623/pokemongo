@@ -259,3 +259,10 @@ logs/       run-YYYYMMDD-HHMM.json / latest.json / latest.md / unresolved_names.
 
 ## 2026-11-08 その2（状態ボタンの見つけ方）
 - c27 の実行で「状態」ボタンが0件しか見つからず、状態別の取得が全て失敗した（検索ボタンは見つかった）。「未実装」の文字を持つ要素から上にたどり、兄弟が3つ以上ある階層の末尾3つを 左=シャドウ / 中=メガ / 右=通常 として押す方式に変更。状態の周辺HTMLを `.section.txt` に保存して原因を追えるようにした。
+
+## 2026-11-08 その3（9DB対策ツール(2734)から対策を取る：c30）
+- 新規 `scripts/tool2734.py`。日程ページ(2308)の `2734?id=…&lv=…` リンクを集め、各ボスのページで状態ボタン（通常/シャドウ/メガ）を押して表を読む。ポケモン名は行のリンク `data/<ID>` を9DBの図鑑データ(pokemon_list)で名前に直す（`extract.poke_id_names`）。シャドウは `data-shadow=1` / `.pgo_shadow` で判定し名前に「シャドウ」を付ける。
+- 状態をまたいで（同じID・同じ通常/シャドウは1つに）まとめ、DPS順に順位を振って `data/counters.json` の site=`9db-tool` として保存（技・DPS・討伐時間・必要数。TDOは無い）。
+- 1回の実行は最大 `TOOL_MAX_PER_RUN`=6 ボス・`TOOL_BUDGET_SEC`=420秒。同じボスは `TOOL_MIN_HOURS`=20時間は再取得しない（state.json の `tool2734`）。`TOOL_ENABLED=0` で停止。失敗しても本処理は止めない。
+- ログ: `logs/debug/tool2734_links.txt`（リンクID・レベル・解決した名前）。調査用 PROBE_URLS は空にした。
+- 画面: サイト表示名「9DB対策ツール」を追加。カードの通常/シャドウ/メガ別表示は既存の仕組みのまま。
