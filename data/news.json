@@ -36,6 +36,108 @@
       ]
     },
     {
+      "id": "news-a734da2658",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：フィールドリサーチが判明・追加（1件）",
+      "details": "フィールドリサーチ：15km探索する→ポケモン",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/587136",
+          "fetched_at": "2026-11-08T00:31:53.905260+09:00",
+          "article_updated": "2026-11-07T15:29:04+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-09882c9ba4",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "event_update",
+      "title": "【情報追加】「ピクシー」の「スーパーメガレイド・デイ」：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：タスクを完了する→メタグロス・プレミアムバトルパス",
+      "targetId": "ev-auto-clefable-super-mega-raid-day-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/586872",
+          "fetched_at": "2026-11-08T00:31:53.905260+09:00",
+          "article_updated": "2026-11-07T13:11:13+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-9feeb23799",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "event_update",
+      "title": "【情報追加】「黄昏時の願い」＆ スーパーメガレイドデイ：フィールドリサーチが判明・追加（1件）",
+      "details": "フィールドリサーチ：イベント限定のフィールドリサーチタスクをクリアする→メガエナジー・ヒトデマン・リグレー",
+      "targetId": "ev-tusk-wish-deoxys",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/586413",
+          "fetched_at": "2026-11-08T00:31:53.905260+09:00",
+          "article_updated": "2026-11-05T13:34:20+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-135e924dcf",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "event_update",
+      "title": "【情報追加】イオンハロウィンイベント：レイドが判明・追加（1件）",
+      "details": "レイド：シャンデラ",
+      "targetId": "ev-auto-aeon-halloween-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/579901",
+          "fetched_at": "2026-11-08T00:31:53.905260+09:00",
+          "article_updated": "2026-11-01T22:12:11+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-be12c58058",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "event_update",
+      "title": "【情報追加】イオンハロウィンイベント：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：イベント期間中に対象のイオンモールを訪れる（パート1：10月19日〜10月25日、パート2：10月26日〜11月1日）→ピカチュウ(魔女帽子)",
+      "targetId": "ev-auto-aeon-halloween-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/579901",
+          "fetched_at": "2026-11-08T00:31:53.905260+09:00",
+          "article_updated": "2026-11-01T22:12:11+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-89fef2eb20",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "event_update",
+      "title": "【情報追加】2026FCソウルイベント(韓国)：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：対象地域へ行く→リザードン(ロケーション背景)・プレミアムバトルパス・ヒトカゲのアメ・ほしのすな",
+      "targetId": "ev-auto-2026-fc-seoul",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/580639",
+          "fetched_at": "2026-11-08T00:31:53.905260+09:00",
+          "article_updated": "2026-10-09T07:01:08+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-27e2e8643b",
       "date": "2026-11-07",
       "date_label": "11/7",
@@ -950,6 +1052,12 @@
           "url": "https://pokemongo.com/ja/news/clefable-super-mega-raid-day-2026",
           "fetched_at": "2026-11-06T12:46:20.236820+09:00",
           "article_updated": null
+        },
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/586872",
+          "fetched_at": "2026-11-08T00:31:53.905260+09:00",
+          "article_updated": "2026-11-07T13:11:13+09:00"
         }
       ]
     },

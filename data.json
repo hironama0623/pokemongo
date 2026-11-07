@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/11/08 00:02 JST",
+  "updated_at": "2026/11/08 00:31 JST",
   "latest_news": [
     {
       "id": "news-393b1d0a2d",
@@ -16,6 +16,54 @@
       "title": "【情報追加】ポケモンナイトアウト：タイムチャレンジが判明・追加（1件）",
       "details": "タイムチャレンジ：TwitchDrops→ポケモンナイトアウト野球ジャージ",
       "targetId": "ev-auto-pokemon-night-out"
+    },
+    {
+      "id": "news-a734da2658",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：フィールドリサーチが判明・追加（1件）",
+      "details": "フィールドリサーチ：15km探索する→ポケモン",
+      "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-09882c9ba4",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "title": "【情報追加】「ピクシー」の「スーパーメガレイド・デイ」：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：タスクを完了する→メタグロス・プレミアムバトルパス",
+      "targetId": "ev-auto-clefable-super-mega-raid-day-2026"
+    },
+    {
+      "id": "news-9feeb23799",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "title": "【情報追加】「黄昏時の願い」＆ スーパーメガレイドデイ：フィールドリサーチが判明・追加（1件）",
+      "details": "フィールドリサーチ：イベント限定のフィールドリサーチタスクをクリアする→メガエナジー・ヒトデマン・リグレー",
+      "targetId": "ev-tusk-wish-deoxys"
+    },
+    {
+      "id": "news-135e924dcf",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "title": "【情報追加】イオンハロウィンイベント：レイドが判明・追加（1件）",
+      "details": "レイド：シャンデラ",
+      "targetId": "ev-auto-aeon-halloween-2026"
+    },
+    {
+      "id": "news-be12c58058",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "title": "【情報追加】イオンハロウィンイベント：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：イベント期間中に対象のイオンモールを訪れる（パート1：10月19日〜10月25日、パート2：10月26日〜11月1日）→ピカチュウ(魔女帽子)",
+      "targetId": "ev-auto-aeon-halloween-2026"
+    },
+    {
+      "id": "news-89fef2eb20",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "title": "【情報追加】2026FCソウルイベント(韓国)：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：対象地域へ行く→リザードン(ロケーション背景)・プレミアムバトルパス・ヒトカゲのアメ・ほしのすな",
+      "targetId": "ev-auto-2026-fc-seoul"
     },
     {
       "id": "news-27e2e8643b",
@@ -3260,6 +3308,27 @@
         "rewardName": "アノクサ",
         "shiny": false,
         "note": "出典: gamewith"
+      },
+      {
+        "task": "イベント限定のフィールドリサーチタスクをクリアする",
+        "rewardDex": 25,
+        "rewardName": "メガエナジー",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "イベント限定のフィールドリサーチタスクをクリアする",
+        "rewardDex": 120,
+        "rewardName": "ヒトデマン",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "イベント限定のフィールドリサーチタスクをクリアする",
+        "rewardDex": 605,
+        "rewardName": "リグレー",
+        "shiny": true,
+        "note": "出典: gamewith"
       }
     ],
     "ev-auto-fall-marathon-buddy-trek-2026": [
@@ -3725,6 +3794,13 @@
         "rewardDex": 25,
         "rewardName": "ポケモンと遭遇",
         "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "15km探索する",
+        "rewardDex": 25,
+        "rewardName": "ポケモン",
+        "shiny": false,
         "note": "出典: gamewith"
       },
       {
