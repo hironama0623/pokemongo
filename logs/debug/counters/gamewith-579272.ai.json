@@ -5,10 +5,7 @@
    "name": "ダイマックスパルキア",
    "kind": "dmax",
    "tier": "★5",
-   "types": [
-    "ドラゴン",
-    "みず"
-   ],
+   "types": [],
    "counters": [
     {
      "name": "ハピナス",
@@ -19,21 +16,32 @@
      "charged": null,
      "dps": null,
      "tdo": null,
-     "note": null
+     "note": ""
     },
     {
      "name": "ムゲンダイナ",
-     "rank": 2,
+     "rank": 3,
      "role": "attacker",
      "tag": "normal",
      "fast": "ドラゴンテール",
      "charged": null,
      "dps": null,
      "tdo": null,
-     "note": null
+     "note": ""
     },
     {
      "name": "ラティオス",
+     "rank": 2,
+     "role": "attacker",
+     "tag": "normal",
+     "fast": "りゅうのいぶき",
+     "charged": null,
+     "dps": null,
+     "tdo": null,
+     "note": ""
+    },
+    {
+     "name": "サザンドラ",
      "rank": 3,
      "role": "attacker",
      "tag": "normal",
@@ -41,40 +49,40 @@
      "charged": null,
      "dps": null,
      "tdo": null,
-     "note": null
-    },
-    {
-     "name": "サザンドラ",
-     "rank": 4,
-     "role": "attacker",
-     "tag": "normal",
-     "fast": "りゅうのいぶき",
-     "charged": null,
-     "dps": null,
-     "tdo": null,
-     "note": null
+     "note": ""
     },
     {
      "name": "ジュラルドン",
-     "rank": 5,
+     "rank": 4,
      "role": "attacker",
      "tag": "normal",
      "fast": "ドラゴンテール",
      "charged": null,
      "dps": null,
      "tdo": null,
-     "note": null
+     "note": ""
     },
     {
      "name": "サーナイト",
-     "rank": 6,
+     "rank": 5,
      "role": "attacker",
      "tag": "normal",
      "fast": "あまえる",
      "charged": null,
      "dps": null,
      "tdo": null,
-     "note": null
+     "note": ""
+    },
+    {
+     "name": "ハピナス",
+     "rank": 6,
+     "role": "attacker",
+     "tag": "normal",
+     "fast": "はたく",
+     "charged": null,
+     "dps": null,
+     "tdo": null,
+     "note": ""
     },
     {
      "name": "スイクン",
@@ -85,7 +93,7 @@
      "charged": null,
      "dps": null,
      "tdo": null,
-     "note": null
+     "note": ""
     },
     {
      "name": "ルギア",
@@ -96,7 +104,7 @@
      "charged": null,
      "dps": null,
      "tdo": null,
-     "note": null
+     "note": ""
     },
     {
      "name": "ミロカロス",
@@ -107,7 +115,7 @@
      "charged": null,
      "dps": null,
      "tdo": null,
-     "note": null
+     "note": ""
     },
     {
      "name": "ラティアス",
@@ -118,18 +126,7 @@
      "charged": null,
      "dps": null,
      "tdo": null,
-     "note": null
-    },
-    {
-     "name": "パルキア",
-     "rank": 11,
-     "role": "tank",
-     "tag": "normal",
-     "fast": null,
-     "charged": null,
-     "dps": null,
-     "tdo": null,
-     "note": "タンク役として最適"
+     "note": ""
     }
    ]
   }

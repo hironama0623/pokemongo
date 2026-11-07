@@ -171,6 +171,39 @@
      "dps": 33.86,
      "tdo": null,
      "note": ""
+    },
+    {
+     "name": "メガライチュウY",
+     "rank": 11,
+     "role": "attacker",
+     "tag": "mega",
+     "fast": "でんきショック",
+     "charged": "でんじほう+",
+     "dps": null,
+     "tdo": null,
+     "note": ""
+    },
+    {
+     "name": "メガライボルト",
+     "rank": 12,
+     "role": "attacker",
+     "tag": "mega",
+     "fast": "かみなりのキバ",
+     "charged": "ほうでん+",
+     "dps": null,
+     "tdo": null,
+     "note": ""
+    },
+    {
+     "name": "メガライチュウX",
+     "rank": 13,
+     "role": "attacker",
+     "tag": "mega",
+     "fast": "でんきショック",
+     "charged": "ボルテッカー+",
+     "dps": null,
+     "tdo": null,
+     "note": ""
     }
    ]
   }

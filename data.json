@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/11/07 21:30 JST",
+  "updated_at": "2026/11/07 22:08 JST",
   "latest_news": [
     {
       "id": "news-27e2e8643b",
@@ -280,6 +280,62 @@
       "title": "【情報追加】2026FCソウルイベント(韓国)：タイムチャレンジが判明・追加（1件）",
       "details": "タイムチャレンジ：イベント期間中に対象地域へ行く→リザードン",
       "targetId": "ev-auto-2026-fc-seoul"
+    },
+    {
+      "id": "news-6837d6b7ea",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：フィールドリサーチが判明・追加（5件）",
+      "details": "フィールドリサーチ：ドラゴンタイプテーマの ポケストップ2個を回す→キングドラ(ロケーション背景)、ドラゴンタイプテーマの ポケストップ4個を回す→アローラナッシー(ロケーション背景)、ドラゴンタイプテーマの ポケストップ6個を回す→フライゴン(ロケーション背景)、ドラゴンタイプテーマの ポケストップ8個を回す→サザンドラ(ロケーション背景)、ドラゴンタイプテーマの ポケストップ10個を回す→ヌメルゴン(ロケーション背景)",
+      "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-549181ea19",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "title": "【情報追加】GOワイルドエリア：キョダイマックスカイリキータイムチャレンジ：タイムチャレンジが判明・追加（4件）",
+      "details": "タイムチャレンジ：2日にわたってポケモンを捕まえる→ワンリキーのアメ、3日にわたってポケモンを捕まえる→マックス粒子、4日にわたってポケモンを捕まえる→ワンリキーのアメXL、5日にわたってポケモンを捕まえる→マックス粒子",
+      "targetId": "ev-auto-wild-area-2026-free-time-challenge"
+    },
+    {
+      "id": "news-b63174671c",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "title": "【情報追加】「黄昏時の願い」＆ スーパーメガレイドデイ：フィールドリサーチが判明・追加（2件）",
+      "details": "フィールドリサーチ：黄昏の旅路シーズンのポケモンと出会えるフィールドリサーチ(11月24日10:00~11月26日10:00)→カジッチュ・オラチフ、黄昏の旅路シーズンのポケモンと出会えるフィールドリサーチ(11月26日10:00~11月30日20:00)→ゲンガー(魔女帽子)・フワライド(ハロウィン)・アノクサ",
+      "targetId": "ev-tusk-wish-deoxys"
+    },
+    {
+      "id": "news-f88413fd9b",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "title": "【日程変更】ワイルドエリア2026：メキシコシティ",
+      "details": "日程が更新されています：2026-11-06〜2026-11-08 → 2026-11-01〜2026-11-06",
+      "targetId": "ev-auto-wild-area-2026-mexico-city"
+    },
+    {
+      "id": "news-e43ef6063d",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "title": "【情報追加】ワイルドエリア2026：メキシコシティ：レイドが判明・追加（1件）",
+      "details": "レイド：キョダイゲンガー",
+      "targetId": "ev-auto-wild-area-2026-mexico-city"
+    },
+    {
+      "id": "news-1144a8ee26",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "title": "【情報追加】Día de Muertos 2026（死者の日2026）：タイムチャレンジが判明・追加（3件）",
+      "details": "タイムチャレンジ：無料タイムチャレンジ→死者のお祝いステッカー(インスティンクト)、無料タイムチャレンジ→死者のお祝いステッカー(ヴァーラー)、無料タイムチャレンジ→死者のお祝いステッカー(ミスティック)",
+      "targetId": "ev-auto-dia-de-muertos-2026"
+    },
+    {
+      "id": "news-0ec422cc2b",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "title": "【情報追加】LAIC2027配信ボーナスタイムチャレンジ：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：Twitchのライブ配信30分以上視聴→ダイケンキ(ハイドロカノン)",
+      "targetId": "ev-auto-laic2027-twitch-drops"
     },
     {
       "id": "news-99e5eb21e6",
@@ -3081,6 +3137,41 @@
         "rewardName": "アノクサ",
         "shiny": false,
         "note": "出典: gamewith"
+      },
+      {
+        "task": "黄昏の旅路シーズンのポケモンと出会えるフィールドリサーチ(11月24日10:00~11月26日10:00)",
+        "rewardDex": 840,
+        "rewardName": "カジッチュ",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "黄昏の旅路シーズンのポケモンと出会えるフィールドリサーチ(11月24日10:00~11月26日10:00)",
+        "rewardDex": 942,
+        "rewardName": "オラチフ",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "黄昏の旅路シーズンのポケモンと出会えるフィールドリサーチ(11月26日10:00~11月30日20:00)",
+        "rewardDex": 94,
+        "rewardName": "ゲンガー(魔女帽子)",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "黄昏の旅路シーズンのポケモンと出会えるフィールドリサーチ(11月26日10:00~11月30日20:00)",
+        "rewardDex": 426,
+        "rewardName": "フワライド(ハロウィン)",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "黄昏の旅路シーズンのポケモンと出会えるフィールドリサーチ(11月26日10:00~11月30日20:00)",
+        "rewardDex": 946,
+        "rewardName": "アノクサ",
+        "shiny": false,
+        "note": "出典: gamewith"
       }
     ],
     "ev-auto-fall-marathon-buddy-trek-2026": [
@@ -3157,6 +3248,13 @@
         "note": "出典: gamewith・pokemapi"
       },
       {
+        "task": "ドラゴンタイプテーマのポケストップ2個を回す",
+        "rewardDex": 230,
+        "rewardName": "キングドラ(ロケーション背景)",
+        "shiny": false,
+        "note": "出典: gamewith・pokemapi"
+      },
+      {
         "task": "ドラゴンタイプテーマのポケストップ3個を回す",
         "rewardDex": 25,
         "rewardName": "ほしのすな",
@@ -3174,6 +3272,13 @@
         "task": "ドラゴンタイプテーマのポケストップ4個を回す",
         "rewardDex": 103,
         "rewardName": "アローラナッシー",
+        "shiny": false,
+        "note": "出典: gamewith・pokemapi"
+      },
+      {
+        "task": "ドラゴンタイプテーマのポケストップ4個を回す",
+        "rewardDex": 103,
+        "rewardName": "アローラナッシー(ロケーション背景)",
         "shiny": false,
         "note": "出典: gamewith・pokemapi"
       },
@@ -3199,6 +3304,13 @@
         "note": "出典: gamewith・pokemapi"
       },
       {
+        "task": "ドラゴンタイプテーマのポケストップ6個を回す",
+        "rewardDex": 330,
+        "rewardName": "フライゴン(ロケーション背景)",
+        "shiny": false,
+        "note": "出典: gamewith・pokemapi"
+      },
+      {
         "task": "ドラゴンタイプテーマのポケストップ7個を回す",
         "rewardDex": 25,
         "rewardName": "きんのズリのみ",
@@ -3220,6 +3332,13 @@
         "note": "出典: gamewith・pokemapi"
       },
       {
+        "task": "ドラゴンタイプテーマのポケストップ8個を回す",
+        "rewardDex": 635,
+        "rewardName": "サザンドラ(ロケーション背景)",
+        "shiny": false,
+        "note": "出典: gamewith・pokemapi"
+      },
+      {
         "task": "ドラゴンタイプテーマのポケストップ9個を回す",
         "rewardDex": 25,
         "rewardName": "ぎんのパイルのみ",
@@ -3237,6 +3356,13 @@
         "task": "ドラゴンタイプテーマのポケストップ10個を回す",
         "rewardDex": 706,
         "rewardName": "ヌメルゴン",
+        "shiny": false,
+        "note": "出典: gamewith・pokemapi"
+      },
+      {
+        "task": "ドラゴンタイプテーマのポケストップ10個を回す",
+        "rewardDex": 706,
+        "rewardName": "ヌメルゴン(ロケーション背景)",
         "shiny": false,
         "note": "出典: gamewith・pokemapi"
       },

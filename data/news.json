@@ -597,6 +597,125 @@
       ]
     },
     {
+      "id": "news-6837d6b7ea",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：フィールドリサーチが判明・追加（5件）",
+      "details": "フィールドリサーチ：ドラゴンタイプテーマの ポケストップ2個を回す→キングドラ(ロケーション背景)、ドラゴンタイプテーマの ポケストップ4個を回す→アローラナッシー(ロケーション背景)、ドラゴンタイプテーマの ポケストップ6個を回す→フライゴン(ロケーション背景)、ドラゴンタイプテーマの ポケストップ8個を回す→サザンドラ(ロケーション背景)、ドラゴンタイプテーマの ポケストップ10個を回す→ヌメルゴン(ロケーション背景)",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/586995",
+          "fetched_at": "2026-11-07T22:08:27.289385+09:00",
+          "article_updated": "2026-11-07T13:37:15+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-549181ea19",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "kind": "event_update",
+      "title": "【情報追加】GOワイルドエリア：キョダイマックスカイリキータイムチャレンジ：タイムチャレンジが判明・追加（4件）",
+      "details": "タイムチャレンジ：2日にわたってポケモンを捕まえる→ワンリキーのアメ、3日にわたってポケモンを捕まえる→マックス粒子、4日にわたってポケモンを捕まえる→ワンリキーのアメXL、5日にわたってポケモンを捕まえる→マックス粒子",
+      "targetId": "ev-auto-wild-area-2026-free-time-challenge",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/586873",
+          "fetched_at": "2026-11-07T22:08:27.289385+09:00",
+          "article_updated": "2026-11-06T10:11:28+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-b63174671c",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "kind": "event_update",
+      "title": "【情報追加】「黄昏時の願い」＆ スーパーメガレイドデイ：フィールドリサーチが判明・追加（2件）",
+      "details": "フィールドリサーチ：黄昏の旅路シーズンのポケモンと出会えるフィールドリサーチ(11月24日10:00~11月26日10:00)→カジッチュ・オラチフ、黄昏の旅路シーズンのポケモンと出会えるフィールドリサーチ(11月26日10:00~11月30日20:00)→ゲンガー(魔女帽子)・フワライド(ハロウィン)・アノクサ",
+      "targetId": "ev-tusk-wish-deoxys",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/586413",
+          "fetched_at": "2026-11-07T22:08:27.289385+09:00",
+          "article_updated": "2026-11-05T13:34:20+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-f88413fd9b",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "kind": "schedule_changed",
+      "title": "【日程変更】ワイルドエリア2026：メキシコシティ",
+      "details": "日程が更新されています：2026-11-06〜2026-11-08 → 2026-11-01〜2026-11-06",
+      "targetId": "ev-auto-wild-area-2026-mexico-city",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/584389",
+          "fetched_at": "2026-11-07T22:08:27.289385+09:00",
+          "article_updated": "2026-11-02T07:51:25+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-e43ef6063d",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：メキシコシティ：レイドが判明・追加（1件）",
+      "details": "レイド：キョダイゲンガー",
+      "targetId": "ev-auto-wild-area-2026-mexico-city",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/584389",
+          "fetched_at": "2026-11-07T22:08:27.289385+09:00",
+          "article_updated": "2026-11-02T07:51:25+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-1144a8ee26",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "kind": "event_update",
+      "title": "【情報追加】Día de Muertos 2026（死者の日2026）：タイムチャレンジが判明・追加（3件）",
+      "details": "タイムチャレンジ：無料タイムチャレンジ→死者のお祝いステッカー(インスティンクト)、無料タイムチャレンジ→死者のお祝いステッカー(ヴァーラー)、無料タイムチャレンジ→死者のお祝いステッカー(ミスティック)",
+      "targetId": "ev-auto-dia-de-muertos-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/584390",
+          "fetched_at": "2026-11-07T22:08:27.289385+09:00",
+          "article_updated": "2026-10-29T05:15:19+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-0ec422cc2b",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "kind": "event_update",
+      "title": "【情報追加】LAIC2027配信ボーナスタイムチャレンジ：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：Twitchのライブ配信30分以上視聴→ダイケンキ(ハイドロカノン)",
+      "targetId": "ev-auto-laic2027-twitch-drops",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/583039",
+          "fetched_at": "2026-11-07T22:08:27.289385+09:00",
+          "article_updated": "2026-10-17T03:13:03+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-99e5eb21e6",
       "date": "2026-11-06",
       "date_label": "11/6",
