@@ -2,6 +2,40 @@
   "schema_version": 1,
   "items": [
     {
+      "id": "news-393b1d0a2d",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：フィールドリサーチが判明・追加（6件）",
+      "details": "フィールドリサーチ：レベル35に到達する→ダダリン、違うポケストップ・ジム36個を回す→経験値、ポケストップを編集する→ほしのすな、ポケストップを申請する→ほしのすな、15km探索する→ポケモンと遭遇、トレーナー1人とフレンドになる→ヌイコグマ",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/587136",
+          "fetched_at": "2026-11-08T00:02:17.791221+09:00",
+          "article_updated": "2026-11-07T15:29:04+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-573c315e59",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "event_update",
+      "title": "【情報追加】ポケモンナイトアウト：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：TwitchDrops→ポケモンナイトアウト野球ジャージ",
+      "targetId": "ev-auto-pokemon-night-out",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/583322",
+          "fetched_at": "2026-11-08T00:02:17.791221+09:00",
+          "article_updated": "2026-10-28T17:59:21+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-27e2e8643b",
       "date": "2026-11-07",
       "date_label": "11/7",

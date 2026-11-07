@@ -1,6 +1,22 @@
 {
-  "updated_at": "2026/11/07 23:34 JST",
+  "updated_at": "2026/11/08 00:02 JST",
   "latest_news": [
+    {
+      "id": "news-393b1d0a2d",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：フィールドリサーチが判明・追加（6件）",
+      "details": "フィールドリサーチ：レベル35に到達する→ダダリン、違うポケストップ・ジム36個を回す→経験値、ポケストップを編集する→ほしのすな、ポケストップを申請する→ほしのすな、15km探索する→ポケモンと遭遇、トレーナー1人とフレンドになる→ヌイコグマ",
+      "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-573c315e59",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "title": "【情報追加】ポケモンナイトアウト：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：TwitchDrops→ポケモンナイトアウト野球ジャージ",
+      "targetId": "ev-auto-pokemon-night-out"
+    },
     {
       "id": "news-27e2e8643b",
       "date": "2026-11-07",
@@ -3674,6 +3690,48 @@
         "rewardDex": 25,
         "rewardName": "ほしのかけら",
         "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "レベル35に到達する",
+        "rewardDex": 781,
+        "rewardName": "ダダリン",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "違うポケストップ・ジム36個を回す",
+        "rewardDex": 25,
+        "rewardName": "経験値",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "ポケストップを編集する",
+        "rewardDex": 25,
+        "rewardName": "ほしのすな",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "ポケストップを申請する",
+        "rewardDex": 25,
+        "rewardName": "ほしのすな",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "15km探索する",
+        "rewardDex": 25,
+        "rewardName": "ポケモンと遭遇",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "トレーナー1人とフレンドになる",
+        "rewardDex": 759,
+        "rewardName": "ヌイコグマ",
+        "shiny": true,
         "note": "出典: gamewith"
       }
     ],
