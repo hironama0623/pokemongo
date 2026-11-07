@@ -112,3 +112,68 @@ def close_renderer():
     except Exception:  # noqa: BLE001
         pass
     _pw = _browser = None
+
+
+_MARK_JS = """() => {
+  const lab = [...document.querySelectorAll('*')].find(e => e.children.length === 0 && e.textContent.trim() === '状態');
+  if (!lab) return 'no-label';
+  let cands = [lab.nextElementSibling, lab.parentElement && lab.parentElement.nextElementSibling, lab.parentElement].filter(Boolean);
+  for (const c of cands) {
+    const pool = [c, ...c.querySelectorAll('*')];
+    const box = pool.find(e => e.children.length === 3 && e.textContent.includes('未実装'));
+    if (box) { [...box.children].forEach((ch, i) => ch.setAttribute('data-probe-state', String(i))); }
+  }
+  const btn = [...document.querySelectorAll('button, input[type=button], input[type=submit], a, div, span')].find(e => e.children.length === 0 && (e.textContent || e.value || '').trim() === '検索');
+  if (btn) btn.setAttribute('data-probe-search', '1');
+  return document.querySelectorAll('[data-probe-state]').length + '/' + (btn ? 'search' : 'no-search');
+}"""
+
+
+def render_states(url, states=("normal", "shadow", "mega")):
+    """9DBの対策検索ツール用。ページを描画し、「状態」の3つのボタン（左=シャドウ / 中=メガ / 右=未実装=通常）を順に押して「検索」を押し、
+    状態ごとの描画後HTMLを返す。{state: html|None}, error|None。ボタンが見つからない場合は、押さずに最初の表だけ返す。"""
+    global _pw, _browser, _launch_error
+    out = {}
+    if _launch_error:
+        return out, _launch_error
+    try:
+        if _browser is None:
+            from playwright.sync_api import sync_playwright
+            _pw = sync_playwright().start()
+            try:
+                _browser = _pw.chromium.launch()
+            except Exception as e:  # noqa: BLE001
+                _pw.stop(); _pw = None
+                _launch_error = f"Chromiumを起動できません: {str(e)[:120]}"
+                return out, _launch_error
+        ctx = _browser.new_context(user_agent=config.UA, locale="ja-JP")
+        ctx.route("**/*", lambda r: r.abort() if r.request.resource_type in ("media", "font") else r.continue_())   # 画像は止めない（名前の手がかりが画像のため）
+        page = ctx.new_page()
+        try:
+            page.goto(url, wait_until="domcontentloaded", timeout=30000)
+            try:
+                page.wait_for_load_state("networkidle", timeout=8000)
+            except Exception:  # noqa: BLE001
+                pass
+            mark = page.evaluate(_MARK_JS)
+            out["_mark"] = mark
+            idx = {"shadow": 0, "mega": 1, "normal": 2}
+            for st in states:
+                try:
+                    page.locator(f'[data-probe-state="{idx[st]}"]').first.click(timeout=4000)
+                    page.locator('[data-probe-search="1"]').first.click(timeout=4000)
+                    page.wait_for_timeout(2500)
+                    try:
+                        page.wait_for_load_state("networkidle", timeout=6000)
+                    except Exception:  # noqa: BLE001
+                        pass
+                except Exception as e:  # noqa: BLE001
+                    out[st] = None
+                    out[f"_err_{st}"] = f"{type(e).__name__}: {str(e)[:100]}"
+                    continue
+                out[st] = page.content()
+        finally:
+            ctx.close()
+        return out, None
+    except Exception as e:  # noqa: BLE001
+        return out, f"{type(e).__name__}: {str(e)[:150]}"

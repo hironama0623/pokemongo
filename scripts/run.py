@@ -104,10 +104,30 @@ def _probe(urls, log, render_getter=None):
             if html is None:
                 log.note(f"調査取得に失敗 {u}: {err}")
                 continue
+            if "2734" in u and render_getter is None:   # 対策検索ツール: 状態（シャドウ/メガ/通常）ごとに押して検索した結果も保存
+                res, e2 = fetch.render_states(u)
+                d.mkdir(parents=True, exist_ok=True)
+                log.note(f"状態別の取得 {name}: {res.get('_mark')} {e2 or ''} " + " ".join(f"{k}={'ok' if v else 'NG'}" for k, v in res.items() if not k.startswith('_')) + " " + " ".join(f"{k}:{v}" for k, v in res.items() if k.startswith('_err')))
+                for st in ("normal", "shadow", "mega"):
+                    h = res.get(st)
+                    if h:
+                        t2, sp, _raw = extract.html_to_text(h)
+                        (d / f"{name}.{st}.txt").write_text(t2[-9000:], encoding="utf-8")
+                        hits = [el for el in sp.find_all(True) if "匹" in el.get_text() and "秒" in el.get_text() and len(el.get_text()) < 160]
+                        rws = [el for el in hits if not any(c in hits for c in el.find_all(True))][:2]
+                        (d / f"{name}.{st}.rows.txt").write_text("\n\n".join(str(r)[:2500] for r in rws) or "(該当なし)", encoding="utf-8")
             d.mkdir(parents=True, exist_ok=True)
             text, _soup, _raw = extract.html_to_text(html)
             (d / f"{name}.html").write_text(html[:600000], encoding="utf-8")
             (d / f"{name}.txt").write_text(text[:20000], encoding="utf-8")
+            try:   # 結果表の1行ぶんのHTML（ポケモン名が画像のとき、どこに名前/図鑑番号の手がかりがあるかを見る）
+                from bs4 import BeautifulSoup
+                soup = BeautifulSoup(html, "html.parser")
+                hits = [el for el in soup.find_all(True) if "匹" in el.get_text() and "秒" in el.get_text() and len(el.get_text()) < 160]
+                rows = [el for el in hits if not any(c in hits for c in el.find_all(True))][:3]
+                (d / f"{name}.rows.txt").write_text("\n\n".join(str(r)[:2500] for r in rows) or "(該当なし)", encoding="utf-8")
+            except Exception as ex:  # noqa: BLE001
+                (d / f"{name}.rows.txt").write_text(f"行の抽出に失敗: {ex}", encoding="utf-8")
             log.note(f"調査取得 {u}: html {len(html)}字 / 本文 {len(text)}字 / DPS={'DPS' in text} TDO={'TDO' in text}")
         except Exception as ex:  # noqa: BLE001
             log.note(f"調査取得で例外 {u}: {type(ex).__name__}: {str(ex)[:120]}")
