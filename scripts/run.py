@@ -196,7 +196,12 @@ def _tool_counters(now, log, state, counters, names, unresolved, getter, states_
                 counters, changed = trial, True
                 n_ok += 1
                 done[l["url"]] = now.isoformat()
-                log.note(f"対策ツール: {boss['name']}（{boss['tier']}）{len(boss['counters'])}件 " + "/".join(f"{k}{len(v)}" for k, v in by_state.items()))
+                tc = lambda rows: "/".join(str(sum(1 for r in rows if r["tag"] == t)) for t in ("normal", "shadow", "mega"))   # 通常/シャドウ/メガの行数
+                log.note(f"対策ツール: {boss['name']}（{boss['tier']}）{len(boss['counters'])}件 " + " ".join(f"{k}行={tc(v)}" for k, v in by_state.items()) + f" → 保存={tc(boss['counters'])}（通常/シャドウ/メガ）")
+                try:
+                    (config.LOGS / "debug" / f"tool2734_{l['id']}_{l['lv']}.json").write_text(json.dumps({"boss": boss, "states": by_state}, ensure_ascii=False, indent=1), encoding="utf-8")
+                except OSError:
+                    pass
             else:
                 n_ng += 1
                 log.note(f"対策ツール: {boss['name']} は検証に通らず保存しませんでした")
