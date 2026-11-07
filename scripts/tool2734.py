@@ -19,6 +19,14 @@ _ID = re.compile(r"data/(\d+)")
 _NUM = re.compile(r"[\d.]+")
 
 
+_NOISE = re.compile(r"[（(][^）)]*(?:交換不可|ライト|サカキ使用|色シャドウ|リワード|ロケット団|合体)[^）)]*[）)]")
+
+
+def clean_name(n):
+    """9DBの名前の注記（ライト/交換不可/サカキ使用など、イベント用の別ID）を外す。フォルム名（たてのおう等）は残す。"""
+    return _NOISE.sub("", str(n)).strip()
+
+
 def harvest_links(html):
     """日程ページのHTMLから 2734 へのリンクを集める。[{id, lv, boss_shadow, url}]（出現順・重複なし）。"""
     out, seen = [], set()
@@ -62,7 +70,7 @@ def parse_rows(html, id_names):
         if not m or len(tds) < 6:
             continue
         pid = m.group(1)
-        name = id_names.get(pid)
+        name = clean_name(id_names.get(pid) or "")
         if not name:
             bad.add(pid)
             continue
@@ -84,7 +92,7 @@ def combine(rows_by_state, limit=60):
     seen, out = set(), []
     for st in ("normal", "shadow", "mega"):
         for r in rows_by_state.get(st) or []:
-            k = (r["id"], r["tag"] == "shadow")
+            k = (r["name"], r["tag"] == "shadow")   # 注記違いの別IDは名前で1つにまとめる（最初=上位のものを残す）
             if k in seen:
                 continue
             seen.add(k)
@@ -107,7 +115,7 @@ def combine(rows_by_state, limit=60):
 
 def build_boss(link, id_names, rows_by_state):
     """1ボスぶんの facts（counters.merge_counters に渡せる形）。ボス名が分からない／対策が空なら None。"""
-    name = id_names.get(link["id"])
+    name = clean_name(id_names.get(link["id"]) or "")
     counters = combine(rows_by_state)
     if not name or not counters:
         return None

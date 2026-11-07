@@ -397,6 +397,12 @@ class Tool2734(unittest.TestCase):
         self.assertTrue(touched)
         self.assertIsNone(schemas.validate("counters", store))
 
+    def test_clean_name(self):
+        from scripts import tool2734 as t
+        self.assertEqual(t.clean_name("ギラティナ(アナザー)（ライト,サカキ使用）"), "ギラティナ(アナザー)")
+        self.assertEqual(t.clean_name("メガヤミラミ（交換不可）"), "メガヤミラミ")
+        self.assertEqual(t.clean_name("ザマゼンタ（たてのおう）"), "ザマゼンタ（たてのおう）")
+
     def test_unresolved_id_skipped(self):
         from scripts import tool2734 as t
         rows, bad = t.parse_rows(self.rows([dict(r=1, i=999, sh="", s=0, f="a", c="b", t=1, n=1, d=5)]), self.NAMES)
