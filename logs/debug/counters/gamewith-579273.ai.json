@@ -4,7 +4,7 @@
   {
    "name": "ダイマックスディアルガ",
    "kind": "dmax",
-   "tier": "星5",
+   "tier": "★5",
    "types": [],
    "counters": [
     {
@@ -74,8 +74,19 @@
      "note": ""
     },
     {
-     "name": "ザシアン(王)",
+     "name": "ハピナス",
      "rank": 7,
+     "role": "tank",
+     "tag": "dmax",
+     "fast": "はたく",
+     "charged": null,
+     "dps": null,
+     "tdo": null,
+     "note": ""
+    },
+    {
+     "name": "ザシアン(王)",
+     "rank": 8,
      "role": "attacker",
      "tag": "dmax",
      "fast": "メタルクロー",
@@ -85,20 +96,9 @@
      "note": ""
     },
     {
-     "name": "ハピナス",
-     "rank": 8,
-     "role": "attacker",
-     "tag": "dmax",
-     "fast": "はたく",
-     "charged": null,
-     "dps": null,
-     "tdo": null,
-     "note": ""
-    },
-    {
      "name": "レジスチル",
      "rank": 9,
-     "role": "attacker",
+     "role": "tank",
      "tag": "dmax",
      "fast": "ロックオン",
      "charged": null,

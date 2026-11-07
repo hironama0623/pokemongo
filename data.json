@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/11/07 23:02 JST",
+  "updated_at": "2026/11/07 23:34 JST",
   "latest_news": [
     {
       "id": "news-27e2e8643b",
@@ -400,6 +400,14 @@
       "title": "【新イベント】キョダイマックスジュラルドンのマックスバトル",
       "details": "新しいイベントを検出しました。",
       "targetId": "ev-auto-gigantamax-duraludon-sendai"
+    },
+    {
+      "id": "news-90ee9bc70d",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "title": "【情報追加】コマタナのコミュニティ・デイ：サプライズボックスが判明・追加（1件）",
+      "details": "サプライズボックス：コマタナ",
+      "targetId": "ev-cd-pawniard"
     },
     {
       "id": "news-99e5eb21e6",
@@ -3871,6 +3879,12 @@
           "name": "コマタナ",
           "shiny": true,
           "note": "スペシャル背景をともなう個体が出現する場合あり"
+        },
+        {
+          "dex": 624,
+          "name": "コマタナ",
+          "shiny": false,
+          "note": "サプライズボックス"
         }
       ]
     },

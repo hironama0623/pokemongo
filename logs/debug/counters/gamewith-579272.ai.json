@@ -4,7 +4,7 @@
   {
    "name": "ダイマックスパルキア",
    "kind": "dmax",
-   "tier": "★5",
+   "tier": "星5",
    "types": [],
    "counters": [
     {
@@ -74,9 +74,20 @@
      "note": ""
     },
     {
+     "name": "ハピナス",
+     "rank": 6,
+     "role": "attacker",
+     "tag": "normal",
+     "fast": "はたく",
+     "charged": null,
+     "dps": null,
+     "tdo": null,
+     "note": ""
+    },
+    {
      "name": "スイクン",
      "rank": 7,
-     "role": "tank",
+     "role": "attacker",
      "tag": "normal",
      "fast": "みずでっぽう",
      "charged": null,
@@ -87,7 +98,7 @@
     {
      "name": "ルギア",
      "rank": 8,
-     "role": "tank",
+     "role": "attacker",
      "tag": "normal",
      "fast": "じんつうりき",
      "charged": null,
@@ -98,7 +109,7 @@
     {
      "name": "ミロカロス",
      "rank": 9,
-     "role": "tank",
+     "role": "attacker",
      "tag": "normal",
      "fast": "たきのぼり",
      "charged": null,
@@ -109,7 +120,7 @@
     {
      "name": "ラティアス",
      "rank": 10,
-     "role": "tank",
+     "role": "attacker",
      "tag": "normal",
      "fast": "りゅうのいぶき",
      "charged": null,
