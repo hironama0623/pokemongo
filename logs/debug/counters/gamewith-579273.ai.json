@@ -4,7 +4,7 @@
   {
    "name": "ダイマックスディアルガ",
    "kind": "dmax",
-   "tier": "星5",
+   "tier": "★5",
    "types": [],
    "counters": [
     {
@@ -42,7 +42,7 @@
     },
     {
      "name": "ウーラオス(悪)",
-     "rank": 3,
+     "rank": 4,
      "role": "attacker",
      "tag": "dmax",
      "fast": "カウンター",
@@ -53,7 +53,7 @@
     },
     {
      "name": "ウーラオス(水)",
-     "rank": 4,
+     "rank": 5,
      "role": "attacker",
      "tag": "dmax",
      "fast": "カウンター",
@@ -64,7 +64,7 @@
     },
     {
      "name": "ドサイドン",
-     "rank": 5,
+     "rank": 6,
      "role": "attacker",
      "tag": "dmax",
      "fast": "どろかけ",
@@ -75,7 +75,7 @@
     },
     {
      "name": "ハピナス",
-     "rank": 2,
+     "rank": 7,
      "role": "tank",
      "tag": "dmax",
      "fast": "はたく",
@@ -86,7 +86,7 @@
     },
     {
      "name": "ザシアン(王)",
-     "rank": 4,
+     "rank": 8,
      "role": "attacker",
      "tag": "dmax",
      "fast": "メタルクロー",
@@ -97,8 +97,8 @@
     },
     {
      "name": "レジスチル",
-     "rank": 5,
-     "role": "tank",
+     "rank": 9,
+     "role": "attacker",
      "tag": "dmax",
      "fast": "ロックオン",
      "charged": null,

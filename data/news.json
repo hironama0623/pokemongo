@@ -478,6 +478,91 @@
       ]
     },
     {
+      "id": "news-23088c83fa",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：レイドが判明・追加（3件）",
+      "details": "レイド：ディアルガ、パルキア、ジュラルドン",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26352",
+          "fetched_at": "2026-11-08T07:29:18.363184+09:00",
+          "article_updated": "2026-11-08T07:16:12+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-f7f2bf6c0c",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "event_update",
+      "title": "【情報追加】GOパスハロウィン2026：サプライズボックスが判明・追加（4件）",
+      "details": "サプライズボックス：ハイパーボール××10、げんきのかたまり××5、プレミアムバトルパス××1、まんたんのくすり××5",
+      "targetId": "ev-auto-go-pass-halloween-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/579895",
+          "fetched_at": "2026-11-08T07:29:18.363184+09:00",
+          "article_updated": "2026-11-05T11:23:31+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-aec311d9bd",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "event_update",
+      "title": "【情報追加】Día de Muertos 2026（死者の日2026）：野生が判明・追加（1件）",
+      "details": "野生：カラカラ(花飾り)",
+      "targetId": "ev-auto-dia-de-muertos-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/584390",
+          "fetched_at": "2026-11-08T07:29:18.363184+09:00",
+          "article_updated": "2026-10-29T05:15:19+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-1e94319c31",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "event_update",
+      "title": "【情報追加】ポケモンナイトアウト：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：Twitch配信を30分以上視聴する→ポケモンナイトアウト野球ジャージ（引き換え用コード）",
+      "targetId": "ev-auto-pokemon-night-out",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/583322",
+          "fetched_at": "2026-11-08T07:29:18.363184+09:00",
+          "article_updated": "2026-10-28T17:59:21+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-c03d902d5c",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "event_update",
+      "title": "【情報追加】LAIC2027配信ボーナスタイムチャレンジ：タイムチャレンジが判明・追加（4件）",
+      "details": "タイムチャレンジ：Twitchのライブ配信を45分以上視聴する→すごいわざマシンスペシャル、Twitchのライブ配信を45分以上視聴する→ふしぎなアメXL、Twitchのライブ配信を45分以上視聴する→わざマシンスペシャル、Twitchのライブ配信を45分以上視聴する→わざマシンノーマル",
+      "targetId": "ev-auto-laic2027-twitch-drops",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/583039",
+          "fetched_at": "2026-11-08T07:29:18.363184+09:00",
+          "article_updated": "2026-10-17T03:13:03+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-27e2e8643b",
       "date": "2026-11-07",
       "date_label": "11/7",
