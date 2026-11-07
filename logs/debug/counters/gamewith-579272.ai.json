@@ -30,19 +30,8 @@
      "note": null
     },
     {
-     "name": "パルキア",
-     "rank": 3,
-     "role": "tank",
-     "tag": "normal",
-     "fast": null,
-     "charged": null,
-     "dps": null,
-     "tdo": null,
-     "note": "タンク役として最適"
-    },
-    {
      "name": "ラティオス",
-     "rank": 4,
+     "rank": 3,
      "role": "attacker",
      "tag": "normal",
      "fast": "りゅうのいぶき",
@@ -53,7 +42,7 @@
     },
     {
      "name": "サザンドラ",
-     "rank": 5,
+     "rank": 4,
      "role": "attacker",
      "tag": "normal",
      "fast": "りゅうのいぶき",
@@ -64,7 +53,7 @@
     },
     {
      "name": "ジュラルドン",
-     "rank": 6,
+     "rank": 5,
      "role": "attacker",
      "tag": "normal",
      "fast": "ドラゴンテール",
@@ -75,7 +64,7 @@
     },
     {
      "name": "サーナイト",
-     "rank": 7,
+     "rank": 6,
      "role": "attacker",
      "tag": "normal",
      "fast": "あまえる",
@@ -86,7 +75,7 @@
     },
     {
      "name": "スイクン",
-     "rank": 8,
+     "rank": 7,
      "role": "attacker",
      "tag": "normal",
      "fast": "みずでっぽう",
@@ -97,7 +86,7 @@
     },
     {
      "name": "ルギア",
-     "rank": 9,
+     "rank": 8,
      "role": "attacker",
      "tag": "normal",
      "fast": "じんつうりき",
@@ -108,7 +97,7 @@
     },
     {
      "name": "ミロカロス",
-     "rank": 10,
+     "rank": 9,
      "role": "attacker",
      "tag": "normal",
      "fast": "たきのぼり",
@@ -119,7 +108,7 @@
     },
     {
      "name": "ラティアス",
-     "rank": 11,
+     "rank": 10,
      "role": "attacker",
      "tag": "normal",
      "fast": "りゅうのいぶき",
@@ -127,6 +116,17 @@
      "dps": null,
      "tdo": null,
      "note": null
+    },
+    {
+     "name": "パルキア",
+     "rank": 11,
+     "role": "tank",
+     "tag": "normal",
+     "fast": null,
+     "charged": null,
+     "dps": null,
+     "tdo": null,
+     "note": "タンク役として最適性"
     }
    ]
   }
