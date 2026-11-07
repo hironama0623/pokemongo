@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/11/07 22:08 JST",
+  "updated_at": "2026/11/07 22:44 JST",
   "latest_news": [
     {
       "id": "news-27e2e8643b",
@@ -336,6 +336,54 @@
       "title": "【情報追加】LAIC2027配信ボーナスタイムチャレンジ：タイムチャレンジが判明・追加（1件）",
       "details": "タイムチャレンジ：Twitchのライブ配信30分以上視聴→ダイケンキ(ハイドロカノン)",
       "targetId": "ev-auto-laic2027-twitch-drops"
+    },
+    {
+      "id": "news-c665f01155",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "title": "【情報追加】GOワイルドエリア：キョダイマックスカイリキータイムチャレンジ：フィールドリサーチが判明・追加（2件）",
+      "details": "フィールドリサーチ：2日にわたってポケモンを捕まえる→ワンリキー、4日にわたってポケモンを捕まえる→ワンリキー",
+      "targetId": "ev-auto-wild-area-2026-free-time-challenge"
+    },
+    {
+      "id": "news-145c65cf88",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：全タスク達成→トリデプス",
+      "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-0d208bcf06",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：is進化する→ほしのすな",
+      "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-6d7cd5e90b",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "title": "【新イベント】2026GOチャンピオンシップLA大乱闘",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-2026-go-championship-la-brawl"
+    },
+    {
+      "id": "news-26d572df1d",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "title": "【情報追加】イオンハロウィンイベント：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：特別なタイムチャレンジパート1（受取期間: 2026-10-19〜10-25）→ピカチュウ(魔女帽子)、特別なタイムチャレンジパート2（受取期間: 2026-10-26〜11-01）→ピカチュウ(魔女帽子)",
+      "targetId": "ev-auto-aeon-halloween-2026"
+    },
+    {
+      "id": "news-849aba8885",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "title": "【情報追加】わくわく！Pokémon GO Lab.大調査：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：全クリア報酬→ピカチュウ(ウィロー博士の助手)・ピカチュウのアメ 26個・ほしのすな 2026個",
+      "targetId": "ev-auto-wakuwaku-pokemon-go-lab"
     },
     {
       "id": "news-99e5eb21e6",
@@ -3716,6 +3764,13 @@
         "note": "出典: gamewith"
       },
       {
+        "task": "2日にわたってポケモンを捕まえる",
+        "rewardDex": 66,
+        "rewardName": "ワンリキー",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
         "task": "3日にわたってポケモンを捕まえる",
         "rewardDex": 25,
         "rewardName": "マックス粒子×600",
@@ -3741,6 +3796,13 @@
         "rewardDex": 66,
         "rewardName": "ワンリキーのアメXL",
         "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "4日にわたってポケモンを捕まえる",
+        "rewardDex": 66,
+        "rewardName": "ワンリキー",
+        "shiny": false,
         "note": "出典: gamewith"
       },
       {
@@ -7574,6 +7636,24 @@
       "hasPaid": false,
       "dateText": "2026/11/14(土)17:00 〜 11/19(木)23:59",
       "summary": "メテノシャワー：しし座流星群",
+      "freeFeatures": [],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-2026-go-championship-la-brawl",
+      "month": 11,
+      "title": "2026GOチャンピオンシップLA大乱闘",
+      "barClass": "bar-collab",
+      "category": "collab",
+      "startDay": 6,
+      "endDay": 10,
+      "hasPaid": false,
+      "dateText": "2026年11月6日(金) 〜 11月10日(火)",
+      "summary": "2026GOチャンピオンシップLA大乱闘",
       "freeFeatures": [],
       "paidFeatures": [],
       "wilds": [],
