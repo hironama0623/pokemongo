@@ -133,6 +133,23 @@ _MARK_JS = """() => {
 }"""
 
 
+def _safe_click(page, selector):
+    """普通のクリック → だめなら（広告などが上に重なっている場合）スクロールして強制クリック → 最後にJSで直接クリック。"""
+    loc = page.locator(selector).first
+    try:
+        loc.click(timeout=2500)
+        return
+    except Exception:  # noqa: BLE001
+        pass
+    try:
+        loc.scroll_into_view_if_needed(timeout=2000)
+        loc.click(timeout=2500, force=True)
+        return
+    except Exception:  # noqa: BLE001
+        pass
+    loc.evaluate("el => el.click()", timeout=3000)
+
+
 def render_states(url, states=("normal", "shadow", "mega")):
     """9DBの対策検索ツール用。ページを描画し、「状態」の3つのボタン（左=シャドウ / 中=メガ / 右=未実装=通常）を順に押して「検索」を押し、
     状態ごとの描画後HTMLを返す。{state: html|None}, error|None。ボタンが見つからない場合は、押さずに最初の表だけ返す。"""
@@ -168,8 +185,8 @@ def render_states(url, states=("normal", "shadow", "mega")):
             idx = {"shadow": 0, "mega": 1, "normal": 2}
             for st in states:
                 try:
-                    page.locator(f'[data-probe-state="{idx[st]}"]').first.click(timeout=4000)
-                    page.locator('[data-probe-search="1"]').first.click(timeout=4000)
+                    _safe_click(page, f'[data-probe-state="{idx[st]}"]')
+                    _safe_click(page, '[data-probe-search="1"]')
                     page.wait_for_timeout(2500)
                     try:
                         page.wait_for_load_state("networkidle", timeout=6000)
