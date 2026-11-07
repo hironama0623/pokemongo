@@ -47,7 +47,7 @@ function fmtRange(ev) {
 // 比較用に、記号・絵文字・「2026年」「11月」などの年月表記を除いた形にする（表記ゆれで別イベント扱いになるのを防ぐ）
 const normTitle = t => String(t || "").replace(/[\p{Extended_Pictographic}\uFE0F]/gu, "")
   .replace(/[0-9０-９]+\s*(?:年|月|日)?/g, "").replace(/[\s\u3000・、。：:()（）「」『』【】～〜~!！?？&＆\-ー]/g, "").toLowerCase();
-const normName = n => String(n || "").replace(/[\s\u3000]/g, "").replace(/化身/g, "けしん").replace(/霊獣/g, "れいじゅう");   // 表記ゆれ(化身=けしん, 霊獣=れいじゅう)を揃える
+const normName = n => String(n || "").replace(/[\s\u3000]/g, "").replace(/化身/g, "けしん").replace(/霊獣/g, "れいじゅう").replace(/^ジャケットを身にまとった(.+?)(?:[(（].*)?$/, "$1(ジャケット)");   // 表記ゆれ(化身=けしん, 霊獣=れいじゅう)を揃える
 const isPassTitle = t => /^(?:[\p{Extended_Pictographic}\uFE0F\s]*)GOパス/u.test(String(t || ""));
 function sameTitle(a, b) {
   if (isPassTitle(a) !== isPassTitle(b)) return false;   // GOパスは本体イベントとは別のものとして扱う
@@ -210,7 +210,7 @@ const sameGroup = (a, b) => a === b || (a === "normal" && b === "shadow") || (a 
 const FORM_LETTER = { "ギラティナ": { O: "オリジン", A: "アナザー" }, "デオキシス": { N: "ノーマル", A: "アタック", D: "ディフェンス", S: "スピード" } };
 // フォルム名の表記ゆれ(オリジン/オリジンフォルム/O、アタック/アタックフォルム/A…)を1つに揃える
 const canonForm = (base, f) => { f = normName(f).replace(/(?:フォルム|のすがた|すがた)$/, ""); const t = FORM_LETTER[base]; return (t && t[f.toUpperCase()]) || f; };
-const bossForm = n => { const m = /[(（](.*?)[)）]/.exec(String(n)); return m ? canonForm(bossBase(n), m[1]) : ""; };
+const bossForm = n => { const m = /[(（](.*?)[)）]/.exec(normName(n)); return m ? canonForm(bossBase(n), m[1]) : ""; };
 const cleanCounterName = n => String(n || "").replace(/[（(]([^）)]*)[）)]/g, (all, inner) => /合体|交換不可|ライト|リワード|サカキ使用|ロケット団/.test(inner) ? "" : all).trim();   // 条件の注記は名前から外す
 const cname = n => normName(cleanCounterName(n)).replace(/\*/g, "");
 
@@ -269,6 +269,7 @@ const USE_MANUAL_CARDS = false;   // true で、手入力データ(data/manual)�
 // 段階の記載が無い（note が空）通常のレイドも、★5以上かどうか分からないので「出現のみ」に回す
 const isLowTier = r => {
   const note = String(r.note || ""), both = note + String(r.name || "");
+  if (schedRangesFor(r.name).some(it => /★\s*[4-9]|メガ/.test(it.tier || ""))) return false;   // 日程表で★4以上・メガとされているボスは、記事に段階が無くてもカードにする
   if (/★\s*[1-3]/.test(note)) return !/メガ|伝説|★\s*[4-9]/.test(both);
   return !/★|メガ|シャドウ|伝説|マックス/.test(both);
 };
@@ -317,6 +318,30 @@ function dedupeRaids(data) {
     const has = x => (data[x].counters || []).length > 0;
     if (has(k) && !has(prev)) { delete data[prev]; seen[key] = k; } else delete data[k];
   });
+}
+
+// ダイマックス／キョダイマックスのボスがレイド側に混ざっていたら、マックスバトル側へ移す（既にあれば捨てる）
+function moveDmaxOut() {
+  Object.keys(RAID_DATA).forEach(k => {
+    const e = RAID_DATA[k], c = bossClass(e.name);
+    if (!(c === "dmax" || c === "gmax" || /ダイマックス|キョダイ/.test(e.name))) return;
+    const dup = Object.values(DMAX_9DB_DATA).some(x => normName(x.name).replace(/ダイマックス|キョダイマックス|キョダイ/g, "") === normName(e.name).replace(/ダイマックス|キョダイマックス|キョダイ/g, ""));
+    if (!dup) { e.isDmax = true; DMAX_9DB_DATA[k] = e; }
+    delete RAID_DATA[k];
+  });
+}
+// 「その他のレイド」：同じ名前・期間の重複と、すでにカードがあるボスを外す
+function dedupeLow() {
+  const cards = [...Object.values(RAID_DATA), ...Object.values(DMAX_9DB_DATA)];
+  const seen = new Set();
+  const keep = LOW_RAIDS.filter(r => {
+    if (cards.some(c => bossBase(c.name) === bossBase(r.name) && (!bossForm(r.name) || bossForm(c.name) === bossForm(r.name)) && sameGroup(bossClass(c.name), bossClass(r.name)) && c._s <= r._e && c._e >= r._s)) return false;
+    const k = normName(r.name) + "|" + r.period;
+    if (seen.has(k)) return false;
+    seen.add(k);
+    return true;
+  });
+  LOW_RAIDS.splice(0, LOW_RAIDS.length, ...keep);
 }
 
 function buildBattleData(autoBosses) {
@@ -402,7 +427,8 @@ function buildBattleData(autoBosses) {
     // フォルム指定のある表記を先に処理（「デオキシス」だけの表記は、フォルム別カードがあれば作らない）。同じフォルムの表記ゆれは長い名前を優先
     (ev.raids || []).slice().sort((x, y) => (bossForm(y.name) ? 1 : 0) - (bossForm(x.name) ? 1 : 0) || String(y.name).length - String(x.name).length).forEach(r => {
       if (!r.name) return;
-      if (isMonthly(ev) || spanDays(ev) > (minSpan.get(bossId(r)) ?? 0) + 3) return;   // 月間まとめ・期間の長いイベントでは作らない（短いイベントのカードが優先）
+      if (isMonthly(ev) || spanDays(ev) > (minSpan.get(bossId(r)) ?? 0) + 3) return;
+      if (spanDays(ev) > 14 && !schedRangesFor(r.name).length) return;   // 2週間より長いイベントにだけ載っているボス（月間の枠・終了済みの再掲など）は、日程表に載っていなければ作らない   // 月間まとめ・期間の長いイベントでは作らない（短いイベントのカードが優先）
       const rc = bossClass(r.name), isD = ev.category === "dmax" || rc === "dmax" || rc === "gmax";
       if (!isD && isLowTier(r)) {
         const k = normName(r.name) + "|" + (r.note || "");
@@ -419,8 +445,10 @@ function buildBattleData(autoBosses) {
       };
     });
   });
+  moveDmaxOut();
   dedupeRaids(RAID_DATA);
   applySchedule(RAID_DATA);
+  dedupeLow();
   LOW_RAIDS.sort((a, b) => a._e - b._e);
 }
 

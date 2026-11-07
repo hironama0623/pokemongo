@@ -7,6 +7,7 @@
 終了コード: 0=ok/partial, 1=failed（1ページも取得できない / 保存前検証NG / APIキー無し）。失敗時も data/ は前回のまま。
 """
 import copy
+import re
 import shutil
 import datetime as dt
 import json
@@ -93,6 +94,25 @@ def _dump_counter_text(art, facts=None):
         pass
 
 
+def _probe(urls, log, render_getter=None):
+    """調査用: 指定URLをヘッドレスで描画し、描画後のHTMLと本文テキストを logs/debug/probe/ に保存する。本処理には影響しない。"""
+    d = config.LOGS / "debug" / "probe"
+    for u in urls:
+        try:
+            html, status, err = (render_getter or fetch.get_rendered)(u)
+            name = re.sub(r"[^0-9A-Za-z]+", "_", u.split("data/")[-1])[:60]
+            if html is None:
+                log.note(f"調査取得に失敗 {u}: {err}")
+                continue
+            d.mkdir(parents=True, exist_ok=True)
+            text, _soup, _raw = extract.html_to_text(html)
+            (d / f"{name}.html").write_text(html[:600000], encoding="utf-8")
+            (d / f"{name}.txt").write_text(text[:20000], encoding="utf-8")
+            log.note(f"調査取得 {u}: html {len(html)}字 / 本文 {len(text)}字 / DPS={'DPS' in text} TDO={'TDO' in text}")
+        except Exception as ex:  # noqa: BLE001
+            log.note(f"調査取得で例外 {u}: {type(ex).__name__}: {str(ex)[:120]}")
+
+
 def run(now, log, diagnose=False, no_news=False, getter=fetch.get, llm=an.gemini_call, sleep=time.sleep, render_getter=None):
     cutoff = now - dt.timedelta(days=config.WINDOW_DAYS)
     state = store.load("state.json", {"articles": {}})
@@ -111,6 +131,8 @@ def run(now, log, diagnose=False, no_news=False, getter=fetch.get, llm=an.gemini
 
     queue, dump = [], ({} if diagnose else None)
     shutil.rmtree(config.LOGS / "debug", ignore_errors=True)
+    if config.PROBE_URLS and getter is fetch.get:   # テストなど取得処理を差し替えているときは行わない
+        _probe(config.PROBE_URLS, log, render_getter)
     for key, cfg in config.SOURCES.items():
         cands = fetch.discover(key, cfg, log, getter)
         page_get = (render_getter or fetch.get_rendered) if cfg.get("render") else getter
