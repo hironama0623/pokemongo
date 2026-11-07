@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/11/07 18:39 JST",
+  "updated_at": "2026/11/07 20:37 JST",
   "latest_news": [
     {
       "id": "news-27e2e8643b",
@@ -128,6 +128,126 @@
       "title": "【情報追加】ワイルドエリア2026：仙台・東北：タイムチャレンジが判明・追加（6件）",
       "details": "タイムチャレンジ：レベル35に到達する→ダダリン、違うポケストップ・ジム36個を回す→経験値、ポケストップを編集する→ほしのすな、ポケストップを申請する→ほしのすな、15km探索する→ポケモンと遭遇、トレーナー1人とフレンドになる→ヌイコグマ",
       "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-2a2e73068d",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：違うはがねタイプテーマのポケストップ10個を回す→トリデプス",
+      "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-1eecf731c8",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：タイムチャレンジが判明・追加（4件）",
+      "details": "タイムチャレンジ：違うポケストップ・ジム36個を回す→経験値×15000XP、ポケストップを編集する→ほしのすな×5000、ポケストップを申請する→ほしのすな×5000、15km探索する→ポケモンと遭遇(調査中)",
+      "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-e52211342e",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：タイムチャレンジが判明・追加（9件）",
+      "details": "タイムチャレンジ：はがねタイプテーマの ポケストップを回す→経験値、はがねタイプテーマの ポケストップ2個を回す→ジバコイル(ロケーション背景)、はがねタイプテーマの ポケストップ3個を回す→ほしのすな、はがねタイプテーマの ポケストップ4個を回す→ハッサム(ロケーション背景)、はがねタイプテーマの ポケストップ6個を回す→エンペルト(ロケーション背景)、はがねタイプテーマの ポケストップ7個を回す→きんのズリのみ ほか3件",
+      "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-96260348dd",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "title": "【情報追加】GOワイルドエリア：キョダイマックスカイリキータイムチャレンジ：フィールドリサーチが判明・追加（4件）",
+      "details": "フィールドリサーチ：2日にわたってポケモンを捕まえる→ワンリキーのアメ、3日にわたってポケモンを捕まえる→マックス粒子、4日にわたってポケモンを捕まえる→ワンリキーのアメXL、5日にわたってポケモンを捕まえる→マックス粒子",
+      "targetId": "ev-auto-wild-area-2026-free-time-challenge"
+    },
+    {
+      "id": "news-84cd7ec62e",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "title": "【日程変更】GOパスハロウィン2026",
+      "details": "日程が更新されています：2026-10-27〜2026-11-05 → 2026-11-01〜2026-11-05",
+      "targetId": "ev-auto-go-pass-halloween-2026"
+    },
+    {
+      "id": "news-b426f8f54d",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "title": "【情報追加】GOパスハロウィン2026：野生が判明・追加（7件）",
+      "details": "野生：カゲボウズ、ヒトモシ、ケロマツ(ハロウィン)、モクロー(ハロウィン)、スナバァ、ボチ ほか1件",
+      "targetId": "ev-auto-go-pass-halloween-2026"
+    },
+    {
+      "id": "news-d73799643f",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "title": "【情報追加】GOパスハロウィン2026：レイドが判明・追加（2件）",
+      "details": "レイド：ピカチュウ(ハット&ケープ)、ヤバチャ(リボン)",
+      "targetId": "ev-auto-go-pass-halloween-2026"
+    },
+    {
+      "id": "news-fe1efeb104",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "title": "【情報追加】GOパスハロウィン2026：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：リワードを受け取る→ふしぎなアメ ×1・ヤバチャ(リボン)",
+      "targetId": "ev-auto-go-pass-halloween-2026"
+    },
+    {
+      "id": "news-15efe45254",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "title": "【情報追加】「黄昏時の願い」＆ スーパーメガレイドデイ：フィールドリサーチが判明・追加（1件）",
+      "details": "フィールドリサーチ：黄昏の旅路シーズンに登場したポケモンと出会える→カジッチュ・オラチフ・ゲンガー(魔女帽子)・フワライド(ハロウィン)・アノクサ",
+      "targetId": "ev-tusk-wish-deoxys"
+    },
+    {
+      "id": "news-18ae07eb49",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "title": "【情報追加】死者の日2026特別イベント(メキシコ レフォルマ通り)：レイドが判明・追加（1件）",
+      "details": "レイド：ゲンガー(キョダイマックス)",
+      "targetId": "ev-auto-dia-de-muertos-2026-reforma"
+    },
+    {
+      "id": "news-0ef74c0805",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "title": "【新イベント】メテノシャワー：しし座流星群",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-meteor-shower-leo-2026"
+    },
+    {
+      "id": "news-8b4e149739",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "title": "【情報追加】メテノシャワー：しし座流星群：野生が判明・追加（1件）",
+      "details": "野生：メテノ(りゅうせい)",
+      "targetId": "ev-auto-meteor-shower-leo-2026"
+    },
+    {
+      "id": "news-ed6a2bb124",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "title": "【情報追加】ダイマックスユクシー・エムリット・アグノムのマックスバトルデイ：レイドが判明・追加（3件）",
+      "details": "レイド：ユクシー(ダイマックス)、エムリット(ダイマックス)、アグノム(ダイマックス)",
+      "targetId": "ev-auto-max-battle-day-uxie-mesprit-azelf"
+    },
+    {
+      "id": "news-bfb35d5148",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "title": "【情報追加】LAIC2027配信ボーナスタイムチャレンジ：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：Twitchのライブ配信30分以上視聴→ダイケンキ・ミジュマル・ミジュマルのアメXL・わざマシンスペシャル・わざマシンノーマル、Twitchのライブ配信45分以上視聴→すごいわざマシンスペシャル・ふしぎなアメXL・わざマシンスペシャル・わざマシンノーマル",
+      "targetId": "ev-auto-laic2027-twitch-drops"
+    },
+    {
+      "id": "news-9b53577714",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "title": "【情報追加】2026FCソウルイベント(韓国)：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：イベント期間中に対象地域へ行くと受け取れる→リザードン(ロケーション背景)・プレミアムバトルパス・ヒトカゲのアメ・ほしのすな・経験値",
+      "targetId": "ev-auto-2026-fc-seoul"
     },
     {
       "id": "news-99e5eb21e6",
@@ -2894,6 +3014,41 @@
         "rewardName": "アノクサ",
         "shiny": true,
         "note": "出典: gamewith"
+      },
+      {
+        "task": "黄昏の旅路シーズンに登場したポケモンと出会える",
+        "rewardDex": 840,
+        "rewardName": "カジッチュ",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "黄昏の旅路シーズンに登場したポケモンと出会える",
+        "rewardDex": 942,
+        "rewardName": "オラチフ",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "黄昏の旅路シーズンに登場したポケモンと出会える",
+        "rewardDex": 94,
+        "rewardName": "ゲンガー(魔女帽子)",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "黄昏の旅路シーズンに登場したポケモンと出会える",
+        "rewardDex": 426,
+        "rewardName": "フワライド(ハロウィン)",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "黄昏の旅路シーズンに登場したポケモンと出会える",
+        "rewardDex": 946,
+        "rewardName": "アノクサ",
+        "shiny": false,
+        "note": "出典: gamewith"
       }
     ],
     "ev-auto-fall-marathon-buddy-trek-2026": [
@@ -3396,10 +3551,24 @@
         "note": "出典: gamewith"
       },
       {
+        "task": "2日にわたってポケモンを捕まえる",
+        "rewardDex": 66,
+        "rewardName": "ワンリキーのアメ",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
         "task": "3日にわたってポケモンを捕まえる",
         "rewardDex": 25,
         "rewardName": "マックス粒子×600",
         "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "3日にわたってポケモンを捕まえる",
+        "rewardDex": 25,
+        "rewardName": "マックス粒子",
+        "shiny": true,
         "note": "出典: gamewith"
       },
       {
@@ -3410,10 +3579,24 @@
         "note": "出典: gamewith"
       },
       {
+        "task": "4日にわたってポケモンを捕まえる",
+        "rewardDex": 66,
+        "rewardName": "ワンリキーのアメXL",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
         "task": "5日にわたってポケモンを捕まえる",
         "rewardDex": 25,
         "rewardName": "マックス粒子×800",
         "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "5日にわたってポケモンを捕まえる",
+        "rewardDex": 25,
+        "rewardName": "マックス粒子",
+        "shiny": true,
         "note": "出典: gamewith"
       }
     ]
@@ -3427,19 +3610,19 @@
           "dex": 810,
           "name": "サルノリ",
           "shiny": true,
-          "note": ""
+          "note": "11月19日(木)18:00~19:00のスポットライトアワーで出現"
         },
         {
           "dex": 816,
           "name": "メッソン",
           "shiny": true,
-          "note": ""
+          "note": "11月19日(木)18:00~19:00のスポットライトアワーで出現"
         },
         {
           "dex": 813,
           "name": "ヒバニー",
           "shiny": true,
-          "note": ""
+          "note": "11月19日(木)18:00~19:00のスポットライトアワーで出現"
         }
       ]
     },
@@ -5262,6 +5445,54 @@
       ]
     },
     {
+      "id": "ev-auto-go-pass-halloween-2026",
+      "title": "ev-auto-go-pass-halloween-2026",
+      "wilds": [
+        {
+          "dex": 353,
+          "name": "カゲボウズ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 607,
+          "name": "ヒトモシ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 656,
+          "name": "ケロマツ(ハロウィン)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 722,
+          "name": "モクロー(ハロウィン)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 769,
+          "name": "スナバァ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 971,
+          "name": "ボチ",
+          "shiny": true,
+          "note": "色違い本イベント初登場"
+        },
+        {
+          "dex": 94,
+          "name": "ゲンガー(魔女帽子)",
+          "shiny": true,
+          "note": ""
+        }
+      ]
+    },
+    {
       "id": "ev-auto-go-pass-big-footprints",
       "title": "ev-auto-go-pass-big-footprints",
       "wilds": [
@@ -6128,6 +6359,18 @@
           "name": "PokéXciting!ピカチュウ",
           "shiny": false,
           "note": "湧きは少なめ、イベント終了後も1か月間野生で出現"
+        }
+      ]
+    },
+    {
+      "id": "ev-auto-meteor-shower-leo-2026",
+      "title": "ev-auto-meteor-shower-leo-2026",
+      "wilds": [
+        {
+          "dex": 774,
+          "name": "メテノ(りゅうせい)",
+          "shiny": true,
+          "note": ""
         }
       ]
     },
@@ -7155,6 +7398,24 @@
       "hasPaid": false,
       "dateText": "2026/11/7(土) 〜 11/8(日)",
       "summary": "シンガポールで開催されるPokéXciting!イベント",
+      "freeFeatures": [],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-meteor-shower-leo-2026",
+      "month": 11,
+      "title": "メテノシャワー：しし座流星群",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 14,
+      "endDay": 19,
+      "hasPaid": false,
+      "dateText": "2026/11/14(土)17:00 〜 11/19(木)23:59",
+      "summary": "メテノシャワー：しし座流星群",
       "freeFeatures": [],
       "paidFeatures": [],
       "wilds": [],
