@@ -240,6 +240,40 @@
       ]
     },
     {
+      "id": "news-5fe6734bca",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：野生が判明・追加（1件）",
+      "details": "野生：カイリキー",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26352",
+          "fetched_at": "2026-11-07T18:39:43.659026+09:00",
+          "article_updated": "2026-11-07T18:25:58+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-9ab98fd2cb",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：タイムチャレンジが判明・追加（6件）",
+      "details": "タイムチャレンジ：レベル35に到達する→ダダリン、違うポケストップ・ジム36個を回す→経験値、ポケストップを編集する→ほしのすな、ポケストップを申請する→ほしのすな、15km探索する→ポケモンと遭遇、トレーナー1人とフレンドになる→ヌイコグマ",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/587136",
+          "fetched_at": "2026-11-07T18:39:43.659026+09:00",
+          "article_updated": "2026-11-07T15:29:04+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-99e5eb21e6",
       "date": "2026-11-06",
       "date_label": "11/6",

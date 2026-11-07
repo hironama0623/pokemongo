@@ -2861,8 +2861,8 @@
         },
         "gamewith": {
           "url": "https://pokemongo.gamewith.jp/article/show/586872",
-          "article_updated": "2026-11-06T08:28:26+09:00",
-          "fetched_at": "2026-11-07T12:42:17.864090+09:00",
+          "article_updated": "2026-11-07T13:11:13+09:00",
+          "fetched_at": "2026-11-07T18:39:43.659026+09:00",
           "counters": [
             {
               "name": "ザシアン(王)",
@@ -2923,11 +2923,59 @@
               "tdo": null,
               "note": "",
               "dex": 894
+            },
+            {
+              "name": "メガライチュウY",
+              "rank": 1,
+              "role": "attacker",
+              "tag": "mega",
+              "fast": null,
+              "charged": null,
+              "dps": null,
+              "tdo": null,
+              "note": "",
+              "dex": 26
+            },
+            {
+              "name": "メガライボルト",
+              "rank": 2,
+              "role": "attacker",
+              "tag": "mega",
+              "fast": null,
+              "charged": null,
+              "dps": null,
+              "tdo": null,
+              "note": "",
+              "dex": 310
+            },
+            {
+              "name": "メガメタグロス",
+              "rank": 3,
+              "role": "attacker",
+              "tag": "mega",
+              "fast": null,
+              "charged": null,
+              "dps": null,
+              "tdo": null,
+              "note": "",
+              "dex": 376
+            },
+            {
+              "name": "メガミュウツーY",
+              "rank": 4,
+              "role": "attacker",
+              "tag": "mega",
+              "fast": null,
+              "charged": null,
+              "dps": null,
+              "tdo": null,
+              "note": "",
+              "dex": 150
             }
           ]
         }
       },
-      "updated_at": "2026-11-07T12:42:17.864090+09:00"
+      "updated_at": "2026-11-07T18:39:43.659026+09:00"
     }
   }
 }
