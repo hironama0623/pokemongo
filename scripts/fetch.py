@@ -115,17 +115,21 @@ def close_renderer():
 
 
 _MARK_JS = """() => {
-  const lab = [...document.querySelectorAll('*')].find(e => e.children.length === 0 && e.textContent.trim() === '状態');
-  if (!lab) return 'no-label';
-  let cands = [lab.nextElementSibling, lab.parentElement && lab.parentElement.nextElementSibling, lab.parentElement].filter(Boolean);
-  for (const c of cands) {
-    const pool = [c, ...c.querySelectorAll('*')];
-    const box = pool.find(e => e.children.length === 3 && e.textContent.includes('未実装'));
-    if (box) { [...box.children].forEach((ch, i) => ch.setAttribute('data-probe-state', String(i))); }
+  // 「未実装」の文字を持つ要素から上にたどり、兄弟が3つ以上ある階層を探す。その末尾3つが 左=シャドウ / 中=メガ / 右=未実装(通常)
+  const leaf = [...document.querySelectorAll('*')].find(e => e.children.length === 0 && e.textContent.trim() === '未実装');
+  let info = 'no-unimpl';
+  if (leaf) {
+    let el = leaf;
+    while (el.parentElement && el.parentElement.children.length < 3 && el.parentElement !== document.body) el = el.parentElement;
+    const sib = el.parentElement ? [...el.parentElement.children] : [];
+    const last3 = sib.slice(-3);
+    last3.forEach((ch, i) => ch.setAttribute('data-probe-state', String(i)));
+    info = last3.length + '/' + sib.length;
+    window.__probeSection = el.parentElement ? el.parentElement.parentElement.outerHTML.slice(0, 3000) : '';
   }
   const btn = [...document.querySelectorAll('button, input[type=button], input[type=submit], a, div, span')].find(e => e.children.length === 0 && (e.textContent || e.value || '').trim() === '検索');
   if (btn) btn.setAttribute('data-probe-search', '1');
-  return document.querySelectorAll('[data-probe-state]').length + '/' + (btn ? 'search' : 'no-search');
+  return info + '/' + (btn ? 'search' : 'no-search');
 }"""
 
 
@@ -157,6 +161,10 @@ def render_states(url, states=("normal", "shadow", "mega")):
                 pass
             mark = page.evaluate(_MARK_JS)
             out["_mark"] = mark
+            try:
+                out["_section"] = page.evaluate("() => window.__probeSection || ''")
+            except Exception:  # noqa: BLE001
+                out["_section"] = ""
             idx = {"shadow": 0, "mega": 1, "normal": 2}
             for st in states:
                 try:

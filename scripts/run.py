@@ -107,7 +107,8 @@ def _probe(urls, log, render_getter=None):
             if "2734" in u and render_getter is None:   # 対策検索ツール: 状態（シャドウ/メガ/通常）ごとに押して検索した結果も保存
                 res, e2 = fetch.render_states(u)
                 d.mkdir(parents=True, exist_ok=True)
-                log.note(f"状態別の取得 {name}: {res.get('_mark')} {e2 or ''} " + " ".join(f"{k}={'ok' if v else 'NG'}" for k, v in res.items() if not k.startswith('_')) + " " + " ".join(f"{k}:{v}" for k, v in res.items() if k.startswith('_err')))
+                log.note(f"状態別の取得 {name}: {res.get('_mark')} {e2 or ''} " + " ".join(f"{k}={'ok' if v else 'NG'}" for k, v in res.items() if not k.startswith('_')) + " " + " ".join(f"{k}:{str(v)[:60]}" for k, v in res.items() if k.startswith('_err')))
+                (d / f"{name}.section.txt").write_text(res.get("_section") or "(状態の周辺HTMLなし)", encoding="utf-8")
                 for st in ("normal", "shadow", "mega"):
                     h = res.get(st)
                     if h:
