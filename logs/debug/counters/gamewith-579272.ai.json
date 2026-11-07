@@ -4,8 +4,11 @@
   {
    "name": "ダイマックスパルキア",
    "kind": "dmax",
-   "tier": "星5",
-   "types": [],
+   "tier": "★5",
+   "types": [
+    "みず",
+    "ドラゴン"
+   ],
    "counters": [
     {
      "name": "ハピナス",
@@ -31,7 +34,7 @@
     },
     {
      "name": "ラティオス",
-     "rank": 5,
+     "rank": 2,
      "role": "attacker",
      "tag": "normal",
      "fast": "りゅうのいぶき",
@@ -42,7 +45,7 @@
     },
     {
      "name": "サザンドラ",
-     "rank": 6,
+     "rank": 3,
      "role": "attacker",
      "tag": "normal",
      "fast": "りゅうのいぶき",
@@ -53,7 +56,7 @@
     },
     {
      "name": "ジュラルドン",
-     "rank": 7,
+     "rank": 4,
      "role": "attacker",
      "tag": "normal",
      "fast": "ドラゴンテール",
@@ -64,7 +67,7 @@
     },
     {
      "name": "サーナイト",
-     "rank": 8,
+     "rank": 5,
      "role": "attacker",
      "tag": "normal",
      "fast": "あまえる",
@@ -75,7 +78,7 @@
     },
     {
      "name": "ハピナス",
-     "rank": 9,
+     "rank": 6,
      "role": "attacker",
      "tag": "normal",
      "fast": "はたく",
@@ -86,7 +89,7 @@
     },
     {
      "name": "スイクン",
-     "rank": 10,
+     "rank": 7,
      "role": "attacker",
      "tag": "normal",
      "fast": "みずでっぽう",
@@ -97,7 +100,7 @@
     },
     {
      "name": "ルギア",
-     "rank": 11,
+     "rank": 8,
      "role": "attacker",
      "tag": "normal",
      "fast": "じんつうりき",
@@ -108,7 +111,7 @@
     },
     {
      "name": "ミロカロス",
-     "rank": 12,
+     "rank": 9,
      "role": "attacker",
      "tag": "normal",
      "fast": "たきのぼり",
@@ -119,7 +122,7 @@
     },
     {
      "name": "ラティアス",
-     "rank": 13,
+     "rank": 10,
      "role": "attacker",
      "tag": "normal",
      "fast": "りゅうのいぶき",

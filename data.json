@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/11/07 07:34 JST",
+  "updated_at": "2026/11/07 12:42 JST",
   "latest_news": [
     {
       "id": "news-27e2e8643b",
@@ -80,6 +80,38 @@
       "title": "【情報追加】ハロウィン2026 パート1：タイムチャレンジが判明・追加（1件）",
       "details": "タイムチャレンジ：全クリア報酬→ピカチュウ(ハット&ケープ)",
       "targetId": "ev-halloween-p1"
+    },
+    {
+      "id": "news-10d581f170",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：レイドが判明・追加（2件）",
+      "details": "レイド：ディアルガ(ダイマックス)、パルキア(ダイマックス)",
+      "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-dabe6ee2bb",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "title": "【新イベント】光の祭典(インド)",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-festival-of-lights-india-2026"
+    },
+    {
+      "id": "news-6eadd8a9dc",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：全タスク達成→トリデプス(ロケーション背景)",
+      "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-2ae74295b9",
+      "date": "2026-11-07",
+      "date_label": "11/7",
+      "title": "【情報追加】シャンデラのスーパーメガレイド・デイ：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：ポケモンを15回強化する→メガエナジー バンギラスのメガエナジー、ゴーストタイプかほのおタイプのボスポケモンに勝つ→ヨーギラス",
+      "targetId": "ev-supermega-chandelure"
     },
     {
       "id": "news-99e5eb21e6",
@@ -5059,19 +5091,19 @@
           "dex": 144,
           "name": "フリーザー(ガラル)",
           "shiny": false,
-          "note": ""
+          "note": "おさんぽおこうでまれに出現"
         },
         {
           "dex": 145,
           "name": "サンダー(ガラル)",
           "shiny": false,
-          "note": ""
+          "note": "おさんぽおこうでまれに出現"
         },
         {
           "dex": 146,
           "name": "ファイヤー(ガラル)",
           "shiny": false,
-          "note": ""
+          "note": "おさんぽおこうでまれに出現"
         },
         {
           "dex": 68,
@@ -7001,15 +7033,24 @@
     {
       "id": "ev-auto-festival-of-lights-india-2026",
       "month": 11,
-      "title": "光のフェスティバル（インド限定）",
-      "barClass": "bar-main",
-      "category": "main",
+      "title": "光の祭典(インド)",
+      "barClass": "bar-collab",
+      "category": "collab",
       "startDay": 6,
       "endDay": 8,
       "hasPaid": false,
-      "dateText": "現地時間 2026/11/6(金)10時～2026/11/8(日)20時",
-      "summary": "",
-      "freeFeatures": [],
+      "dateText": "11月6日(金)13:30~8日(日)23:30",
+      "summary": "インド現地限定で開催される光の祭典。サリー姿とクルタ姿のピカチュウが再登場し、リモートレイドなどで入手可能。",
+      "freeFeatures": [
+        "ルアーモジュールの効果時間3倍",
+        "イベントテーマポケモンは光る可能性",
+        "ポケストップからピカチュウのステッカー",
+        "スパークル・オクロックが発生",
+        "レイドボスが変化",
+        "ルアーモジュールの出現ポケモンが変化",
+        "コレクションチャレンジが登場",
+        "無料タイムチャレンジが登場"
+      ],
       "paidFeatures": [],
       "wilds": [],
       "raids": [],
