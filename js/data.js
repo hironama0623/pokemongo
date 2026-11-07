@@ -262,8 +262,16 @@ function applyAuto(entry, auto) {
   return entry;
 }
 
+const USE_MANUAL_CARDS = false;   // true で、手入力データ(data/manual)からもカード・イベントを作る（旧動作）
+
 // レイドの格：★5以上・メガ・スーパーメガ・シャドウ・伝説 は対策ランキング対象。★1・★3 は「出現するか」だけ表示する
-const isLowTier = r => /★\s*[1-3]/.test(String(r.note || "")) && !/メガ|シャドウ|伝説|★\s*[4-9]/.test(String(r.note || "") + String(r.name || ""));
+// ★1〜★3 は、シャドウでも「出現のみ」に回す（対策ランキングの対象は ★5以上・メガ・スーパーメガ・伝説シャドウ）。
+// 段階の記載が無い（note が空）通常のレイドも、★5以上かどうか分からないので「出現のみ」に回す
+const isLowTier = r => {
+  const note = String(r.note || ""), both = note + String(r.name || "");
+  if (/★\s*[1-3]/.test(note)) return !/メガ|伝説|★\s*[4-9]/.test(both);
+  return !/★|メガ|シャドウ|伝説|マックス/.test(both);
+};
 
 // レイド日程表（9DBのレイドボス一覧から自動取得した data/raid_schedule.json）。ボスの開催期間はここを正とする
 let RAID_SCHEDULE = [];
@@ -294,6 +302,20 @@ function applySchedule(data) {
     if (!rs.length) return;   // 日程表に今後の期間が無い場合は、既存の期間を残す
     const text = rs.map(r => `${fmt(r.s)}〜${fmt(r.e)}`).filter((t, i, a) => a.indexOf(t) === i).join("・");
     e._s = rs[0].s; e._e = rs[rs.length - 1].e; e.periodText = e.status = e.dateInfo = text;
+  });
+}
+
+// 表記ゆれ（化身/けしん など）で同じボスのカードが2枚できたとき、対策データのあるほう（無ければ先に作られたほう）だけ残す
+function dedupeRaids(data) {
+  const seen = {};
+  Object.keys(data).forEach(k => {
+    const e = data[k];
+    if (e.isDmax) return;
+    const key = normName(e.name) + "|" + bossClass(e.name);
+    const prev = seen[key];
+    if (!prev) { seen[key] = k; return; }
+    const has = x => (data[x].counters || []).length > 0;
+    if (has(k) && !has(prev)) { delete data[prev]; seen[key] = k; } else delete data[k];
   });
 }
 
@@ -397,6 +419,7 @@ function buildBattleData(autoBosses) {
       };
     });
   });
+  dedupeRaids(RAID_DATA);
   applySchedule(RAID_DATA);
   LOW_RAIDS.sort((a, b) => a._e - b._e);
 }
@@ -420,15 +443,17 @@ async function loadAll() {
   RAID_SCHEDULE = (aSched && aSched.items) || [];
   // gopass.json は任意（まだ無い場合は 404 になるので、エラー表示の対象にしない）
   if (!gopass) { const i = DATA_ERRORS.indexOf("data/gopass.json"); if (i >= 0) DATA_ERRORS.splice(i, 1); }
-  RAID_DATA = mRaid.raids || {};
-  DMAX_9DB_DATA = mDmax.dmax || {};
+  // 手入力データ（data/manual の raids / dmax / events）は、カードやイベントの元としては使わない（自動取得データだけで作る）。
+  // ポケモン名→図鑑番号の学習にだけ使う。戻したいときは USE_MANUAL_CARDS を true にする
+  RAID_DATA = USE_MANUAL_CARDS ? (mRaid.raids || {}) : {};
+  DMAX_9DB_DATA = USE_MANUAL_CARDS ? (mDmax.dmax || {}) : {};
   Object.values(RAID_DATA).forEach(withPeriod);
   Object.values(DMAX_9DB_DATA).forEach(withPeriod);
   SEASON_EGGS = mSeason.eggs || [];
   SEASON_BIOMES = mSeason.biomes || [];
   MON.learnNames(poke.names);
   MON.learnFrom([mEv, mRaid, mDmax, mSeason, aDet]);
-  ALL_EVENTS = buildEvents(mEv.events, aEv.events, aDet.events);
+  ALL_EVENTS = buildEvents(USE_MANUAL_CARDS ? mEv.events : [], aEv.events, aDet.events);
   NEWS_ITEMS = buildNews(aNews.items);
   GOPASS = gopass;
   META = meta;
