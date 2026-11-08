@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/11/08 17:39 JST",
+  "updated_at": "2026/11/08 18:39 JST",
   "latest_news": [
     {
       "id": "news-393b1d0a2d",
@@ -400,6 +400,78 @@
       "title": "【情報追加】ワイルドウィーク2026：レイドが判明・追加（4件）",
       "details": "レイド：ザシアン(けんのおう)、ザマゼンタ(たてのおう)、クリムガン、ミミズズ",
       "targetId": "ev-wildweek-2026"
+    },
+    {
+      "id": "news-96cef6c1a2",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "title": "【新イベント】レイドアワー：ザマゼンタ(たてのおう)",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-ev-zamazenta-crowned-shield-raid-hour"
+    },
+    {
+      "id": "news-0905fae890",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "title": "【情報追加】レイドアワー：ザマゼンタ(たてのおう)：レイドが判明・追加（1件）",
+      "details": "レイド：ザマゼンタ(たてのおう)",
+      "targetId": "ev-auto-ev-zamazenta-crowned-shield-raid-hour"
+    },
+    {
+      "id": "news-0a38668c99",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "title": "【情報追加】ザシアン（けんのおう）のレイドアワー：レイドが判明・追加（1件）",
+      "details": "レイド：ザシアン(けんのおう)",
+      "targetId": "ev-auto-zacian-crowned-sword-raid-hour"
+    },
+    {
+      "id": "news-80d025314b",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "title": "【情報追加】ワイルドエリア仙台Wayfarerタイムチャレンジ：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：15km探索する→ポケモン",
+      "targetId": "ev-auto-wayfarer-sendai-2026"
+    },
+    {
+      "id": "news-3ed7645097",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：フィールドリサーチが判明・追加（1件）",
+      "details": "フィールドリサーチ：is_all→トリデプス",
+      "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-46f5d226c8",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "title": "【情報追加】「黄昏時の願い」＆ スーパーメガレイドデイ：フィールドリサーチが判明・追加（5件）",
+      "details": "フィールドリサーチ：イベント限定フィールドリサーチタスク→カジッチュ、イベント限定フィールドリサーチタスク→オラチフ、イベント限定フィールドリサーチタスク→ゲンガー(魔女帽子)、イベント限定フィールドリサーチタスク→フワライド(ハロウィン)、イベント限定フィールドリサーチタスク→アノクサ",
+      "targetId": "ev-tusk-wish-deoxys"
+    },
+    {
+      "id": "news-e778bd5a48",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "title": "【情報追加】イオンハロウィンイベント：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：タイムチャレンジパート1（受取期間: 2026-10-19~10-25）→ピカチュウ(魔女帽子)、タイムチャレンジパート2（受取期間: 2026-10-26~11-01）→ピカチュウ(魔女帽子)",
+      "targetId": "ev-auto-aeon-halloween-2026"
+    },
+    {
+      "id": "news-ed6ba1e4e4",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "title": "【情報追加】Día de Muertos 2026（死者の日2026）：タイムチャレンジが判明・追加（3件）",
+      "details": "タイムチャレンジ：無料タイムチャレンジ→ステッカー 死者の日ステッカー(インスティンクト) ×5、無料タイムチャレンジ→ステッカー 死者の日ステッカー(ヴァーラー) ×5、無料タイムチャレンジ→ステッカー 死者の日ステッカー(ミスティック) ×5",
+      "targetId": "ev-auto-dia-de-muertos-2026"
+    },
+    {
+      "id": "news-4a8c82869a",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "title": "【情報追加】LAIC2027配信ボーナスタイムチャレンジ：タイムチャレンジが判明・追加（7件）",
+      "details": "タイムチャレンジ：Twitchのライブ配信30分以上視聴→ミジュマルのアメXL×20、Twitchのライブ配信30分以上視聴→わざマシンスペシャル×10、Twitchのライブ配信30分以上視聴→わざマシンノーマル×10、Twitchのライブ配信45分以上視聴→すごいわざマシンスペシャル×1、Twitchのライブ配信45分以上視聴→ふしぎなアメXL×1、Twitchのライブ配信45分以上視聴→わざマシンスペシャル×25 ほか1件",
+      "targetId": "ev-auto-laic2027-twitch-drops"
     },
     {
       "id": "news-27e2e8643b",
@@ -3401,6 +3473,41 @@
         "note": "出典: gamewith"
       },
       {
+        "task": "イベント限定フィールドリサーチタスク",
+        "rewardDex": 840,
+        "rewardName": "カジッチュ",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "イベント限定フィールドリサーチタスク",
+        "rewardDex": 942,
+        "rewardName": "オラチフ",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "イベント限定フィールドリサーチタスク",
+        "rewardDex": 94,
+        "rewardName": "ゲンガー(魔女帽子)",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "イベント限定フィールドリサーチタスク",
+        "rewardDex": 426,
+        "rewardName": "フワライド(ハロウィン)",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "イベント限定フィールドリサーチタスク",
+        "rewardDex": 946,
+        "rewardName": "アノクサ",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
         "task": "イベント限定のフィールドリサーチタスク",
         "rewardDex": 25,
         "rewardName": "メガエナジー",
@@ -4165,6 +4272,13 @@
         "rewardDex": 759,
         "rewardName": "ヌイコグマ",
         "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "is_all",
+        "rewardDex": 411,
+        "rewardName": "トリデプス",
+        "shiny": false,
         "note": "出典: gamewith"
       }
     ],
@@ -8724,6 +8838,24 @@
       "hasPaid": true,
       "dateText": "2026/11/9(月)18時～19時",
       "summary": "「ワイルドウィーク2026」イベント内のミニイベントとして、ザシアン（けんのおう）のレイドアワーが開催されます。",
+      "freeFeatures": [],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-ev-zamazenta-crowned-shield-raid-hour",
+      "month": 11,
+      "title": "レイドアワー：ザマゼンタ(たてのおう)",
+      "barClass": "bar-raid",
+      "category": "raid",
+      "startDay": 10,
+      "endDay": 10,
+      "hasPaid": false,
+      "dateText": "2026/11/10(火)18:00 〜 19:00",
+      "summary": "ザマゼンタ(たてのおう)が出現するレイドアワーが開催。",
       "freeFeatures": [],
       "paidFeatures": [],
       "wilds": [],
