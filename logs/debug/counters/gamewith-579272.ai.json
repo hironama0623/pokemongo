@@ -8,8 +8,19 @@
    "types": [],
    "counters": [
     {
-     "name": "ムゲンダイナ",
+     "name": "ハピナス",
      "rank": 1,
+     "role": "tank",
+     "tag": "normal",
+     "fast": "はたく",
+     "charged": null,
+     "dps": null,
+     "tdo": null,
+     "note": ""
+    },
+    {
+     "name": "ムゲンダイナ",
+     "rank": 3,
      "role": "attacker",
      "tag": "normal",
      "fast": "ドラゴンテール",
@@ -64,8 +75,8 @@
     },
     {
      "name": "ハピナス",
-     "rank": 1,
-     "role": "tank",
+     "rank": 6,
+     "role": "attacker",
      "tag": "normal",
      "fast": "はたく",
      "charged": null,
@@ -75,8 +86,8 @@
     },
     {
      "name": "スイクン",
-     "rank": 2,
-     "role": "tank",
+     "rank": 7,
+     "role": "attacker",
      "tag": "normal",
      "fast": "みずでっぽう",
      "charged": null,
@@ -86,8 +97,8 @@
     },
     {
      "name": "ルギア",
-     "rank": 3,
-     "role": "tank",
+     "rank": 8,
+     "role": "attacker",
      "tag": "normal",
      "fast": "じんつうりき",
      "charged": null,
@@ -97,8 +108,8 @@
     },
     {
      "name": "ミロカロス",
-     "rank": 4,
-     "role": "tank",
+     "rank": 9,
+     "role": "attacker",
      "tag": "normal",
      "fast": "たきのぼり",
      "charged": null,
@@ -108,8 +119,8 @@
     },
     {
      "name": "ラティアス",
-     "rank": 5,
-     "role": "tank",
+     "rank": 10,
+     "role": "attacker",
      "tag": "normal",
      "fast": "りゅうのいぶき",
      "charged": null,

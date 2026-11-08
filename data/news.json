@@ -1005,6 +1005,74 @@
       ]
     },
     {
+      "id": "news-9766f5d5fd",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "event_update",
+      "title": "【情報追加】GOワイルドエリア：キョダイマックスカイリキータイムチャレンジ：フィールドリサーチが判明・追加（1件）",
+      "details": "フィールドリサーチ：5km探索する→キョダイカイリキー",
+      "targetId": "ev-auto-wild-area-2026-free-time-challenge",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/586873",
+          "fetched_at": "2026-11-08T19:27:17.949661+09:00",
+          "article_updated": "2026-11-08T19:30:56+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-bbaf777cc9",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア仙台Wayfarerタイムチャレンジ：フィールドリサーチが判明・追加（1件）",
+      "details": "フィールドリサーチ：15km探索する→ポケモン",
+      "targetId": "ev-auto-wayfarer-sendai-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/587136",
+          "fetched_at": "2026-11-08T19:27:17.949661+09:00",
+          "article_updated": "2026-11-08T08:25:25+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-c3bd3e3076",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：メキシコシティ：フィールドリサーチが判明・追加（10件）",
+      "details": "フィールドリサーチ：はがねタイプテーマの ポケストップを回す→経験値、はがねタイプテーマの ポケストップ2個を回す→ジバコイル、はがねタイプテーマの ポケストップ3個を回す→ほしのすな、はがねタイプテーマの ポケストップ4個を回す→ハッサム、はがねタイプテーマの ポケストップ5個を回す→ポフィン、はがねタイプテーマの ポケストップ6個を回す→エンペルト ほか4件",
+      "targetId": "ev-auto-wild-area-2026-mexico-city",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/587003",
+          "fetched_at": "2026-11-08T19:27:17.949661+09:00",
+          "article_updated": "2026-11-07T20:59:22+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-339f8cfd1e",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "event_update",
+      "title": "【情報追加】LAIC2027配信ボーナスタイムチャレンジ：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：Twitchのライブ配信30分以上視聴→ハイドロカノンを覚えたダイケンキ",
+      "targetId": "ev-auto-laic2027-twitch-drops",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/583039",
+          "fetched_at": "2026-11-08T19:27:17.949661+09:00",
+          "article_updated": "2026-10-17T03:13:03+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-27e2e8643b",
       "date": "2026-11-07",
       "date_label": "11/7",
