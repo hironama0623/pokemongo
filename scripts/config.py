@@ -96,6 +96,7 @@ def is_schedule_article(article):
 
 
 # 9DBの「対策ポケモン」検索ツール(2734)から、日程ページ(2308)のボスの対策を取る（描画が必要なので時間がかかる。1回の実行で件数と秒数に上限）
+TOOL_VERSION = "2"   # 取得のやり方を変えたら上げる（全ボスを取り直す）
 TOOL_ENABLED = os.environ.get("TOOL_ENABLED", "1") == "1"
 TOOL_MAX_PER_RUN = int(os.environ.get("TOOL_MAX_PER_RUN", "6"))
 TOOL_BUDGET_SEC = int(os.environ.get("TOOL_BUDGET_SEC", "420"))

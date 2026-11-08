@@ -168,7 +168,8 @@ def _tool_counters(now, log, state, counters, names, unresolved, getter, states_
             (d / "tool2734_scripts.txt").write_text("\n".join(scripts_seen) or "(スクリプトなし)", encoding="utf-8")
         if not links or not id_names:
             return counters, False
-        done = state.setdefault("tool2734", {})
+        done = {k.split("|v")[0]: v for k, v in state.setdefault("tool2734", {}).items() if k.endswith("|v" + config.TOOL_VERSION)}   # 版が違う記録は無視（取り直す）
+        state["tool2734"] = {f"{k}|v{config.TOOL_VERSION}": v for k, v in done.items()}
         todo = sorted((l for l in links if (done.get(l["url"]) or "") < (now - dt.timedelta(hours=config.TOOL_MIN_HOURS)).isoformat()), key=lambda l: done.get(l["url"]) or "")
         t0, n_ok, n_ng = time.monotonic(), 0, 0
         for l in todo[:config.TOOL_MAX_PER_RUN]:
@@ -187,7 +188,7 @@ def _tool_counters(now, log, state, counters, names, unresolved, getter, states_
             if not boss:
                 n_ng += 1
                 log.note(f"対策ツール: {l['id']} lv{l['lv']} 取得できず {e2 or ''} {[k for k in res if k.startswith('_err')]}")
-                done[l["url"]] = now.isoformat()   # 取れないページを毎回やり直さない（次は TOOL_MIN_HOURS 後）
+                state["tool2734"][l["url"] + "|v" + config.TOOL_VERSION] = done[l["url"]] = now.isoformat()   # 取れないページを毎回やり直さない（次は TOOL_MIN_HOURS 後）
                 continue
             trial = copy.deepcopy(counters)
             src = {"site": tool2734.SITE, "url": l["url"], "fetched_at": now.isoformat(), "article_updated": None}
@@ -195,7 +196,7 @@ def _tool_counters(now, log, state, counters, names, unresolved, getter, states_
             if schemas.validate("counters", trial) is None and touched:
                 counters, changed = trial, True
                 n_ok += 1
-                done[l["url"]] = now.isoformat()
+                state["tool2734"][l["url"] + "|v" + config.TOOL_VERSION] = done[l["url"]] = now.isoformat()
                 tc = lambda rows: "/".join(str(sum(1 for r in rows if r["tag"] == t)) for t in ("normal", "shadow", "mega"))   # 通常/シャドウ/メガの行数
                 log.note(f"対策ツール: {boss['name']}（{boss['tier']}）{len(boss['counters'])}件 " + " ".join(f"{k}行={tc(v)}" for k, v in by_state.items()) + f" → 保存={tc(boss['counters'])}（通常/シャドウ/メガ）")
                 try:

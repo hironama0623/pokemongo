@@ -183,8 +183,15 @@ def render_states(url, states=("normal", "shadow", "mega")):
             except Exception:  # noqa: BLE001
                 out["_section"] = ""
             idx = {"shadow": 0, "mega": 1, "normal": 2}
-            for st in states:
+            for n_st, st in enumerate(states):
                 try:
+                    if n_st > 0:   # 状態ボタンは押すと選択が重なるので、ページを読み込み直して、その状態のボタンだけを押す
+                        page.goto(url, wait_until="domcontentloaded", timeout=30000)
+                        try:
+                            page.wait_for_load_state("networkidle", timeout=8000)
+                        except Exception:  # noqa: BLE001
+                            pass
+                        page.evaluate(_MARK_JS)
                     _safe_click(page, f'[data-probe-state="{idx[st]}"]')
                     _safe_click(page, '[data-probe-search="1"]')
                     page.wait_for_timeout(2500)
