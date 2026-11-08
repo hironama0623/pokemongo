@@ -1073,6 +1073,40 @@
       ]
     },
     {
+      "id": "news-6975763942",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：違うはがねタイプテーマのポケストップ2個を回す→ジジバコイル",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26352",
+          "fetched_at": "2026-11-08T20:40:28.353320+09:00",
+          "article_updated": "2026-11-08T18:10:12+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-d9edf8da4b",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "event_update",
+      "title": "【情報追加】光の祭典(インド)：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：光の祭典のイベントテーマに沿ったポケモンを捕獲してチャレンジを完了する（コレクションチャレンジ）→ほしのすな・経験値",
+      "targetId": "ev-auto-festival-of-lights-india-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/578749",
+          "fetched_at": "2026-11-08T20:40:28.353320+09:00",
+          "article_updated": "2026-11-08T03:39:05+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-27e2e8643b",
       "date": "2026-11-07",
       "date_label": "11/7",

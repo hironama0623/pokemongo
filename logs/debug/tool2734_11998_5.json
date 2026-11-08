@@ -9,7 +9,7 @@
     "name": "シャドウメガミュウツーX",
     "rank": 1,
     "role": "attacker",
-    "tag": "shadow",
+    "tag": "mega",
     "dps": 28.8,
     "fast": "カウンター",
     "charged": "ばくれつパンチ+",
@@ -20,7 +20,7 @@
     "name": "シャドウメガマフォクシー",
     "rank": 2,
     "role": "attacker",
-    "tag": "shadow",
+    "tag": "mega",
     "dps": 26.3,
     "fast": "ほのおのうず",
     "charged": "マジカルフレイム+",
@@ -31,7 +31,7 @@
     "name": "シャドウメガルカリオ",
     "rank": 3,
     "role": "attacker",
-    "tag": "shadow",
+    "tag": "mega",
     "dps": 23.8,
     "fast": "はっけい",
     "charged": "はどうだん",
@@ -42,7 +42,7 @@
     "name": "シャドウメガバシャーモ",
     "rank": 4,
     "role": "attacker",
-    "tag": "shadow",
+    "tag": "mega",
     "dps": 23.6,
     "fast": "ほのおのうず",
     "charged": "はどうだん",
@@ -75,7 +75,7 @@
     "name": "シャドウメガミュウツーY",
     "rank": 7,
     "role": "attacker",
-    "tag": "shadow",
+    "tag": "mega",
     "dps": 22.4,
     "fast": "カウンター",
     "charged": "みらいよち+",
@@ -86,7 +86,7 @@
     "name": "シャドウメガタイレーツ",
     "rank": 8,
     "role": "attacker",
-    "tag": "shadow",
+    "tag": "mega",
     "dps": 22.2,
     "fast": "カウンター",
     "charged": "かわらわり+",
@@ -108,7 +108,7 @@
     "name": "シャドウメガリザードンY",
     "rank": 10,
     "role": "attacker",
-    "tag": "shadow",
+    "tag": "mega",
     "dps": 21.7,
     "fast": "ほのおのうず",
     "charged": "ブラストバーン",
@@ -119,7 +119,7 @@
     "name": "シャドウメガエルレイド",
     "rank": 11,
     "role": "attacker",
-    "tag": "shadow",
+    "tag": "mega",
     "dps": 21.7,
     "fast": "けたぐり",
     "charged": "せいなるつるぎ",
@@ -141,7 +141,7 @@
     "name": "シャドウメガシャンデラ",
     "rank": 13,
     "role": "attacker",
-    "tag": "shadow",
+    "tag": "mega",
     "dps": 21.3,
     "fast": "ほのおのうず",
     "charged": "オーバーヒート",
@@ -185,7 +185,7 @@
     "name": "シャドウメガヘラクロス",
     "rank": 17,
     "role": "attacker",
-    "tag": "shadow",
+    "tag": "mega",
     "dps": 19.3,
     "fast": "カウンター",
     "charged": "インファイト",
@@ -196,7 +196,7 @@
     "name": "シャドウメガガブリアス",
     "rank": 18,
     "role": "attacker",
-    "tag": "shadow",
+    "tag": "mega",
     "dps": 19.3,
     "fast": "マッドショット",
     "charged": "だいちのちから",
@@ -1765,7 +1765,7 @@
    {
     "id": "9679",
     "name": "シャドウメガミュウツーX",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "カウンター",
     "charged": "ばくれつパンチ+",
     "time": 260.0,
@@ -1776,7 +1776,7 @@
    {
     "id": "9679",
     "name": "シャドウメガミュウツーX",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "サイコカッター",
     "charged": "ばくれつパンチ+",
     "time": 271.0,
@@ -1787,7 +1787,7 @@
    {
     "id": "24600",
     "name": "シャドウメガマフォクシー",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "ほのおのうず",
     "charged": "マジカルフレイム+",
     "time": 286.0,
@@ -1798,7 +1798,7 @@
    {
     "id": "9679",
     "name": "シャドウメガミュウツーX",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "ねんりき",
     "charged": "ばくれつパンチ+",
     "time": 306.0,
@@ -1809,7 +1809,7 @@
    {
     "id": "9721",
     "name": "シャドウメガルカリオ",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "はっけい",
     "charged": "はどうだん",
     "time": 319.0,
@@ -1820,7 +1820,7 @@
    {
     "id": "9688",
     "name": "シャドウメガバシャーモ",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "ほのおのうず",
     "charged": "はどうだん",
     "time": 319.0,
@@ -1831,7 +1831,7 @@
    {
     "id": "9688",
     "name": "シャドウメガバシャーモ",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "カウンター",
     "charged": "はどうだん",
     "time": 319.0,
@@ -1842,7 +1842,7 @@
    {
     "id": "9679",
     "name": "シャドウメガミュウツーX",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "カウンター",
     "charged": "きあいだま",
     "time": 320.0,
@@ -1864,7 +1864,7 @@
    {
     "id": "24600",
     "name": "シャドウメガマフォクシー",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "ほのおのうず",
     "charged": "ブラストバーン",
     "time": 331.0,
@@ -1875,7 +1875,7 @@
    {
     "id": "9680",
     "name": "シャドウメガミュウツーY",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "カウンター",
     "charged": "みらいよち+",
     "time": 335.0,
@@ -1886,7 +1886,7 @@
    {
     "id": "24617",
     "name": "シャドウメガタイレーツ",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "カウンター",
     "charged": "かわらわり+",
     "time": 338.0,
@@ -1897,7 +1897,7 @@
    {
     "id": "9688",
     "name": "シャドウメガバシャーモ",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "ひのこ",
     "charged": "はどうだん",
     "time": 338.0,
@@ -1919,7 +1919,7 @@
    {
     "id": "9668",
     "name": "シャドウメガリザードンY",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "ほのおのうず",
     "charged": "ブラストバーン",
     "time": 347.0,
@@ -1930,7 +1930,7 @@
    {
     "id": "9723",
     "name": "シャドウメガエルレイド",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "けたぐり",
     "charged": "せいなるつるぎ",
     "time": 347.0,
@@ -1941,7 +1941,7 @@
    {
     "id": "9721",
     "name": "シャドウメガルカリオ",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "カウンター",
     "charged": "はどうだん",
     "time": 355.0,
@@ -1974,7 +1974,7 @@
    {
     "id": "24597",
     "name": "シャドウメガシャンデラ",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "ほのおのうず",
     "charged": "オーバーヒート",
     "time": 353.0,
@@ -1985,7 +1985,7 @@
    {
     "id": "9680",
     "name": "シャドウメガミュウツーY",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "サイコカッター",
     "charged": "みらいよち+",
     "time": 356.0,
@@ -1996,7 +1996,7 @@
    {
     "id": "9688",
     "name": "シャドウメガバシャーモ",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "ほのおのうず",
     "charged": "ブラストバーン",
     "time": 358.0,
@@ -2007,7 +2007,7 @@
    {
     "id": "9688",
     "name": "シャドウメガバシャーモ",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "カウンター",
     "charged": "ブラストバーン",
     "time": 358.0,
@@ -2018,7 +2018,7 @@
    {
     "id": "9679",
     "name": "シャドウメガミュウツーX",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "カウンター",
     "charged": "かえんほうしゃ",
     "time": 358.0,
@@ -2029,7 +2029,7 @@
    {
     "id": "24597",
     "name": "シャドウメガシャンデラ",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "やきつくす",
     "charged": "オーバーヒート",
     "time": 360.0,
@@ -2040,7 +2040,7 @@
    {
     "id": "24600",
     "name": "シャドウメガマフォクシー",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "しねんのずつき",
     "charged": "マジカルフレイム+",
     "time": 361.0,
@@ -2051,7 +2051,7 @@
    {
     "id": "24600",
     "name": "シャドウメガマフォクシー",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "ほのおのうず",
     "charged": "マジカルフレイム",
     "time": 363.0,
@@ -2062,7 +2062,7 @@
    {
     "id": "9680",
     "name": "シャドウメガミュウツーY",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "カウンター",
     "charged": "きあいだま",
     "time": 364.0,
@@ -2073,7 +2073,7 @@
    {
     "id": "9668",
     "name": "シャドウメガリザードンY",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "ひのこ",
     "charged": "ブラストバーン",
     "time": 364.0,
@@ -2084,7 +2084,7 @@
    {
     "id": "24597",
     "name": "シャドウメガシャンデラ",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "ほのおのうず",
     "charged": "あやしいかぜ+",
     "time": 366.0,
@@ -2095,7 +2095,7 @@
    {
     "id": "9679",
     "name": "シャドウメガミュウツーX",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "カウンター",
     "charged": "サイコブレイク",
     "time": 367.0,
@@ -2106,7 +2106,7 @@
    {
     "id": "9723",
     "name": "シャドウメガエルレイド",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "サイコカッター",
     "charged": "せいなるつるぎ",
     "time": 367.0,
@@ -2117,7 +2117,7 @@
    {
     "id": "9680",
     "name": "シャドウメガミュウツーY",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "カウンター",
     "charged": "かえんほうしゃ",
     "time": 371.0,
@@ -2128,7 +2128,7 @@
    {
     "id": "9679",
     "name": "シャドウメガミュウツーX",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "サイコカッター",
     "charged": "きあいだま",
     "time": 375.0,
@@ -2139,7 +2139,7 @@
    {
     "id": "9668",
     "name": "シャドウメガリザードンY",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "ほのおのうず",
     "charged": "オーバーヒート",
     "time": 374.0,
@@ -2150,7 +2150,7 @@
    {
     "id": "24597",
     "name": "シャドウメガシャンデラ",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "やきつくす",
     "charged": "あやしいかぜ+",
     "time": 375.0,
@@ -2161,7 +2161,7 @@
    {
     "id": "9688",
     "name": "シャドウメガバシャーモ",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "ひのこ",
     "charged": "ブラストバーン",
     "time": 376.0,
@@ -2172,7 +2172,7 @@
    {
     "id": "24600",
     "name": "シャドウメガマフォクシー",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "ほのおのうず",
     "charged": "かえんほうしゃ",
     "time": 380.0,
@@ -2183,7 +2183,7 @@
    {
     "id": "9680",
     "name": "シャドウメガミュウツーY",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "カウンター",
     "charged": "サイコブレイク",
     "time": 381.0,
@@ -2194,7 +2194,7 @@
    {
     "id": "9680",
     "name": "シャドウメガミュウツーY",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "ねんりき",
     "charged": "みらいよち+",
     "time": 382.0,
@@ -2205,7 +2205,7 @@
    {
     "id": "9688",
     "name": "シャドウメガバシャーモ",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "ほのおのうず",
     "charged": "ブレイズキック",
     "time": 382.0,
@@ -2216,7 +2216,7 @@
    {
     "id": "9688",
     "name": "シャドウメガバシャーモ",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "カウンター",
     "charged": "ブレイズキック",
     "time": 382.0,
@@ -2227,7 +2227,7 @@
    {
     "id": "9684",
     "name": "シャドウメガヘラクロス",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "カウンター",
     "charged": "インファイト",
     "time": 389.0,
@@ -2238,7 +2238,7 @@
    {
     "id": "24600",
     "name": "シャドウメガマフォクシー",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "ほのおのうず",
     "charged": "だいもんじ",
     "time": 389.0,
@@ -2249,7 +2249,7 @@
    {
     "id": "9720",
     "name": "シャドウメガガブリアス",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "マッドショット",
     "charged": "だいちのちから",
     "time": 390.0,
@@ -2271,7 +2271,7 @@
    {
     "id": "9679",
     "name": "シャドウメガミュウツーX",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "ねんりき",
     "charged": "きあいだま",
     "time": 394.0,
@@ -2282,7 +2282,7 @@
    {
     "id": "9688",
     "name": "シャドウメガバシャーモ",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "ほのおのうず",
     "charged": "オーバーヒート",
     "time": 394.0,
@@ -2293,7 +2293,7 @@
    {
     "id": "9688",
     "name": "シャドウメガバシャーモ",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "カウンター",
     "charged": "オーバーヒート",
     "time": 394.0,
@@ -2304,7 +2304,7 @@
    {
     "id": "9668",
     "name": "シャドウメガリザードンY",
-    "tag": "shadow",
+    "tag": "mega",
     "fast": "つばさでうつ",
     "charged": "ブラストバーン",
     "time": 394.0,
