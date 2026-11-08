@@ -167,45 +167,41 @@ def render_states(url, states=("normal", "shadow", "mega")):
                 _pw.stop(); _pw = None
                 _launch_error = f"Chromiumを起動できません: {str(e)[:120]}"
                 return out, _launch_error
-        ctx = _browser.new_context(user_agent=config.UA, locale="ja-JP")
-        ctx.route("**/*", lambda r: r.abort() if r.request.resource_type in ("media", "font") else r.continue_())   # 画像は止めない（名前の手がかりが画像のため）
-        page = ctx.new_page()
-        try:
-            page.goto(url, wait_until="domcontentloaded", timeout=30000)
+        idx = {"shadow": 0, "mega": 1, "normal": 2}
+        for st in states:   # 状態ごとに新しいブラウザ環境（保存データなし）で開く。選択が重なる/記憶される対策
+            ctx = _browser.new_context(user_agent=config.UA, locale="ja-JP")
+            ctx.route("**/*", lambda r: r.abort() if r.request.resource_type in ("media", "font") else r.continue_())   # 画像は止めない
             try:
-                page.wait_for_load_state("networkidle", timeout=8000)
-            except Exception:  # noqa: BLE001
-                pass
-            mark = page.evaluate(_MARK_JS)
-            out["_mark"] = mark
-            try:
-                out["_section"] = page.evaluate("() => window.__probeSection || ''")
-            except Exception:  # noqa: BLE001
-                out["_section"] = ""
-            idx = {"shadow": 0, "mega": 1, "normal": 2}
-            for n_st, st in enumerate(states):
+                page = ctx.new_page()
+                page.goto(url, wait_until="domcontentloaded", timeout=30000)
                 try:
-                    if n_st > 0:   # 状態ボタンは押すと選択が重なるので、ページを読み込み直して、その状態のボタンだけを押す
-                        page.goto(url, wait_until="domcontentloaded", timeout=30000)
-                        try:
-                            page.wait_for_load_state("networkidle", timeout=8000)
-                        except Exception:  # noqa: BLE001
-                            pass
-                        page.evaluate(_MARK_JS)
-                    _safe_click(page, f'[data-probe-state="{idx[st]}"]')
-                    _safe_click(page, '[data-probe-search="1"]')
-                    page.wait_for_timeout(2500)
+                    page.wait_for_load_state("networkidle", timeout=8000)
+                except Exception:  # noqa: BLE001
+                    pass
+                mark = page.evaluate(_MARK_JS)
+                if "_mark" not in out:
+                    out["_mark"] = mark
                     try:
-                        page.wait_for_load_state("networkidle", timeout=6000)
+                        out["_section"] = page.evaluate("() => window.__probeSection || ''")
                     except Exception:  # noqa: BLE001
-                        pass
-                except Exception as e:  # noqa: BLE001
-                    out[st] = None
-                    out[f"_err_{st}"] = f"{type(e).__name__}: {str(e)[:100]}"
-                    continue
+                        out["_section"] = ""
+                _safe_click(page, f'[data-probe-state="{idx[st]}"]')
+                try:   # 押したあとの3つのボタンの見た目（クラス名）。どれが選択中かの手がかり
+                    out[f"_btn_{st}"] = page.evaluate("() => [...document.querySelectorAll('[data-probe-state]')].map(e => e.getAttribute('data-probe-state') + ':' + (e.className || '') + (e.getAttribute('aria-pressed') ? '/p=' + e.getAttribute('aria-pressed') : '')).join(' | ')")[:300]
+                except Exception:  # noqa: BLE001
+                    pass
+                _safe_click(page, '[data-probe-search="1"]')
+                page.wait_for_timeout(2500)
+                try:
+                    page.wait_for_load_state("networkidle", timeout=6000)
+                except Exception:  # noqa: BLE001
+                    pass
                 out[st] = page.content()
-        finally:
-            ctx.close()
+            except Exception as e:  # noqa: BLE001
+                out[st] = None
+                out[f"_err_{st}"] = f"{type(e).__name__}: {str(e)[:100]}"
+            finally:
+                ctx.close()
         return out, None
     except Exception as e:  # noqa: BLE001
         return out, f"{type(e).__name__}: {str(e)[:150]}"

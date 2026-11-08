@@ -177,6 +177,9 @@ def _tool_counters(now, log, state, counters, names, unresolved, getter, states_
                 break
             res, e2 = states_getter(l["url"])
             by_state, bad_all = {}, set()
+            btn = {k: v for k, v in res.items() if k.startswith("_btn_")}
+            if btn and l is todo[0]:   # 1ボスぶんだけ、状態ボタンの見た目をログに残す（選択状態の判別用）
+                log.note("対策ツール: ボタンの状態 " + " // ".join(f"{k[5:]}: {v}" for k, v in btn.items()))
             for st in ("normal", "shadow", "mega"):
                 if res.get(st):
                     rows, bad = tool2734.parse_rows(res[st], id_names)
