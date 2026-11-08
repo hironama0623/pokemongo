@@ -648,6 +648,57 @@
       ]
     },
     {
+      "id": "news-f25c3fc921",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "event_update",
+      "title": "【情報追加】「ピクシー」の「スーパーメガレイド・デイ」：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：イベント期間中に登場する無料タイムチャレンジ→メタグロス・プレミアムバトルパス",
+      "targetId": "ev-auto-clefable-super-mega-raid-day-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/586872",
+          "fetched_at": "2026-11-08T12:45:34.206218+09:00",
+          "article_updated": "2026-11-07T13:11:13+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-da5a64e853",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "event_update",
+      "title": "【情報追加】ポケモンナイトアウト：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：Twitch配信を30分以上試聴する→ポケモンナイトアウト野球ジャージ",
+      "targetId": "ev-auto-pokemon-night-out",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/583322",
+          "fetched_at": "2026-11-08T12:45:34.206218+09:00",
+          "article_updated": "2026-10-28T17:59:21+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-f0933c34ab",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "event_update",
+      "title": "【情報追加】わくわく！Pokémon GO Lab.大調査：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：わくわく！Pokémon GO Lab.大調査タイムチャレンジ→ピカチュウ(ウィロー博士の助手)",
+      "targetId": "ev-auto-wakuwaku-pokemon-go-lab",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/580836",
+          "fetched_at": "2026-11-08T12:45:34.206218+09:00",
+          "article_updated": "2026-10-12T11:14:33+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-27e2e8643b",
       "date": "2026-11-07",
       "date_label": "11/7",
