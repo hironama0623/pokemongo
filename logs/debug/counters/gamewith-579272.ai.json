@@ -20,7 +20,7 @@
     },
     {
      "name": "ムゲンダイナ",
-     "rank": 2,
+     "rank": 3,
      "role": "attacker",
      "tag": "dmax",
      "fast": "ドラゴンテール",
@@ -31,7 +31,7 @@
     },
     {
      "name": "ラティオス",
-     "rank": 1,
+     "rank": 2,
      "role": "attacker",
      "tag": "dmax",
      "fast": "りゅうのいぶき",
@@ -42,7 +42,7 @@
     },
     {
      "name": "サザンドラ",
-     "rank": 2,
+     "rank": 3,
      "role": "attacker",
      "tag": "dmax",
      "fast": "りゅうのいぶき",
@@ -53,7 +53,7 @@
     },
     {
      "name": "ジュラルドン",
-     "rank": 3,
+     "rank": 4,
      "role": "attacker",
      "tag": "dmax",
      "fast": "ドラゴンテール",
@@ -64,7 +64,7 @@
     },
     {
      "name": "サーナイト",
-     "rank": 4,
+     "rank": 5,
      "role": "attacker",
      "tag": "dmax",
      "fast": "あまえる",
@@ -74,9 +74,20 @@
      "note": ""
     },
     {
+     "name": "ハピナス",
+     "rank": 6,
+     "role": "attacker",
+     "tag": "dmax",
+     "fast": "はたく",
+     "charged": null,
+     "dps": null,
+     "tdo": null,
+     "note": ""
+    },
+    {
      "name": "スイクン",
-     "rank": 2,
-     "role": "tank",
+     "rank": 7,
+     "role": "attacker",
      "tag": "dmax",
      "fast": "みずでっぽう",
      "charged": null,
@@ -86,8 +97,8 @@
     },
     {
      "name": "ルギア",
-     "rank": 3,
-     "role": "tank",
+     "rank": 8,
+     "role": "attacker",
      "tag": "dmax",
      "fast": "じんつうりき",
      "charged": null,
@@ -97,8 +108,8 @@
     },
     {
      "name": "ミロカロス",
-     "rank": 4,
-     "role": "tank",
+     "rank": 9,
+     "role": "attacker",
      "tag": "dmax",
      "fast": "たきのぼり",
      "charged": null,
@@ -108,8 +119,8 @@
     },
     {
      "name": "ラティアス",
-     "rank": 5,
-     "role": "tank",
+     "rank": 10,
+     "role": "attacker",
      "tag": "dmax",
      "fast": "りゅうのいぶき",
      "charged": null,

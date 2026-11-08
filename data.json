@@ -1,6 +1,78 @@
 {
-  "updated_at": "2026/11/08 22:43 JST",
+  "updated_at": "2026/11/09 07:29 JST",
   "latest_news": [
+    {
+      "id": "news-0eda0bac05",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "title": "【情報追加】ワイルドウィーク2026：野生が判明・追加（7件）",
+      "details": "野生：メリープ、ニャース (ガラル)、クチート、ストライク、タッツー、クリムガン ほか1件",
+      "targetId": "ev-wildweek-2026"
+    },
+    {
+      "id": "news-ae3ae172cf",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "title": "【日程変更】GOパス：ワイルドウィーク2026",
+      "details": "日程が更新されています：2026-11-09〜2026-11-15 → 2026-11-09〜2026-11-13",
+      "targetId": "ev-auto-go-pass-wild-week-2026"
+    },
+    {
+      "id": "news-7d72171ea7",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "title": "【情報追加】GOパス：ワイルドウィーク2026：野生が判明・追加（11件）",
+      "details": "野生：ニャース(ガラル)、コイル、ココドラ、トゲデマル、タッツー、ミニリュウ ほか5件",
+      "targetId": "ev-auto-go-pass-wild-week-2026"
+    },
+    {
+      "id": "news-146fb1221a",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "title": "【情報追加】GOパス：ワイルドウィーク2026：レイドが判明・追加（6件）",
+      "details": "レイド：ダイマックス レジドラゴ、ダイマックス レジスチル、ダイマックス ラティアス、ダイマックス ラティオス、ザシアン (けんのおう)、ザマゼンタ (たてのおう)",
+      "targetId": "ev-auto-go-pass-wild-week-2026"
+    },
+    {
+      "id": "news-2f711f67cd",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "title": "【情報追加】GOパス：ワイルドウィーク2026：フィールドリサーチが判明・追加（1件）",
+      "details": "フィールドリサーチ：ポケモンとの出会い→コイル・オンバット・トゲデマル",
+      "targetId": "ev-auto-go-pass-wild-week-2026"
+    },
+    {
+      "id": "news-0b5bc885d0",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "title": "【情報追加】ワイルドウィーク(2026年)：レイドが判明・追加（2件）",
+      "details": "レイド：ザシアン(けんのおう)、ザマゼンタ(たてのおう)",
+      "targetId": "ev-auto-wild-week-2026"
+    },
+    {
+      "id": "news-58cf79f08b",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：タイムチャレンジが判明・追加（10件）",
+      "details": "タイムチャレンジ：はがねタイプテーマのポケストップを回す→x5000、違うはがねタイプテーマのポケストップ3個を回す→x5000、違うはがねタイプテーマのポケストップ5個を回す→x1、違うはがねタイプテーマのポケストップ7個を回す→x2、違うはがねタイプテーマのポケストップ9個を回す→x2、ドラゴンタイプテーマのポケストップを回す→x5000 ほか4件",
+      "targetId": "ev-auto-wild-area-2026-sendai"
+    },
+    {
+      "id": "news-334d142c6b",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "title": "【情報追加】「黄昏時の願い」＆ スーパーメガレイドデイ：フィールドリサーチが判明・追加（1件）",
+      "details": "フィールドリサーチ：期間中にフィールドリサーチを達成すると黄昏の旅路シーズンに登場したポケモンと出会える→カジッチュ・オラチフ・ゲンガー(魔女帽子)・フワライド(ハロウィン)・アノクサ",
+      "targetId": "ev-tusk-wish-deoxys"
+    },
+    {
+      "id": "news-fe2c3cb4bf",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "title": "【情報追加】スーパーメガレイドデイ：メガシャンデラ：フィールドリサーチが判明・追加（5件）",
+      "details": "フィールドリサーチ：ポケモンを1匹捕まえる→バンギラス、ポケモンを15回強化する→メガエナジー、こうかばつぐんのスペシャルアタックを3回使ってバトルする→ほしのすな、レイドバトルで1回勝つ→わざマシンスペシャル、ゴーストタイプかほのおタイプのボスポケモンに勝つ→ヨーギラス",
+      "targetId": "ev-auto-super-mega-raid-day-chandelure"
+    },
     {
       "id": "news-393b1d0a2d",
       "date": "2026-11-08",
@@ -3873,6 +3945,41 @@
         "rewardName": "リグレー",
         "shiny": true,
         "note": "出典: gamewith"
+      },
+      {
+        "task": "期間中にフィールドリサーチを達成すると黄昏の旅路シーズンに登場したポケモンと出会える",
+        "rewardDex": 840,
+        "rewardName": "カジッチュ",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "期間中にフィールドリサーチを達成すると黄昏の旅路シーズンに登場したポケモンと出会える",
+        "rewardDex": 942,
+        "rewardName": "オラチフ",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "期間中にフィールドリサーチを達成すると黄昏の旅路シーズンに登場したポケモンと出会える",
+        "rewardDex": 94,
+        "rewardName": "ゲンガー(魔女帽子)",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "期間中にフィールドリサーチを達成すると黄昏の旅路シーズンに登場したポケモンと出会える",
+        "rewardDex": 426,
+        "rewardName": "フワライド(ハロウィン)",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "期間中にフィールドリサーチを達成すると黄昏の旅路シーズンに登場したポケモンと出会える",
+        "rewardDex": 946,
+        "rewardName": "アノクサ",
+        "shiny": true,
+        "note": "出典: gamewith"
       }
     ],
     "ev-auto-fall-marathon-buddy-trek-2026": [
@@ -3917,6 +4024,29 @@
         "rewardName": "アノクサ",
         "shiny": false,
         "note": "出典: gamewith"
+      }
+    ],
+    "ev-auto-go-pass-wild-week-2026": [
+      {
+        "task": "ポケモンとの出会い",
+        "rewardDex": 81,
+        "rewardName": "コイル",
+        "shiny": true,
+        "note": "出典: pokemapi"
+      },
+      {
+        "task": "ポケモンとの出会い",
+        "rewardDex": 714,
+        "rewardName": "オンバット",
+        "shiny": true,
+        "note": "出典: pokemapi"
+      },
+      {
+        "task": "ポケモンとの出会い",
+        "rewardDex": 777,
+        "rewardName": "トゲデマル",
+        "shiny": true,
+        "note": "出典: pokemapi"
       }
     ],
     "ev-auto-wild-area-2026-sendai": [
@@ -4362,6 +4492,43 @@
         "note": "出典: gamewith"
       }
     ],
+    "ev-auto-super-mega-raid-day-chandelure": [
+      {
+        "task": "ポケモンを1匹捕まえる",
+        "rewardDex": 248,
+        "rewardName": "バンギラス",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "ポケモンを15回強化する",
+        "rewardDex": 25,
+        "rewardName": "メガエナジー",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "こうかばつぐんのスペシャルアタックを3回使ってバトルする",
+        "rewardDex": 25,
+        "rewardName": "ほしのすな",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "レイドバトルで1回勝つ",
+        "rewardDex": 25,
+        "rewardName": "わざマシンスペシャル",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "ゴーストタイプかほのおタイプのボスポケモンに勝つ",
+        "rewardDex": 246,
+        "rewardName": "ヨーギラス",
+        "shiny": false,
+        "note": "出典: gamewith"
+      }
+    ],
     "ev-auto-wakuwaku-pokemon-go-lab": [
       {
         "task": "Pokémon GO Lab.のポケストップを回す",
@@ -4783,7 +4950,7 @@
         {
           "dex": 304,
           "name": "ココドラ",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
@@ -4873,7 +5040,7 @@
         {
           "dex": 147,
           "name": "ミニリュウ",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
@@ -4903,7 +5070,7 @@
         {
           "dex": 371,
           "name": "タツベイ",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
@@ -4939,7 +5106,7 @@
         {
           "dex": 690,
           "name": "クズモー",
-          "shiny": false,
+          "shiny": true,
           "note": ""
         },
         {
@@ -5139,6 +5306,48 @@
           "name": "メッソン",
           "shiny": false,
           "note": "スポットライトアワー"
+        },
+        {
+          "dex": 179,
+          "name": "メリープ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 52,
+          "name": "ニャース (ガラル)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 303,
+          "name": "クチート",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 123,
+          "name": "ストライク",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 116,
+          "name": "タッツー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 621,
+          "name": "クリムガン",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 968,
+          "name": "ミミズズ",
+          "shiny": true,
+          "note": ""
         },
         {
           "dex": 999,
@@ -6373,6 +6582,78 @@
         {
           "dex": 105,
           "name": "アローラガラガラ",
+          "shiny": true,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "ev-auto-go-pass-wild-week-2026",
+      "title": "ev-auto-go-pass-wild-week-2026",
+      "wilds": [
+        {
+          "dex": 52,
+          "name": "ニャース(ガラル)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 81,
+          "name": "コイル",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 304,
+          "name": "ココドラ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 777,
+          "name": "トゲデマル",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 116,
+          "name": "タッツー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 147,
+          "name": "ミニリュウ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 371,
+          "name": "タツベイ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 690,
+          "name": "クズモー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 303,
+          "name": "クチート",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 123,
+          "name": "ストライク",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 714,
+          "name": "オンバット",
           "shiny": true,
           "note": ""
         }

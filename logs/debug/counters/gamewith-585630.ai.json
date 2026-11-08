@@ -4,8 +4,11 @@
   {
    "name": "キョダイマックスジュラルドン",
    "kind": "dmax",
-   "tier": "星6",
-   "types": [],
+   "tier": "★6",
+   "types": [
+    "はがね",
+    "ドラゴン"
+   ],
    "counters": [
     {
      "name": "キョダイカイリキー",
@@ -64,7 +67,7 @@
     },
     {
      "name": "ザマゼンタ(王)",
-     "rank": 6,
+     "rank": 1,
      "role": "tank",
      "tag": "normal",
      "fast": "メタルクロー",
@@ -75,7 +78,7 @@
     },
     {
      "name": "レジスチル",
-     "rank": 7,
+     "rank": 2,
      "role": "tank",
      "tag": "normal",
      "fast": "メタルクロー",
@@ -86,7 +89,7 @@
     },
     {
      "name": "ハピナス",
-     "rank": 8,
+     "rank": 3,
      "role": "tank",
      "tag": "normal",
      "fast": "はたく",
@@ -97,7 +100,7 @@
     },
     {
      "name": "メタグロス",
-     "rank": 9,
+     "rank": 4,
      "role": "tank",
      "tag": "normal",
      "fast": "シャドークロー",
@@ -108,7 +111,7 @@
     },
     {
      "name": "アーマーガア",
-     "rank": 10,
+     "rank": 5,
      "role": "tank",
      "tag": "normal",
      "fast": "すなかけ",

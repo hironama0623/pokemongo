@@ -2,6 +2,159 @@
   "schema_version": 1,
   "items": [
     {
+      "id": "news-0eda0bac05",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドウィーク2026：野生が判明・追加（7件）",
+      "details": "野生：メリープ、ニャース (ガラル)、クチート、ストライク、タッツー、クリムガン ほか1件",
+      "targetId": "ev-wildweek-2026",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10826/",
+          "fetched_at": "2026-11-09T07:29:59.194201+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-ae3ae172cf",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "kind": "schedule_changed",
+      "title": "【日程変更】GOパス：ワイルドウィーク2026",
+      "details": "日程が更新されています：2026-11-09〜2026-11-15 → 2026-11-09〜2026-11-13",
+      "targetId": "ev-auto-go-pass-wild-week-2026",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10820/",
+          "fetched_at": "2026-11-09T07:29:59.194201+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-7d72171ea7",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "kind": "event_update",
+      "title": "【情報追加】GOパス：ワイルドウィーク2026：野生が判明・追加（11件）",
+      "details": "野生：ニャース(ガラル)、コイル、ココドラ、トゲデマル、タッツー、ミニリュウ ほか5件",
+      "targetId": "ev-auto-go-pass-wild-week-2026",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10820/",
+          "fetched_at": "2026-11-09T07:29:59.194201+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-146fb1221a",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "kind": "event_update",
+      "title": "【情報追加】GOパス：ワイルドウィーク2026：レイドが判明・追加（6件）",
+      "details": "レイド：ダイマックス レジドラゴ、ダイマックス レジスチル、ダイマックス ラティアス、ダイマックス ラティオス、ザシアン (けんのおう)、ザマゼンタ (たてのおう)",
+      "targetId": "ev-auto-go-pass-wild-week-2026",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10820/",
+          "fetched_at": "2026-11-09T07:29:59.194201+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-2f711f67cd",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "kind": "event_update",
+      "title": "【情報追加】GOパス：ワイルドウィーク2026：フィールドリサーチが判明・追加（1件）",
+      "details": "フィールドリサーチ：ポケモンとの出会い→コイル・オンバット・トゲデマル",
+      "targetId": "ev-auto-go-pass-wild-week-2026",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10820/",
+          "fetched_at": "2026-11-09T07:29:59.194201+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-0b5bc885d0",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドウィーク(2026年)：レイドが判明・追加（2件）",
+      "details": "レイド：ザシアン(けんのおう)、ザマゼンタ(たてのおう)",
+      "targetId": "ev-auto-wild-week-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/582768",
+          "fetched_at": "2026-11-09T07:29:59.194201+09:00",
+          "article_updated": "2026-11-08T19:26:10+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-58cf79f08b",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：タイムチャレンジが判明・追加（10件）",
+      "details": "タイムチャレンジ：はがねタイプテーマのポケストップを回す→x5000、違うはがねタイプテーマのポケストップ3個を回す→x5000、違うはがねタイプテーマのポケストップ5個を回す→x1、違うはがねタイプテーマのポケストップ7個を回す→x2、違うはがねタイプテーマのポケストップ9個を回す→x2、ドラゴンタイプテーマのポケストップを回す→x5000 ほか4件",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26352",
+          "fetched_at": "2026-11-09T07:29:59.194201+09:00",
+          "article_updated": "2026-11-08T18:10:12+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-334d142c6b",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "kind": "event_update",
+      "title": "【情報追加】「黄昏時の願い」＆ スーパーメガレイドデイ：フィールドリサーチが判明・追加（1件）",
+      "details": "フィールドリサーチ：期間中にフィールドリサーチを達成すると黄昏の旅路シーズンに登場したポケモンと出会える→カジッチュ・オラチフ・ゲンガー(魔女帽子)・フワライド(ハロウィン)・アノクサ",
+      "targetId": "ev-tusk-wish-deoxys",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/586413",
+          "fetched_at": "2026-11-09T07:29:59.194201+09:00",
+          "article_updated": "2026-11-05T13:34:20+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-fe2c3cb4bf",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "kind": "event_update",
+      "title": "【情報追加】スーパーメガレイドデイ：メガシャンデラ：フィールドリサーチが判明・追加（5件）",
+      "details": "フィールドリサーチ：ポケモンを1匹捕まえる→バンギラス、ポケモンを15回強化する→メガエナジー、こうかばつぐんのスペシャルアタックを3回使ってバトルする→ほしのすな、レイドバトルで1回勝つ→わざマシンスペシャル、ゴーストタイプかほのおタイプのボスポケモンに勝つ→ヨーギラス",
+      "targetId": "ev-auto-super-mega-raid-day-chandelure",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/582648",
+          "fetched_at": "2026-11-09T07:29:59.194201+09:00",
+          "article_updated": "2026-11-02T13:29:08+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-393b1d0a2d",
       "date": "2026-11-08",
       "date_label": "11/8",
@@ -3087,6 +3240,12 @@
           "url": "https://pokemongo.gamewith.jp/article/show/578629",
           "fetched_at": "2026-11-06T12:46:20.236820+09:00",
           "article_updated": "2026-11-05T02:47:29+09:00"
+        },
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/578629",
+          "fetched_at": "2026-11-09T07:29:59.194201+09:00",
+          "article_updated": "2026-11-08T23:06:16+09:00"
         }
       ]
     },
