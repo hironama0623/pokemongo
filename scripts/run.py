@@ -179,9 +179,9 @@ def _tool_counters(now, log, state, counters, names, unresolved, getter, states_
             by_state, bad_all = {}, set()
             btn = {k: v for k, v in res.items() if k.startswith("_btn_")}
             if btn and l is todo[0]:   # 1ボスぶんだけ、状態ボタンの見た目をログに残す（選択状態の判別用）
-                log.note("対策ツール: ボタンの状態 " + " // ".join(f"{k[5:]}: {v}" for k, v in btn.items()))
+                log.note("対策ツール: ボタンの状態 " + " // ".join(f"{k[5:]}: {v}" for k, v in btn.items()) + " | 選択に使えた方法 " + " ".join(f"{k[5:]}={v}" for k, v in res.items() if k.startswith("_sel_")))
             for st in ("normal", "shadow", "mega"):
-                if res.get(st):
+                if res.get(st) and res.get(f"_sel_{st}"):   # 状態を選べなかったときの表は、別の状態の結果なので使わない
                     rows, bad = tool2734.parse_rows(res[st], id_names)
                     by_state[st] = rows
                     bad_all |= bad

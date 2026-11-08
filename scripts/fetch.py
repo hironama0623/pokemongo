@@ -150,6 +150,32 @@ def _safe_click(page, selector):
     loc.evaluate("el => el.click()", timeout=3000)
 
 
+def _select_state(page, i):
+    """状態ボタン i を押して、本当に選択状態（クラス wiki_selected）になるまで、方法を変えて試す。使えた方法名を返す（だめなら None）。"""
+    sel = f'[data-probe-state="{i}"]'
+    is_sel = lambda: page.evaluate("i => { const e = document.querySelector('[data-probe-state=\"' + i + '\"]'); return !!e && e.classList.contains('wiki_selected'); }", str(i))
+    loc = page.locator(sel).first
+    if is_sel():
+        return "already"
+    steps = []
+    steps.append(("click", lambda: loc.click(timeout=2500)))
+    steps.append(("force", lambda: (loc.scroll_into_view_if_needed(timeout=2000), loc.click(timeout=2500, force=True))))
+    def mouse():
+        b = loc.bounding_box()
+        page.mouse.click(b["x"] + b["width"] / 2, b["y"] + b["height"] / 2)
+    steps.append(("mouse", mouse))
+    steps.append(("js", lambda: loc.evaluate("el => { for (const t of ['mousedown', 'mouseup', 'click']) el.dispatchEvent(new MouseEvent(t, {bubbles: true, cancelable: true, view: window})); }", timeout=3000)))
+    for name, fn in steps:
+        try:
+            fn()
+        except Exception:  # noqa: BLE001
+            continue
+        page.wait_for_timeout(500)
+        if is_sel():
+            return name
+    return None
+
+
 def render_states(url, states=("normal", "shadow", "mega")):
     """9DBの対策検索ツール用。ページを描画し、「状態」の3つのボタン（左=シャドウ / 中=メガ / 右=未実装=通常）を順に押して「検索」を押し、
     状態ごとの描画後HTMLを返す。{state: html|None}, error|None。ボタンが見つからない場合は、押さずに最初の表だけ返す。"""
@@ -185,7 +211,7 @@ def render_states(url, states=("normal", "shadow", "mega")):
                         out["_section"] = page.evaluate("() => window.__probeSection || ''")
                     except Exception:  # noqa: BLE001
                         out["_section"] = ""
-                _safe_click(page, f'[data-probe-state="{idx[st]}"]')
+                out[f"_sel_{st}"] = _select_state(page, idx[st])
                 try:   # 押したあとの3つのボタンの見た目（クラス名）。どれが選択中かの手がかり
                     out[f"_btn_{st}"] = page.evaluate("() => [...document.querySelectorAll('[data-probe-state]')].map(e => e.getAttribute('data-probe-state') + ':' + (e.className || '') + (e.getAttribute('aria-pressed') ? '/p=' + e.getAttribute('aria-pressed') : '')).join(' | ')")[:300]
                 except Exception:  # noqa: BLE001
