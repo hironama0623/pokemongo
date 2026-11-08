@@ -291,7 +291,7 @@
         "gamewith": {
           "url": "https://pokemongo.gamewith.jp/article/show/582648",
           "article_updated": "2026-11-02T13:29:08+09:00",
-          "fetched_at": "2026-11-08T22:02:56.043881+09:00",
+          "fetched_at": "2026-11-08T22:43:01.458274+09:00",
           "counters": [
             {
               "name": "ネクロズマ(暁)",
@@ -555,7 +555,7 @@
           ]
         }
       },
-      "updated_at": "2026-11-08T22:02:56.043881+09:00"
+      "updated_at": "2026-11-08T22:43:01.458274+09:00"
     },
     "raid:パルキア": {
       "name": "パルキア",
@@ -704,13 +704,13 @@
         "gamewith": {
           "url": "https://pokemongo.gamewith.jp/article/show/579398",
           "article_updated": "2026-10-25T17:52:14+09:00",
-          "fetched_at": "2026-11-08T22:02:56.043881+09:00",
+          "fetched_at": "2026-11-08T22:43:01.458274+09:00",
           "counters": [
             {
               "name": "ハピナス",
               "rank": 1,
               "role": "tank",
-              "tag": "dmax",
+              "tag": "normal",
               "fast": "はたく",
               "charged": "はかいこうせん",
               "dps": null,
@@ -733,7 +733,7 @@
           ]
         }
       },
-      "updated_at": "2026-11-08T22:02:56.043881+09:00"
+      "updated_at": "2026-11-08T22:43:01.458274+09:00"
     },
     "dmax:gエースバーン": {
       "name": "キョダイマックスエースバーン",
@@ -3378,7 +3378,7 @@
         "gamewith": {
           "url": "https://pokemongo.gamewith.jp/article/show/585630",
           "article_updated": "2026-11-08T00:41:25+09:00",
-          "fetched_at": "2026-11-08T22:02:56.043881+09:00",
+          "fetched_at": "2026-11-08T22:43:01.458274+09:00",
           "counters": [
             {
               "name": "キョダイカイリキー",
@@ -3442,7 +3442,7 @@
             },
             {
               "name": "ザマゼンタ(王)",
-              "rank": 1,
+              "rank": 6,
               "role": "tank",
               "tag": "normal",
               "fast": "メタルクロー",
@@ -3454,7 +3454,7 @@
             },
             {
               "name": "レジスチル",
-              "rank": 2,
+              "rank": 7,
               "role": "tank",
               "tag": "normal",
               "fast": "メタルクロー",
@@ -3466,7 +3466,7 @@
             },
             {
               "name": "ハピナス",
-              "rank": 3,
+              "rank": 8,
               "role": "tank",
               "tag": "normal",
               "fast": "はたく",
@@ -3478,7 +3478,7 @@
             },
             {
               "name": "メタグロス",
-              "rank": 4,
+              "rank": 9,
               "role": "tank",
               "tag": "normal",
               "fast": "シャドークロー",
@@ -3490,7 +3490,7 @@
             },
             {
               "name": "アーマーガア",
-              "rank": 5,
+              "rank": 10,
               "role": "tank",
               "tag": "normal",
               "fast": "すなかけ",
@@ -3503,7 +3503,7 @@
           ]
         }
       },
-      "updated_at": "2026-11-08T22:02:56.043881+09:00"
+      "updated_at": "2026-11-08T22:43:01.458274+09:00"
     },
     "dmax:ディアルガ": {
       "name": "ダイマックスディアルガ",
@@ -3584,14 +3584,14 @@
         "gamewith": {
           "url": "https://pokemongo.gamewith.jp/article/show/579273",
           "article_updated": "2026-11-08T07:58:12+09:00",
-          "fetched_at": "2026-11-08T22:02:56.043881+09:00",
+          "fetched_at": "2026-11-08T22:43:01.458274+09:00",
           "counters": [
             {
               "name": "ザマゼンタ(王)",
               "rank": 1,
               "role": "tank",
               "tag": "dmax",
-              "fast": "メタルクロー",
+              "fast": "メタルクロ",
               "charged": null,
               "dps": null,
               "tdo": null,
@@ -3603,7 +3603,7 @@
               "rank": 2,
               "role": "attacker",
               "tag": "dmax",
-              "fast": "マッドショット",
+              "fast": "マッドショ",
               "charged": null,
               "dps": null,
               "tdo": null,
@@ -3615,7 +3615,7 @@
               "rank": 3,
               "role": "attacker",
               "tag": "dmax",
-              "fast": "からてチョップ",
+              "fast": "からてチョ",
               "charged": null,
               "dps": null,
               "tdo": null,
@@ -3627,7 +3627,7 @@
               "rank": 4,
               "role": "attacker",
               "tag": "dmax",
-              "fast": "カウンター",
+              "fast": "カウンタ",
               "charged": null,
               "dps": null,
               "tdo": null,
@@ -3639,7 +3639,7 @@
               "rank": 5,
               "role": "attacker",
               "tag": "dmax",
-              "fast": "カウンター",
+              "fast": "カウンタ",
               "charged": null,
               "dps": null,
               "tdo": null,
@@ -3660,7 +3660,7 @@
             },
             {
               "name": "ハピナス",
-              "rank": 8,
+              "rank": 2,
               "role": "tank",
               "tag": "dmax",
               "fast": "はたく",
@@ -3672,10 +3672,10 @@
             },
             {
               "name": "ザシアン(王)",
-              "rank": 10,
-              "role": "attacker",
+              "rank": 4,
+              "role": "tank",
               "tag": "dmax",
-              "fast": "メタルクロー",
+              "fast": "メタルクロ",
               "charged": null,
               "dps": null,
               "tdo": null,
@@ -3684,8 +3684,8 @@
             },
             {
               "name": "レジスチル",
-              "rank": 11,
-              "role": "attacker",
+              "rank": 5,
+              "role": "tank",
               "tag": "dmax",
               "fast": "ロックオン",
               "charged": null,
@@ -3697,7 +3697,7 @@
           ]
         }
       },
-      "updated_at": "2026-11-08T22:02:56.043881+09:00"
+      "updated_at": "2026-11-08T22:43:01.458274+09:00"
     },
     "dmax:パルキア": {
       "name": "ダイマックスパルキア",
@@ -3711,13 +3711,13 @@
         "gamewith": {
           "url": "https://pokemongo.gamewith.jp/article/show/579272",
           "article_updated": "2026-11-08T11:31:10+09:00",
-          "fetched_at": "2026-11-08T22:02:56.043881+09:00",
+          "fetched_at": "2026-11-08T22:43:01.458274+09:00",
           "counters": [
             {
               "name": "ハピナス",
               "rank": 1,
               "role": "tank",
-              "tag": "normal",
+              "tag": "dmax",
               "fast": "はたく",
               "charged": null,
               "dps": null,
@@ -3727,9 +3727,9 @@
             },
             {
               "name": "ムゲンダイナ",
-              "rank": 3,
+              "rank": 2,
               "role": "attacker",
-              "tag": "normal",
+              "tag": "dmax",
               "fast": "ドラゴンテール",
               "charged": null,
               "dps": null,
@@ -3739,9 +3739,9 @@
             },
             {
               "name": "ラティオス",
-              "rank": 2,
+              "rank": 1,
               "role": "attacker",
-              "tag": "normal",
+              "tag": "dmax",
               "fast": "りゅうのいぶき",
               "charged": null,
               "dps": null,
@@ -3751,9 +3751,9 @@
             },
             {
               "name": "サザンドラ",
-              "rank": 3,
+              "rank": 2,
               "role": "attacker",
-              "tag": "normal",
+              "tag": "dmax",
               "fast": "りゅうのいぶき",
               "charged": null,
               "dps": null,
@@ -3763,9 +3763,9 @@
             },
             {
               "name": "ジュラルドン",
-              "rank": 4,
+              "rank": 3,
               "role": "attacker",
-              "tag": "normal",
+              "tag": "dmax",
               "fast": "ドラゴンテール",
               "charged": null,
               "dps": null,
@@ -3775,9 +3775,9 @@
             },
             {
               "name": "サーナイト",
-              "rank": 5,
+              "rank": 4,
               "role": "attacker",
-              "tag": "normal",
+              "tag": "dmax",
               "fast": "あまえる",
               "charged": null,
               "dps": null,
@@ -3787,9 +3787,9 @@
             },
             {
               "name": "スイクン",
-              "rank": 7,
+              "rank": 2,
               "role": "tank",
-              "tag": "normal",
+              "tag": "dmax",
               "fast": "みずでっぽう",
               "charged": null,
               "dps": null,
@@ -3799,9 +3799,9 @@
             },
             {
               "name": "ルギア",
-              "rank": 8,
+              "rank": 3,
               "role": "tank",
-              "tag": "normal",
+              "tag": "dmax",
               "fast": "じんつうりき",
               "charged": null,
               "dps": null,
@@ -3811,9 +3811,9 @@
             },
             {
               "name": "ミロカロス",
-              "rank": 9,
+              "rank": 4,
               "role": "tank",
-              "tag": "normal",
+              "tag": "dmax",
               "fast": "たきのぼり",
               "charged": null,
               "dps": null,
@@ -3823,9 +3823,9 @@
             },
             {
               "name": "ラティアス",
-              "rank": 10,
+              "rank": 5,
               "role": "tank",
-              "tag": "normal",
+              "tag": "dmax",
               "fast": "りゅうのいぶき",
               "charged": null,
               "dps": null,
@@ -3836,7 +3836,7 @@
           ]
         }
       },
-      "updated_at": "2026-11-08T22:02:56.043881+09:00"
+      "updated_at": "2026-11-08T22:43:01.458274+09:00"
     },
     "raid:メガピクシー": {
       "name": "メガピクシー",
@@ -4049,7 +4049,7 @@
         "gamewith": {
           "url": "https://pokemongo.gamewith.jp/article/show/586872",
           "article_updated": "2026-11-07T13:11:13+09:00",
-          "fetched_at": "2026-11-08T22:02:56.043881+09:00",
+          "fetched_at": "2026-11-08T22:43:01.458274+09:00",
           "counters": [
             {
               "name": "ザシアン(王)",
@@ -4108,13 +4108,13 @@
               "charged": "サンダープリズン",
               "dps": 22.44,
               "tdo": null,
-              "note": "",
+              "note": "レガシー技のため現在覚えることができません。",
               "dex": 894
             }
           ]
         }
       },
-      "updated_at": "2026-11-08T22:02:56.043881+09:00"
+      "updated_at": "2026-11-08T22:43:01.458274+09:00"
     },
     "raid:ザシアン(けんのおう)": {
       "name": "ザシアン(けんのおう)",
@@ -4125,7 +4125,7 @@
         "9db-tool": {
           "url": "https://9db.jp/pokemongo/data/2734?id=11997&lv=5&o=1&pl=40",
           "article_updated": null,
-          "fetched_at": "2026-11-08T20:40:28.353320+09:00",
+          "fetched_at": "2026-11-08T22:43:01.458274+09:00",
           "counters": [
             {
               "name": "シャドウメガマフォクシー",
@@ -4841,7 +4841,7 @@
           ]
         }
       },
-      "updated_at": "2026-11-08T20:40:28.353320+09:00"
+      "updated_at": "2026-11-08T22:43:01.458274+09:00"
     },
     "raid:ザマゼンタ(たてのおう)": {
       "name": "ザマゼンタ(たてのおう)",
@@ -10488,13 +10488,13 @@
         "9db-tool": {
           "url": "https://9db.jp/pokemongo/data/2734?id=7323&lv=1&o=1&pl=40",
           "article_updated": null,
-          "fetched_at": "2026-11-08T18:39:38.422641+09:00",
+          "fetched_at": "2026-11-08T22:43:01.458274+09:00",
           "counters": [
             {
               "name": "シャドウメガシャンデラ",
               "rank": 1,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 94.2,
               "fast": "たたりめ",
               "charged": "あやしいかぜ+",
@@ -10505,7 +10505,7 @@
               "name": "シャドウメガゲッコウガ",
               "rank": 2,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 93.6,
               "fast": "みずしゅりけん",
               "charged": "なみのり+",
@@ -10516,7 +10516,7 @@
               "name": "シャドウメガヘルガー",
               "rank": 3,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 87.8,
               "fast": "バークアウト",
               "charged": "あくのはどう+",
@@ -10527,7 +10527,7 @@
               "name": "シャドウメガスターミー",
               "rank": 4,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 85.5,
               "fast": "サイコウェーブ",
               "charged": "アクアブレイク+",
@@ -10560,7 +10560,7 @@
               "name": "シャドウメガゲンガー",
               "rank": 7,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 79.8,
               "fast": "したでなめる",
               "charged": "シャドーボール",
@@ -10593,7 +10593,7 @@
               "name": "シャドウメガミュウツーY",
               "rank": 10,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 75.3,
               "fast": "サイコカッター",
               "charged": "シャドーボール",
@@ -10604,7 +10604,7 @@
               "name": "シャドウメガアブソル",
               "rank": 11,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 74.2,
               "fast": "バークアウト",
               "charged": "ぶんまわす",
@@ -10659,7 +10659,7 @@
               "name": "シャドウメガミュウツーX",
               "rank": 16,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 72.3,
               "fast": "サイコカッター",
               "charged": "シャドーボール",
@@ -10681,7 +10681,7 @@
               "name": "シャドウメガディアンシー",
               "rank": 18,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 71.1,
               "fast": "いわおとし",
               "charged": "いわなだれ",
@@ -10736,7 +10736,7 @@
               "name": "シャドウメガバンギラス",
               "rank": 23,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 69.5,
               "fast": "うちおとす",
               "charged": "ぶんまわす",
@@ -10747,7 +10747,7 @@
               "name": "シャドウメガガブリアス",
               "rank": 24,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 69.5,
               "fast": "マッドショット",
               "charged": "だいちのちから",
@@ -10791,7 +10791,7 @@
               "name": "シャドウメガラグラージ",
               "rank": 28,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 68.9,
               "fast": "マッドショット",
               "charged": "ハイドロカノン",
@@ -10802,7 +10802,7 @@
               "name": "シャドウメガジュペッタ",
               "rank": 29,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 68.8,
               "fast": "たたりめ",
               "charged": "シャドーボール",
@@ -11153,7 +11153,7 @@
           ]
         }
       },
-      "updated_at": "2026-11-08T18:39:38.422641+09:00"
+      "updated_at": "2026-11-08T22:43:01.458274+09:00"
     },
     "raid:シャドウヨーギラス": {
       "name": "シャドウヨーギラス",
@@ -11164,13 +11164,13 @@
         "9db-tool": {
           "url": "https://9db.jp/pokemongo/data/2734?id=1409&lv=1&o=1&pl=40&boss_shadow=1",
           "article_updated": null,
-          "fetched_at": "2026-11-08T01:29:12.192132+09:00",
+          "fetched_at": "2026-11-08T22:43:01.458274+09:00",
           "counters": [
             {
               "name": "シャドウメガゲッコウガ",
               "rank": 1,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 183.9,
               "fast": "みずしゅりけん",
               "charged": "なみのり+",
@@ -11181,7 +11181,7 @@
               "name": "シャドウメガスターミー",
               "rank": 2,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 160.8,
               "fast": "みずでっぽう",
               "charged": "アクアブレイク+",
@@ -11203,7 +11203,7 @@
               "name": "シャドウメガブリガロン",
               "rank": 4,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 152.0,
               "fast": "つるのムチ",
               "charged": "タネばくだん+",
@@ -11214,7 +11214,7 @@
               "name": "シャドウメガジュカイン",
               "rank": 5,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 148.4,
               "fast": "タネマシンガン",
               "charged": "ハードプラント",
@@ -11222,19 +11222,8 @@
               "dex": 254
             },
             {
-              "name": "シャドウメガオーダイル",
-              "rank": 6,
-              "role": "attacker",
-              "tag": "shadow",
-              "dps": 146.7,
-              "fast": "みずでっぽう",
-              "charged": "ハイドロカノン",
-              "note": "4秒 / 必要0.1匹",
-              "dex": 160
-            },
-            {
               "name": "シャドウカイオーガ",
-              "rank": 7,
+              "rank": 6,
               "role": "attacker",
               "tag": "shadow",
               "dps": 145.5,
@@ -11244,19 +11233,8 @@
               "dex": 382
             },
             {
-              "name": "シャドウメガメガニウム",
-              "rank": 8,
-              "role": "attacker",
-              "tag": "shadow",
-              "dps": 141.7,
-              "fast": "マジカルリーフ",
-              "charged": "ハードプラント",
-              "note": "4秒 / 必要0.1匹",
-              "dex": 154
-            },
-            {
               "name": "シャドウゲッコウガ",
-              "rank": 9,
+              "rank": 7,
               "role": "attacker",
               "tag": "shadow",
               "dps": 140.0,
@@ -11267,7 +11245,7 @@
             },
             {
               "name": "シャドウキングラー",
-              "rank": 10,
+              "rank": 8,
               "role": "attacker",
               "tag": "shadow",
               "dps": 138.1,
@@ -11278,7 +11256,7 @@
             },
             {
               "name": "カミツルギ",
-              "rank": 11,
+              "rank": 9,
               "role": "attacker",
               "tag": "normal",
               "dps": 137.4,
@@ -11289,9 +11267,9 @@
             },
             {
               "name": "シャドウメガラグラージ",
-              "rank": 12,
+              "rank": 10,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 137.4,
               "fast": "みずでっぽう",
               "charged": "ハイドロカノン",
@@ -11300,9 +11278,9 @@
             },
             {
               "name": "シャドウメガミュウツーX",
-              "rank": 13,
+              "rank": 11,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 133.8,
               "fast": "カウンター",
               "charged": "ばくれつパンチ+",
@@ -11310,19 +11288,8 @@
               "dex": 150
             },
             {
-              "name": "シャドウメガルカリオZ",
-              "rank": 14,
-              "role": "attacker",
-              "tag": "shadow",
-              "dps": 133.1,
-              "fast": "はっけい",
-              "charged": "はどうだん",
-              "note": "5秒 / 必要0.1匹",
-              "dex": 448
-            },
-            {
               "name": "シャドウジュカイン",
-              "rank": 15,
+              "rank": 12,
               "role": "attacker",
               "tag": "shadow",
               "dps": 127.6,
@@ -11333,9 +11300,9 @@
             },
             {
               "name": "シャドウメガカメックス",
-              "rank": 16,
+              "rank": 13,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 126.5,
               "fast": "みずでっぽう",
               "charged": "ハイドロカノン",
@@ -11344,7 +11311,7 @@
             },
             {
               "name": "シェイミ(スカイ)",
-              "rank": 17,
+              "rank": 14,
               "role": "attacker",
               "tag": "normal",
               "dps": 126.0,
@@ -11355,7 +11322,7 @@
             },
             {
               "name": "シャドウブリガロン",
-              "rank": 18,
+              "rank": 15,
               "role": "attacker",
               "tag": "shadow",
               "dps": 125.7,
@@ -11366,7 +11333,7 @@
             },
             {
               "name": "インテレオン（御三家）",
-              "rank": 19,
+              "rank": 16,
               "role": "attacker",
               "tag": "normal",
               "dps": 125.5,
@@ -11377,7 +11344,7 @@
             },
             {
               "name": "シャドウダイケンキ",
-              "rank": 20,
+              "rank": 17,
               "role": "attacker",
               "tag": "shadow",
               "dps": 125.2,
@@ -11388,7 +11355,7 @@
             },
             {
               "name": "シャドウラグラージ",
-              "rank": 21,
+              "rank": 18,
               "role": "attacker",
               "tag": "shadow",
               "dps": 124.7,
@@ -11398,8 +11365,19 @@
               "dex": 260
             },
             {
+              "name": "シャドウメガギャラドス",
+              "rank": 19,
+              "role": "attacker",
+              "tag": "mega",
+              "dps": 124.6,
+              "fast": "たきのぼり",
+              "charged": "ハイドロポンプ",
+              "note": "5秒 / 必要0.1匹",
+              "dex": 130
+            },
+            {
               "name": "シャドウエンペルト",
-              "rank": 22,
+              "rank": 20,
               "role": "attacker",
               "tag": "shadow",
               "dps": 124.1,
@@ -11410,7 +11388,7 @@
             },
             {
               "name": "シャドウシザリガー",
-              "rank": 23,
+              "rank": 21,
               "role": "attacker",
               "tag": "shadow",
               "dps": 123.6,
@@ -11421,7 +11399,7 @@
             },
             {
               "name": "カイオーガ",
-              "rank": 24,
+              "rank": 22,
               "role": "attacker",
               "tag": "normal",
               "dps": 123.4,
@@ -11431,8 +11409,19 @@
               "dex": 382
             },
             {
+              "name": "シャドウメガウツボット",
+              "rank": 23,
+              "role": "attacker",
+              "tag": "mega",
+              "dps": 122.4,
+              "fast": "マジカルリーフ",
+              "charged": "ソーラービーム",
+              "note": "5秒 / 必要0.1匹",
+              "dex": 71
+            },
+            {
               "name": "シャドウモジャンボ",
-              "rank": 25,
+              "rank": 24,
               "role": "attacker",
               "tag": "shadow",
               "dps": 122.0,
@@ -11443,7 +11432,7 @@
             },
             {
               "name": "シャドウフシギバナ",
-              "rank": 26,
+              "rank": 25,
               "role": "attacker",
               "tag": "shadow",
               "dps": 121.6,
@@ -11454,7 +11443,7 @@
             },
             {
               "name": "シャドウギャラドス",
-              "rank": 27,
+              "rank": 26,
               "role": "attacker",
               "tag": "shadow",
               "dps": 120.5,
@@ -11465,7 +11454,7 @@
             },
             {
               "name": "シャドウオーダイル",
-              "rank": 28,
+              "rank": 27,
               "role": "attacker",
               "tag": "shadow",
               "dps": 120.3,
@@ -11476,7 +11465,7 @@
             },
             {
               "name": "シャドウドダイトス",
-              "rank": 29,
+              "rank": 28,
               "role": "attacker",
               "tag": "shadow",
               "dps": 118.9,
@@ -11487,7 +11476,7 @@
             },
             {
               "name": "シャドウナッシー",
-              "rank": 30,
+              "rank": 29,
               "role": "attacker",
               "tag": "shadow",
               "dps": 118.3,
@@ -11498,7 +11487,7 @@
             },
             {
               "name": "シャドウグソクムシャ",
-              "rank": 31,
+              "rank": 30,
               "role": "attacker",
               "tag": "shadow",
               "dps": 118.3,
@@ -11509,7 +11498,7 @@
             },
             {
               "name": "ザルード",
-              "rank": 32,
+              "rank": 31,
               "role": "attacker",
               "tag": "normal",
               "dps": 117.0,
@@ -11520,7 +11509,7 @@
             },
             {
               "name": "ゲッコウガ",
-              "rank": 33,
+              "rank": 32,
               "role": "attacker",
               "tag": "normal",
               "dps": 116.9,
@@ -11531,7 +11520,7 @@
             },
             {
               "name": "シャドウナッシー(アローラ)",
-              "rank": 34,
+              "rank": 33,
               "role": "attacker",
               "tag": "shadow",
               "dps": 116.8,
@@ -11542,7 +11531,7 @@
             },
             {
               "name": "イルカマン(マイティ)",
-              "rank": 35,
+              "rank": 34,
               "role": "attacker",
               "tag": "normal",
               "dps": 116.7,
@@ -11553,7 +11542,7 @@
             },
             {
               "name": "ゴリランダー（御三家）",
-              "rank": 36,
+              "rank": 35,
               "role": "attacker",
               "tag": "normal",
               "dps": 116.2,
@@ -11564,7 +11553,7 @@
             },
             {
               "name": "ロズレイド",
-              "rank": 37,
+              "rank": 36,
               "role": "attacker",
               "tag": "normal",
               "dps": 115.8,
@@ -11575,7 +11564,7 @@
             },
             {
               "name": "キングラー",
-              "rank": 38,
+              "rank": 37,
               "role": "attacker",
               "tag": "normal",
               "dps": 114.6,
@@ -11586,7 +11575,7 @@
             },
             {
               "name": "ウェーニバル",
-              "rank": 39,
+              "rank": 38,
               "role": "attacker",
               "tag": "normal",
               "dps": 114.6,
@@ -11597,7 +11586,7 @@
             },
             {
               "name": "シャドウウツボット",
-              "rank": 40,
+              "rank": 39,
               "role": "attacker",
               "tag": "shadow",
               "dps": 114.5,
@@ -11608,7 +11597,7 @@
             },
             {
               "name": "ザシアン(けんのおう)",
-              "rank": 41,
+              "rank": 40,
               "role": "attacker",
               "tag": "normal",
               "dps": 114.2,
@@ -11619,7 +11608,7 @@
             },
             {
               "name": "アシレーヌ（御三家）",
-              "rank": 42,
+              "rank": 41,
               "role": "attacker",
               "tag": "normal",
               "dps": 112.4,
@@ -11630,7 +11619,7 @@
             },
             {
               "name": "マスカーニャ",
-              "rank": 43,
+              "rank": 42,
               "role": "attacker",
               "tag": "normal",
               "dps": 110.9,
@@ -11641,7 +11630,7 @@
             },
             {
               "name": "キノガッサ",
-              "rank": 44,
+              "rank": 43,
               "role": "attacker",
               "tag": "normal",
               "dps": 110.3,
@@ -11652,7 +11641,7 @@
             },
             {
               "name": "カプ・ブルル",
-              "rank": 45,
+              "rank": 44,
               "role": "attacker",
               "tag": "normal",
               "dps": 110.1,
@@ -11663,7 +11652,7 @@
             },
             {
               "name": "ジュナイパー（御三家）",
-              "rank": 46,
+              "rank": 45,
               "role": "attacker",
               "tag": "normal",
               "dps": 108.8,
@@ -11674,7 +11663,7 @@
             },
             {
               "name": "ザマゼンタ(たてのおう)",
-              "rank": 47,
+              "rank": 46,
               "role": "attacker",
               "tag": "normal",
               "dps": 108.7,
@@ -11685,7 +11674,7 @@
             },
             {
               "name": "ネクロズマ(たそがれのたてがみ)",
-              "rank": 48,
+              "rank": 47,
               "role": "attacker",
               "tag": "normal",
               "dps": 107.9,
@@ -11696,7 +11685,7 @@
             },
             {
               "name": "アマージョ",
-              "rank": 49,
+              "rank": 48,
               "role": "attacker",
               "tag": "normal",
               "dps": 107.0,
@@ -11707,7 +11696,7 @@
             },
             {
               "name": "オーガポン(みどりのめん)",
-              "rank": 50,
+              "rank": 49,
               "role": "attacker",
               "tag": "normal",
               "dps": 105.6,
@@ -11718,7 +11707,7 @@
             },
             {
               "name": "ジュカイン",
-              "rank": 51,
+              "rank": 50,
               "role": "attacker",
               "tag": "normal",
               "dps": 105.2,
@@ -11729,7 +11718,7 @@
             },
             {
               "name": "ヨワシ(魚群)",
-              "rank": 52,
+              "rank": 51,
               "role": "attacker",
               "tag": "normal",
               "dps": 105.0,
@@ -11741,7 +11730,7 @@
           ]
         }
       },
-      "updated_at": "2026-11-08T01:29:12.192132+09:00"
+      "updated_at": "2026-11-08T22:43:01.458274+09:00"
     },
     "raid:シャドウミズゴロウ": {
       "name": "シャドウミズゴロウ",
@@ -11752,24 +11741,13 @@
         "9db-tool": {
           "url": "https://9db.jp/pokemongo/data/2734?id=2479&lv=1&o=1&pl=40&boss_shadow=1",
           "article_updated": null,
-          "fetched_at": "2026-11-08T01:29:12.192132+09:00",
+          "fetched_at": "2026-11-08T22:43:01.458274+09:00",
           "counters": [
             {
-              "name": "シャドウメガゼラオラ",
+              "name": "シャドウメガライチュウY",
               "rank": 1,
               "role": "attacker",
-              "tag": "shadow",
-              "dps": 121.9,
-              "fast": "ボルトチェンジ",
-              "charged": "プラズマフィスト",
-              "note": "5秒 / 必要0.1匹",
-              "dex": 807
-            },
-            {
-              "name": "シャドウメガライチュウY",
-              "rank": 2,
-              "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 113.4,
               "fast": "ボルトチェンジ",
               "charged": "でんじほう+",
@@ -11778,9 +11756,9 @@
             },
             {
               "name": "シャドウメガライボルト",
-              "rank": 3,
+              "rank": 2,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 106.1,
               "fast": "かみなりのキバ",
               "charged": "ほうでん+",
@@ -11789,9 +11767,9 @@
             },
             {
               "name": "シャドウメガライチュウX",
-              "rank": 4,
+              "rank": 3,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 99.2,
               "fast": "でんきショック",
               "charged": "ボルテッカー+",
@@ -11799,19 +11777,8 @@
               "dex": 26
             },
             {
-              "name": "シャドウゼクロム",
-              "rank": 5,
-              "role": "attacker",
-              "tag": "shadow",
-              "dps": 98.9,
-              "fast": "チャージビーム",
-              "charged": "クロスサンダー",
-              "note": "6秒 / 必要0.1匹",
-              "dex": 644
-            },
-            {
               "name": "レジエレキ",
-              "rank": 6,
+              "rank": 4,
               "role": "attacker",
               "tag": "normal",
               "dps": 97.7,
@@ -11822,9 +11789,9 @@
             },
             {
               "name": "シャドウメガブリガロン",
-              "rank": 7,
+              "rank": 5,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 94.1,
               "fast": "つるのムチ",
               "charged": "タネばくだん+",
@@ -11833,9 +11800,9 @@
             },
             {
               "name": "シャドウメガジュカイン",
-              "rank": 8,
+              "rank": 6,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 93.8,
               "fast": "タネマシンガン",
               "charged": "ハードプラント",
@@ -11844,9 +11811,9 @@
             },
             {
               "name": "シャドウメガミュウツーY",
-              "rank": 9,
+              "rank": 7,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 93.6,
               "fast": "サイコカッター",
               "charged": "みらいよち+",
@@ -11854,19 +11821,8 @@
               "dex": 150
             },
             {
-              "name": "シャドウレジギガス",
-              "rank": 10,
-              "role": "attacker",
-              "tag": "shadow",
-              "dps": 90.3,
-              "fast": "めざめるパワー草",
-              "charged": "にぎりつぶす",
-              "note": "7秒 / 必要0.1匹",
-              "dex": 486
-            },
-            {
               "name": "ボルトロス(れいじゅう)",
-              "rank": 11,
+              "rank": 8,
               "role": "attacker",
               "tag": "normal",
               "dps": 90.2,
@@ -11876,30 +11832,8 @@
               "dex": 642
             },
             {
-              "name": "シャドウメガメガニウム",
-              "rank": 12,
-              "role": "attacker",
-              "tag": "shadow",
-              "dps": 87.9,
-              "fast": "マジカルリーフ",
-              "charged": "ハードプラント",
-              "note": "7秒 / 必要0.1匹",
-              "dex": 154
-            },
-            {
-              "name": "シャドウエレキブル",
-              "rank": 13,
-              "role": "attacker",
-              "tag": "shadow",
-              "dps": 86.4,
-              "fast": "でんきショック",
-              "charged": "ワイルドボルト",
-              "note": "7秒 / 必要0.2匹",
-              "dex": 466
-            },
-            {
               "name": "ゼラオラ",
-              "rank": 14,
+              "rank": 9,
               "role": "attacker",
               "tag": "normal",
               "dps": 86.3,
@@ -11910,7 +11844,7 @@
             },
             {
               "name": "カミツルギ",
-              "rank": 15,
+              "rank": 10,
               "role": "attacker",
               "tag": "normal",
               "dps": 86.1,
@@ -11921,9 +11855,9 @@
             },
             {
               "name": "シャドウメガミュウツーX",
-              "rank": 16,
+              "rank": 11,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 85.0,
               "fast": "サイコカッター",
               "charged": "ばくれつパンチ+",
@@ -11931,19 +11865,8 @@
               "dex": 150
             },
             {
-              "name": "シャドウライコウ",
-              "rank": 17,
-              "role": "attacker",
-              "tag": "shadow",
-              "dps": 84.6,
-              "fast": "ボルトチェンジ",
-              "charged": "ワイルドボルト",
-              "note": "7秒 / 必要0.2匹",
-              "dex": 243
-            },
-            {
               "name": "デンジュモク",
-              "rank": 18,
+              "rank": 12,
               "role": "attacker",
               "tag": "normal",
               "dps": 83.6,
@@ -11954,7 +11877,7 @@
             },
             {
               "name": "ゼクロム",
-              "rank": 19,
+              "rank": 13,
               "role": "attacker",
               "tag": "normal",
               "dps": 82.3,
@@ -11965,7 +11888,7 @@
             },
             {
               "name": "ボルトロス(けしん)",
-              "rank": 20,
+              "rank": 14,
               "role": "attacker",
               "tag": "normal",
               "dps": 81.6,
@@ -11975,41 +11898,19 @@
               "dex": 642
             },
             {
-              "name": "シャドウジバコイル",
-              "rank": 21,
+              "name": "シャドウメガレックウザ",
+              "rank": 15,
               "role": "attacker",
-              "tag": "shadow",
-              "dps": 81.5,
-              "fast": "ボルトチェンジ",
-              "charged": "ワイルドボルト",
-              "note": "7秒 / 必要0.2匹",
-              "dex": 462
-            },
-            {
-              "name": "シャドウサンダー",
-              "rank": 22,
-              "role": "attacker",
-              "tag": "shadow",
-              "dps": 81.4,
-              "fast": "でんきショック",
-              "charged": "10まんボルト",
+              "tag": "mega",
+              "dps": 81.0,
+              "fast": "ドラゴンテール",
+              "charged": "ガリョウテンセイ",
               "note": "7秒 / 必要0.1匹",
-              "dex": 145
-            },
-            {
-              "name": "シャドウジュカイン",
-              "rank": 23,
-              "role": "attacker",
-              "tag": "shadow",
-              "dps": 79.6,
-              "fast": "れんぞくぎり",
-              "charged": "ハードプラント",
-              "note": "8秒 / 必要0.2匹",
-              "dex": 254
+              "dex": 384
             },
             {
               "name": "シェイミ(スカイ)",
-              "rank": 24,
+              "rank": 16,
               "role": "attacker",
               "tag": "normal",
               "dps": 79.2,
@@ -12019,41 +11920,8 @@
               "dex": 492
             },
             {
-              "name": "シャドウクワガノン",
-              "rank": 25,
-              "role": "attacker",
-              "tag": "shadow",
-              "dps": 78.4,
-              "fast": "ボルトチェンジ",
-              "charged": "ほうでん",
-              "note": "8秒 / 必要0.2匹",
-              "dex": 738
-            },
-            {
-              "name": "シャドウレントラー",
-              "rank": 26,
-              "role": "attacker",
-              "tag": "shadow",
-              "dps": 78.4,
-              "fast": "スパーク",
-              "charged": "ワイルドボルト",
-              "note": "8秒 / 必要0.2匹",
-              "dex": 405
-            },
-            {
-              "name": "シャドウブリガロン",
-              "rank": 27,
-              "role": "attacker",
-              "tag": "shadow",
-              "dps": 77.2,
-              "fast": "つるのムチ",
-              "charged": "ハードプラント",
-              "note": "8秒 / 必要0.2匹",
-              "dex": 652
-            },
-            {
               "name": "レジギガス",
-              "rank": 28,
+              "rank": 17,
               "role": "attacker",
               "tag": "normal",
               "dps": 76.1,
@@ -12064,7 +11932,7 @@
             },
             {
               "name": "ムゲンダイナ",
-              "rank": 29,
+              "rank": 18,
               "role": "attacker",
               "tag": "normal",
               "dps": 74.6,
@@ -12075,7 +11943,7 @@
             },
             {
               "name": "ザルード",
-              "rank": 30,
+              "rank": 19,
               "role": "attacker",
               "tag": "normal",
               "dps": 73.1,
@@ -12086,7 +11954,7 @@
             },
             {
               "name": "ゴリランダー（御三家）",
-              "rank": 31,
+              "rank": 20,
               "role": "attacker",
               "tag": "normal",
               "dps": 72.7,
@@ -12097,7 +11965,7 @@
             },
             {
               "name": "ネクロズマ(あかつきのつばさ)",
-              "rank": 32,
+              "rank": 21,
               "role": "attacker",
               "tag": "normal",
               "dps": 72.6,
@@ -12108,7 +11976,7 @@
             },
             {
               "name": "ロズレイド",
-              "rank": 33,
+              "rank": 22,
               "role": "attacker",
               "tag": "normal",
               "dps": 71.8,
@@ -12119,7 +11987,7 @@
             },
             {
               "name": "ブラックキュレム",
-              "rank": 34,
+              "rank": 23,
               "role": "attacker",
               "tag": "normal",
               "dps": 71.6,
@@ -12130,7 +11998,7 @@
             },
             {
               "name": "デオキシス(ノーマル)",
-              "rank": 35,
+              "rank": 24,
               "role": "attacker",
               "tag": "normal",
               "dps": 71.4,
@@ -12141,7 +12009,7 @@
             },
             {
               "name": "エレキブル",
-              "rank": 36,
+              "rank": 25,
               "role": "attacker",
               "tag": "normal",
               "dps": 71.2,
@@ -12152,7 +12020,7 @@
             },
             {
               "name": "デオキシス(アタック)",
-              "rank": 37,
+              "rank": 26,
               "role": "attacker",
               "tag": "normal",
               "dps": 70.9,
@@ -12163,7 +12031,7 @@
             },
             {
               "name": "ライコウ",
-              "rank": 38,
+              "rank": 27,
               "role": "attacker",
               "tag": "normal",
               "dps": 70.4,
@@ -12174,7 +12042,7 @@
             },
             {
               "name": "マスカーニャ",
-              "rank": 39,
+              "rank": 28,
               "role": "attacker",
               "tag": "normal",
               "dps": 69.6,
@@ -12186,7 +12054,7 @@
           ]
         }
       },
-      "updated_at": "2026-11-08T01:29:12.192132+09:00"
+      "updated_at": "2026-11-08T22:43:01.458274+09:00"
     },
     "raid:シャドウトルネロス(化身)": {
       "name": "シャドウトルネロス(化身)",
@@ -12199,7 +12067,7 @@
         "gamewith": {
           "url": "https://pokemongo.gamewith.jp/article/show/583310",
           "article_updated": "2026-11-04T11:01:19+09:00",
-          "fetched_at": "2026-11-08T22:02:56.043881+09:00",
+          "fetched_at": "2026-11-08T22:43:01.458274+09:00",
           "counters": [
             {
               "name": "キュレム(W)",
@@ -12298,6 +12166,18 @@
               "dex": 889
             },
             {
+              "name": "ラムパルド",
+              "rank": 9,
+              "role": "attacker",
+              "tag": "normal",
+              "fast": "うちおとす",
+              "charged": "いわなだれ",
+              "dps": 31.66,
+              "tdo": null,
+              "note": "",
+              "dex": 409
+            },
+            {
               "name": "キラフロル",
               "rank": 10,
               "role": "attacker",
@@ -12334,6 +12214,18 @@
               "dex": 243
             },
             {
+              "name": "シャドウラムパルド",
+              "rank": 7,
+              "role": "attacker",
+              "tag": "shadow",
+              "fast": "うちおとす",
+              "charged": "いわなだれ",
+              "dps": 37.83,
+              "tdo": null,
+              "note": "",
+              "dex": 409
+            },
+            {
               "name": "シャドウドサイドン",
               "rank": 8,
               "role": "attacker",
@@ -12360,7 +12252,7 @@
           ]
         }
       },
-      "updated_at": "2026-11-08T22:02:56.043881+09:00"
+      "updated_at": "2026-11-08T22:43:01.458274+09:00"
     },
     "raid:シャドウマクノシタ": {
       "name": "シャドウマクノシタ",
@@ -12371,13 +12263,13 @@
         "9db-tool": {
           "url": "https://9db.jp/pokemongo/data/2734?id=2517&lv=1&o=1&pl=40&boss_shadow=1",
           "article_updated": null,
-          "fetched_at": "2026-11-08T07:29:18.363184+09:00",
+          "fetched_at": "2026-11-08T22:43:01.458274+09:00",
           "counters": [
             {
               "name": "シャドウメガミュウツーY",
               "rank": 1,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 233.1,
               "fast": "サイコカッター",
               "charged": "みらいよち+",
@@ -12388,7 +12280,7 @@
               "name": "シャドウメガレックウザ",
               "rank": 2,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 193.9,
               "fast": "エアスラッシュ",
               "charged": "ガリョウテンセイ",
@@ -12399,7 +12291,7 @@
               "name": "シャドウメガミュウツーX",
               "rank": 3,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 191.2,
               "fast": "ねんりき",
               "charged": "サイコブレイク",
@@ -12432,7 +12324,7 @@
               "name": "シャドウメガムクホーク",
               "rank": 6,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 172.3,
               "fast": "かぜおこし",
               "charged": "ブレイブバード+",
@@ -12454,7 +12346,7 @@
               "name": "シャドウメガフーディン",
               "rank": 8,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 162.9,
               "fast": "ねんりき",
               "charged": "サイコキネシス",
@@ -12465,7 +12357,7 @@
               "name": "シャドウメガエアームド",
               "rank": 9,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 153.9,
               "fast": "エアスラッシュ",
               "charged": "ドリルくちばし+",
@@ -12509,7 +12401,7 @@
               "name": "シャドウメガエルレイド",
               "rank": 13,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 146.2,
               "fast": "ねんりき",
               "charged": "サイコキネシス",
@@ -12520,7 +12412,7 @@
               "name": "シャドウメガサーナイト",
               "rank": 14,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 145.8,
               "fast": "ねんりき",
               "charged": "サイコキネシス",
@@ -12586,7 +12478,7 @@
               "name": "シャドウメガラティオス",
               "rank": 20,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 141.9,
               "fast": "しねんのずつき",
               "charged": "サイコキネシス",
@@ -12605,8 +12497,19 @@
               "dex": 486
             },
             {
-              "name": "シャドウボーマンダ",
+              "name": "シャドウメガマフォクシー",
               "rank": 22,
+              "role": "attacker",
+              "tag": "mega",
+              "dps": 140.3,
+              "fast": "しねんのずつき",
+              "charged": "サイコキネシス",
+              "note": "4秒",
+              "dex": 655
+            },
+            {
+              "name": "シャドウボーマンダ",
+              "rank": 23,
               "role": "attacker",
               "tag": "shadow",
               "dps": 139.2,
@@ -12617,7 +12520,7 @@
             },
             {
               "name": "ラブトロス(けしん)",
-              "rank": 23,
+              "rank": 24,
               "role": "attacker",
               "tag": "normal",
               "dps": 138.9,
@@ -12628,7 +12531,7 @@
             },
             {
               "name": "フーパ(解)",
-              "rank": 24,
+              "rank": 25,
               "role": "attacker",
               "tag": "normal",
               "dps": 138.6,
@@ -12639,7 +12542,7 @@
             },
             {
               "name": "シャドウラティオス",
-              "rank": 25,
+              "rank": 26,
               "role": "attacker",
               "tag": "shadow",
               "dps": 137.1,
@@ -12650,7 +12553,7 @@
             },
             {
               "name": "シャドウメタグロス",
-              "rank": 26,
+              "rank": 27,
               "role": "attacker",
               "tag": "shadow",
               "dps": 131.6,
@@ -12661,7 +12564,7 @@
             },
             {
               "name": "カプ・テテフ",
-              "rank": 27,
+              "rank": 28,
               "role": "attacker",
               "tag": "normal",
               "dps": 129.0,
@@ -12672,7 +12575,7 @@
             },
             {
               "name": "シャドウホウオウ",
-              "rank": 28,
+              "rank": 29,
               "role": "attacker",
               "tag": "shadow",
               "dps": 128.9,
@@ -12683,7 +12586,7 @@
             },
             {
               "name": "シャドウドンカラス",
-              "rank": 29,
+              "rank": 30,
               "role": "attacker",
               "tag": "shadow",
               "dps": 128.7,
@@ -12694,7 +12597,7 @@
             },
             {
               "name": "シャドウエルレイド",
-              "rank": 30,
+              "rank": 31,
               "role": "attacker",
               "tag": "shadow",
               "dps": 128.6,
@@ -12705,7 +12608,7 @@
             },
             {
               "name": "シャドウサーナイト",
-              "rank": 31,
+              "rank": 32,
               "role": "attacker",
               "tag": "shadow",
               "dps": 128.3,
@@ -12716,7 +12619,7 @@
             },
             {
               "name": "シャドウナッシー",
-              "rank": 32,
+              "rank": 33,
               "role": "attacker",
               "tag": "shadow",
               "dps": 128.2,
@@ -12727,7 +12630,7 @@
             },
             {
               "name": "ザシアン(けんのおう)",
-              "rank": 33,
+              "rank": 34,
               "role": "attacker",
               "tag": "normal",
               "dps": 127.5,
@@ -12738,7 +12641,7 @@
             },
             {
               "name": "ネクロズマ(あかつきのつばさ)",
-              "rank": 34,
+              "rank": 35,
               "role": "attacker",
               "tag": "normal",
               "dps": 126.5,
@@ -12749,7 +12652,7 @@
             },
             {
               "name": "フリーザー(ガラル)（おさんぽおこう）",
-              "rank": 35,
+              "rank": 36,
               "role": "attacker",
               "tag": "normal",
               "dps": 126.1,
@@ -12760,7 +12663,7 @@
             },
             {
               "name": "ネクロズマ(たそがれのたてがみ)",
-              "rank": 36,
+              "rank": 37,
               "role": "attacker",
               "tag": "normal",
               "dps": 125.1,
@@ -12771,7 +12674,7 @@
             },
             {
               "name": "ラブトロス(れいじゅう)",
-              "rank": 37,
+              "rank": 38,
               "role": "attacker",
               "tag": "normal",
               "dps": 124.8,
@@ -12782,7 +12685,7 @@
             },
             {
               "name": "イベルタル",
-              "rank": 38,
+              "rank": 39,
               "role": "attacker",
               "tag": "normal",
               "dps": 124.0,
@@ -12793,7 +12696,7 @@
             },
             {
               "name": "ドデカバシ",
-              "rank": 39,
+              "rank": 40,
               "role": "attacker",
               "tag": "normal",
               "dps": 122.1,
@@ -12804,7 +12707,7 @@
             },
             {
               "name": "バドレックス(はくばじょうのすがた)",
-              "rank": 40,
+              "rank": 41,
               "role": "attacker",
               "tag": "normal",
               "dps": 121.7,
@@ -12815,7 +12718,7 @@
             },
             {
               "name": "ファイヤー",
-              "rank": 41,
+              "rank": 42,
               "role": "attacker",
               "tag": "normal",
               "dps": 121.5,
@@ -12826,7 +12729,7 @@
             },
             {
               "name": "フーディン",
-              "rank": 42,
+              "rank": 43,
               "role": "attacker",
               "tag": "normal",
               "dps": 121.1,
@@ -12837,7 +12740,7 @@
             },
             {
               "name": "トルネロス(けしん)",
-              "rank": 43,
+              "rank": 44,
               "role": "attacker",
               "tag": "normal",
               "dps": 121.1,
@@ -12848,7 +12751,7 @@
             },
             {
               "name": "トルネロス(れいじゅう)",
-              "rank": 44,
+              "rank": 45,
               "role": "attacker",
               "tag": "normal",
               "dps": 119.8,
@@ -12859,7 +12762,7 @@
             },
             {
               "name": "ムクホーク",
-              "rank": 45,
+              "rank": 46,
               "role": "attacker",
               "tag": "normal",
               "dps": 119.4,
@@ -12870,7 +12773,7 @@
             },
             {
               "name": "デオキシス(スピード)",
-              "rank": 46,
+              "rank": 47,
               "role": "attacker",
               "tag": "normal",
               "dps": 119.2,
@@ -12881,7 +12784,7 @@
             },
             {
               "name": "レジギガス",
-              "rank": 47,
+              "rank": 48,
               "role": "attacker",
               "tag": "normal",
               "dps": 118.9,
@@ -12892,7 +12795,7 @@
             },
             {
               "name": "フーパ(戒)",
-              "rank": 48,
+              "rank": 49,
               "role": "attacker",
               "tag": "normal",
               "dps": 118.0,
@@ -12903,7 +12806,7 @@
             },
             {
               "name": "エーフィ",
-              "rank": 49,
+              "rank": 50,
               "role": "attacker",
               "tag": "normal",
               "dps": 117.1,
@@ -12914,7 +12817,7 @@
             },
             {
               "name": "ルナアーラ",
-              "rank": 50,
+              "rank": 51,
               "role": "attacker",
               "tag": "normal",
               "dps": 116.4,
@@ -12925,7 +12828,7 @@
             },
             {
               "name": "ムゲンダイナ",
-              "rank": 51,
+              "rank": 52,
               "role": "attacker",
               "tag": "normal",
               "dps": 116.0,
@@ -12936,7 +12839,7 @@
             },
             {
               "name": "アグノム",
-              "rank": 52,
+              "rank": 53,
               "role": "attacker",
               "tag": "normal",
               "dps": 115.9,
@@ -12948,7 +12851,7 @@
           ]
         }
       },
-      "updated_at": "2026-11-08T07:29:18.363184+09:00"
+      "updated_at": "2026-11-08T22:43:01.458274+09:00"
     },
     "raid:シャドウズガイドス": {
       "name": "シャドウズガイドス",
@@ -12959,13 +12862,13 @@
         "9db-tool": {
           "url": "https://9db.jp/pokemongo/data/2734?id=4379&lv=1&o=1&pl=40&boss_shadow=1",
           "article_updated": null,
-          "fetched_at": "2026-11-08T07:29:18.363184+09:00",
+          "fetched_at": "2026-11-08T22:43:01.458274+09:00",
           "counters": [
             {
               "name": "シャドウメガミュウツーX",
               "rank": 1,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 166.0,
               "fast": "カウンター",
               "charged": "ばくれつパンチ+",
@@ -12973,21 +12876,10 @@
               "dex": 150
             },
             {
-              "name": "シャドウメガルカリオZ",
+              "name": "シャドウメガルカリオ",
               "rank": 2,
               "role": "attacker",
-              "tag": "shadow",
-              "dps": 161.2,
-              "fast": "はっけい",
-              "charged": "はどうだん",
-              "note": "4秒 / 必要0.1匹",
-              "dex": 448
-            },
-            {
-              "name": "シャドウメガルカリオ",
-              "rank": 3,
-              "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 141.0,
               "fast": "はっけい",
               "charged": "はどうだん",
@@ -12996,9 +12888,9 @@
             },
             {
               "name": "シャドウメガゲッコウガ",
-              "rank": 4,
+              "rank": 3,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 139.3,
               "fast": "みずしゅりけん",
               "charged": "なみのり+",
@@ -13007,7 +12899,7 @@
             },
             {
               "name": "ザシアン(けんのおう)",
-              "rank": 5,
+              "rank": 4,
               "role": "attacker",
               "tag": "normal",
               "dps": 136.8,
@@ -13018,7 +12910,7 @@
             },
             {
               "name": "ザマゼンタ(たてのおう)",
-              "rank": 6,
+              "rank": 5,
               "role": "attacker",
               "tag": "normal",
               "dps": 136.0,
@@ -13029,9 +12921,9 @@
             },
             {
               "name": "シャドウメガバシャーモ",
-              "rank": 7,
+              "rank": 6,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 135.2,
               "fast": "カウンター",
               "charged": "はどうだん",
@@ -13040,7 +12932,7 @@
             },
             {
               "name": "ネクロズマ(たそがれのたてがみ)",
-              "rank": 8,
+              "rank": 7,
               "role": "attacker",
               "tag": "normal",
               "dps": 131.8,
@@ -13051,9 +12943,9 @@
             },
             {
               "name": "シャドウメガタイレーツ",
-              "rank": 9,
+              "rank": 8,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 126.7,
               "fast": "カウンター",
               "charged": "かわらわり+",
@@ -13062,9 +12954,9 @@
             },
             {
               "name": "シャドウメガミュウツーY",
-              "rank": 10,
+              "rank": 9,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 126.2,
               "fast": "カウンター",
               "charged": "みらいよち+",
@@ -13073,7 +12965,7 @@
             },
             {
               "name": "シャドウゲンシカイオーガ",
-              "rank": 11,
+              "rank": 10,
               "role": "attacker",
               "tag": "shadow",
               "dps": 123.9,
@@ -13084,9 +12976,9 @@
             },
             {
               "name": "シャドウメガスターミー",
-              "rank": 12,
+              "rank": 11,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 123.4,
               "fast": "サイコウェーブ",
               "charged": "アクアブレイク+",
@@ -13095,7 +12987,7 @@
             },
             {
               "name": "シャドウゲンシグラードン",
-              "rank": 13,
+              "rank": 12,
               "role": "attacker",
               "tag": "shadow",
               "dps": 121.4,
@@ -13106,7 +12998,7 @@
             },
             {
               "name": "ケルディオ(かくご)",
-              "rank": 14,
+              "rank": 13,
               "role": "attacker",
               "tag": "normal",
               "dps": 121.3,
@@ -13117,9 +13009,9 @@
             },
             {
               "name": "シャドウメガブリガロン",
-              "rank": 15,
+              "rank": 14,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 118.2,
               "fast": "つるのムチ",
               "charged": "タネばくだん+",
@@ -13127,21 +13019,10 @@
               "dex": 652
             },
             {
-              "name": "シャドウメガジガルデ",
-              "rank": 16,
-              "role": "attacker",
-              "tag": "shadow",
-              "dps": 118.1,
-              "fast": "ドラゴンテール",
-              "charged": "じしん",
-              "note": "5秒 / 必要0.1匹",
-              "dex": 718
-            },
-            {
               "name": "シャドウメガエルレイド",
-              "rank": 17,
+              "rank": 15,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 117.9,
               "fast": "けたぐり",
               "charged": "せいなるつるぎ",
@@ -13150,7 +13031,7 @@
             },
             {
               "name": "シャドウメタグロス",
-              "rank": 18,
+              "rank": 16,
               "role": "attacker",
               "tag": "shadow",
               "dps": 117.2,
@@ -13161,7 +13042,7 @@
             },
             {
               "name": "シャドウバシャーモ",
-              "rank": 19,
+              "rank": 17,
               "role": "attacker",
               "tag": "shadow",
               "dps": 116.6,
@@ -13171,21 +13052,10 @@
               "dex": 257
             },
             {
-              "name": "シャドウメガルチャブル",
-              "rank": 20,
-              "role": "attacker",
-              "tag": "shadow",
-              "dps": 115.7,
-              "fast": "けたぐり",
-              "charged": "フライングプレス",
-              "note": "5秒 / 必要0.1匹",
-              "dex": 701
-            },
-            {
               "name": "シャドウメガジュカイン",
-              "rank": 21,
+              "rank": 18,
               "role": "attacker",
-              "tag": "shadow",
+              "tag": "mega",
               "dps": 115.0,
               "fast": "タネマシンガン",
               "charged": "ハードプラント",
@@ -13193,8 +13063,19 @@
               "dex": 254
             },
             {
+              "name": "シャドウメガメタグロス",
+              "rank": 19,
+              "role": "attacker",
+              "tag": "mega",
+              "dps": 113.6,
+              "fast": "バレットパンチ",
+              "charged": "コメットパンチ",
+              "note": "5秒 / 必要0.1匹",
+              "dex": 376
+            },
+            {
               "name": "シャドウグラードン",
-              "rank": 22,
+              "rank": 20,
               "role": "attacker",
               "tag": "shadow",
               "dps": 113.1,
@@ -13205,7 +13086,7 @@
             },
             {
               "name": "シャドウローブシン",
-              "rank": 23,
+              "rank": 21,
               "role": "attacker",
               "tag": "shadow",
               "dps": 112.2,
@@ -13216,7 +13097,7 @@
             },
             {
               "name": "シャドウカイオーガ",
-              "rank": 24,
+              "rank": 22,
               "role": "attacker",
               "tag": "shadow",
               "dps": 112.0,
@@ -13227,7 +13108,7 @@
             },
             {
               "name": "シャドウランドロス(けしん)",
-              "rank": 25,
+              "rank": 23,
               "role": "attacker",
               "tag": "shadow",
               "dps": 109.4,
@@ -13238,7 +13119,7 @@
             },
             {
               "name": "シャドウゲッコウガ",
-              "rank": 26,
+              "rank": 24,
               "role": "attacker",
               "tag": "shadow",
               "dps": 108.2,
@@ -13249,7 +13130,7 @@
             },
             {
               "name": "ルカリオ",
-              "rank": 27,
+              "rank": 25,
               "role": "attacker",
               "tag": "normal",
               "dps": 107.3,
@@ -13260,7 +13141,7 @@
             },
             {
               "name": "カミツルギ",
-              "rank": 28,
+              "rank": 26,
               "role": "attacker",
               "tag": "normal",
               "dps": 105.5,
@@ -13271,7 +13152,7 @@
             },
             {
               "name": "テラキオン",
-              "rank": 29,
+              "rank": 27,
               "role": "attacker",
               "tag": "normal",
               "dps": 105.0,
@@ -13282,7 +13163,7 @@
             },
             {
               "name": "シャドウキングラー",
-              "rank": 30,
+              "rank": 28,
               "role": "attacker",
               "tag": "shadow",
               "dps": 104.8,
@@ -13293,7 +13174,7 @@
             },
             {
               "name": "シャドウドリュウズ",
-              "rank": 31,
+              "rank": 29,
               "role": "attacker",
               "tag": "shadow",
               "dps": 104.8,
@@ -13304,7 +13185,7 @@
             },
             {
               "name": "シャドウディアルガ",
-              "rank": 32,
+              "rank": 30,
               "role": "attacker",
               "tag": "shadow",
               "dps": 103.6,
@@ -13315,7 +13196,7 @@
             },
             {
               "name": "シャドウエルレイド",
-              "rank": 33,
+              "rank": 31,
               "role": "attacker",
               "tag": "shadow",
               "dps": 103.5,
@@ -13326,7 +13207,7 @@
             },
             {
               "name": "シャドウガブリアス",
-              "rank": 34,
+              "rank": 32,
               "role": "attacker",
               "tag": "shadow",
               "dps": 103.2,
@@ -13337,7 +13218,7 @@
             },
             {
               "name": "シャドウマンムー",
-              "rank": 35,
+              "rank": 33,
               "role": "attacker",
               "tag": "shadow",
               "dps": 102.9,
@@ -13348,7 +13229,7 @@
             },
             {
               "name": "シャドウカイリキー",
-              "rank": 36,
+              "rank": 34,
               "role": "attacker",
               "tag": "shadow",
               "dps": 102.6,
@@ -13359,7 +13240,7 @@
             },
             {
               "name": "ランドロス(れいじゅう)",
-              "rank": 37,
+              "rank": 35,
               "role": "attacker",
               "tag": "normal",
               "dps": 102.2,
@@ -13370,7 +13251,7 @@
             },
             {
               "name": "シャドウエンペルト",
-              "rank": 38,
+              "rank": 36,
               "role": "attacker",
               "tag": "shadow",
               "dps": 101.0,
@@ -13381,7 +13262,7 @@
             },
             {
               "name": "シャドウライコウ",
-              "rank": 39,
+              "rank": 37,
               "role": "attacker",
               "tag": "shadow",
               "dps": 99.7,
@@ -13392,7 +13273,7 @@
             },
             {
               "name": "シャドウミュウツー",
-              "rank": 40,
+              "rank": 38,
               "role": "attacker",
               "tag": "shadow",
               "dps": 99.0,
@@ -13403,7 +13284,7 @@
             },
             {
               "name": "シェイミ(スカイ)",
-              "rank": 41,
+              "rank": 39,
               "role": "attacker",
               "tag": "normal",
               "dps": 98.6,
@@ -13414,7 +13295,7 @@
             },
             {
               "name": "バシャーモ",
-              "rank": 42,
+              "rank": 40,
               "role": "attacker",
               "tag": "normal",
               "dps": 96.8,
@@ -13425,7 +13306,7 @@
             },
             {
               "name": "メタグロス",
-              "rank": 43,
+              "rank": 41,
               "role": "attacker",
               "tag": "normal",
               "dps": 96.8,
@@ -13436,7 +13317,7 @@
             },
             {
               "name": "ケルディオ(いつも)",
-              "rank": 44,
+              "rank": 42,
               "role": "attacker",
               "tag": "normal",
               "dps": 96.8,
@@ -13447,7 +13328,7 @@
             },
             {
               "name": "グラードン",
-              "rank": 45,
+              "rank": 43,
               "role": "attacker",
               "tag": "normal",
               "dps": 95.1,
@@ -13458,7 +13339,7 @@
             },
             {
               "name": "インテレオン（御三家）",
-              "rank": 46,
+              "rank": 44,
               "role": "attacker",
               "tag": "normal",
               "dps": 95.0,
@@ -13469,7 +13350,7 @@
             },
             {
               "name": "カイオーガ",
-              "rank": 47,
+              "rank": 45,
               "role": "attacker",
               "tag": "normal",
               "dps": 95.0,
@@ -13480,7 +13361,7 @@
             },
             {
               "name": "ジュナイパー(ヒスイ)（御三家）",
-              "rank": 48,
+              "rank": 46,
               "role": "attacker",
               "tag": "normal",
               "dps": 94.5,
@@ -13491,7 +13372,7 @@
             },
             {
               "name": "ローブシン",
-              "rank": 49,
+              "rank": 47,
               "role": "attacker",
               "tag": "normal",
               "dps": 94.2,
@@ -13502,7 +13383,7 @@
             },
             {
               "name": "ウーラオス(れんげきのかた)",
-              "rank": 50,
+              "rank": 48,
               "role": "attacker",
               "tag": "normal",
               "dps": 92.6,
@@ -13513,7 +13394,7 @@
             },
             {
               "name": "キノガッサ",
-              "rank": 51,
+              "rank": 49,
               "role": "attacker",
               "tag": "normal",
               "dps": 92.6,
@@ -13524,7 +13405,7 @@
             },
             {
               "name": "ランドロス(けしん)",
-              "rank": 52,
+              "rank": 50,
               "role": "attacker",
               "tag": "normal",
               "dps": 92.5,
@@ -13535,7 +13416,7 @@
             },
             {
               "name": "ウーラオス(いちげきのかた)",
-              "rank": 53,
+              "rank": 51,
               "role": "attacker",
               "tag": "normal",
               "dps": 92.3,
@@ -13546,7 +13427,7 @@
             },
             {
               "name": "ザルード",
-              "rank": 54,
+              "rank": 52,
               "role": "attacker",
               "tag": "normal",
               "dps": 91.9,
@@ -13557,7 +13438,7 @@
             },
             {
               "name": "ネクロズマ(あかつきのつばさ)",
-              "rank": 55,
+              "rank": 53,
               "role": "attacker",
               "tag": "normal",
               "dps": 91.4,
@@ -13568,7 +13449,7 @@
             },
             {
               "name": "デンジュモク",
-              "rank": 56,
+              "rank": 54,
               "role": "attacker",
               "tag": "normal",
               "dps": 90.8,
@@ -13579,7 +13460,7 @@
             },
             {
               "name": "ゴリランダー（御三家）",
-              "rank": 57,
+              "rank": 55,
               "role": "attacker",
               "tag": "normal",
               "dps": 90.8,
@@ -13590,7 +13471,7 @@
             },
             {
               "name": "ゲッコウガ",
-              "rank": 58,
+              "rank": 56,
               "role": "attacker",
               "tag": "normal",
               "dps": 90.3,
@@ -13601,7 +13482,7 @@
             },
             {
               "name": "ムゲンダイナ",
-              "rank": 59,
+              "rank": 57,
               "role": "attacker",
               "tag": "normal",
               "dps": 90.2,
@@ -13612,7 +13493,7 @@
             },
             {
               "name": "イルカマン(マイティ)",
-              "rank": 60,
+              "rank": 58,
               "role": "attacker",
               "tag": "normal",
               "dps": 90.2,
@@ -13620,11 +13501,33 @@
               "charged": "みずのはどう",
               "note": "7秒 / 必要0.2匹",
               "dex": 964
+            },
+            {
+              "name": "デカヌチャン",
+              "rank": 59,
+              "role": "attacker",
+              "tag": "normal",
+              "dps": 90.0,
+              "fast": "ようせいのかぜ",
+              "charged": "デカハンマー",
+              "note": "7秒 / 必要0.2匹",
+              "dex": 959
+            },
+            {
+              "name": "ウェーニバル",
+              "rank": 60,
+              "role": "attacker",
+              "tag": "normal",
+              "dps": 89.7,
+              "fast": "みずでっぽう",
+              "charged": "ハイドロカノン",
+              "note": "7秒 / 必要0.2匹",
+              "dex": 914
             }
           ]
         }
       },
-      "updated_at": "2026-11-08T07:29:18.363184+09:00"
+      "updated_at": "2026-11-08T22:43:01.458274+09:00"
     },
     "raid:カイリキー": {
       "name": "カイリキー",
