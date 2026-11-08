@@ -699,6 +699,159 @@
       ]
     },
     {
+      "id": "news-173b0c53b6",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "new_event",
+      "title": "【新イベント】ザシアン（けんのおう）のレイドアワー",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-zacian-crowned-sword-raid-hour",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10821/",
+          "fetched_at": "2026-11-08T17:39:24.212162+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-1bd9ebc9f8",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "event_update",
+      "title": "【情報追加】ザシアン（けんのおう）のレイドアワー：レイドが判明・追加（2件）",
+      "details": "レイド：ザシアン(けんのおう)、ザマゼンタ(たてのおう)",
+      "targetId": "ev-auto-zacian-crowned-sword-raid-hour",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10821/",
+          "fetched_at": "2026-11-08T17:39:24.212162+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-8ed1214501",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "event_update",
+      "title": "【情報追加】ザシアン（けんのおう）のレイドアワー：サプライズボックスが判明・追加（2件）",
+      "details": "サプライズボックス：コレクレー、メルタン",
+      "targetId": "ev-auto-zacian-crowned-sword-raid-hour",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10821/",
+          "fetched_at": "2026-11-08T17:39:24.212162+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-5a974856f1",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドウィーク2026：野生が判明・追加（68件）",
+      "details": "野生：サンド(アローラ)、ディグダ(アローラ)、シェルダー、イワーク、ポリゴン、ツボツボ ほか62件",
+      "targetId": "ev-wildweek-2026",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10819/",
+          "fetched_at": "2026-11-08T17:39:24.212162+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-c687d94dfe",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドウィーク2026：レイドが判明・追加（10件）",
+      "details": "レイド：ギラティナ(アナザー)、ゼクロム、ホワイトキュレム、レシラム、ブラックキュレム、クレセリア ほか4件",
+      "targetId": "ev-wildweek-2026",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10819/",
+          "fetched_at": "2026-11-08T17:39:24.212162+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-3281f2b9ec",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドウィーク2026：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：スタジアムを訪れる→エースバーン",
+      "targetId": "ev-wildweek-2026",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10819/",
+          "fetched_at": "2026-11-08T17:39:24.212162+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-9981473988",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドウィーク2026：サプライズボックスが判明・追加（1件）",
+      "details": "サプライズボックス：コレクレー",
+      "targetId": "ev-wildweek-2026",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10819/",
+          "fetched_at": "2026-11-08T17:39:24.212162+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-cd3930ef2f",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドウィーク2026：レイドが判明・追加（13件）",
+      "details": "レイド：ギラティナ（アナザー）、メガヤミラミ、デスカーン、オーロット、ダダリン、ヨマワル ほか7件",
+      "targetId": "ev-wildweek-2026",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10808/",
+          "fetched_at": "2026-11-08T17:39:24.212162+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-3a047d10c1",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドウィーク2026：レイドが判明・追加（4件）",
+      "details": "レイド：ザシアン(けんのおう)、ザマゼンタ(たてのおう)、クリムガン、ミミズズ",
+      "targetId": "ev-wildweek-2026",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10732/",
+          "fetched_at": "2026-11-08T17:39:24.212162+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
       "id": "news-27e2e8643b",
       "date": "2026-11-07",
       "date_label": "11/7",

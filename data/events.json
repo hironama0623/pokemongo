@@ -1526,6 +1526,27 @@
           "article_updated": "2026-11-08T08:25:25+09:00"
         }
       ]
+    },
+    "ev-auto-zacian-crowned-sword-raid-hour": {
+      "id": "ev-auto-zacian-crowned-sword-raid-hour",
+      "title": "ザシアン（けんのおう）のレイドアワー",
+      "category": "raid",
+      "start": "2026-11-09T18:00",
+      "end": "2026-11-09T19:00",
+      "dateText": "2026/11/9(月)18時～19時",
+      "summary": "「ワイルドウィーク2026」イベント内のミニイベントとして、ザシアン（けんのおう）のレイドアワーが開催されます。",
+      "hasPaid": true,
+      "freeFeatures": [],
+      "paidFeatures": [],
+      "created_at": "2026-11-08T17:39:24.212162+09:00",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10821/",
+          "fetched_at": "2026-11-08T17:39:24.212162+09:00",
+          "article_updated": null
+        }
+      ]
     }
   }
 }
