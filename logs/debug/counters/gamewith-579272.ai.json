@@ -74,9 +74,20 @@
      "note": ""
     },
     {
+     "name": "ハピナス",
+     "rank": 6,
+     "role": "attacker",
+     "tag": "dmax",
+     "fast": "はたく",
+     "charged": null,
+     "dps": null,
+     "tdo": null,
+     "note": ""
+    },
+    {
      "name": "スイクン",
      "rank": 7,
-     "role": "tank",
+     "role": "attacker",
      "tag": "dmax",
      "fast": "みずでっぽう",
      "charged": null,
@@ -87,7 +98,7 @@
     {
      "name": "ルギア",
      "rank": 8,
-     "role": "tank",
+     "role": "attacker",
      "tag": "dmax",
      "fast": "じんつうりき",
      "charged": null,
@@ -98,7 +109,7 @@
     {
      "name": "ミロカロス",
      "rank": 9,
-     "role": "tank",
+     "role": "attacker",
      "tag": "dmax",
      "fast": "たきのぼり",
      "charged": null,
@@ -109,7 +120,7 @@
     {
      "name": "ラティアス",
      "rank": 10,
-     "role": "tank",
+     "role": "attacker",
      "tag": "dmax",
      "fast": "りゅうのいぶき",
      "charged": null,

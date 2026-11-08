@@ -1107,6 +1107,40 @@
       ]
     },
     {
+      "id": "news-4a57473d9c",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "event_update",
+      "title": "【情報追加】「ピクシー」の「スーパーメガレイド・デイ」：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：イベント期間中の無料タイムチャレンジ→メタグロス・プレミアムバトルパス",
+      "targetId": "ev-auto-clefable-super-mega-raid-day-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/586872",
+          "fetched_at": "2026-11-08T21:17:42.029801+09:00",
+          "article_updated": "2026-11-07T13:11:13+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-a09928f7fc",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "schedule_changed",
+      "title": "【日程変更】GOパス：10月",
+      "details": "日程が更新されています：2026-10-06〜2026-11-03 → 2026-11-03〜2026-12-01",
+      "targetId": "ev-gopass-oct",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/583362",
+          "fetched_at": "2026-11-08T21:17:42.029801+09:00",
+          "article_updated": "2026-11-04T13:15:34+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-27e2e8643b",
       "date": "2026-11-07",
       "date_label": "11/7",

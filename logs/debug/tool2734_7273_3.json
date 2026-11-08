@@ -39,19 +39,8 @@
     "dex": 800
    },
    {
-    "name": "シャドウダークライ",
-    "rank": 4,
-    "role": "attacker",
-    "tag": "shadow",
-    "dps": 28.0,
-    "fast": "バークアウト",
-    "charged": "イカサマ",
-    "note": "129秒 / 必要3.2匹",
-    "dex": 491
-   },
-   {
     "name": "シャドウメガゲンガー",
-    "rank": 5,
+    "rank": 4,
     "role": "attacker",
     "tag": "mega",
     "dps": 27.8,
@@ -62,7 +51,7 @@
    },
    {
     "name": "シャドウメガミュウツーY",
-    "rank": 6,
+    "rank": 5,
     "role": "attacker",
     "tag": "mega",
     "dps": 27.5,
@@ -73,7 +62,7 @@
    },
    {
     "name": "シャドウメガアブソル",
-    "rank": 7,
+    "rank": 6,
     "role": "attacker",
     "tag": "mega",
     "dps": 26.9,
@@ -84,7 +73,7 @@
    },
    {
     "name": "シャドウメガミュウツーX",
-    "rank": 8,
+    "rank": 7,
     "role": "attacker",
     "tag": "mega",
     "dps": 26.7,
@@ -94,30 +83,8 @@
     "dex": 150
    },
    {
-    "name": "シャドウサザンドラ",
-    "rank": 9,
-    "role": "attacker",
-    "tag": "shadow",
-    "dps": 26.4,
-    "fast": "かみつく",
-    "charged": "ぶんまわす",
-    "note": "137秒 / 必要2.7匹",
-    "dex": 635
-   },
-   {
-    "name": "シャドウアブソル",
-    "rank": 10,
-    "role": "attacker",
-    "tag": "shadow",
-    "dps": 25.7,
-    "fast": "バークアウト",
-    "charged": "ぶんまわす",
-    "note": "140秒 / 必要5.5匹",
-    "dex": 359
-   },
-   {
     "name": "シャドウメガバンギラス",
-    "rank": 11,
+    "rank": 8,
     "role": "attacker",
     "tag": "mega",
     "dps": 25.2,
@@ -127,19 +94,8 @@
     "dex": 248
    },
    {
-    "name": "シャドウバンギラス",
-    "rank": 12,
-    "role": "attacker",
-    "tag": "shadow",
-    "dps": 24.9,
-    "fast": "かみつく",
-    "charged": "ぶんまわす",
-    "note": "144秒 / 必要3.3匹",
-    "dex": 248
-   },
-   {
     "name": "シャドウメガゲッコウガ",
-    "rank": 13,
+    "rank": 9,
     "role": "attacker",
     "tag": "mega",
     "dps": 24.9,
@@ -149,19 +105,8 @@
     "dex": 658
    },
    {
-    "name": "シャドウシャンデラ",
-    "rank": 14,
-    "role": "attacker",
-    "tag": "shadow",
-    "dps": 24.8,
-    "fast": "たたりめ",
-    "charged": "シャドーボール",
-    "note": "146秒 / 必要7.5匹",
-    "dex": 609
-   },
-   {
     "name": "シャドウメガジュペッタ",
-    "rank": 15,
+    "rank": 10,
     "role": "attacker",
     "tag": "mega",
     "dps": 24.3,
@@ -171,19 +116,8 @@
     "dex": 354
    },
    {
-    "name": "シャドウマニューラ",
-    "rank": 16,
-    "role": "attacker",
-    "tag": "shadow",
-    "dps": 24.2,
-    "fast": "バークアウト",
-    "charged": "イカサマ",
-    "note": "149秒 / 必要4.2匹",
-    "dex": 461
-   },
-   {
     "name": "シャドウメガレックウザ",
-    "rank": 17,
+    "rank": 11,
     "role": "attacker",
     "tag": "mega",
     "dps": 24.1,
@@ -193,30 +127,8 @@
     "dex": 384
    },
    {
-    "name": "シャドウボーマンダ",
-    "rank": 18,
-    "role": "attacker",
-    "tag": "shadow",
-    "dps": 23.7,
-    "fast": "かみつく",
-    "charged": "ぶんまわす",
-    "note": "152秒 / 必要4.6匹",
-    "dex": 373
-   },
-   {
-    "name": "シャドウゲンガー",
-    "rank": 19,
-    "role": "attacker",
-    "tag": "shadow",
-    "dps": 23.5,
-    "fast": "シャドークロー",
-    "charged": "シャドーボール",
-    "note": "154秒 / 必要10.0匹",
-    "dex": 94
-   },
-   {
     "name": "ダークライ",
-    "rank": 20,
+    "rank": 12,
     "role": "attacker",
     "tag": "normal",
     "dps": 23.4,
@@ -227,7 +139,7 @@
    },
    {
     "name": "バドレックス(こくばじょうのすがた)",
-    "rank": 21,
+    "rank": 13,
     "role": "attacker",
     "tag": "normal",
     "dps": 23.2,
@@ -238,7 +150,7 @@
    },
    {
     "name": "ドドゲザン",
-    "rank": 22,
+    "rank": 14,
     "role": "attacker",
     "tag": "normal",
     "dps": 23.0,
@@ -248,30 +160,8 @@
     "dex": 983
    },
    {
-    "name": "シャドウミュウツー",
-    "rank": 23,
-    "role": "attacker",
-    "tag": "shadow",
-    "dps": 22.9,
-    "fast": "サイコカッター",
-    "charged": "シャドーボール",
-    "note": "158秒 / 必要6.5匹",
-    "dex": 150
-   },
-   {
-    "name": "シャドウドンカラス",
-    "rank": 24,
-    "role": "attacker",
-    "tag": "shadow",
-    "dps": 22.6,
-    "fast": "バークアウト",
-    "charged": "あくのはどう",
-    "note": "159秒 / 必要4.9匹",
-    "dex": 430
-   },
-   {
     "name": "ズガドーン",
-    "rank": 25,
+    "rank": 15,
     "role": "attacker",
     "tag": "normal",
     "dps": 22.3,
@@ -282,7 +172,7 @@
    },
    {
     "name": "シャドウメガフーディン",
-    "rank": 26,
+    "rank": 16,
     "role": "attacker",
     "tag": "mega",
     "dps": 22.3,
@@ -293,7 +183,7 @@
    },
    {
     "name": "シャドウメガライボルト",
-    "rank": 27,
+    "rank": 17,
     "role": "attacker",
     "tag": "mega",
     "dps": 22.1,
@@ -303,30 +193,8 @@
     "dex": 310
    },
    {
-    "name": "シャドウヘルガー",
-    "rank": 28,
-    "role": "attacker",
-    "tag": "shadow",
-    "dps": 21.9,
-    "fast": "バークアウト",
-    "charged": "イカサマ",
-    "note": "165秒 / 必要4.6匹",
-    "dex": 229
-   },
-   {
-    "name": "シャドウゲッコウガ",
-    "rank": 29,
-    "role": "attacker",
-    "tag": "shadow",
-    "dps": 21.8,
-    "fast": "だましうち",
-    "charged": "ぶんまわす",
-    "note": "165秒 / 必要6.0匹",
-    "dex": 658
-   },
-   {
     "name": "ムゲンダイナ",
-    "rank": 30,
+    "rank": 18,
     "role": "attacker",
     "tag": "normal",
     "dps": 21.7,
@@ -337,7 +205,7 @@
    },
    {
     "name": "ブラックキュレム",
-    "rank": 31,
+    "rank": 19,
     "role": "attacker",
     "tag": "normal",
     "dps": 21.7,
@@ -348,7 +216,7 @@
    },
    {
     "name": "サザンドラ",
-    "rank": 32,
+    "rank": 20,
     "role": "attacker",
     "tag": "normal",
     "dps": 21.5,
@@ -359,7 +227,7 @@
    },
    {
     "name": "バンギラス",
-    "rank": 33,
+    "rank": 21,
     "role": "attacker",
     "tag": "normal",
     "dps": 21.3,
@@ -370,7 +238,7 @@
    },
    {
     "name": "アブソル",
-    "rank": 34,
+    "rank": 22,
     "role": "attacker",
     "tag": "normal",
     "dps": 21.3,
@@ -381,7 +249,7 @@
    },
    {
     "name": "ネクロズマ(たそがれのたてがみ)",
-    "rank": 35,
+    "rank": 23,
     "role": "attacker",
     "tag": "normal",
     "dps": 21.2,
@@ -392,7 +260,7 @@
    },
    {
     "name": "ルナアーラ",
-    "rank": 36,
+    "rank": 24,
     "role": "attacker",
     "tag": "normal",
     "dps": 21.2,
@@ -403,7 +271,7 @@
    },
    {
     "name": "シャンデラ",
-    "rank": 37,
+    "rank": 25,
     "role": "attacker",
     "tag": "normal",
     "dps": 21.1,
@@ -414,7 +282,7 @@
    },
    {
     "name": "ザシアン(けんのおう)",
-    "rank": 38,
+    "rank": 26,
     "role": "attacker",
     "tag": "normal",
     "dps": 21.1,
@@ -425,7 +293,7 @@
    },
    {
     "name": "ザマゼンタ(たてのおう)",
-    "rank": 39,
+    "rank": 27,
     "role": "attacker",
     "tag": "normal",
     "dps": 21.1,
@@ -436,7 +304,7 @@
    },
    {
     "name": "ドラパルト",
-    "rank": 40,
+    "rank": 28,
     "role": "attacker",
     "tag": "normal",
     "dps": 21.0,
@@ -447,7 +315,7 @@
    },
    {
     "name": "サーフゴー",
-    "rank": 41,
+    "rank": 29,
     "role": "attacker",
     "tag": "normal",
     "dps": 20.7,
@@ -458,7 +326,7 @@
    },
    {
     "name": "ゾロアーク(ヒスイ)",
-    "rank": 42,
+    "rank": 30,
     "role": "attacker",
     "tag": "normal",
     "dps": 20.5,
@@ -469,7 +337,7 @@
    },
    {
     "name": "イーユイ",
-    "rank": 43,
+    "rank": 31,
     "role": "attacker",
     "tag": "normal",
     "dps": 20.4,
@@ -480,7 +348,7 @@
    },
    {
     "name": "ミュウツー",
-    "rank": 44,
+    "rank": 32,
     "role": "attacker",
     "tag": "normal",
     "dps": 20.3,
@@ -491,7 +359,7 @@
    },
    {
     "name": "ガオガエン（御三家）",
-    "rank": 45,
+    "rank": 33,
     "role": "attacker",
     "tag": "normal",
     "dps": 20.2,
@@ -502,7 +370,7 @@
    },
    {
     "name": "ボーマンダ",
-    "rank": 46,
+    "rank": 34,
     "role": "attacker",
     "tag": "normal",
     "dps": 20.1,
@@ -513,7 +381,7 @@
    },
    {
     "name": "パオジアン",
-    "rank": 47,
+    "rank": 35,
     "role": "attacker",
     "tag": "normal",
     "dps": 20.1,
@@ -524,7 +392,7 @@
    },
    {
     "name": "マニューラ",
-    "rank": 48,
+    "rank": 36,
     "role": "attacker",
     "tag": "normal",
     "dps": 20.1,
@@ -535,7 +403,7 @@
    },
    {
     "name": "フーパ(解)",
-    "rank": 49,
+    "rank": 37,
     "role": "attacker",
     "tag": "normal",
     "dps": 20.1,
@@ -546,7 +414,7 @@
    },
    {
     "name": "ムゲンダイナ(ムゲンダイマックス)",
-    "rank": 50,
+    "rank": 38,
     "role": "attacker",
     "tag": "normal",
     "dps": 19.9,
@@ -557,7 +425,7 @@
    },
    {
     "name": "ゲンガー",
-    "rank": 51,
+    "rank": 39,
     "role": "attacker",
     "tag": "normal",
     "dps": 19.9,
@@ -568,7 +436,7 @@
    },
    {
     "name": "ゾロアーク",
-    "rank": 52,
+    "rank": 40,
     "role": "attacker",
     "tag": "normal",
     "dps": 19.8,
@@ -1130,558 +998,6 @@
     "count": 9.0,
     "gauge": 2.4,
     "dps": 19.8
-   }
-  ],
-  "shadow": [
-   {
-    "id": "10561",
-    "name": "ネクロズマ(あかつきのつばさ)",
-    "tag": "normal",
-    "fast": "サイコカッター",
-    "charged": "シャドーレイ",
-    "time": 121.0,
-    "count": 5.0,
-    "gauge": 3.2,
-    "dps": 30.0
-   },
-   {
-    "id": "4462",
-    "name": "シャドウダークライ",
-    "tag": "shadow",
-    "fast": "バークアウト",
-    "charged": "イカサマ",
-    "time": 129.0,
-    "count": 3.2,
-    "gauge": 7.9,
-    "dps": 28.0
-   },
-   {
-    "id": "10561",
-    "name": "ネクロズマ(あかつきのつばさ)",
-    "tag": "normal",
-    "fast": "シャドークロー",
-    "charged": "シャドーレイ",
-    "time": 133.0,
-    "count": 5.5,
-    "gauge": 2.0,
-    "dps": 27.2
-   },
-   {
-    "id": "4462",
-    "name": "シャドウダークライ",
-    "tag": "shadow",
-    "fast": "ふいうち",
-    "charged": "イカサマ",
-    "time": 134.0,
-    "count": 3.3,
-    "gauge": 7.6,
-    "dps": 26.9
-   },
-   {
-    "id": "4462",
-    "name": "シャドウダークライ",
-    "tag": "shadow",
-    "fast": "バークアウト",
-    "charged": "シャドーボール",
-    "time": 135.0,
-    "count": 3.4,
-    "gauge": 6.7,
-    "dps": 26.6
-   },
-   {
-    "id": "7351",
-    "name": "シャドウサザンドラ",
-    "tag": "shadow",
-    "fast": "かみつく",
-    "charged": "ぶんまわす",
-    "time": 137.0,
-    "count": 2.7,
-    "gauge": 10.3,
-    "dps": 26.4
-   },
-   {
-    "id": "4462",
-    "name": "シャドウダークライ",
-    "tag": "shadow",
-    "fast": "だましうち",
-    "charged": "イカサマ",
-    "time": 138.0,
-    "count": 3.4,
-    "gauge": 6.7,
-    "dps": 26.2
-   },
-   {
-    "id": "4462",
-    "name": "シャドウダークライ",
-    "tag": "shadow",
-    "fast": "バークアウト",
-    "charged": "あくのはどう",
-    "time": 138.0,
-    "count": 3.4,
-    "gauge": 6.9,
-    "dps": 26.1
-   },
-   {
-    "id": "4462",
-    "name": "シャドウダークライ",
-    "tag": "shadow",
-    "fast": "ふいうち",
-    "charged": "シャドーボール",
-    "time": 140.0,
-    "count": 3.5,
-    "gauge": 6.5,
-    "dps": 25.7
-   },
-   {
-    "id": "2580",
-    "name": "シャドウアブソル",
-    "tag": "shadow",
-    "fast": "バークアウト",
-    "charged": "ぶんまわす",
-    "time": 140.0,
-    "count": 5.5,
-    "gauge": 6.7,
-    "dps": 25.7
-   },
-   {
-    "id": "4462",
-    "name": "シャドウダークライ",
-    "tag": "shadow",
-    "fast": "ふいうち",
-    "charged": "あくのはどう",
-    "time": 143.0,
-    "count": 3.6,
-    "gauge": 6.6,
-    "dps": 25.2
-   },
-   {
-    "id": "4462",
-    "name": "シャドウダークライ",
-    "tag": "shadow",
-    "fast": "だましうち",
-    "charged": "シャドーボール",
-    "time": 143.0,
-    "count": 3.6,
-    "gauge": 5.9,
-    "dps": 25.2
-   },
-   {
-    "id": "1411",
-    "name": "シャドウバンギラス",
-    "tag": "shadow",
-    "fast": "かみつく",
-    "charged": "ぶんまわす",
-    "time": 144.0,
-    "count": 3.3,
-    "gauge": 10.2,
-    "dps": 24.9
-   },
-   {
-    "id": "4462",
-    "name": "シャドウダークライ",
-    "tag": "shadow",
-    "fast": "だましうち",
-    "charged": "あくのはどう",
-    "time": 145.0,
-    "count": 3.6,
-    "gauge": 6.0,
-    "dps": 24.8
-   },
-   {
-    "id": "7325",
-    "name": "シャドウシャンデラ",
-    "tag": "shadow",
-    "fast": "たたりめ",
-    "charged": "シャドーボール",
-    "time": 146.0,
-    "count": 7.5,
-    "gauge": 3.3,
-    "dps": 24.8
-   },
-   {
-    "id": "10561",
-    "name": "ネクロズマ(あかつきのつばさ)",
-    "tag": "normal",
-    "fast": "メタルクロー",
-    "charged": "シャドーレイ",
-    "time": 148.0,
-    "count": 6.0,
-    "gauge": 2.6,
-    "dps": 24.7
-   },
-   {
-    "id": "4432",
-    "name": "シャドウマニューラ",
-    "tag": "shadow",
-    "fast": "バークアウト",
-    "charged": "イカサマ",
-    "time": 149.0,
-    "count": 4.2,
-    "gauge": 7.0,
-    "dps": 24.2
-   },
-   {
-    "id": "7325",
-    "name": "シャドウシャンデラ",
-    "tag": "shadow",
-    "fast": "おどろかす",
-    "charged": "シャドーボール",
-    "time": 152.0,
-    "count": 7.8,
-    "gauge": 3.3,
-    "dps": 23.8
-   },
-   {
-    "id": "2594",
-    "name": "シャドウボーマンダ",
-    "tag": "shadow",
-    "fast": "かみつく",
-    "charged": "ぶんまわす",
-    "time": 152.0,
-    "count": 4.6,
-    "gauge": 7.6,
-    "dps": 23.7
-   },
-   {
-    "id": "7351",
-    "name": "シャドウサザンドラ",
-    "tag": "shadow",
-    "fast": "かみつく",
-    "charged": "あくのはどう",
-    "time": 153.0,
-    "count": 3.0,
-    "gauge": 6.8,
-    "dps": 23.6
-   },
-   {
-    "id": "404",
-    "name": "シャドウゲンガー",
-    "tag": "shadow",
-    "fast": "シャドークロー",
-    "charged": "シャドーボール",
-    "time": 154.0,
-    "count": 10.0,
-    "gauge": 1.9,
-    "dps": 23.5
-   },
-   {
-    "id": "4462",
-    "name": "ダークライ",
-    "tag": "normal",
-    "fast": "バークアウト",
-    "charged": "イカサマ",
-    "time": 154.0,
-    "count": 3.3,
-    "gauge": 9.3,
-    "dps": 23.4
-   },
-   {
-    "id": "404",
-    "name": "シャドウゲンガー",
-    "tag": "shadow",
-    "fast": "したでなめる",
-    "charged": "シャドーボール",
-    "time": 155.0,
-    "count": 10.1,
-    "gauge": 2.4,
-    "dps": 23.3
-   },
-   {
-    "id": "14379",
-    "name": "ドドゲザン",
-    "tag": "normal",
-    "fast": "バークアウト",
-    "charged": "ドゲザン",
-    "time": 156.0,
-    "count": 2.2,
-    "gauge": 15.7,
-    "dps": 23.0
-   },
-   {
-    "id": "4462",
-    "name": "ダークライ",
-    "tag": "normal",
-    "fast": "ふいうち",
-    "charged": "イカサマ",
-    "time": 157.0,
-    "count": 3.4,
-    "gauge": 8.9,
-    "dps": 22.9
-   },
-   {
-    "id": "511",
-    "name": "シャドウミュウツー",
-    "tag": "shadow",
-    "fast": "サイコカッター",
-    "charged": "シャドーボール",
-    "time": 158.0,
-    "count": 6.5,
-    "gauge": 4.7,
-    "dps": 22.9
-   },
-   {
-    "id": "7351",
-    "name": "シャドウサザンドラ",
-    "tag": "shadow",
-    "fast": "りゅうのいぶき",
-    "charged": "ぶんまわす",
-    "time": 158.0,
-    "count": 3.1,
-    "gauge": 10.3,
-    "dps": 22.8
-   },
-   {
-    "id": "4432",
-    "name": "シャドウマニューラ",
-    "tag": "shadow",
-    "fast": "だましうち",
-    "charged": "イカサマ",
-    "time": 158.0,
-    "count": 4.5,
-    "gauge": 6.0,
-    "dps": 22.8
-   },
-   {
-    "id": "511",
-    "name": "シャドウミュウツー",
-    "tag": "shadow",
-    "fast": "ねんりき",
-    "charged": "シャドーボール",
-    "time": 159.0,
-    "count": 6.5,
-    "gauge": 3.8,
-    "dps": 22.7
-   },
-   {
-    "id": "4401",
-    "name": "シャドウドンカラス",
-    "tag": "shadow",
-    "fast": "バークアウト",
-    "charged": "あくのはどう",
-    "time": 159.0,
-    "count": 4.9,
-    "gauge": 5.7,
-    "dps": 22.6
-   },
-   {
-    "id": "7325",
-    "name": "シャドウシャンデラ",
-    "tag": "shadow",
-    "fast": "ほのおのうず",
-    "charged": "シャドーボール",
-    "time": 160.0,
-    "count": 8.2,
-    "gauge": 2.8,
-    "dps": 22.5
-   },
-   {
-    "id": "404",
-    "name": "シャドウゲンガー",
-    "tag": "shadow",
-    "fast": "ふいうち",
-    "charged": "シャドーボール",
-    "time": 162.0,
-    "count": 10.5,
-    "gauge": 2.4,
-    "dps": 22.4
-   },
-   {
-    "id": "404",
-    "name": "シャドウゲンガー",
-    "tag": "shadow",
-    "fast": "たたりめ",
-    "charged": "シャドーボール",
-    "time": 162.0,
-    "count": 10.5,
-    "gauge": 2.5,
-    "dps": 22.4
-   },
-   {
-    "id": "10572",
-    "name": "ズガドーン",
-    "tag": "normal",
-    "fast": "おどろかす",
-    "charged": "シャドーボール",
-    "time": 162.0,
-    "count": 9.0,
-    "gauge": 3.0,
-    "dps": 22.3
-   },
-   {
-    "id": "7325",
-    "name": "シャドウシャンデラ",
-    "tag": "shadow",
-    "fast": "やきつくす",
-    "charged": "シャドーボール",
-    "time": 162.0,
-    "count": 8.3,
-    "gauge": 2.8,
-    "dps": 22.3
-   },
-   {
-    "id": "4462",
-    "name": "ダークライ",
-    "tag": "normal",
-    "fast": "バークアウト",
-    "charged": "シャドーボール",
-    "time": 162.0,
-    "count": 3.5,
-    "gauge": 7.9,
-    "dps": 22.2
-   },
-   {
-    "id": "2580",
-    "name": "シャドウアブソル",
-    "tag": "shadow",
-    "fast": "バークアウト",
-    "charged": "あくのはどう",
-    "time": 162.0,
-    "count": 6.3,
-    "gauge": 4.4,
-    "dps": 22.2
-   },
-   {
-    "id": "2580",
-    "name": "シャドウアブソル",
-    "tag": "shadow",
-    "fast": "バークアウト",
-    "charged": "しっぺがえし",
-    "time": 163.0,
-    "count": 6.3,
-    "gauge": 2.8,
-    "dps": 22.2
-   },
-   {
-    "id": "2580",
-    "name": "シャドウアブソル",
-    "tag": "shadow",
-    "fast": "サイコカッター",
-    "charged": "ぶんまわす",
-    "time": 163.0,
-    "count": 6.4,
-    "gauge": 6.9,
-    "dps": 22.1
-   },
-   {
-    "id": "2594",
-    "name": "シャドウボーマンダ",
-    "tag": "shadow",
-    "fast": "ドラゴンテール",
-    "charged": "ぶんまわす",
-    "time": 164.0,
-    "count": 5.0,
-    "gauge": 7.6,
-    "dps": 22.0
-   },
-   {
-    "id": "4462",
-    "name": "ダークライ",
-    "tag": "normal",
-    "fast": "だましうち",
-    "charged": "イカサマ",
-    "time": 164.0,
-    "count": 3.5,
-    "gauge": 7.9,
-    "dps": 21.9
-   },
-   {
-    "id": "1392",
-    "name": "シャドウヘルガー",
-    "tag": "shadow",
-    "fast": "バークアウト",
-    "charged": "イカサマ",
-    "time": 165.0,
-    "count": 4.6,
-    "gauge": 6.9,
-    "dps": 21.9
-   },
-   {
-    "id": "7640",
-    "name": "シャドウゲッコウガ",
-    "tag": "shadow",
-    "fast": "だましうち",
-    "charged": "ぶんまわす",
-    "time": 165.0,
-    "count": 6.0,
-    "gauge": 6.9,
-    "dps": 21.8
-   },
-   {
-    "id": "4462",
-    "name": "ダークライ",
-    "tag": "normal",
-    "fast": "バークアウト",
-    "charged": "あくのはどう",
-    "time": 165.0,
-    "count": 3.6,
-    "gauge": 8.1,
-    "dps": 21.8
-   },
-   {
-    "id": "4462",
-    "name": "ダークライ",
-    "tag": "normal",
-    "fast": "ふいうち",
-    "charged": "シャドーボール",
-    "time": 166.0,
-    "count": 3.6,
-    "gauge": 7.5,
-    "dps": 21.7
-   },
-   {
-    "id": "12107",
-    "name": "ムゲンダイナ",
-    "tag": "normal",
-    "fast": "ドラゴンテール",
-    "charged": "ダイマックスほう",
-    "time": 166.0,
-    "count": 3.8,
-    "gauge": 4.5,
-    "dps": 21.7
-   },
-   {
-    "id": "7372",
-    "name": "ブラックキュレム",
-    "tag": "normal",
-    "fast": "シャドークロー",
-    "charged": "フリーズボルト",
-    "time": 166.0,
-    "count": 4.0,
-    "gauge": 3.7,
-    "dps": 21.7
-   },
-   {
-    "id": "2594",
-    "name": "シャドウボーマンダ",
-    "tag": "shadow",
-    "fast": "かみつく",
-    "charged": "そらをとぶ",
-    "time": 167.0,
-    "count": 5.1,
-    "gauge": 5.4,
-    "dps": 21.5
-   },
-   {
-    "id": "7325",
-    "name": "シャドウシャンデラ",
-    "tag": "shadow",
-    "fast": "たたりめ",
-    "charged": "ポルターガイスト",
-    "time": 168.0,
-    "count": 8.5,
-    "gauge": 1.8,
-    "dps": 21.5
-   },
-   {
-    "id": "4462",
-    "name": "ダークライ",
-    "tag": "normal",
-    "fast": "ふいうち",
-    "charged": "あくのはどう",
-    "time": 168.0,
-    "count": 3.6,
-    "gauge": 7.8,
-    "dps": 21.5
    }
   ],
   "mega": [
