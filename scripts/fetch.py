@@ -170,9 +170,12 @@ def _select_state(page, i):
             fn()
         except Exception:  # noqa: BLE001
             continue
-        page.wait_for_timeout(500)
-        if is_sel():
+        try:   # 反応が遅いことがあるので、選択中になるまで最大3秒待ってから次の方法へ（待たずに押し直すと、選択が解除されてしまう）
+            page.wait_for_function("i => { const e = document.querySelector('[data-probe-state=\"' + i + '\"]'); return !!e && e.classList.contains('wiki_selected'); }", arg=str(i), timeout=3000)
             return name
+        except Exception:  # noqa: BLE001
+            if is_sel():
+                return name
     return None
 
 

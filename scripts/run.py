@@ -185,6 +185,11 @@ def _tool_counters(now, log, state, counters, names, unresolved, getter, states_
                     rows, bad = tool2734.parse_rows(res[st], id_names)
                     by_state[st] = rows
                     bad_all |= bad
+            # 状態が正しく選べたかの確認: シャドウ状態にシャドウの行が、メガ状態にメガの行が1つも無いなら、別の状態の結果なので使わない
+            for st, tg in (("shadow", "shadow"), ("mega", "mega")):
+                if st in by_state and not any(r["tag"] == tg for r in by_state[st]):
+                    log.note(f"対策ツール: {l['id']} {st}状態に該当の行が無いため、この状態は使いません（選択できていない可能性）")
+                    del by_state[st]
             boss = tool2734.build_boss(l, id_names, by_state)
             if bad_all:
                 log.note(f"対策ツール: {l['id']} 名前を解決できないID {sorted(bad_all)[:8]}")

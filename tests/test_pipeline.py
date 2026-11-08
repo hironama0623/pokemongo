@@ -403,6 +403,11 @@ class Tool2734(unittest.TestCase):
         self.assertEqual(t.clean_name("メガヤミラミ（交換不可）"), "メガヤミラミ")
         self.assertEqual(t.clean_name("ザマゼンタ（たてのおう）"), "ザマゼンタ（たてのおう）")
 
+    def test_shadow_mega_is_mega(self):
+        from scripts import tool2734 as t
+        rows, _ = t.parse_rows(self.rows([dict(r=1, i=9718, sh='<div class="pgo_shadow"> </div>', s=1, f="a", c="b", t=236, n=7.6, d=31.8)]), {"9718": "メガレックウザ"})
+        self.assertEqual((rows[0]["name"], rows[0]["tag"]), ("シャドウメガレックウザ", "mega"))
+
     def test_unresolved_id_skipped(self):
         from scripts import tool2734 as t
         rows, bad = t.parse_rows(self.rows([dict(r=1, i=999, sh="", s=0, f="a", c="b", t=1, n=1, d=5)]), self.NAMES)

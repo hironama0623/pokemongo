@@ -81,7 +81,7 @@ def parse_rows(html, id_names):
         dps = _num(tds[5])
         if dps is None:
             continue
-        rows.append({"id": pid, "name": name, "tag": "shadow" if shadow else ("mega" if re.match(r"^(スーパーメガ|メガ)", name) else "normal"),
+        rows.append({"id": pid, "name": name, "tag": "mega" if re.search(r"メガ", name) else ("shadow" if shadow else "normal"),   # シャドウメガはメガのグループ
                      "fast": moves[0] if moves else None, "charged": moves[1] if len(moves) > 1 else None,
                      "time": _num(tds[2]), "count": _num(tds[3]), "gauge": _num(tds[4]), "dps": dps})
     return rows, bad
@@ -92,7 +92,7 @@ def combine(rows_by_state, limit=60):
     seen, out = set(), []
     for st in ("normal", "shadow", "mega"):
         for r in rows_by_state.get(st) or []:
-            k = (r["name"], r["tag"] == "shadow")   # 注記違いの別IDは名前で1つにまとめる（最初=上位のものを残す）
+            k = r["name"]   # 注記違いの別IDは名前で1つにまとめる（シャドウは名前に付く。最初=上位のものを残す）
             if k in seen:
                 continue
             seen.add(k)
