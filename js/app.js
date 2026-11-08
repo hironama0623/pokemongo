@@ -409,7 +409,7 @@
   function renderRaidRanking() {
     const list = document.getElementById("raidRankingList");
     const title = document.getElementById("raidRankingTitle");
-    const tg = document.getElementById("raidRankToggles"); if (tg) tg.classList.add("hidden");   // 通常/シャドウ/メガをグループで並べるので、切替ボタンは使わない
+    const tg = document.getElementById("raidRankToggles"); if (tg) tg.classList.remove("hidden");
     list.innerHTML = "";
     const b = RAID_DATA[activeRaidKey];
     if (!b) return;
@@ -420,30 +420,29 @@
       return;
     }
     const anyNum = all.some(c => c.dps != null || c.tdo != null);
-    title.textContent = anyNum ? "🏅 対策ポケモン DPS(TDO)" : "🏅 対策ポケモン (サイトの順位を統合)";
-    const groups = [
-      { tag: "normal", label: "通常", n: 8, head: "bg-sky-700", ring: "border-sky-200" },
-      { tag: "shadow", label: "シャドウ", n: 4, head: "bg-purple-700", ring: "border-purple-200" },
-      { tag: "mega", label: "メガ", n: 4, head: "bg-rose-700", ring: "border-rose-200" },
-    ];
+    title.textContent = (anyNum ? "🏅 対策ポケモン DPS順" : "🏅 対策ポケモン (サイトの順位を統合)") + "（通常" + (filterShadow ? "＋シャドウ" : "") + (filterMega ? "＋メガ" : "") + "）";
+    // 通常をベースに、「シャドウ含」「メガ含」を押すと、そのポケモンも同じランキングに入って並び直す（DPS順）
     const val = (c, k) => (c[k] == null ? -1 : c[k]);
-    groups.forEach(g => {
-      let items = all.filter(c => (c.tag || "normal") === g.tag);
-      if (!items.length) return;
-      items = items.slice().sort((x, y) => (anyNum ? (val(y, "dps") - val(x, "dps") || val(y, "tdo") - val(x, "tdo")) : 0) || (x.ord || 0) - (y.ord || 0)).slice(0, g.n);
+    const has = t => all.some(c => (c.tag || "normal") === t);
+    const sortBox = document.getElementById("btnSortDps"); if (sortBox && sortBox.parentElement) sortBox.parentElement.classList.toggle("hidden", !all.some(c => c.tdo != null));   // TDOを載せたデータが無いときは順の切替を出さない
+    [["btnToggleShadow", "shadow"], ["btnToggleMega", "mega"]].forEach(([id, t]) => { const bt = document.getElementById(id); if (bt) { bt.classList.toggle("hidden", !has(t)); } });
+    const useTdo = raidSortMode === "tdo" && all.some(c => c.tdo != null);
+    let items = all.filter(c => { const t = c.tag || "normal"; return t === "normal" || (t === "shadow" && filterShadow) || (t === "mega" && filterMega); });
+    items = items.slice().sort((x, y) => (anyNum ? (useTdo ? val(y, "tdo") - val(x, "tdo") || val(y, "dps") - val(x, "dps") : val(y, "dps") - val(x, "dps") || val(y, "tdo") - val(x, "tdo")) : 0) || (x.ord || 0) - (y.ord || 0)).slice(0, 12);
+    const TAGBADGE = { shadow: '<span class="text-[9px] leading-none px-1 py-0.5 rounded bg-purple-100 text-purple-800 border border-purple-300 font-bold">シャドウ</span>', mega: '<span class="text-[9px] leading-none px-1 py-0.5 rounded bg-rose-100 text-rose-800 border border-rose-300 font-bold">メガ</span>' };
+    {
       const wrap = document.createElement("div");
       wrap.className = "mb-3";
-      wrap.innerHTML = `<div class="${g.head} text-white text-xs font-black px-2 py-1 rounded-t-lg">${g.label}</div>
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 border ${g.ring} border-t-0 rounded-b-lg p-2 bg-slate-50">${items.map((c, i) => `
+      wrap.innerHTML = `<div class="grid grid-cols-2 sm:grid-cols-4 gap-2 border border-slate-200 rounded-lg p-2 bg-slate-50">${items.map((c, i) => `
           <div class="bg-white border border-slate-200 rounded-lg p-2 flex flex-col items-center text-center relative">
             <span class="absolute top-1 left-1 text-[10px] font-black bg-slate-800 text-white w-5 h-5 rounded flex items-center justify-center">${i + 1}</span>
             <img src="${getPokeImg(c.dex, c.name)}" class="w-14 h-14 object-contain">
-            <div class="text-xs font-extrabold text-slate-900 leading-tight">${esc(c.name)}</div>${c.siteBadge || ""}
-            ${c.dps != null || c.tdo != null ? `<div class="text-[13px] font-black text-rose-700 mt-1">${c.dps != null ? c.dps : "-"}<span class="text-[11px] text-slate-500 font-bold">(${c.tdo != null ? c.tdo : "-"})</span></div>` : ""}
+            <div class="text-xs font-extrabold text-slate-900 leading-tight">${esc(c.name)}</div>${TAGBADGE[c.tag] || ""}${c.siteBadge || ""}
+            ${c.dps != null || c.tdo != null ? `<div class="text-[13px] font-black text-rose-700 mt-1">${c.dps != null ? c.dps : "-"}${c.tdo != null ? `<span class="text-[11px] text-slate-500 font-bold">(${c.tdo})</span>` : ""}</div>` : ""}
             <div class="text-[10px] text-slate-700 leading-snug mt-0.5">${esc(c.fast || "")}${c.fast && c.charge ? "<br>" : ""}${esc(c.charge || "")}</div>
           </div>`).join("")}</div>`;
       list.appendChild(wrap);
-    });
+    }
     const n = document.createElement("div");
     n.className = "text-[10px] text-slate-400";
     n.textContent = anyNum ? "DPS(TDO)は、数値を載せているサイトの値をそのまま表示しています。" : "数値は取得できていないため、サイトの順位を統合して表示しています。";

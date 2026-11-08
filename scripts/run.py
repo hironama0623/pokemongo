@@ -176,6 +176,13 @@ def _tool_counters(now, log, state, counters, names, unresolved, getter, states_
             if time.monotonic() - t0 > config.TOOL_BUDGET_SEC:
                 break
             res, e2 = states_getter(l["url"])
+            miss = [st for st in ("normal", "shadow", "mega") if not (res.get(st) and res.get(f"_sel_{st}"))]
+            if miss and not e2:   # 状態の選択に失敗したものは、その状態だけ1回やり直す（ブラウザ起動直後は反応が遅いことがある）
+                res2, _e3 = states_getter(l["url"], tuple(miss))
+                for k, v in res2.items():
+                    if not k.startswith("_") or k.startswith("_sel_") or k.startswith("_btn_"):
+                        if k in miss or k.endswith(tuple(miss)):
+                            res[k] = v
             by_state, bad_all = {}, set()
             btn = {k: v for k, v in res.items() if k.startswith("_btn_")}
             if btn and l is todo[0]:   # 1ボスぶんだけ、状態ボタンの見た目をログに残す（選択状態の判別用）
