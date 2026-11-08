@@ -563,6 +563,91 @@
       ]
     },
     {
+      "id": "news-440e08ecd2",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア2026：仙台・東北：レイドが判明・追加（4件）",
+      "details": "レイド：ディアルガ、パルキア、ジュラルドン、キョダイマックスジュラルドン",
+      "targetId": "ev-auto-wild-area-2026-sendai",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26352",
+          "fetched_at": "2026-11-08T10:18:32.993142+09:00",
+          "article_updated": "2026-11-08T10:23:38+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-4c6d6bca97",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "schedule_changed",
+      "title": "【日程変更】ポケモンGOの2026年11月のスケジュール",
+      "details": "日程が更新されています：2026-11-01〜2026-11-30 → 2026-11-09〜2026-11-15",
+      "targetId": "ev-auto-2026-nov-schedule",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10819/",
+          "fetched_at": "2026-11-08T10:18:32.993142+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-648d2f11c6",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "event_update",
+      "title": "【情報追加】ポケモンGOの2026年11月のスケジュール：レイドが判明・追加（1件）",
+      "details": "レイド：シャドウ ランドロス (けしんフォルム)",
+      "targetId": "ev-auto-2026-nov-schedule",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10748/",
+          "fetched_at": "2026-11-08T10:18:32.993142+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-8bc548ea4a",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドエリア仙台Wayfarerタイムチャレンジ：フィールドリサーチが判明・追加（6件）",
+      "details": "フィールドリサーチ：レベル35に到達する→ダダリン、違うポケストップ・ジム36個を回す→経験値、ポケストップを編集する→ほしのすな、ポケストップを申請する→ほしのすな、15km探索する→ポケモンと遭遇、トレーナー1人とフレンドになる→ヌイコグマ",
+      "targetId": "ev-auto-wayfarer-sendai-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/587136",
+          "fetched_at": "2026-11-08T10:18:32.993142+09:00",
+          "article_updated": "2026-11-08T08:25:25+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-521ee0c414",
+      "date": "2026-11-08",
+      "date_label": "11/8",
+      "kind": "event_update",
+      "title": "【情報追加】光の祭典(インド)：タイムチャレンジが判明・追加（4件）",
+      "details": "タイムチャレンジ：インド現地で無料の分岐型タイムチャレンジ→ステッカー(サリー姿のピカチュウ)、インド現地で無料の分岐型タイムチャレンジ→ステッカー(クルタ姿のピカチュウ)、インド現地で無料の分岐型タイムチャレンジ→ピカチュウ(フェスティバルオブライト2025)(クルタ衣装)(SP背景)、インド現地で無料の分岐型タイムチャレンジ→ピカチュウ(フェスティバルオブライト2024)(サリー衣装)(SP背景)",
+      "targetId": "ev-auto-festival-of-lights-india-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/578749",
+          "fetched_at": "2026-11-08T10:18:32.993142+09:00",
+          "article_updated": "2026-11-08T03:39:05+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-27e2e8643b",
       "date": "2026-11-07",
       "date_label": "11/7",

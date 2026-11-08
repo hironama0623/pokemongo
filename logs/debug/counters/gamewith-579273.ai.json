@@ -11,100 +11,100 @@
      "name": "ザマゼンタ(王)",
      "rank": 1,
      "role": "tank",
-     "tag": "dmax",
+     "tag": "normal",
      "fast": "メタルクロー",
      "charged": null,
      "dps": null,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "ドリュウズ",
      "rank": 2,
      "role": "attacker",
-     "tag": "dmax",
+     "tag": "normal",
      "fast": "マッドショット",
      "charged": null,
      "dps": null,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "キョダイカイリキー",
      "rank": 3,
      "role": "attacker",
-     "tag": "dmax",
+     "tag": "normal",
      "fast": "からてチョップ",
      "charged": null,
      "dps": null,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "ウーラオス(悪)",
      "rank": 4,
      "role": "attacker",
-     "tag": "dmax",
+     "tag": "normal",
      "fast": "カウンター",
      "charged": null,
      "dps": null,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "ウーラオス(水)",
      "rank": 5,
      "role": "attacker",
-     "tag": "dmax",
+     "tag": "normal",
      "fast": "カウンター",
      "charged": null,
      "dps": null,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "ドサイドン",
      "rank": 6,
      "role": "attacker",
-     "tag": "dmax",
+     "tag": "normal",
      "fast": "どろかけ",
      "charged": null,
      "dps": null,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "ハピナス",
      "rank": 7,
      "role": "tank",
-     "tag": "dmax",
+     "tag": "normal",
      "fast": "はたく",
      "charged": null,
      "dps": null,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "ザシアン(王)",
      "rank": 8,
      "role": "attacker",
-     "tag": "dmax",
+     "tag": "normal",
      "fast": "メタルクロー",
      "charged": null,
      "dps": null,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "レジスチル",
      "rank": 9,
-     "role": "attacker",
-     "tag": "dmax",
+     "role": "tank",
+     "tag": "normal",
      "fast": "ロックオン",
      "charged": null,
      "dps": null,
      "tdo": null,
-     "note": ""
+     "note": null
     }
    ]
   }
