@@ -1,11 +1,11 @@
 {
- "run_at": "2026-11-08T21:17:42.029801+09:00",
+ "run_at": "2026-11-08T22:02:56.043881+09:00",
  "run_status": "partial",
  "summary": {
   "fetched_ok": 125,
   "fetch_failed": 0,
-  "analyzed": 43,
-  "skipped": 75,
+  "analyzed": 42,
+  "skipped": 76,
   "failed": 1
  },
  "notes": [
@@ -14,16 +14,14 @@
   "official: 候補30件のうち上限20件のみ取得（超過分は古い順）",
   "対策ツール: 日程ページのリンク 22 件 / ポケモン名の対応表 1773 件（取得元: 9DB対策記事(描画後)）",
   "対策ツール: ボタンの状態 normal: 0:toggle | 1:toggle | 2:toggle wiki_selected // shadow: 0:toggle wiki_selected | 1:toggle | 2:toggle // mega: 0:toggle | 1:toggle wiki_selected | 2:toggle | 選択に使えた方法 normal=click shadow=click mega=click",
-  "対策ツール: ギラティナ(アナザー)（★5）49件 normal行=49/0/1 shadow行=18/32/0 mega行=17/0/33 → 保存=22/13/14（通常/シャドウ/メガ）",
-  "対策ツール: シャドウトルネロス(けしん)（★5）34件 normal行=39/0/0 shadow行=16/16/0 mega行=12/0/25 → 保存=20/6/8（通常/シャドウ/メガ）",
-  "対策ツール: 9699 shadow状態に該当の行が無いため、この状態は使いません（選択できていない可能性）",
-  "対策ツール: メガヤミラミ（メガ）41件 normal行=50/0/0 mega行=17/0/33 → 保存=27/0/14（通常/シャドウ/メガ）",
-  "対策ツール: 7273 shadow状態に該当の行が無いため、この状態は使いません（選択できていない可能性）",
-  "対策ツール: デスカーン（★3）40件 normal行=50/0/0 mega行=9/0/41 → 保存=28/0/12（通常/シャドウ/メガ）",
-  "対策ツール: オーロット（★3）53件 normal行=50/0/0 shadow行=12/38/0 mega行=9/0/41 → 保存=23/17/13（通常/シャドウ/メガ）",
-  "対策ツール: ダダリン（★3）55件 normal行=50/0/0 shadow行=12/38/0 mega行=6/0/44 → 保存=25/16/14（通常/シャドウ/メガ）",
-  "対策ツール: 取得 6 件 / 失敗 0 件 / 未処理 16 件（次回以降に回します）",
-  "図鑑番号を解決できなかった名前: ['おこう', 'きんのズリのみ', 'ぎんのパイルのみ', 'げんきのかけら', 'ふしぎなアメ', 'ほしのかけら', 'ほしのすな', 'わざマシンスペシャル', 'キズぐすり', 'スーパーボール', 'ズリのみ', 'ダイキノコ', 'ハイパーボール', 'パイルのみ', 'プレミアムバトルパス', 'ポケモンと遭遇', 'ポフィン', 'マックス粒子', 'メガエナジー', 'モンスターボール', '経験値'] → data/pokemon.json に追記してください"
+  "対策ツール: シャドウイノムー（★3）47件 normal行=37/0/0 shadow行=12/30/0 mega行=6/3/30 → 保存=21/15/11（通常/シャドウ/メガ）",
+  "対策ツール: シャドウポッタイシ（★3）37件 normal行=46/0/0 shadow行=15/26/0 mega行=8/0/34 → 保存=20/9/8（通常/シャドウ/メガ）",
+  "対策ツール: シャドウニョロゾ（★3）34件 normal行=45/0/0 shadow行=20/25/0 mega行=11/0/36 → 保存=19/7/8（通常/シャドウ/メガ）",
+  "対策ツール: ヨマワル（★1）52件 normal行=50/0/0 shadow行=16/34/0 mega行=8/0/42 → 保存=28/12/12（通常/シャドウ/メガ）",
+  "対策ツール: プルリル(オス)（★1）51件 normal行=50/0/0 shadow行=17/33/0 mega行=10/0/40 → 保存=23/14/14（通常/シャドウ/メガ）",
+  "対策ツール: プルリル(メス)（★1）51件 normal行=50/0/0 shadow行=17/33/0 mega行=10/0/40 → 保存=23/14/14（通常/シャドウ/メガ）",
+  "対策ツール: 取得 6 件 / 失敗 0 件 / 未処理 10 件（次回以降に回します）",
+  "図鑑番号を解決できなかった名前: ['おこう', 'きんのズリのみ', 'ぎんのパイルのみ', 'げんきのかけら', 'すごいわざマシンスペシャル', 'ふしぎなアメ', 'ふしぎなアメXL', 'ほしのかけら', 'ほしのすな', 'わざマシンスペシャル', 'わざマシンノーマル', 'キズぐすり', 'スーパーボール', 'ズriのみ', 'ダイキノコ', 'ハイパーボール', 'パイルのみ', 'プレミアムバトルパス', 'ポケモンと遭遇', 'ポフィン', 'マックス粒子', 'メガエナジー', 'モンスターボール', '経験値'] → data/pokemon.json に追記してください"
  ],
  "entries": [
   {
@@ -34,7 +32,7 @@
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
-   "chars_fetched": 324728,
+   "chars_fetched": 324191,
    "chars_sent": 0,
    "action": null,
    "reason": "記事リンク 69 件",
@@ -52,10 +50,10 @@
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
-   "chars_fetched": 202704,
+   "chars_fetched": 201628,
    "chars_sent": 0,
    "action": null,
-   "reason": "記事リンク 38 件",
+   "reason": "記事リンク 37 件",
    "error": null,
    "preview": null,
    "model": null,
@@ -628,7 +626,7 @@
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
-   "chars_fetched": 1680916,
+   "chars_fetched": 1680918,
    "chars_sent": 0,
    "action": null,
    "reason": "記事リンク 1314 件",
@@ -654,7 +652,7 @@
    "preview": "### 【ポケモンGO】ワイルドエリア仙台Wayfarerタイムチャレンジの入手方法と報酬 - ポケモンGO最新情報 - 明日からワイルドウィーク！ - 開催中",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 5.5
+   "ai_seconds": 5.3
   },
   {
    "source": "gamewith",
@@ -672,7 +670,7 @@
    "preview": "### 【ポケモンGO】ゆふいんさんのGOバトルリーグレポート2026年11月第1週 - ポケモンGO最新情報 - 明日からワイルドウィーク！ - 開催中のイベ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 2,
-   "ai_seconds": 6.2
+   "ai_seconds": 6.5
   },
   {
    "source": "gamewith",
@@ -690,7 +688,7 @@
    "preview": "### 【ポケモンGO】ワイルドエリア仙台ワイルド＆はがねスピンの内容と報酬 - ポケモンGO最新情報 - 明日からワイルドウィーク！ - 開催中のイベント情報",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 2,
-   "ai_seconds": 5.9
+   "ai_seconds": 6.6
   },
   {
    "source": "gamewith",
@@ -708,7 +706,7 @@
    "preview": "### 【ポケモンGO】ワイルドエリア仙台ワイルド＆ドラゴンスピンの内容と報酬 - ポケモンGO最新情報 - 明日からワイルドウィーク！ - 開催中のイベント情",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 2,
-   "ai_seconds": 5.2
+   "ai_seconds": 2.4
   },
   {
    "source": "gamewith",
@@ -726,7 +724,7 @@
    "preview": "### 【ポケモンGO】GOワイルドエリア仙台・東北のコレクションチャレンジの内容と報酬 - ポケモンGO最新情報 - 明日からワイルドウィーク！ - 開催中の",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 5.6
+   "ai_seconds": 5.0
   },
   {
    "source": "gamewith",
@@ -744,7 +742,7 @@
    "preview": "### 【ポケモンGO】ワイルドエリア仙台・東北の謎のスペシャルリサーチ内容と報酬 - ポケモンGO最新情報 - 明日からワイルドウィーク！ - 開催中のイベン",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 6.5
+   "ai_seconds": 4.4
   },
   {
    "source": "gamewith",
@@ -762,7 +760,7 @@
    "preview": "### 【ポケモンGO】ワイルドエリア2026の無料タイムチャレンジの内容と報酬 - ポケモンGO最新情報 - 明日からワイルドウィーク！ - 開催中のイベント",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 6.6
+   "ai_seconds": 7.0
   },
   {
    "source": "gamewith",
@@ -775,12 +773,12 @@
    "chars_fetched": 7751,
    "chars_sent": 7914,
    "action": "analyzed",
-   "reason": "time_challenge+1; 対策: メガピクシー",
+   "reason": "新情報なし; 対策: メガピクシー",
    "error": null,
    "preview": "### 【ポケモンGO】ピクシーのスーパーメガレイドデイの開催期間とボーナス - ポケモンGO最新情報 - 明日からワイルドウィーク！ - 開催中のイベント情報",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 2,
-   "ai_seconds": 37.1
+   "ai_seconds": 5.9
   },
   {
    "source": "gamewith",
@@ -798,7 +796,7 @@
    "preview": "### 【ポケモンGO】GOパス黄昏時の願いのリワード内容と挑戦期間 - ポケモンGO最新情報 - 明日からワイルドウィーク！ - 開催中のイベント情報 - キ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 5.2
+   "ai_seconds": 5.4
   },
   {
    "source": "gamewith",
@@ -816,7 +814,7 @@
    "preview": "### 【ポケモンGO】黄昏時の願いイベントの開催期間とボーナス - ポケモンGO最新情報 - 明日からワイルドウィーク！ - 開催中のイベント情報 - キョダ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 2,
-   "ai_seconds": 6.9
+   "ai_seconds": 7.7
   },
   {
    "source": "gamewith",
@@ -834,7 +832,7 @@
    "preview": "### 【ポケモンGO】ゆふいんさんのGOバトルリーグレポート2026年10月第5週 - ポケモンGO最新情報 - 明日からワイルドウィーク！ - 開催中のイベ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 2,
-   "ai_seconds": 6.3
+   "ai_seconds": 6.1
   },
   {
    "source": "gamewith",
@@ -852,7 +850,7 @@
    "preview": "### 【ポケモンGO】GOパス大きな足跡のリワード内容と挑戦期間 - ポケモンGO最新情報 - 明日からワイルドウィーク！ - 開催中のイベント情報 - キョ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 5.7
+   "ai_seconds": 5.9
   },
   {
    "source": "gamewith",
@@ -870,7 +868,7 @@
    "preview": "### 【ポケモンGO】大きな足跡イベントの開催期間とボーナス - ポケモンGO最新情報 - 明日からワイルドウィーク！ - 開催中のイベント情報 - キョダイ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 2,
-   "ai_seconds": 5.6
+   "ai_seconds": 6.5
   },
   {
    "source": "gamewith",
@@ -888,7 +886,7 @@
    "preview": "### 【ポケモンGO】ポケモンナイトアウトTwitch配信タイムチャレンジの入手方法と報酬 - ポケモンGO最新情報 - 明日からワイルドウィーク！ - 開催",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 2,
-   "ai_seconds": 6.1
+   "ai_seconds": 6.0
   },
   {
    "source": "gamewith",
@@ -906,7 +904,7 @@
    "preview": "### 【ポケモンGO】キョダイマックスジュラルドンのおすすめ対策ポケモン - ポケモンGO最新情報 - 明日からワイルドウィーク！ - 開催中のイベント情報 ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 5.5
+   "ai_seconds": 4.7
   },
   {
    "source": "gamewith",
@@ -924,7 +922,7 @@
    "preview": "### 【ポケモンGO】死者の日イベント2026(メキシコ)の開催期間とボーナス - ポケモンGO最新情報 - 明日からワイルドウィーク！ - 開催中のイベント",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 6.6
+   "ai_seconds": 7.0
   },
   {
    "source": "gamewith",
@@ -960,7 +958,7 @@
    "preview": "### 【ポケモンGO】ゆふいんさんのGOバトルリーグレポート2026年10月第4週 - ポケモンGO最新情報 - 明日からワイルドウィーク！ - 開催中のイベ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 2,
-   "ai_seconds": 5.1
+   "ai_seconds": 5.2
   },
   {
    "source": "gamewith",
@@ -977,8 +975,8 @@
    "error": null,
    "preview": "### 【ポケモンGO】コマタナコミュニティデイの開催期間とボーナス - ポケモンGO最新情報 - 明日からワイルドウィーク！ - 開催中のイベント情報 - キ",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 3,
-   "ai_seconds": 111.5
+   "ai_calls": 2,
+   "ai_seconds": 6.8
   },
   {
    "source": "gamewith",
@@ -991,12 +989,12 @@
    "chars_fetched": 10370,
    "chars_sent": 10510,
    "action": "analyzed",
-   "reason": "schedule+1",
+   "reason": "新情報なし",
    "error": null,
    "preview": "### 【ポケモンGO】GOパス11月(2026年)のリワード内容と挑戦期間 - ポケモンGO最新情報 - 明日からワイルドウィーク！ - 開催中のイベント情報",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 6.0
+   "ai_seconds": 6.3
   },
   {
    "source": "gamewith",
@@ -1014,7 +1012,7 @@
    "preview": "### 【ポケモンGO】ポケモンナイトアウトの開催期間と内容 - ポケモンGO最新情報 - 明日からワイルドウィーク！ - 開催中のイベント情報 - キョダイカ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 2,
-   "ai_seconds": 6.7
+   "ai_seconds": 6.2
   },
   {
    "source": "gamewith",
@@ -1032,7 +1030,7 @@
    "preview": "### 【ポケモンGO】シャドウトルネロス(化身)レイド対策おすすめポケモン - ポケモンGO最新情報 - 明日からワイルドウィーク！ - 開催中のイベント情報",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 7.6
+   "ai_seconds": 7.5
   },
   {
    "source": "gamewith",
@@ -1040,17 +1038,17 @@
    "role": "article",
    "status": "ok",
    "http_status": 200,
-   "article_updated": "2026-11-07T09:49:10+09:00",
+   "article_updated": "2026-11-08T21:23:12+09:00",
    "date_kind": "modified",
    "chars_fetched": 9638,
    "chars_sent": 9772,
    "action": "analyzed",
-   "reason": "新情報なし",
+   "reason": "対象外の記事（イベント情報なし）",
    "error": null,
    "preview": "### 【ポケモンGO】2026年11月のイベントスケジュールまとめ - ポケモンGO最新情報 - 明日からワイルドウィーク！ - 開催中のイベント情報 - キ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 2,
-   "ai_seconds": 6.4
+   "ai_seconds": 5.5
   },
   {
    "source": "gamewith",
@@ -1068,7 +1066,7 @@
    "preview": "### 【ポケモンGO】LAIC2027配信ボーナスタイムチャレンジの入手方法と報酬 - ポケモンGO最新情報 - 明日からワイルドウィーク！ - 開催中のイベ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 2,
-   "ai_seconds": 5.7
+   "ai_seconds": 6.8
   },
   {
    "source": "gamewith",
@@ -1086,7 +1084,7 @@
    "preview": "### 【ポケモンGO】ゆふいんさんのGOバトルリーグレポート2026年10月第3週 - ポケモンGO最新情報 - 明日からワイルドウィーク！ - 開催中のイベ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 2,
-   "ai_seconds": 6.1
+   "ai_seconds": 6.5
   },
   {
    "source": "gamewith",
@@ -1104,7 +1102,7 @@
    "preview": "### 【ポケモンGO】ワイルドウィーク(2026年)の開催期間とボーナス - ポケモンGO最新情報 - 明日からワイルドウィーク！ - 開催中のイベント情報 ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 2,
-   "ai_seconds": 7.6
+   "ai_seconds": 6.1
   },
   {
    "source": "gamewith",
@@ -1121,8 +1119,8 @@
    "error": null,
    "preview": "### 【ポケモンGO】GOパスワイルドウィーク(2026年)のリワード内容と挑戦期間 - ポケモンGO最新情報 - 明日からワイルドウィーク！ - 開催中のイ",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 3,
-   "ai_seconds": 13.2
+   "ai_calls": 2,
+   "ai_seconds": 6.9
   },
   {
    "source": "gamewith",
@@ -1140,7 +1138,7 @@
    "preview": "### 【ポケモンGO】シャンデラのスーパーメガレイドデイの開催期間とボーナス - ポケモンGO最新情報 - 明日からワイルドウィーク！ - 開催中のイベント情",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 2,
-   "ai_seconds": 4.6
+   "ai_seconds": 4.8
   },
   {
    "source": "gamewith",
@@ -1157,8 +1155,8 @@
    "error": null,
    "preview": "### 【ポケモンGO】わくわくPokémon GO Lab.大調査の開催期間と内容 - ポケモンGO最新情報 - 明日からワイルドウィーク！ - 開催中のイベ",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 2,
-   "ai_seconds": 111.3
+   "ai_calls": 1,
+   "ai_seconds": 7.2
   },
   {
    "source": "gamewith",
@@ -1176,7 +1174,7 @@
    "preview": "### 【ポケモンGO】ハロウィン2026パート2の開催期間とボーナス - ポケモンGO最新情報 - 明日からワイルドウィーク！ - 開催中のイベント情報 - ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 2,
-   "ai_seconds": 1.8
+   "ai_seconds": 7.2
   },
   {
    "source": "gamewith",
@@ -1194,7 +1192,7 @@
    "preview": "### 【ポケモンGO】2026FCソウルイベント(韓国)の開催期間とボーナス - ポケモンGO最新情報 - 明日からワイルドウィーク！ - 開催中のイベント情",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 6.1
+   "ai_seconds": 5.9
   },
   {
    "source": "gamewith",
@@ -1230,7 +1228,7 @@
    "preview": "### 【ポケモンGO】GOパスハロウィン2026のリワード内容と挑戦期間 - ポケモンGO最新情報 - 明日からワイルドウィーク！ - 開催中のイベント情報 ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 7.0
+   "ai_seconds": 6.8
   },
   {
    "source": "gamewith",
@@ -1248,7 +1246,7 @@
    "preview": "### 【ポケモンGO】ハロウィン2026パート1の開催期間とボーナス - ポケモンGO最新情報 - 明日からワイルドウィーク！ - 開催中のイベント情報 - ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 2,
-   "ai_seconds": 7.4
+   "ai_seconds": 7.0
   },
   {
    "source": "gamewith",
@@ -1266,7 +1264,7 @@
    "preview": "### 【ポケモンGO】ダイマックスユクシー・エムリット・アグノムのマックスバトルデイの期間とボーナス - ポケモンGO最新情報 - 明日からワイルドウィーク！",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 2,
-   "ai_seconds": 6.8
+   "ai_seconds": 7.4
   },
   {
    "source": "gamewith",
@@ -1284,7 +1282,7 @@
    "preview": "### 【ポケモンGO】メテノシャワーの開催期間と内容 - ポケモンGO最新情報 - 明日からワイルドウィーク！ - 開催中のイベント情報 - キョダイカイリキ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 5.5
+   "ai_seconds": 5.3
   },
   {
    "source": "gamewith",
@@ -1302,7 +1300,7 @@
    "preview": "### 【ポケモンGO】ダイマックスディアルガ対策おすすめポケモン - ポケモンGO最新情報 - 明日からワイルドウィーク！ - 開催中のイベント情報 - キョ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 6.2
+   "ai_seconds": 6.5
   },
   {
    "source": "gamewith",
@@ -1319,8 +1317,8 @@
    "error": null,
    "preview": "### 【ポケモンGO】ダイマックスパルキア対策おすすめポケモン - ポケモンGO最新情報 - 明日からワイルドウィーク！ - 開催中のイベント情報 - キョダ",
    "model": "gemini-3.5-flash-lite",
-   "ai_calls": 2,
-   "ai_seconds": 22.9
+   "ai_calls": 1,
+   "ai_seconds": 6.9
   },
   {
    "source": "gamewith",
@@ -1356,7 +1354,7 @@
    "preview": "### 【ポケモンGO】光の祭典(インド)の開催期間とボーナス - ポケモンGO最新情報 - 明日からワイルドウィーク！ - 開催中のイベント情報 - キョダイ",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 7.5
+   "ai_seconds": 9.0
   },
   {
    "source": "9db",
@@ -1366,7 +1364,7 @@
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
-   "chars_fetched": 75707,
+   "chars_fetched": 75820,
    "chars_sent": 0,
    "action": null,
    "reason": "記事リンク 131 件",
@@ -1384,7 +1382,7 @@
    "http_status": 200,
    "article_updated": null,
    "date_kind": null,
-   "chars_fetched": 80129,
+   "chars_fetched": 80353,
    "chars_sent": 0,
    "action": null,
    "reason": "記事リンク 11 件",
@@ -1403,14 +1401,14 @@
    "article_updated": "2026-11-08T21:01:09+09:00",
    "date_kind": "modified",
    "chars_fetched": 4748,
-   "chars_sent": 4844,
-   "action": "analyzed",
-   "reason": "レイド日程 10 件",
+   "chars_sent": 0,
+   "action": "skipped_unchanged",
+   "reason": "本文ハッシュが前回と同じ",
    "error": null,
    "preview": "### レイドボスの開催日程（最新版） infographicモード 伝説：ギラティナ(アナザー) | ワイルドエリア2026：仙台・東北 | ワイルドウィーク",
-   "model": "gemini-3.6-flash",
-   "ai_calls": 1,
-   "ai_seconds": 23.1,
+   "model": null,
+   "ai_calls": null,
+   "ai_seconds": null,
    "names_resolved": 0
   },
   {
@@ -1459,15 +1457,15 @@
    "http_status": 200,
    "article_updated": "2026-11-07T19:07:20+09:00",
    "date_kind": "modified",
-   "chars_fetched": 1752,
-   "chars_sent": 1798,
+   "chars_fetched": 1761,
+   "chars_sent": 1807,
    "action": "analyzed",
    "reason": "新情報なし",
    "error": null,
    "preview": "キョダイマックスジュラルドンのマックスバトルが早朝から開始！ 2026年11月7日 19:07 9件 キョダイマックスジュラルドンが仙台にて出現中！ レイド自動",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 6.3,
+   "ai_seconds": 6.5,
    "names_resolved": 0
   },
   {
@@ -1628,7 +1626,7 @@
    "role": "article",
    "status": "ok",
    "http_status": 200,
-   "article_updated": "2026-11-08T20:36:46+09:00",
+   "article_updated": "2026-11-08T22:01:26+09:00",
    "date_kind": "modified",
    "chars_fetched": 1299,
    "chars_sent": 0,
@@ -1647,7 +1645,7 @@
    "role": "article",
    "status": "ok",
    "http_status": 200,
-   "article_updated": "2026-11-08T21:21:16+09:00",
+   "article_updated": "2026-11-08T21:46:30+09:00",
    "date_kind": "modified",
    "chars_fetched": 1724,
    "chars_sent": 0,
@@ -1801,15 +1799,15 @@
    "http_status": 200,
    "article_updated": "2026-11-08T18:10:12+09:00",
    "date_kind": "modified",
-   "chars_fetched": 8047,
-   "chars_sent": 8080,
+   "chars_fetched": 8044,
+   "chars_sent": 8077,
    "action": "analyzed",
-   "reason": "新情報なし",
+   "reason": "time_challenge+1",
    "error": null,
    "preview": "### ワイルドエリア2026：仙台・東北 開催日(日本時間) 2026/11/6(金)10:00 〜 11/8(日)18:00 開催場所 仙台市宮城野区 榴岡",
    "model": "gemini-3.5-flash-lite",
    "ai_calls": 1,
-   "ai_seconds": 15.7,
+   "ai_seconds": 10.5,
    "names_resolved": 241
   },
   {
@@ -1992,11 +1990,11 @@
    "chars_sent": 2603,
    "action": "analyze_failed",
    "reason": null,
-   "error": "gemini-3.8-flash: 1日の利用上限に到達 / gemini-3.6-flash: article: '' does not match '^20\\\\d\\\\d-\\\\d\\\\d-\\\\d\\\\d(T\\\\d\\\\d:\\\\d\\\\d)?$' (at event_info/end) / gemini-3.5-flash-lite: article: '' does not match '^20\\\\d\\\\d-\\\\d\\\\d-\\\\d\\\\d(T\\\\d\\\\d:\\\\d\\\\d)?$' (at event_info/end) / gemini-3.1-flash-lite: article: None is not of type 'string' (at event_info/end)",
+   "error": "gemini-3.8-flash: 1日の利用上限に到達 / gemini-3.6-flash: 1日の利用上限に到達 / gemini-3.5-flash-lite: article: '' does not match '^20\\\\d\\\\d-\\\\d\\\\d-\\\\d\\\\d(T\\\\d\\\\d:\\\\d\\\\d)?$' (at event_info/end) / gemini-3.1-flash-lite: article: None is not of type 'string' (at event_info/end)",
    "preview": "トレーナーの皆さん 仙台・東北とメキシコシティで開催される「Pokémon GO ワイルドエリア」を、皆さんと一緒に楽しめることが待ちきれません！どちらのリアル",
    "model": null,
    "ai_calls": 5,
-   "ai_seconds": 50.9
+   "ai_seconds": 123.0
   },
   {
    "source": "official",
