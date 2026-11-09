@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/11/09 18:55 JST",
+  "updated_at": "2026/11/09 23:13 JST",
   "latest_news": [
     {
       "id": "news-0eda0bac05",
@@ -192,6 +192,54 @@
       "title": "【情報追加】ワイルドウィーク2026：レイドが判明・追加（6件）",
       "details": "レイド：ダイマックス レジスチル、ダイマックス レジドラゴ、ダイマックス ラティアス、ダイマックス ラティオス、ダイマックス ワンリキー、ダイマックス ラルトス",
       "targetId": "ev-wildweek-2026"
+    },
+    {
+      "id": "news-25afb96838",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "title": "【日程変更】ワイルドウィーク2026",
+      "details": "日程が更新されています：2026-11-09〜2026-11-13 → 2026-11-09〜2026-11-15",
+      "targetId": "ev-wildweek-2026"
+    },
+    {
+      "id": "news-58f5250bac",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "title": "【情報追加】「大きな足跡」イベント：レイドが判明・追加（1件）",
+      "details": "レイド：ムゲンダイナ(ムゲンダイマックス)",
+      "targetId": "ev-big-footprints"
+    },
+    {
+      "id": "news-2baf684fae",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "title": "【情報追加】GOパス：ワイルドウィーク2026：野生が判明・追加（1件）",
+      "details": "野生：メリープ",
+      "targetId": "ev-auto-go-pass-wild-week-2026"
+    },
+    {
+      "id": "news-6f647a271f",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "title": "【情報追加】GOパス：ワイルドウィーク2026：レイドが判明・追加（5件）",
+      "details": "レイド：ダイマックスメルタン、ダイマックスワンリキー、ダイマックスラルトス、クリムガン、ミミズズ",
+      "targetId": "ev-auto-go-pass-wild-week-2026"
+    },
+    {
+      "id": "news-b6d7900ce9",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "title": "【情報追加】「大きな足跡」イベント：フィールドリサーチが判明・追加（2件）",
+      "details": "フィールドリサーチ：ムゲンダイナのアメを入手する→ムゲンダイナのアメ、ほしのすなを入手する→ほしのすな",
+      "targetId": "ev-big-footprints"
+    },
+    {
+      "id": "news-5fe725076e",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "title": "【情報追加】「黄昏時の願い」＆ スーパーメガレイドデイ：フィールドリサーチが判明・追加（5件）",
+      "details": "フィールドリサーチ：イベント限定のフィールドリサーチ→カジッチュ、イベント限定のフィールドリサーチ→オラチフ、イベント限定のフィールドリサーチ→ゲンガー(魔女帽子)、イベント限定のフィールドリサーチ→フワライド(ハロウィン)、イベント限定のフィールドリサーチ→アノクサ",
+      "targetId": "ev-tusk-wish-deoxys"
     },
     {
       "id": "news-393b1d0a2d",
@@ -3459,6 +3507,22 @@
     }
   ],
   "field_research_updates": {
+    "ev-big-footprints": [
+      {
+        "task": "ムゲンダイナのアメを入手する",
+        "rewardDex": 890,
+        "rewardName": "ムゲンダイナのアメ",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "ほしのすなを入手する",
+        "rewardDex": 25,
+        "rewardName": "ほしのすな",
+        "shiny": false,
+        "note": "出典: gamewith"
+      }
+    ],
     "ev-cd-pawniard": [
       {
         "task": "コマタナをつかまえる",
@@ -3968,6 +4032,41 @@
         "rewardDex": 605,
         "rewardName": "リグレー",
         "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "イベント限定のフィールドリサーチ",
+        "rewardDex": 840,
+        "rewardName": "カジッチュ",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "イベント限定のフィールドリサーチ",
+        "rewardDex": 942,
+        "rewardName": "オラチフ",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "イベント限定のフィールドリサーチ",
+        "rewardDex": 94,
+        "rewardName": "ゲンガー(魔女帽子)",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "イベント限定のフィールドリサーチ",
+        "rewardDex": 426,
+        "rewardName": "フワライド(ハロウィン)",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "イベント限定のフィールドリサーチ",
+        "rewardDex": 946,
+        "rewardName": "アノクサ",
+        "shiny": false,
         "note": "出典: gamewith"
       },
       {
@@ -6859,6 +6958,12 @@
         {
           "dex": 714,
           "name": "オンバット",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 179,
+          "name": "メリープ",
           "shiny": true,
           "note": ""
         }

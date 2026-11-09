@@ -38,6 +38,12 @@
           "url": "https://pokemongo-get.com/board/10821/",
           "fetched_at": "2026-11-09T12:48:54.681545+09:00",
           "article_updated": null
+        },
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10820/",
+          "fetched_at": "2026-11-09T23:13:28.553324+09:00",
+          "article_updated": null
         }
       ]
     },
@@ -412,6 +418,108 @@
           "url": "https://pokemongo-get.com/board/10826/",
           "fetched_at": "2026-11-09T18:55:05.708396+09:00",
           "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-25afb96838",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "kind": "schedule_changed",
+      "title": "【日程変更】ワイルドウィーク2026",
+      "details": "日程が更新されています：2026-11-09〜2026-11-13 → 2026-11-09〜2026-11-15",
+      "targetId": "ev-wildweek-2026",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10819/",
+          "fetched_at": "2026-11-09T23:13:28.553324+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-58f5250bac",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "kind": "event_update",
+      "title": "【情報追加】「大きな足跡」イベント：レイドが判明・追加（1件）",
+      "details": "レイド：ムゲンダイナ(ムゲンダイマックス)",
+      "targetId": "ev-big-footprints",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10782/",
+          "fetched_at": "2026-11-09T23:13:28.553324+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-2baf684fae",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "kind": "event_update",
+      "title": "【情報追加】GOパス：ワイルドウィーク2026：野生が判明・追加（1件）",
+      "details": "野生：メリープ",
+      "targetId": "ev-auto-go-pass-wild-week-2026",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10732/",
+          "fetched_at": "2026-11-09T23:13:28.553324+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-6f647a271f",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "kind": "event_update",
+      "title": "【情報追加】GOパス：ワイルドウィーク2026：レイドが判明・追加（5件）",
+      "details": "レイド：ダイマックスメルタン、ダイマックスワンリキー、ダイマックスラルトス、クリムガン、ミミズズ",
+      "targetId": "ev-auto-go-pass-wild-week-2026",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10732/",
+          "fetched_at": "2026-11-09T23:13:28.553324+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-b6d7900ce9",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "kind": "event_update",
+      "title": "【情報追加】「大きな足跡」イベント：フィールドリサーチが判明・追加（2件）",
+      "details": "フィールドリサーチ：ムゲンダイナのアメを入手する→ムゲンダイナのアメ、ほしのすなを入手する→ほしのすな",
+      "targetId": "ev-big-footprints",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/585781",
+          "fetched_at": "2026-11-09T23:13:28.553324+09:00",
+          "article_updated": "2026-11-09T14:15:23+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-5fe725076e",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "kind": "event_update",
+      "title": "【情報追加】「黄昏時の願い」＆ スーパーメガレイドデイ：フィールドリサーチが判明・追加（5件）",
+      "details": "フィールドリサーチ：イベント限定のフィールドリサーチ→カジッチュ、イベント限定のフィールドリサーチ→オラチフ、イベント限定のフィールドリサーチ→ゲンガー(魔女帽子)、イベント限定のフィールドリサーチ→フワライド(ハロウィン)、イベント限定のフィールドリサーチ→アノクサ",
+      "targetId": "ev-tusk-wish-deoxys",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/586413",
+          "fetched_at": "2026-11-09T23:13:28.553324+09:00",
+          "article_updated": "2026-11-05T13:34:20+09:00"
         }
       ]
     },
@@ -3512,6 +3620,12 @@
           "site": "gamewith",
           "url": "https://pokemongo.gamewith.jp/article/show/578629",
           "fetched_at": "2026-11-09T07:29:59.194201+09:00",
+          "article_updated": "2026-11-08T23:06:16+09:00"
+        },
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/578629",
+          "fetched_at": "2026-11-09T23:13:28.553324+09:00",
           "article_updated": "2026-11-08T23:06:16+09:00"
         }
       ]
