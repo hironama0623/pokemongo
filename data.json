@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/11/09 12:48 JST",
+  "updated_at": "2026/11/09 18:55 JST",
   "latest_news": [
     {
       "id": "news-0eda0bac05",
@@ -168,6 +168,30 @@
       "title": "【情報追加】ポケモンナイトアウト：タイムチャレンジが判明・追加（1件）",
       "details": "タイムチャレンジ：TwitchDrops（公式ポケモンTwitchチャンネルまたは指定配信者の配信を30分以上試聴）→ポケモンナイトアウト野球ジャージ",
       "targetId": "ev-auto-pokemon-night-out"
+    },
+    {
+      "id": "news-7db799ac64",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "title": "【新イベント】Pokémon GO Web Store ブラックフライデー",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-webstore-black-friday-2026"
+    },
+    {
+      "id": "news-cdf0e7540c",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "title": "【情報追加】Pokémon GO Web Store ブラックフライデー：サプライズボックスが判明・追加（5件）",
+      "details": "サプライズボックス：スーパーふかそうち×40個、ふかそうち×40個、プレミアムバトルパス×5枚、リモートレイドパス×3枚、マックス粒子パック×1個",
+      "targetId": "ev-auto-webstore-black-friday-2026"
+    },
+    {
+      "id": "news-800972aff9",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "title": "【情報追加】ワイルドウィーク2026：レイドが判明・追加（6件）",
+      "details": "レイド：ダイマックス レジスチル、ダイマックス レジドラゴ、ダイマックス ラティアス、ダイマックス ラティオス、ダイマックス ワンリキー、ダイマックス ラルトス",
+      "targetId": "ev-wildweek-2026"
     },
     {
       "id": "news-393b1d0a2d",
@@ -5545,7 +5569,7 @@
         {
           "dex": 999,
           "name": "コレクレー",
-          "shiny": false,
+          "shiny": true,
           "note": "サプライズボックス"
         }
       ]
@@ -9606,6 +9630,28 @@
         "プレミアムバトルパス",
         "ポケモン捕獲時すな3倍(ランク10ボーナス)"
       ],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-webstore-black-friday-2026",
+      "month": 11,
+      "title": "Pokémon GO Web Store ブラックフライデー",
+      "barClass": "bar-collab",
+      "category": "collab",
+      "startDay": 9,
+      "endDay": 30,
+      "hasPaid": false,
+      "dateText": "2026/11/9(月)10:00～2026/11/30(月)13:00",
+      "summary": "Pokémon GO Web Storeにてブラックフライデーキャンペーンが開催。ボーナスポケコインが2倍になるチャンスや「冬のスペシャルボックス」が登場し、リワードポイントも2倍獲得できます。",
+      "freeFeatures": [
+        "2,800円以上のポケコインボックス購入時にボーナスポケコインが2倍（各割引ボックス購入1人1回まで）",
+        "「冬のスペシャルボックス」の販売（2026/11/9 10時〜2026/11/28 13時まで、6,095ポケコイン、購入1人3回まで）",
+        "Pokémon GO Web Storeでのお買い物で獲得できるリワードポイントが2倍"
+      ],
+      "paidFeatures": [],
       "wilds": [],
       "raids": [],
       "fieldResearches": [],

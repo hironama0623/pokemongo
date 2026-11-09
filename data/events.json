@@ -1585,7 +1585,7 @@
         {
           "site": "pokemapi",
           "url": "https://pokemongo-get.com/board/10821/",
-          "fetched_at": "2026-11-08T17:39:24.212162+09:00",
+          "fetched_at": "2026-11-09T18:55:05.708396+09:00",
           "article_updated": null
         },
         {
@@ -1614,6 +1614,12 @@
           "url": "https://9db.jp/pokemongo/data/26708",
           "fetched_at": "2026-11-08T18:39:38.422641+09:00",
           "article_updated": "2026-11-08T16:50:13+09:00"
+        },
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10829/",
+          "fetched_at": "2026-11-09T18:55:05.708396+09:00",
+          "article_updated": null
         }
       ]
     },
@@ -1689,6 +1695,31 @@
           "url": "https://pokemongo.gamewith.jp/article/show/586416",
           "fetched_at": "2026-11-09T12:48:54.681545+09:00",
           "article_updated": "2026-11-04T13:42:23+09:00"
+        }
+      ]
+    },
+    "ev-auto-webstore-black-friday-2026": {
+      "id": "ev-auto-webstore-black-friday-2026",
+      "title": "Pokémon GO Web Store ブラックフライデー",
+      "category": "collab",
+      "start": "2026-11-09T10:00",
+      "end": "2026-11-30T13:00",
+      "dateText": "2026/11/9(月)10:00～2026/11/30(月)13:00",
+      "summary": "Pokémon GO Web Storeにてブラックフライデーキャンペーンが開催。ボーナスポケコインが2倍になるチャンスや「冬のスペシャルボックス」が登場し、リワードポイントも2倍獲得できます。",
+      "hasPaid": false,
+      "freeFeatures": [
+        "2,800円以上のポケコインボックス購入時にボーナスポケコインが2倍（各割引ボックス購入1人1回まで）",
+        "「冬のスペシャルボックス」の販売（2026/11/9 10時〜2026/11/28 13時まで、6,095ポケコイン、購入1人3回まで）",
+        "Pokémon GO Web Storeでのお買い物で獲得できるリワードポイントが2倍"
+      ],
+      "paidFeatures": [],
+      "created_at": "2026-11-09T18:55:05.708396+09:00",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10828/",
+          "fetched_at": "2026-11-09T18:55:05.708396+09:00",
+          "article_updated": null
         }
       ]
     }

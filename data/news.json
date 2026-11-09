@@ -365,6 +365,57 @@
       ]
     },
     {
+      "id": "news-7db799ac64",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "kind": "new_event",
+      "title": "【新イベント】Pokémon GO Web Store ブラックフライデー",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-webstore-black-friday-2026",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10828/",
+          "fetched_at": "2026-11-09T18:55:05.708396+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-cdf0e7540c",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "kind": "event_update",
+      "title": "【情報追加】Pokémon GO Web Store ブラックフライデー：サプライズボックスが判明・追加（5件）",
+      "details": "サプライズボックス：スーパーふかそうち×40個、ふかそうち×40個、プレミアムバトルパス×5枚、リモートレイドパス×3枚、マックス粒子パック×1個",
+      "targetId": "ev-auto-webstore-black-friday-2026",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10828/",
+          "fetched_at": "2026-11-09T18:55:05.708396+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-800972aff9",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドウィーク2026：レイドが判明・追加（6件）",
+      "details": "レイド：ダイマックス レジスチル、ダイマックス レジドラゴ、ダイマックス ラティアス、ダイマックス ラティオス、ダイマックス ワンリキー、ダイマックス ラルトス",
+      "targetId": "ev-wildweek-2026",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10826/",
+          "fetched_at": "2026-11-09T18:55:05.708396+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
       "id": "news-393b1d0a2d",
       "date": "2026-11-08",
       "date_label": "11/8",
@@ -1245,6 +1296,12 @@
           "url": "https://9db.jp/pokemongo/data/26708",
           "fetched_at": "2026-11-08T18:39:38.422641+09:00",
           "article_updated": "2026-11-08T16:50:13+09:00"
+        },
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10829/",
+          "fetched_at": "2026-11-09T18:55:05.708396+09:00",
+          "article_updated": null
         }
       ]
     },
