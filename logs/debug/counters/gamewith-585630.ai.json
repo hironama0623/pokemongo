@@ -19,7 +19,7 @@
      "charged": "ばくれつパンチ",
      "dps": null,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "ドリュウズ",
@@ -30,7 +30,7 @@
      "charged": "ねっさのだいち",
      "dps": null,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "ウーラオス(水)",
@@ -41,7 +41,7 @@
      "charged": "ばくれつパンチ",
      "dps": null,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "ウーラオス(悪)",
@@ -52,7 +52,7 @@
      "charged": "ばくれつパンチ",
      "dps": null,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "ドサイドン",
@@ -63,62 +63,62 @@
      "charged": "じしん",
      "dps": null,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "ザマゼンタ(王)",
-     "rank": 1,
+     "rank": 6,
      "role": "tank",
      "tag": "normal",
      "fast": "メタルクロー",
      "charged": "インファイト",
      "dps": null,
      "tdo": null,
-     "note": ""
+     "note": "対策タンクの中でトップの耐久力"
     },
     {
      "name": "レジスチル",
-     "rank": 2,
+     "rank": 7,
      "role": "tank",
      "tag": "normal",
      "fast": "メタルクロー",
      "charged": "きあいだま",
      "dps": null,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "ハピナス",
-     "rank": 3,
+     "rank": 8,
      "role": "tank",
      "tag": "normal",
      "fast": "はたく",
      "charged": "マジカルシャイン",
      "dps": null,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "メタグロス",
-     "rank": 4,
+     "rank": 9,
      "role": "tank",
      "tag": "normal",
      "fast": "シャドークロー",
      "charged": "じしん",
      "dps": null,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "アーマーガア",
-     "rank": 5,
+     "rank": 10,
      "role": "tank",
      "tag": "normal",
      "fast": "すなかけ",
      "charged": "しっぺがえし",
      "dps": null,
      "tdo": null,
-     "note": ""
+     "note": null
     }
    ]
   }

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/11/09 07:29 JST",
+  "updated_at": "2026/11/09 12:48 JST",
   "latest_news": [
     {
       "id": "news-0eda0bac05",
@@ -72,6 +72,102 @@
       "title": "【情報追加】スーパーメガレイドデイ：メガシャンデラ：フィールドリサーチが判明・追加（5件）",
       "details": "フィールドリサーチ：ポケモンを1匹捕まえる→バンギラス、ポケモンを15回強化する→メガエナジー、こうかばつぐんのスペシャルアタックを3回使ってバトルする→ほしのすな、レイドバトルで1回勝つ→わざマシンスペシャル、ゴーストタイプかほのおタイプのボスポケモンに勝つ→ヨーギラス",
       "targetId": "ev-auto-super-mega-raid-day-chandelure"
+    },
+    {
+      "id": "news-063423e2ca",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "title": "【情報追加】GOパス：ワイルドウィーク2026：レイドが判明・追加（3件）",
+      "details": "レイド：ザシアン(れきせんのゆうしゃ)、クリムガン、ミミズズ",
+      "targetId": "ev-auto-go-pass-wild-week-2026"
+    },
+    {
+      "id": "news-869a315e50",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "title": "【日程変更】ワイルドウィーク(2026年)",
+      "details": "日程が更新されています：2026-11-09〜2026-11-13 → 2026-11-09〜2026-11-15",
+      "targetId": "ev-auto-wild-week-2026"
+    },
+    {
+      "id": "news-3e7eb67d0f",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "title": "【新イベント】「ハロウィン2026」終了に伴うレイドボス変更（星1のみ変更）",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-halloween-2026-raid-update-1106"
+    },
+    {
+      "id": "news-108bce5dec",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "title": "【情報追加】「ハロウィン2026」終了に伴うレイドボス変更（星1のみ変更）：レイドが判明・追加（9件）",
+      "details": "レイド：ギラティナ(アナザー)、メガヤミラミ、デスカーン、オーロット、ダダリン、ヨマワル ほか3件",
+      "targetId": "ev-auto-halloween-2026-raid-update-1106"
+    },
+    {
+      "id": "news-a4cc29706c",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "title": "【情報追加】ワイルドウィーク(2026年)：野生が判明・追加（9件）",
+      "details": "野生：ニャース(ガラル)、ココドラ、タッツー、ミニリュウ、タツベイ、クズモー ほか3件",
+      "targetId": "ev-auto-wild-week-2026"
+    },
+    {
+      "id": "news-6f8b88958f",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "title": "【情報追加】ワイルドウィーク2026：フィールドリサーチが判明・追加（5件）",
+      "details": "フィールドリサーチ：ポケモンを10匹捕まえる→ココドラ・コイル・クズモー、はがねタイプのポケモンを5回強化する→コイル・ニャース(ガラル)、ドラゴンタイプのポケモンを5回強化する→ミニリュウ・タッツー・クズモー、マックスバトルで勝つ→タツベイ、レイドバトルで1回勝つ→ミニリュウ・ストライク",
+      "targetId": "ev-wildweek-2026"
+    },
+    {
+      "id": "news-63a8e0dd5e",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "title": "【情報追加】ワイルドウィーク2026：野生が判明・追加（1件）",
+      "details": "野生：ガラルニャース",
+      "targetId": "ev-wildweek-2026"
+    },
+    {
+      "id": "news-20c550563e",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "title": "【新イベント】ゆふいんさんのGOバトルリーグレポート2026年11月第1週",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-yufuin-gbl-report-2026-11-w1"
+    },
+    {
+      "id": "news-0cd338ad48",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "title": "【新イベント】GOパス黄昏時の願い",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-go-pass-twilight-wishes"
+    },
+    {
+      "id": "news-f9496a9bcb",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "title": "【情報追加】ハロウィン2026 パート1：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：全クリア報酬→ピカチュウ(ハットとケープ)",
+      "targetId": "ev-halloween-p1"
+    },
+    {
+      "id": "news-9517fa4a87",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "title": "【情報追加】イオンハロウィンイベント：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：タイムチャレンジパート1（受取期間：2026年10月19日〜10月25日）→ピカチュウ(魔女帽子)、タイムチャレンジパート2（受取期間：2026年10月26日〜11月1日）→ピカチュウ(魔女帽子)",
+      "targetId": "ev-auto-aeon-halloween-2026"
+    },
+    {
+      "id": "news-5fd8add71d",
+      "date": "2026-11-09",
+      "date_label": "11/9",
+      "title": "【情報追加】ポケモンナイトアウト：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：TwitchDrops（公式ポケモンTwitchチャンネルまたは指定配信者の配信を30分以上試聴）→ポケモンナイトアウト野球ジャージ",
+      "targetId": "ev-auto-pokemon-night-out"
     },
     {
       "id": "news-393b1d0a2d",
@@ -3439,6 +3535,85 @@
         "note": "出典: gamewith"
       }
     ],
+    "ev-wildweek-2026": [
+      {
+        "task": "ポケモンを10匹捕まえる",
+        "rewardDex": 304,
+        "rewardName": "ココドラ（560）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを10匹捕まえる",
+        "rewardDex": 81,
+        "rewardName": "コイル（583）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ポケモンを10匹捕まえる",
+        "rewardDex": 690,
+        "rewardName": "クズモー（455）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "はがねタイプのポケモンを5回強化する",
+        "rewardDex": 81,
+        "rewardName": "コイル（583）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "はがねタイプのポケモンを5回強化する",
+        "rewardDex": 52,
+        "rewardName": "ニャース(ガラル)（443）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ドラゴンタイプのポケモンを5回強化する",
+        "rewardDex": 147,
+        "rewardName": "ミニリュウ（430）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ドラゴンタイプのポケモンを5回強化する",
+        "rewardDex": 116,
+        "rewardName": "タッツー（452）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ドラゴンタイプのポケモンを5回強化する",
+        "rewardDex": 690,
+        "rewardName": "クズモー（455）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "マックスバトルで勝つ",
+        "rewardDex": 371,
+        "rewardName": "タツベイ（495）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "レイドバトルで1回勝つ",
+        "rewardDex": 147,
+        "rewardName": "ミニリュウ（430）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "レイドバトルで1回勝つ",
+        "rewardDex": 123,
+        "rewardName": "ストライク（1160）",
+        "shiny": false,
+        "note": "出典: 9db"
+      }
+    ],
     "ev-halloween-p2": [
       {
         "task": "ゴーストタイプのポケモンを13匹捕まえる",
@@ -5348,6 +5523,12 @@
           "name": "ミミズズ",
           "shiny": true,
           "note": ""
+        },
+        {
+          "dex": 52,
+          "name": "ガラルニャース",
+          "shiny": true,
+          "note": "ガラル"
         },
         {
           "dex": 999,
@@ -7308,6 +7489,60 @@
         {
           "dex": 777,
           "name": "トゲデマル",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 52,
+          "name": "ニャース(ガラル)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 304,
+          "name": "ココドラ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 116,
+          "name": "タッツー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 147,
+          "name": "ミニリュウ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 371,
+          "name": "タツベイ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 690,
+          "name": "クズモー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 303,
+          "name": "クチート",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 123,
+          "name": "ストライク",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 179,
+          "name": "メリープ",
           "shiny": true,
           "note": ""
         }
@@ -9305,6 +9540,72 @@
       "summary": "ザマゼンタ(たてのおう)が出現するレイドアワーが開催。",
       "freeFeatures": [],
       "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-halloween-2026-raid-update-1106",
+      "month": 11,
+      "title": "「ハロウィン2026」終了に伴うレイドボス変更（星1のみ変更）",
+      "barClass": "bar-raid",
+      "category": "raid",
+      "startDay": 6,
+      "endDay": 8,
+      "hasPaid": false,
+      "dateText": "現地時間 2026/11/6(金)6時～2026/11/8(日)21時30分頃まで",
+      "summary": "「ハロウィン2026」終了に伴うレイドボス変更（星1のみ変更）",
+      "freeFeatures": [],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-yufuin-gbl-report-2026-11-w1",
+      "month": 11,
+      "title": "ゆふいんさんのGOバトルリーグレポート2026年11月第1週",
+      "barClass": "bar-main",
+      "category": "main",
+      "startDay": 1,
+      "endDay": 7,
+      "hasPaid": false,
+      "dateText": "2026年11月第1週",
+      "summary": "ポケモンGOのプレイヤーゆふいんさんによる、GOバトルリーグの2026年11月1週の環境考察。",
+      "freeFeatures": [],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-go-pass-twilight-wishes",
+      "month": 11,
+      "title": "GOパス黄昏時の願い",
+      "barClass": "bar-collab",
+      "category": "collab",
+      "startDay": 24,
+      "endDay": 30,
+      "hasPaid": true,
+      "dateText": "2026年11月24日(火)10:00~11月30日(月)20:00",
+      "summary": "GOポイントを集めてランクを上げ、報酬を受け取る期間限定機能。デラックス版も販売される。",
+      "freeFeatures": [
+        "ポケモンと遭遇",
+        "ほしのかけら",
+        "ふしぎなアメ",
+        "メガエナジー(スピアー/ヘルガー/ヤミラミ/ライボルト)",
+        "ポケモン捕獲時すな2倍(ランク10ボーナス)"
+      ],
+      "paidFeatures": [
+        "着せ替えアイテム",
+        "追加ボーナス",
+        "トレーナーポーズ",
+        "プレミアムバトルパス",
+        "ポケモン捕獲時すな3倍(ランク10ボーナス)"
+      ],
       "wilds": [],
       "raids": [],
       "fieldResearches": [],

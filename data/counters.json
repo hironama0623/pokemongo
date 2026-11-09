@@ -291,7 +291,7 @@
         "gamewith": {
           "url": "https://pokemongo.gamewith.jp/article/show/582648",
           "article_updated": "2026-11-02T13:29:08+09:00",
-          "fetched_at": "2026-11-09T07:29:59.194201+09:00",
+          "fetched_at": "2026-11-09T12:48:54.681545+09:00",
           "counters": [
             {
               "name": "ネクロズマ(暁)",
@@ -350,7 +350,7 @@
               "charged": "ハイドロカノン",
               "dps": 23.73,
               "tdo": null,
-              "note": "",
+              "note": "レガシー技のため現在覚えることができません。",
               "dex": 818
             }
           ]
@@ -555,7 +555,7 @@
           ]
         }
       },
-      "updated_at": "2026-11-09T07:29:59.194201+09:00"
+      "updated_at": "2026-11-09T12:48:54.681545+09:00"
     },
     "raid:パルキア": {
       "name": "パルキア",
@@ -704,13 +704,13 @@
         "gamewith": {
           "url": "https://pokemongo.gamewith.jp/article/show/579398",
           "article_updated": "2026-10-25T17:52:14+09:00",
-          "fetched_at": "2026-11-09T07:29:59.194201+09:00",
+          "fetched_at": "2026-11-09T12:48:54.681545+09:00",
           "counters": [
             {
               "name": "ハピナス",
               "rank": 1,
               "role": "tank",
-              "tag": "normal",
+              "tag": "dmax",
               "fast": "はたく",
               "charged": "はかいこうせん",
               "dps": null,
@@ -733,7 +733,7 @@
           ]
         }
       },
-      "updated_at": "2026-11-09T07:29:59.194201+09:00"
+      "updated_at": "2026-11-09T12:48:54.681545+09:00"
     },
     "dmax:gエースバーン": {
       "name": "キョダイマックスエースバーン",
@@ -3378,7 +3378,7 @@
         "gamewith": {
           "url": "https://pokemongo.gamewith.jp/article/show/585630",
           "article_updated": "2026-11-08T00:41:25+09:00",
-          "fetched_at": "2026-11-09T07:29:59.194201+09:00",
+          "fetched_at": "2026-11-09T12:48:54.681545+09:00",
           "counters": [
             {
               "name": "キョダイカイリキー",
@@ -3389,7 +3389,7 @@
               "charged": "ばくれつパンチ",
               "dps": null,
               "tdo": null,
-              "note": "",
+              "note": null,
               "dex": 68
             },
             {
@@ -3401,7 +3401,7 @@
               "charged": "ねっさのだいち",
               "dps": null,
               "tdo": null,
-              "note": "",
+              "note": null,
               "dex": 530
             },
             {
@@ -3413,7 +3413,7 @@
               "charged": "ばくれつパンチ",
               "dps": null,
               "tdo": null,
-              "note": "",
+              "note": null,
               "dex": 892
             },
             {
@@ -3425,7 +3425,7 @@
               "charged": "ばくれつパンチ",
               "dps": null,
               "tdo": null,
-              "note": "",
+              "note": null,
               "dex": 892
             },
             {
@@ -3437,73 +3437,73 @@
               "charged": "じしん",
               "dps": null,
               "tdo": null,
-              "note": "",
+              "note": null,
               "dex": 464
             },
             {
               "name": "ザマゼンタ(王)",
-              "rank": 1,
+              "rank": 6,
               "role": "tank",
               "tag": "normal",
               "fast": "メタルクロー",
               "charged": "インファイト",
               "dps": null,
               "tdo": null,
-              "note": "",
+              "note": "対策タンクの中でトップの耐久力",
               "dex": 889
             },
             {
               "name": "レジスチル",
-              "rank": 2,
+              "rank": 7,
               "role": "tank",
               "tag": "normal",
               "fast": "メタルクロー",
               "charged": "きあいだま",
               "dps": null,
               "tdo": null,
-              "note": "",
+              "note": null,
               "dex": 379
             },
             {
               "name": "ハピナス",
-              "rank": 3,
+              "rank": 8,
               "role": "tank",
               "tag": "normal",
               "fast": "はたく",
               "charged": "マジカルシャイン",
               "dps": null,
               "tdo": null,
-              "note": "",
+              "note": null,
               "dex": 242
             },
             {
               "name": "メタグロス",
-              "rank": 4,
+              "rank": 9,
               "role": "tank",
               "tag": "normal",
               "fast": "シャドークロー",
               "charged": "じしん",
               "dps": null,
               "tdo": null,
-              "note": "",
+              "note": null,
               "dex": 376
             },
             {
               "name": "アーマーガア",
-              "rank": 5,
+              "rank": 10,
               "role": "tank",
               "tag": "normal",
               "fast": "すなかけ",
               "charged": "しっぺがえし",
               "dps": null,
               "tdo": null,
-              "note": "",
+              "note": null,
               "dex": 823
             }
           ]
         }
       },
-      "updated_at": "2026-11-09T07:29:59.194201+09:00"
+      "updated_at": "2026-11-09T12:48:54.681545+09:00"
     },
     "dmax:ディアルガ": {
       "name": "ダイマックスディアルガ",
@@ -3583,14 +3583,14 @@
         },
         "gamewith": {
           "url": "https://pokemongo.gamewith.jp/article/show/579273",
-          "article_updated": "2026-11-08T07:58:12+09:00",
-          "fetched_at": "2026-11-09T07:29:59.194201+09:00",
+          "article_updated": "2026-11-09T11:00:29+09:00",
+          "fetched_at": "2026-11-09T12:48:54.681545+09:00",
           "counters": [
             {
               "name": "ザマゼンタ(王)",
               "rank": 1,
               "role": "tank",
-              "tag": "dmax",
+              "tag": "normal",
               "fast": "メタルクロー",
               "charged": null,
               "dps": null,
@@ -3602,7 +3602,7 @@
               "name": "ドリュウズ",
               "rank": 2,
               "role": "attacker",
-              "tag": "dmax",
+              "tag": "normal",
               "fast": "マッドショット",
               "charged": null,
               "dps": null,
@@ -3626,7 +3626,7 @@
               "name": "ウーラオス(悪)",
               "rank": 4,
               "role": "attacker",
-              "tag": "dmax",
+              "tag": "normal",
               "fast": "カウンター",
               "charged": null,
               "dps": null,
@@ -3638,7 +3638,7 @@
               "name": "ウーラオス(水)",
               "rank": 5,
               "role": "attacker",
-              "tag": "dmax",
+              "tag": "normal",
               "fast": "カウンター",
               "charged": null,
               "dps": null,
@@ -3650,7 +3650,7 @@
               "name": "ドサイドン",
               "rank": 6,
               "role": "attacker",
-              "tag": "dmax",
+              "tag": "normal",
               "fast": "どろかけ",
               "charged": null,
               "dps": null,
@@ -3662,7 +3662,7 @@
               "name": "ハピナス",
               "rank": 7,
               "role": "tank",
-              "tag": "dmax",
+              "tag": "normal",
               "fast": "はたく",
               "charged": null,
               "dps": null,
@@ -3674,7 +3674,7 @@
               "name": "ザシアン(王)",
               "rank": 8,
               "role": "attacker",
-              "tag": "dmax",
+              "tag": "normal",
               "fast": "メタルクロー",
               "charged": null,
               "dps": null,
@@ -3686,7 +3686,7 @@
               "name": "レジスチル",
               "rank": 9,
               "role": "attacker",
-              "tag": "dmax",
+              "tag": "normal",
               "fast": "ロックオン",
               "charged": null,
               "dps": null,
@@ -3697,7 +3697,7 @@
           ]
         }
       },
-      "updated_at": "2026-11-09T07:29:59.194201+09:00"
+      "updated_at": "2026-11-09T12:48:54.681545+09:00"
     },
     "dmax:パルキア": {
       "name": "ダイマックスパルキア",
@@ -3710,14 +3710,14 @@
       "by_site": {
         "gamewith": {
           "url": "https://pokemongo.gamewith.jp/article/show/579272",
-          "article_updated": "2026-11-08T11:31:10+09:00",
-          "fetched_at": "2026-11-09T07:29:59.194201+09:00",
+          "article_updated": "2026-11-09T11:01:08+09:00",
+          "fetched_at": "2026-11-09T12:48:54.681545+09:00",
           "counters": [
             {
               "name": "ハピナス",
               "rank": 1,
               "role": "tank",
-              "tag": "dmax",
+              "tag": "normal",
               "fast": "はたく",
               "charged": null,
               "dps": null,
@@ -3729,7 +3729,7 @@
               "name": "ムゲンダイナ",
               "rank": 3,
               "role": "attacker",
-              "tag": "dmax",
+              "tag": "normal",
               "fast": "ドラゴンテール",
               "charged": null,
               "dps": null,
@@ -3741,7 +3741,7 @@
               "name": "ラティオス",
               "rank": 2,
               "role": "attacker",
-              "tag": "dmax",
+              "tag": "normal",
               "fast": "りゅうのいぶき",
               "charged": null,
               "dps": null,
@@ -3753,7 +3753,7 @@
               "name": "サザンドラ",
               "rank": 3,
               "role": "attacker",
-              "tag": "dmax",
+              "tag": "normal",
               "fast": "りゅうのいぶき",
               "charged": null,
               "dps": null,
@@ -3765,7 +3765,7 @@
               "name": "ジュラルドン",
               "rank": 4,
               "role": "attacker",
-              "tag": "dmax",
+              "tag": "normal",
               "fast": "ドラゴンテール",
               "charged": null,
               "dps": null,
@@ -3777,7 +3777,7 @@
               "name": "サーナイト",
               "rank": 5,
               "role": "attacker",
-              "tag": "dmax",
+              "tag": "normal",
               "fast": "あまえる",
               "charged": null,
               "dps": null,
@@ -3789,7 +3789,7 @@
               "name": "ハピナス",
               "rank": 6,
               "role": "attacker",
-              "tag": "dmax",
+              "tag": "normal",
               "fast": "はたく",
               "charged": null,
               "dps": null,
@@ -3801,7 +3801,7 @@
               "name": "スイクン",
               "rank": 7,
               "role": "attacker",
-              "tag": "dmax",
+              "tag": "normal",
               "fast": "みずでっぽう",
               "charged": null,
               "dps": null,
@@ -3813,7 +3813,7 @@
               "name": "ルギア",
               "rank": 8,
               "role": "attacker",
-              "tag": "dmax",
+              "tag": "normal",
               "fast": "じんつうりき",
               "charged": null,
               "dps": null,
@@ -3825,7 +3825,7 @@
               "name": "ミロカロス",
               "rank": 9,
               "role": "attacker",
-              "tag": "dmax",
+              "tag": "normal",
               "fast": "たきのぼり",
               "charged": null,
               "dps": null,
@@ -3837,7 +3837,7 @@
               "name": "ラティアス",
               "rank": 10,
               "role": "attacker",
-              "tag": "dmax",
+              "tag": "normal",
               "fast": "りゅうのいぶき",
               "charged": null,
               "dps": null,
@@ -3848,7 +3848,7 @@
           ]
         }
       },
-      "updated_at": "2026-11-09T07:29:59.194201+09:00"
+      "updated_at": "2026-11-09T12:48:54.681545+09:00"
     },
     "raid:メガピクシー": {
       "name": "メガピクシー",
@@ -4061,7 +4061,7 @@
         "gamewith": {
           "url": "https://pokemongo.gamewith.jp/article/show/586872",
           "article_updated": "2026-11-07T13:11:13+09:00",
-          "fetched_at": "2026-11-09T07:29:59.194201+09:00",
+          "fetched_at": "2026-11-09T12:48:54.681545+09:00",
           "counters": [
             {
               "name": "ザシアン(王)",
@@ -4072,7 +4072,7 @@
               "charged": "きょじゅうざん",
               "dps": 43.17,
               "tdo": null,
-              "note": "",
+              "note": null,
               "dex": 888
             },
             {
@@ -4081,10 +4081,10 @@
               "role": "attacker",
               "tag": "normal",
               "fast": "メタルクロー",
-              "charged": "きょじゅうざん",
+              "charged": "きょじゅうだん",
               "dps": 40.36,
               "tdo": null,
-              "note": "",
+              "note": null,
               "dex": 889
             },
             {
@@ -4096,7 +4096,7 @@
               "charged": "メテオドライブ",
               "dps": 41.88,
               "tdo": null,
-              "note": "",
+              "note": null,
               "dex": 800
             },
             {
@@ -4108,7 +4108,7 @@
               "charged": "コールドフレア",
               "dps": 30.91,
               "tdo": null,
-              "note": "",
+              "note": null,
               "dex": 646
             },
             {
@@ -4120,13 +4120,13 @@
               "charged": "サンダープリズン",
               "dps": 22.44,
               "tdo": null,
-              "note": "",
+              "note": "レガシー技のため現在覚えることができません。",
               "dex": 894
             }
           ]
         }
       },
-      "updated_at": "2026-11-09T07:29:59.194201+09:00"
+      "updated_at": "2026-11-09T12:48:54.681545+09:00"
     },
     "raid:ザシアン(けんのおう)": {
       "name": "ザシアン(けんのおう)",
@@ -11947,7 +11947,7 @@
         "gamewith": {
           "url": "https://pokemongo.gamewith.jp/article/show/583310",
           "article_updated": "2026-11-04T11:01:19+09:00",
-          "fetched_at": "2026-11-09T07:29:59.194201+09:00",
+          "fetched_at": "2026-11-09T12:48:54.681545+09:00",
           "counters": [
             {
               "name": "キュレム(W)",
@@ -11958,116 +11958,8 @@
               "charged": "コールドフレア",
               "dps": 38.48,
               "tdo": null,
-              "note": "",
+              "note": null,
               "dex": 646
-            },
-            {
-              "name": "キュレム(B)",
-              "rank": 2,
-              "role": "attacker",
-              "tag": "normal",
-              "fast": "ドラゴンテール",
-              "charged": "フリーズボルト",
-              "dps": 37.97,
-              "tdo": null,
-              "note": "",
-              "dex": 646
-            },
-            {
-              "name": "レジエレキ",
-              "rank": 3,
-              "role": "attacker",
-              "tag": "normal",
-              "fast": "ロックオン",
-              "charged": "サンダープリズン",
-              "dps": 27.66,
-              "tdo": null,
-              "note": "",
-              "dex": 894
-            },
-            {
-              "name": "ゼラオラ",
-              "rank": 4,
-              "role": "attacker",
-              "tag": "normal",
-              "fast": "スパーク",
-              "charged": "プラズマフィスト",
-              "dps": 37.99,
-              "tdo": null,
-              "note": "",
-              "dex": 807
-            },
-            {
-              "name": "ボルトロス(霊獣)",
-              "rank": 5,
-              "role": "attacker",
-              "tag": "normal",
-              "fast": "ボルトチェンジ",
-              "charged": "かみなりあらし",
-              "dps": 38.55,
-              "tdo": null,
-              "note": "",
-              "dex": 642
-            },
-            {
-              "name": "デンジュモク",
-              "rank": 6,
-              "role": "attacker",
-              "tag": "normal",
-              "fast": "スパーク",
-              "charged": "ほうでん",
-              "dps": 36.51,
-              "tdo": null,
-              "note": "",
-              "dex": 796
-            },
-            {
-              "name": "ゼクロム",
-              "rank": 7,
-              "role": "attacker",
-              "tag": "normal",
-              "fast": "チャージビーム",
-              "charged": "クロスサンダー",
-              "dps": 35.56,
-              "tdo": null,
-              "note": "",
-              "dex": 644
-            },
-            {
-              "name": "ザマゼンタ(王)",
-              "rank": 8,
-              "role": "attacker",
-              "tag": "normal",
-              "fast": "こおりのキバ",
-              "charged": "きょじゅうだん",
-              "dps": 29.41,
-              "tdo": null,
-              "note": "",
-              "dex": 889
-            },
-            {
-              "name": "ラムパルド",
-              "rank": 9,
-              "role": "attacker",
-              "tag": "normal",
-              "fast": "うちおとす",
-              "charged": "いわなだれ",
-              "dps": 31.66,
-              "tdo": null,
-              "note": "",
-              "dex": 409
-            },
-            {
-              "name": "キラフロル",
-              "rank": 10,
-              "role": "attacker",
-              "tag": "normal",
-              "fast": "うちおとす",
-              "charged": "メテオビーム",
-              "dps": 30.97,
-              "tdo": null,
-              "note": "",
-              "dex": 970
             },
             {
               "name": "シャドウゼクロム",
@@ -12078,8 +11970,32 @@
               "charged": "クロスサンダー",
               "dps": 42.49,
               "tdo": null,
-              "note": "",
+              "note": null,
               "dex": 644
+            },
+            {
+              "name": "キュレム(B)",
+              "rank": 3,
+              "role": "attacker",
+              "tag": "normal",
+              "fast": "ドラゴンテール",
+              "charged": "フリーズボルト",
+              "dps": 37.97,
+              "tdo": null,
+              "note": null,
+              "dex": 646
+            },
+            {
+              "name": "レジエレキ",
+              "rank": 4,
+              "role": "attacker",
+              "tag": "normal",
+              "fast": "ロックオン",
+              "charged": "サンダープリズン",
+              "dps": 27.66,
+              "tdo": null,
+              "note": null,
+              "dex": 894
             },
             {
               "name": "シャドウライコウ",
@@ -12090,8 +12006,20 @@
               "charged": "ワイルドボルト",
               "dps": 35.9,
               "tdo": null,
-              "note": "",
+              "note": null,
               "dex": 243
+            },
+            {
+              "name": "ゼラオラ",
+              "rank": 6,
+              "role": "attacker",
+              "tag": "normal",
+              "fast": "スパーク",
+              "charged": "プラズマフィスト",
+              "dps": 37.99,
+              "tdo": null,
+              "note": null,
+              "dex": 807
             },
             {
               "name": "シャドウラムパルド",
@@ -12102,7 +12030,7 @@
               "charged": "いわなだれ",
               "dps": 37.83,
               "tdo": null,
-              "note": "",
+              "note": null,
               "dex": 409
             },
             {
@@ -12114,8 +12042,20 @@
               "charged": "がんせきほう",
               "dps": 33.95,
               "tdo": null,
-              "note": "",
+              "note": null,
               "dex": 464
+            },
+            {
+              "name": "ボルトロス(霊獣)",
+              "rank": 9,
+              "role": "attacker",
+              "tag": "normal",
+              "fast": "ボルトチェンジ",
+              "charged": "かみなりあらし",
+              "dps": 38.55,
+              "tdo": null,
+              "note": null,
+              "dex": 642
             },
             {
               "name": "シャドウジバコイル",
@@ -12126,13 +12066,13 @@
               "charged": "ワイルドボルト",
               "dps": 33.86,
               "tdo": null,
-              "note": "",
+              "note": null,
               "dex": 462
             }
           ]
         }
       },
-      "updated_at": "2026-11-09T07:29:59.194201+09:00"
+      "updated_at": "2026-11-09T12:48:54.681545+09:00"
     },
     "raid:シャドウマクノシタ": {
       "name": "シャドウマクノシタ",
@@ -15628,6 +15568,144 @@
         }
       },
       "updated_at": "2026-11-09T07:29:59.194201+09:00"
+    },
+    "dmax:レジドラゴ": {
+      "name": "ダイマックスレジドラゴ",
+      "kind": "dmax",
+      "tier": "★5",
+      "types": [
+        "ドラゴン"
+      ],
+      "by_site": {
+        "gamewith": {
+          "url": "https://pokemongo.gamewith.jp/article/show/586158",
+          "article_updated": "2026-11-09T00:39:37+09:00",
+          "fetched_at": "2026-11-09T12:48:54.681545+09:00",
+          "counters": [
+            {
+              "name": "ムゲンダイナ",
+              "rank": 1,
+              "role": "attacker",
+              "tag": "dmax",
+              "fast": "ドラゴンテール",
+              "charged": "ダイマックスほう",
+              "dps": null,
+              "tdo": null,
+              "note": "",
+              "dex": 890
+            },
+            {
+              "name": "ラティオス",
+              "rank": 2,
+              "role": "attacker",
+              "tag": "dmax",
+              "fast": "りゅうのいぶき",
+              "charged": "ドラゴンクロー",
+              "dps": null,
+              "tdo": null,
+              "note": "",
+              "dex": 381
+            },
+            {
+              "name": "サザンドラ",
+              "rank": 3,
+              "role": "attacker",
+              "tag": "dmax",
+              "fast": "りゅうのいぶき",
+              "charged": "りゅうのはどう",
+              "dps": null,
+              "tdo": null,
+              "note": "",
+              "dex": 635
+            },
+            {
+              "name": "マニューラ",
+              "rank": 4,
+              "role": "attacker",
+              "tag": "dmax",
+              "fast": "こおりのつぶて",
+              "charged": "ゆきなだれ",
+              "dps": null,
+              "tdo": null,
+              "note": "",
+              "dex": 461
+            },
+            {
+              "name": "ジュラルドン",
+              "rank": 5,
+              "role": "attacker",
+              "tag": "dmax",
+              "fast": "ドラゴンテール",
+              "charged": "ドラゴンクロー",
+              "dps": null,
+              "tdo": null,
+              "note": "",
+              "dex": 884
+            },
+            {
+              "name": "ザシアン(王)",
+              "rank": 1,
+              "role": "tank",
+              "tag": "dmax",
+              "fast": "メタルクロー",
+              "charged": "じゃれつく",
+              "dps": null,
+              "tdo": null,
+              "note": "",
+              "dex": 888
+            },
+            {
+              "name": "ザマゼンタ(王)",
+              "rank": 2,
+              "role": "tank",
+              "tag": "dmax",
+              "fast": "メタルクロー",
+              "charged": "きょじゅうだん",
+              "dps": null,
+              "tdo": null,
+              "note": "",
+              "dex": 889
+            },
+            {
+              "name": "レジスチル",
+              "rank": 3,
+              "role": "tank",
+              "tag": "dmax",
+              "fast": "メタルクロー",
+              "charged": "ラスターカノン",
+              "dps": null,
+              "tdo": null,
+              "note": "",
+              "dex": 379
+            },
+            {
+              "name": "ハピナス",
+              "rank": 4,
+              "role": "tank",
+              "tag": "dmax",
+              "fast": "はたく",
+              "charged": "マジカルシャイン",
+              "dps": null,
+              "tdo": null,
+              "note": "",
+              "dex": 242
+            },
+            {
+              "name": "メタグロス",
+              "rank": 5,
+              "role": "tank",
+              "tag": "dmax",
+              "fast": "れんぞくぎり",
+              "charged": "コメットパンチ",
+              "dps": null,
+              "tdo": null,
+              "note": "",
+              "dex": 376
+            }
+          ]
+        }
+      },
+      "updated_at": "2026-11-09T12:48:54.681545+09:00"
     }
   }
 }
