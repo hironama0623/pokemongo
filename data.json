@@ -1,6 +1,78 @@
 {
-  "updated_at": "2026/11/09 23:13 JST",
+  "updated_at": "2026/11/10 07:39 JST",
   "latest_news": [
+    {
+      "id": "news-22af6b7cc1",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "title": "【新イベント】次のシーズンで開催される「コミュニティ・デイ」の日程をお知らせします！",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-save-the-date-s25"
+    },
+    {
+      "id": "news-e1012373a9",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "title": "【日程変更】次のシーズンで開催される「コミュニティ・デイ」の日程をお知らせします！",
+      "details": "日程が更新されています：2026-12-05〜2027-02-13 → 2026-12-05〜2027-02-28",
+      "targetId": "ev-auto-save-the-date-s25"
+    },
+    {
+      "id": "news-c2dac6b4c1",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "title": "【情報追加】ワイルドウィーク2026：フィールドリサーチが判明・追加（4件）",
+      "details": "フィールドリサーチ：ダイマックスラルトスを捕まえる→ラルトス(DMAX)、ダイマックスワンリキーを捕まえる→ワンリキー(DMAX)、はがねタイプのポケモンを5回強化する→トゲデマル、はがねタイプのポケモンを5回強化する→ココドラ",
+      "targetId": "ev-wildweek-2026"
+    },
+    {
+      "id": "news-f60d8f39ae",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "title": "【情報追加】「ピクシー」の「スーパーメガレイド・デイ」：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：タイムチャレンジタスク→メタグロス・プレミアムバトルパス",
+      "targetId": "ev-auto-clefable-super-mega-raid-day-2026"
+    },
+    {
+      "id": "news-a4eda058a5",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "title": "【情報追加】ハロウィン2026 パート2：フィールドリサーチが判明・追加（1件）",
+      "details": "フィールドリサーチ：リワードを受け取る→ふしぎなアメ・ヤバチャ(リボン)",
+      "targetId": "ev-halloween-p2"
+    },
+    {
+      "id": "news-84dfc1298a",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "title": "【新イベント】【イギリス・ロンドン限定】Pokémon Night Out",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-pokemon-night-out-london-2026"
+    },
+    {
+      "id": "news-f1200b64d4",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "title": "【情報追加】【イギリス・ロンドン限定】Pokémon Night Out：野生が判明・追加（15件）",
+      "details": "野生：ゴース、ビリリダマ、ガラガラ(アローラ)、ホーホー、ヤミカラス、デルビル ほか9件",
+      "targetId": "ev-auto-pokemon-night-out-london-2026"
+    },
+    {
+      "id": "news-c933a92514",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "title": "【情報追加】【イギリス・ロンドン限定】Pokémon Night Out：レイドが判明・追加（2件）",
+      "details": "レイド：ピカチュウ、ゲンガー",
+      "targetId": "ev-auto-pokemon-night-out-london-2026"
+    },
+    {
+      "id": "news-5d95b388b2",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "title": "【情報追加】LAIC2027配信ボーナスタイムチャレンジ：フィールドリサーチが判明・追加（1件）",
+      "details": "フィールドリサーチ：Twitchのライブ配信30分以上視聴→ダイケンキ(ハイドロカノン)・ミジュマル",
+      "targetId": "ev-auto-laic2027-twitch-drops"
+    },
     {
       "id": "news-0eda0bac05",
       "date": "2026-11-09",
@@ -3660,6 +3732,20 @@
         "note": "出典: 9db"
       },
       {
+        "task": "はがねタイプのポケモンを5回強化する",
+        "rewardDex": 777,
+        "rewardName": "トゲデマル（926）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "はがねタイプのポケモンを5回強化する",
+        "rewardDex": 304,
+        "rewardName": "ココドラ（560）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
         "task": "ドラゴンタイプのポケモンを5回強化する",
         "rewardDex": 147,
         "rewardName": "ミニリュウ（430）",
@@ -3698,6 +3784,20 @@
         "task": "レイドバトルで1回勝つ",
         "rewardDex": 123,
         "rewardName": "ストライク（1160）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ダイマックスラルトスを捕まえる",
+        "rewardDex": 280,
+        "rewardName": "ラルトス(DMAX)",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ダイマックスワンリキーを捕まえる",
+        "rewardDex": 66,
+        "rewardName": "ワンリキー(DMAX)",
         "shiny": false,
         "note": "出典: 9db"
       }
@@ -3765,6 +3865,20 @@
         "rewardName": "ボチ（435）",
         "shiny": true,
         "note": "出典: 9db"
+      },
+      {
+        "task": "リワードを受け取る",
+        "rewardDex": 25,
+        "rewardName": "ふしぎなアメ",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "リワードを受け取る",
+        "rewardDex": 854,
+        "rewardName": "ヤバチャ(リボン)",
+        "shiny": true,
+        "note": "出典: gamewith"
       }
     ],
     "ev-tusk-wish-deoxys": [
@@ -4823,6 +4937,22 @@
         "task": "ゴーストタイプかほのおタイプのボスポケモンに勝つ",
         "rewardDex": 246,
         "rewardName": "ヨーギラス",
+        "shiny": false,
+        "note": "出典: gamewith"
+      }
+    ],
+    "ev-auto-laic2027-twitch-drops": [
+      {
+        "task": "Twitchのライブ配信30分以上視聴",
+        "rewardDex": 503,
+        "rewardName": "ダイケンキ(ハイドロカノン)",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "Twitchのライブ配信30分以上視聴",
+        "rewardDex": 501,
+        "rewardName": "ミジュマル",
         "shiny": false,
         "note": "出典: gamewith"
       }
@@ -8536,6 +8666,102 @@
       ]
     },
     {
+      "id": "ev-auto-pokemon-night-out-london-2026",
+      "title": "ev-auto-pokemon-night-out-london-2026",
+      "wilds": [
+        {
+          "dex": 92,
+          "name": "ゴース",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 100,
+          "name": "ビリリダマ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 105,
+          "name": "ガラガラ(アローラ)",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 163,
+          "name": "ホーホー",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 198,
+          "name": "ヤミカラス",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 228,
+          "name": "デルビル",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 309,
+          "name": "ラクライ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 318,
+          "name": "キバニア",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 403,
+          "name": "コリンク",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 570,
+          "name": "ゾロア",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 595,
+          "name": "バチュル",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 656,
+          "name": "ケロマツ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 702,
+          "name": "デデンネ",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 821,
+          "name": "ココガラ",
+          "shiny": true,
+          "note": ""
+        },
+        {
+          "dex": 201,
+          "name": "アンノーン",
+          "shiny": true,
+          "note": ""
+        }
+      ]
+    },
+    {
       "id": "ev-auto-giratina-alter-raid-hour",
       "month": 11,
       "title": "ギラティナ（アナザー）のレイドアワー",
@@ -9756,6 +9982,42 @@
         "「冬のスペシャルボックス」の販売（2026/11/9 10時〜2026/11/28 13時まで、6,095ポケコイン、購入1人3回まで）",
         "Pokémon GO Web Storeでのお買い物で獲得できるリワードポイントが2倍"
       ],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-save-the-date-s25",
+      "month": 12,
+      "title": "次のシーズンで開催される「コミュニティ・デイ」の日程をお知らせします！",
+      "barClass": "bar-cd",
+      "category": "cd",
+      "startDay": 5,
+      "endDay": 28,
+      "hasPaid": false,
+      "dateText": "2026年12月5日〜2027年2月13日",
+      "summary": "次のシーズンで開催される「コミュニティ・デイ」や各種イベントの日程が発表されました。",
+      "freeFeatures": [],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-pokemon-night-out-london-2026",
+      "month": 11,
+      "title": "【イギリス・ロンドン限定】Pokémon Night Out",
+      "barClass": "bar-collab",
+      "category": "collab",
+      "startDay": 10,
+      "endDay": 10,
+      "hasPaid": false,
+      "dateText": "2026/11/10(火) 〜 11/10(火)",
+      "summary": "イギリス・ロンドン限定で開催されるPokémon Night Outイベント",
+      "freeFeatures": [],
       "paidFeatures": [],
       "wilds": [],
       "raids": [],

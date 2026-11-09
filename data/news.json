@@ -2,6 +2,159 @@
   "schema_version": 1,
   "items": [
     {
+      "id": "news-22af6b7cc1",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "kind": "new_event",
+      "title": "【新イベント】次のシーズンで開催される「コミュニティ・デイ」の日程をお知らせします！",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-save-the-date-s25",
+      "sources": [
+        {
+          "site": "official",
+          "url": "https://pokemongo.com/ja/news/save-the-date-s25",
+          "fetched_at": "2026-11-10T07:39:34.869100+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-e1012373a9",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "kind": "schedule_changed",
+      "title": "【日程変更】次のシーズンで開催される「コミュニティ・デイ」の日程をお知らせします！",
+      "details": "日程が更新されています：2026-12-05〜2027-02-13 → 2026-12-05〜2027-02-28",
+      "targetId": "ev-auto-save-the-date-s25",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26737",
+          "fetched_at": "2026-11-10T07:39:34.869100+09:00",
+          "article_updated": "2026-11-10T07:27:20+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-c2dac6b4c1",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドウィーク2026：フィールドリサーチが判明・追加（4件）",
+      "details": "フィールドリサーチ：ダイマックスラルトスを捕まえる→ラルトス(DMAX)、ダイマックスワンリキーを捕まえる→ワンリキー(DMAX)、はがねタイプのポケモンを5回強化する→トゲデマル、はがねタイプのポケモンを5回強化する→ココドラ",
+      "targetId": "ev-wildweek-2026",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26589",
+          "fetched_at": "2026-11-10T07:39:34.869100+09:00",
+          "article_updated": "2026-11-10T06:37:23+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-f60d8f39ae",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "kind": "event_update",
+      "title": "【情報追加】「ピクシー」の「スーパーメガレイド・デイ」：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：タイムチャレンジタスク→メタグロス・プレミアムバトルパス",
+      "targetId": "ev-auto-clefable-super-mega-raid-day-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/586872",
+          "fetched_at": "2026-11-10T07:39:34.869100+09:00",
+          "article_updated": "2026-11-09T14:23:27+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-a4eda058a5",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "kind": "event_update",
+      "title": "【情報追加】ハロウィン2026 パート2：フィールドリサーチが判明・追加（1件）",
+      "details": "フィールドリサーチ：リワードを受け取る→ふしぎなアメ・ヤバチャ(リボン)",
+      "targetId": "ev-halloween-p2",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/580744",
+          "fetched_at": "2026-11-10T07:39:34.869100+09:00",
+          "article_updated": "2026-11-06T07:43:06+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-84dfc1298a",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "kind": "new_event",
+      "title": "【新イベント】【イギリス・ロンドン限定】Pokémon Night Out",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-pokemon-night-out-london-2026",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26632",
+          "fetched_at": "2026-11-10T07:39:34.869100+09:00",
+          "article_updated": "2026-10-20T07:26:42+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-f1200b64d4",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "kind": "event_update",
+      "title": "【情報追加】【イギリス・ロンドン限定】Pokémon Night Out：野生が判明・追加（15件）",
+      "details": "野生：ゴース、ビリリダマ、ガラガラ(アローラ)、ホーホー、ヤミカラス、デルビル ほか9件",
+      "targetId": "ev-auto-pokemon-night-out-london-2026",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26632",
+          "fetched_at": "2026-11-10T07:39:34.869100+09:00",
+          "article_updated": "2026-10-20T07:26:42+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-c933a92514",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "kind": "event_update",
+      "title": "【情報追加】【イギリス・ロンドン限定】Pokémon Night Out：レイドが判明・追加（2件）",
+      "details": "レイド：ピカチュウ、ゲンガー",
+      "targetId": "ev-auto-pokemon-night-out-london-2026",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26632",
+          "fetched_at": "2026-11-10T07:39:34.869100+09:00",
+          "article_updated": "2026-10-20T07:26:42+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-5d95b388b2",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "kind": "event_update",
+      "title": "【情報追加】LAIC2027配信ボーナスタイムチャレンジ：フィールドリサーチが判明・追加（1件）",
+      "details": "フィールドリサーチ：Twitchのライブ配信30分以上視聴→ダイケンキ(ハイドロカノン)・ミジュマル",
+      "targetId": "ev-auto-laic2027-twitch-drops",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/583039",
+          "fetched_at": "2026-11-10T07:39:34.869100+09:00",
+          "article_updated": "2026-10-17T03:13:03+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-0eda0bac05",
       "date": "2026-11-09",
       "date_label": "11/9",

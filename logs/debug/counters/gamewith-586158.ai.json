@@ -4,7 +4,7 @@
   {
    "name": "ダイマックスレジドラゴ",
    "kind": "dmax",
-   "tier": "★5",
+   "tier": "星5",
    "types": [
     "ドラゴン"
    ],
@@ -78,7 +78,7 @@
     {
      "name": "ザマゼンタ(王)",
      "rank": 2,
-     "role": "tank",
+     "role": "attacker",
      "tag": "normal",
      "fast": "メタルクロー",
      "charged": "きょじゅうだん",
@@ -89,7 +89,7 @@
     {
      "name": "レジスチル",
      "rank": 3,
-     "role": "tank",
+     "role": "attacker",
      "tag": "normal",
      "fast": "メタルクロー",
      "charged": "ラスターカノン",
@@ -100,7 +100,7 @@
     {
      "name": "ハピナス",
      "rank": 4,
-     "role": "tank",
+     "role": "attacker",
      "tag": "normal",
      "fast": "はたく",
      "charged": "マジカルシャイン",
@@ -111,7 +111,7 @@
     {
      "name": "メタグロス",
      "rank": 5,
-     "role": "tank",
+     "role": "attacker",
      "tag": "normal",
      "fast": "れんぞくぎり",
      "charged": "コメットパンチ",
