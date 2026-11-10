@@ -78,7 +78,7 @@
     {
      "name": "ザマゼンタ(王)",
      "rank": 2,
-     "role": "attacker",
+     "role": "tank",
      "tag": "normal",
      "fast": "メタルクロー",
      "charged": "きょじゅうだん",
@@ -89,7 +89,7 @@
     {
      "name": "レジスチル",
      "rank": 3,
-     "role": "attacker",
+     "role": "tank",
      "tag": "normal",
      "fast": "メタルクロー",
      "charged": "ラスターカノン",
@@ -100,7 +100,7 @@
     {
      "name": "ハピナス",
      "rank": 4,
-     "role": "attacker",
+     "role": "tank",
      "tag": "normal",
      "fast": "はたく",
      "charged": "マジカルシャイン",
@@ -111,7 +111,7 @@
     {
      "name": "メタグロス",
      "rank": 5,
-     "role": "attacker",
+     "role": "tank",
      "tag": "normal",
      "fast": "れんぞくぎり",
      "charged": "コメットパンチ",

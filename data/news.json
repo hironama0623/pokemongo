@@ -155,6 +155,193 @@
       ]
     },
     {
+      "id": "news-897f2f6d87",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "kind": "event_update",
+      "title": "【情報追加】「大きな足跡」イベント：野生が判明・追加（3件）",
+      "details": "野生：コイル、オンバット、トゲデマル",
+      "targetId": "ev-big-footprints",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10832/",
+          "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-9b1e0853a1",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "kind": "event_update",
+      "title": "【情報追加】「大きな足跡」イベント：レイドが判明・追加（4件）",
+      "details": "レイド：ザシアン(けんのおう)、ザマゼンタ(たてのおう)、クリムガン、ミミズズ",
+      "targetId": "ev-big-footprints",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10832/",
+          "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-992c72ac40",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "kind": "event_update",
+      "title": "【情報追加】「大きな足跡」イベント：サプライズボックスが判明・追加（2件）",
+      "details": "サプライズボックス：コレクレー、メルタン",
+      "targetId": "ev-big-footprints",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10832/",
+          "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-0edfe5ee55",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "kind": "event_update",
+      "title": "【情報追加】ザシアン（けんのおう）のレイドアワー：レイドが判明・追加（1件）",
+      "details": "レイド：ザシアン(れきせんのゆうしゃ)",
+      "targetId": "ev-auto-zacian-crowned-sword-raid-hour",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10821/",
+          "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-4530b4b584",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "kind": "event_update",
+      "title": "【情報追加】「大きな足跡」イベント：レイドが判明・追加（60件）",
+      "details": "レイド：ダイマックス ストリンダー (ハイ)、ダイマックス ストリンダー (ロー)、ダイマックス ジュラルドン、ダイマックス サワムラー、ダイマックス エビワラー、ダイマックス ラッキー ほか54件",
+      "targetId": "ev-big-footprints",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10782/",
+          "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-735ae282fc",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドウィーク(2026年)：野生が判明・追加（1件）",
+      "details": "野生：ガラルニャース",
+      "targetId": "ev-auto-wild-week-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/582768",
+          "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+          "article_updated": "2026-11-10T06:30:52+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-992190ca72",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "kind": "event_update",
+      "title": "【情報追加】「ピクシー」の「スーパーメガレイド・デイ」：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：イベント期間中は無料のタイムチャレンジが登場する。→メタグロス・プレミアムバトルパス",
+      "targetId": "ev-auto-clefable-super-mega-raid-day-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/586872",
+          "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+          "article_updated": "2026-11-09T14:23:27+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-a4a992265c",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "kind": "event_update",
+      "title": "【情報追加】GOパス黄昏時の願い：野生が判明・追加（4件）",
+      "details": "野生：ピッピ、ヒトデマン、リグレー、イワンコ",
+      "targetId": "ev-auto-go-pass-twilight-wishes",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/586413",
+          "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+          "article_updated": "2026-11-05T13:34:20+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-ff6d6ed607",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "kind": "event_update",
+      "title": "【情報追加】GOパス黄昏時の願い：レイドが判明・追加（8件）",
+      "details": "レイド：ピカチュウ(太陽の冠)、ピカチュウ(月の冠)、エーフィ(太陽スカーフ)、ブラッキー(月スカーフ)、メガスピアー、メガヘルガー ほか2件",
+      "targetId": "ev-auto-go-pass-twilight-wishes",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/586413",
+          "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+          "article_updated": "2026-11-05T13:34:20+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-647b7a13d9",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "kind": "event_update",
+      "title": "【情報追加】GOパス黄昏時の願い：フィールドリサーチが判明・追加（4件）",
+      "details": "フィールドリサーチ：黄昏の旅路シーズンに登場したポケモンと出会える→カジッチュ・オラチフ、黄昏の旅路シーズンに登場したポケモンと出会える→ゲンガー(魔女帽子)、黄昏の旅路シーズンに登場したポケモンと出会える→フワライド(ハロウィン)、黄昏の旅路シーズンに登場したポケモンと出会える→アノクサ",
+      "targetId": "ev-auto-go-pass-twilight-wishes",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/586413",
+          "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+          "article_updated": "2026-11-05T13:34:20+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-a082d8a035",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "kind": "event_update",
+      "title": "【情報追加】メテノシャワー：野生が判明・追加（1件）",
+      "details": "野生：メテノ",
+      "targetId": "ev-auto-meteor-shower-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/579397",
+          "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+          "article_updated": "2026-10-25T12:02:10+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-0eda0bac05",
       "date": "2026-11-09",
       "date_label": "11/9",
