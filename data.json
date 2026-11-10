@@ -1,6 +1,62 @@
 {
-  "updated_at": "2026/11/10 23:03 JST",
+  "updated_at": "2026/11/11 07:34 JST",
   "latest_news": [
+    {
+      "id": "news-2dd12cfbe6",
+      "date": "2026-11-11",
+      "date_label": "11/11",
+      "title": "【情報追加】GOパス：ワイルドウィーク2026：レイドが判明・追加（9件）",
+      "details": "レイド：レジドラゴ、ダイマックスメルタン、ラルトス、ワンリキー、レジスチル、ラティアス ほか3件",
+      "targetId": "ev-auto-go-pass-wild-week-2026"
+    },
+    {
+      "id": "news-538f5380c0",
+      "date": "2026-11-11",
+      "date_label": "11/11",
+      "title": "【新イベント】【海外限定】ポケモン30周年記念モール探索イベント",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-pokemon-30th-anniversary-mall-explorations"
+    },
+    {
+      "id": "news-3b562b6f25",
+      "date": "2026-11-11",
+      "date_label": "11/11",
+      "title": "【情報追加】【海外限定】ポケモン30周年記念モール探索イベント：タイムチャレンジが判明・追加（10件）",
+      "details": "タイムチャレンジ：ポケモンを3匹捕まえる→x5、ポケモンを捕まえるときにきのみを使う→x500、GOスナップショット写真を撮る→x5、ポケストップ・ジム2個を回す→ランダム、ピカチュウ(パーティ2020)→x1000・x10、ポケモンを10匹捕まえる→x500 ほか4件",
+      "targetId": "ev-auto-pokemon-30th-anniversary-mall-explorations"
+    },
+    {
+      "id": "news-8148456b10",
+      "date": "2026-11-11",
+      "date_label": "11/11",
+      "title": "【新イベント】マックスバトルアワー：レジスチル",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-max-battle-hour-registeel-2026-11-11"
+    },
+    {
+      "id": "news-970a06d759",
+      "date": "2026-11-11",
+      "date_label": "11/11",
+      "title": "【情報追加】メグロコふかの日：フィールドリサーチが判明・追加（4件）",
+      "details": "フィールドリサーチ：タマゴを1個かえす→ふかそうち、1km探索する→ほしのかけら、ほしのすなを2,000手に入れる→スーパーふかそうち、ほしのすなを4,000手に入れる→経験値",
+      "targetId": "ev-auto-sandile-hatch-day-2026"
+    },
+    {
+      "id": "news-8a8812c019",
+      "date": "2026-11-11",
+      "date_label": "11/11",
+      "title": "【情報追加】「黄昏時の願い」＆ スーパーメガレイドデイ：フィールドリサーチが判明・追加（5件）",
+      "details": "フィールドリサーチ：イベント限定のフィールドリサーチタスクをクリアする→カジッチュ、イベント限定のフィールドリサーチタスクをクリアする→オラチフ、イベント限定のフィールドリサーチタスクをクリアする→ゲンガー(魔女帽子)、イベント限定のフィールドリサーチタスクをクリアする→フワライド(ハロウィン)、イベント限定のフィールドリサーチタスクをクリアする→アノクサ",
+      "targetId": "ev-tusk-wish-deoxys"
+    },
+    {
+      "id": "news-e0ea05845a",
+      "date": "2026-11-11",
+      "date_label": "11/11",
+      "title": "【情報追加】ポケモンナイトアウト：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：ポケモンナイトアウトの現地会場での受取→ポケモンナイトアウト野球ジャージ・ストリンダー(ハイ)・ストリンダー(ロー)",
+      "targetId": "ev-auto-pokemon-night-out"
+    },
     {
       "id": "news-22af6b7cc1",
       "date": "2026-11-10",
@@ -4497,6 +4553,41 @@
         "note": "出典: gamewith"
       },
       {
+        "task": "イベント限定のフィールドリサーチタスクをクリアする",
+        "rewardDex": 840,
+        "rewardName": "カジッチュ",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "イベント限定のフィールドリサーチタスクをクリアする",
+        "rewardDex": 942,
+        "rewardName": "オラチフ",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "イベント限定のフィールドリサーチタスクをクリアする",
+        "rewardDex": 94,
+        "rewardName": "ゲンガー(魔女帽子)",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "イベント限定のフィールドリサーチタスクをクリアする",
+        "rewardDex": 426,
+        "rewardName": "フワライド(ハロウィン)",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "イベント限定のフィールドリサーチタスクをクリアする",
+        "rewardDex": 946,
+        "rewardName": "アノクサ",
+        "shiny": true,
+        "note": "出典: gamewith"
+      },
+      {
         "task": "イベント限定フィールドリサーチ",
         "rewardDex": 120,
         "rewardName": "ヒトデマン",
@@ -4543,6 +4634,36 @@
         "rewardDex": 946,
         "rewardName": "アノクサ",
         "shiny": true,
+        "note": "出典: gamewith"
+      }
+    ],
+    "ev-auto-sandile-hatch-day-2026": [
+      {
+        "task": "タマゴを1個かえす",
+        "rewardDex": 25,
+        "rewardName": "ふかそうち",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "1km探索する",
+        "rewardDex": 25,
+        "rewardName": "ほしのかけら",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "ほしのすなを2,000手に入れる",
+        "rewardDex": 25,
+        "rewardName": "スーパーふかそうち",
+        "shiny": false,
+        "note": "出典: gamewith"
+      },
+      {
+        "task": "ほしのすなを4,000手に入れる",
+        "rewardDex": 25,
+        "rewardName": "経験値",
+        "shiny": false,
         "note": "出典: gamewith"
       }
     ],
@@ -8040,7 +8161,7 @@
           "dex": 52,
           "name": "ガラルニャース",
           "shiny": true,
-          "note": ""
+          "note": "ガラル"
         }
       ]
     },
@@ -10290,6 +10411,44 @@
       "hasPaid": false,
       "dateText": "2026/11/10(火) 〜 11/10(火)",
       "summary": "イギリス・ロンドン限定で開催されるPokémon Night Outイベント",
+      "freeFeatures": [],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-pokemon-30th-anniversary-mall-explorations",
+      "month": 10,
+      "title": "【海外限定】ポケモン30周年記念モール探索イベント",
+      "barClass": "bar-collab",
+      "category": "collab",
+      "startDay": 1,
+      "endDay": 28,
+      "hasPaid": false,
+      "dateText": "2026/10/1(木) 〜 2027/3/28(日)",
+      "summary": "海外の対象モールで入手可能なポケモン30周年記念モール探索イベント",
+      "freeFeatures": [
+        "4時間 ルアー効果"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-max-battle-hour-registeel-2026-11-11",
+      "month": 11,
+      "title": "マックスバトルアワー：レジスチル",
+      "barClass": "bar-dmax",
+      "category": "dmax",
+      "startDay": 11,
+      "endDay": 11,
+      "hasPaid": false,
+      "dateText": "2026/11/11(水)18:00 〜 19:00",
+      "summary": "レジスチルのマックスバトルアワー開催",
       "freeFeatures": [],
       "paidFeatures": [],
       "wilds": [],

@@ -2,6 +2,125 @@
   "schema_version": 1,
   "items": [
     {
+      "id": "news-2dd12cfbe6",
+      "date": "2026-11-11",
+      "date_label": "11/11",
+      "kind": "event_update",
+      "title": "【情報追加】GOパス：ワイルドウィーク2026：レイドが判明・追加（9件）",
+      "details": "レイド：レジドラゴ、ダイマックスメルタン、ラルトス、ワンリキー、レジスチル、ラティアス ほか3件",
+      "targetId": "ev-auto-go-pass-wild-week-2026",
+      "sources": [
+        {
+          "site": "official",
+          "url": "https://pokemongo.com/ja/news/into-the-wild-2026",
+          "fetched_at": "2026-11-11T07:34:57.140271+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-538f5380c0",
+      "date": "2026-11-11",
+      "date_label": "11/11",
+      "kind": "new_event",
+      "title": "【新イベント】【海外限定】ポケモン30周年記念モール探索イベント",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-pokemon-30th-anniversary-mall-explorations",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26485",
+          "fetched_at": "2026-11-11T07:34:57.140271+09:00",
+          "article_updated": "2026-11-11T00:48:07+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-3b562b6f25",
+      "date": "2026-11-11",
+      "date_label": "11/11",
+      "kind": "event_update",
+      "title": "【情報追加】【海外限定】ポケモン30周年記念モール探索イベント：タイムチャレンジが判明・追加（10件）",
+      "details": "タイムチャレンジ：ポケモンを3匹捕まえる→x5、ポケモンを捕まえるときにきのみを使う→x500、GOスナップショット写真を撮る→x5、ポケストップ・ジム2個を回す→ランダム、ピカチュウ(パーティ2020)→x1000・x10、ポケモンを10匹捕まえる→x500 ほか4件",
+      "targetId": "ev-auto-pokemon-30th-anniversary-mall-explorations",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26485",
+          "fetched_at": "2026-11-11T07:34:57.140271+09:00",
+          "article_updated": "2026-11-11T00:48:07+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-8148456b10",
+      "date": "2026-11-11",
+      "date_label": "11/11",
+      "kind": "new_event",
+      "title": "【新イベント】マックスバトルアワー：レジスチル",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-max-battle-hour-registeel-2026-11-11",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26709",
+          "fetched_at": "2026-11-11T07:34:57.140271+09:00",
+          "article_updated": "2026-11-11T00:03:12+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-970a06d759",
+      "date": "2026-11-11",
+      "date_label": "11/11",
+      "kind": "event_update",
+      "title": "【情報追加】メグロコふかの日：フィールドリサーチが判明・追加（4件）",
+      "details": "フィールドリサーチ：タマゴを1個かえす→ふかそうち、1km探索する→ほしのかけら、ほしのすなを2,000手に入れる→スーパーふかそうち、ほしのすなを4,000手に入れる→経験値",
+      "targetId": "ev-auto-sandile-hatch-day-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/578666",
+          "fetched_at": "2026-11-11T07:34:57.140271+09:00",
+          "article_updated": "2026-11-10T19:28:12+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-8a8812c019",
+      "date": "2026-11-11",
+      "date_label": "11/11",
+      "kind": "event_update",
+      "title": "【情報追加】「黄昏時の願い」＆ スーパーメガレイドデイ：フィールドリサーチが判明・追加（5件）",
+      "details": "フィールドリサーチ：イベント限定のフィールドリサーチタスクをクリアする→カジッチュ、イベント限定のフィールドリサーチタスクをクリアする→オラチフ、イベント限定のフィールドリサーチタスクをクリアする→ゲンガー(魔女帽子)、イベント限定のフィールドリサーチタスクをクリアする→フワライド(ハロウィン)、イベント限定のフィールドリサーチタスクをクリアする→アノクサ",
+      "targetId": "ev-tusk-wish-deoxys",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/586413",
+          "fetched_at": "2026-11-11T07:34:57.140271+09:00",
+          "article_updated": "2026-11-05T13:34:20+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-e0ea05845a",
+      "date": "2026-11-11",
+      "date_label": "11/11",
+      "kind": "event_update",
+      "title": "【情報追加】ポケモンナイトアウト：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：ポケモンナイトアウトの現地会場での受取→ポケモンナイトアウト野球ジャージ・ストリンダー(ハイ)・ストリンダー(ロー)",
+      "targetId": "ev-auto-pokemon-night-out",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/583322",
+          "fetched_at": "2026-11-11T07:34:57.140271+09:00",
+          "article_updated": "2026-10-28T17:59:21+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-22af6b7cc1",
       "date": "2026-11-10",
       "date_label": "11/10",

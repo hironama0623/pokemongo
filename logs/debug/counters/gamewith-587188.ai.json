@@ -1,0 +1,167 @@
+{
+ "relevant": true,
+ "bosses": [
+  {
+   "name": "メガピクシー",
+   "kind": "raid",
+   "tier": null,
+   "types": [],
+   "counters": [
+    {
+     "name": "ザシアン(王)",
+     "rank": 1,
+     "role": "attacker",
+     "tag": "normal",
+     "fast": "メタルクロー",
+     "charged": "きょじゅうざん",
+     "dps": 43.17,
+     "tdo": null,
+     "note": ""
+    },
+    {
+     "name": "ザマゼンタ(王)",
+     "rank": 2,
+     "role": "attacker",
+     "tag": "normal",
+     "fast": "メタルクロー",
+     "charged": "きょじゅうだん",
+     "dps": 40.36,
+     "tdo": null,
+     "note": ""
+    },
+    {
+     "name": "ネクロズマ(黄昏)",
+     "rank": 3,
+     "role": "attacker",
+     "tag": "normal",
+     "fast": "メタルクロー",
+     "charged": "メテオドライブ",
+     "dps": 41.88,
+     "tdo": null,
+     "note": ""
+    },
+    {
+     "name": "キュレム(W)",
+     "rank": 4,
+     "role": "attacker",
+     "tag": "normal",
+     "fast": "こおりのキバ",
+     "charged": "コールドフレア",
+     "dps": 30.91,
+     "tdo": null,
+     "note": ""
+    },
+    {
+     "name": "レジエレキ",
+     "rank": 5,
+     "role": "attacker",
+     "tag": "normal",
+     "fast": "ロックオン",
+     "charged": "サンダープリズン",
+     "dps": 22.44,
+     "tdo": null,
+     "note": ""
+    },
+    {
+     "name": "ゼラオラ",
+     "rank": 6,
+     "role": "attacker",
+     "tag": "normal",
+     "fast": "ボルトチェンジ",
+     "charged": "プラズマフィスト",
+     "dps": 28.17,
+     "tdo": null,
+     "note": ""
+    },
+    {
+     "name": "ムゲンダイナ",
+     "rank": 7,
+     "role": "attacker",
+     "tag": "normal",
+     "fast": "どくづき",
+     "charged": "ヘドロばくだん",
+     "dps": 24.86,
+     "tdo": null,
+     "note": ""
+    },
+    {
+     "name": "デンジュモク",
+     "rank": 8,
+     "role": "attacker",
+     "tag": "normal",
+     "fast": "でんきショック",
+     "charged": "ほうでん",
+     "dps": 28.66,
+     "tdo": null,
+     "note": ""
+    },
+    {
+     "name": "ボルトロス(霊獣)",
+     "rank": 9,
+     "role": "attacker",
+     "tag": "normal",
+     "fast": "ボルトチェンジ",
+     "charged": "かみなりあらし",
+     "dps": 30.96,
+     "tdo": null,
+     "note": ""
+    },
+    {
+     "name": "メタグロス",
+     "rank": 10,
+     "role": "attacker",
+     "tag": "normal",
+     "fast": "バレットパンチ",
+     "charged": "コメットパンチ",
+     "dps": 24.87,
+     "tdo": null,
+     "note": ""
+    },
+    {
+     "name": "シャドウメタグロス",
+     "rank": 4,
+     "role": "attacker",
+     "tag": "shadow",
+     "fast": "バレットパンチ",
+     "charged": "コメットパンチ",
+     "dps": 29.68,
+     "tdo": null,
+     "note": ""
+    },
+    {
+     "name": "シャドウゼクロム",
+     "rank": 6,
+     "role": "attacker",
+     "tag": "shadow",
+     "fast": "チャージビーム",
+     "charged": "クロスサンダー",
+     "dps": 34.17,
+     "tdo": null,
+     "note": ""
+    },
+    {
+     "name": "シャドウライコウ",
+     "rank": 9,
+     "role": "attacker",
+     "tag": "shadow",
+     "fast": "でんきショック",
+     "charged": "ワイルドボルト",
+     "dps": 28.98,
+     "tdo": null,
+     "note": ""
+    },
+    {
+     "name": "シャドウドサイドン",
+     "rank": 10,
+     "role": "attacker",
+     "tag": "shadow",
+     "fast": "うちおとす",
+     "charged": "がんせきほう",
+     "dps": 27.31,
+     "tdo": null,
+     "note": ""
+    }
+   ]
+  }
+ ]
+}
