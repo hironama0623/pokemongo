@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/11/10 12:43 JST",
+  "updated_at": "2026/11/10 18:51 JST",
   "latest_news": [
     {
       "id": "news-22af6b7cc1",
@@ -160,6 +160,38 @@
       "title": "【情報追加】メテノシャワー：野生が判明・追加（1件）",
       "details": "野生：メテノ",
       "targetId": "ev-auto-meteor-shower-2026"
+    },
+    {
+      "id": "news-f5f872034a",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "title": "【情報追加】「大きな足跡」イベント：野生が判明・追加（2件）",
+      "details": "野生：クリムガン、ミミズズ",
+      "targetId": "ev-big-footprints"
+    },
+    {
+      "id": "news-9b8dfcd53e",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "title": "【情報追加】「大きな足跡」イベント：レイドが判明・追加（10件）",
+      "details": "レイド：ザシアン(けんのおう)、ザマゼンタ(たてのおう)、レジスチル、レジドラゴ、ラティアス、ラティオス ほか4件",
+      "targetId": "ev-big-footprints"
+    },
+    {
+      "id": "news-a25159aee0",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "title": "【情報追加】ワイルドウィーク2026：レイドが判明・追加（4件）",
+      "details": "レイド：ダイマックス レジスチル、ダイマックス レジドラゴ、ダイマックス ラティアス、ダイマックス ラティオス",
+      "targetId": "ev-wildweek-2026"
+    },
+    {
+      "id": "news-4109afb2fe",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "title": "【情報追加】ワイルドウィーク2026：レイドが判明・追加（3件）",
+      "details": "レイド：ダイマックス レジスチル、ダイマックス ラティアス、ダイマックス ラティオス",
+      "targetId": "ev-wildweek-2026"
     },
     {
       "id": "news-0eda0bac05",
@@ -5425,6 +5457,18 @@
         {
           "dex": 777,
           "name": "トゲデマル",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 621,
+          "name": "クリムガン",
+          "shiny": false,
+          "note": ""
+        },
+        {
+          "dex": 968,
+          "name": "ミミズズ",
           "shiny": false,
           "note": ""
         },

@@ -342,6 +342,74 @@
       ]
     },
     {
+      "id": "news-f5f872034a",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "kind": "event_update",
+      "title": "【情報追加】「大きな足跡」イベント：野生が判明・追加（2件）",
+      "details": "野生：クリムガン、ミミズズ",
+      "targetId": "ev-big-footprints",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10832/",
+          "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-9b8dfcd53e",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "kind": "event_update",
+      "title": "【情報追加】「大きな足跡」イベント：レイドが判明・追加（10件）",
+      "details": "レイド：ザシアン(けんのおう)、ザマゼンタ(たてのおう)、レジスチル、レジドラゴ、ラティアス、ラティオス ほか4件",
+      "targetId": "ev-big-footprints",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10832/",
+          "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-a25159aee0",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドウィーク2026：レイドが判明・追加（4件）",
+      "details": "レイド：ダイマックス レジスチル、ダイマックス レジドラゴ、ダイマックス ラティアス、ダイマックス ラティオス",
+      "targetId": "ev-wildweek-2026",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10826/",
+          "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-4109afb2fe",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドウィーク2026：レイドが判明・追加（3件）",
+      "details": "レイド：ダイマックス レジスチル、ダイマックス ラティアス、ダイマックス ラティオス",
+      "targetId": "ev-wildweek-2026",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10820/",
+          "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
       "id": "news-0eda0bac05",
       "date": "2026-11-09",
       "date_label": "11/9",

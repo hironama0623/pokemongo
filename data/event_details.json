@@ -15,13 +15,13 @@
           {
             "site": "pokemapi",
             "url": "https://pokemongo-get.com/board/10782/",
-            "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+            "fetched_at": "2026-11-10T18:51:32.961664+09:00",
             "article_updated": null
           },
           {
             "site": "gamewith",
             "url": "https://pokemongo.gamewith.jp/article/show/585781",
-            "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+            "fetched_at": "2026-11-10T18:51:32.961664+09:00",
             "article_updated": "2026-11-10T07:57:04+09:00"
           },
           {
@@ -32,7 +32,7 @@
           }
         ]
       },
-      "updated_at": "2026-11-10T12:43:51.297206+09:00",
+      "updated_at": "2026-11-10T18:51:32.961664+09:00",
       "wilds": [
         {
           "name": "サルノリ",
@@ -50,13 +50,13 @@
             {
               "site": "pokemapi",
               "url": "https://pokemongo-get.com/board/10782/",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": null
             },
             {
               "site": "pokemapi",
               "url": "https://pokemongo-get.com/board/10832/",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": null
             }
           ]
@@ -77,13 +77,13 @@
             {
               "site": "pokemapi",
               "url": "https://pokemongo-get.com/board/10782/",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": null
             },
             {
               "site": "pokemapi",
               "url": "https://pokemongo-get.com/board/10832/",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": null
             }
           ]
@@ -104,13 +104,13 @@
             {
               "site": "pokemapi",
               "url": "https://pokemongo-get.com/board/10782/",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": null
             },
             {
               "site": "pokemapi",
               "url": "https://pokemongo-get.com/board/10832/",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": null
             }
           ]
@@ -125,7 +125,7 @@
             {
               "site": "pokemapi",
               "url": "https://pokemongo-get.com/board/10832/",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": null
             }
           ]
@@ -140,7 +140,7 @@
             {
               "site": "pokemapi",
               "url": "https://pokemongo-get.com/board/10832/",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": null
             }
           ]
@@ -155,7 +155,37 @@
             {
               "site": "pokemapi",
               "url": "https://pokemongo-get.com/board/10832/",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "クリムガン",
+          "dex": 621,
+          "shiny": false,
+          "note": "",
+          "rarity": null,
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10832/",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "ミミズズ",
+          "dex": 968,
+          "shiny": false,
+          "note": "",
+          "rarity": null,
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10832/",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": null
             }
           ]
@@ -1071,6 +1101,146 @@
               "article_updated": null
             }
           ]
+        },
+        {
+          "name": "ザシアン(けんのおう)",
+          "dex": 888,
+          "shiny": false,
+          "tier": "★5",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10832/",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "ザマゼンタ(たてのおう)",
+          "dex": 889,
+          "shiny": false,
+          "tier": "★5",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10832/",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "レジスチル",
+          "dex": 379,
+          "shiny": false,
+          "tier": "★5",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10832/",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "レジドラゴ",
+          "dex": 895,
+          "shiny": false,
+          "tier": "★5",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10832/",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "ラティアス",
+          "dex": 380,
+          "shiny": false,
+          "tier": "★5",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10832/",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "ラティオス",
+          "dex": 381,
+          "shiny": false,
+          "tier": "★5",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10832/",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "ワンリキー",
+          "dex": 66,
+          "shiny": false,
+          "tier": "",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10832/",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "ラルトス",
+          "dex": 280,
+          "shiny": false,
+          "tier": "",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10832/",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "メルタン",
+          "dex": 808,
+          "shiny": false,
+          "tier": "",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10832/",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "ムゲンダイナ(ムゲンダイマックス)",
+          "dex": 890,
+          "shiny": false,
+          "tier": "",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10832/",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": null
+            }
+          ]
         }
       ],
       "field_research": [
@@ -1123,7 +1293,7 @@
               {
                 "site": "pokemapi",
                 "url": "https://pokemongo-get.com/board/10832/",
-                "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+                "fetched_at": "2026-11-10T18:51:32.961664+09:00",
                 "article_updated": null
               }
             ]
@@ -1136,7 +1306,7 @@
               {
                 "site": "pokemapi",
                 "url": "https://pokemongo-get.com/board/10832/",
-                "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+                "fetched_at": "2026-11-10T18:51:32.961664+09:00",
                 "article_updated": null
               }
             ]
@@ -2887,7 +3057,7 @@
             {
               "site": "pokemapi",
               "url": "https://pokemongo-get.com/board/10822/",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": null
             }
           ]
@@ -2925,7 +3095,7 @@
             {
               "site": "pokemapi",
               "url": "https://pokemongo-get.com/board/10822/",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": null
             }
           ]
@@ -2979,7 +3149,7 @@
             {
               "site": "pokemapi",
               "url": "https://pokemongo-get.com/board/10819/",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": null
             },
             {
@@ -3003,13 +3173,13 @@
             {
               "site": "pokemapi",
               "url": "https://pokemongo-get.com/board/10822/",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": null
             },
             {
               "site": "pokemapi",
               "url": "https://pokemongo-get.com/board/10820/",
-              "fetched_at": "2026-11-09T12:48:54.681545+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": null
             },
             {
@@ -3041,7 +3211,7 @@
             {
               "site": "pokemapi",
               "url": "https://pokemongo-get.com/board/10819/",
-              "fetched_at": "2026-11-09T23:13:28.553324+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": null
             },
             {
@@ -3065,13 +3235,13 @@
             {
               "site": "pokemapi",
               "url": "https://pokemongo-get.com/board/10822/",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": null
             },
             {
               "site": "pokemapi",
               "url": "https://pokemongo-get.com/board/10820/",
-              "fetched_at": "2026-11-09T12:48:54.681545+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": null
             },
             {
@@ -3597,7 +3767,7 @@
             {
               "site": "pokemapi",
               "url": "https://pokemongo-get.com/board/10826/",
-              "fetched_at": "2026-11-09T18:55:05.708396+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": null
             }
           ]
@@ -3617,7 +3787,7 @@
             {
               "site": "pokemapi",
               "url": "https://pokemongo-get.com/board/10826/",
-              "fetched_at": "2026-11-09T18:55:05.708396+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": null
             }
           ]
@@ -3637,7 +3807,13 @@
             {
               "site": "pokemapi",
               "url": "https://pokemongo-get.com/board/10826/",
-              "fetched_at": "2026-11-09T18:55:05.708396+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": null
+            },
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10820/",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": null
             }
           ]
@@ -3657,7 +3833,13 @@
             {
               "site": "pokemapi",
               "url": "https://pokemongo-get.com/board/10826/",
-              "fetched_at": "2026-11-09T18:55:05.708396+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": null
+            },
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10820/",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": null
             }
           ]
@@ -3721,13 +3903,19 @@
         {
           "name": "ダイマックス ワンリキー",
           "dex": 66,
-          "shiny": null,
+          "shiny": false,
           "tier": null,
           "sources": [
             {
               "site": "pokemapi",
               "url": "https://pokemongo-get.com/board/10826/",
-              "fetched_at": "2026-11-09T18:55:05.708396+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": null
+            },
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10820/",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": null
             }
           ]
@@ -3735,19 +3923,129 @@
         {
           "name": "ダイマックス ラルトス",
           "dex": 280,
+          "shiny": false,
+          "tier": null,
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10826/",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": null
+            },
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10820/",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "ダイマックス レジスチル",
+          "dex": 379,
           "shiny": null,
           "tier": null,
           "sources": [
             {
               "site": "pokemapi",
               "url": "https://pokemongo-get.com/board/10826/",
-              "fetched_at": "2026-11-09T18:55:05.708396+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "ダイマックス レジドラゴ",
+          "dex": 895,
+          "shiny": false,
+          "tier": "★5",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10826/",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": null
+            },
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10820/",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "ダイマックス ラティアス",
+          "dex": 380,
+          "shiny": null,
+          "tier": null,
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10826/",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "ダイマックス ラティオス",
+          "dex": 381,
+          "shiny": null,
+          "tier": null,
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10826/",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "ダイマックス レジスチル",
+          "dex": 379,
+          "shiny": false,
+          "tier": "★5",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10820/",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "ダイマックス ラティアス",
+          "dex": 380,
+          "shiny": false,
+          "tier": "★5",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10820/",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": null
+            }
+          ]
+        },
+        {
+          "name": "ダイマックス ラティオス",
+          "dex": 381,
+          "shiny": false,
+          "tier": "★5",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10820/",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": null
             }
           ]
         }
       ],
-      "updated_at": "2026-11-10T07:39:34.869100+09:00",
+      "updated_at": "2026-11-10T18:51:32.961664+09:00",
       "surprise_box": {
         "pokemon": [
           {
@@ -3806,7 +4104,13 @@
               {
                 "site": "pokemapi",
                 "url": "https://pokemongo-get.com/board/10826/",
-                "fetched_at": "2026-11-09T18:55:05.708396+09:00",
+                "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+                "article_updated": null
+              },
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10820/",
+                "fetched_at": "2026-11-10T18:51:32.961664+09:00",
                 "article_updated": null
               }
             ],
@@ -3837,7 +4141,13 @@
               {
                 "site": "pokemapi",
                 "url": "https://pokemongo-get.com/board/10826/",
-                "fetched_at": "2026-11-09T18:55:05.708396+09:00",
+                "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+                "article_updated": null
+              },
+              {
+                "site": "pokemapi",
+                "url": "https://pokemongo-get.com/board/10820/",
+                "fetched_at": "2026-11-10T18:51:32.961664+09:00",
                 "article_updated": null
               }
             ],
@@ -10584,7 +10894,7 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/583244",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": "2026-11-10T12:42:05+09:00"
             }
           ]
@@ -10604,7 +10914,7 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/583244",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": "2026-11-10T12:42:05+09:00"
             }
           ]
@@ -10752,7 +11062,7 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/583244",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": "2026-11-10T12:42:05+09:00"
             }
           ]
@@ -10800,8 +11110,8 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/583244",
-              "fetched_at": "2026-11-10T07:39:34.869100+09:00",
-              "article_updated": "2026-11-09T20:48:16+09:00"
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": "2026-11-10T12:42:05+09:00"
             }
           ]
         },
@@ -10814,8 +11124,8 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/583244",
-              "fetched_at": "2026-11-10T07:39:34.869100+09:00",
-              "article_updated": "2026-11-09T20:48:16+09:00"
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": "2026-11-10T12:42:05+09:00"
             }
           ]
         },
@@ -10828,7 +11138,7 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/583244",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": "2026-11-10T12:42:05+09:00"
             }
           ]
@@ -10842,7 +11152,7 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/583244",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": "2026-11-10T12:42:05+09:00"
             }
           ]
@@ -10856,7 +11166,7 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/583244",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": "2026-11-10T12:42:05+09:00"
             }
           ]
@@ -10884,7 +11194,7 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/583244",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": "2026-11-10T12:42:05+09:00"
             },
             {
@@ -10904,7 +11214,7 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/583244",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": "2026-11-10T12:42:05+09:00"
             },
             {
@@ -10924,7 +11234,7 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/583244",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": "2026-11-10T12:42:05+09:00"
             },
             {
@@ -11042,8 +11352,8 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/583244",
-              "fetched_at": "2026-11-10T07:39:34.869100+09:00",
-              "article_updated": "2026-11-09T20:48:16+09:00"
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": "2026-11-10T12:42:05+09:00"
             }
           ]
         },
@@ -23588,7 +23898,7 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/582768",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": "2026-11-10T06:30:52+09:00"
             },
             {
@@ -23609,7 +23919,7 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/582768",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": "2026-11-10T06:30:52+09:00"
             },
             {
@@ -23630,7 +23940,7 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/582768",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": "2026-11-10T06:30:52+09:00"
             },
             {
@@ -23672,7 +23982,7 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/582768",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": "2026-11-10T06:30:52+09:00"
             }
           ]
@@ -23693,7 +24003,7 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/582768",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": "2026-11-10T06:30:52+09:00"
             }
           ]
@@ -23714,7 +24024,7 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/582768",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": "2026-11-10T06:30:52+09:00"
             }
           ]
@@ -23735,7 +24045,7 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/582768",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": "2026-11-10T06:30:52+09:00"
             }
           ]
@@ -23756,7 +24066,7 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/582768",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": "2026-11-10T06:30:52+09:00"
             }
           ]
@@ -23777,7 +24087,7 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/582768",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": "2026-11-10T06:30:52+09:00"
             }
           ]
@@ -23798,7 +24108,7 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/582768",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": "2026-11-10T06:30:52+09:00"
             }
           ]
@@ -23819,7 +24129,7 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/582768",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": "2026-11-10T06:30:52+09:00"
             }
           ]
@@ -23834,7 +24144,7 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/582768",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": "2026-11-10T06:30:52+09:00"
             }
           ]
@@ -23850,7 +24160,7 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/582768",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": "2026-11-10T06:30:52+09:00"
             }
           ]
@@ -23864,7 +24174,7 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/582768",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": "2026-11-10T06:30:52+09:00"
             }
           ]
@@ -23878,7 +24188,7 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/582768",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": "2026-11-10T06:30:52+09:00"
             }
           ]
@@ -23892,7 +24202,7 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/582768",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": "2026-11-10T06:30:52+09:00"
             }
           ]
@@ -23950,6 +24260,12 @@
               "url": "https://pokemongo.gamewith.jp/article/show/582768",
               "fetched_at": "2026-11-09T07:29:59.194201+09:00",
               "article_updated": "2026-11-08T19:26:10+09:00"
+            },
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10732/",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": null
             }
           ]
         },
@@ -24704,7 +25020,7 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/579398",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": "2026-11-10T06:47:10+09:00"
             }
           ]
@@ -24718,7 +25034,7 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/579398",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": "2026-11-10T06:47:10+09:00"
             }
           ]
@@ -24732,7 +25048,7 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/579398",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": "2026-11-10T06:47:10+09:00"
             }
           ]
@@ -24853,7 +25169,7 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/579398",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": "2026-11-10T06:47:10+09:00"
             }
           ]
@@ -24869,7 +25185,7 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/579398",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": "2026-11-10T06:47:10+09:00"
             }
           ]
@@ -24885,7 +25201,7 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/579398",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": "2026-11-10T06:47:10+09:00"
             }
           ]
@@ -24901,7 +25217,7 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/579398",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": "2026-11-10T06:47:10+09:00"
             }
           ]
@@ -24917,7 +25233,7 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/579398",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": "2026-11-10T06:47:10+09:00"
             }
           ]
@@ -24933,7 +25249,7 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/579398",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": "2026-11-10T06:47:10+09:00"
             }
           ]
@@ -24949,7 +25265,7 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/579398",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": "2026-11-10T06:47:10+09:00"
             }
           ]
@@ -24968,7 +25284,7 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/579398",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": "2026-11-10T06:47:10+09:00"
             }
           ]
@@ -28425,8 +28741,8 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/586873",
-              "fetched_at": "2026-11-09T12:48:54.681545+09:00",
-              "article_updated": "2026-11-09T10:29:10+09:00"
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": "2026-11-10T17:17:04+09:00"
             }
           ]
         },
@@ -28450,8 +28766,8 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/586873",
-              "fetched_at": "2026-11-09T12:48:54.681545+09:00",
-              "article_updated": "2026-11-09T10:29:10+09:00"
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": "2026-11-10T17:17:04+09:00"
             }
           ]
         },
@@ -28475,8 +28791,8 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/586873",
-              "fetched_at": "2026-11-09T12:48:54.681545+09:00",
-              "article_updated": "2026-11-09T10:29:10+09:00"
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": "2026-11-10T17:17:04+09:00"
             }
           ]
         },
@@ -28500,8 +28816,8 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/586873",
-              "fetched_at": "2026-11-09T12:48:54.681545+09:00",
-              "article_updated": "2026-11-09T10:29:10+09:00"
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": "2026-11-10T17:17:04+09:00"
             }
           ]
         },
@@ -28525,8 +28841,8 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/586873",
-              "fetched_at": "2026-11-09T12:48:54.681545+09:00",
-              "article_updated": "2026-11-09T10:29:10+09:00"
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": "2026-11-10T17:17:04+09:00"
             }
           ]
         },
@@ -28584,8 +28900,8 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/586873",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
-              "article_updated": "2026-11-09T10:29:10+09:00"
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": "2026-11-10T17:17:04+09:00"
             }
           ]
         },
@@ -28615,8 +28931,8 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/586873",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
-              "article_updated": "2026-11-09T10:29:10+09:00"
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": "2026-11-10T17:17:04+09:00"
             }
           ]
         },
@@ -28640,8 +28956,8 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/586873",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
-              "article_updated": "2026-11-09T10:29:10+09:00"
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": "2026-11-10T17:17:04+09:00"
             }
           ]
         },
@@ -28671,8 +28987,8 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/586873",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
-              "article_updated": "2026-11-09T10:29:10+09:00"
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": "2026-11-10T17:17:04+09:00"
             }
           ]
         },
@@ -28696,8 +29012,8 @@
             {
               "site": "gamewith",
               "url": "https://pokemongo.gamewith.jp/article/show/586873",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
-              "article_updated": "2026-11-09T10:29:10+09:00"
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": "2026-11-10T17:17:04+09:00"
             }
           ]
         }
@@ -29360,7 +29676,7 @@
             {
               "site": "pokemapi",
               "url": "https://pokemongo-get.com/board/10821/",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": null
             }
           ]
@@ -29466,7 +29782,7 @@
             {
               "site": "pokemapi",
               "url": "https://pokemongo-get.com/board/10829/",
-              "fetched_at": "2026-11-10T12:43:51.297206+09:00",
+              "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": null
             }
           ]
@@ -29843,7 +30159,7 @@
               {
                 "site": "pokemapi",
                 "url": "https://pokemongo-get.com/board/10828/",
-                "fetched_at": "2026-11-09T23:13:28.553324+09:00",
+                "fetched_at": "2026-11-10T18:51:32.961664+09:00",
                 "article_updated": null
               }
             ]
@@ -29855,7 +30171,7 @@
               {
                 "site": "pokemapi",
                 "url": "https://pokemongo-get.com/board/10828/",
-                "fetched_at": "2026-11-09T23:13:28.553324+09:00",
+                "fetched_at": "2026-11-10T18:51:32.961664+09:00",
                 "article_updated": null
               }
             ]
@@ -29867,7 +30183,7 @@
               {
                 "site": "pokemapi",
                 "url": "https://pokemongo-get.com/board/10828/",
-                "fetched_at": "2026-11-09T23:13:28.553324+09:00",
+                "fetched_at": "2026-11-10T18:51:32.961664+09:00",
                 "article_updated": null
               }
             ]
@@ -29879,7 +30195,7 @@
               {
                 "site": "pokemapi",
                 "url": "https://pokemongo-get.com/board/10828/",
-                "fetched_at": "2026-11-09T23:13:28.553324+09:00",
+                "fetched_at": "2026-11-10T18:51:32.961664+09:00",
                 "article_updated": null
               }
             ]
@@ -29891,7 +30207,7 @@
               {
                 "site": "pokemapi",
                 "url": "https://pokemongo-get.com/board/10828/",
-                "fetched_at": "2026-11-09T23:13:28.553324+09:00",
+                "fetched_at": "2026-11-10T18:51:32.961664+09:00",
                 "article_updated": null
               }
             ]
