@@ -1,0 +1,46 @@
+{
+ "relevant": true,
+ "bosses": [
+  {
+   "name": "ダイマックスレジドラゴ",
+   "kind": "dmax",
+   "tier": "★5",
+   "types": [],
+   "counters": [
+    {
+     "name": "ザシアン",
+     "rank": 1,
+     "role": "tank",
+     "tag": "normal",
+     "fast": "メタルクロー",
+     "charged": "きょじゅうざん じゃれつく",
+     "dps": null,
+     "tdo": null,
+     "note": "多人数討伐・ソロ討伐のどちらでも、タンクにはザシアンがおすすめ。わざはきょじゅうざんよりもじゃれつくの方が、ダメージ・メーターチャージ効率ともに優れている。"
+    },
+    {
+     "name": "ザシアン",
+     "rank": 2,
+     "role": "attacker",
+     "tag": "normal",
+     "fast": "メタルクロー",
+     "charged": "きょじゅうざん じゃれつく",
+     "dps": null,
+     "tdo": null,
+     "note": ""
+    },
+    {
+     "name": "ムゲンダイナ",
+     "rank": 3,
+     "role": "attacker",
+     "tag": "normal",
+     "fast": "ドラゴンテール",
+     "charged": "ダイマックスほう りゅうのはどう",
+     "dps": null,
+     "tdo": null,
+     "note": ""
+    }
+   ]
+  }
+ ]
+}

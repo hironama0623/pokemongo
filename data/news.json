@@ -410,6 +410,74 @@
       ]
     },
     {
+      "id": "news-3750d2eb33",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドウィーク2026：レイドが判明・追加（1件）",
+      "details": "レイド：レジスチル",
+      "targetId": "ev-wildweek-2026",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10833/",
+          "fetched_at": "2026-11-10T23:03:19.985352+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-cd26c04c93",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "kind": "schedule_changed",
+      "title": "【日程変更】GOパス：大きな足跡",
+      "details": "日程が更新されています：2026-11-16〜2026-11-23 → 2026-11-14〜2026-11-23",
+      "targetId": "ev-auto-go-pass-big-footprints",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26754",
+          "fetched_at": "2026-11-10T23:03:19.985352+09:00",
+          "article_updated": "2026-11-10T19:32:02+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-9b951f34c7",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "kind": "event_update",
+      "title": "【情報追加】イオンハロウィンイベント：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：特別なタイムチャレンジパート1（受取期間: 2026-10-19〜2026-10-25）→ピカチュウ(魔女帽子)、特別なタイムチャレンジパート2（受取期間: 2026-10-26〜2026-11-01）→ピカチュウ(魔女帽子)",
+      "targetId": "ev-auto-aeon-halloween-2026",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/579901",
+          "fetched_at": "2026-11-10T23:03:19.985352+09:00",
+          "article_updated": "2026-11-01T22:12:11+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-ed2c5fa12c",
+      "date": "2026-11-10",
+      "date_label": "11/10",
+      "kind": "event_update",
+      "title": "【情報追加】ポケモンナイトアウト：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：配信を30分以上試聴する→ポケモンナイトアウト野球ジャージ",
+      "targetId": "ev-auto-pokemon-night-out",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/583322",
+          "fetched_at": "2026-11-10T23:03:19.985352+09:00",
+          "article_updated": "2026-10-28T17:59:21+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-0eda0bac05",
       "date": "2026-11-09",
       "date_label": "11/9",
@@ -3031,6 +3099,12 @@
           "url": "https://pokemongo.gamewith.jp/article/show/586872",
           "fetched_at": "2026-11-08T00:31:53.905260+09:00",
           "article_updated": "2026-11-07T13:11:13+09:00"
+        },
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/586872",
+          "fetched_at": "2026-11-10T23:03:19.985352+09:00",
+          "article_updated": "2026-11-09T14:23:27+09:00"
         }
       ]
     },
