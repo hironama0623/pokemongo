@@ -8,11 +8,11 @@
    "types": [],
    "counters": [
     {
-     "name": "キョダイカイリキー",
+     "name": "ザマゼンタ(王)",
      "rank": 1,
-     "role": "attacker",
+     "role": "tank",
      "tag": "dmax",
-     "fast": "からてチョップ",
+     "fast": "メタルクロー",
      "charged": null,
      "dps": null,
      "tdo": null,
@@ -20,10 +20,21 @@
     },
     {
      "name": "ドリュウズ",
-     "rank": 2,
+     "rank": 3,
      "role": "attacker",
      "tag": "dmax",
      "fast": "マッドショット",
+     "charged": null,
+     "dps": null,
+     "tdo": null,
+     "note": ""
+    },
+    {
+     "name": "キョダイカイリキー",
+     "rank": 4,
+     "role": "attacker",
+     "tag": "dmax",
+     "fast": "からてチョップ",
      "charged": null,
      "dps": null,
      "tdo": null,
@@ -63,19 +74,8 @@
      "note": ""
     },
     {
-     "name": "ザマゼンタ(王)",
-     "rank": 1,
-     "role": "tank",
-     "tag": "dmax",
-     "fast": "メタルクロー",
-     "charged": null,
-     "dps": null,
-     "tdo": null,
-     "note": ""
-    },
-    {
      "name": "ハピナス",
-     "rank": 2,
+     "rank": 7,
      "role": "tank",
      "tag": "dmax",
      "fast": "はたく",
@@ -85,20 +85,9 @@
      "note": ""
     },
     {
-     "name": "ドリュウズ",
-     "rank": 3,
-     "role": "tank",
-     "tag": "dmax",
-     "fast": "マッドショット",
-     "charged": null,
-     "dps": null,
-     "tdo": null,
-     "note": ""
-    },
-    {
      "name": "ザシアン(王)",
-     "rank": 4,
-     "role": "tank",
+     "rank": 9,
+     "role": "attacker",
      "tag": "dmax",
      "fast": "メタルクロー",
      "charged": null,
@@ -108,7 +97,7 @@
     },
     {
      "name": "レジスチル",
-     "rank": 5,
+     "rank": 10,
      "role": "tank",
      "tag": "dmax",
      "fast": "ロックオン",

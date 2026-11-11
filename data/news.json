@@ -121,6 +121,125 @@
       ]
     },
     {
+      "id": "news-1e49ebfc5e",
+      "date": "2026-11-11",
+      "date_label": "11/11",
+      "kind": "event_update",
+      "title": "【情報追加】GOワイルドエリア2026：グローバル：野生が判明・追加（9件）",
+      "details": "野生：カイリキー(ジャケットを身にまとった)、ヒトツキ、クレッフィ、ジジーロン、ジュラルドン、アンノーン(D) ほか3件",
+      "targetId": "ev-wildarea-2026",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10836/",
+          "fetched_at": "2026-11-11T12:46:36.049634+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-7f5039a410",
+      "date": "2026-11-11",
+      "date_label": "11/11",
+      "kind": "event_update",
+      "title": "【情報追加】GOワイルドエリア2026：グローバル：レイドが判明・追加（8件）",
+      "details": "レイド：カイリキー(ジャケットを身にまとった)、ゼクロム、ホワイトキュレム、レシラム、ブラックキュレム、ダイマックス ディアルガ ほか2件",
+      "targetId": "ev-wildarea-2026",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10836/",
+          "fetched_at": "2026-11-11T12:46:36.049634+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-d2383b9ecb",
+      "date": "2026-11-11",
+      "date_label": "11/11",
+      "kind": "schedule_changed",
+      "title": "【日程変更】GOバトルリーグ：黄昏の旅路",
+      "details": "日程が更新されています：2026-09-09〜2026-12-02 → 2026-11-11〜2026-11-18",
+      "targetId": "ev-auto-gbl-twilight-journey",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10835/",
+          "fetched_at": "2026-11-11T12:46:36.049634+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-7f3e84773a",
+      "date": "2026-11-11",
+      "date_label": "11/11",
+      "kind": "new_event",
+      "title": "【新イベント】「ダイキノコ×10個」がもらえるコードをアンロックできるグローバルチャレンジ",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-global-challenge-max-mushroom",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10834/",
+          "fetched_at": "2026-11-11T12:46:36.049634+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-9400d37ec8",
+      "date": "2026-11-11",
+      "date_label": "11/11",
+      "kind": "event_update",
+      "title": "【情報追加】「ダイキノコ×10個」がもらえるコードをアンロックできるグローバルチャレンジ：タイムチャレンジが判明・追加（3件）",
+      "details": "タイムチャレンジ：コミュニティ・ミートアップにチェックイン (2026/11/9〜2026/11/10)→パイルのみ・プレミアムバトルパス・ほしのすな・XP・リンクチャージ、コミュニティ・ミートアップにチェックイン (2026/11/11〜2026/11/13)→XP・スーパーボール・ほしのすな・マックス粒子、コミュニティ・ミートアップにチェックイン (2026/11/14〜2026/11/15)→マックス粒子・無料レイドパス・ジャケットを身にまとったカイリキー・XP・ほしのすな",
+      "targetId": "ev-auto-global-challenge-max-mushroom",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10834/",
+          "fetched_at": "2026-11-11T12:46:36.049634+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-ea6785c725",
+      "date": "2026-11-11",
+      "date_label": "11/11",
+      "kind": "event_update",
+      "title": "【情報追加】GOパス黄昏時の願い：フィールドリサーチが判明・追加（1件）",
+      "details": "フィールドリサーチ：黄昏時の願いイベント期間中はイベント限定のフィールドリサーチタスクが登場。→メガエナジー・ヒトデマン・リグレー",
+      "targetId": "ev-auto-go-pass-twilight-wishes",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/586413",
+          "fetched_at": "2026-11-11T12:46:36.049634+09:00",
+          "article_updated": "2026-11-05T13:34:20+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-169e56a7a7",
+      "date": "2026-11-11",
+      "date_label": "11/11",
+      "kind": "event_update",
+      "title": "【情報追加】ポケモンナイトアウト：タイムチャレンジが判明・追加（2件）",
+      "details": "タイムチャレンジ：現地会場で受け取る（無料タイムチャレンジ）→ポケモンナイトアウト野球ジャージ・ストリンダー(ハイ)・ストリンダー(ロー)、TwitchDrops（ポケモン公式チャンネルまたは指定配信者の配信を30分以上試聴）→ポケモンナイトアウト野球ジャージ",
+      "targetId": "ev-auto-pokemon-night-out",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/583322",
+          "fetched_at": "2026-11-11T12:46:36.049634+09:00",
+          "article_updated": "2026-10-28T17:59:21+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-22af6b7cc1",
       "date": "2026-11-10",
       "date_label": "11/10",
