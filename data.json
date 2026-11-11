@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/11/11 12:46 JST",
+  "updated_at": "2026/11/11 18:52 JST",
   "latest_news": [
     {
       "id": "news-2dd12cfbe6",
@@ -112,6 +112,46 @@
       "title": "【情報追加】ポケモンナイトアウト：タイムチャレンジが判明・追加（2件）",
       "details": "タイムチャレンジ：現地会場で受け取る（無料タイムチャレンジ）→ポケモンナイトアウト野球ジャージ・ストリンダー(ハイ)・ストリンダー(ロー)、TwitchDrops（ポケモン公式チャンネルまたは指定配信者の配信を30分以上試聴）→ポケモンナイトアウト野球ジャージ",
       "targetId": "ev-auto-pokemon-night-out"
+    },
+    {
+      "id": "news-6957c4a9ab",
+      "date": "2026-11-11",
+      "date_label": "11/11",
+      "title": "【新イベント】ダイマックスレジドラゴ初登場",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-dynamax-regidrago-2026-11-12"
+    },
+    {
+      "id": "news-7eb3aa5581",
+      "date": "2026-11-11",
+      "date_label": "11/11",
+      "title": "【新イベント】2026GOチャンピオンシップLAカップ",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-2026-go-championship-la-cup"
+    },
+    {
+      "id": "news-6a5d9e440f",
+      "date": "2026-11-11",
+      "date_label": "11/11",
+      "title": "【情報追加】ダイマックスユクシー・エムリット・アグノムのマックスバトルデイ：タイムチャレンジが判明・追加（10件）",
+      "details": "タイムチャレンジ：リワードを受け取る→ダイキノコ×1、リワードを受け取る→マックス粒子×800、マックスバトルで勝つ→マックス粒子×800、マックスバトルで2回勝つ→マックス粒子×800、マックスバトルで3回勝つ→マックス粒子×800、マックスバトルで4回勝つ→マックス粒子×800 ほか4件",
+      "targetId": "ev-auto-max-battle-day-uxie-mesprit-azelf"
+    },
+    {
+      "id": "news-311678816f",
+      "date": "2026-11-11",
+      "date_label": "11/11",
+      "title": "【新イベント】レイドアワー：クレセリア・ダークライ",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-cresselia-darkrai-raid-hour-2026-11-18"
+    },
+    {
+      "id": "news-f3d18eec6c",
+      "date": "2026-11-11",
+      "date_label": "11/11",
+      "title": "【情報追加】レイドアワー：クレセリア・ダークライ：レイドが判明・追加（2件）",
+      "details": "レイド：クレセリア、ダークライ",
+      "targetId": "ev-auto-cresselia-darkrai-raid-hour-2026-11-18"
     },
     {
       "id": "news-22af6b7cc1",
@@ -10602,6 +10642,63 @@
         "グローバルチャレンジ達成で「ダイキノコ×10個」がもらえるコードをアンロック",
         "コミュニティ・ミートアップチェックインによるタイムチャレンジ報酬（パイルのみ、プレミアムバトルパス、ほしのすな、XP、リンクチャージ、スーパーボール、マックス粒子、無料レイドパス、ジャケットを身にまとったカイリキー）"
       ],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-dynamax-regidrago-2026-11-12",
+      "month": 11,
+      "title": "ダイマックスレジドラゴ初登場",
+      "barClass": "bar-dmax",
+      "category": "dmax",
+      "startDay": 12,
+      "endDay": 12,
+      "hasPaid": false,
+      "dateText": "現地時間 2026/11/12(木)6時～21時",
+      "summary": "ワイルドウィーク2026にてマックスバトルに「ダイマックスレジドラゴ」が初登場。18時～19時にはマックスバトルアワーが開催されます。",
+      "freeFeatures": [
+        "ダイマックスレジドラゴがマックスバトルに初登場（個体値100%：CP 1699）",
+        "2026/11/12(木)18時～19時にマックスバトルアワー開催"
+      ],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-2026-go-championship-la-cup",
+      "month": 11,
+      "title": "2026GOチャンピオンシップLAカップ",
+      "barClass": "bar-collab",
+      "category": "collab",
+      "startDay": 11,
+      "endDay": 25,
+      "hasPaid": false,
+      "dateText": "11月11日(水)6:00〜11月25日(水)6:00",
+      "summary": "CP1500以下で、ほのお・あく・はがね・フェアリータイプや伝説・幻のポケモンなどが使用不可となる特殊ルールのカップ。",
+      "freeFeatures": [],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-cresselia-darkrai-raid-hour-2026-11-18",
+      "month": 11,
+      "title": "レイドアワー：クレセリア・ダークライ",
+      "barClass": "bar-raid",
+      "category": "raid",
+      "startDay": 18,
+      "endDay": 18,
+      "hasPaid": false,
+      "dateText": "2026/11/18(水)18:00 〜 19:00",
+      "summary": "",
+      "freeFeatures": [],
       "paidFeatures": [],
       "wilds": [],
       "raids": [],

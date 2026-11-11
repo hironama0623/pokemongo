@@ -240,6 +240,91 @@
       ]
     },
     {
+      "id": "news-6957c4a9ab",
+      "date": "2026-11-11",
+      "date_label": "11/11",
+      "kind": "new_event",
+      "title": "【新イベント】ダイマックスレジドラゴ初登場",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-dynamax-regidrago-2026-11-12",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10838/",
+          "fetched_at": "2026-11-11T18:52:01.265231+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-7eb3aa5581",
+      "date": "2026-11-11",
+      "date_label": "11/11",
+      "kind": "new_event",
+      "title": "【新イベント】2026GOチャンピオンシップLAカップ",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-2026-go-championship-la-cup",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/582192",
+          "fetched_at": "2026-11-11T18:52:01.265231+09:00",
+          "article_updated": "2026-11-11T14:01:20+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-6a5d9e440f",
+      "date": "2026-11-11",
+      "date_label": "11/11",
+      "kind": "event_update",
+      "title": "【情報追加】ダイマックスユクシー・エムリット・アグノムのマックスバトルデイ：タイムチャレンジが判明・追加（10件）",
+      "details": "タイムチャレンジ：リワードを受け取る→ダイキノコ×1、リワードを受け取る→マックス粒子×800、マックスバトルで勝つ→マックス粒子×800、マックスバトルで2回勝つ→マックス粒子×800、マックスバトルで3回勝つ→マックス粒子×800、マックスバトルで4回勝つ→マックス粒子×800 ほか4件",
+      "targetId": "ev-auto-max-battle-day-uxie-mesprit-azelf",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/579398",
+          "fetched_at": "2026-11-11T18:52:01.265231+09:00",
+          "article_updated": "2026-11-11T12:42:11+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-311678816f",
+      "date": "2026-11-11",
+      "date_label": "11/11",
+      "kind": "new_event",
+      "title": "【新イベント】レイドアワー：クレセリア・ダークライ",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-cresselia-darkrai-raid-hour-2026-11-18",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26623",
+          "fetched_at": "2026-11-11T18:52:01.265231+09:00",
+          "article_updated": "2026-10-20T05:53:52+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-f3d18eec6c",
+      "date": "2026-11-11",
+      "date_label": "11/11",
+      "kind": "event_update",
+      "title": "【情報追加】レイドアワー：クレセリア・ダークライ：レイドが判明・追加（2件）",
+      "details": "レイド：クレセリア、ダークライ",
+      "targetId": "ev-auto-cresselia-darkrai-raid-hour-2026-11-18",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26623",
+          "fetched_at": "2026-11-11T18:52:01.265231+09:00",
+          "article_updated": "2026-10-20T05:53:52+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-22af6b7cc1",
       "date": "2026-11-10",
       "date_label": "11/10",
