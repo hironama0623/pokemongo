@@ -2,6 +2,91 @@
   "schema_version": 1,
   "items": [
     {
+      "id": "news-f8b1202b57",
+      "date": "2026-11-13",
+      "date_label": "11/13",
+      "kind": "new_event",
+      "title": "【新イベント】マックスバトルアワー：ラティアス・ラティオス",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-max-battle-hour-latias-latios",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26711",
+          "fetched_at": "2026-11-13T07:39:55.798599+09:00",
+          "article_updated": "2026-11-13T07:43:37+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-2c0b5c5de2",
+      "date": "2026-11-13",
+      "date_label": "11/13",
+      "kind": "event_update",
+      "title": "【情報追加】マックスバトルアワー：ラティアス・ラティオス：レイドが判明・追加（2件）",
+      "details": "レイド：ラティアス、ラティオス",
+      "targetId": "ev-auto-max-battle-hour-latias-latios",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26711",
+          "fetched_at": "2026-11-13T07:39:55.798599+09:00",
+          "article_updated": "2026-11-13T07:43:37+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-aa0099c979",
+      "date": "2026-11-13",
+      "date_label": "11/13",
+      "kind": "event_update",
+      "title": "【情報追加】マックスバトルアワー：ラティアス・ラティオス：レイドが判明・追加（2件）",
+      "details": "レイド：ダイマックスラティアス、ダイマックスラティオス",
+      "targetId": "ev-auto-max-battle-hour-latias-latios",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10840/",
+          "fetched_at": "2026-11-13T07:39:55.798599+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-4af9249907",
+      "date": "2026-11-13",
+      "date_label": "11/13",
+      "kind": "schedule_changed",
+      "title": "【日程変更】死者の日2026特別イベント(メキシコ レフォルマ通り)",
+      "details": "日程が更新されています：2026-11-01〜2026-11-06 → 2026-10-28〜2026-11-06",
+      "targetId": "ev-auto-dia-de-muertos-2026-reforma",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/584390",
+          "fetched_at": "2026-11-13T07:39:55.798599+09:00",
+          "article_updated": "2026-10-29T05:15:19+09:00"
+        }
+      ]
+    },
+    {
+      "id": "news-4edd369e00",
+      "date": "2026-11-13",
+      "date_label": "11/13",
+      "kind": "event_update",
+      "title": "【情報追加】死者の日2026特別イベント(メキシコ レフォルマ通り)：タイムチャレンジが判明・追加（1件）",
+      "details": "タイムチャレンジ：無料タイムチャレンジ→カラカラ(花飾り)・カラカラ(SP背景花飾り)・ステッカー 死者の日ステッカー(インスティンクト)・ステッカー 死者の日ステッカー(ヴァーラー)・ステッカー 死者の日ステッカー(ミスティック)",
+      "targetId": "ev-auto-dia-de-muertos-2026-reforma",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/584390",
+          "fetched_at": "2026-11-13T07:39:55.798599+09:00",
+          "article_updated": "2026-10-29T05:15:19+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-416c75fade",
       "date": "2026-11-12",
       "date_label": "11/12",
@@ -4618,6 +4703,12 @@
           "site": "gamewith",
           "url": "https://pokemongo.gamewith.jp/article/show/578629",
           "fetched_at": "2026-11-09T23:13:28.553324+09:00",
+          "article_updated": "2026-11-08T23:06:16+09:00"
+        },
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/578629",
+          "fetched_at": "2026-11-13T07:39:55.798599+09:00",
           "article_updated": "2026-11-08T23:06:16+09:00"
         }
       ]

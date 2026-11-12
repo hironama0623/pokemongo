@@ -42,7 +42,7 @@
     },
     {
      "name": "ウーラオス(悪)",
-     "rank": 4,
+     "rank": 3,
      "role": "attacker",
      "tag": "dmax",
      "fast": "カウンター",
@@ -53,7 +53,7 @@
     },
     {
      "name": "ウーラオス(水)",
-     "rank": 5,
+     "rank": 4,
      "role": "attacker",
      "tag": "dmax",
      "fast": "カウンター",
@@ -64,7 +64,7 @@
     },
     {
      "name": "ドサイドン",
-     "rank": 6,
+     "rank": 5,
      "role": "attacker",
      "tag": "dmax",
      "fast": "どろかけ",
@@ -74,9 +74,20 @@
      "note": ""
     },
     {
+     "name": "ザマゼンタ(王)",
+     "rank": 1,
+     "role": "attacker",
+     "tag": "dmax",
+     "fast": "メタルクロー",
+     "charged": null,
+     "dps": null,
+     "tdo": null,
+     "note": ""
+    },
+    {
      "name": "ハピナス",
-     "rank": 7,
-     "role": "tank",
+     "rank": 2,
+     "role": "attacker",
      "tag": "dmax",
      "fast": "はたく",
      "charged": null,
@@ -86,7 +97,7 @@
     },
     {
      "name": "ザシアン(王)",
-     "rank": 8,
+     "rank": 4,
      "role": "attacker",
      "tag": "dmax",
      "fast": "メタルクロー",
@@ -97,8 +108,8 @@
     },
     {
      "name": "レジスチル",
-     "rank": 9,
-     "role": "tank",
+     "rank": 5,
+     "role": "attacker",
      "tag": "dmax",
      "fast": "ロックオン",
      "charged": null,
