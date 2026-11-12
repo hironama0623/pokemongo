@@ -121,6 +121,40 @@
       ]
     },
     {
+      "id": "news-bbd6b06078",
+      "date": "2026-11-12",
+      "date_label": "11/12",
+      "kind": "event_update",
+      "title": "【情報追加】「ダイキノコ×10個」がもらえるコードをアンロックできるグローバルチャレンジ：タイムチャレンジが判明・追加（3件）",
+      "details": "タイムチャレンジ：11/9(月)～11/10(火)→パイルのみ・プレミアムバトルパス・ほしのすな・XP・リンクチャージ、11/11(水)～11/13(金)→XP・スーパーボール・ほしのすな・マックス粒子、11/14(土)～11/15(日)→マックス粒子・無料レイドパス・ジャケットを身にまとったカイリキー・XP・ほしのすな",
+      "targetId": "ev-auto-global-challenge-max-mushroom",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10834/",
+          "fetched_at": "2026-11-12T12:46:09.593609+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-f3a7f8a5a2",
+      "date": "2026-11-12",
+      "date_label": "11/12",
+      "kind": "event_update",
+      "title": "【情報追加】ポケモンGOの2026年11月のスケジュール：レイドが判明・追加（8件）",
+      "details": "レイド：ギラティナ(オリジンフォルム)、ギラティナ(アナザーフォルム)、クレセリア、ダークライ、デオキシス、デオキシス(ディフェンスフォルム) ほか2件",
+      "targetId": "ev-auto-2026-nov-schedule",
+      "sources": [
+        {
+          "site": "gamewith",
+          "url": "https://pokemongo.gamewith.jp/article/show/583244",
+          "fetched_at": "2026-11-12T12:46:09.593609+09:00",
+          "article_updated": "2026-11-11T11:23:06+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-2dd12cfbe6",
       "date": "2026-11-11",
       "date_label": "11/11",

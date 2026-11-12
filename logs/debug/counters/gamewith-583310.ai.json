@@ -18,7 +18,7 @@
      "charged": "コールドフレア",
      "dps": 38.48,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "キュレム(B)",
@@ -29,7 +29,7 @@
      "charged": "フリーズボルト",
      "dps": 37.97,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "レジエレキ",
@@ -40,7 +40,7 @@
      "charged": "サンダープリズン",
      "dps": 27.66,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "ゼラオラ",
@@ -51,7 +51,7 @@
      "charged": "プラズマフィスト",
      "dps": 37.99,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "ボルトロス(霊獣)",
@@ -62,7 +62,7 @@
      "charged": "かみなりあらし",
      "dps": 38.55,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "デンジュモク",
@@ -73,7 +73,7 @@
      "charged": "ほうでん",
      "dps": 36.51,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "ゼクロム",
@@ -84,7 +84,7 @@
      "charged": "クロスサンダー",
      "dps": 35.56,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "ザマゼンタ(王)",
@@ -95,10 +95,10 @@
      "charged": "きょじゅうだん",
      "dps": 29.41,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
-     "name": "ランプアルド",
+     "name": "ラムパルド",
      "rank": 9,
      "role": "attacker",
      "tag": "normal",
@@ -106,7 +106,7 @@
      "charged": "いわなだれ",
      "dps": 31.66,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "キラフロル",
@@ -117,7 +117,7 @@
      "charged": "メテオビーム",
      "dps": 30.97,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "シャドウゼクロム",
@@ -128,7 +128,7 @@
      "charged": "クロスサンダー",
      "dps": 42.49,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "シャドウライコウ",
@@ -139,10 +139,10 @@
      "charged": "ワイルドボルト",
      "dps": 35.9,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
-     "name": "シャドウランプアルド",
+     "name": "シャドウラムパルド",
      "rank": 7,
      "role": "attacker",
      "tag": "shadow",
@@ -150,7 +150,7 @@
      "charged": "いわなだれ",
      "dps": 37.83,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "シャドウドサイドン",
@@ -161,7 +161,7 @@
      "charged": "がんせきほう",
      "dps": 33.95,
      "tdo": null,
-     "note": ""
+     "note": null
     },
     {
      "name": "シャドウジバコイル",
@@ -172,7 +172,7 @@
      "charged": "ワイルドボルト",
      "dps": 33.86,
      "tdo": null,
-     "note": ""
+     "note": null
     }
    ]
   }

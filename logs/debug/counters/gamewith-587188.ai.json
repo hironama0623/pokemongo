@@ -5,7 +5,9 @@
    "name": "メガピクシー",
    "kind": "raid",
    "tier": null,
-   "types": [],
+   "types": [
+    "フェアリー"
+   ],
    "counters": [
     {
      "name": "ザシアン(王)",
