@@ -155,6 +155,40 @@
       ]
     },
     {
+      "id": "news-32ae877dfe",
+      "date": "2026-11-12",
+      "date_label": "11/12",
+      "kind": "event_update",
+      "title": "【情報追加】ダイマックスレジドラゴ初登場：レイドが判明・追加（1件）",
+      "details": "レイド：ダイマックスレジドラゴ",
+      "targetId": "ev-auto-dynamax-regidrago-2026-11-12",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10838/",
+          "fetched_at": "2026-11-12T18:52:25.342071+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-817069b45a",
+      "date": "2026-11-12",
+      "date_label": "11/12",
+      "kind": "event_update",
+      "title": "【情報追加】マックスバトルアワー：レジスチル：レイドが判明・追加（1件）",
+      "details": "レイド：レジスチル",
+      "targetId": "ev-auto-max-battle-hour-registeel-2026-11-11",
+      "sources": [
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10833/",
+          "fetched_at": "2026-11-12T18:52:25.342071+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
       "id": "news-2dd12cfbe6",
       "date": "2026-11-11",
       "date_label": "11/11",

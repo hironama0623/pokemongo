@@ -3147,7 +3147,7 @@
             {
               "site": "pokemapi",
               "url": "https://pokemongo-get.com/board/10822/",
-              "fetched_at": "2026-11-12T12:46:09.593609+09:00",
+              "fetched_at": "2026-11-12T18:52:25.342071+09:00",
               "article_updated": null
             }
           ]
@@ -3185,7 +3185,7 @@
             {
               "site": "pokemapi",
               "url": "https://pokemongo-get.com/board/10822/",
-              "fetched_at": "2026-11-12T12:46:09.593609+09:00",
+              "fetched_at": "2026-11-12T18:52:25.342071+09:00",
               "article_updated": null
             }
           ]
@@ -3263,7 +3263,7 @@
             {
               "site": "pokemapi",
               "url": "https://pokemongo-get.com/board/10822/",
-              "fetched_at": "2026-11-12T12:46:09.593609+09:00",
+              "fetched_at": "2026-11-12T18:52:25.342071+09:00",
               "article_updated": null
             },
             {
@@ -3325,7 +3325,7 @@
             {
               "site": "pokemapi",
               "url": "https://pokemongo-get.com/board/10822/",
-              "fetched_at": "2026-11-12T12:46:09.593609+09:00",
+              "fetched_at": "2026-11-12T18:52:25.342071+09:00",
               "article_updated": null
             },
             {
@@ -4075,6 +4075,12 @@
               "url": "https://pokemongo-get.com/board/10826/",
               "fetched_at": "2026-11-10T18:51:32.961664+09:00",
               "article_updated": null
+            },
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10840/",
+              "fetched_at": "2026-11-12T18:52:25.342071+09:00",
+              "article_updated": null
             }
           ]
         },
@@ -4088,6 +4094,12 @@
               "site": "pokemapi",
               "url": "https://pokemongo-get.com/board/10826/",
               "fetched_at": "2026-11-10T18:51:32.961664+09:00",
+              "article_updated": null
+            },
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10840/",
+              "fetched_at": "2026-11-12T18:52:25.342071+09:00",
               "article_updated": null
             }
           ]
@@ -31252,7 +31264,7 @@
             {
               "site": "pokemapi",
               "url": "https://pokemongo-get.com/board/10829/",
-              "fetched_at": "2026-11-12T12:46:09.593609+09:00",
+              "fetched_at": "2026-11-12T18:52:25.342071+09:00",
               "article_updated": null
             }
           ]
@@ -32173,7 +32185,23 @@
       "updated_at": "2026-11-11T07:34:57.140271+09:00"
     },
     "ev-auto-max-battle-hour-registeel-2026-11-11": {
-      "updated_at": "2026-11-11T07:34:57.140271+09:00"
+      "updated_at": "2026-11-12T18:52:25.342071+09:00",
+      "raids": [
+        {
+          "name": "レジスチル",
+          "dex": 379,
+          "shiny": null,
+          "tier": "マックスバトル",
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10833/",
+              "fetched_at": "2026-11-12T18:52:25.342071+09:00",
+              "article_updated": null
+            }
+          ]
+        }
+      ]
     },
     "ev-auto-global-challenge-max-mushroom": {
       "time_challenge": [
@@ -32428,7 +32456,23 @@
       "updated_at": "2026-11-12T12:46:09.593609+09:00"
     },
     "ev-auto-dynamax-regidrago-2026-11-12": {
-      "updated_at": "2026-11-11T18:52:01.265231+09:00"
+      "updated_at": "2026-11-12T18:52:25.342071+09:00",
+      "raids": [
+        {
+          "name": "ダイマックスレジドラゴ",
+          "dex": 895,
+          "shiny": null,
+          "tier": null,
+          "sources": [
+            {
+              "site": "pokemapi",
+              "url": "https://pokemongo-get.com/board/10838/",
+              "fetched_at": "2026-11-12T18:52:25.342071+09:00",
+              "article_updated": null
+            }
+          ]
+        }
+      ]
     },
     "ev-auto-2026-go-championship-la-cup": {
       "updated_at": "2026-11-11T18:52:01.265231+09:00"
