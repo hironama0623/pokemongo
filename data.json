@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/11/13 07:39 JST",
+  "updated_at": "2026/11/13 12:46 JST",
   "latest_news": [
     {
       "id": "news-f8b1202b57",
@@ -40,6 +40,30 @@
       "title": "【情報追加】死者の日2026特別イベント(メキシコ レフォルマ通り)：タイムチャレンジが判明・追加（1件）",
       "details": "タイムチャレンジ：無料タイムチャレンジ→カラカラ(花飾り)・カラカラ(SP背景花飾り)・ステッカー 死者の日ステッカー(インスティンクト)・ステッカー 死者の日ステッカー(ヴァーラー)・ステッカー 死者の日ステッカー(ミスティック)",
       "targetId": "ev-auto-dia-de-muertos-2026-reforma"
+    },
+    {
+      "id": "news-7286311b4e",
+      "date": "2026-11-13",
+      "date_label": "11/13",
+      "title": "【新イベント】日本のApple Storeに新たなポケストップが登場します",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-apple-store-japan-stops-2026"
+    },
+    {
+      "id": "news-38d4779cfd",
+      "date": "2026-11-13",
+      "date_label": "11/13",
+      "title": "【情報追加】日本のApple Storeに新たなポケストップが登場します：野生が判明・追加（1件）",
+      "details": "野生：カジッチュ",
+      "targetId": "ev-auto-apple-store-japan-stops-2026"
+    },
+    {
+      "id": "news-21eb867f52",
+      "date": "2026-11-13",
+      "date_label": "11/13",
+      "title": "【情報追加】ワイルドウィーク2026：フィールドリサーチが判明・追加（6件）",
+      "details": "フィールドリサーチ：ダイマックスラルトスを捕まえる→ほしのすな、ダイマックスワンリキーを捕まえる→ほしのすな、ポケモンを10匹捕まえる→タッツー、Haganetypeのポケモンを5回強化する→コイル・ニャース(ガラル)・トゲデマル・ココドラ、Doragonntypeのポケモンを5回強化する→ミニリュウ・タッツー・クズモー・タツベイ、マックスバトルで勝つ→ほしのすな",
+      "targetId": "ev-wildweek-2026"
     },
     {
       "id": "news-416c75fade",
@@ -4150,6 +4174,13 @@
         "note": "出典: 9db"
       },
       {
+        "task": "ポケモンを10匹捕まえる",
+        "rewardDex": 116,
+        "rewardName": "タッツー（452）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
         "task": "はがねタイプのポケモンを5回強化する",
         "rewardDex": 81,
         "rewardName": "コイル（583）",
@@ -4206,6 +4237,13 @@
         "note": "出典: 9db"
       },
       {
+        "task": "マックスバトルで勝つ",
+        "rewardDex": 25,
+        "rewardName": "ほしのすな",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
         "task": "レイドバトルで1回勝つ",
         "rewardDex": 147,
         "rewardName": "ミニリュウ（430）",
@@ -4227,9 +4265,79 @@
         "note": "出典: 9db"
       },
       {
+        "task": "ダイマックスラルトスを捕まえる",
+        "rewardDex": 25,
+        "rewardName": "ほしのすな",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
         "task": "ダイマックスワンリキーを捕まえる",
         "rewardDex": 66,
         "rewardName": "ワンリキー(DMAX)",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "ダイマックスワンリキーを捕まえる",
+        "rewardDex": 25,
+        "rewardName": "ほしのすな",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "Haganetypeのポケモンを5回強化する",
+        "rewardDex": 81,
+        "rewardName": "コイル（583）",
+        "shiny": true,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "Haganetypeのポケモンを5回強化する",
+        "rewardDex": 52,
+        "rewardName": "ニャース(ガラル)（443）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "Haganetypeのポケモンを5回強化する",
+        "rewardDex": 777,
+        "rewardName": "トゲデマル（926）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "Haganetypeのポケモンを5回強化する",
+        "rewardDex": 304,
+        "rewardName": "ココドラ（560）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "Doragonntypeのポケモンを5回強化する",
+        "rewardDex": 147,
+        "rewardName": "ミニリュウ（430）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "Doragonntypeのポケモンを5回強化する",
+        "rewardDex": 116,
+        "rewardName": "タッツー（452）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "Doragonntypeのポケモンを5回強化する",
+        "rewardDex": 690,
+        "rewardName": "クズモー（455）",
+        "shiny": false,
+        "note": "出典: 9db"
+      },
+      {
+        "task": "Doragonntypeのポケモンを5回強化する",
+        "rewardDex": 371,
+        "rewardName": "タツベイ（495）",
         "shiny": false,
         "note": "出典: 9db"
       }
@@ -9511,6 +9619,18 @@
       ]
     },
     {
+      "id": "ev-auto-apple-store-japan-stops-2026",
+      "title": "ev-auto-apple-store-japan-stops-2026",
+      "wilds": [
+        {
+          "dex": 840,
+          "name": "カジッチュ",
+          "shiny": false,
+          "note": ""
+        }
+      ]
+    },
+    {
       "id": "ev-auto-giratina-alter-raid-hour",
       "month": 11,
       "title": "ギラティナ（アナザー）のレイドアワー",
@@ -10901,6 +11021,27 @@
       "dateText": "2026/11/13(金)18:00 〜 19:00",
       "summary": "ラティアスとラティオスがマックスバトルに登場するマックスバトルアワー。",
       "freeFeatures": [],
+      "paidFeatures": [],
+      "wilds": [],
+      "raids": [],
+      "fieldResearches": [],
+      "tasks": []
+    },
+    {
+      "id": "ev-auto-apple-store-japan-stops-2026",
+      "month": 11,
+      "title": "日本のApple Storeに新たなポケストップが登場します",
+      "barClass": "bar-collab",
+      "category": "collab",
+      "startDay": 16,
+      "endDay": 30,
+      "hasPaid": false,
+      "dateText": "2026年11月16日から2026年11月30日まで",
+      "summary": "日本国内のApple Storeにポケストップが登場。ハーブルアーモジュールが常時起動されカジッチュと出会いやすくなる。",
+      "freeFeatures": [
+        "日本国内のApple Store全店舗がポケストップとして登場",
+        "ハーブルアーモジュールが常時起動されカジッチュと出会いやすくなる"
+      ],
       "paidFeatures": [],
       "wilds": [],
       "raids": [],

@@ -87,6 +87,57 @@
       ]
     },
     {
+      "id": "news-7286311b4e",
+      "date": "2026-11-13",
+      "date_label": "11/13",
+      "kind": "new_event",
+      "title": "【新イベント】日本のApple Storeに新たなポケストップが登場します",
+      "details": "新しいイベントを検出しました。",
+      "targetId": "ev-auto-apple-store-japan-stops-2026",
+      "sources": [
+        {
+          "site": "official",
+          "url": "https://pokemongo.com/ja/news/apple_store_japan",
+          "fetched_at": "2026-11-13T12:46:49.333515+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-38d4779cfd",
+      "date": "2026-11-13",
+      "date_label": "11/13",
+      "kind": "event_update",
+      "title": "【情報追加】日本のApple Storeに新たなポケストップが登場します：野生が判明・追加（1件）",
+      "details": "野生：カジッチュ",
+      "targetId": "ev-auto-apple-store-japan-stops-2026",
+      "sources": [
+        {
+          "site": "official",
+          "url": "https://pokemongo.com/ja/news/apple_store_japan",
+          "fetched_at": "2026-11-13T12:46:49.333515+09:00",
+          "article_updated": null
+        }
+      ]
+    },
+    {
+      "id": "news-21eb867f52",
+      "date": "2026-11-13",
+      "date_label": "11/13",
+      "kind": "event_update",
+      "title": "【情報追加】ワイルドウィーク2026：フィールドリサーチが判明・追加（6件）",
+      "details": "フィールドリサーチ：ダイマックスラルトスを捕まえる→ほしのすな、ダイマックスワンリキーを捕まえる→ほしのすな、ポケモンを10匹捕まえる→タッツー、Haganetypeのポケモンを5回強化する→コイル・ニャース(ガラル)・トゲデマル・ココドラ、Doragonntypeのポケモンを5回強化する→ミニリュウ・タッツー・クズモー・タツベイ、マックスバトルで勝つ→ほしのすな",
+      "targetId": "ev-wildweek-2026",
+      "sources": [
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26589",
+          "fetched_at": "2026-11-13T12:46:49.333515+09:00",
+          "article_updated": "2026-11-13T07:48:42+09:00"
+        }
+      ]
+    },
+    {
       "id": "news-416c75fade",
       "date": "2026-11-12",
       "date_label": "11/12",
