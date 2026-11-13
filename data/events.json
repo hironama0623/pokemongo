@@ -1864,7 +1864,7 @@
         {
           "site": "pokemapi",
           "url": "https://pokemongo-get.com/board/10833/",
-          "fetched_at": "2026-11-13T12:46:49.333515+09:00",
+          "fetched_at": "2026-11-13T18:52:29.636161+09:00",
           "article_updated": null
         }
       ]
@@ -1912,7 +1912,7 @@
         {
           "site": "pokemapi",
           "url": "https://pokemongo-get.com/board/10838/",
-          "fetched_at": "2026-11-13T12:46:49.333515+09:00",
+          "fetched_at": "2026-11-13T18:52:29.636161+09:00",
           "article_updated": null
         },
         {
@@ -1987,7 +1987,7 @@
         {
           "site": "pokemapi",
           "url": "https://pokemongo-get.com/board/10840/",
-          "fetched_at": "2026-11-13T12:46:49.333515+09:00",
+          "fetched_at": "2026-11-13T18:52:29.636161+09:00",
           "article_updated": null
         }
       ]
@@ -2013,6 +2013,18 @@
           "url": "https://pokemongo.com/ja/news/apple_store_japan",
           "fetched_at": "2026-11-13T12:46:49.333515+09:00",
           "article_updated": null
+        },
+        {
+          "site": "pokemapi",
+          "url": "https://pokemongo-get.com/board/10842/",
+          "fetched_at": "2026-11-13T18:52:29.636161+09:00",
+          "article_updated": null
+        },
+        {
+          "site": "9db",
+          "url": "https://9db.jp/pokemongo/data/26764",
+          "fetched_at": "2026-11-13T18:52:29.636161+09:00",
+          "article_updated": "2026-11-13T18:27:09+09:00"
         }
       ]
     }
