@@ -123,7 +123,7 @@ table.data .rw{font-weight:700;white-space:nowrap}
 .today-item .when.blue{color:var(--sky-d)} .today-item .when.green{color:var(--green)} .today-item .when.amber{color:var(--amber)}
 .today-item h3{font-size:.83rem;font-weight:800;color:var(--sky-d);display:inline}
 .today-item p{margin:2px 0 0;font-size:.76rem;color:var(--ink2);line-height:1.55}
-.news-list{max-height:780px;overflow-y:auto;padding-right:4px}
+.news-list{max-height:212px;overflow-y:auto;padding-right:4px}
 .news-item{display:flex;align-items:flex-start;gap:8px;border:1px solid var(--line);border-radius:10px;padding:8px 10px;margin-bottom:7px;background:var(--surface)}
 .news-item .ndate{font-size:.68rem;font-weight:800;color:var(--sky-d);background:var(--t-sky);border:1px solid var(--t-sky-line);border-radius:6px;padding:2px 6px;white-space:nowrap;margin-top:1px}
 .news-item .ncat{font-size:.66rem;font-weight:800;border-radius:6px;padding:2px 6px;white-space:nowrap;margin-top:1px;border:1px solid var(--line2);background:var(--surface2);color:var(--ink3)}
@@ -413,7 +413,7 @@ main{padding:6px 0 40px}
 .card + .card,.evcard,.passcard + .passcard{margin-top:8px}
 .caveat{padding:8px 10px;font-size:.76rem;line-height:1.6}
 .today-item{padding:7px 9px;margin-bottom:6px}
-.news-list{max-height:520px}
+.news-list{max-height:432px}
 .news-item{padding:6px 8px;margin-bottom:5px}
 .chipgrid{gap:5px;margin-top:8px}
 .pchip{padding:5px 8px;font-size:.72rem}
@@ -462,7 +462,7 @@ footer{margin-top:28px}
 <span class="bolt" aria-hidden="true">⚡</span>
 <div>
 <h1>Pokémon GO 総合攻略ハブ</h1>
-<div class="sub"><span class="dot" aria-hidden="true"></span><span class="updated-badge">最終更新日時：<time datetime="2026-11-14T22:55+09:00">2026年11月14日（土）22:55</time></span><span class="srcs">ポケマピ / GameWith / 9DB / GO Hub / 公式 統合仕様</span></div>
+<div class="sub"><span class="dot" aria-hidden="true"></span><span class="updated-badge">最終更新日時：<time datetime="2026-11-14T23:07+09:00">2026年11月14日（土）23:07</time></span></div>
 </div>
 </div>
 </div>
@@ -624,22 +624,12 @@ footer{margin-top:28px}
 <div class="mini-head">
 <div>
 <h2 style="font-size:.95rem;font-weight:800">📊 イベントスケジュール（ガントチャート・タイムライン）</h2>
-<span class="note">| 横スクロール時も文字とアイコンが左端に追従します ・ 帯をタップすると、そのイベントの詳細へ移動します</span>
 </div>
 <div class="range-btns" role="group" aria-label="表示範囲">
 <button type="button" data-range="recent" aria-pressed="true">直近10日</button>
 <button type="button" data-range="nov" aria-pressed="false">11月</button>
 <button type="button" data-range="dec" aria-pressed="false">12月</button>
 </div>
-</div>
-<div class="gantt-tools" role="group" aria-label="カテゴリ絞り込み">
-<span class="note" style="font-weight:700">絞り込み:</span>
-<button type="button" class="fchip gchip" data-g="all" aria-pressed="true">すべて</button>
-<button type="button" class="fchip gchip" data-g="main" aria-pressed="false">🎪 メイン・季節イベント</button>
-<button type="button" class="fchip gchip" data-g="cd" aria-pressed="false">🌱 コミュニティ・デイ</button>
-<button type="button" class="fchip gchip" data-g="raid" aria-pressed="false">⚔️ レイドバトル</button>
-<button type="button" class="fchip gchip" data-g="dmax" aria-pressed="false">⚡ マックスバトル</button>
-<button type="button" class="fchip gchip" data-g="collab" aria-pressed="false">🤝 大型・コラボ・パス</button>
 </div>
 <div class="gantt-scroll"><div class="gantt-inner" id="ganttInner"></div></div>
 <div class="g-legend" aria-hidden="true">
@@ -1009,8 +999,8 @@ footer{margin-top:28px}
 <!-- ================= TAB: BATTLES ================= -->
 <div class="panel-tab" id="tab-battles" hidden>
 <div class="subbar" role="tablist" aria-label="バトル種別">
-<button type="button" role="tab" data-bsub="raids" aria-selected="true">⚔️ ★5伝説・スーパーメガ・メガ・シャドウレイド</button>
-<button type="button" role="tab" data-bsub="dmax" aria-selected="false">💥 ダイマックス＆キョダイマックス攻略</button>
+<button type="button" role="tab" data-bsub="raids" aria-selected="true">⚔️ レイド</button>
+<button type="button" role="tab" data-bsub="dmax" aria-selected="false">💥 ダイマックスレイド</button>
 </div>
 
 <div id="bsub-raids">
@@ -1238,9 +1228,9 @@ footer{margin-top:28px}
 <li><a href="https://pokemongo-get.com/pokego01076/" target="_blank" rel="noopener">ポケマピ：効果はいまひとつだ…には種類がある</a></li>
 <li><a href="https://gosilph.com/best-attackers" target="_blank" rel="noopener">gosilph：Best Attackers by Type（比較用）</a></li>
 </ul>
-</details>
 <p style="margin-top:14px">このページはファンメイドの非公式攻略まとめです。『Pokémon GO』はNiantic, Inc.、『ポケモン』は任天堂・クリーチャーズ・ゲームフリークの商標です。構成は公開中の総合攻略ハブのレイアウトに合わせ、情報は2026年11月14日時点の横断調査で書き換えています。</p>
 <p>ポケモンの画像について：GameWith・9DBなど参照サイト掲載の画像は各サイト・権利者の素材のため直接転載はせず、ポケモンの公式アートワークを公開リポジトリ <a href="https://github.com/PokeAPI/sprites" target="_blank" rel="noopener">PokeAPI Sprites</a> から取得して掲載しています（ドット絵のスプライトは使っていません）。メガシンカ・ゲンシ・キョダイマックスや、ザシアン（けんのおう）／キュレムの合体フォルム／オリジンフォルムなどのフォルム違いは、そのフォルム専用の公式アートワークで表示します。シャドウポケモンとダイマックス個体には専用の公式アートワークがないため、原種のイラストに「シャドウ」「ダイマックス」の表記を付けて区別しています。デオキシスもフォルムごとに専用のアートワークで表示します。</p>
+</details>
 </div>
 </footer>
 
