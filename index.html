@@ -462,7 +462,7 @@ footer{margin-top:28px}
 <span class="bolt" aria-hidden="true">⚡</span>
 <div>
 <h1>Pokémon GO 総合攻略ハブ</h1>
-<div class="sub"><span class="dot" aria-hidden="true"></span><span class="updated-badge">最終更新日時：<time datetime="2026-11-15T18:00+09:00">2026年11月15日（日）18:00</time></span></div>
+<div class="sub"><span class="dot" aria-hidden="true"></span><span class="updated-badge">最終更新日時：<time datetime="2026-11-15T18:19+09:00">2026年11月15日（日）18:19</time></span></div>
 </div>
 </div>
 </div>
@@ -1495,14 +1495,20 @@ var GANTT=[
  {label:'レイドデイ（対象未発表）', s:'2026-12-19', e:'2026-12-19', cat:'raid', goto:'ev-raidday-dec'},
  {label:'ふかの日（対象未発表）', s:'2026-12-26', e:'2026-12-26', cat:'main', goto:'ev-hatchday-dec'}
 ];
-var RANGES={ recent:['2026-11-14','2026-11-23'], nov:['2026-11-01','2026-11-30'], dec:['2026-12-01','2026-12-31'] };
+var RANGES={ nov:['2026-11-01','2026-11-30'], dec:['2026-12-01','2026-12-31'] };
 var DOW=['日','月','火','水','木','金','土'];
 function dnum(iso){ var p=iso.split('-'); return Date.UTC(+p[0],+p[1]-1,+p[2])/86400000; }
+function localTodayIso(){ var n=new Date(); var y=n.getFullYear(); var m=('0'+(n.getMonth()+1)).slice(-2); var d=('0'+n.getDate()).slice(-2); return y+'-'+m+'-'+d; }
+function isoFromDnum(n){ var dt=new Date(n*86400000); var y=dt.getUTCFullYear(); var m=('0'+(dt.getUTCMonth()+1)).slice(-2); var d=('0'+dt.getUTCDate()).slice(-2); return y+'-'+m+'-'+d; }
+function getRange(key){
+  if(key==='recent'){ var t=dnum(localTodayIso()); return [isoFromDnum(t), isoFromDnum(t+9)]; }
+  return RANGES[key];
+}
 var gRange='recent', gCat='all';
 function renderGantt(){
   var inner=document.getElementById('ganttInner');
-  var rs=RANGES[gRange], start=dnum(rs[0]), end=dnum(rs[1]), days=end-start+1;
-  var today=dnum('2026-11-14');
+  var rs=getRange(gRange), start=dnum(rs[0]), end=dnum(rs[1]), days=end-start+1;
+  var today=dnum(localTodayIso());
   var html='<div class="gantt-head" style="grid-template-columns:repeat('+days+',1fr)">';
   for(var i=0;i<days;i++){
     var dt=new Date((start+i)*86400000);
